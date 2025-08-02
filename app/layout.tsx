@@ -1,5 +1,6 @@
 import './globals.css'
 import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
 
 export const metadata = {
   title: 'Srećno učenje - Franšiza obrazovne metodologije',
@@ -13,11 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sr">
-      <body>
+      <body className="flex flex-col min-h-screen">
         <Header />
-        <main className="pt-16">
+        <main className="flex-grow pt-16">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   )
