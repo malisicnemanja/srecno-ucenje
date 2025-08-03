@@ -1,0 +1,78 @@
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "nemanjamalisic"
+    assignees:
+      - "nemanjamalisic"
+    labels:
+      - "dependencies"
+      - "automated"
+    
+    # Group updates for better organization
+    groups:
+      react-ecosystem:
+        patterns:
+          - "react*"
+          - "@types/react*"
+      
+      next-ecosystem:
+        patterns:
+          - "next*"
+          - "@next/*"
+      
+      testing-tools:
+        patterns:
+          - "*test*"
+          - "@testing-library/*"
+          - "vitest*"
+          - "jest*"
+      
+      ui-libraries:
+        patterns:
+          - "framer-motion"
+          - "tailwindcss"
+          - "@headlessui/*"
+      
+      build-tools:
+        patterns:
+          - "eslint*"
+          - "prettier*"
+          - "typescript"
+          - "autoprefixer"
+          - "postcss"
+    
+    # Security updates
+    security-updates:
+      enabled: true
+    
+    # Ignore specific packages that need manual review
+    ignore:
+      - dependency-name: "sanity"
+        # Ignore major versions to prevent breaking changes
+        update-types: ["version-update:semver-major"]
+      
+      - dependency-name: "next"
+        # Ignore major versions for stability
+        update-types: ["version-update:semver-major"]
+        
+  # GitHub Actions updates
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "nemanjamalisic"
+    labels:
+      - "github-actions"
+      - "automated"

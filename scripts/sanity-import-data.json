@@ -1,0 +1,270 @@
+{
+  "siteSettings": {
+    "_type": "siteSettings",
+    "siteName": "Srećno učenje",
+    "siteDescription": "Centar za brzočitanje i mentalnu aritmetiku koji razvija pune potencijale vašeg deteta",
+    "email": "info@srecno-ucenje.rs",
+    "phone": "+381 60 123 4567",
+    "address": "Bulevar oslobođenja 123, 21000 Novi Sad",
+    "workingHours": [
+      { "day": "Ponedeljak - Petak", "hours": "09:00 - 20:00" },
+      { "day": "Subota", "hours": "10:00 - 18:00" },
+      { "day": "Nedelja", "hours": "10:00 - 16:00" },
+      { "day": "Praznici", "hours": "Zatvoreno" }
+    ],
+    "socialLinks": [
+      { "platform": "Facebook", "url": "https://facebook.com/srecnoucenje" },
+      { "platform": "Instagram", "url": "https://instagram.com/srecnoucenje" },
+      { "platform": "LinkedIn", "url": "https://linkedin.com/company/srecnoucenje" }
+    ]
+  },
+  
+  "programs": [
+    {
+      "_type": "program",
+      "title": "Brzočitanje",
+      "slug": "brzocitanje",
+      "icon": "📚",
+      "description": "Ovladajte veštinom brzog čitanja uz potpuno razumevanje pročitanog teksta",
+      "ageRange": "7-16 godina",
+      "duration": "6 meseci",
+      "groupSize": "6-8 učenika",
+      "benefits": [
+        "Čitanje 3-5 puta brže",
+        "Bolje razumevanje pročitanog",
+        "Poboljšana koncentracija",
+        "Veće samopouzdanje",
+        "Bolje ocene u školi",
+        "Ljubav prema knjigama"
+      ],
+      "order": 1
+    },
+    {
+      "_type": "program",
+      "title": "Mentalna aritmetika",
+      "slug": "mentalna-aritmetika",
+      "icon": "🧮",
+      "description": "Naučite da računate brže od kalkulatora koristeći moć vizualizacije",
+      "ageRange": "5-14 godina",
+      "duration": "12 meseci",
+      "groupSize": "6-8 učenika",
+      "benefits": [
+        "Brže mentalno računanje",
+        "Razvoj oba hemisfera mozga",
+        "Poboljšana memorija",
+        "Bolja logika i analitičko mišljenje",
+        "Veća kreativnost",
+        "Samopouzdanje u matematici"
+      ],
+      "order": 2
+    },
+    {
+      "_type": "program",
+      "title": "Kombinovani program",
+      "slug": "kombinovani-program",
+      "icon": "🎯",
+      "description": "Najbolje iz oba programa za maksimalne rezultate",
+      "ageRange": "7-14 godina",
+      "duration": "12 meseci",
+      "groupSize": "6-8 učenika",
+      "benefits": [
+        "Kompletan kognitivni razvoj",
+        "Ušteda vremena i novca",
+        "Sinergija programa",
+        "Brži napredak",
+        "Sveobuhvatni rezultati"
+      ],
+      "order": 3
+    }
+  ],
+  
+  "faqs": [
+    {
+      "_type": "faq",
+      "question": "Koliko dugo traje program brzočitanja?",
+      "answer": "Program brzočitanja traje 6 meseci sa redovnim časovima 2 puta nedeljno. Nakon završetka osnovnog programa, učenici mogu nastaviti sa naprednim tehnikama.",
+      "category": "programs",
+      "order": 1
+    },
+    {
+      "_type": "faq",
+      "question": "Od koje godine dete može da krene sa mentalnom aritmetikom?",
+      "answer": "Preporučujemo da deca krenu sa mentalnom aritmetikom od 5. godine, kada već poznaju brojeve i osnovne matematičke operacije.",
+      "category": "programs",
+      "order": 2
+    },
+    {
+      "_type": "faq",
+      "question": "Da li postoji probni čas?",
+      "answer": "Da, nudimo besplatan probni čas kako bi vaše dete moglo da se upozna sa našim metodama i instruktorima pre upisa.",
+      "category": "enrollment",
+      "order": 3
+    },
+    {
+      "_type": "faq",
+      "question": "Kako se vrši plaćanje?",
+      "answer": "Plaćanje se vrši mesečno, unapred, putem uplatnice ili bankovnog transfera. Nudimo porodične popuste za upis više dece.",
+      "category": "pricing",
+      "order": 4
+    },
+    {
+      "_type": "faq",
+      "question": "Šta ako dete propusti čas?",
+      "answer": "Propušteni časovi se mogu nadoknaditi u dogovoru sa instruktorom, u okviru tekućeg meseca.",
+      "category": "general",
+      "order": 5
+    },
+    {
+      "_type": "faq",
+      "question": "Da li postoje popusti?",
+      "answer": "Da, nudimo porodične popuste od 10% za drugo dete i 15% za treće dete iz iste porodice.",
+      "category": "pricing",
+      "order": 6
+    }
+  ],
+  
+  "blogCategories": [
+    { "_type": "blogCategory", "title": "Brzočitanje", "slug": "brzocitanje" },
+    { "_type": "blogCategory", "title": "Mentalna aritmetika", "slug": "mentalna-aritmetika" },
+    { "_type": "blogCategory", "title": "Saveti za roditelje", "slug": "saveti-za-roditelje" },
+    { "_type": "blogCategory", "title": "Uspešne priče", "slug": "uspesne-price" },
+    { "_type": "blogCategory", "title": "Edukacija", "slug": "edukacija" },
+    { "_type": "blogCategory", "title": "Vesti", "slug": "vesti" }
+  ],
+  
+  "authors": [
+    {
+      "_type": "author",
+      "name": "Dr. Milica Jovanović",
+      "slug": "dr-milica-jovanovic",
+      "title": "Stručnjak za brzočitanje",
+      "bio": "Doktor pedagoških nauka sa 15 godina iskustva u radu sa decom. Autor nekoliko knjiga o modernim metodama učenja."
+    },
+    {
+      "_type": "author",
+      "name": "Prof. Stefan Nikolić",
+      "slug": "prof-stefan-nikolic",
+      "title": "Instruktor mentalne aritmetike",
+      "bio": "Profesor matematike i sertifikovani instruktor mentalne aritmetike sa međunarodnim iskustvom."
+    },
+    {
+      "_type": "author",
+      "name": "Psiholog Marija Stojanović",
+      "slug": "marija-stojanovic",
+      "title": "Dečji psiholog",
+      "bio": "Specijalista za rad sa decom i porodičnu terapiju. Pomaže roditeljima da razumeju i podrže razvoj svoje dece."
+    }
+  ],
+  
+  "testimonials": [
+    {
+      "_type": "testimonial",
+      "name": "Milica Stojanović",
+      "role": "Majka dvoje dece",
+      "content": "Neverovatna promena kod moje dece! Marko sada obožava da čita, a Ana je postala prava matematička zvezda. Preporučujem svima!",
+      "rating": 5,
+      "featured": true
+    },
+    {
+      "_type": "testimonial",
+      "name": "Petar Nikolić",
+      "role": "Otac",
+      "content": "Najbolja investicija u budućnost našeg deteta. Rezultati su vidljivi već nakon mesec dana.",
+      "rating": 5,
+      "featured": true
+    },
+    {
+      "_type": "testimonial",
+      "name": "Jelena Marković",
+      "role": "Majka",
+      "content": "Moja ćerka je postala mnogo sigurnija u sebe otkako je počela program brzočitanja. Sada sama traži knjige!",
+      "rating": 5,
+      "featured": false
+    }
+  ],
+  
+  "successStories": [
+    {
+      "_type": "successStory",
+      "studentName": "Marko Petrović",
+      "age": "12 godina",
+      "programTitle": "Brzočitanje",
+      "testimonial": "Pre kursa sam izbegavao da čitam knjige. Sada pročitam 2-3 knjige nedeljno! Moje ocene iz srpskog jezika su se drastično poboljšale, a učenje mi ide mnogo lakše.",
+      "results": [
+        { "metric": "300%", "label": "Brže čitanje" },
+        { "metric": "Sa 3 na 5", "label": "Ocena iz srpskog" },
+        { "metric": "2h → 45min", "label": "Vreme učenja" }
+      ],
+      "beforeSkills": [
+        "Sporo čitanje - 150 reči/minut",
+        "Poteškoće sa koncentracijom",
+        "Dugotrajno učenje lekcija",
+        "Strah od čitanja",
+        "Nisko samopouzdanje"
+      ],
+      "afterSkills": [
+        "Brzo čitanje - 500+ reči/minut",
+        "Odlična koncentracija i fokus",
+        "Efikasno učenje za kraće vreme",
+        "Ljubav prema knjigama",
+        "Visoko samopouzdanje"
+      ],
+      "featured": true
+    },
+    {
+      "_type": "successStory",
+      "studentName": "Ana Nikolić",
+      "age": "10 godina",
+      "programTitle": "Mentalna aritmetika",
+      "testimonial": "Matematika mi je sada omiljeni predmet! Mogu da računam brže od svih u razredu, čak i od nastavnice ponekad. Osvojila sam prvo mesto na školskom takmičenju!",
+      "results": [
+        { "metric": "1. mesto", "label": "Školsko takmičenje" },
+        { "metric": "100%", "label": "Tačnost računanja" },
+        { "metric": "5", "label": "Ocena iz matematike" }
+      ],
+      "featured": true
+    },
+    {
+      "_type": "successStory",
+      "studentName": "Stefan Jovanović",
+      "age": "14 godina",
+      "programTitle": "Kombinovani program",
+      "testimonial": "Ovaj kurs mi je promenio život. Ne samo da bolje učim, već imam više samopouzdanja i vremena za sport i druženje. Roditelji su oduševljeni mojim napretkom.",
+      "results": [
+        { "metric": "4.8", "label": "Prosek ocena" },
+        { "metric": "+2h", "label": "Slobodno vreme dnevno" },
+        { "metric": "250%", "label": "Brzina učenja" }
+      ],
+      "featured": true
+    }
+  ],
+  
+  "teamMembers": [
+    {
+      "_type": "teamMember",
+      "name": "Dr. Milica Jovanović",
+      "position": "Direktor programa",
+      "bio": "Sa 15 godina iskustva u obrazovanju, dr. Jovanović vodi naš tim stručnjaka.",
+      "qualifications": [
+        "Doktor pedagoških nauka",
+        "Sertifikovani instruktor brzočitanja",
+        "Autor 3 knjige o modernim metodama učenja"
+      ],
+      "email": "milica@srecno-ucenje.rs",
+      "order": 1
+    },
+    {
+      "_type": "teamMember",
+      "name": "Prof. Stefan Nikolić",
+      "position": "Glavni instruktor mentalne aritmetike",
+      "bio": "Međunarodno priznati stručnjak za mentalnu aritmetiku sa brojnim nagradama.",
+      "qualifications": [
+        "Profesor matematike",
+        "Međunarodni sertifikat za mentalnu aritmetiku",
+        "Mentor šampiona na državnim takmičenjima"
+      ],
+      "email": "stefan@srecno-ucenje.rs",
+      "order": 2
+    }
+  ]
+}

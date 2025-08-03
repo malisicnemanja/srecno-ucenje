@@ -1,0 +1,15 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="logo">
+    <!-- Book icon -->
+    <path d="M8 10C8 8.89543 8.89543 8 10 8H18V28H10C8.89543 28 8 27.1046 8 26V10Z" fill="#3B82F6"/>
+    <path d="M32 10C32 8.89543 31.1046 8 30 8H22V28H30C31.1046 28 32 27.1046 32 26V10Z" fill="#60A5FA"/>
+    <path d="M18 8H22V28H18V8Z" fill="#2563EB"/>
+    
+    <!-- Star accent -->
+    <path d="M20 5L21.09 6.26L22.63 5.91L22.28 7.45L23.54 8.54L22 8.89L21.09 10.15L20.18 8.89L18.64 8.54L19.9 7.45L19.55 5.91L21.09 6.26L20 5Z" fill="#FCD34D"/>
+    
+    <!-- Text -->
+    <text x="40" y="18" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#1F2937">Srećno</text>
+    <text x="40" y="30" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#3B82F6">učenje</text>
+  </g>
+</svg>

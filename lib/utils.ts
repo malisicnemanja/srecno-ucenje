@@ -9,3 +9,10 @@ export function formatDate(date: string | Date) {
     year: 'numeric',
   }).format(new Date(date))
 }
+
+export function getComputedStyle(element: HTMLElement, property: string): string {
+  if (typeof window !== 'undefined' && window.getComputedStyle) {
+    return window.getComputedStyle(element).getPropertyValue(property)
+  }
+  return ''
+}

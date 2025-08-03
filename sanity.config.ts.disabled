@@ -1,0 +1,27 @@
+import { defineConfig } from 'sanity'
+import { structureTool } from 'sanity/structure'
+
+const projectId = '08ctxj6y'
+const dataset = 'production'
+
+export default defineConfig({
+  name: 'default',
+  title: 'Srećno učenje',
+  basePath: '/studio',
+
+  projectId,
+  dataset,
+
+  plugins: [
+    structureTool()
+  ],
+
+  schema: {
+    types: [],
+  },
+
+  api: {
+    projectId,
+    dataset,
+  },
+})
