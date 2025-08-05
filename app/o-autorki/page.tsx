@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { FloatingLetters, AnimatedTitle } from '@/components/animations'
 import { HeroButtons, BooksButton, CTAButtons } from '@/components/features/author/AuthorInteractive'
-// import { getAboutAuthorData, type AboutAuthorData } from '@/sanity/queries/aboutAuthor'
+import { getAboutAuthorData, type AboutAuthorData } from '@/sanity/queries/aboutAuthor'
 import { 
   StarIcon, 
   LocationIcon, 
@@ -26,8 +26,7 @@ import {
 } from '@/components/icons/SimpleIcons'
 
 export async function generateMetadata(): Promise<Metadata> {
-  // const data = await getAboutAuthorData()
-  const data = null
+  const data = await getAboutAuthorData()
   
   if (!data) {
     return {
@@ -49,8 +48,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function AboutAuthorPage() {
-  // Complete data for about author page
-  const data = {
+  // Get data from CMS
+  const cmsData = await getAboutAuthorData()
+  
+  // Fallback data if CMS is not available
+  const fallbackData = {
     heroTitle: "Željana Radojičić Lukić",
     heroSubtitle: "Autorka, pedagog i istraživačica koja spaja tradiciju sa inovacijom",
     heroImage: {
@@ -286,6 +288,9 @@ export default async function AboutAuthorPage() {
       }
     ]
   }
+  
+  // Use CMS data if available, otherwise use fallback
+  const data = cmsData || fallbackData
 
   const timelineIcons = {
     birth: BirthIcon,
