@@ -139,7 +139,7 @@ export default function Header() {
               </div>
             ))}
             
-            {nav.ctaButton && (
+            {nav.ctaButton?.href && (
               <Link 
                 href={nav.ctaButton.href} 
                 className={getButtonClasses(nav.ctaButton.style)}
@@ -205,7 +205,7 @@ export default function Header() {
                 </div>
               ))}
               
-              {nav.ctaButton && (
+              {nav.ctaButton?.href && (
                 <Link
                   href={nav.ctaButton.href}
                   className={`block mx-3 text-center ${getButtonClasses(nav.ctaButton.style)}`}

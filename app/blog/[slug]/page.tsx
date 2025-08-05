@@ -341,7 +341,7 @@ export default async function BlogPostPage({ params }: Props) {
               </Link>
               
               {post.category?.slug?.current && (
-                <Link href={`/blog/kategorija/${post.category.slug.current}`}>
+                <Link href={`/blog/kategorija/${post.category.slug?.current || 'no-slug'}`}>
                   <PulseButton 
                     variant="secondary"
                     size="lg"
