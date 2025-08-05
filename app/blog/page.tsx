@@ -156,13 +156,14 @@ export default async function BlogPage() {
                       <span>{featuredPost.readingTime} min čitanja</span>
                     </div>
                     
-                    <PulseButton 
-                      variant="primary"
-                      size="lg"
-                      onClick={() => window.location.href = `/blog/${featuredPost.slug.current}`}
-                    >
-                      Pročitajte više
-                    </PulseButton>
+                    <Link href={`/blog/${featuredPost.slug.current}`}>
+                      <PulseButton 
+                        variant="primary"
+                        size="lg"
+                      >
+                        Pročitajte više
+                      </PulseButton>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -326,23 +326,25 @@ export default async function BlogPostPage({ params }: Props) {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <PulseButton 
-                variant="accent"
-                size="lg"
-                className="bg-white text-gray-900 hover:bg-gray-100"
-                onClick={() => window.location.href = '/blog'}
-              >
-                Svi članci
-              </PulseButton>
+              <Link href="/blog">
+                <PulseButton 
+                  variant="accent"
+                  size="lg"
+                  className="bg-white text-gray-900 hover:bg-gray-100"
+                >
+                  Svi članci
+                </PulseButton>
+              </Link>
               
-              <PulseButton 
-                variant="secondary"
-                size="lg"
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-gray-900"
-                onClick={() => window.location.href = `/blog/kategorija/${post.category.slug.current}`}
-              >
-                Više iz kategorije
-              </PulseButton>
+              <Link href={`/blog/kategorija/${post.category?.slug?.current || ''}`}>
+                <PulseButton 
+                  variant="secondary"
+                  size="lg"
+                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-gray-900"
+                >
+                  Više iz kategorije
+                </PulseButton>
+              </Link>
             </div>
           </div>
         </div>

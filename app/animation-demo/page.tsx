@@ -1,1 +1,0 @@
-import HeroAnimationDemo from '@/components/examples/HeroAnimationDemo'\n\nexport default function AnimationDemoPage() {\n  return (\n    <div>\n      <HeroAnimationDemo />\n    </div>\n  )\n}

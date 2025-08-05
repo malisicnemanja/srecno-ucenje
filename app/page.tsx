@@ -1,7 +1,6 @@
 import { PartnershipIcon, TrendingUpIcon } from '@/components/icons'
 import { homePageQuery } from '@/lib/sanity.queries'
 import { sanityFetch } from '@/lib/sanity.client'
-import FlexibleHeroSection from '@/components/features/cms/FlexibleHeroSection'
 
 export default async function HomePage() {
   // Fetch data from Sanity
@@ -55,10 +54,27 @@ export default async function HomePage() {
   const pageData = data || fallbackData
   return (
     <>
-      {/* Flexible Hero Section */}
-      <FlexibleHeroSection 
-        data={pageData.hero || fallbackData.hero}
-      />
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center py-20 overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              {pageData.hero?.title || fallbackData.hero.title}
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
+              {pageData.hero?.subtitle || fallbackData.hero.subtitle}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/kontakt" className="btn btn--primary px-8 py-4 text-lg">
+                Zakaži razgovor
+              </a>
+              <a href="/o-nama" className="btn btn--outline-primary px-8 py-4 text-lg">
+                Saznaj više
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Benefits Grid */}
       <section className="py-20 bg-white">

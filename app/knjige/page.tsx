@@ -344,7 +344,7 @@ export default async function BooksLandingPage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {books.map((book) => (
+            {books && books.length > 0 ? books.map((book) => (
               <Link 
                 key={book.slug.current}
                 href={`/knjige/${book.slug.current}`}
@@ -353,17 +353,22 @@ export default async function BooksLandingPage() {
                 <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:transform group-hover:scale-105">
                   {/* Book cover */}
                   <div className="relative h-64 overflow-hidden">
-                    <Image
-                      src={urlFor(book.coverImage).url()}
-                      alt={book.coverImage?.alt || book.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      {...(book.coverImage?.asset?.metadata?.lqip && {
-                        placeholder: "blur",
-                        blurDataURL: book.coverImage.asset.metadata.lqip
-                      })}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    />
+                    {book.coverImage ? (
+                      <Image
+                        src={urlFor(book.coverImage).url()}
+                        alt={book.coverImage?.alt || book.title}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        {...(book.coverImage?.asset?.metadata?.lqip && {
+                          placeholder: "blur",
+                          blurDataURL: book.coverImage.asset.metadata.lqip
+                        })}
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
+                        <Book className="w-20 h-20 text-primary-400" />
+                      </div>
+                    )}
                     
                     {/* Year badge */}
                     <div className="absolute top-4 right-4 z-10 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium">
@@ -384,7 +389,9 @@ export default async function BooksLandingPage() {
                   </div>
                 </div>
               </Link>
-            ))}
+            )) : (
+              <p className="text-center text-gray-500 col-span-4">Knjige će uskoro biti dostupne.</p>
+            )}
           </div>
         </div>
       </section>
@@ -407,7 +414,7 @@ export default async function BooksLandingPage() {
                 
                 {/* Vrednosti serijala */}
                 <div className="grid grid-cols-2 gap-6">
-                  {landingData.seriesValues.map((value, index) => (
+                  {landingData?.seriesValues?.map((value, index) => (
                     <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50">
                       <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
                         index === 0 ? 'bg-accent-400' :

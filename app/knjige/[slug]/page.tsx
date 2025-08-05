@@ -492,25 +492,27 @@ export default async function BookPage({ params }: Props) {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <PulseButton 
-                variant="accent"
-                size="lg"
-                intensity="medium"
-                className="bg-white text-gray-900 hover:bg-gray-100"
-                onClick={() => window.location.href = '/knjige'}
-              >
-                Sve knjige
-              </PulseButton>
+              <Link href="/knjige">
+                <PulseButton 
+                  variant="accent"
+                  size="lg"
+                  intensity="medium"
+                  className="bg-white text-gray-900 hover:bg-gray-100"
+                >
+                  Sve knjige
+                </PulseButton>
+              </Link>
               
-              <PulseButton 
-                variant="secondary"
-                size="lg"
-                intensity="subtle"
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-gray-900"
-                onClick={() => window.location.href = '/kontakt'}
-              >
-                Kontaktirajte nas
-              </PulseButton>
+              <Link href="/kontakt">
+                <PulseButton 
+                  variant="secondary"
+                  size="lg"
+                  intensity="subtle"
+                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-gray-900"
+                >
+                  Kontaktirajte nas
+                </PulseButton>
+              </Link>
             </div>
           </div>
         </div>
