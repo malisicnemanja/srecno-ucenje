@@ -211,12 +211,56 @@ export default function LocationsPage() {
   // Fetch location data from CMS
   const { data: locationData, isLoading } = useSanityQuery(locationDataQuery)
   
-  // Use CMS data only
-  const cities = locationData
+  // Default cities data if CMS is empty
+  const defaultCities = [
+    {
+      _id: '1',
+      city: 'Beograd',
+      centerCount: 3,
+      status: 'active',
+      featured: true,
+      coordinates: { lat: 44.7866, lng: 20.4489 }
+    },
+    {
+      _id: '2',
+      city: 'Novi Sad',
+      centerCount: 2,
+      status: 'active',
+      featured: false,
+      coordinates: { lat: 45.2671, lng: 19.8335 }
+    },
+    {
+      _id: '3',
+      city: 'Niš',
+      centerCount: 1,
+      status: 'active',
+      featured: false,
+      coordinates: { lat: 43.3209, lng: 21.8958 }
+    },
+    {
+      _id: '4',
+      city: 'Kragujevac',
+      centerCount: 1,
+      status: 'active',
+      featured: false,
+      coordinates: { lat: 44.0142, lng: 20.9395 }
+    },
+    {
+      _id: '5',
+      city: 'Subotica',
+      centerCount: 1,
+      status: 'coming-soon',
+      featured: false,
+      coordinates: { lat: 46.1001, lng: 19.6651 }
+    }
+  ]
   
-  // Compute stats from CMS data or use defaults
-  const totalCenters = cities?.reduce((sum: number, city: any) => sum + (city.centerCount || 0), 0) || 7
-  const activeCities = cities?.filter((city: any) => city.status === 'active')?.length || 5
+  // Use CMS data if available, otherwise use defaults
+  const cities = locationData && locationData.length > 0 ? locationData : defaultCities
+  
+  // Compute stats from cities data
+  const totalCenters = cities.reduce((sum: number, city: any) => sum + (city.centerCount || 0), 0)
+  const activeCities = cities.filter((city: any) => city.status === 'active').length
   
   const stats = [
     { 
