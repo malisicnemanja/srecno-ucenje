@@ -8,6 +8,9 @@ import {
   RocketIcon as RocketSVG, SparklesIcon as SparklesSVG, CalendarIcon as CalendarSVG,
   ClockIcon as ClockSVG, CheckIcon as CheckSVG
 } from '@/components/icons'
+import { useSanityQuery } from '@/hooks/useSanity'
+import { virtualClassroomQuery } from '@/lib/sanity.queries'
+import { BookIcon, BrainIcon, TargetIcon, AwardIcon } from '@/components/icons'
 
 // Mock VR/3D icons since we don't have them
 const VRIcon = ({ size = 24, className = '' }: { size?: number; className?: string }) => (
@@ -64,12 +67,40 @@ const InfoIcon = ({ size = 24, className = '' }: { size?: number; className?: st
   </svg>
 )
 
+// Icon resolver function
+const resolveFeatureIcon = (icon: string | React.ComponentType<any>) => {
+  // If it's already a component, return it
+  if (typeof icon === 'function') {
+    return icon
+  }
+  
+  // Map string icon names to components
+  const iconMap: Record<string, React.ComponentType<any>> = {
+    'gamepad': MouseIcon,
+    'target': TargetIcon,
+    'trophy': AwardIcon,
+    'book': BookIcon,
+    'brain': BrainIcon,
+    'sparkles': SparklesSVG,
+    'mouse': MouseIcon,
+    'keyboard': KeyboardIcon,
+    'touch': TouchIcon,
+    'vr': VRIcon
+  }
+  
+  return iconMap[icon] || InfoIcon
+}
+
 export default function VirtualTourPage() {
   const [isLoading, setIsLoading] = useState(false)
   const [selectedDevice, setSelectedDevice] = useState<'desktop' | 'mobile' | 'vr'>('desktop')
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null)
+  
+  // Fetch virtual classroom data from Sanity
+  const { data: classroomData, isLoading: sanityLoading } = useSanityQuery(virtualClassroomQuery)
 
-  const features = [
+  // Default features data
+  const defaultFeatures = [
     {
       icon: MouseIcon,
       title: 'Interaktivna navigacija',
@@ -95,8 +126,15 @@ export default function VirtualTourPage() {
       device: 'vr'
     }
   ]
+  
+  // Map features to ensure icons are resolved
+  const features = (classroomData?.features || defaultFeatures).map(feature => ({
+    ...feature,
+    icon: resolveFeatureIcon(feature.icon)
+  }))
 
-  const tourHighlights = [
+  // Default tour highlights
+  const defaultTourHighlights = [
     {
       title: 'Glavna učionica',
       description: 'Prostrana i svetla učionica sa najmodernijom opremom',
@@ -118,6 +156,8 @@ export default function VirtualTourPage() {
       duration: '3:00'
     }
   ]
+  
+  const tourHighlights = classroomData?.tourHighlights || defaultTourHighlights
 
   const handleStartTour = () => {
     setIsLoading(true)
@@ -127,6 +167,17 @@ export default function VirtualTourPage() {
       alert('3D virtuelni obilazak će biti dostupan uskoro! Za sada možete zakazati pravu posetu.')
       setIsLoading(false)
     }, 1000)
+  }
+
+  if (sanityLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-primary-900 to-secondary-900">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
+          <p className="text-white">Učitavanje virtuelne učionice...</p>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -173,14 +224,14 @@ export default function VirtualTourPage() {
             </motion.div>
 
             <AnimatedHeadline
-              text="3D virtuelni obilazak učionice"
+              text={classroomData?.title || "3D virtuelni obilazak učionice"}
               highlightText="3D virtuelni obilazak"
               className="text-white mb-6"
               underlineColor="text-primary-400"
             />
 
             <AnimatedSubheadline
-              text="Istražite našu učionicu iz udobnosti vašeg doma. Interaktivno iskustvo koje vam omogućava da vidite svaki detalj."
+              text={classroomData?.subtitle || "Istražite našu učionicu iz udobnosti vašeg doma. Interaktivno iskustvo koje vam omogućava da vidite svaki detalj."}
               className="mb-8 text-white/80"
               delay={0.3}
             />
@@ -385,12 +436,12 @@ export default function VirtualTourPage() {
               <div>
                 <h3 className="text-2xl font-bold mb-4">Saveti za najbolje iskustvo</h3>
                 <ul className="space-y-3">
-                  {[
+                  {(classroomData?.tips?.map(t => t.tip) || [
                     'Koristite Chrome, Firefox ili Safari browser za najbolje performanse',
                     'Preporučujemo brzu internet konekciju (min 10 Mbps)',
                     'Za VR iskustvo potrebne su kompatibilne VR naočare',
                     'Obilazak traje približno 10-15 minuta'
-                  ].map((tip, i) => (
+                  ]).map((tip, i) => (
                     <motion.li
                       key={i}
                       initial={{ opacity: 0, x: -20 }}

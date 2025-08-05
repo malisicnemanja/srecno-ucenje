@@ -1,0 +1,8 @@
+{
+  "query": "*[_type==\"locationData\"]",
+  "result": [],
+  "syncTags": [
+    "s1:9U5ZVw"
+  ],
+  "ms": 4
+}

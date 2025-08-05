@@ -1,0 +1,407 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================
+   CSS VARIJABLE - MOBILE FIRST
+   =========================== */
+:root {
+  /* Primarne boje - ublažene i harmonične */
+  --color-primary: #10B981;      /* Mekša zelena */
+  --color-primary-light: #34D399;
+  --color-primary-dark: #059669;
+  
+  /* Sekundarne boje */
+  --color-secondary: #3B82F6;    /* Plava */
+  --color-secondary-light: #60A5FA;
+  --color-secondary-dark: #2563EB;
+  
+  /* Accent boje */
+  --color-accent: #F59E0B;       /* Narandžasta */
+  --color-accent-light: #FCD34D;
+  --color-accent-dark: #D97706;
+  
+  /* Warm boje */
+  --color-warm: #EF4444;         /* Crvena */
+  --color-warm-light: #F87171;
+  --color-warm-dark: #DC2626;
+  
+  /* Neutralne boje */
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    @apply bg-gray-50 text-gray-900;
+  }
+
+  /* Mobile First Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold leading-tight;
+    text-transform: none; /* Samo prvo slovo veliko */
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  h4 {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+
+  h5 {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus {
+    @apply outline-none;
+  }
+
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500 rounded-md;
+  }
+
+  /* Selection colors */
+  ::selection {
+    @apply bg-primary-100 text-primary-900;
+  }
+}
+
+@layer components {
+  /* Container - Mobile First */
+  .container {
+    @apply w-full px-4 mx-auto;
+    @apply sm:px-6;
+    @apply lg:px-8;
+    @apply max-w-7xl;
+  }
+
+  /* Section Spacing - Mobile First */
+  .section {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* Cards - BEZ GRADIJENATA */
+  .card {
+    @apply bg-white rounded-lg p-4 md:p-6 lg:p-8;
+    @apply border border-gray-200;
+    @apply shadow-sm hover:shadow-md;
+    @apply transition-all duration-200;
+  }
+
+  .card-interactive {
+    @apply card hover:-translate-y-1 cursor-pointer;
+  }
+
+  /* Buttons - Mobile First sa hover animacijama */
+  .btn {
+    @apply inline-flex items-center justify-center;
+    @apply px-4 py-2 md:px-6 md:py-3;
+    @apply text-sm md:text-base;
+    @apply font-medium rounded-lg;
+    @apply border-2 border-transparent;
+    @apply transition-all duration-200 ease-in-out;
+    @apply transform active:scale-95;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply relative overflow-hidden;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-500 text-white border-primary-500;
+    @apply hover:bg-white hover:text-primary-500;
+    @apply hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary-500 text-white border-secondary-500;
+    @apply hover:bg-white hover:text-secondary-500;
+    @apply hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent-500 text-white border-accent-500;
+    @apply hover:bg-white hover:text-accent-500;
+    @apply hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-warm {
+    @apply btn bg-warm-500 text-white border-warm-500;
+    @apply hover:bg-white hover:text-warm-500;
+    @apply hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply btn bg-white border-current;
+  }
+
+  .btn-outline-primary {
+    @apply btn-outline text-primary-500 border-primary-500;
+    @apply hover:bg-primary-500 hover:text-white;
+    @apply hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-outline-secondary {
+    @apply btn-outline text-secondary-500 border-secondary-500;
+    @apply hover:bg-secondary-500 hover:text-white;
+    @apply hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  /* Form Elements - Mobile First */
+  .form-input,
+  .form-select,
+  .form-textarea {
+    @apply w-full px-3 py-2 md:px-4 md:py-3;
+    @apply text-sm md:text-base;
+    @apply bg-white border-2 border-gray-300 rounded-lg;
+    @apply focus:border-primary-500 focus:ring-2 focus:ring-primary-100;
+    @apply transition-all duration-200;
+  }
+
+  .form-label {
+    @apply block text-sm md:text-base font-medium text-gray-700 mb-1;
+  }
+
+  /* Modals - Centered */
+  .modal-backdrop {
+    @apply fixed inset-0 bg-black bg-opacity-50 z-50;
+    @apply flex items-center justify-center p-4;
+  }
+
+  .modal-content {
+    @apply bg-white rounded-xl shadow-2xl;
+    @apply w-full max-w-lg max-h-[90vh] overflow-y-auto;
+    @apply p-6 md:p-8;
+  }
+
+  /* Skeleton Loaders */
+  .skeleton {
+    @apply animate-pulse bg-gray-200 rounded;
+  }
+
+  .skeleton-text {
+    @apply h-4 skeleton mb-2 rounded-md;
+  }
+
+  .skeleton-title {
+    @apply h-6 md:h-8 skeleton mb-4 rounded-md;
+  }
+
+  /* UKLANJAMO SVE GRADIJENTE */
+  .gradient-primary,
+  .gradient-secondary,
+  .gradient-accent,
+  .gradient-warm,
+  .gradient-soft-primary,
+  .gradient-soft-secondary,
+  .gradient-soft-accent,
+  .gradient-soft-warm {
+    background: transparent !important;
+  }
+
+  /* Zamena za gradijente - flat boje */
+  .bg-primary-soft {
+    @apply bg-primary-50;
+  }
+
+  .bg-secondary-soft {
+    @apply bg-secondary-50;
+  }
+
+  .bg-accent-soft {
+    @apply bg-accent-50;
+  }
+
+  .bg-warm-soft {
+    @apply bg-warm-50;
+  }
+}
+
+@layer utilities {
+  /* Mobile/Desktop Helpers */
+  .mobile-only {
+    @apply block md:hidden;
+  }
+
+  .desktop-only {
+    @apply hidden md:block;
+  }
+
+  /* Animacije */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Animacija za brojače */
+  @keyframes countUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* SVG animacije */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slideIn {
+    animation: slideIn 0.5s ease-out;
+  }
+
+  .animate-scaleIn {
+    animation: scaleIn 0.5s ease-out;
+  }
+
+  .animate-countUp {
+    animation: countUp 0.8s ease-out;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-rotate {
+    animation: rotate 20s linear infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  /* Animation delays */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  /* Shadows bez gradijenata */
+  .shadow-soft {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .shadow-card {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .shadow-hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Text styles */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Number formatting */
+  .number-format::after {
+    content: attr(data-formatted);
+  }
+}

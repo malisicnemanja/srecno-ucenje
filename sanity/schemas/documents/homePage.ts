@@ -120,6 +120,48 @@ const homePage = defineType({
       ],
     }),
     defineField({
+      name: 'homeFAQ',
+      title: 'Home FAQ (Direct)',
+      type: 'object',
+      fields: [
+        {
+          name: 'sectionTitle',
+          title: 'Section Title',
+          type: 'string',
+          initialValue: 'Često postavljana pitanja',
+        },
+        {
+          name: 'faqs',
+          title: 'FAQs',
+          type: 'array',
+          of: [
+            {
+              type: 'object',
+              fields: [
+                {
+                  name: 'question',
+                  title: 'Question',
+                  type: 'string',
+                  validation: (Rule) => Rule.required(),
+                },
+                {
+                  name: 'answer',
+                  title: 'Answer',
+                  type: 'text',
+                  validation: (Rule) => Rule.required(),
+                },
+                {
+                  name: 'category',
+                  title: 'Category',
+                  type: 'string',
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
       name: 'interactiveClassroom',
       title: 'Interactive Classroom Preview',
       type: 'object',
@@ -193,6 +235,37 @@ const homePage = defineType({
           title: 'Incentive',
           type: 'string',
           description: 'e.g., "Dobijte 10% popusta na prvu godinu"',
+        },
+        {
+          name: 'ctaText',
+          title: 'CTA Text',
+          type: 'string',
+          initialValue: 'Prijavite se',
+        },
+      ],
+    }),
+    defineField({
+      name: 'newsletterCTA',
+      title: 'Newsletter CTA',
+      type: 'object',
+      fields: [
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+          initialValue: 'Budite u toku sa prilikama',
+        },
+        {
+          name: 'description',
+          title: 'Description',
+          type: 'text',
+          rows: 2,
+        },
+        {
+          name: 'incentive',
+          title: 'Incentive',
+          type: 'string',
+          description: 'e.g., "Besplatan vodič: 10 koraka do uspešne obrazovne franšize"',
         },
         {
           name: 'ctaText',

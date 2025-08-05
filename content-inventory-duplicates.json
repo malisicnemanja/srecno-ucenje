@@ -1,0 +1,58 @@
+{
+  "duplicates": [
+    {
+      "original": "app/metodologija/page.tsx",
+      "duplicate": "app/methodology/page.tsx",
+      "type": "page",
+      "analysis": {
+        "original_is": "Serbian version with CMS integration",
+        "duplicate_is": "English version with hardcoded content",
+        "keep": "app/metodologija/page.tsx",
+        "archive": "app/methodology/page.tsx",
+        "reason": "Serbian version uses CMS, English is static"
+      }
+    },
+    {
+      "original": "app/fransiza-modeli/page.tsx",
+      "duplicate": "app/franchise-models/page.tsx",
+      "type": "page",
+      "analysis": {
+        "original_is": "Serbian version with CMS data",
+        "duplicate_is": "English version with hardcoded models",
+        "keep": "app/fransiza-modeli/page.tsx",
+        "archive": "app/franchise-models/page.tsx",
+        "reason": "Serbian version uses CMS, English is static"
+      }
+    },
+    {
+      "original": "components/home/*",
+      "duplicate": "components/cms/*",
+      "type": "components",
+      "analysis": {
+        "original_is": "Active version (13 files)",
+        "duplicate_is": "Old version (13 files)",
+        "keep": "components/home/*",
+        "archive": "components/cms/*",
+        "reason": "components/home is the active version"
+      }
+    },
+    {
+      "original": "components/home/*",
+      "duplicate": "components/features/cms/*",
+      "type": "components",
+      "analysis": {
+        "original_is": "Active version (13 files)",
+        "duplicate_is": "Older version (6 files)",
+        "keep": "components/home/*",
+        "archive": "components/features/cms/*",
+        "reason": "components/home is the active version"
+      }
+    }
+  ],
+  "summary": {
+    "total_duplicates": 4,
+    "page_duplicates": 2,
+    "component_duplicates": 2,
+    "potential_space_savings": "~32 files"
+  }
+}

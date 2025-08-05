@@ -1,0 +1,8 @@
+{
+  "query": "*[_type==\"resources\"]",
+  "result": [],
+  "syncTags": [
+    "s1:pH8dYw"
+  ],
+  "ms": 4
+}

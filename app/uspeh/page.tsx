@@ -9,6 +9,8 @@ import {
   CheckIcon as CheckSVG, SparklesIcon as SparklesSVG, UsersIcon as UserSVG,
   BookIcon as BookSVG, BrainIcon as BrainSVG
 } from '@/components/icons'
+import { useSanityQuery } from '@/hooks/useSanity'
+import { successStoriesQuery } from '@/lib/sanity.queries'
 
 // Mock icons we need
 const QuoteIcon = ({ size = 24, className = '' }: { size?: number; className?: string }) => (
@@ -33,8 +35,8 @@ const ChartSVG = ({ size = 24, className = '' }: { size?: number; className?: st
 
 import Link from 'next/link'
 
-// Success stories data
-const successStories = [
+// Fallback success stories data (used when CMS is unavailable)
+const fallbackSuccessStories = [
   {
     id: 1,
     studentName: "Milica Jovanović",
@@ -183,8 +185,31 @@ const achievementCategories = [
 ]
 
 export default function UspehPage() {
-  const [selectedStory, setSelectedStory] = useState<number | null>(null)
+  const [selectedStory, setSelectedStory] = useState<string | null>(null)
   const [activeCategory, setActiveCategory] = useState(0)
+  
+  // Fetch success stories from Sanity
+  const { data: sanityStories, isLoading } = useSanityQuery(successStoriesQuery)
+  
+  // Transform Sanity data to match component structure
+  const successStories = sanityStories?.length > 0 ? sanityStories.map((story: any) => ({
+    id: story._id,
+    studentName: story.studentName,
+    age: story.age,
+    location: story.program?.title || "Srećno učenje",
+    program: story.program?.title || "Program",
+    avatar: story.age && story.age < 12 ? "👧" : "👦",
+    quote: story.testimonial,
+    parentQuote: "Transformacija je bila neverovatna.",
+    parentName: "Roditelj",
+    results: story.results?.reduce((acc: any, result: any) => {
+      acc[result.metric] = { after: result.label, before: "Pre programa" };
+      return acc;
+    }, {}) || {},
+    achievements: story.afterSkills || [],
+    duration: "Program u toku",
+    featured: story.featured
+  })) : fallbackSuccessStories
 
   return (
     <div className="min-h-screen">
@@ -404,8 +429,14 @@ export default function UspehPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {successStories.map((story, i) => (
+          {isLoading ? (
+            <div className="text-center py-20">
+              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
+              <p className="mt-4 text-gray-600">Učitavanje priča uspeha...</p>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 gap-8">
+              {successStories.map((story: any, i: number) => (
               <motion.div
                 key={story.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -491,6 +522,7 @@ export default function UspehPage() {
               </motion.div>
             ))}
           </div>
+          )}
         </div>
       </section>
 
@@ -742,7 +774,7 @@ export default function UspehPage() {
               onClick={(e) => e.stopPropagation()}
             >
               {(() => {
-                const story = successStories.find(s => s.id === selectedStory)!
+                const story = successStories.find((s: any) => s.id === selectedStory)!
                 return (
                   <div className="p-8">
                     <button

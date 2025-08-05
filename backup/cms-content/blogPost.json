@@ -1,0 +1,332 @@
+{
+  "query": "*[_type==\"blogPost\"]",
+  "result": [
+    {
+      "_createdAt": "2025-08-03T01:48:03Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFe5f",
+      "_rev": "EIn1TO6kzkBkpMuRkFFe28",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-03T01:48:03Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdgw"
+      },
+      "category": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFcmQ"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Brzočitanje nije samo o brzini - to je veština koja pomaže deci da bolje razumeju ono što čitaju."
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "1. Tehnike skeniranja"
+            }
+          ],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Naučite dete da brzo skenira tekst kako bi identifikovalo ključne informacije."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Otkrijte jednostavne tehnike koje će pomoći vašem detetu da čita brže i efikasnije.",
+      "featured": true,
+      "publishedAt": "2024-02-01T00:00:00.000Z",
+      "slug": {
+        "current": "5-tehnika-brzocitanja"
+      },
+      "title": "5 tehnika brzočitanja koje svako dete može da nauči"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:08Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFeJn",
+      "_rev": "EIn1TO6kzkBkpMuRkFFeGG",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-03T01:48:08Z",
+      "author": {
+        "_ref": "hWo33GCGxd3rDeD5TiyAE9"
+      },
+      "category": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdSo"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Nedavno istraživanje potvrđuje da mentalna aritmetika poboljšava akademske performanse."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Najnoviji rezultati pokazuju neverovatne benefite mentalne aritmetike za decu.",
+      "featured": false,
+      "publishedAt": "2024-01-15T00:00:00.000Z",
+      "slug": {
+        "current": "istrazivanje-mentalna-aritmetika"
+      },
+      "title": "Novo istraživanje o efikasnosti mentalne aritmetike"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:23Z",
+      "_id": "blogPost-8dd225af-137e-48e0-8a5b-c6e211ba8df1",
+      "_rev": "atDdCAAfWCLcotj1z8G6UR",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-04T21:16:23Z",
+      "author": {
+        "_ref": "author-default"
+      },
+      "body": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Posle 15 godina rada u školi, Marija je želela promenu. Njena priča je dokaz da nikad nije kasno za novi početak..."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "category": {
+        "_ref": "blogCategory-a6cc8788-b093-43e7-8b84-a9d06655d891"
+      },
+      "excerpt": "Kako je Marija transformisala svoju karijeru i otvorila tri uspešna centra Srećnog učenja.",
+      "mainImage": null,
+      "publishedAt": "2025-08-04T21:16:02.004Z",
+      "slug": {
+        "current": "prica-marija-petrovic"
+      },
+      "tags": [
+        "priča uspeha",
+        "franšizer",
+        "inspiracija"
+      ],
+      "title": "Od nastavnice do uspešne preduzetnice: Priča Marije Petrović"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:22Z",
+      "_id": "blogPost-b89e8814-05d6-4437-ae1c-14ec0373e124",
+      "_rev": "atDdCAAfWCLcotj1z8G6Mx",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-04T21:16:22Z",
+      "author": {
+        "_ref": "author-default"
+      },
+      "body": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Naša metodologija nije samo o učenju gradiva - ona gradi samopouzdanje, kritičko mišljenje i ljubav prema znanju koja traje ceo život..."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "category": {
+        "_ref": "blogCategory-bcf2b741-6636-491d-b70e-1357204922c2"
+      },
+      "excerpt": "Otkrijte tajne naše naučno zasnovane metodologije koja transformiše način na koji deca pristupaju učenju.",
+      "mainImage": null,
+      "publishedAt": "2025-08-04T21:16:02.004Z",
+      "slug": {
+        "current": "metodologija-ljubav-prema-ucenju"
+      },
+      "tags": [
+        "metodologija",
+        "učenje",
+        "deca"
+      ],
+      "title": "Kako naša metodologija pomaže deci da zavole učenje"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:21Z",
+      "_id": "blogPost-e31bfedf-f623-4c8e-8ca5-9a5839d405c9",
+      "_rev": "jsO7i4LmwGEnLQvVmnBbtD",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-04T21:16:21Z",
+      "author": {
+        "_ref": "author-default"
+      },
+      "body": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "U vremenu ekonomske nesigurnosti, obrazovanje ostaje prioritet za roditelje. Evo zašto je sada idealno vreme za ulazak u ovaj sektor kroz franšizu..."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "category": {
+        "_ref": "blogCategory-09fbb52b-c01b-4d79-b640-7e73f70a52ba"
+      },
+      "excerpt": "Obrazovanje je industrija otporna na krize. Saznajte zašto je investicija u obrazovnu franšizu pametna odluka.",
+      "mainImage": null,
+      "publishedAt": "2025-08-04T21:16:02.004Z",
+      "slug": {
+        "current": "5-razloga-obrazovna-fransiza"
+      },
+      "tags": [
+        "franšiza",
+        "biznis",
+        "obrazovanje"
+      ],
+      "title": "5 razloga zašto je sada pravo vreme za obrazovnu franšizu"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:06Z",
+      "_id": "hWo33GCGxd3rDeD5TiyAX7",
+      "_rev": "hWo33GCGxd3rDeD5TiyASN",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-03T01:48:06Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdgw"
+      },
+      "category": {
+        "_ref": "hWo33GCGxd3rDeD5Tiy9vB"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Marko je sa 10 godina mrzeo čitanje. Evo kako se sve promenilo..."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Inspirativna priča transformacije jednog učenika kroz program brzočitanja.",
+      "featured": true,
+      "publishedAt": "2024-01-20T00:00:00.000Z",
+      "slug": {
+        "current": "prica-o-marku"
+      },
+      "title": "Priča o Marku - od mrzitelja knjiga do bibliotekara"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:07Z",
+      "_id": "hWo33GCGxd3rDeD5TiyAq5",
+      "_rev": "hWo33GCGxd3rDeD5TiyAlL",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-03T01:48:07Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdgw"
+      },
+      "category": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdID"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "U doba pametnih telefona i tableta, čitanje ostaje temelj obrazovanja."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Zašto je čitanje važnije nego ikad u eri digitalnih tehnologija.",
+      "featured": false,
+      "publishedAt": "2024-01-18T00:00:00.000Z",
+      "slug": {
+        "current": "znacaj-citanja-digitalno-doba"
+      },
+      "title": "Značaj čitanja u digitalnom dobu"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:04Z",
+      "_id": "hZm6tMI3obk6ZBXKfA9sZt",
+      "_rev": "hZm6tMI3obk6ZBXKfA9sWt",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-03T01:48:04Z",
+      "author": {
+        "_ref": "hWo33GCGxd3rDeD5TiyAE9"
+      },
+      "category": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFcx1"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Mentalna aritmetika je moćan alat za cjelokupni kognitivni razvoj deteta."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Naučno objašnjenje kako mentalna aritmetika stimuliše oba hemisfera mozga.",
+      "featured": true,
+      "publishedAt": "2024-01-28T00:00:00.000Z",
+      "slug": {
+        "current": "mentalna-aritmetika-razvoj-mozga"
+      },
+      "title": "Kako mentalna aritmetika pomaže u razvoju mozga"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:05Z",
+      "_id": "hZm6tMI3obk6ZBXKfA9sit",
+      "_rev": "hZm6tMI3obk6ZBXKfA9sft",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-03T01:48:05Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdv4"
+      },
+      "category": {
+        "_ref": "hWo33GCGxd3rDeD5Tiy9gx"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Motivacija je ključ uspešnog učenja. Evo kako možete pomoći svom detetu."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Praktični saveti za roditelje o tome kako da podržite svoju decu u procesu učenja.",
+      "featured": false,
+      "publishedAt": "2024-01-25T00:00:00.000Z",
+      "slug": {
+        "current": "kako-motivisati-dete"
+      },
+      "title": "Kako da motivišete dete za učenje"
+    }
+  ],
+  "syncTags": [
+    "s1:IUautw"
+  ],
+  "ms": 8
+}

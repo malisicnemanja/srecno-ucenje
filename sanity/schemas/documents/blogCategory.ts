@@ -1,10 +1,11 @@
 import { defineField, defineType } from 'sanity'
+import { FolderIcon } from '@sanity/icons'
 
 export default defineType({
   name: 'blogCategory',
   title: 'Blog Kategorija',
   type: 'document',
-  icon: () => '📂',
+  icon: FolderIcon,
   fields: [
     defineField({
       name: 'name',
@@ -44,12 +45,12 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: '🔵 Primarna (Plava)', value: 'primary' },
-          { title: '🟢 Sekundarna (Zelena)', value: 'secondary' },
-          { title: '🟡 Akcent (Žuta)', value: 'accent' },
-          { title: '🟠 Topla (Narandžasta)', value: 'warm' },
-          { title: '🔴 Crvena', value: 'red' },
-          { title: '🟣 Ljubičasta', value: 'purple' }
+          { title: 'Primarna (Plava)', value: 'primary' },
+          { title: 'Sekundarna (Zelena)', value: 'secondary' },
+          { title: 'Akcent (Žuta)', value: 'accent' },
+          { title: 'Topla (Narandžasta)', value: 'warm' },
+          { title: 'Crvena', value: 'red' },
+          { title: 'Ljubičasta', value: 'purple' }
         ]
       },
       initialValue: 'primary',
@@ -64,20 +65,11 @@ export default defineType({
       color: 'color'
     },
     prepare(selection) {
-      const { title, subtitle, color } = selection
-      const colorEmojis = {
-        primary: '🔵',
-        secondary: '🟢', 
-        accent: '🟡',
-        warm: '🟠',
-        red: '🔴',
-        purple: '🟣'
-      }
+      const { title, subtitle } = selection
       
       return {
         title: title,
-        subtitle: subtitle,
-        media: colorEmojis[color] || '📂'
+        subtitle: subtitle
       }
     }
   }

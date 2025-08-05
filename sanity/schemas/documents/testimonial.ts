@@ -12,10 +12,20 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'authorName',
+      title: 'Ime autora (Alternative)',
+      type: 'string',
+    }),
+    defineField({
       name: 'role',
       title: 'Uloga',
       type: 'string',
       description: 'npr. Roditelj, Učenik',
+    }),
+    defineField({
+      name: 'authorRole',
+      title: 'Uloga autora (Alternative)',
+      type: 'string',
     }),
     defineField({
       name: 'content',
@@ -42,6 +52,18 @@ export default defineType({
       title: 'Izdvojeno',
       type: 'boolean',
       initialValue: false,
+    }),
+    defineField({
+      name: 'location',
+      title: 'Lokacija',
+      type: 'string',
+      description: 'npr. Beograd, Novi Sad',
+    }),
+    defineField({
+      name: 'createdAt',
+      title: 'Datum kreiranja',
+      type: 'datetime',
+      initialValue: () => new Date().toISOString(),
     }),
   ],
   preview: {

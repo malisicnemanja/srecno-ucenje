@@ -134,17 +134,17 @@ export default defineType({
     },
     prepare({ title, year, type, media, featured }) {
       const typeMap: Record<string, string> = {
-        book: '📚',
-        manual: '📖',
-        workbook: '📝',
-        guide: '🗺️',
-        study: '📊',
-        article: '📄'
+        book: 'Knjiga',
+        manual: 'Priručnik',
+        workbook: 'Radna sveska',
+        guide: 'Vodič',
+        study: 'Studija',
+        article: 'Članak'
       }
       
       return {
         title: `${title} (${year})`,
-        subtitle: `${typeMap[type] || '📄'} ${type}${featured ? ' ⭐' : ''}`,
+        subtitle: `${typeMap[type] || 'Publikacija'} ${featured ? ' - Istaknuto' : ''}`,
         media
       }
     }

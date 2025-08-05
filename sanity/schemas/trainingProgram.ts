@@ -80,10 +80,10 @@ export default defineType({
             type: 'string',
             options: {
               list: [
-                { title: '🎯 Cilj', value: 'target' },
-                { title: '🔬 Nauka', value: 'science' },
-                { title: '🤝 Mentorstvo', value: 'mentorship' },
-                { title: '💼 Posao', value: 'career' }
+                { title: 'Cilj', value: 'target' },
+                { title: 'Nauka', value: 'science' },
+                { title: 'Mentorstvo', value: 'mentorship' },
+                { title: 'Posao', value: 'career' }
               ]
             }
           }),

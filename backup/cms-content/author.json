@@ -1,0 +1,61 @@
+{
+  "query": "*[_type==\"author\"]",
+  "result": [
+    {
+      "_createdAt": "2025-08-03T01:48:00Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFdgw",
+      "_rev": "EIn1TO6kzkBkpMuRkFFddP",
+      "_type": "author",
+      "_updatedAt": "2025-08-03T01:48:00Z",
+      "bio": "Doktor pedagoških nauka sa 15 godina iskustva u radu sa decom. Autor nekoliko knjiga o modernim metodama učenja.",
+      "name": "Dr. Milica Jovanović",
+      "slug": {
+        "current": "dr-milica-jovanovic"
+      },
+      "title": "Stručnjak za brzočitanje"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:02Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFdv4",
+      "_rev": "EIn1TO6kzkBkpMuRkFFdrX",
+      "_type": "author",
+      "_updatedAt": "2025-08-03T01:48:02Z",
+      "bio": "Specijalista za rad sa decom i porodičnu terapiju. Pomaže roditeljima da razumeju i podrže razvoj svoje dece.",
+      "name": "Psiholog Marija Stojanović",
+      "slug": {
+        "current": "marija-stojanovic"
+      },
+      "title": "Dečji psiholog"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:02Z",
+      "_id": "author-default",
+      "_rev": "atDdCAAfWCLcotj1z8G48V",
+      "_type": "author",
+      "_updatedAt": "2025-08-04T21:16:02Z",
+      "bio": "Stručni tim Srećnog učenja sa preko 15 godina iskustva u obrazovanju i razvoju franšize.",
+      "image": null,
+      "name": "Tim Srećno učenje",
+      "slug": {
+        "current": "tim-srecno-ucenje"
+      }
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:01Z",
+      "_id": "hWo33GCGxd3rDeD5TiyAE9",
+      "_rev": "hWo33GCGxd3rDeD5TiyA9P",
+      "_type": "author",
+      "_updatedAt": "2025-08-03T01:48:01Z",
+      "bio": "Profesor matematike i sertifikovani instruktor mentalne aritmetike sa međunarodnim iskustvom.",
+      "name": "Prof. Stefan Nikolić",
+      "slug": {
+        "current": "prof-stefan-nikolic"
+      },
+      "title": "Instruktor mentalne aritmetike"
+    }
+  ],
+  "syncTags": [
+    "s1:qkKVbw"
+  ],
+  "ms": 5
+}

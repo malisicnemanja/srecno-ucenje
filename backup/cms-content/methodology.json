@@ -1,0 +1,193 @@
+{
+  "query": "*[_type==\"methodology\"]",
+  "result": [
+    {
+      "_createdAt": "2025-08-03T04:31:42Z",
+      "_id": "hWo33GCGxd3rDeD5TjTsuH",
+      "_rev": "hWo33GCGxd3rDeD5TjTspX",
+      "_type": "methodology",
+      "_updatedAt": "2025-08-03T04:31:42Z",
+      "comparison": {
+        "description": "Vidite zašto je naša metodologija superiorna",
+        "items": [
+          {
+            "aspect": "Brzina učenja",
+            "ourMethod": "5x brže uz bolje razumevanje",
+            "traditional": "Sporo, linealno učenje"
+          },
+          {
+            "aspect": "Motivacija dece",
+            "ourMethod": "Pozitivne emocije i ljubav prema učenju",
+            "traditional": "Prinuda i strah od greške"
+          },
+          {
+            "aspect": "Rezultati",
+            "ourMethod": "Dugoročno zadržavanje znanja",
+            "traditional": "Kratkoročno pamćenje"
+          }
+        ],
+        "title": "Poređenje sa tradicionalnim pristupima"
+      },
+      "hero": {
+        "description": "Naša jedinstvena metodologija kombinuje najbolje iz svetskih pristupa sa lokalnim potrebama dece.",
+        "subtitle": "Otkrijte kako Srećno učenje transformiše način na koji deca pristupaju znanju",
+        "title": "Revolucionarni pristup učenju"
+      },
+      "introduction": {
+        "description": "Srećno učenje nije samo još jedna obrazovna metodologija. To je revolucionarni pristup koji postavlja dete u centar procesa učenja.",
+        "features": [
+          {
+            "description": "Učimo decu da vole proces učenja kroz pozitivne emocije",
+            "iconType": "heart",
+            "title": "Emocionalno učenje"
+          },
+          {
+            "description": "Povećavamo brzinu čitanja uz održavanje potpunog razumevanja",
+            "iconType": "brain",
+            "title": "Brzo čitanje"
+          },
+          {
+            "description": "Razvijamo kreativno mišljenje kroz inovativne tehnike",
+            "iconType": "rocket",
+            "title": "Kreativnost"
+          }
+        ],
+        "title": "Zašto je naša metodologija drugačija?"
+      },
+      "methods": [
+        {
+          "benefits": [
+            "Povećana brzina čitanja do 5 puta",
+            "Bolje razumevanje pročitanog sadržaja",
+            "Povećana koncentracija i fokus",
+            "Razvoj vizuelne memorije"
+          ],
+          "description": "Tehnike koje omogućavaju deci da čitaju brže uz bolje razumevanje teksta.",
+          "name": "Brzo čitanje",
+          "techniques": [
+            "Vizuelno čitanje",
+            "Eliminacija unutrašnjeg glasa",
+            "Proširivanje vidnog polja",
+            "Tehnike koncentracije"
+          ]
+        },
+        {
+          "benefits": [
+            "Brže računanje od kalkulatora",
+            "Razvoj logičkog mišljenja",
+            "Povećanje koncentracije",
+            "Jačanje radne memorije"
+          ],
+          "description": "Računanje bez kalkulatora koristeći mentalne tehnike i vizualizaciju.",
+          "name": "Mentalna aritmetika",
+          "techniques": [
+            "Abakus tehnika",
+            "Vizualizacija brojeva",
+            "Mentalne skraćenice",
+            "Brzinske formule"
+          ]
+        },
+        {
+          "benefits": [
+            "Dugotrajno pamćenje gradiva",
+            "Pozitivan odnos prema učenju",
+            "Smanjenje stresa od učenja",
+            "Povećanje motivacije"
+          ],
+          "description": "Povezivanje emocija sa procesom učenja za bolje pamćenje.",
+          "name": "Emocionalno učenje",
+          "techniques": [
+            "Emotivne asocijacije",
+            "Pozitivno potkrepljenje",
+            "Igrovne tehnike",
+            "Personalizacija sadržaja"
+          ]
+        }
+      ],
+      "scientificBackground": {
+        "description": "Naša metodologija se zasniva na najnovijim istraživanjima u oblasti neuroplastičnosti i kognitivne psihologije.",
+        "researches": [
+          {
+            "description": "Mozak se može reorganizovati tokom celog života, posebno u detinjstvu.",
+            "title": "Neuroplastičnost mozga"
+          },
+          {
+            "description": "Kombinovanje različitih čula poboljšava efikasnost učenja.",
+            "title": "Multimodalno učenje"
+          },
+          {
+            "description": "Pozitivne emocije omogućavaju bolju retenciju informacija.",
+            "title": "Pozitivna psihologija"
+          }
+        ],
+        "title": "Naučna osnova naše metodologije"
+      },
+      "timeline": {
+        "description": "Pratite naš put kroz godine istraživanja i razvoja",
+        "steps": [
+          {
+            "achievements": [
+              "Analiza 50+ svetskih metodologija",
+              "Prva pilot grupa od 20 dece"
+            ],
+            "description": "Započeli smo duboko istraživanje svetskih metodologija učenja i njihove primene u našem kulturnom kontekstu.",
+            "title": "Početak istraživanja",
+            "year": "2010"
+          },
+          {
+            "achievements": [
+              "Prva grupa završila program",
+              "Razvoj osnovnog kurikuluma"
+            ],
+            "description": "Naša prva deca pokazala su neverovatne rezultate - povećanje brzine čitanja za 300%.",
+            "title": "Prvi rezultati",
+            "year": "2012"
+          },
+          {
+            "achievements": [
+              "Obuka 100+ dece",
+              "Sertifikacija instruktora"
+            ],
+            "description": "Otvorili smo prvi centar Srećno učenje u Beogradu sa 5 instruktora.",
+            "title": "Prva škola",
+            "year": "2015"
+          },
+          {
+            "achievements": [
+              "Lansiranje online platforme",
+              "10 novih lokacija"
+            ],
+            "description": "Razvili smo digitalnu platformu koja podržava naše metode učenja.",
+            "title": "Digitalizacija",
+            "year": "2018"
+          },
+          {
+            "achievements": [
+              "50+ franšiza partnera",
+              "5000+ zadovoljne dece"
+            ],
+            "description": "Tokom pandemije, proširili smo se na 50+ lokacija kroz franšizu model.",
+            "title": "Širenje mreže",
+            "year": "2020"
+          },
+          {
+            "achievements": [
+              "150+ lokacija",
+              "20.000+ zadovoljne dece",
+              "Međunarodno priznanje"
+            ],
+            "description": "Danas imamo 150+ lokacija i više od 20.000 dece je prošlo kroz naš program.",
+            "title": "Današnji dan",
+            "year": "2024"
+          }
+        ],
+        "title": "Evolucija naše metodologije"
+      },
+      "title": "Naša Metodologija"
+    }
+  ],
+  "syncTags": [
+    "s1:0W/ptA"
+  ],
+  "ms": 6
+}

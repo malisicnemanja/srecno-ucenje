@@ -1,0 +1,61 @@
+{
+  "query": "*[_type==\"faqCategory\"]",
+  "result": [
+    {
+      "_createdAt": "2025-08-04T21:16:03Z",
+      "_id": "faqCategory-13cb2bc0-c9ac-4c6f-924f-71d551be5ec1",
+      "_rev": "atDdCAAfWCLcotj1z8G4Fz",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-04T21:16:03Z",
+      "description": "Osnovna pitanja o Srećno učenje franšizi",
+      "order": 1,
+      "slug": {
+        "current": "opsta-pitanja"
+      },
+      "title": "Opšta pitanja o franšizi"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:05Z",
+      "_id": "faqCategory-62a0038f-9f0f-4575-a19b-8b8d00932ce5",
+      "_rev": "atDdCAAfWCLcotj1z8G4gB",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-04T21:16:05Z",
+      "description": "Sve o obuci, mentorstvu i kontinuiranoj podršci",
+      "order": 3,
+      "slug": {
+        "current": "obuka-podrska"
+      },
+      "title": "Obuka i podrška"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:06Z",
+      "_id": "faqCategory-692f095f-80cb-4551-b768-6b0b008edb91",
+      "_rev": "atDdCAAfWCLcotj1z8G4nf",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-04T21:16:06Z",
+      "description": "Svakodnevno poslovanje i upravljanje centrom",
+      "order": 4,
+      "slug": {
+        "current": "operativna-pitanja"
+      },
+      "title": "Operativna pitanja"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:04Z",
+      "_id": "faqCategory-b6f9aba7-75b8-4c20-9309-6e8faaee28fd",
+      "_rev": "LRuNsVxy2neCREmRL1oMWh",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-04T21:16:04Z",
+      "description": "Investicija, troškovi, prihodi i ROI",
+      "order": 2,
+      "slug": {
+        "current": "finansijska-pitanja"
+      },
+      "title": "Finansijska pitanja"
+    }
+  ],
+  "syncTags": [
+    "s1:7lSnCQ"
+  ],
+  "ms": 6
+}

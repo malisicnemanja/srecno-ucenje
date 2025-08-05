@@ -29,6 +29,11 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'content',
+      title: 'Sadržaj (Alternative)',
+      type: 'text',
+    }),
+    defineField({
       name: 'results',
       title: 'Rezultati',
       type: 'array',
@@ -74,6 +79,18 @@ export default defineType({
       name: 'publishedAt',
       title: 'Datum Objavljivanja',
       type: 'datetime',
+    }),
+    defineField({
+      name: 'location',
+      title: 'Lokacija',
+      type: 'string',
+      description: 'npr. Beograd, Novi Sad',
+    }),
+    defineField({
+      name: 'createdAt',
+      title: 'Datum kreiranja',
+      type: 'datetime',
+      initialValue: () => new Date().toISOString(),
     }),
   ],
   preview: {

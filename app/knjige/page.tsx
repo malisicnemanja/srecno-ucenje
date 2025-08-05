@@ -37,7 +37,15 @@ const booksQuery = `*[_type == "book"] | order(order asc){
   colorTheme,
   year,
   heroText,
-  coverImage,
+  coverImage {
+    ...,
+    asset-> {
+      url,
+      metadata {
+        lqip
+      }
+    }
+  },
   order
 }`
 
@@ -346,12 +354,14 @@ export default async function BooksLandingPage() {
                   {/* Book cover */}
                   <div className="relative h-64 overflow-hidden">
                     <Image
-                      src={book.coverImage.asset.url}
-                      alt={book.coverImage.alt || book.title}
+                      src={urlFor(book.coverImage).url()}
+                      alt={book.coverImage?.alt || book.title}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      placeholder="blur"
-                      blurDataURL={book.coverImage.asset.metadata.lqip}
+                      {...(book.coverImage?.asset?.metadata?.lqip && {
+                        placeholder: "blur",
+                        blurDataURL: book.coverImage.asset.metadata.lqip
+                      })}
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
                     

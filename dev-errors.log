@@ -1,0 +1,284 @@
+
+> srecno-ucenje@1.0.0 dev
+> cross-env NODE_ENV=development next dev
+
+  ▲ Next.js 14.2.31
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+  - Experiments (use with caution):
+    · esmExternals
+    · instrumentationHook
+
+ ✓ Starting...
+> [PWA] PWA support is disabled
+> [PWA] PWA support is disabled
+ ○ Compiling /instrumentation ...
+ ✓ Compiled /instrumentation in 731ms (1013 modules)
+ ✓ Ready in 3.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 8.1s (7555 modules)
+ ✓ Compiled in 579ms (2664 modules)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at StatisticsSection (webpack-internal:///(ssr)/./components/home/StatisticsSection.tsx:81:30)
+    at Lazy
+    at main
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at main
+    at AnalyticsProvider (webpack-internal:///(ssr)/./components/common/AnalyticsProvider.tsx:13:30)
+    at Lazy
+    at SiteSettingsProvider (webpack-internal:///(ssr)/./contexts/SiteSettingsContext.tsx:17:33)
+    at QueryClientProvider (webpack-internal:///(ssr)/./node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:23:30)
+    at Providers (webpack-internal:///(ssr)/./app/providers.tsx:16:22)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at ServerInsertedHTMLProvider (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24963)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at StatisticsSection (webpack-internal:///(ssr)/./components/home/StatisticsSection.tsx:81:30)
+    at Lazy
+    at main
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at main
+    at AnalyticsProvider (webpack-internal:///(ssr)/./components/common/AnalyticsProvider.tsx:13:30)
+    at Lazy
+    at SiteSettingsProvider (webpack-internal:///(ssr)/./contexts/SiteSettingsContext.tsx:17:33)
+    at QueryClientProvider (webpack-internal:///(ssr)/./node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:23:30)
+    at Providers (webpack-internal:///(ssr)/./app/providers.tsx:16:22)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at ServerInsertedHTMLProvider (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24963)
+ ⨯ Internal error: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:46775)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:45321)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at ab (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:11808)
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:44769)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at ab (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:11808)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:16871
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:16908)
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:46505)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+digest: "3605154546"
+ GET / 500 in 8756ms
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at StatisticsSection (webpack-internal:///(ssr)/./components/home/StatisticsSection.tsx:81:30)
+    at Lazy
+    at main
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at main
+    at AnalyticsProvider (webpack-internal:///(ssr)/./components/common/AnalyticsProvider.tsx:13:30)
+    at Lazy
+    at SiteSettingsProvider (webpack-internal:///(ssr)/./contexts/SiteSettingsContext.tsx:17:33)
+    at QueryClientProvider (webpack-internal:///(ssr)/./node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:23:30)
+    at Providers (webpack-internal:///(ssr)/./app/providers.tsx:16:22)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at ServerInsertedHTMLProvider (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24963)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at StatisticsSection (webpack-internal:///(ssr)/./components/home/StatisticsSection.tsx:81:30)
+    at Lazy
+    at main
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at main
+    at AnalyticsProvider (webpack-internal:///(ssr)/./components/common/AnalyticsProvider.tsx:13:30)
+    at Lazy
+    at SiteSettingsProvider (webpack-internal:///(ssr)/./contexts/SiteSettingsContext.tsx:17:33)
+    at QueryClientProvider (webpack-internal:///(ssr)/./node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:23:30)
+    at Providers (webpack-internal:///(ssr)/./app/providers.tsx:16:22)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at ServerInsertedHTMLProvider (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24963)
+ ⨯ Internal error: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:46775)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:45321)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at ab (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:11808)
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:44769)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42822)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at ab (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:11808)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:16871
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:16908)
+    at aw (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:46505)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:49776)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at aC (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:52874)
+    at a_ (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:50095)
+    at aj (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:53793)
+    at /Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:35:42336
+digest: "3605154546"
+ GET / 500 in 244ms
+ ✓ Compiled in 944ms (7545 modules)
+[?25h

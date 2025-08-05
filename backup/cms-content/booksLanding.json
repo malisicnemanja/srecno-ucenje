@@ -1,0 +1,62 @@
+{
+  "query": "*[_type==\"booksLanding\"]",
+  "result": [
+    {
+      "_createdAt": "2025-08-03T11:23:07Z",
+      "_id": "hWo33GCGxd3rDeD5TjrvFd",
+      "_rev": "hWo33GCGxd3rDeD5TjrvAt",
+      "_type": "booksLanding",
+      "_updatedAt": "2025-08-03T11:23:07Z",
+      "authorSection": {
+        "achievements": [
+          "Dobitnica Global Teacher Prize",
+          "Svetosavska nagrada",
+          "Autorka metodologije Srećnog učenja",
+          "Osnivačica festivala Kreativna čarolija"
+        ],
+        "description": "Željana Radojičić Lukić je učiteljica i spisateljica sa više od 20 godina iskustva u obrazovanju. Kreatorka je metodologije Srećnog učenja i osnivačica Čarobnog sela.",
+        "title": "O autorki"
+      },
+      "features": [
+        {
+          "description": "Svaka knjiga sadrži pažljivo osmišljene priče koje uče važne životne lekcije",
+          "icon": "book",
+          "title": "Edukativne priče"
+        },
+        {
+          "description": "Praktični zadaci koji povezuju različite oblasti učenja",
+          "icon": "tasks",
+          "title": "Integrativni zadaci"
+        },
+        {
+          "description": "Prelepe ilustracije srpskih umetnika koje oživaljavaju priče",
+          "icon": "art",
+          "title": "Ilustracije"
+        },
+        {
+          "description": "Dodatni digitalni sadržaji dostupni putem QR kodova",
+          "icon": "qr",
+          "title": "QR kodovi"
+        }
+      ],
+      "heroSubtitle": "Četiri čarobne knjige koje prate godišnje cikluse i uče decu o prirodi, emocijama i vrednostima",
+      "heroTitle": "Luka godišnjih doba",
+      "seo": {
+        "keywords": [
+          "luka godišnjih doba",
+          "dečje knjige",
+          "edukativne priče",
+          "srećno učenje",
+          "željana radojičić lukić"
+        ],
+        "metaDescription": "Otkrijte serijal \"Luka godišnjih doba\" - četiri edukativne knjige koje prate godišnje cikluse i uče decu o prirodi i vrednostima.",
+        "metaTitle": "Knjige - Luka godišnjih doba | Srećno učenje"
+      },
+      "seriesDescription": "Serijal \"Luka godišnjih doba\" je jedinstvena kolekcija od četiri knjige koje prate avanture dečaka Luke kroz sve četiri godišnje doba. Svaka knjiga donosi priču o jednom godišnjem dobu sa svojom vilom čuvaricom, učeći decu o prirodnim ciklusima, emocionalnoj inteligenciji i važnim životnim vrednostima."
+    }
+  ],
+  "syncTags": [
+    "s1:jANlsw"
+  ],
+  "ms": 3
+}

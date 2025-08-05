@@ -1,0 +1,8 @@
+{
+  "query": "*[_type==\"publications\"]",
+  "result": [],
+  "syncTags": [
+    "s1:bQfSIA"
+  ],
+  "ms": 5
+}

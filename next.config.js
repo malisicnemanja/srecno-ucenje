@@ -25,7 +25,7 @@ const withPWA = require('next-pwa')({
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  transpilePackages: ['framer-motion', '@sanity/ui', 'sanity'],
+  transpilePackages: ['framer-motion', '@sanity/ui', 'sanity', 'next-sanity'],
   experimental: {
     esmExternals: 'loose',
   },
@@ -41,12 +41,14 @@ const nextConfig = {
         config.optimization.splitChunks = { chunks: 'all', cacheGroups: {} }
       }
       
-      config.optimization.splitChunks.cacheGroups.sanityUI = {
-        test: /[\\/]node_modules[\\/]@sanity[\\/]ui[\\/]/,
-        name: 'sanity-ui',
-        priority: 20,
-        chunks: 'async',
-        enforce: true
+      // Remove the problematic Sanity UI chunk splitting
+      // This was causing ChunkLoadError
+      config.optimization.splitChunks.cacheGroups.sanity = {
+        test: /[\\/]node_modules[\\/](@sanity|sanity)[\\/]/,
+        name: 'sanity',
+        priority: 10,
+        chunks: 'all',
+        reuseExistingChunk: true
       }
     }
     return config

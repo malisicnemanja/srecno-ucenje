@@ -1,10 +1,11 @@
 import { defineField, defineType } from 'sanity'
+import { BookIcon } from '@sanity/icons'
 
 export default defineType({
   name: 'booksLanding',
   title: 'Knjige - Landing Stranica',
   type: 'document',
-  icon: () => '📖',
+  icon: BookIcon,
   groups: [
     { name: 'hero', title: 'Hero Sekcija' },
     { name: 'series', title: 'O Serijalu' },
@@ -95,12 +96,12 @@ export default defineType({
               type: 'string',
               options: {
                 list: [
-                  { title: '📚 Znanje', value: 'knowledge' },
-                  { title: '💎 Vrline', value: 'virtues' },
-                  { title: '😊 Radost', value: 'joy' },
-                  { title: '🌿 Priroda', value: 'nature' },
-                  { title: '🎨 Kreativnost', value: 'creativity' },
-                  { title: '🤝 Zajedništvo', value: 'community' }
+                  { title: 'Znanje', value: 'knowledge' },
+                  { title: 'Vrline', value: 'virtues' },
+                  { title: 'Radost', value: 'joy' },
+                  { title: 'Priroda', value: 'nature' },
+                  { title: 'Kreativnost', value: 'creativity' },
+                  { title: 'Zajedništvo', value: 'community' }
                 ]
               }
             }

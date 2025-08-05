@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { trackEvent } from '@/lib/analytics'
 import CalendarPicker from './CalendarPicker'
 import TimePicker from './TimePicker'
-// import { generateConsultationPDF, generateFilename } from '@/lib/pdf-generator'
+import { generateConsultationPDF, generateFilename } from '@/lib/pdf-generator'
 
 interface BookingFormProps {
   preselectedType?: string
@@ -98,11 +98,11 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
           confirmationNumber: `SU-${Date.now().toString(36).toUpperCase()}`
         }
 
-        // PDF generation temporarily disabled
-        // await generateConsultationPDF(pdfData, {
-        //   autoDownload: true,
-        //   filename: generateFilename('srecno-ucenje-potvrda-konsultacija')
-        // })
+        // Generate PDF confirmation
+        await generateConsultationPDF(pdfData, {
+          autoDownload: true,
+          filename: generateFilename('srecno-ucenje-potvrda-konsultacija')
+        })
       } catch (pdfError) {
         console.error('Error generating PDF:', pdfError)
       }

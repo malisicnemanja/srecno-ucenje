@@ -1,0 +1,69 @@
+{
+  "query": "*[_type==\"testimonial\"]",
+  "result": [
+    {
+      "_createdAt": "2025-08-03T01:48:10Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFeUO",
+      "_rev": "EIn1TO6kzkBkpMuRkFFeQr",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-03T01:48:10Z",
+      "content": "Neverovatna promena kod moje dece! Marko sada obožava da čita, a Ana je postala prava matematička zvezda. Preporučujem svima!",
+      "featured": true,
+      "name": "Milica Stojanović",
+      "rating": 5,
+      "role": "Majka dvoje dece"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:10Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFepa",
+      "_rev": "EIn1TO6kzkBkpMuRkFFem3",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-03T01:48:10Z",
+      "content": "Najbolja investicija u budućnost našeg deteta. Rezultati su vidljivi već nakon mesec dana.",
+      "featured": true,
+      "name": "Petar Nikolić",
+      "rating": 5,
+      "role": "Otac"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:24Z",
+      "_id": "testimonial-1888d872-17b3-4c75-8900-32ec08037c08",
+      "_rev": "atDdCAAfWCLcotj1z8G6bv",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-04T21:16:24Z",
+      "content": "Moje dete je potpuno promenilo stav prema učenju. Jedva čeka da ide na časove!",
+      "featured": true,
+      "name": "Jelena Nikolić",
+      "rating": 5,
+      "role": "Roditelj"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:25Z",
+      "_id": "testimonial-2418c05f-8899-4d9d-9973-d101f7f5800b",
+      "_rev": "atDdCAAfWCLcotj1z8G6jP",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-04T21:16:25Z",
+      "content": "Najbolja poslovna odluka u mom životu. Podrška je neverovatna, a rezultati govore sami za sebe.",
+      "featured": true,
+      "name": "Stefan Marković",
+      "rating": 5,
+      "role": "Franšizer iz Niša"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:26Z",
+      "_id": "testimonial-f8b93849-4a48-43b9-85bd-242cd3051cea",
+      "_rev": "atDdCAAfWCLcotj1z8G6qt",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-04T21:16:26Z",
+      "content": "Konačno razumem matematiku! Nastavnici su super i sve objašnjavaju na zanimljiv način.",
+      "featured": false,
+      "name": "Milica Pavlović",
+      "rating": 5,
+      "role": "Učenica 8. razred"
+    }
+  ],
+  "syncTags": [
+    "s1:wIHiUQ"
+  ],
+  "ms": 6
+}

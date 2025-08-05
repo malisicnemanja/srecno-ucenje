@@ -16,7 +16,7 @@ import {
   Legend,
 } from 'chart.js'
 import { trackCalculatorUse, trackLeadCapture, trackCalculatorCompletion, trackPDFDownload } from '@/lib/analytics'
-// import { generateCalculatorPDF, generateFilename } from '@/lib/pdf-generator'
+import { generateCalculatorPDF, generateFilename } from '@/lib/pdf-generator'
 
 ChartJS.register(
   ArcElement,

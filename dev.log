@@ -1,0 +1,17 @@
+
+> srecno-ucenje@1.0.0 dev
+> cross-env NODE_ENV=development next dev
+
+  ▲ Next.js 14.2.31
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+  - Experiments (use with caution):
+    · esmExternals
+    · instrumentationHook
+
+ ✓ Starting...
+> [PWA] PWA support is disabled
+> [PWA] PWA support is disabled
+ ○ Compiling /instrumentation ...
+ ✓ Compiled /instrumentation in 870ms (1013 modules)
+ ✓ Ready in 2.6s

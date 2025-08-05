@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { saveSanityDocument } from '@/lib/sanity-write'
 import { trackEvent } from '@/lib/analytics'
-// import { generateNewsletterWelcomePDF, generateFilename } from '@/lib/pdf-generator'
+import { generateNewsletterWelcomePDF, generateFilename } from '@/lib/pdf-generator'
 import { Gift } from 'lucide-react'
 
 interface ExitIntentPopupProps {

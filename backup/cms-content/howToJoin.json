@@ -1,0 +1,8 @@
+{
+  "query": "*[_type==\"howToJoin\"]",
+  "result": [],
+  "syncTags": [
+    "s1:SkMz3w"
+  ],
+  "ms": 4
+}

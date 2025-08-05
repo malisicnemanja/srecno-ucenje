@@ -1,0 +1,163 @@
+
+> srecno-ucenje@1.0.0 dev
+> cross-env NODE_ENV=development next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+  ▲ Next.js 14.2.31
+  - Local:        http://localhost:3001
+  - Environments: .env.local
+  - Experiments (use with caution):
+    · esmExternals
+    · instrumentationHook
+
+ ✓ Starting...
+> [PWA] PWA support is disabled
+> [PWA] PWA support is disabled
+ ○ Compiling /instrumentation ...
+ ✓ Compiled /instrumentation in 755ms (1013 modules)
+ ✓ Ready in 2.5s
+ ○ Compiling / ...
+ ✓ Compiled / in 7.4s (7554 modules)
+ ✓ Compiled in 659ms (2664 modules)
+ ⨯ components/home/HeroSection.tsx (96:27) @ split
+ ⨯ TypeError: Cannot read properties of null (reading 'split')
+    at HeroSection (./components/home/HeroSection.tsx:110:54)
+digest: "2504791385"
+[0m [90m 94 |[39m           [33m>[39m[0m
+[0m [90m 95 |[39m             [33m<[39m[33mh1[39m className[33m=[39m[32m"hero-title text-white relative inline-block"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 96 |[39m               {data[33m.[39mtitle[33m.[39msplit([32m' '[39m)[33m.[39mmap((word[33m,[39m index) [33m=>[39m {[0m
+[0m [90m    |[39m                           [31m[1m^[22m[39m[0m
+[0m [90m 97 |[39m                 [90m// Highlight important words[39m[0m
+[0m [90m 98 |[39m                 [36mconst[39m isHighlighted [33m=[39m [[32m'vlasnika'[39m[33m,[39m [32m'uspešnog'[39m[33m,[39m [32m'centra'[39m][33m.[39mincludes(word[33m.[39mtoLowerCase())[0m
+[0m [90m 99 |[39m                 [36mreturn[39m ([0m
+ GET / 500 in 8158ms
+ ✓ Compiled in 1179ms (7545 modules)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at StatisticsSection (webpack-internal:///(ssr)/./components/home/StatisticsSection.tsx:81:30)
+    at Lazy
+    at main
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at main
+    at AnalyticsProvider (webpack-internal:///(ssr)/./components/common/AnalyticsProvider.tsx:13:30)
+    at Lazy
+    at SiteSettingsProvider (webpack-internal:///(ssr)/./contexts/SiteSettingsContext.tsx:17:33)
+    at QueryClientProvider (webpack-internal:///(ssr)/./node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:23:30)
+    at Providers (webpack-internal:///(ssr)/./app/providers.tsx:16:22)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at ServerInsertedHTMLProvider (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24963)
+Warning: React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+    at StatisticsSection (webpack-internal:///(ssr)/./components/home/StatisticsSection.tsx:81:30)
+    at Lazy
+    at main
+    at InnerLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:242:11)
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at NotFoundErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:76:9)
+    at NotFoundBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/not-found-boundary.js:84:11)
+    at LoadingBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:347:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at InnerScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:153:9)
+    at ScrollAndFocusHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:228:11)
+    at RenderFromTemplateContext (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/render-from-template-context.js:16:44)
+    at Lazy
+    at OuterLayoutRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/layout-router.js:367:11)
+    at Lazy
+    at main
+    at AnalyticsProvider (webpack-internal:///(ssr)/./components/common/AnalyticsProvider.tsx:13:30)
+    at Lazy
+    at SiteSettingsProvider (webpack-internal:///(ssr)/./contexts/SiteSettingsContext.tsx:17:33)
+    at QueryClientProvider (webpack-internal:///(ssr)/./node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js:23:30)
+    at Providers (webpack-internal:///(ssr)/./app/providers.tsx:16:22)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at r6 (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:19179)
+    at ServerInsertedHTMLProvider (/Users/nemanjamalisic/Desktop/srecno-ucenje/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:24963)
+ ⨯ components/home/StatisticsSection.tsx (49:39) @ replace
+ ⨯ TypeError: Cannot read properties of null (reading 'replace')
+    at CountUpAnimation (./components/home/StatisticsSection.tsx:42:41)
+digest: "4259601969"
+[0m [90m 47 |[39m   [0m
+[0m [90m 48 |[39m   [90m// Extract numeric value[39m[0m
+[0m[31m[1m>[22m[39m[90m 49 |[39m   [36mconst[39m numericValue [33m=[39m parseInt(value[33m.[39mreplace([35m/[^0-9]/g[39m[33m,[39m [32m''[39m))[0m
+[0m [90m    |[39m                                       [31m[1m^[22m[39m[0m
+[0m [90m 50 |[39m   [36mconst[39m prefix [33m=[39m value[33m.[39mmatch([35m/[^0-9]+/[39m)[33m?[39m[33m.[39m[[35m0[39m] [33m||[39m [32m''[39m[0m
+[0m [90m 51 |[39m   [0m
+[0m [90m 52 |[39m   useEffect(() [33m=>[39m {[0m
+ GET / 500 in 451ms
+ ✓ Compiled in 920ms (7545 modules)
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 623ms (614 modules)
+ ○ Compiling /knjige ...
+ ✓ Compiled /knjige in 643ms (7561 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (191kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (139kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+ ⨯ app/knjige/page.tsx (410:45) @ map
+ ⨯ TypeError: Cannot read properties of null (reading 'map')
+    at BooksLandingPage (./app/knjige/page.tsx:613:80)
+digest: "2004768527"
+[0m [90m 408 |[39m                 {[90m/* Vrednosti serijala */[39m}[0m
+[0m [90m 409 |[39m                 [33m<[39m[33mdiv[39m className[33m=[39m[32m"grid grid-cols-2 gap-6"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 410 |[39m                   {landingData[33m.[39mseriesValues[33m.[39mmap((value[33m,[39m index) [33m=>[39m ([0m
+[0m [90m     |[39m                                             [31m[1m^[22m[39m[0m
+[0m [90m 411 |[39m                     [33m<[39m[33mdiv[39m key[33m=[39m{index} className[33m=[39m[32m"bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50"[39m[33m>[39m[0m
+[0m [90m 412 |[39m                       [33m<[39m[33mdiv[39m className[33m=[39m{[32m`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${[39m[0m
+[0m [90m 413 |[39m [32m                        index === 0 ? 'bg-accent-400' :[39m[0m
+ ⨯ app/knjige/page.tsx (410:45) @ map
+ ⨯ TypeError: Cannot read properties of null (reading 'map')
+    at BooksLandingPage (./app/knjige/page.tsx:613:80)
+digest: "2004768527"
+[0m [90m 408 |[39m                 {[90m/* Vrednosti serijala */[39m}[0m
+[0m [90m 409 |[39m                 [33m<[39m[33mdiv[39m className[33m=[39m[32m"grid grid-cols-2 gap-6"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 410 |[39m                   {landingData[33m.[39mseriesValues[33m.[39mmap((value[33m,[39m index) [33m=>[39m ([0m
+[0m [90m     |[39m                                             [31m[1m^[22m[39m[0m
+[0m [90m 411 |[39m                     [33m<[39m[33mdiv[39m key[33m=[39m{index} className[33m=[39m[32m"bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50"[39m[33m>[39m[0m
+[0m [90m 412 |[39m                       [33m<[39m[33mdiv[39m className[33m=[39m{[32m`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${[39m[0m
+[0m [90m 413 |[39m [32m                        index === 0 ? 'bg-accent-400' :[39m[0m
+ GET /knjige 500 in 1184ms
+ ○ Compiling /kalkulatori ...
+ ✓ Compiled /kalkulatori in 1656ms (7589 modules)
+ GET /kalkulatori 200 in 2281ms
+ ○ Compiling /kvizovi ...
+ ✓ Compiled /kvizovi in 706ms (7611 modules)
+ GET /kvizovi 200 in 1095ms
+ ✓ Compiled /3d-ucionica in 478ms (7619 modules)
+ GET /3d-ucionica 200 in 766ms
+[?25h

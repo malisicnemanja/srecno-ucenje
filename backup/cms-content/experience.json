@@ -1,0 +1,8 @@
+{
+  "query": "*[_type==\"experience\"]",
+  "result": [],
+  "syncTags": [
+    "s1:0koZsg"
+  ],
+  "ms": 2
+}

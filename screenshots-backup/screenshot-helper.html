@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Screenshot Helper - Srećno učenje</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 20px; 
+      background: #f5f5f5; 
+    }
+    h1 { color: #333; }
+    .instructions {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .page-list {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .status {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+    .dynamic { background: #fef3c7; color: #92400e; }
+    .static { background: #dbeafe; color: #1e40af; }
+    code {
+      background: #f0f0f0;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Screenshot Helper - Srećno učenje</h1>
+  
+  <div class="instructions">
+    <h2>📸 Manual Screenshot Instructions</h2>
+    <p>Since we don't have Playwright installed, you can manually capture screenshots:</p>
+    <ol>
+      <li>Open each page link below in a new tab</li>
+      <li>Use browser DevTools (F12) to capture full page screenshot:
+        <ul>
+          <li>Press <code>Cmd+Shift+P</code> (Mac) or <code>Ctrl+Shift+P</code> (Windows)</li>
+          <li>Type "screenshot" and select "Capture full size screenshot"</li>
+          <li>Save to the <code>screenshots-backup</code> folder</li>
+        </ul>
+      </li>
+      <li>Or use a browser extension like "Full Page Screen Capture"</li>
+    </ol>
+  </div>
+
+  <div class="page-list">
+    <h2>📄 All Pages (26 total)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Route File</th>
+          <th>URL Path</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+          <tr>
+            <td><code>app/3d-ucionica/page.tsx</code></td>
+            <td><code>/3d-ucionica</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/3d-ucionica" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/blog/[slug]/page.tsx</code></td>
+            <td><code>/blog/example</code></td>
+            <td>
+              <span class="status dynamic">Dynamic</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/blog/example" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/blog/page.tsx</code></td>
+            <td><code>/blog</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/blog" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/faq/page.tsx</code></td>
+            <td><code>/faq</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/faq" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/franchise-models/page.tsx</code></td>
+            <td><code>/franchise-models</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/franchise-models" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/fransiza-modeli/page.tsx</code></td>
+            <td><code>/fransiza-modeli</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/fransiza-modeli" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/iskustva/[slug]/page.tsx</code></td>
+            <td><code>/iskustva/example</code></td>
+            <td>
+              <span class="status dynamic">Dynamic</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/iskustva/example" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/iskustva/page.tsx</code></td>
+            <td><code>/iskustva</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/iskustva" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/kako-se-pridruziti/page.tsx</code></td>
+            <td><code>/kako-se-pridruziti</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/kako-se-pridruziti" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/kalkulatori/page.tsx</code></td>
+            <td><code>/kalkulatori</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/kalkulatori" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/knjige/[slug]/page.tsx</code></td>
+            <td><code>/knjige/example</code></td>
+            <td>
+              <span class="status dynamic">Dynamic</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/knjige/example" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/knjige/page.tsx</code></td>
+            <td><code>/knjige</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/knjige" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/kontakt/page.tsx</code></td>
+            <td><code>/kontakt</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/kontakt" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/kvizovi/page.tsx</code></td>
+            <td><code>/kvizovi</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/kvizovi" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/legal/privatnost/page.tsx</code></td>
+            <td><code>/legal/privatnost</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/legal/privatnost" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/legal/uslovi-koriscenja/page.tsx</code></td>
+            <td><code>/legal/uslovi-koriscenja</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/legal/uslovi-koriscenja" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/lokacije/page.tsx</code></td>
+            <td><code>/lokacije</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/lokacije" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/methodology/page.tsx</code></td>
+            <td><code>/methodology</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/methodology" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/metodologija/page.tsx</code></td>
+            <td><code>/metodologija</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/metodologija" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/o-autorki/page.tsx</code></td>
+            <td><code>/o-autorki</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/o-autorki" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/obuka-mentorstvo/page.tsx</code></td>
+            <td><code>/obuka-mentorstvo</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/obuka-mentorstvo" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/page.tsx</code></td>
+            <td><code>/</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/resursi/page.tsx</code></td>
+            <td><code>/resursi</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/resursi" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/ucionica/page.tsx</code></td>
+            <td><code>/ucionica</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/ucionica" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/uspeh/page.tsx</code></td>
+            <td><code>/uspeh</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/uspeh" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+          <tr>
+            <td><code>app/zakazivanje/page.tsx</code></td>
+            <td><code>/zakazivanje</code></td>
+            <td>
+              <span class="status static">Static</span>
+            </td>
+            <td>
+              <a href="http://localhost:3000/zakazivanje" target="_blank">Open Page →</a>
+            </td>
+          </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Add timestamp
+    document.body.insertAdjacentHTML('beforeend', 
+      '<p style="color: #666; font-size: 12px; margin-top: 20px;">Generated on: ' + 
+      new Date().toLocaleString() + '</p>'
+    );
+  </script>
+</body>
+</html>
+  

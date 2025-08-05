@@ -34,6 +34,7 @@ import aboutAuthor from './documents/aboutAuthor'
 import errorPage from './documents/errorPages'
 import legalPage from './documents/legalPages'
 import bookingPage from './documents/bookingPage'
+import virtualClassroom from './documents/virtualClassroom'
 
 // Object types
 import hero from './objects/hero'
@@ -90,6 +91,7 @@ export const schemaTypes = [
   errorPage,
   legalPage,
   bookingPage,
+  virtualClassroom,
   // Objects
   hero,
   cta,

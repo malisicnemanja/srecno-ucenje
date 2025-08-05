@@ -58,6 +58,12 @@ const enhancedHero = defineType({
       ],
     }),
     defineField({
+      name: 'badge',
+      title: 'Badge',
+      type: 'string',
+      description: 'Badge text that appears above the title',
+    }),
+    defineField({
       name: 'primaryCta',
       title: 'Primary CTA',
       type: 'object',
@@ -73,6 +79,23 @@ const enhancedHero = defineType({
           title: 'Link',
           type: 'string',
           validation: (Rule) => Rule.required(),
+        },
+      ],
+    }),
+    defineField({
+      name: 'ctaPrimary',
+      title: 'CTA Primary (Alternative)',
+      type: 'object',
+      fields: [
+        {
+          name: 'text',
+          title: 'Text',
+          type: 'string',
+        },
+        {
+          name: 'href',
+          title: 'Href',
+          type: 'string',
         },
       ],
     }),
@@ -96,9 +119,75 @@ const enhancedHero = defineType({
       ],
     }),
     defineField({
+      name: 'ctaSecondary',
+      title: 'CTA Secondary (Alternative)',
+      type: 'object',
+      fields: [
+        {
+          name: 'text',
+          title: 'Text',
+          type: 'string',
+        },
+        {
+          name: 'href',
+          title: 'Href',
+          type: 'string',
+        },
+      ],
+    }),
+    defineField({
+      name: 'features',
+      title: 'Features',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'icon',
+              title: 'Icon',
+              type: 'string',
+              description: 'Icon name (e.g., star, users, chart)',
+            },
+            {
+              name: 'text',
+              title: 'Text',
+              type: 'string',
+            },
+          ],
+        },
+      ],
+      validation: (Rule) => Rule.max(4),
+    }),
+    defineField({
+      name: 'backgroundType',
+      title: 'Background Type',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'None', value: 'none' },
+          { title: 'Pattern', value: 'pattern' },
+          { title: 'Image', value: 'image' },
+          { title: 'Video', value: 'video' },
+          { title: 'Gradient', value: 'gradient' },
+        ],
+      },
+      initialValue: 'pattern',
+    }),
+    defineField({
+      name: 'backgroundImage',
+      title: 'Background Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      hidden: ({ parent }) => parent?.backgroundType !== 'image',
+    }),
+    defineField({
       name: 'videoBackground',
       title: 'Video Background',
       type: 'videoBackground',
+      hidden: ({ parent }) => parent?.backgroundType !== 'video',
     }),
     defineField({
       name: 'trustBadges',

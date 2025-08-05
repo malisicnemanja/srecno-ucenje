@@ -1,0 +1,123 @@
+{
+  "query": "*[_type==\"blogCategory\"]",
+  "result": [
+    {
+      "_createdAt": "2025-08-03T01:47:54Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFcmQ",
+      "_rev": "EIn1TO6kzkBkpMuRkFFcit",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:54Z",
+      "slug": {
+        "current": "brzocitanje"
+      },
+      "title": "Brzočitanje"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:55Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFcx1",
+      "_rev": "EIn1TO6kzkBkpMuRkFFctU",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:55Z",
+      "slug": {
+        "current": "mentalna-aritmetika"
+      },
+      "title": "Mentalna aritmetika"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:58Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFdID",
+      "_rev": "EIn1TO6kzkBkpMuRkFFdEg",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:58Z",
+      "slug": {
+        "current": "edukacija"
+      },
+      "title": "Edukacija"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:59Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFdSo",
+      "_rev": "EIn1TO6kzkBkpMuRkFFdPH",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:59Z",
+      "slug": {
+        "current": "vesti"
+      },
+      "title": "Vesti"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:17Z",
+      "_id": "blogCategory-09fbb52b-c01b-4d79-b640-7e73f70a52ba",
+      "_rev": "jsO7i4LmwGEnLQvVmnBbdL",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-04T21:16:17Z",
+      "description": "Saveti za vođenje uspešne obrazovne franšize",
+      "slug": {
+        "current": "fransiza-biznis"
+      },
+      "title": "Franšiza i biznis"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:20Z",
+      "_id": "blogCategory-3a83d8b4-2027-4a04-919a-83ed1bf86a56",
+      "_rev": "LRuNsVxy2neCREmRL1oNVN",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-04T21:16:20Z",
+      "description": "Najnovije vesti iz sveta Srećnog učenja",
+      "slug": {
+        "current": "vesti-dogadjaji"
+      },
+      "title": "Vesti i događaji"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:19Z",
+      "_id": "blogCategory-a6cc8788-b093-43e7-8b84-a9d06655d891",
+      "_rev": "LRuNsVxy2neCREmRL1oNOd",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-04T21:16:19Z",
+      "description": "Inspirativne priče naših partnera i učenika",
+      "slug": {
+        "current": "price-uspeha"
+      },
+      "title": "Priče uspeha"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:18Z",
+      "_id": "blogCategory-bcf2b741-6636-491d-b70e-1357204922c2",
+      "_rev": "atDdCAAfWCLcotj1z8G5t1",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-04T21:16:18Z",
+      "description": "Uvidi u našu metodologiju i pristup učenju",
+      "slug": {
+        "current": "obrazovanje-metodologija"
+      },
+      "title": "Obrazovanje i metodologija"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:56Z",
+      "_id": "hWo33GCGxd3rDeD5Tiy9gx",
+      "_rev": "hWo33GCGxd3rDeD5Tiy9cD",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:56Z",
+      "slug": {
+        "current": "saveti-za-roditelje"
+      },
+      "title": "Saveti za roditelje"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:57Z",
+      "_id": "hWo33GCGxd3rDeD5Tiy9vB",
+      "_rev": "hWo33GCGxd3rDeD5Tiy9qR",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:57Z",
+      "slug": {
+        "current": "uspesne-price"
+      },
+      "title": "Uspešne priče"
+    }
+  ],
+  "syncTags": [
+    "s1:2SQy1w"
+  ],
+  "ms": 6
+}

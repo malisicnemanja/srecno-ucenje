@@ -1,0 +1,85 @@
+{
+  "query": "*[_type==\"siteSettings\"]",
+  "result": [
+    {
+      "_createdAt": "2025-08-03T01:47:44Z",
+      "_id": "hZm6tMI3obk6ZBXKfA9s2t",
+      "_rev": "hWo33GCGxd3rDeD5TiyFep",
+      "_system": {
+        "base": {
+          "id": "hZm6tMI3obk6ZBXKfA9s2t",
+          "rev": "hZm6tMI3obk6ZBXKfA9rzt"
+        }
+      },
+      "_type": "siteSettings",
+      "_updatedAt": "2025-08-03T01:55:04Z",
+      "address": "Bulevar oslobođenja 123, 21000 Novi Sad",
+      "email": "info@srecno-ucenje.rs",
+      "logo": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-3fa0a24118b1ece64de4f8be3a8b38686a188276-1772x1772-png",
+          "_type": "reference"
+        }
+      },
+      "phone": "+381 60 123 4567",
+      "siteDescription": "Centar za brzočitanje i mentalnu aritmetiku koji razvija pune potencijale vašeg deteta",
+      "siteName": "Srećno učenje",
+      "socialLinks": [
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyFLr",
+          "platform": "Facebook",
+          "url": "https://facebook.com/srecnoucenje"
+        },
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyFQb",
+          "platform": "Instagram",
+          "url": "https://instagram.com/srecnoucenje"
+        },
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyFVL",
+          "platform": "LinkedIn",
+          "url": "https://linkedin.com/company/srecnoucenje"
+        }
+      ],
+      "workingHours": [
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyF2t",
+          "day": "Ponedeljak - Petak",
+          "hours": "09:00 - 20:00"
+        },
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyF7d",
+          "day": "Subota",
+          "hours": "10:00 - 18:00"
+        },
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyFCN",
+          "day": "Nedelja",
+          "hours": "10:00 - 16:00"
+        },
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyFH7",
+          "day": "Praznici",
+          "hours": "Zatvoreno"
+        }
+      ]
+    },
+    {
+      "_createdAt": "2025-08-03T04:23:01Z",
+      "_id": "hZm6tMI3obk6ZBXKfAVrIt",
+      "_rev": "hZm6tMI3obk6ZBXKfAVrFt",
+      "_type": "siteSettings",
+      "_updatedAt": "2025-08-03T04:23:01Z",
+      "address": "Beograd, Srbija",
+      "contactEmail": "info@srecno-ucenje.rs",
+      "description": "Franšiza obrazovne metodologije",
+      "phone": "+381 11 123 4567",
+      "siteName": "Srećno učenje"
+    }
+  ],
+  "syncTags": [
+    "s1:XfFzpA"
+  ],
+  "ms": 7
+}

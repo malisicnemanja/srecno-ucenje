@@ -19,6 +19,7 @@ export default defineType({
         source: 'name',
         maxLength: 96,
       },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'image',
@@ -38,6 +39,29 @@ export default defineType({
       name: 'title',
       title: 'Titula',
       type: 'string',
+    }),
+    defineField({
+      name: 'email',
+      title: 'Email',
+      type: 'string',
+      validation: (Rule) => Rule.email(),
+    }),
+    defineField({
+      name: 'socialLinks',
+      title: 'Društvene mreže',
+      type: 'object',
+      fields: [
+        { name: 'facebook', title: 'Facebook', type: 'url' },
+        { name: 'instagram', title: 'Instagram', type: 'url' },
+        { name: 'linkedin', title: 'LinkedIn', type: 'url' },
+        { name: 'twitter', title: 'Twitter', type: 'url' },
+      ],
+    }),
+    defineField({
+      name: 'isActive',
+      title: 'Aktivan autor',
+      type: 'boolean',
+      initialValue: true,
     }),
   ],
   preview: {

@@ -22,6 +22,14 @@ export function urlFor(source: any) {
   return builder.image(source)
 }
 
+// Fetch function for server components
+export async function sanityFetch({ query, params = {} }: { query: string; params?: any }) {
+  if (USE_MOCK) {
+    return mockFetch(query, params)
+  }
+  return client.fetch(query, params)
+}
+
 // Mock fetch function that returns data from mock store
 export async function mockFetch(query: string, params?: any) {
   // Simulate API delay

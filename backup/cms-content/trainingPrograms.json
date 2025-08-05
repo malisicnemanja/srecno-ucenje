@@ -1,0 +1,8 @@
+{
+  "query": "*[_type==\"trainingPrograms\"]",
+  "result": [],
+  "syncTags": [
+    "s1:/w0K8g"
+  ],
+  "ms": 4
+}

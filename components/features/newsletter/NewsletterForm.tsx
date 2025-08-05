@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MailIcon, CheckIcon, SparklesIcon } from '@/components/icons'
-// import { generateNewsletterWelcomePDF, generateFilename } from '@/lib/pdf-generator'
+import { generateNewsletterWelcomePDF, generateFilename } from '@/lib/pdf-generator'
 
 interface NewsletterFormProps {
   variant?: 'inline' | 'card' | 'minimal'

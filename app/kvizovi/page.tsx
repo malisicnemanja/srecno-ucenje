@@ -5,13 +5,19 @@ import EducatorQuiz from '@/components/features/quiz/EducatorQuiz'
 import FranchiseModelQuiz from '@/components/features/quiz/FranchiseModelQuiz'
 import ReadinessQuiz from '@/components/features/quiz/ReadinessQuiz'
 import { motion } from 'framer-motion'
+import { useSanityQuery } from '@/hooks/useSanity'
+import { quizQuery } from '@/lib/sanity.queries'
 
 type QuizType = 'educator' | 'franchise_model' | 'readiness' | null
 
 export default function QuizzesPage() {
   const [selectedQuiz, setSelectedQuiz] = useState<QuizType>(null)
+  
+  // Fetch quiz data from Sanity
+  const { data: sanityQuizzes, isLoading } = useSanityQuery(quizQuery)
 
-  const quizzes = [
+  // Default quiz data
+  const defaultQuizzes = [
     {
       id: 'educator' as QuizType,
       title: 'Da li ste rođeni edukator?',
@@ -54,6 +60,17 @@ export default function QuizzesPage() {
       color: 'from-green-500 to-emerald-500',
     },
   ]
+  
+  // Map Sanity quiz data to the expected format
+  const quizzes = sanityQuizzes?.map((quiz, index) => ({
+    id: quiz.quizType as QuizType,
+    title: quiz.title,
+    description: quiz.description,
+    duration: `${quiz.questions?.length || 10} minuta`,
+    questions: quiz.questions?.length || 10,
+    icon: defaultQuizzes[index]?.icon || defaultQuizzes[0].icon,
+    color: defaultQuizzes[index]?.color || defaultQuizzes[0].color
+  })) || defaultQuizzes
 
   if (selectedQuiz) {
     return (
@@ -78,6 +95,17 @@ export default function QuizzesPage() {
             {selectedQuiz === 'franchise_model' && <FranchiseModelQuiz />}
             {selectedQuiz === 'readiness' && <ReadinessQuiz />}
           </motion.div>
+        </div>
+      </main>
+    )
+  }
+
+  if (isLoading) {
+    return (
+      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Učitavanje kvizova...</p>
         </div>
       </main>
     )

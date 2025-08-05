@@ -1,0 +1,90 @@
+{
+  "sharedComponents": [
+    {
+      "component": "Header",
+      "path": "components/layout/Header.tsx",
+      "usedIn": "ALL PAGES",
+      "dataSource": "siteSettings",
+      "risk": "HIGH - affects entire site navigation"
+    },
+    {
+      "component": "Footer",
+      "path": "components/layout/Footer.tsx",
+      "usedIn": "ALL PAGES",
+      "dataSource": "siteSettings",
+      "risk": "HIGH - affects entire site footer"
+    },
+    {
+      "component": "NewsletterForm",
+      "path": "components/features/newsletter/NewsletterForm.tsx",
+      "usedIn": [
+        "home",
+        "blog",
+        "resources"
+      ],
+      "dataSource": "static + API",
+      "risk": "MEDIUM - conversion element"
+    },
+    {
+      "component": "BookingForm",
+      "path": "components/features/booking/BookingForm.tsx",
+      "usedIn": [
+        "zakazivanje"
+      ],
+      "dataSource": "static",
+      "risk": "HIGH - primary conversion path"
+    },
+    {
+      "component": "ExitIntentPopup",
+      "path": "components/features/conversion/ExitIntentPopup.tsx",
+      "usedIn": [
+        "key pages"
+      ],
+      "dataSource": "static",
+      "risk": "MEDIUM - conversion optimization"
+    },
+    {
+      "component": "QuizComponent",
+      "path": "components/features/quiz/QuizComponent.tsx",
+      "usedIn": [
+        "kvizovi"
+      ],
+      "dataSource": "static",
+      "risk": "LOW - engagement feature"
+    },
+    {
+      "component": "ROICalculator",
+      "path": "components/features/calculators/ROICalculator.tsx",
+      "usedIn": [
+        "kalkulatori"
+      ],
+      "dataSource": "static",
+      "risk": "MEDIUM - decision tool"
+    },
+    {
+      "component": "InvestmentCalculator",
+      "path": "components/features/calculators/InvestmentCalculator.tsx",
+      "usedIn": [
+        "kalkulatori"
+      ],
+      "dataSource": "static",
+      "risk": "MEDIUM - decision tool"
+    }
+  ],
+  "componentDuplication": [
+    {
+      "name": "Home components",
+      "versions": [
+        "components/home/* (13 files) - ACTIVE",
+        "components/cms/* (13 files) - OLD",
+        "components/features/cms/* (6 files) - OLDER"
+      ],
+      "recommendation": "Keep components/home/*, archive others in PHASE 1"
+    }
+  ],
+  "riskSummary": {
+    "high": 3,
+    "medium": 4,
+    "low": 1
+  }
+}

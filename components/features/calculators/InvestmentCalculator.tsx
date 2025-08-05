@@ -17,7 +17,7 @@ import {
   Legend,
 } from 'chart.js'
 import { trackCalculatorUse, trackLeadCapture, trackPDFDownload, trackCalculatorCompletion } from '@/lib/analytics'
-// import { generateCalculatorPDF, generateFilename } from '@/lib/pdf-generator'
+import { generateCalculatorPDF, generateFilename } from '@/lib/pdf-generator'
 
 ChartJS.register(
   CategoryScale,

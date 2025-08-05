@@ -6,6 +6,32 @@ import { BookOpeningAnimation, FloatingLetters, AnimatedTitle, PulseButton } fro
 import { getBookBySlug, getAllBooks, type Book } from '@/sanity/queries/books'
 import { PortableText } from '@portabletext/react'
 
+const portableTextComponents = {
+  block: {
+    normal: ({children}: any) => <p className="mb-4">{children}</p>,
+  },
+  marks: {
+    strong: ({children}: any) => <strong className="font-bold">{children}</strong>,
+    em: ({children}: any) => <em className="italic">{children}</em>,
+    link: ({value, children}: any) => {
+      const target = (value?.href || '').startsWith('http') ? '_blank' : undefined
+      return (
+        <a href={value?.href} target={target} rel={target === '_blank' ? 'noopener noreferrer' : undefined} className="text-blue-600 hover:text-blue-800 underline">
+          {children}
+        </a>
+      )
+    }
+  },
+  list: {
+    bullet: ({children}: any) => <ul className="list-disc list-inside mb-4">{children}</ul>,
+    number: ({children}: any) => <ol className="list-decimal list-inside mb-4">{children}</ol>,
+  },
+  listItem: {
+    bullet: ({children}: any) => <li className="mb-1">{children}</li>,
+    number: ({children}: any) => <li className="mb-1">{children}</li>,
+  },
+}
+
 interface Props {
   params: { slug: string }
 }
@@ -74,7 +100,7 @@ export default async function BookPage({ params }: Props) {
     }
   }
 
-  const theme = themeColors[book.colorTheme]
+  const theme = themeColors[book?.colorTheme || 'yellow'] || themeColors.yellow
 
   return (
     <main className="relative">
@@ -164,8 +190,10 @@ export default async function BookPage({ params }: Props) {
                       width={300}
                       height={400}
                       className="rounded-lg shadow-2xl"
-                      placeholder="blur"
-                      blurDataURL={book.coverImage.asset.metadata.lqip}
+                      {...(book.coverImage.asset?.metadata?.lqip && {
+                        placeholder: "blur",
+                        blurDataURL: book.coverImage.asset.metadata.lqip
+                      })}
                     />
                   </div>
                 )}
@@ -187,7 +215,7 @@ export default async function BookPage({ params }: Props) {
             
             <div className="prose prose-lg mx-auto text-gray-700">
               {book.aboutBook && (
-                <PortableText value={book.aboutBook} />
+                <PortableText value={book.aboutBook} components={portableTextComponents} />
               )}
             </div>
           </div>
@@ -217,8 +245,10 @@ export default async function BookPage({ params }: Props) {
                           width={120}
                           height={120}
                           className="rounded-full"
-                          placeholder="blur"
-                          blurDataURL={book.fairy.illustration.asset.metadata.lqip}
+                          {...(book.fairy.illustration.asset?.metadata?.lqip && {
+                            placeholder: "blur",
+                            blurDataURL: book.fairy.illustration.asset.metadata.lqip
+                          })}
                         />
                       )}
                       <div>
@@ -274,8 +304,10 @@ export default async function BookPage({ params }: Props) {
                             width={80}
                             height={80}
                             className="rounded-full"
-                            placeholder="blur"
-                            blurDataURL={child.illustration.asset.metadata.lqip}
+                            {...(child.illustration.asset?.metadata?.lqip && {
+                              placeholder: "blur",
+                              blurDataURL: child.illustration.asset.metadata.lqip
+                            })}
                           />
                         )}
                         <div className="flex-1">
@@ -326,8 +358,10 @@ export default async function BookPage({ params }: Props) {
                       alt={image.alt || `Galerija slika ${index + 1}`}
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
-                      placeholder="blur"
-                      blurDataURL={image.asset.metadata.lqip}
+                      {...(image.asset?.metadata?.lqip && {
+                        placeholder: "blur",
+                        blurDataURL: image.asset.metadata.lqip
+                      })}
                     />
                   </div>
                 ))}

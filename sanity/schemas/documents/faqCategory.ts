@@ -69,7 +69,7 @@ export default defineType({
     prepare(selection) {
       const { title, subtitle, media } = selection
       return {
-        title: `${media || '📂'} ${title}`,
+        title: media ? `${media} ${title}` : title,
         subtitle: subtitle,
       }
     },

@@ -121,6 +121,7 @@ const booking = defineType({
       title: 'Lead Score',
       type: 'number',
       description: '0-100 based on inputs',
+      validation: (Rule) => Rule.min(0).max(100),
     }),
     defineField({
       name: 'notes',

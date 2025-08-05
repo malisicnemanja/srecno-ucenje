@@ -8,8 +8,115 @@ import {
 } from '@/components/icons'
 import { HappyStudents, ReadingChild } from '@/components/illustrations/ChildIllustrations'
 import Link from 'next/link'
+import { useSanityQuery } from '@/hooks/useSanity'
+import { franchiseStepsQuery, programsQuery, faqsQuery } from '@/lib/sanity.queries'
+
+// Move fallback data to top of component
+const fallbackSteps = [
+  {
+    title: 'Kontaktirajte Nas',
+    description: 'Pozovite nas ili popunite kontakt formu na našem sajtu',
+    details: [
+      'Telefonske konsultacije radnim danima 9-20h',
+      'Online forma dostupna 24/7',
+      'Odgovor u roku od 24h'
+    ],
+    icon: PhoneIcon,
+    iconColor: 'primary'
+  },
+  {
+    title: 'Besplatna Procena',
+    description: 'Zakažite besplatnu procenu sposobnosti vašeg deteta',
+    details: [
+      'Testiranje traje 30-45 minuta',
+      'Procena čitalačkih sposobnosti',
+      'Analiza matematičkih veština'
+    ],
+    icon: CalendarIcon,
+    iconColor: 'secondary'
+  },
+  {
+    title: 'Upis u Grupu',
+    description: 'Vaše dete se upisuje u odgovarajuću grupu prema uzrastu i nivou',
+    details: [
+      'Male grupe do 8 učenika',
+      'Homogene grupe po nivou znanja',
+      'Fleksibilni termini'
+    ],
+    icon: UsersIcon,
+    iconColor: 'accent'
+  },
+  {
+    title: 'Početak Programa',
+    description: 'Započinjemo sa programom i praćenjem napretka',
+    details: [
+      'Redovno praćenje napretka',
+      'Mesečni izveštaji roditeljima',
+      'Sertifikat po završetku'
+    ],
+    icon: SparklesIcon,
+    iconColor: 'warm'
+  }
+];
+
+// Fallback programs data
+const fallbackPrograms = [
+  {
+    icon: <BookIcon size={48} className="text-primary" />,
+    title: 'Brzočitanje',
+    description: 'Ovladajte veštinom brzog čitanja uz potpuno razumevanje',
+    age: '7-16 godina',
+    duration: '6 meseci',
+    groupSize: '6-8 učenika'
+  },
+  {
+    icon: <BrainIcon size={48} className="text-primary" />,
+    title: 'Mentalna Aritmetika',
+    description: 'Naučite da računate brže od kalkulatora',
+    age: '5-14 godina',
+    duration: '12 meseci',
+    groupSize: '6-8 učenika'
+  },
+  {
+    icon: <TargetIcon size={48} className="text-primary" />,
+    title: 'Kombinovani Program',
+    description: 'Najbolje iz oba programa za maksimalne rezultate',
+    age: '7-14 godina',
+    duration: '12 meseci',
+    groupSize: '6-8 učenika'
+  }
+];
+
+// Fallback FAQs data
+const fallbackFaqs = [
+  {
+    question: 'Da li postoji probni period?',
+    answer: 'Da, nudimo besplatan probni čas kako bi vaše dete moglo da se upozna sa našim metodama pre upisa.'
+  },
+  {
+    question: 'Koliko traje jedan čas?',
+    answer: 'Standardni čas traje 60 minuta za brzočitanje i 90 minuta za mentalnu aritmetiku.'
+  },
+  {
+    question: 'Šta ako dete propušti čas?',
+    answer: 'Propušteni časovi se mogu nadoknaditi u dogovoru sa instruktorom, u okviru tekućeg meseca.'
+  },
+  {
+    question: 'Da li postoje popusti?',
+    answer: 'Da, nudimo porodične popuste od 10% za drugo dete i 15% za treće dete iz iste porodice.'
+  }
+];
 
 export default function KakoSePridruziti() {
+  // Fetch franchise steps from Sanity
+  const { data: franchiseData, isLoading } = useSanityQuery(franchiseStepsQuery)
+  const { data: programsData } = useSanityQuery(programsQuery)
+  const { data: faqsData } = useSanityQuery(faqsQuery)
+  
+  // Use Sanity data if available, otherwise use fallback
+  const steps = franchiseData?.[0]?.steps || fallbackSteps
+  const programs = programsData || fallbackPrograms
+  const faqs = faqsData?.filter(faq => faq.category === 'franchise') || fallbackFaqs
   return (
     <main className="min-h-screen">
       {/* Enhanced Hero Section */}
@@ -133,7 +240,13 @@ export default function KakoSePridruziti() {
           </motion.div>
           
           <div className="max-w-5xl mx-auto">
-            {steps.map((step, index) => (
+            {isLoading ? (
+              <div className="text-center py-12">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto"></div>
+                <p className="mt-4 text-gray-600">Učitavanje koraka...</p>
+              </div>
+            ) : (
+            steps.map((step, index) => (
               <motion.div 
                 key={index} 
                 className="relative mb-16 last:mb-0"
@@ -209,7 +322,8 @@ export default function KakoSePridruziti() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ))
+            )}
           </div>
         </div>
       </section>
@@ -232,7 +346,11 @@ export default function KakoSePridruziti() {
           </motion.div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {programs.map((program, index) => (
+            {programs.map((program, index) => {
+              const Icon = program.icon === 'book' ? BookIcon : 
+                         program.icon === 'brain' ? BrainIcon : 
+                         program.icon === 'target' ? TargetIcon : BookIcon;
+              return (
               <motion.div 
                 key={index} 
                 className="card-interactive bg-white border border-secondary-100"
@@ -247,7 +365,7 @@ export default function KakoSePridruziti() {
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  {program.icon}
+                  {program.icon && typeof program.icon !== 'string' ? program.icon : <Icon size={48} className="text-primary mx-auto" />}
                 </motion.div>
                 <h3 className="text-2xl font-bold mb-4 text-center text-gradient-secondary">{program.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed text-center">{program.description}</p>
@@ -258,7 +376,7 @@ export default function KakoSePridruziti() {
                       <UsersIcon size={16} className="mr-2 text-secondary-500" />
                       Uzrast:
                     </span>
-                    <span className="font-semibold text-secondary-600">{program.age}</span>
+                    <span className="font-semibold text-secondary-600">{program.ageGroup || program.age}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="flex items-center">
@@ -276,7 +394,8 @@ export default function KakoSePridruziti() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -492,88 +611,6 @@ export default function KakoSePridruziti() {
   );
 }
 
-const steps = [
-  {
-    title: 'Kontaktirajte Nas',
-    description: 'Pozovite nas ili popunite kontakt formu na našem sajtu',
-    details: [
-      'Telefonske konsultacije radnim danima 9-20h',
-      'Online forma dostupna 24/7',
-      'Odgovaramo u roku od 24 sata'
-    ],
-    action: {
-      text: 'Kontakt Forma',
-      link: '/kontakt'
-    }
-  },
-  {
-    title: 'Besplatno Testiranje',
-    description: 'Zakažite besplatno testiranje trenutnih sposobnosti vašeg deteta',
-    details: [
-      'Test brzine čitanja i razumevanja',
-      'Procena matematičkih sposobnosti',
-      'Analiza stila učenja',
-      'Individualne preporuke'
-    ]
-  },
-  {
-    title: 'Konsultacije sa Roditeljima',
-    description: 'Detaljno predstavljanje programa i odgovori na sva vaša pitanja',
-    details: [
-      'Personalizovan plan napredovanja',
-      'Objašnjenje metodologije',
-      'Pregled rasporeda i termina',
-      'Dogovor o ciljevima'
-    ]
-  },
-  {
-    title: 'Probni Čas',
-    description: 'Vaše dete prisustvuje besplatnom probnom času',
-    details: [
-      'Upoznavanje sa instruktorom',
-      'Prvi kontakt sa metodom',
-      'Procena prilagođenosti deteta',
-      'Bez obaveze upisa'
-    ]
-  },
-  {
-    title: 'Upis i Početak',
-    description: 'Nakon uspešnog probnog časa, vršite upis i počinjete sa redovnim časovima',
-    details: [
-      'Potpisivanje ugovora',
-      'Dobijanje materijala',
-      'Pristup online platformi',
-      'Početak transformacije'
-    ]
-  }
-];
-
-const programs = [
-  {
-    icon: <BookIcon size={48} className="text-primary" />,
-    title: 'Brzočitanje',
-    description: 'Ovladajte veštinom brzog čitanja uz potpuno razumevanje',
-    age: '7-16 godina',
-    duration: '6 meseci',
-    groupSize: '6-8 učenika'
-  },
-  {
-    icon: <BrainIcon size={48} className="text-primary" />,
-    title: 'Mentalna Aritmetika',
-    description: 'Naučite da računate brže od kalkulatora',
-    age: '5-14 godina',
-    duration: '12 meseci',
-    groupSize: '6-8 učenika'
-  },
-  {
-    icon: <TargetIcon size={48} className="text-primary" />,
-    title: 'Kombinovani Program',
-    description: 'Najbolje iz oba programa za maksimalne rezultate',
-    age: '7-14 godina',
-    duration: '12 meseci',
-    groupSize: '6-8 učenika'
-  }
-];
 
 const pricingPlans = [
   {
@@ -611,24 +648,5 @@ const pricingPlans = [
       'Dodatni mentoring'
     ],
     featured: false
-  }
-];
-
-const faqs = [
-  {
-    question: 'Da li postoji probni period?',
-    answer: 'Da, nudimo besplatan probni čas kako bi vaše dete moglo da se upozna sa našim metodama pre upisa.'
-  },
-  {
-    question: 'Koliko traje jedan čas?',
-    answer: 'Standardni čas traje 60 minuta za brzočitanje i 90 minuta za mentalnu aritmetiku.'
-  },
-  {
-    question: 'Šta ako dete propusti čas?',
-    answer: 'Propušteni časovi se mogu nadoknaditi u dogovoru sa instruktorom, u okviru tekućeg meseca.'
-  },
-  {
-    question: 'Da li postoje popusti?',
-    answer: 'Da, nudimo porodične popuste od 10% za drugo dete i 15% za treće dete iz iste porodice.'
   }
 ];

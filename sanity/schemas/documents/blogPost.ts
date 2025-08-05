@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+import { DocumentTextIcon } from '@sanity/icons'
 
 // Helper function to calculate reading time
 function calculateReadingTime(content: any[]): number {
@@ -18,7 +19,7 @@ export default defineType({
   name: 'blogPost',
   title: 'Blog Članak',
   type: 'document',
-  icon: () => '📝',
+  icon: DocumentTextIcon,
   groups: [
     { name: 'content', title: 'Sadržaj' },
     { name: 'meta', title: 'Meta Podaci' },
@@ -131,6 +132,13 @@ export default defineType({
       group: 'meta'
     }),
     defineField({
+      name: 'readTime',
+      title: 'Vreme Čitanja (Alternative)',
+      type: 'number',
+      description: 'Alternative field for reading time',
+      group: 'meta'
+    }),
+    defineField({
       name: 'seo',
       title: 'SEO Podešavanja',
       type: 'object',
@@ -172,12 +180,11 @@ export default defineType({
       featured: 'isFeatured'
     },
     prepare(selection) {
-      const { author, date, category, featured } = selection
-      const featuredBadge = featured ? ' ⭐' : ''
+      const { author, date, category } = selection
       
       return {
         ...selection,
-        title: `${selection.title}${featuredBadge}`,
+        title: selection.title,
         subtitle: `${category || 'Bez kategorije'} • ${author || 'Bez autora'} • ${
           date ? new Date(date).toLocaleDateString('sr-RS') : 'Bez datuma'
         }`

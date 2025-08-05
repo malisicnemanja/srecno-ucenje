@@ -148,16 +148,9 @@ export default defineType({
       isActive: 'isActive'
     },
     prepare({ city, centerCount, status, isActive }) {
-      const statusEmoji: Record<string, string> = {
-        active: '✅',
-        'coming-soon': '🔜', 
-        planned: '📋',
-        inactive: '⏸️'
-      }
-      
       return {
         title: `${city} (${centerCount} centara)`,
-        subtitle: `${statusEmoji[status] || '📍'} ${status}${!isActive ? ' - Neaktivno' : ''}`
+        subtitle: `${status}${!isActive ? ' - Neaktivno' : ''}`
       }
     }
   },

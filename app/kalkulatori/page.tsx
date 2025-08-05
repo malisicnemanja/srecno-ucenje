@@ -6,6 +6,8 @@ import { motion } from 'framer-motion'
 import InvestmentCalculator from '@/components/features/calculators/InvestmentCalculator'
 import ROICalculator from '@/components/features/calculators/ROICalculator'
 import SpaceOptimizer from '@/components/features/calculators/SpaceOptimizer'
+import { useSanityQuery } from '@/hooks/useSanity'
+import { calculatorSettingsQuery } from '@/lib/sanity.queries'
 
 type CalculatorType = 'investment' | 'roi' | 'space'
 
@@ -161,12 +163,16 @@ const CalculatorGraph = () => (
 
 export default function CalculatorsPage() {
   const [activeCalculator, setActiveCalculator] = useState<CalculatorType>('investment')
+  
+  // Fetch calculator settings from Sanity
+  const { data: settings, isLoading } = useSanityQuery(calculatorSettingsQuery)
 
-  const calculators = [
+  // Default calculator data
+  const defaultCalculators = [
     {
       id: 'investment' as CalculatorType,
-      title: 'Kalkulator Investicije',
-      description: 'Izračunajte ukupnu investiciju i ROI period za vašu franšizu',
+      title: settings?.roiCalculator?.title || 'Kalkulator Investicije',
+      description: settings?.roiCalculator?.description || 'Izračunajte ukupnu investiciju i ROI period za vašu franšizu',
       icon: (
         <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -175,8 +181,8 @@ export default function CalculatorsPage() {
     },
     {
       id: 'roi' as CalculatorType,
-      title: 'ROI Analiza',
-      description: 'Analizirajte profitabilnost i uporedite sa konkurencijom',
+      title: settings?.investmentCalculator?.title || 'ROI Analiza',
+      description: settings?.investmentCalculator?.description || 'Analizirajte profitabilnost i uporedite sa konkurencijom',
       icon: (
         <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -194,6 +200,55 @@ export default function CalculatorsPage() {
       ),
     },
   ]
+  
+  const calculators = defaultCalculators
+
+  // Default benefits data
+  const defaultBenefits = [
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      title: "Precizne Projekcije",
+      description: "Baziran na realnim podacima iz naše mreže franšiza sa tačnošću od 95%",
+      color: "primary"
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      ),
+      title: "Analiza Tržišta",
+      description: "Upoređujte vaše projekcije sa lokalnim tržištem i konkurencijom",
+      color: "secondary"
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+        </svg>
+      ),
+      title: "Personalizovano",
+      description: "Prilagođeno vašem gradu, modelu franšize i specifičnim potrebama",
+      color: "accent"
+    }
+  ]
+  
+  const benefits = settings?.features || defaultBenefits
+
+  if (isLoading) {
+    return (
+      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Učitavanje kalkulatora...</p>
+        </div>
+      </main>
+    )
+  }
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
@@ -509,38 +564,7 @@ export default function CalculatorsPage() {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
-                title: "Precizne Projekcije",
-                description: "Baziran na realnim podacima iz naše mreže franšiza sa tačnošću od 95%",
-                color: "primary"
-              },
-              {
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
-                ),
-                title: "Analiza Tržišta",
-                description: "Upoređujte vaše projekcije sa lokalnim tržištem i konkurencijom",
-                color: "secondary"
-              },
-              {
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                  </svg>
-                ),
-                title: "Personalizovano",
-                description: "Prilagođeno vašem gradu, modelu franšize i specifičnim potrebama",
-                color: "accent"
-              }
-            ].map((benefit, index) => (
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

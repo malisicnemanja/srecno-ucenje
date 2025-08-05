@@ -1,5 +1,7 @@
 'use client'
 
+import { resolveIcon } from '@/lib/iconResolver'
+
 interface Statistic {
   value: string
   label: string
@@ -22,7 +24,7 @@ export default function StatisticsSection({
           {statistics.map((stat, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-6">
               {stat.icon && (
-                <div className="text-4xl mb-2">{stat.icon}</div>
+                <div className="text-4xl mb-2">{resolveIcon({ icon: stat.icon, size: 48 })}</div>
               )}
               <div className="text-4xl font-bold text-blue-600 mb-2">
                 {stat.value}

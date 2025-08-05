@@ -1,0 +1,340 @@
+{
+  "query": "*[_type==\"aboutAuthor\"]",
+  "result": [
+    {
+      "_createdAt": "2025-08-03T11:00:58Z",
+      "_id": "EIn1TO6kzkBkpMuRkFy78E",
+      "_rev": "EIn1TO6kzkBkpMuRkFyync",
+      "_type": "aboutAuthor",
+      "_updatedAt": "2025-08-03T11:37:58Z",
+      "achievements": [
+        {
+          "color": "#3498DB",
+          "description": "Međunarodno priznanje za inovativnost u obrazovanju i doprinos metodologiji učenja",
+          "icon": "globe",
+          "title": "Global Teacher Prize",
+          "year": "2024"
+        },
+        {
+          "color": "#E74C3C",
+          "description": "Najviše priznanje u srpskom obrazovanju za doprinos pedagoškoj nauci",
+          "icon": "medal",
+          "title": "Svetosavska nagrada",
+          "year": "2023"
+        },
+        {
+          "color": "#F39C12",
+          "description": "Službena podrška za razvoj Čarobnog sela i metodologije srećnog učenja",
+          "icon": "partnership",
+          "title": "UNICEF partner",
+          "year": "2012"
+        },
+        {
+          "color": "#27AE60",
+          "description": "Osnivač i organizator najvećeg festivala dečjeg stvaralaštva u Srbiji",
+          "icon": "festival",
+          "title": "Kreativna čarolija",
+          "year": "2018"
+        },
+        {
+          "color": "#9B59B6",
+          "description": "Serijal \"Luka godišnjih doba\" i metodički priručnik za nastavnike",
+          "icon": "book",
+          "title": "4 objavljena dela",
+          "year": "2021-2023"
+        },
+        {
+          "color": "#E91E63",
+          "description": "Pokretanje mreže najboljih nastavnika bivše Jugoslavije",
+          "icon": "star",
+          "title": "Asocijacija Prosvetitelj",
+          "year": "2020"
+        }
+      ],
+      "featuredBooks": [
+        {
+          "_ref": "EIn1TO6kzkBkpMuRkFybRO",
+          "_type": "reference"
+        },
+        {
+          "_ref": "EIn1TO6kzkBkpMuRkFybbz",
+          "_type": "reference"
+        },
+        {
+          "_ref": "hWo33GCGxd3rDeD5Tjrudh",
+          "_type": "reference"
+        },
+        {
+          "_ref": "hWo33GCGxd3rDeD5Tjrurv",
+          "_type": "reference"
+        }
+      ],
+      "featuredQuote": {
+        "context": "O filozofiji Čarobnog sela",
+        "text": "Moji likovi nose vrline koje želim da deca prepoznaju. Cilj je razvoj srećnih i odgovornih pojedinaca koji će svoje znanje primenjivati za dobrobit društva."
+      },
+      "heroBackground": {
+        "_type": "image",
+        "alt": "Ilustracija autorke sa knjigama",
+        "asset": {
+          "_ref": "image-92ea11e4eda3157bde0a509939e599ec17448405-1024x1536-webp",
+          "_type": "reference"
+        }
+      },
+      "heroImage": {
+        "_type": "image",
+        "alt": "Profesionalna fotografija autorke",
+        "asset": {
+          "_ref": "image-e721d50573fbc9dc241755e261733e5a8b129d76-2826x1508-webp",
+          "_type": "reference"
+        }
+      },
+      "heroSubtitle": "Učiteljica, spisateljica i kreatorka metodologije Srećnog učenja",
+      "heroTitle": "Željana Radojičić Lukić",
+      "sections": [
+        {
+          "backgroundColor": "#FFF9E6",
+          "content": [
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Rođena 1969. godine u Banovićima, Željana je odrasla okružena prirodom Bosne i Hercegovine. Kao devojčica koja je rano krenula u školu, nije znala ni slova ni brojeve, ali je znala prepoznati vrste ptica po glasu, razlikovati drveće i poznavati lekovite biljke."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Biblioteka je postala njeno utočište - kroz knjige je putovala svetom, upoznavala druge kulture i učila da prepoznaje vrline kod sebe i drugih. Odrastanje u višekulturnoj sredini naučilo ju je da poštuje različitosti, što je kasnije postalo temelj njenog obrazovnog pristupa."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Prve nastavničke korake napravila je krajem devedesetih u malim selima na padinama planine Ozren. Rat ju je primorao da napusti Bosnu i preseli se u Banju Vrujci, gde i danas živi, radi i stvara."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "decorativeElement": "floating-books",
+          "imagePosition": "right",
+          "title": "Početak puta"
+        },
+        {
+          "backgroundColor": "#E3F2FD",
+          "content": [
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Nakon preseljenja u Srbiju, Željana nastavlja rad kao seoska učiteljica, gde razvija inovativne metode rada sa decom. Njen talenat i posvećenost dovode je do pozicije pomoćnice ministra prosvete (2015-2016)."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Ipak, na vrhuncu karijere u državnoj službi, donosi hrabru odluku - odriče se sigurne pozicije kako bi se u potpunosti posvetila razvoju pedagogije srećnog učenja i pisanju knjiga za decu. \"Shvatila sam da mogu više doprineti direktnim radom sa decom nego kroz administrativne pozicije\", kaže Željana."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "decorativeElement": "growth-plant",
+          "imagePosition": "left",
+          "title": "Od seoske učiteljice do vizionara obrazovanja"
+        },
+        {
+          "backgroundColor": "#F3E5F5",
+          "content": [
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Godine 2012, uz podršku UNICEF-a, Željana pokreće projekat \"Čarobno selo\" - obrazovni univerzum u kojem svako godišnje doba ima svoju kuću, vilu i priče koje spajaju bajku sa naukom."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Koncept srećnog učenja zasniva se na tri stuba: ljubavi prema bajci, značaju iskustvenog učenja i primeni znanja u svakodnevnom životu. Kroz priče o vilama i deci, Željana integriše nauku, ekologiju, jezik, tradiciju i kulturu, razvijajući kod dece vrline poput zahvalnosti, hrabrosti i empatije."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "\"Moji likovi nose vrline koje želim da deca prepoznaju. Cilj je razvoj srećnih i odgovornih pojedinaca koji će svoje znanje primenjivati za dobrobit društva\", objašnjava svoju filozofiju."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "decorativeElement": "magic-sparkles",
+          "imagePosition": "right",
+          "title": "Rođenje Čarobnog sela"
+        },
+        {
+          "backgroundColor": "#FFF3E0",
+          "content": [
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Serijal \"Luka godišnjih doba\" sastoji se od četiri knjige - Jesenja gozba (2021), Zimski mir (2022), Prolećna žurba (2022) i Letnja vreva (2023). Svaka knjiga je pažljivo osmišljena da spoji tradicionalne vrednosti sa modernim pristupom učenju."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Uz knjige, Željana je kreirala radne sveske sa integrativnim zadacima i metodički priručnik \"Pedagogija srećnog učenja\" koji pomaže nastavnicima da primene njen koncept u svojim učionicama."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Knjige nisu samo za decu - one su vodiči za roditelje i nastavnike kako da kroz igru i maštu razvijaju celovite ličnosti."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "decorativeElement": "open-book",
+          "imagePosition": "left",
+          "title": "Knjige koje menjaju obrazovanje"
+        },
+        {
+          "backgroundColor": "#E8F5E9",
+          "content": [
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Željana je osnivač i predsednica udruženja KREATIVA - kreativno obrazovanje, koje razvija obrazovne i ekološke projekte. Vodi i festival \"Kreativna čarolija\", najveći festival dečjeg stvaralaštva u Srbiji."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Pokrenula je asocijaciju najboljih nastavnika bivše Jugoslavije i nagradu \"Prosvetitelj\", povezujući edukatore i promovisajući inovativne pristupe učenju."
+                }
+              ],
+              "style": "normal"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "text": "Njen rad prepoznat je brojnim nagradama, uključujući Global Teacher Prize i Svetosavsku nagradu, što je svrstava među najuticajnije edukatore u regionu."
+                }
+              ],
+              "style": "normal"
+            }
+          ],
+          "decorativeElement": "award-stars",
+          "imagePosition": "right",
+          "title": "Društveni uticaj i priznanja"
+        }
+      ],
+      "seo": {
+        "keywords": [
+          "Željana Radojičić Lukić",
+          "autorka",
+          "učiteljica",
+          "Čarobno selo",
+          "srećno učenje",
+          "pedagogija",
+          "Global Teacher Prize",
+          "Svetosavska nagrada"
+        ],
+        "metaDescription": "Upoznajte Željanu Radojičić Lukić, učiteljicu i spisateljicu koja je stvorila Čarobno selo i metodologiju srećnog učenja. Dobitnica Global Teacher Prize i Svetosavske nagrade.",
+        "metaTitle": "O autorki - Željana Radojičić Lukić | Srećno učenje"
+      },
+      "timeline": [
+        {
+          "description": "Početak puta u Bosni i Hercegovini, odrastanje okruženo prirodom",
+          "featured": false,
+          "icon": "birth",
+          "title": "Rođenje u Banovićima",
+          "year": "1969"
+        },
+        {
+          "description": "Rad u selima na planini Ozren, razvoj prve ideje o srećnom učenju",
+          "featured": false,
+          "icon": "teaching",
+          "title": "Prvi nastavnički koraci",
+          "year": "1990-te"
+        },
+        {
+          "description": "Početak projekta uz podršku UNICEF-a, rođenje metodologije",
+          "featured": true,
+          "icon": "village",
+          "title": "Osnivanje Čarobnog sela",
+          "year": "2012"
+        },
+        {
+          "description": "Rad u državnoj službi na sistemskim promenama u obrazovanju",
+          "featured": false,
+          "icon": "government",
+          "title": "Pomoćnica ministra prosvete",
+          "year": "2015-2016"
+        },
+        {
+          "description": "Luka godišnjih doba - 4 knjige koje definišu metodologiju",
+          "featured": true,
+          "icon": "books",
+          "title": "Objavljivanje serijala knjiga",
+          "year": "2021-2023"
+        },
+        {
+          "description": "Global Teacher Prize i Svetosavska nagrada za doprinos obrazovanju",
+          "featured": true,
+          "icon": "award",
+          "title": "Međunarodna priznanja",
+          "year": "2024"
+        }
+      ]
+    }
+  ],
+  "syncTags": [
+    "s1:oBcO8g"
+  ],
+  "ms": 9
+}

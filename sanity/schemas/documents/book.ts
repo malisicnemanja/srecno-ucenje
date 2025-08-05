@@ -1,10 +1,11 @@
 import { defineField, defineType } from 'sanity'
+import { BookIcon } from '@sanity/icons'
 
 export default defineType({
   name: 'book',
   title: 'Knjiga',
   type: 'document',
-  icon: () => '📚',
+  icon: BookIcon,
   groups: [
     { name: 'basic', title: 'Osnovni Podaci' },
     { name: 'content', title: 'Sadržaj' },
@@ -267,11 +268,11 @@ export default defineType({
               validation: (Rule) => Rule.min(1).max(5),
               options: {
                 list: [
-                  { title: '⭐', value: 1 },
-                  { title: '⭐⭐', value: 2 },
-                  { title: '⭐⭐⭐', value: 3 },
-                  { title: '⭐⭐⭐⭐', value: 4 },
-                  { title: '⭐⭐⭐⭐⭐', value: 5 }
+                  { title: '1 zvezdica', value: 1 },
+                  { title: '2 zvezdice', value: 2 },
+                  { title: '3 zvezdice', value: 3 },
+                  { title: '4 zvezdice', value: 4 },
+                  { title: '5 zvezdica', value: 5 }
                 ]
               }
             }
@@ -375,17 +376,11 @@ export default defineType({
       colorTheme: 'colorTheme'
     },
     prepare(selection) {
-      const { title, subtitle, year, colorTheme } = selection
-      const colors = {
-        yellow: '🟡',
-        blue: '🔵', 
-        green: '🟢',
-        red: '🔴'
-      }
+      const { title, subtitle, year } = selection
       
       return {
         title: title,
-        subtitle: `${subtitle} (${year}) ${colors[colorTheme] || ''}`,
+        subtitle: `${subtitle} (${year})`,
         media: selection.media
       }
     }

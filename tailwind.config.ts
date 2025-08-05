@@ -27,7 +27,13 @@ const config: Config = {
         'slide-down': 'slideDown 0.5s ease-out',
         'scale-in': 'scaleIn 0.3s ease-out',
         'bounce-in': 'bounceIn 0.6s ease-out',
-        'float': 'float 3s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'float-delayed': 'float 6s ease-in-out 2s infinite',
+        'brush-stroke': 'brushStroke 1.5s ease-out forwards',
+        'text-reveal': 'textReveal 0.8s ease-out forwards',
+        'text-reveal-delay': 'textReveal 0.8s ease-out 0.3s forwards',
+        'subtle-pulse': 'subtlePulse 2s ease-in-out infinite',
+        'card-lift': 'cardLift 0.3s ease forwards',
         'pulse-slow': 'pulse 3s ease-in-out infinite',
       },
       keyframes: {
@@ -53,8 +59,26 @@ const config: Config = {
           '100%': { transform: 'scale(1)', opacity: '1' },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '33%': { transform: 'translateY(-10px) rotate(-1deg)' },
+          '66%': { transform: 'translateY(-5px) rotate(1deg)' },
+        },
+        brushStroke: {
+          '0%': { strokeDashoffset: '1000', opacity: '0' },
+          '20%': { opacity: '1' },
+          '100%': { strokeDashoffset: '0', opacity: '1' },
+        },
+        textReveal: {
+          from: { opacity: '0', transform: 'translateY(20px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        subtlePulse: {
+          '0%, 100%': { transform: 'scale(1)', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' },
+          '50%': { transform: 'scale(1.02)', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' },
+        },
+        cardLift: {
+          from: { transform: 'translateY(0)', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' },
+          to: { transform: 'translateY(-4px)', boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1)' },
         },
       },
       boxShadow: {

@@ -1,10 +1,11 @@
 import { defineField, defineType } from 'sanity'
+import { DocumentTextIcon } from '@sanity/icons'
 
 export default defineType({
   name: 'experience',
   title: 'Iskustvo',
   type: 'document',
-  icon: () => '✈️',
+  icon: DocumentTextIcon,
   groups: [
     { name: 'basic', title: 'Osnovni Podaci' },
     { name: 'content', title: 'Sadržaj' },
@@ -147,16 +148,16 @@ export default defineType({
               type: 'string',
               options: {
                 list: [
-                  { title: '📅 Kalendar', value: 'calendar' },
-                  { title: '🚗 Transport', value: 'car' },
-                  { title: '💧 Voda/Zdravlje', value: 'water' },
-                  { title: '👕 Oblačenje', value: 'clothing' },
-                  { title: '💰 Novac', value: 'money' },
-                  { title: '📱 Tehnologija', value: 'tech' },
-                  { title: '🍽️ Hrana', value: 'food' },
-                  { title: '🏨 Smeštaj', value: 'accommodation' },
-                  { title: '📋 Dokumenta', value: 'documents' },
-                  { title: '⚡ Energija', value: 'energy' }
+                  { title: 'Kalendar', value: 'calendar' },
+                  { title: 'Transport', value: 'car' },
+                  { title: 'Voda/Zdravlje', value: 'water' },
+                  { title: 'Oblačenje', value: 'clothing' },
+                  { title: 'Novac', value: 'money' },
+                  { title: 'Tehnologija', value: 'tech' },
+                  { title: 'Hrana', value: 'food' },
+                  { title: 'Smeštaj', value: 'accommodation' },
+                  { title: 'Dokumenta', value: 'documents' },
+                  { title: 'Energija', value: 'energy' }
                 ]
               },
               initialValue: 'calendar'
@@ -222,9 +223,9 @@ export default defineType({
           type: 'string',
           options: {
             list: [
-              { title: '🟢 Lako', value: 'easy' },
-              { title: '🟡 Umereno', value: 'moderate' },
-              { title: '🔴 Izazovno', value: 'challenging' }
+              { title: 'Lako', value: 'easy' },
+              { title: 'Umereno', value: 'moderate' },
+              { title: 'Izazovno', value: 'challenging' }
             ]
           },
           validation: (Rule) => Rule.required()
@@ -299,12 +300,11 @@ export default defineType({
       featured: 'featured'
     },
     prepare(selection) {
-      const { title, destination, date, featured } = selection
-      const featuredBadge = featured ? ' ⭐' : ''
+      const { title, destination, date } = selection
       
       return {
         ...selection,
-        title: `${title}${featuredBadge}`,
+        title: title,
         subtitle: `${destination} • ${
           date ? new Date(date).toLocaleDateString('sr-RS') : 'Bez datuma'
         }`

@@ -34,12 +34,12 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: '👥 Ljudi/Učenici', value: 'people' },
-          { title: '🏆 Nagrade/Priznanja', value: 'awards' },
-          { title: '📚 Knjige/Publikacije', value: 'books' },
-          { title: '⭐ Ocena/Kvalitet', value: 'rating' },
-          { title: '🎯 Uspeh/Rezultati', value: 'success' },
-          { title: '⏰ Godine/Iskustvo', value: 'experience' }
+          { title: 'Ljudi/Učenici', value: 'people' },
+          { title: 'Nagrade/Priznanja', value: 'awards' },
+          { title: 'Knjige/Publikacije', value: 'books' },
+          { title: 'Ocena/Kvalitet', value: 'rating' },
+          { title: 'Uspeh/Rezultati', value: 'success' },
+          { title: 'Godine/Iskustvo', value: 'experience' }
         ]
       },
       validation: Rule => Rule.required()
@@ -90,20 +90,10 @@ export default defineType({
       icon: 'icon',
       isActive: 'isActive'
     },
-    prepare({ number, label, icon, isActive }) {
-      const iconMap: Record<string, string> = {
-        people: '👥',
-        awards: '🏆',
-        books: '📚',
-        rating: '⭐',
-        success: '🎯',
-        experience: '⏰'
-      }
-      
+    prepare({ number, label, isActive }) {
       return {
         title: `${number} - ${label}`,
-        subtitle: isActive ? 'Aktivno' : 'Neaktivno',
-        media: iconMap[icon] || '📊'
+        subtitle: isActive ? 'Aktivno' : 'Neaktivno'
       }
     }
   },

@@ -64,7 +64,7 @@ export default defineType({
     prepare({ title, year, highlight }) {
       return {
         title: `${year} - ${title}`,
-        subtitle: highlight ? '⭐ Ključni momenat' : 'Događaj'
+        subtitle: highlight ? 'Ključni momenat' : 'Događaj'
       }
     }
   },

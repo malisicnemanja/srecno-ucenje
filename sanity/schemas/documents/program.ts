@@ -55,6 +55,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'ageGroup',
+      title: 'Uzrasna grupa (Alternative)',
+      type: 'string',
+    }),
+    defineField({
       name: 'duration',
       title: 'Trajanje',
       type: 'string',
@@ -136,6 +141,18 @@ export default defineType({
       name: 'order',
       title: 'Redosled',
       type: 'number',
+    }),
+    defineField({
+      name: 'color',
+      title: 'Boja',
+      type: 'string',
+      description: 'Hex boja ili Tailwind klasa',
+    }),
+    defineField({
+      name: 'isActive',
+      title: 'Aktivan program',
+      type: 'boolean',
+      initialValue: true,
     }),
   ],
   preview: {

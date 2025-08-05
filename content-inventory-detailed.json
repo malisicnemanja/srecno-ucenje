@@ -1,0 +1,560 @@
+{
+  "summary": {
+    "totalPages": 29,
+    "toKeep": 23,
+    "toMigrate": 3,
+    "toArchive": 3,
+    "staticPages": 11,
+    "cmsPages": 18
+  },
+  "duplicatePages": [
+    {
+      "original": "app/metodologija/page.tsx",
+      "duplicate": "app/methodology/page.tsx",
+      "recommendation": "Keep Serbian version, archive English"
+    },
+    {
+      "original": "app/fransiza-modeli/page.tsx",
+      "duplicate": "app/franchise-models/page.tsx",
+      "recommendation": "Keep Serbian version, archive English"
+    }
+  ],
+  "contentIssues": [
+    {
+      "page": "app/iskustva/page.tsx",
+      "issue": "Shows travel experiences instead of franchisee testimonials",
+      "severity": "HIGH",
+      "recommendation": "Create new franchisee testimonials in CMS"
+    },
+    {
+      "page": "app/lokacije/page.tsx",
+      "issue": "Should be renamed to \"centri\" with individual pages",
+      "severity": "MEDIUM",
+      "recommendation": "Rename route and add dynamic center pages"
+    }
+  ],
+  "cmsTypes": [
+    "homePage",
+    "book",
+    "booksLanding",
+    "methodology",
+    "franchiseModels",
+    "experience",
+    "locationData",
+    "aboutAuthor",
+    "howToJoin",
+    "trainingPrograms",
+    "virtualClassroom",
+    "resources",
+    "blogPost",
+    "faq",
+    "legalDocument",
+    "siteSettings"
+  ],
+  "pages": [
+    {
+      "page": "app/page.tsx",
+      "currentContent": {
+        "type": "homepage",
+        "source": "cms",
+        "cmsType": "homePage",
+        "description": "Main landing page with all sections from CMS"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "No changes - already fully dynamic"
+      },
+      "sharedWith": [],
+      "dependencies": [
+        "homePageQuery",
+        "all home components"
+      ]
+    },
+    {
+      "page": "app/knjige/page.tsx",
+      "currentContent": {
+        "type": "books landing",
+        "source": "cms",
+        "cmsType": "booksLanding",
+        "description": "Books overview with series information"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Keep all book data intact"
+      },
+      "sharedWith": [
+        "home page books section"
+      ],
+      "dependencies": [
+        "booksLandingQuery",
+        "booksQuery"
+      ]
+    },
+    {
+      "page": "app/knjige/[slug]/page.tsx",
+      "currentContent": {
+        "type": "book detail",
+        "source": "cms",
+        "cmsType": "book",
+        "description": "Individual book pages with full details"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Critical content - no changes"
+      },
+      "sharedWith": [],
+      "dependencies": [
+        "bookQuery",
+        "book schema"
+      ]
+    },
+    {
+      "page": "app/metodologija/page.tsx",
+      "currentContent": {
+        "type": "methodology",
+        "source": "cms",
+        "cmsType": "methodology",
+        "description": "Serbian version with CMS integration"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Primary version - keep Serbian"
+      },
+      "sharedWith": [],
+      "dependencies": [
+        "methodologyQuery"
+      ]
+    },
+    {
+      "page": "app/methodology/page.tsx",
+      "currentContent": {
+        "type": "methodology",
+        "source": "static",
+        "description": "English version with hardcoded content"
+      },
+      "proposedChanges": {
+        "action": "archive",
+        "newLocation": "archive/methodology-en",
+        "preservationStrategy": "Remove duplicate, keep animations if needed"
+      },
+      "sharedWith": [],
+      "dependencies": []
+    },
+    {
+      "page": "app/fransiza-modeli/page.tsx",
+      "currentContent": {
+        "type": "franchise models",
+        "source": "cms",
+        "cmsType": "franchiseModels",
+        "description": "Serbian version with CMS data"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Primary version - already dynamic"
+      },
+      "sharedWith": [
+        "home page models section"
+      ],
+      "dependencies": [
+        "franchiseModelsQuery"
+      ]
+    },
+    {
+      "page": "app/franchise-models/page.tsx",
+      "currentContent": {
+        "type": "franchise models",
+        "source": "static",
+        "description": "English version with hardcoded models"
+      },
+      "proposedChanges": {
+        "action": "archive",
+        "newLocation": "archive/franchise-models-en",
+        "preservationStrategy": "Remove duplicate"
+      },
+      "sharedWith": [],
+      "dependencies": []
+    },
+    {
+      "page": "app/iskustva/page.tsx",
+      "currentContent": {
+        "type": "experiences",
+        "source": "cms",
+        "cmsType": "experience",
+        "description": "Currently showing travel experiences - WRONG CONTENT"
+      },
+      "proposedChanges": {
+        "action": "migrate",
+        "newLocation": "franchisee testimonials",
+        "preservationStrategy": "Archive travel content, create franchisee stories"
+      },
+      "sharedWith": [
+        "potentially home page"
+      ],
+      "dependencies": [
+        "experienceQuery"
+      ]
+    },
+    {
+      "page": "app/iskustva/[slug]/page.tsx",
+      "currentContent": {
+        "type": "experience detail",
+        "source": "cms",
+        "cmsType": "experience",
+        "description": "Individual experience pages"
+      },
+      "proposedChanges": {
+        "action": "migrate",
+        "preservationStrategy": "Transform to franchisee detail pages"
+      },
+      "sharedWith": [],
+      "dependencies": [
+        "experienceQuery"
+      ]
+    },
+    {
+      "page": "app/lokacije/page.tsx",
+      "currentContent": {
+        "type": "locations",
+        "source": "cms",
+        "cmsType": "locationData",
+        "description": "Location listings with map"
+      },
+      "proposedChanges": {
+        "action": "migrate",
+        "newLocation": "app/centri/page.tsx",
+        "preservationStrategy": "Rename to centers, add individual pages"
+      },
+      "sharedWith": [
+        "footer links"
+      ],
+      "dependencies": [
+        "locationDataQuery"
+      ]
+    },
+    {
+      "page": "app/o-autorki/page.tsx",
+      "currentContent": {
+        "type": "about author",
+        "source": "cms",
+        "cmsType": "aboutAuthor",
+        "description": "Author biography and achievements"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Critical for credibility - no changes"
+      },
+      "sharedWith": [
+        "book pages",
+        "methodology"
+      ],
+      "dependencies": [
+        "aboutAuthorQuery"
+      ]
+    },
+    {
+      "page": "app/kontakt/page.tsx",
+      "currentContent": {
+        "type": "redirect",
+        "source": "static",
+        "description": "Redirects to /zakazivanje"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Keep redirect for backwards compatibility"
+      },
+      "sharedWith": [],
+      "dependencies": []
+    },
+    {
+      "page": "app/zakazivanje/page.tsx",
+      "currentContent": {
+        "type": "booking form",
+        "source": "static",
+        "description": "Multi-step consultation booking"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Critical conversion page - enhance gradually"
+      },
+      "sharedWith": [
+        "CTA buttons across site"
+      ],
+      "dependencies": [
+        "BookingForm component"
+      ]
+    },
+    {
+      "page": "app/kako-se-pridruziti/page.tsx",
+      "currentContent": {
+        "type": "how to join",
+        "source": "cms",
+        "cmsType": "howToJoin",
+        "description": "Detailed franchise joining process"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Critical path - no changes"
+      },
+      "sharedWith": [
+        "CTAs across site"
+      ],
+      "dependencies": [
+        "howToJoinQuery"
+      ]
+    },
+    {
+      "page": "app/obuka-mentorstvo/page.tsx",
+      "currentContent": {
+        "type": "training programs",
+        "source": "cms",
+        "cmsType": "trainingPrograms",
+        "description": "Training and mentorship programs"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Essential for franchisees - keep all"
+      },
+      "sharedWith": [],
+      "dependencies": [
+        "trainingProgramsQuery"
+      ]
+    },
+    {
+      "page": "app/3d-ucionica/page.tsx",
+      "currentContent": {
+        "type": "3D classroom",
+        "source": "static",
+        "description": "Interactive 3D classroom demo"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Unique feature - enhance gradually"
+      },
+      "sharedWith": [
+        "home page preview"
+      ],
+      "dependencies": [
+        "Three.js components"
+      ]
+    },
+    {
+      "page": "app/ucionica/page.tsx",
+      "currentContent": {
+        "type": "classroom",
+        "source": "cms",
+        "cmsType": "virtualClassroom",
+        "description": "Virtual classroom overview"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Keep both classroom versions"
+      },
+      "sharedWith": [],
+      "dependencies": [
+        "virtualClassroomQuery"
+      ]
+    },
+    {
+      "page": "app/kalkulatori/page.tsx",
+      "currentContent": {
+        "type": "calculators hub",
+        "source": "static",
+        "description": "ROI and investment calculators"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Important tools - maybe add to CMS later"
+      },
+      "sharedWith": [],
+      "dependencies": [
+        "ROICalculator",
+        "InvestmentCalculator"
+      ]
+    },
+    {
+      "page": "app/kvizovi/page.tsx",
+      "currentContent": {
+        "type": "quizzes",
+        "source": "static",
+        "description": "Interactive franchise readiness quiz"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Engagement tool - enhance with CMS later"
+      },
+      "sharedWith": [],
+      "dependencies": [
+        "QuizComponent"
+      ]
+    },
+    {
+      "page": "app/resursi/page.tsx",
+      "currentContent": {
+        "type": "resources",
+        "source": "cms",
+        "cmsType": "resources",
+        "description": "Downloadable resources and materials"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Lead generation - keep all"
+      },
+      "sharedWith": [
+        "home page lead magnets"
+      ],
+      "dependencies": [
+        "resourcesQuery"
+      ]
+    },
+    {
+      "page": "app/blog/page.tsx",
+      "currentContent": {
+        "type": "blog listing",
+        "source": "cms",
+        "cmsType": "blogPost",
+        "description": "Blog posts listing"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "SEO important - no changes"
+      },
+      "sharedWith": [],
+      "dependencies": [
+        "blogPostsQuery"
+      ]
+    },
+    {
+      "page": "app/blog/[slug]/page.tsx",
+      "currentContent": {
+        "type": "blog post",
+        "source": "cms",
+        "cmsType": "blogPost",
+        "description": "Individual blog posts"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "SEO content - keep all"
+      },
+      "sharedWith": [],
+      "dependencies": [
+        "blogPostQuery"
+      ]
+    },
+    {
+      "page": "app/faq/page.tsx",
+      "currentContent": {
+        "type": "FAQ",
+        "source": "cms",
+        "cmsType": "faq",
+        "description": "Frequently asked questions"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Important for conversions - keep all"
+      },
+      "sharedWith": [
+        "home page FAQ section"
+      ],
+      "dependencies": [
+        "faqQuery"
+      ]
+    },
+    {
+      "page": "app/uspeh/page.tsx",
+      "currentContent": {
+        "type": "success confirmation",
+        "source": "static",
+        "description": "Booking success confirmation"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Part of conversion flow - keep"
+      },
+      "sharedWith": [],
+      "dependencies": []
+    },
+    {
+      "page": "app/legal/privatnost/page.tsx",
+      "currentContent": {
+        "type": "privacy policy",
+        "source": "cms",
+        "cmsType": "legalDocument",
+        "description": "Privacy policy"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Legal requirement - no changes"
+      },
+      "sharedWith": [
+        "footer links"
+      ],
+      "dependencies": [
+        "legalDocumentQuery"
+      ]
+    },
+    {
+      "page": "app/legal/uslovi-koriscenja/page.tsx",
+      "currentContent": {
+        "type": "terms of use",
+        "source": "cms",
+        "cmsType": "legalDocument",
+        "description": "Terms and conditions"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Legal requirement - no changes"
+      },
+      "sharedWith": [
+        "footer links"
+      ],
+      "dependencies": [
+        "legalDocumentQuery"
+      ]
+    },
+    {
+      "page": "app/test-pdf/page.tsx",
+      "currentContent": {
+        "type": "test page",
+        "source": "static",
+        "description": "PDF generation test page"
+      },
+      "proposedChanges": {
+        "action": "archive",
+        "newLocation": "archive/test-pages",
+        "preservationStrategy": "Development utility - archive"
+      },
+      "sharedWith": [],
+      "dependencies": []
+    },
+    {
+      "page": "app/[locale]/page.tsx",
+      "currentContent": {
+        "type": "i18n homepage",
+        "source": "static",
+        "description": "Internationalization support"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Future i18n support - keep structure"
+      },
+      "sharedWith": [],
+      "dependencies": []
+    },
+    {
+      "page": "app/studio/[[...index]]/page.tsx",
+      "currentContent": {
+        "type": "Sanity Studio",
+        "source": "static",
+        "description": "CMS admin interface"
+      },
+      "proposedChanges": {
+        "action": "keep",
+        "preservationStrategy": "Essential admin tool - no changes"
+      },
+      "sharedWith": [],
+      "dependencies": [
+        "Sanity Studio"
+      ]
+    }
+  ]
+}

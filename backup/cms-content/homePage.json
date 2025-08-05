@@ -1,0 +1,516 @@
+{
+  "query": "*[_type==\"homePage\"]",
+  "result": [
+    {
+      "_createdAt": "2025-08-03T04:32:30Z",
+      "_id": "hWo33GCGxd3rDeD5TjTtHz",
+      "_rev": "hWo33GCGxd3rDeD5TjTtDF",
+      "_type": "homePage",
+      "_updatedAt": "2025-08-03T04:32:30Z",
+      "differentiators": [
+        {
+          "description": "Kombinujemo brzo čitanje, mentalnu aritmetiku i emocionalno učenje u jedinstven pristup koji je prilagođen našoj deci.",
+          "features": [
+            "Naučno dokazane tehnike",
+            "Prilagođeno lokalnim potrebama",
+            "Individualizovan pristup"
+          ],
+          "icon": "brain",
+          "title": "Jedinstvena Metodologija"
+        },
+        {
+          "description": "Preko 95% naše dece pokazuje značajno poboljšanje u brzini čitanja, računanja i opštem akademskom uspehu.",
+          "features": [
+            "5x brže čitanje",
+            "Bolje ocene u školi",
+            "Povećana koncentracija"
+          ],
+          "icon": "trophy",
+          "title": "Dokazani Rezultati"
+        },
+        {
+          "description": "Pružamo kontinuiranu obuku, materijale i podršku svim našim franšiza partnerima za garantovani uspeh.",
+          "features": [
+            "Početna obuka",
+            "Kontinuirano mentorstvo",
+            "Marketing podrška"
+          ],
+          "icon": "heart",
+          "title": "Kompletna Podrška"
+        }
+      ],
+      "enhancedHero": {
+        "backgroundType": "gradient",
+        "description": "Naša jedinstvena metodologija kombinuje brzo čitanje, mentalnu aritmetiku i emocionalno učenje za revolutivne rezultate.",
+        "mainHeading": "Srećno učenje - Franšiza koja menja živote",
+        "primaryCTA": {
+          "link": "/metodologija",
+          "text": "Saznajte više o metodologiji"
+        },
+        "secondaryCTA": {
+          "link": "/kontakt",
+          "text": "Kontaktirajte nas"
+        },
+        "showVideoPreview": false,
+        "subHeading": "Pridružite se mreži koja je već inspirisala 20.000+ dece da uče srcem",
+        "trustBadge": {
+          "icon": "heart",
+          "text": "20.000+ zadovoljne dece"
+        }
+      },
+      "franchiseSteps": [
+        {
+          "description": "Zakažite besplatan razgovor sa našim timom",
+          "icon": "phone",
+          "step": 1,
+          "title": "Kontakt i konsultacije"
+        },
+        {
+          "description": "Izaberite paket koji odgovara vašim potrebama",
+          "icon": "package",
+          "step": 2,
+          "title": "Odaberite model franšize"
+        },
+        {
+          "description": "Prođite kroz našu komprehensivnu obuku",
+          "icon": "graduation",
+          "step": 3,
+          "title": "Obuka i sertifikacija"
+        },
+        {
+          "description": "Otvorite svoj Srećno učenje centar",
+          "icon": "rocket",
+          "step": 4,
+          "title": "Pokretanje centra"
+        }
+      ],
+      "homeFaqs": {
+        "description": "Evo odgovora na najčešća pitanja o našoj metodologiji i franšizi.",
+        "sectionTitle": "Često postavljana pitanja"
+      },
+      "statistics": [
+        {
+          "description": "Koji su uspešno završili naš program",
+          "icon": "users",
+          "label": "Zadovoljne dece",
+          "number": "20000"
+        },
+        {
+          "description": "Širom Srbije i regiona",
+          "icon": "location",
+          "label": "Aktivnih lokacija",
+          "number": "150"
+        },
+        {
+          "description": "Deca koja poboljšavaju rezultate",
+          "icon": "chart",
+          "label": "% Uspešnosti",
+          "number": "95"
+        },
+        {
+          "description": "U razvoju metodologije",
+          "icon": "calendar",
+          "label": "Godina iskustva",
+          "number": "15"
+        }
+      ],
+      "successStories": [
+        {
+          "achievement": "Povećao brzinu čitanja sa 120 na 600 reči po minutu",
+          "age": 10,
+          "beforeAfter": {
+            "after": "600 reči/min",
+            "before": "120 reči/min"
+          },
+          "quote": "Sada volim da čitam! Mogu da pročitam celu knjigu za jedan dan.",
+          "studentName": "Marko Petrović"
+        },
+        {
+          "achievement": "Postala najbrža u računanju u svom razredu",
+          "age": 8,
+          "beforeAfter": {
+            "after": "Odličan uspeh",
+            "before": "Mrzela matematiku"
+          },
+          "quote": "Matematika je sada moja omiljena oblast. Računam brže od kalkulatora!",
+          "studentName": "Ana Marković"
+        },
+        {
+          "achievement": "Poboljšao ocene iz 3.5 na 5.0 prosek",
+          "age": 12,
+          "beforeAfter": {
+            "after": "Prosek 5.0",
+            "before": "Prosek 3.5"
+          },
+          "quote": "Učenje je postalo zabavno. Sada razumem sve mnogo lakše.",
+          "studentName": "Stefan Nikolić"
+        }
+      ]
+    },
+    {
+      "_createdAt": "2025-08-04T21:15:48Z",
+      "_id": "homePage",
+      "_rev": "atDdCAAfWCLcotj1z8G3eZ",
+      "_type": "homePage",
+      "_updatedAt": "2025-08-04T21:15:48Z",
+      "differentiators": {
+        "items": [
+          {
+            "_key": "fbf3fa34-31f2-47ba-8310-4059bb2c94f0",
+            "description": "Naša jedinstvena metodologija razvijena je kroz 15 godina rada sa decom i zasnovana je na najnovijim pedagoškim istraživanjima.",
+            "highlight": true,
+            "icon": "academic",
+            "title": "Dokazana metodologija"
+          },
+          {
+            "_key": "a1e55946-e683-49b7-81a4-662e96e2125f",
+            "description": "Od prvog dana dobijate potpunu podršku - obuka, materijali, marketing, kontinuirano usavršavanje.",
+            "highlight": false,
+            "icon": "support",
+            "title": "Kompletna podrška"
+          },
+          {
+            "_key": "91a7bd35-4cba-4f40-8c70-22bef7d4f417",
+            "description": "Prepoznatljiv brend sa odličnom reputacijom koji roditelji traže i preporučuju.",
+            "highlight": false,
+            "icon": "brand",
+            "title": "Brend koji se prodaje sam"
+          },
+          {
+            "_key": "08d47631-fb14-447a-9400-41288bae9e63",
+            "description": "Različiti modeli franšize prilagođeni vašim mogućnostima i lokalnim uslovima.",
+            "highlight": false,
+            "icon": "flexibility",
+            "title": "Fleksibilni modeli"
+          },
+          {
+            "_key": "20a8ce0a-96f4-4e95-8b54-a2a23d5b8e4b",
+            "description": "Prosečan povrat investicije za 12-18 meseci uz kontinuiran rast profita.",
+            "highlight": true,
+            "icon": "profit",
+            "title": "Brza isplativost"
+          },
+          {
+            "_key": "22576459-9d21-408d-8ab4-04c1e8dde3e1",
+            "description": "Garantovana ekskluzivnost na određenoj teritoriji bez konkurencije.",
+            "highlight": false,
+            "icon": "location",
+            "title": "Ekskluzivna teritorija"
+          }
+        ],
+        "sectionTitle": "Zašto baš Srećno učenje?"
+      },
+      "enhancedHero": {
+        "backgroundImage": null,
+        "backgroundType": "pattern",
+        "badge": "Naučno zasnovana metodologija",
+        "ctaPrimary": {
+          "href": "/zakazivanje",
+          "text": "Započnite svoju priču"
+        },
+        "ctaSecondary": {
+          "href": "/fransiza",
+          "text": "Istražite mogućnosti"
+        },
+        "features": [
+          {
+            "icon": "star",
+            "text": "15+ godina iskustva"
+          },
+          {
+            "icon": "users",
+            "text": "10.000+ zadovoljnih učenika"
+          },
+          {
+            "icon": "chart",
+            "text": "ROI do 300% u prve 2 godine"
+          }
+        ],
+        "subtitle": "Srećno učenje - gde se znanje sreće sa radošću. Pridružite se mreži od 50+ uspešnih centara.",
+        "title": "Postanite deo najuspešnije obrazovne franšize u Srbiji"
+      },
+      "franchiseModels": {
+        "models": [
+          {
+            "_key": "1e5eaf9c-a0cc-47ce-a2e0-c4c0968bf72d",
+            "ctaText": "Saznajte više",
+            "features": [
+              "Licenca za 1 lokaciju",
+              "Kompletna obuka (40 sati)",
+              "Početni set materijala",
+              "Marketing podrška",
+              "6 meseci mentorstva",
+              "Pristup online platformi"
+            ],
+            "highlighted": false,
+            "name": "Starter",
+            "price": "15.000€",
+            "subtitle": "Idealno za početnike"
+          },
+          {
+            "_key": "ae1d90cb-a3dd-4a70-887e-bebd4930b405",
+            "ctaText": "Preporučujemo",
+            "features": [
+              "Sve iz Starter paketa",
+              "Proširena teritorija",
+              "Napredna obuka (80 sati)",
+              "Kompletan brending centra",
+              "12 meseci mentorstva",
+              "Marketing kampanje",
+              "Pomoć pri zapošljavanju"
+            ],
+            "highlighted": true,
+            "name": "Professional",
+            "price": "25.000€",
+            "subtitle": "Najpopularniji izbor"
+          },
+          {
+            "_key": "45e17750-29ca-41a3-9ece-b2e64c547943",
+            "ctaText": "Kontaktirajte nas",
+            "features": [
+              "Master franšiza za region",
+              "Pravo otvaranja pod-franšiza",
+              "VIP obuka i sertifikacija",
+              "Kompletno opremljen centar",
+              "Doživotno mentorstvo",
+              "Ekskluzivni marketing",
+              "Garantovan ROI program"
+            ],
+            "highlighted": false,
+            "name": "Premium",
+            "price": "40.000€",
+            "subtitle": "Za ambiciozne poduzetnike"
+          }
+        ],
+        "sectionTitle": "Modeli saradnje prilagođeni vama"
+      },
+      "franchiseSteps": {
+        "sectionTitle": "Vaš put do uspešne franšize",
+        "steps": [
+          {
+            "_key": "05e8270b-ef90-4885-8f05-400e24432af4",
+            "description": "Upoznajte našu metodologiju i koncept. Razgovarajte sa našim timom o vašim ciljevima i mogućnostima.",
+            "duration": "1-2 dana",
+            "icon": "phone",
+            "number": "1",
+            "title": "Inicijalni razgovor"
+          },
+          {
+            "_key": "6dc78a29-0244-49cd-b29a-14d8406dad2a",
+            "description": "Detaljno analiziramo vašu lokaciju, tržište i pravimo biznis plan prilagođen vašim uslovima.",
+            "duration": "1 nedelja",
+            "icon": "chart",
+            "number": "2",
+            "title": "Analiza i planiranje"
+          },
+          {
+            "_key": "27dd8957-eac4-4bc5-879c-44c7421d1042",
+            "description": "Formalizujemo saradnju transparentnim ugovorom koji štiti interese obe strane.",
+            "duration": "2-3 dana",
+            "icon": "document",
+            "number": "3",
+            "title": "Potpisivanje ugovora"
+          },
+          {
+            "_key": "75fd475b-f9ed-4a8d-9d61-3add9c38e538",
+            "description": "Prolazite kroz kompletnu obuku - metodologija, poslovanje, marketing, rad sa decom i roditeljima.",
+            "duration": "2-4 nedelje",
+            "icon": "education",
+            "number": "4",
+            "title": "Obuka i priprema"
+          },
+          {
+            "_key": "5a7ebcc5-1d92-49e3-9506-7ad3e8216cb3",
+            "description": "Uz našu potpunu podršku otvarate svoj centar. Mi smo tu za sve - od opremanja do prve grupe učenika.",
+            "duration": "2-3 nedelje",
+            "icon": "launch",
+            "number": "5",
+            "title": "Otvaranje centra"
+          },
+          {
+            "_key": "56f333d9-6314-4a4f-bc4c-64f2c14b76d0",
+            "description": "Kontinuirana podrška, redovne obuke, novi programi. Rastemo zajedno i gradimo dugoročan uspeh.",
+            "duration": "Kontinuirano",
+            "icon": "chart",
+            "number": "6",
+            "title": "Rast i razvoj"
+          }
+        ]
+      },
+      "homeFAQ": {
+        "faqs": [
+          {
+            "_key": "d9d1c6ba-b3e6-45f1-a221-a47271407d78",
+            "answer": "Nije neophodno imati iskustvo u obrazovanju. Naša obuka pokriva sve aspekte rada. Važnije je da volite rad sa decom i imate preduzetničke ambicije.",
+            "category": null,
+            "question": "Koliko je potrebno iskustva u obrazovanju?"
+          },
+          {
+            "_key": "e9f99f7a-db61-4a96-8d89-4b99963bd81b",
+            "answer": "Prosečan povrat investicije je 12-18 meseci, ali zavisi od lokacije, zalaganja i lokalnog tržišta. Neki partneri ostvare profitabilnost i za 6 meseci.",
+            "category": null,
+            "question": "Koliko brzo mogu očekivati povrat investicije?"
+          },
+          {
+            "_key": "43e02810-b364-4ae7-b1f7-1f6dbfe0a246",
+            "answer": "Da, mnogi naši partneri počinju franšizu kao dodatni posao. Kada biznis poraste, prelaze na puno radno vreme ili zapošljavaju menadžera.",
+            "category": null,
+            "question": "Da li mogu zadržati svoj posao dok pokrećem franšizu?"
+          },
+          {
+            "_key": "5b571692-428e-4b7e-aebc-5cbbf399662b",
+            "answer": "Srećno učenje ima jedinstvenu metodologiju i jak brend. Garantujemo ekskluzivnost na teritoriji, tako da nećete imati direktnu konkurenciju.",
+            "category": null,
+            "question": "Kakva je konkurencija na tržištu?"
+          },
+          {
+            "_key": "cbacb357-1ba5-4c0d-8696-11b26ec00d03",
+            "answer": "Podrška nikad ne prestaje. Imate pristup našem timu, redovne obuke, online resurse i mrežu drugih franšizera za razmenu iskustava.",
+            "category": null,
+            "question": "Šta ako trebam pomoć nakon otvaranja?"
+          }
+        ],
+        "sectionTitle": "Često postavljana pitanja"
+      },
+      "interactiveClassroom": {
+        "ctaText": "Istražite 3D učionicu",
+        "description": "Virtuelna šetnja kroz prostor dizajniran za inspiraciju i učenje",
+        "previewImage": null,
+        "sectionTitle": "Pogledajte kako izgleda naša učionica"
+      },
+      "leadMagnets": {
+        "resources": [
+          {
+            "_key": "430ce55e-1d7b-48d3-8c5a-22c8c5463b98",
+            "ctaText": "Otvori kalkulator",
+            "description": "Izračunajte tačan povrat investicije za vašu lokaciju",
+            "downloadUrl": "/kalkulatori",
+            "icon": "calculator",
+            "title": "ROI Kalkulator franšize",
+            "type": "calculator"
+          },
+          {
+            "_key": "e81cf8f0-541e-472c-9380-aebecebc89d3",
+            "ctaText": "Preuzmi PDF",
+            "description": "Sve o modelima, cenama, procesu i metodologiji (PDF 25 str)",
+            "downloadUrl": "#download-info-paket",
+            "icon": "document",
+            "title": "Kompletan info paket",
+            "type": "document"
+          },
+          {
+            "_key": "6e0f8bec-e089-4b44-a4fd-64eb04c08b38",
+            "ctaText": "Čitaj online",
+            "description": "Detaljan uvid u našu naučno zasnovanu metodologiju učenja",
+            "downloadUrl": "#download-metodologija",
+            "icon": "book",
+            "title": "Priručnik metodologije",
+            "type": "book"
+          },
+          {
+            "_key": "f02bb594-ddfd-48b8-8ede-3f2946be7bfd",
+            "ctaText": "Gledaj video",
+            "description": "15-minutni pregled cele franšizne prilike sa primerima",
+            "downloadUrl": "#watch-prezentacija",
+            "icon": "video",
+            "title": "Video prezentacija",
+            "type": "video"
+          }
+        ],
+        "sectionTitle": "Besplatni resursi za početak"
+      },
+      "newsletterCTA": {
+        "ctaText": "Prijavite se",
+        "description": "Primajte ekskluzivne informacije o franšizi, uspešne priče i savete direktno u inbox.",
+        "incentive": "Besplatan vodič: \"10 koraka do uspešne obrazovne franšize\"",
+        "title": "Budite u toku sa prilikama"
+      },
+      "statistics": [
+        {
+          "_key": "1bd50d1f-deb6-4648-843f-a531854ec726",
+          "color": "primary",
+          "description": "Širom Srbije i regiona",
+          "icon": "location",
+          "label": "Aktivnih franšiza",
+          "number": "50+",
+          "suffix": "centara"
+        },
+        {
+          "_key": "9cad7a7b-2f5c-4e19-8ac3-dc9e1f78da72",
+          "color": "secondary",
+          "description": "Koji su prošli naš program",
+          "icon": "users",
+          "label": "Zadovoljnih učenika",
+          "number": "10.000+",
+          "suffix": "učenika"
+        },
+        {
+          "_key": "b6f55dce-db85-48ab-9e2c-642cc6d1fae8",
+          "color": "accent",
+          "description": "Učenika nastavljaju program",
+          "icon": "chart",
+          "label": "Stopa zadržavanja",
+          "number": "95%",
+          "suffix": "%"
+        },
+        {
+          "_key": "c35c3afc-313a-45e6-8955-a6a994c8bdfb",
+          "color": "success",
+          "description": "U prve 2 godine poslovanja",
+          "icon": "trending",
+          "label": "Prosečan ROI",
+          "number": "300%",
+          "suffix": "ROI"
+        }
+      ],
+      "successStories": {
+        "sectionTitle": "Priče naših partnera",
+        "stories": [
+          {
+            "_key": "89d63f9a-be6a-44ba-8784-99bc9edd4f93",
+            "image": null,
+            "location": "Novi Sad",
+            "metric": {
+              "label": "učenika mesečno",
+              "value": "150+"
+            },
+            "name": "Marija Petrović",
+            "role": "Vlasnica franšize u Novom Sadu",
+            "story": "Posle 10 godina u korporaciji, želela sam promenu. Srećno učenje mi je pružilo priliku da radim ono što volim - rad sa decom, i istovremeno vodim uspešan biznis. Za godinu dana sam povratila investiciju.",
+            "yearStarted": "2021"
+          },
+          {
+            "_key": "52865923-e3bb-41b9-bbfe-36063105190c",
+            "image": null,
+            "location": "Beograd",
+            "metric": {
+              "label": "uspešna centra",
+              "value": "3"
+            },
+            "name": "Milan Jovanović",
+            "role": "Vlasnik 3 franšize",
+            "story": "Počeo sam sa jednim centrom pre 3 godine. Danas imam tri centra i tim od 15 ljudi. Metodologija Srećnog učenja je ključ uspeha - rezultati govore sami za sebe.",
+            "yearStarted": "2020"
+          },
+          {
+            "_key": "76acdf1c-a735-4098-9a84-67fde45202c8",
+            "image": null,
+            "location": "Kragujevac",
+            "metric": {
+              "label": "zadovoljnih roditelja",
+              "value": "98%"
+            },
+            "name": "Ana Stojanović",
+            "role": "Profesorka i franšizer",
+            "story": "Kao nastavnica sa 20 godina iskustva, prepoznala sam vrednost ove metodologije. Nije samo biznis - menjamo živote dece na bolje svaki dan.",
+            "yearStarted": "2022"
+          }
+        ]
+      }
+    }
+  ],
+  "syncTags": [
+    "s1:C9AzAQ"
+  ],
+  "ms": 7
+}

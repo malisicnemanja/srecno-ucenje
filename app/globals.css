@@ -2,31 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ===========================
-   CSS VARIJABLE - MOBILE FIRST
-   =========================== */
+/* === DESIGN SYSTEM VARIABLES === */
 :root {
-  /* Primarne boje - ublažene i harmonične */
-  --color-primary: #10B981;      /* Mekša zelena */
-  --color-primary-light: #34D399;
-  --color-primary-dark: #059669;
+  /* Metodologija boje - BEZ GRADIJENATA */
+  --color-primary: #10B981;    /* Zelena */
+  --color-secondary: #3B82F6;  /* Plava */
+  --color-accent: #F59E0B;     /* Narandžasta */
+  --color-warm: #EF4444;       /* Crvena */
   
-  /* Sekundarne boje */
-  --color-secondary: #3B82F6;    /* Plava */
-  --color-secondary-light: #60A5FA;
-  --color-secondary-dark: #2563EB;
-  
-  /* Accent boje */
-  --color-accent: #F59E0B;       /* Narandžasta */
-  --color-accent-light: #FCD34D;
-  --color-accent-dark: #D97706;
-  
-  /* Warm boje */
-  --color-warm: #EF4444;         /* Crvena */
-  --color-warm-light: #F87171;
-  --color-warm-dark: #DC2626;
-  
-  /* Neutralne boje */
+  /* Neutral palette */
   --color-gray-50: #F9FAFB;
   --color-gray-100: #F3F4F6;
   --color-gray-200: #E5E7EB;
@@ -37,6 +21,168 @@
   --color-gray-700: #374151;
   --color-gray-800: #1F2937;
   --color-gray-900: #111827;
+  
+  /* Spacing sistem */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  
+  /* Border radius - moderni, glatki */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Shadows - suptilne, moderne */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  --shadow-glow: 0 0 20px -5px var(--color-primary);
+  
+  /* Animations */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+  --transition-spring: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* === MODERN ANIMATIONS === */
+
+/* Suptilni floating efekat */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
+  66% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+}
+
+/* Brush underline animacija */
+@keyframes brushStroke {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* Text reveal animacija */
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse za CTA */
+@keyframes subtlePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: var(--shadow-md);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+/* Card hover lift */
+@keyframes cardLift {
+  from {
+    transform: translateY(0);
+    box-shadow: var(--shadow-md);
+  }
+  to {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+/* Fade in animacija */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide in animacija */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale in animacija */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Count up animacija */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Rotate animacija */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulse animacija */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 @layer base {
@@ -48,6 +194,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -60,7 +207,7 @@
   /* Mobile First Typography */
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold leading-tight;
-    text-transform: none; /* Samo prvo slovo veliko */
+    text-transform: none;
   }
 
   h1 {
@@ -92,110 +239,190 @@
     @apply outline-2 outline-offset-2 outline-primary-500 rounded-md;
   }
 
-  /* Selection colors */
+  /* Modern selection */
   ::selection {
-    @apply bg-primary-100 text-primary-900;
+    background: var(--color-primary);
+    color: white;
   }
 }
 
 @layer components {
-  /* Container - Mobile First */
-  .container {
-    @apply w-full px-4 mx-auto;
-    @apply sm:px-6;
-    @apply lg:px-8;
-    @apply max-w-7xl;
+  /* Floating elementi */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
   }
 
-  /* Section Spacing - Mobile First */
-  .section {
-    @apply py-12 md:py-16 lg:py-20;
+  .float-delayed {
+    animation: float 6s ease-in-out 2s infinite;
   }
 
-  /* Cards - BEZ GRADIJENATA */
-  .card {
-    @apply bg-white rounded-lg p-4 md:p-6 lg:p-8;
-    @apply border border-gray-200;
-    @apply shadow-sm hover:shadow-md;
-    @apply transition-all duration-200;
+  /* Text animations */
+  .text-reveal {
+    animation: textReveal 0.8s ease-out forwards;
   }
 
-  .card-interactive {
-    @apply card hover:-translate-y-1 cursor-pointer;
+  .text-reveal-delay {
+    opacity: 0;
+    animation: textReveal 0.8s ease-out 0.3s forwards;
   }
 
-  /* Buttons - Mobile First sa hover animacijama */
-  .btn {
-    @apply inline-flex items-center justify-center;
-    @apply px-4 py-2 md:px-6 md:py-3;
-    @apply text-sm md:text-base;
-    @apply font-medium rounded-lg;
-    @apply border-2 border-transparent;
-    @apply transition-all duration-200 ease-in-out;
-    @apply transform active:scale-95;
-    @apply disabled:opacity-50 disabled:cursor-not-allowed;
-    @apply relative overflow-hidden;
+  /* Interactive elementi */
+  .hover-lift {
+    transition: all var(--transition-base);
   }
 
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* Clean card dizajn */
+  .card-modern {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-lg);
+    transition: all var(--transition-base);
+    border: 1px solid var(--color-gray-100);
+  }
+
+  .card-modern:hover {
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-gray-200);
+    transform: translateY(-2px);
+  }
+
+  /* Moderne dugmad - BEZ GRADIJENATA */
+  .btn-modern {
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .btn-modern::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .btn-modern:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Button varijante */
   .btn-primary {
-    @apply btn bg-primary-500 text-white border-primary-500;
-    @apply hover:bg-white hover:text-primary-500;
-    @apply hover:shadow-lg hover:-translate-y-0.5;
+    @apply btn-modern bg-primary-500 text-white hover:bg-primary-600;
   }
 
   .btn-secondary {
-    @apply btn bg-secondary-500 text-white border-secondary-500;
-    @apply hover:bg-white hover:text-secondary-500;
-    @apply hover:shadow-lg hover:-translate-y-0.5;
+    @apply btn-modern bg-secondary-500 text-white hover:bg-secondary-600;
   }
 
   .btn-accent {
-    @apply btn bg-accent-500 text-white border-accent-500;
-    @apply hover:bg-white hover:text-accent-500;
-    @apply hover:shadow-lg hover:-translate-y-0.5;
+    @apply btn-modern bg-accent-500 text-white hover:bg-accent-600;
   }
 
   .btn-warm {
-    @apply btn bg-warm-500 text-white border-warm-500;
-    @apply hover:bg-white hover:text-warm-500;
-    @apply hover:shadow-lg hover:-translate-y-0.5;
-  }
-
-  .btn-outline {
-    @apply btn bg-white border-current;
+    @apply btn-modern bg-warm-500 text-white hover:bg-warm-600;
   }
 
   .btn-outline-primary {
-    @apply btn-outline text-primary-500 border-primary-500;
-    @apply hover:bg-primary-500 hover:text-white;
-    @apply hover:shadow-lg hover:-translate-y-0.5;
+    @apply btn-modern bg-transparent text-primary-500 border-2 border-primary-500 hover:bg-primary-50;
   }
 
-  .btn-outline-secondary {
-    @apply btn-outline text-secondary-500 border-secondary-500;
-    @apply hover:bg-secondary-500 hover:text-white;
-    @apply hover:shadow-lg hover:-translate-y-0.5;
+  /* Input fields moderni */
+  .input-modern {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    background: white;
   }
 
-  /* Form Elements - Mobile First */
-  .form-input,
-  .form-select,
-  .form-textarea {
-    @apply w-full px-3 py-2 md:px-4 md:py-3;
-    @apply text-sm md:text-base;
-    @apply bg-white border-2 border-gray-300 rounded-lg;
-    @apply focus:border-primary-500 focus:ring-2 focus:ring-primary-100;
-    @apply transition-all duration-200;
+  .input-modern:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
   }
 
-  .form-label {
-    @apply block text-sm md:text-base font-medium text-gray-700 mb-1;
+  .input-modern:hover {
+    border-color: var(--color-gray-300);
   }
 
-  /* Modals - Centered */
-  .modal-backdrop {
-    @apply fixed inset-0 bg-black bg-opacity-50 z-50;
-    @apply flex items-center justify-center p-4;
+  /* Mobile-first grid sistem */
+  .container-modern {
+    width: 100%;
+    padding: 0 var(--space-md);
+    margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    .container-modern {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container-modern {
+      max-width: 768px;
+      padding: 0 var(--space-lg);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-modern {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-modern {
+      max-width: 1280px;
+      padding: 0 var(--space-xl);
+    }
+  }
+
+  /* Card Container */
+  .card-container {
+    @apply flex flex-col gap-4 p-4 md:p-6;
+  }
+
+  /* Hero Components */
+  .hero-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
+  }
+
+  .hero-subtitle {
+    @apply text-lg md:text-xl text-gray-600 leading-relaxed;
+  }
+
+  /* Section Styles */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  /* Grid Layouts */
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  /* Modal */
+  .modal {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50;
   }
 
   .modal-content {
@@ -217,19 +444,7 @@
     @apply h-6 md:h-8 skeleton mb-4 rounded-md;
   }
 
-  /* UKLANJAMO SVE GRADIJENTE */
-  .gradient-primary,
-  .gradient-secondary,
-  .gradient-accent,
-  .gradient-warm,
-  .gradient-soft-primary,
-  .gradient-soft-secondary,
-  .gradient-soft-accent,
-  .gradient-soft-warm {
-    background: transparent !important;
-  }
-
-  /* Zamena za gradijente - flat boje */
+  /* Flat color backgrounds */
   .bg-primary-soft {
     @apply bg-primary-50;
   }
@@ -257,151 +472,81 @@
     @apply hidden md:block;
   }
 
-  /* Animacije */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes scaleIn {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  /* Animacija za brojače */
-  @keyframes countUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* SVG animacije */
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.05);
-      opacity: 0.8;
-    }
-  }
-
-  .animate-fadeIn {
-    animation: fadeIn 0.5s ease-out;
-  }
-
-  .animate-slideIn {
-    animation: slideIn 0.5s ease-out;
-  }
-
-  .animate-scaleIn {
-    animation: scaleIn 0.5s ease-out;
-  }
-
-  .animate-countUp {
-    animation: countUp 0.8s ease-out;
-  }
-
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  .animate-rotate {
-    animation: rotate 20s linear infinite;
-  }
-
-  .animate-pulse-slow {
-    animation: pulse 3s ease-in-out infinite;
-  }
-
-  /* Animation delays */
-  .animation-delay-100 {
-    animation-delay: 100ms;
-  }
-
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-
-  .animation-delay-300 {
-    animation-delay: 300ms;
-  }
-
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
-
-  .animation-delay-500 {
-    animation-delay: 500ms;
-  }
-
-  /* Shadows bez gradijenata */
-  .shadow-soft {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  }
-
-  .shadow-card {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  }
-
-  .shadow-hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  }
-
-  /* Text styles */
+  /* Typography utilities */
   .text-balance {
     text-wrap: balance;
   }
 
-  /* Number formatting */
-  .number-format::after {
-    content: attr(data-formatted);
+  /* Spacing utilities */
+  .section-x-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+
+  /* Aspect ratios */
+  .aspect-card {
+    @apply aspect-[3/4];
+  }
+
+  .aspect-hero {
+    @apply aspect-[16/9] md:aspect-[21/9];
+  }
+
+  /* Z-index utilities */
+  .z-dropdown {
+    z-index: 10;
+  }
+
+  .z-sticky {
+    z-index: 20;
+  }
+
+  .z-modal {
+    z-index: 50;
+  }
+
+  .z-tooltip {
+    z-index: 60;
+  }
+
+  /* Text gradients (subtle) */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Icon sizing */
+  .icon-sm {
+    @apply w-4 h-4;
+  }
+
+  .icon-md {
+    @apply w-6 h-6;
+  }
+
+  .icon-lg {
+    @apply w-8 h-8;
+  }
+
+  .icon-xl {
+    @apply w-12 h-12;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  .animate-count-up {
+    animation: countUp 0.8s ease-out;
   }
 }

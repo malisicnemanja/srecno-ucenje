@@ -1,4 +1,6 @@
 import { StructureBuilder, StructureResolverContext } from 'sanity/structure'
+import { BookIcon, StarIcon, UserIcon, DocumentsIcon, FolderIcon } from '@sanity/icons'
+import { MapIcon } from 'lucide-react'
 
 export const deskStructure = (S: StructureBuilder, context: StructureResolverContext) =>
   S.list()
@@ -17,9 +19,6 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
               S.listItem()
                 .title('Obaveštenja')
                 .child(S.documentTypeList('notificationBar').title('Obaveštenja')),
-              S.listItem()
-                .title('Statistike')
-                .child(S.documentTypeList('statistic').title('Statistike')),
               S.listItem()
                 .title('Priče uspeha')
                 .child(S.documentTypeList('successStory').title('Priče uspeha')),
@@ -44,9 +43,32 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
               S.listItem()
                 .title('Programi')
                 .child(S.documentTypeList('program').title('Programi')),
+            ])
+        ),
+
+      // O autorki
+      S.listItem()
+        .title('O autorki')
+        .icon(UserIcon)
+        .child(
+          S.list()
+            .title('O autorki')
+            .items([
               S.listItem()
-                .title('O autorki')
+                .title('Biografija')
                 .child(S.document().schemaType('author').documentId('author')),
+              S.listItem()
+                .title('Stranica o autorki')
+                .child(S.documentTypeList('aboutAuthor').title('O autorki')),
+              S.listItem()
+                .title('Timeline')
+                .child(S.documentTypeList('authorTimeline').title('Timeline')),
+              S.listItem()
+                .title('Dostignuća')
+                .child(S.documentTypeList('authorAchievements').title('Dostignuća')),
+              S.listItem()
+                .title('Publikacije')
+                .child(S.documentTypeList('publications').title('Publikacije')),
             ])
         ),
 
@@ -85,6 +107,12 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
                         .child(S.documentTypeList('quizResult').title('Rezultati kvizova')),
                     ])
                 ),
+              S.listItem()
+                .title('Koraci franšize')
+                .child(S.documentTypeList('franchiseSteps').title('Koraci franšize')),
+              S.listItem()
+                .title('Programi obuke')
+                .child(S.documentTypeList('trainingProgram').title('Programi obuke')),
             ])
         ),
 
@@ -96,11 +124,18 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
             .title('Učionica i resursi')
             .items([
               S.listItem()
+                .title('3D Virtuelna učionica')
+                .child(S.document().schemaType('virtualClassroom').documentId('virtualClassroom')),
+              S.listItem()
                 .title('Resursi za preuzimanje')
                 .child(S.documentTypeList('resource').title('Resursi')),
               S.listItem()
                 .title('Često postavljana pitanja')
                 .child(S.documentTypeList('faq').title('FAQ')),
+              S.listItem()
+                .title('FAQ Kategorije')
+                .icon(FolderIcon)
+                .child(S.documentTypeList('faqCategory').title('FAQ Kategorije')),
             ])
         ),
 
@@ -119,6 +154,35 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
                 .child(S.documentTypeList('blogCategory').title('Kategorije')),
             ])
         ),
+
+      // Knjige
+      S.listItem()
+        .title('Knjige')
+        .icon(BookIcon)
+        .child(
+          S.list()
+            .title('Knjige')
+            .items([
+              S.listItem()
+                .title('Sve knjige')
+                .child(S.documentTypeList('book').title('Knjige')),
+              S.listItem()
+                .title('Landing stranica')
+                .child(S.document().schemaType('booksLanding').documentId('booksLanding')),
+            ])
+        ),
+
+      // Priče o uspehu
+      S.listItem()
+        .title('Priče o uspehu')
+        .icon(StarIcon)
+        .child(S.documentTypeList('successStory').title('Priče o uspehu')),
+      
+      // Putovanja i iskustva
+      S.listItem()
+        .title('Putovanja')
+        .icon(MapIcon)
+        .child(S.documentTypeList('experience').title('Putovanja i iskustva')),
 
       // Kontakt i konsultacije
       S.listItem()
@@ -146,11 +210,23 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
       // Lokacije
       S.listItem()
         .title('Lokacije')
+        .icon(MapIcon)
         .child(
-          S.document()
-            .schemaType('page')
-            .documentId('locations-page')
-            .title('Lokacije stranica')
+          S.list()
+            .title('Lokacije')
+            .items([
+              S.listItem()
+                .title('Stranica lokacija')
+                .child(
+                  S.document()
+                    .schemaType('page')
+                    .documentId('locations-page')
+                    .title('Lokacije stranica')
+                ),
+              S.listItem()
+                .title('Podaci o lokacijama')
+                .child(S.documentTypeList('locationData').title('Podaci o lokacijama')),
+            ])
         ),
 
       S.divider(),
@@ -171,13 +247,31 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
             ])
         ),
 
-      // Ostale stranice
+      // Stranice
       S.listItem()
-        .title('Ostale stranice')
+        .title('Stranice')
+        .icon(DocumentsIcon)
         .child(
-          S.documentTypeList('page')
+          S.list()
             .title('Stranice')
-            .filter('_type == "page" && !(_id in ["locations-page", "drafts.locations-page"])')
+            .items([
+              S.listItem()
+                .title('Opšte stranice')
+                .child(
+                  S.documentTypeList('page')
+                    .title('Stranice')
+                    .filter('_type == "page" && !(_id in ["locations-page", "drafts.locations-page"])')
+                ),
+              S.listItem()
+                .title('Booking stranica')
+                .child(S.documentTypeList('bookingPage').title('Booking stranica')),
+              S.listItem()
+                .title('Legal stranice')
+                .child(S.documentTypeList('legalPage').title('Legal stranice')),
+              S.listItem()
+                .title('Error stranice')
+                .child(S.documentTypeList('errorPage').title('Error stranice')),
+            ])
         ),
 
       // Skriveni tipovi dokumenta koji se ne prikazuju u glavnoj navigaciji
@@ -187,10 +281,13 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
             'homePage',
             'methodology',
             'author',
+            'aboutAuthor',
+            'authorTimeline',
+            'authorAchievements',
+            'publications',
             'program',
             'successStory',
             'testimonial',
-            'statistic',
             'notificationBar',
             'calculatorSettings',
             'calculatorResult',
@@ -198,14 +295,26 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
             'quizResult',
             'resource',
             'faq',
+            'faqCategory',
             'blogPost',
             'blogCategory',
+            'book',
+            'booksLanding',
+            'experience',
             'booking',
+            'bookingPage',
             'newsletterSubscriber',
             'teamMember',
             'siteSettings',
+            'navigation',
             'navigationSettings',
             'page',
+            'locationData',
+            'franchiseSteps',
+            'trainingProgram',
+            'legalPage',
+            'errorPage',
+            'virtualClassroom',
           ].includes(listItem.getId() ?? '')
       ),
     ])
