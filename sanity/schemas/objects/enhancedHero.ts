@@ -6,6 +6,21 @@ const enhancedHero = defineType({
   type: 'object',
   fields: [
     defineField({
+      name: 'layout',
+      title: 'Hero Layout',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Left Text / Right Image', value: 'textLeft' },
+          { title: 'Left Image / Right Text', value: 'textRight' },
+          { title: 'Centered Text', value: 'centered' },
+          { title: 'Full Width Background', value: 'fullWidth' },
+          { title: 'Split Screen', value: 'split' }
+        ],
+      },
+      initialValue: 'centered',
+    }),
+    defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
@@ -24,6 +39,61 @@ const enhancedHero = defineType({
       description: 'Different text variations that will animate in the highlighted part',
       of: [{ type: 'string' }],
       validation: (Rule) => Rule.max(5),
+    }),
+    defineField({
+      name: 'brushStrokeWords',
+      title: 'Words to Underline with Brush Stroke',
+      type: 'array',
+      description: 'Specific words from the title that should have brush stroke underlines',
+      of: [{ type: 'string' }],
+      validation: (Rule) => Rule.max(3),
+    }),
+    defineField({
+      name: 'animationSettings',
+      title: 'Animation Settings',
+      type: 'object',
+      fields: [
+        {
+          name: 'enableBrushStrokes',
+          title: 'Enable Brush Stroke Animations',
+          type: 'boolean',
+          initialValue: true,
+        },
+        {
+          name: 'enableTextRotation',
+          title: 'Enable Text Rotation',
+          type: 'boolean',
+          initialValue: true,
+        },
+        {
+          name: 'brushStrokeColor',
+          title: 'Brush Stroke Color',
+          type: 'string',
+          options: {
+            list: [
+              { title: 'Brand Yellow (#FDD835)', value: '#FDD835' },
+              { title: 'Brand Green (#10B981)', value: '#10B981' },
+              { title: 'Brand Blue (#3B82F6)', value: '#3B82F6' },
+              { title: 'Brand Orange (#F59E0B)', value: '#F59E0B' },
+            ],
+          },
+          initialValue: '#FDD835',
+        },
+        {
+          name: 'rotationSpeed',
+          title: 'Text Rotation Speed (ms)',
+          type: 'number',
+          initialValue: 3000,
+          validation: (Rule) => Rule.min(1000).max(10000),
+        },
+        {
+          name: 'brushStrokeDelay',
+          title: 'Brush Stroke Animation Delay (ms)',
+          type: 'number',
+          initialValue: 1000,
+          validation: (Rule) => Rule.min(0).max(5000),
+        },
+      ],
     }),
     defineField({
       name: 'subtitle',
@@ -207,6 +277,64 @@ const enhancedHero = defineType({
         hotspot: true,
       },
       hidden: ({ parent }) => parent?.backgroundType !== 'image',
+    }),
+    defineField({
+      name: 'heroImage',
+      title: 'Hero Image',
+      type: 'image',
+      description: 'Main hero image (for layouts with images)',
+      options: {
+        hotspot: true,
+      },
+      hidden: ({ parent }) => ['centered', 'fullWidth'].includes(parent?.layout),
+    }),
+    defineField({
+      name: 'svgBadge',
+      title: 'SVG Badge Element',
+      type: 'object',
+      fields: [
+        {
+          name: 'show',
+          title: 'Show Badge',
+          type: 'boolean',
+          initialValue: false,
+        },
+        {
+          name: 'text',
+          title: 'Badge Text',
+          type: 'string',
+          hidden: ({ parent }) => !parent?.show,
+        },
+        {
+          name: 'color',
+          title: 'Badge Color',
+          type: 'string',
+          options: {
+            list: [
+              { title: 'Green', value: 'green' },
+              { title: 'Blue', value: 'blue' },
+              { title: 'Yellow', value: 'yellow' },
+              { title: 'Red', value: 'red' },
+            ],
+          },
+          initialValue: 'green',
+          hidden: ({ parent }) => !parent?.show,
+        },
+        {
+          name: 'position',
+          title: 'Badge Position',
+          type: 'string',
+          options: {
+            list: [
+              { title: 'Above Title', value: 'above' },
+              { title: 'Top Right', value: 'topRight' },
+              { title: 'Top Left', value: 'topLeft' },
+            ],
+          },
+          initialValue: 'above',
+          hidden: ({ parent }) => !parent?.show,
+        },
+      ],
     }),
     defineField({
       name: 'videoBackground',

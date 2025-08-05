@@ -251,9 +251,9 @@ export default function CalculatorsPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-primary-50/30 to-secondary-50/20 min-h-[90vh] flex items-center">
+      <section className="relative overflow-hidden bg-primary-50 min-h-[90vh] flex items-center">
         {/* Floating animated elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Science Atom - top right */}
@@ -437,7 +437,7 @@ export default function CalculatorsPage() {
       </section>
 
       {/* Calculator Tabs */}
-      <section id="calculators" className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section id="calculators" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
           <motion.div
@@ -466,7 +466,7 @@ export default function CalculatorsPage() {
                 onClick={() => setActiveCalculator(calc.id)}
                 className={`group relative p-8 rounded-2xl transition-all duration-500 transform hover:scale-105 ${
                   activeCalculator === calc.id
-                    ? 'bg-gradient-to-br from-primary-500 to-primary-600 text-white shadow-2xl shadow-primary-500/25'
+                    ? 'bg-primary-500 text-white shadow-2xl shadow-primary-500/25'
                     : 'bg-white text-gray-700 shadow-xl hover:shadow-2xl border border-gray-100'
                 }`}
               >
@@ -474,7 +474,7 @@ export default function CalculatorsPage() {
                 <div className={`absolute top-0 right-0 w-20 h-20 rounded-bl-2xl transition-all duration-300 ${
                   activeCalculator === calc.id 
                     ? 'bg-white/10' 
-                    : 'bg-gradient-to-br from-primary-50 to-secondary-50'
+                    : 'bg-primary-50'
                 }`} />
                 
                 {/* Icon with enhanced styling */}
@@ -482,7 +482,7 @@ export default function CalculatorsPage() {
                   className={`relative z-10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-all duration-300 ${
                     activeCalculator === calc.id
                       ? 'bg-white/20 text-white'
-                      : 'bg-gradient-to-br from-primary-100 to-secondary-100 text-primary-600'
+                      : 'bg-primary-100 text-primary-600'
                   }`}
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
@@ -511,21 +511,21 @@ export default function CalculatorsPage() {
                     animate={{ scale: 1 }}
                     className="absolute -bottom-3 left-1/2 transform -translate-x-1/2"
                   >
-                    <div className="w-6 h-6 bg-gradient-to-br from-primary-500 to-primary-600 rotate-45 shadow-lg" />
+                    <div className="w-6 h-6 bg-primary-500 rotate-45 shadow-lg" />
                   </motion.div>
                 )}
 
                 {/* Hover glow effect */}
                 <div className={`absolute inset-0 rounded-2xl transition-opacity duration-300 ${
                   activeCalculator === calc.id 
-                    ? 'opacity-100 bg-gradient-to-br from-primary-400/20 to-primary-600/20' 
-                    : 'opacity-0 group-hover:opacity-100 bg-gradient-to-br from-primary-50/50 to-secondary-50/50'
+                    ? 'opacity-100 bg-primary-400/20' 
+                    : 'opacity-0 group-hover:opacity-100 bg-primary-50/50'
                 }`} />
 
                 {/* Selection glow */}
                 {activeCalculator === calc.id && (
                   <motion.div
-                    className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 opacity-20 blur-xl scale-110"
+                    className="absolute inset-0 rounded-2xl bg-primary-400 opacity-20 blur-xl scale-110"
                     animate={{ 
                       opacity: [0.2, 0.3, 0.2],
                       scale: [1.1, 1.15, 1.1]
@@ -547,7 +547,7 @@ export default function CalculatorsPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -590,7 +590,7 @@ export default function CalculatorsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-600 via-secondary-600 to-accent-600 text-white relative overflow-hidden">
+      <section className="py-20 bg-night-800 text-white relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full filter blur-3xl" />

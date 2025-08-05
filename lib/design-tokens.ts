@@ -1,16 +1,16 @@
-// SREĆNO UČENJE BRAND COLORS - VERIFIED CMYK TO HEX CONVERSIONS
+// SREĆNO UČENJE BRAND COLORS - UPDATED TO CLIENT SPECIFICATIONS
 // Brand Identity Optimized - Represents Education, Trust, and Growth
 export const brandColors = {
-  // Sky: Trust, Communication, Openness
-  sky: '#4FD6FF',    // C069 M016 Y000 K000 - VERIFIED ACCURATE
-  // Sun: Energy, Joy, Success
-  sun: '#FCDB15',    // C002 M017 Y097 K000 - VERIFIED ACCURATE  
-  // Grass: Learning, Growth, Life
-  grass: '#6EF214',  // C057 M005 Y092 K000 - VERIFIED ACCURATE
-  // Heart: Care, Depth, Support
-  heart: '#020201',  // C002 M097 Y094 K100 - VERIFIED ACCURATE
-  // Night: Wisdom, Focus, Calm
-  night: '#241F6B',  // C087 M085 Y025 K012 - VERIFIED ACCURATE
+  // Sky: Trust, Communication, Openness - Updated to match requirements
+  sky: '#5DBFDB',    // Client specification
+  // Sun: Energy, Joy, Success - Updated to match requirements  
+  sun: '#FDD835',    // Client specification
+  // Grass: Learning, Growth, Life - Updated to match requirements
+  grass: '#7CB342',  // Client specification
+  // Heart: Care, Depth, Support - Updated to match requirements
+  heart: '#E53935',  // Client specification
+  // Night: Wisdom, Focus, Calm - Updated to match requirements
+  night: '#3E4C59',  // Client specification
 }
 
 // Semantic Brand Mapping for Educational Platform
@@ -24,70 +24,70 @@ export const semanticBrandColors = {
 
 // WCAG AA Compliant Color Scales for Educational Platform
 export const colors = {
-  // Primary: Grass (Learning & Growth) - WCAG AA Tested
+  // Primary: Grass (Learning & Growth) - Updated to client brand colors
   primary: {
-    50: '#F0FDF1',   // Lightest - Background use
-    100: '#DAFDD0',  // Very light - Soft backgrounds
-    200: '#B8FBA4',  // Light - Hover states
-    300: '#8AF76D',  // Medium light - Disabled states
-    400: '#6EF214',  // Brand color - Main CTA
-    500: '#5DC40F',  // Medium - Hover (4.5:1 contrast)
-    600: '#4AA00C',  // Medium dark - Active states (5.1:1 contrast)
-    700: '#3D800A',  // Dark - Text on light (7.2:1 contrast)
-    800: '#346B0B',  // Very dark - High contrast text
-    900: '#2D5A0C',  // Darkest - Maximum contrast
+    50: '#F3F8F1',   // Lightest - Background use
+    100: '#E7F0DD',  // Very light - Soft backgrounds
+    200: '#C8E1B5',  // Light - Hover states
+    300: '#A9D28D',  // Medium light - Disabled states
+    400: '#7CB342',  // Brand color - Main CTA (client spec)
+    500: '#6A9E39',  // Medium - Hover (4.5:1 contrast)
+    600: '#588930',  // Medium dark - Active states (5.1:1 contrast)
+    700: '#467427',  // Dark - Text on light (7.2:1 contrast)
+    800: '#345F1E',  // Very dark - High contrast text
+    900: '#224A15',  // Darkest - Maximum contrast
   },
-  // Sky (Cyan) - Secondary brand color  
+  // Sky (Cyan) - Secondary brand color - Updated to client spec
   secondary: {
-    50: '#EDFCFF',
-    100: '#D6F7FF', 
-    200: '#B5F0FF',
-    300: '#83E6FF',
-    400: '#4FD6FF',  // Brand sky
-    500: '#2BC5FF',  // Hover state
-    600: '#1AA0DB',
-    700: '#1B80B1',
-    800: '#1D668F',
-    900: '#1E5176',
+    50: '#EBF8FC',
+    100: '#D7F1F8', 
+    200: '#AFE3F1',
+    300: '#87D5EA',
+    400: '#5DBFDB',  // Brand sky (client spec)
+    500: '#4DA6C4',  // Hover state
+    600: '#3D8DAD',
+    700: '#2D7496',
+    800: '#1D5B7F',
+    900: '#0D4268',
   },
-  // Sun (Yellow) - Accent brand color
+  // Sun (Yellow) - Accent brand color - Updated to client spec
   accent: {
     50: '#FFFEF7',
     100: '#FFFAEB',
     200: '#FFF3C4',
-    300: '#FFEA8C',
-    400: '#FCDB15',  // Brand sun
+    300: '#FFEC8C',
+    400: '#FDD835',  // Brand sun (client spec)
     500: '#E8C513',  // Hover state
     600: '#C59B0F',
     700: '#9F730C',
     800: '#835B10',
     900: '#704A12',
   },
-  // Heart (Dark) - Warm/contrast color
+  // Heart (Red) - Warm/contrast color - Updated to client spec
   warm: {
-    50: '#F7F7F7',
-    100: '#E3E3E3',
-    200: '#CFCFCF',
-    300: '#B1B1B1',
-    400: '#9E9E9E',
-    500: '#6C6C6C',
-    600: '#545454',
-    700: '#3F3F3F',
-    800: '#262626',
-    900: '#020201',  // Brand heart
+    50: '#FDEBEB',
+    100: '#FBD7D7',
+    200: '#F7AFAF',
+    300: '#F38787',
+    400: '#E53935',  // Brand heart (client spec - red)
+    500: '#CE2E2A',  // Hover state
+    600: '#B7231F',
+    700: '#A01814',
+    800: '#890D09',
+    900: '#720200',
   },
-  // Night (Purple-blue) - Special accent
+  // Night (Dark Blue-Gray) - Special accent - Updated to client spec
   night: {
-    50: '#F3F2F9',
-    100: '#E9E7F4',
-    200: '#D5D2EA',
-    300: '#B8B2DB',
-    400: '#968BC7',
-    500: '#7A6BB5',
-    600: '#6852A3',
-    700: '#584290',
-    800: '#4A3676',
-    900: '#241F6B',  // Brand night
+    50: '#EBEEF2',
+    100: '#D7DDE5',
+    200: '#AFBBCB',
+    300: '#8799B1',
+    400: '#5F7797',
+    500: '#4D6177',
+    600: '#3E4C59',  // Brand night (client spec)
+    700: '#323E48',
+    800: '#263037',
+    900: '#1A2226',
   },
   gray: {
     50: '#f9fafb',

@@ -7,46 +7,46 @@
 /* VERIFIED CMYK TO HEX CONVERSIONS - Brand Identity Optimized */
 :root {
   /* === CORE BRAND COLORS === */
-  /* Verified accurate CMYK to HEX conversions */
-  --brand-sky: #4FD6FF;        /* Sky: C069 M016 Y000 K000 - Trust, Growth */
-  --brand-sun: #FCDB15;        /* Sun: C002 M017 Y097 K000 - Energy, Joy */
-  --brand-grass: #6EF214;      /* Grass: C057 M005 Y092 K000 - Learning, Life */
-  --brand-heart: #020201;      /* Heart: C002 M097 Y094 K100 - Depth, Care */
-  --brand-night: #241F6B;      /* Night: C087 M085 Y025 K012 - Wisdom, Calm */
+  /* Updated to client specifications */
+  --brand-sky: #5DBFDB;        /* Sky: Trust, Communication, Openness */
+  --brand-sun: #FDD835;        /* Sun: Energy, Joy, Success */
+  --brand-grass: #7CB342;      /* Grass: Learning, Growth, Life */
+  --brand-heart: #E53935;      /* Heart: Care, Support, Passion */
+  --brand-night: #3E4C59;      /* Night: Wisdom, Focus, Calm */
   
   /* === SEMANTIC COLOR MAPPING === */
-  /* Primary: Grass (Education & Growth) */
+  /* Primary: Grass (Education & Growth) - Updated */
   --color-primary: var(--brand-grass);
-  --color-primary-50: #F0FDF1;
-  --color-primary-100: #DAFDD0;
-  --color-primary-200: #B8FBA4;
-  --color-primary-300: #8AF76D;
+  --color-primary-50: #F3F8F1;
+  --color-primary-100: #E7F0DD;
+  --color-primary-200: #C8E1B5;
+  --color-primary-300: #A9D28D;
   --color-primary-400: var(--brand-grass);
-  --color-primary-500: #5DC40F;
-  --color-primary-600: #4AA00C;
-  --color-primary-700: #3D800A;
-  --color-primary-800: #346B0B;
-  --color-primary-900: #2D5A0C;
+  --color-primary-500: #6A9E39;
+  --color-primary-600: #588930;
+  --color-primary-700: #467427;
+  --color-primary-800: #345F1E;
+  --color-primary-900: #224A15;
   
-  /* Secondary: Sky (Trust & Communication) */
+  /* Secondary: Sky (Trust & Communication) - Updated */
   --color-secondary: var(--brand-sky);
-  --color-secondary-50: #EDFCFF;
-  --color-secondary-100: #D6F7FF;
-  --color-secondary-200: #B5F0FF;
-  --color-secondary-300: #83E6FF;
+  --color-secondary-50: #EBF8FC;
+  --color-secondary-100: #D7F1F8;
+  --color-secondary-200: #AFE3F1;
+  --color-secondary-300: #87D5EA;
   --color-secondary-400: var(--brand-sky);
-  --color-secondary-500: #2BC5FF;
-  --color-secondary-600: #1AA0DB;
-  --color-secondary-700: #1B80B1;
-  --color-secondary-800: #1D668F;
-  --color-secondary-900: #1E5176;
+  --color-secondary-500: #4DA6C4;
+  --color-secondary-600: #3D8DAD;
+  --color-secondary-700: #2D7496;
+  --color-secondary-800: #1D5B7F;
+  --color-secondary-900: #0D4268;
   
-  /* Accent: Sun (Energy & Success) */
+  /* Accent: Sun (Energy & Success) - Updated */
   --color-accent: var(--brand-sun);
   --color-accent-50: #FFFEF7;
   --color-accent-100: #FFFAEB;
   --color-accent-200: #FFF3C4;
-  --color-accent-300: #FFEA8C;
+  --color-accent-300: #FFEC8C;
   --color-accent-400: var(--brand-sun);
   --color-accent-500: #E8C513;
   --color-accent-600: #C59B0F;
@@ -54,31 +54,31 @@
   --color-accent-800: #835B10;
   --color-accent-900: #704A12;
   
-  /* Warm: Heart (Care & Support) */
+  /* Warm: Heart (Care & Support) - Updated */
   --color-warm: var(--brand-heart);
-  --color-warm-50: #F7F7F7;
-  --color-warm-100: #E3E3E3;
-  --color-warm-200: #CFCFCF;
-  --color-warm-300: #B1B1B1;
-  --color-warm-400: #9E9E9E;
-  --color-warm-500: #6C6C6C;
-  --color-warm-600: #545454;
-  --color-warm-700: #3F3F3F;
-  --color-warm-800: #262626;
-  --color-warm-900: var(--brand-heart);
+  --color-warm-50: #FDEBEB;
+  --color-warm-100: #FBD7D7;
+  --color-warm-200: #F7AFAF;
+  --color-warm-300: #F38787;
+  --color-warm-400: var(--brand-heart);
+  --color-warm-500: #CE2E2A;
+  --color-warm-600: #B7231F;
+  --color-warm-700: #A01814;
+  --color-warm-800: #890D09;
+  --color-warm-900: #720200;
   
-  /* Special: Night (Wisdom & Focus) */
+  /* Special: Night (Wisdom & Focus) - Updated */
   --color-night: var(--brand-night);
-  --color-night-50: #F3F2F9;
-  --color-night-100: #E9E7F4;
-  --color-night-200: #D5D2EA;
-  --color-night-300: #B8B2DB;
-  --color-night-400: #968BC7;
-  --color-night-500: #7A6BB5;
-  --color-night-600: #6852A3;
-  --color-night-700: #584290;
-  --color-night-800: #4A3676;
-  --color-night-900: var(--brand-night);
+  --color-night-50: #EBEEF2;
+  --color-night-100: #D7DDE5;
+  --color-night-200: #AFBBCB;
+  --color-night-300: #8799B1;
+  --color-night-400: #5F7797;
+  --color-night-500: #4D6177;
+  --color-night-600: var(--brand-night);
+  --color-night-700: #323E48;
+  --color-night-800: #263037;
+  --color-night-900: #1A2226;
   
   /* === FUNCTIONAL COLORS (WCAG AA Compliant) === */
   --color-success: var(--color-primary-600);     /* 4.5:1 contrast on white */
@@ -464,95 +464,140 @@
   /* === BRAND BUTTON SYSTEM === */
   /* Mobile-first with WCAG AA compliant touch targets */
   
-  /* Primary Buttons - Learning & Growth (Grass) */
+  /* Primary Buttons - Learning & Growth (Grass) - Enhanced */
   .btn-primary {
     @apply btn-modern text-white font-medium;
     background-color: var(--color-primary);
     min-height: 44px; /* WCAG touch target */
-    box-shadow: 0 2px 4px rgba(110, 242, 20, 0.2);
+    box-shadow: 0 2px 4px rgba(124, 179, 66, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-primary:hover {
     background-color: var(--color-primary-500);
-    box-shadow: 0 4px 8px rgba(110, 242, 20, 0.3);
-    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(124, 179, 66, 0.35);
+    transform: translateY(-2px) scale(1.02);
   }
   .btn-primary:active {
     background-color: var(--color-primary-600);
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    box-shadow: 0 2px 4px rgba(124, 179, 66, 0.2);
+  }
+  .btn-primary:focus-visible {
+    outline: 3px solid var(--color-primary-200);
+    outline-offset: 2px;
   }
 
-  /* Secondary Buttons - Trust & Communication (Sky) */
+  /* Secondary Buttons - Trust & Communication (Sky) - Enhanced */
   .btn-secondary {
     @apply btn-modern text-white font-medium;
     background-color: var(--color-secondary);
     min-height: 44px;
-    box-shadow: 0 2px 4px rgba(79, 214, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(93, 191, 219, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-secondary:hover {
     background-color: var(--color-secondary-500);
-    box-shadow: 0 4px 8px rgba(79, 214, 255, 0.3);
-    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(93, 191, 219, 0.35);
+    transform: translateY(-2px) scale(1.02);
   }
   .btn-secondary:active {
     background-color: var(--color-secondary-600);
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    box-shadow: 0 2px 4px rgba(93, 191, 219, 0.2);
+  }
+  .btn-secondary:focus-visible {
+    outline: 3px solid var(--color-secondary-200);
+    outline-offset: 2px;
   }
 
-  /* Accent Buttons - Energy & Success (Sun) */
+  /* Accent Buttons - Energy & Success (Sun) - Enhanced */
   .btn-accent {
     @apply btn-modern font-medium;
     background-color: var(--color-accent);
-    color: var(--color-night-800); /* Better contrast than pure black */
+    color: var(--color-night-800); /* Better contrast */
     min-height: 44px;
-    box-shadow: 0 2px 4px rgba(252, 219, 21, 0.2);
+    box-shadow: 0 2px 4px rgba(253, 216, 53, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-accent:hover {
     background-color: var(--color-accent-500);
-    box-shadow: 0 4px 8px rgba(252, 219, 21, 0.3);
-    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(253, 216, 53, 0.35);
+    transform: translateY(-2px) scale(1.02);
   }
   .btn-accent:active {
     background-color: var(--color-accent-600);
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+    box-shadow: 0 2px 4px rgba(253, 216, 53, 0.2);
+  }
+  .btn-accent:focus-visible {
+    outline: 3px solid var(--color-accent-200);
+    outline-offset: 2px;
   }
 
-  /* Warm Buttons - Care & Support (Heart) */
+  /* Warm Buttons - Care & Support (Heart) - Enhanced */
   .btn-warm {
     @apply btn-modern text-white font-medium;
     background-color: var(--color-warm);
     min-height: 44px;
-    box-shadow: 0 2px 4px rgba(2, 2, 1, 0.3);
+    box-shadow: 0 2px 4px rgba(229, 57, 53, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-warm:hover {
-    background-color: var(--color-warm-800);
-    box-shadow: 0 4px 8px rgba(2, 2, 1, 0.4);
-    transform: translateY(-1px);
+    background-color: var(--color-warm-500);
+    box-shadow: 0 8px 16px rgba(229, 57, 53, 0.35);
+    transform: translateY(-2px) scale(1.02);
+  }
+  .btn-warm:active {
+    background-color: var(--color-warm-600);
+    transform: translateY(0) scale(1);
+    box-shadow: 0 2px 4px rgba(229, 57, 53, 0.2);
+  }
+  .btn-warm:focus-visible {
+    outline: 3px solid var(--color-warm-200);
+    outline-offset: 2px;
   }
 
-  /* Night Buttons - Wisdom & Focus */
+  /* Night Buttons - Wisdom & Focus - Enhanced */
   .btn-night {
     @apply btn-modern text-white font-medium;
     background-color: var(--color-night);
     min-height: 44px;
-    box-shadow: 0 2px 4px rgba(36, 31, 107, 0.3);
+    box-shadow: 0 2px 4px rgba(62, 76, 89, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-night:hover {
+    background-color: var(--color-night-700);
+    box-shadow: 0 8px 16px rgba(62, 76, 89, 0.35);
+    transform: translateY(-2px) scale(1.02);
+  }
+  .btn-night:active {
     background-color: var(--color-night-800);
-    box-shadow: 0 4px 8px rgba(36, 31, 107, 0.4);
-    transform: translateY(-1px);
+    transform: translateY(0) scale(1);
+    box-shadow: 0 2px 4px rgba(62, 76, 89, 0.2);
+  }
+  .btn-night:focus-visible {
+    outline: 3px solid var(--color-night-200);
+    outline-offset: 2px;
   }
 
-  /* Outline Button Variants */
+  /* Outline Button Variants - Enhanced */
   .btn-outline-primary {
     @apply btn-modern bg-transparent border-2 font-medium;
-    color: var(--color-primary-700); /* Better contrast */
+    color: var(--color-primary-700);
     border-color: var(--color-primary);
     min-height: 44px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-outline-primary:hover {
-    background-color: var(--color-primary-50);
-    border-color: var(--color-primary-500);
-    color: var(--color-primary-800);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(124, 179, 66, 0.25);
+  }
+  .btn-outline-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(124, 179, 66, 0.15);
   }
   
   .btn-outline-secondary {
@@ -560,39 +605,337 @@
     color: var(--color-secondary-700);
     border-color: var(--color-secondary);
     min-height: 44px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-outline-secondary:hover {
-    background-color: var(--color-secondary-50);
-    border-color: var(--color-secondary-500);
-    color: var(--color-secondary-800);
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(93, 191, 219, 0.25);
+  }
+  .btn-outline-secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(93, 191, 219, 0.15);
+  }
+  
+  .btn-outline-accent {
+    @apply btn-modern bg-transparent border-2 font-medium;
+    color: var(--color-accent-700);
+    border-color: var(--color-accent);
+    min-height: 44px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-outline-accent:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-night-800);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(253, 216, 53, 0.25);
+  }
+  .btn-outline-accent:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(253, 216, 53, 0.15);
+  }
+  
+  .btn-outline-warm {
+    @apply btn-modern bg-transparent border-2 font-medium;
+    color: var(--color-warm-700);
+    border-color: var(--color-warm);
+    min-height: 44px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-outline-warm:hover {
+    background-color: var(--color-warm);
+    border-color: var(--color-warm);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(229, 57, 53, 0.25);
+  }
+  .btn-outline-warm:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(229, 57, 53, 0.15);
   }
 
-  /* Input fields moderni */
+  /* Modern Input System - Enhanced */
   .input-modern {
     width: 100%;
     padding: var(--space-sm) var(--space-md);
     border: 2px solid var(--color-gray-200);
     border-radius: var(--radius-md);
-    transition: all var(--transition-base);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: white;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-gray-800);
   }
 
   .input-modern:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.15);
+    transform: translateY(-1px);
   }
 
   .input-modern:hover {
     border-color: var(--color-gray-300);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
 
-  /* Mobile-first (320px+) grid system */
+  .input-modern::placeholder {
+    color: var(--color-gray-400);
+    transition: color 0.3s ease;
+  }
+
+  .input-modern:focus::placeholder {
+    color: var(--color-gray-300);
+  }
+
+  /* Floating Label Input */
+  .input-floating {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-floating input,
+  .input-floating textarea,
+  .input-floating select {
+    width: 100%;
+    padding: 1rem 0.75rem 0.5rem;
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    background: white;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--color-gray-800);
+  }
+
+  .input-floating label {
+    position: absolute;
+    left: 0.75rem;
+    top: 1rem;
+    font-size: 1rem;
+    color: var(--color-gray-400);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: white;
+    padding: 0 0.25rem;
+  }
+
+  .input-floating input:focus,
+  .input-floating textarea:focus,
+  .input-floating select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.15);
+  }
+
+  .input-floating input:focus + label,
+  .input-floating input:not(:placeholder-shown) + label,
+  .input-floating textarea:focus + label,
+  .input-floating textarea:not(:placeholder-shown) + label,
+  .input-floating select:focus + label,
+  .input-floating select:not([value=""]) + label {
+    top: -0.5rem;
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  /* Modern Select Dropdown */
+  .select-modern {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .select-modern select {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    background: white;
+    font-size: 1rem;
+    color: var(--color-gray-800);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+  }
+
+  .select-modern select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.15);
+  }
+
+  .select-modern select:hover {
+    border-color: var(--color-gray-300);
+  }
+
+  /* Modern Checkbox */
+  .checkbox-modern {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .checkbox-modern input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkbox-modern .checkmark {
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid var(--color-gray-300);
+    border-radius: var(--radius-sm);
+    background: white;
+    margin-right: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .checkbox-modern input:checked + .checkmark {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .checkbox-modern .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 0.25rem;
+    top: 0.125rem;
+    width: 0.25rem;
+    height: 0.5rem;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .checkbox-modern input:checked + .checkmark:after {
+    display: block;
+  }
+
+  .checkbox-modern:hover .checkmark {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.1);
+  }
+
+  /* Modern Radio Button */
+  .radio-modern {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .radio-modern input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .radio-modern .radiomark {
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid var(--color-gray-300);
+    border-radius: 50%;
+    background: white;
+    margin-right: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .radio-modern input:checked + .radiomark {
+    border-color: var(--color-primary);
+  }
+
+  .radio-modern .radiomark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--color-primary);
+    transform: translate(-50%, -50%);
+  }
+
+  .radio-modern input:checked + .radiomark:after {
+    display: block;
+  }
+
+  .radio-modern:hover .radiomark {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.1);
+  }
+
+  /* Date Picker Modern */
+  .datepicker-modern {
+    position: relative;
+  }
+
+  .datepicker-modern input[type="date"] {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    background: white;
+    font-size: 1rem;
+    color: var(--color-gray-800);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .datepicker-modern input[type="date"]:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.15);
+  }
+
+  .datepicker-modern input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+
+  /* Enhanced Container System - Mobile-first (320px+) */
   .container-modern {
     width: 100%;
     padding: 0 1rem; /* 16px on smallest screens */
     margin: 0 auto;
     min-width: 320px;
+  }
+  
+  /* Container variants for different content types */
+  .container-narrow {
+    width: 100%;
+    max-width: 42rem; /* 672px */
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  
+  .container-wide {
+    width: 100%;
+    max-width: 90rem; /* 1440px */
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  
+  .container-full {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
   }
 
   /* Progressive enhancement - min-width only */
@@ -739,12 +1082,12 @@
   
   .lesson-card.completed {
     border-left-color: var(--color-success);
-    background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-success-light) 100%);
+    background: var(--color-primary-50);
   }
   
   .lesson-card.in-progress {
     border-left-color: var(--color-accent);
-    background: linear-gradient(135deg, var(--color-accent-50) 0%, var(--color-accent-100) 100%);
+    background: var(--color-accent-50);
   }
 }
 

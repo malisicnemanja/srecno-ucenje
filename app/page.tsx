@@ -1,6 +1,7 @@
 import { PartnershipIcon, TrendingUpIcon } from '@/components/icons'
 import { homePageQuery } from '@/lib/sanity.queries'
 import { sanityFetch } from '@/lib/sanity.client'
+import FlexibleHeroSection from '@/components/features/cms/FlexibleHeroSection'
 
 export default async function HomePage() {
   // Fetch data from Sanity
@@ -9,12 +10,39 @@ export default async function HomePage() {
   // Fallback data if Sanity is empty
   const fallbackData = {
     hero: {
+      layout: 'centered',
       title: "Otvori vrata svojoj učionici iz snova",
       subtitle: "Postanite deo mreže koja je već inspirisala 20.000+ dece da uče srcem kroz metodologiju Srećnog učenja",
-      buttons: [
-        { text: "Zakaži 30-min poziv", link: "/kontakt", variant: "primary" },
-        { text: "Preuzmi info-paket", link: "/kako-se-pridruziti", variant: "outline" }
-      ]
+      titleVariants: ["snova", "budućnosti", "maštanja", "inspiracije"],
+      brushStrokeWords: ["vrata", "učionici", "snova"],
+      animationSettings: {
+        enableBrushStrokes: true,
+        enableTextRotation: true,
+        brushStrokeColor: '#FDD835',
+        rotationSpeed: 3000,
+        brushStrokeDelay: 1000
+      },
+      svgBadge: {
+        show: true,
+        text: "Proveren pristup",
+        color: "green",
+        position: "above"
+      },
+      primaryCta: {
+        text: "Zakaži 30-min poziv",
+        href: "/kontakt"
+      },
+      secondaryCta: {
+        text: "Preuzmi info-paket",
+        href: "/kako-se-pridruziti"
+      },
+      features: [
+        { icon: "✓", text: "20.000+ dece u 10 zemalja" },
+        { icon: "✓", text: "Kompletna podrška i obuke" },
+        { icon: "✓", text: "Dokazana uspešnost" }
+      ],
+      backgroundType: 'pattern',
+      backgroundPattern: 'dots'
     },
     features: [
       { icon: "✓", title: "Testiran model", description: "20.000+ dece u 10 zemalja" },
@@ -27,28 +55,10 @@ export default async function HomePage() {
   const pageData = data || fallbackData
   return (
     <>
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-primary-50">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            {pageData.hero?.title || fallbackData.hero.title}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            {pageData.hero?.subtitle || fallbackData.hero.subtitle}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {(pageData.hero?.buttons || fallbackData.hero.buttons).map((button: any, i: number) => (
-              <a 
-                key={i}
-                href={button.link} 
-                className={button.variant === 'primary' ? 'btn-primary' : 'btn-outline-primary'}
-              >
-                {button.text}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Flexible Hero Section */}
+      <FlexibleHeroSection 
+        data={pageData.hero || fallbackData.hero}
+      />
 
       {/* Benefits Grid */}
       <section className="py-20 bg-white">

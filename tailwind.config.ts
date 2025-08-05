@@ -77,6 +77,13 @@ const config: Config = {
         'float': 'float 6s ease-in-out infinite',
         'float-delayed': 'float 6s ease-in-out 2s infinite',
         'brush-stroke': 'brushStroke 1.5s ease-out forwards',
+        'gentle-float': 'gentleFloat 6s ease-in-out infinite',
+        'float-bounce': 'floatBounce 4s ease-in-out infinite',
+        'letter-float': 'letterFloat 8s ease-in-out infinite',
+        'typewriter': 'typewriter 2s steps(40, end)',
+        'button-invert': 'buttonInvert 0.3s ease-in-out',
+        'celebration': 'celebration 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+        'skeleton': 'skeleton 1.5s ease-in-out infinite',
         'text-reveal': 'textReveal 0.8s ease-out forwards',
         'text-reveal-delay': 'textReveal 0.8s ease-out 0.3s forwards',
         'subtle-pulse': 'subtlePulse 2s ease-in-out infinite',
@@ -126,6 +133,41 @@ const config: Config = {
         cardLift: {
           from: { transform: 'translateY(0)', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' },
           to: { transform: 'translateY(-4px)', boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1)' },
+        },
+        gentleFloat: {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '25%': { transform: 'translateY(-8px) rotate(-0.5deg)' },
+          '50%': { transform: 'translateY(-4px) rotate(0deg)' },
+          '75%': { transform: 'translateY(-12px) rotate(0.5deg)' },
+        },
+        floatBounce: {
+          '0%, 100%': { transform: 'translateY(0) scale(1)' },
+          '50%': { transform: 'translateY(-15px) scale(1.05)' },
+        },
+        letterFloat: {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '33%': { transform: 'translateY(-6px) rotate(-1deg)' },
+          '66%': { transform: 'translateY(-3px) rotate(1deg)' },
+        },
+        typewriter: {
+          from: { width: '0' },
+          to: { width: '100%' },
+        },
+        buttonInvert: {
+          '0%': { backgroundColor: 'var(--bg-color)', color: 'var(--text-color)', transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.05)' },
+          '100%': { backgroundColor: 'var(--text-color)', color: 'var(--bg-color)', transform: 'scale(1)' },
+        },
+        celebration: {
+          '0%': { transform: 'scale(1) rotate(0deg)' },
+          '25%': { transform: 'scale(1.1) rotate(3deg)' },
+          '50%': { transform: 'scale(1.2) rotate(-3deg)' },
+          '75%': { transform: 'scale(1.1) rotate(2deg)' },
+          '100%': { transform: 'scale(1) rotate(0deg)' },
+        },
+        skeleton: {
+          '0%': { backgroundPosition: '-200px 0' },
+          '100%': { backgroundPosition: 'calc(200px + 100%) 0' },
         },
       },
       boxShadow: {

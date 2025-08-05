@@ -174,7 +174,7 @@ export default function StickyHeader() {
                   {siteSettings?.siteName || 'Srećno učenje'}
                 </span>
                 <span className="text-xs lg:text-sm text-gray-500 font-medium -mt-1">
-                  Centar za brzo čitanje i mentalnu aritmetiku
+                  Metodologija
                 </span>
               </div>
             </Link>
@@ -357,7 +357,7 @@ export default function StickyHeader() {
                       onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                       className={`w-full flex items-center justify-between py-3 px-4 rounded-lg text-base font-medium transition-all duration-200 ${
                         item.dropdown.some(sub => pathname === sub.href)
-                          ? 'bg-green-50 text-green-600'
+                          ? 'bg-primary-50 text-primary-600'
                           : 'text-gray-700 hover:bg-gray-50'
                       }`}
                     >
@@ -388,7 +388,7 @@ export default function StickyHeader() {
                           href={subItem.href}
                           className={`block py-2 px-4 rounded-lg text-sm transition-all duration-200 ${
                             pathname === subItem.href
-                              ? 'bg-green-50 text-green-600'
+                              ? 'bg-primary-50 text-primary-600'
                               : 'text-gray-600 hover:bg-gray-50'
                           }`}
                         >
@@ -402,7 +402,7 @@ export default function StickyHeader() {
                     href={item.href}
                     className={`block py-3 px-4 rounded-lg text-base font-medium transition-all duration-200 ${
                       pathname === item.href
-                        ? 'bg-green-50 text-green-600'
+                        ? 'bg-primary-50 text-primary-600'
                         : 'text-gray-700 hover:bg-gray-50'
                     }`}
                   >
@@ -417,7 +417,7 @@ export default function StickyHeader() {
               href={ctaButton.href}
               className={`mt-6 block w-full text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
                 ctaButton.style === 'primary' 
-                  ? 'bg-green-600 hover:bg-green-700'
+                  ? 'bg-primary-600 hover:bg-primary-700'
                   : ctaButton.style === 'secondary'
                   ? 'bg-blue-600 hover:bg-blue-700'
                   : 'bg-yellow-600 hover:bg-yellow-700'

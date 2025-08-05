@@ -7,6 +7,10 @@
 // Core animation components
 export { default as ScrollTrigger, FadeInOnScroll, SlideUpOnScroll, ScaleInOnScroll, StaggeredList, useScrollTrigger } from './ScrollTrigger'
 
+// Brush stroke and text animations
+export { BrushUnderline, BrushStrokeText } from './BrushUnderline'
+export { RotatingText, TypewriterText } from './RotatingText'
+
 // Educational-specific animations
 export {
   AnimatedHeroText,

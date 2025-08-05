@@ -179,7 +179,7 @@ export default function QuizzesPage() {
                   </div>
 
                   <motion.div
-                    className="mt-6 flex items-center text-green-600 font-semibold group-hover:text-green-700"
+                    className="mt-6 flex items-center text-primary-600 font-semibold group-hover:text-primary-700"
                     whileHover={{ x: 5 }}
                   >
                     Započni kviz
@@ -207,8 +207,8 @@ export default function QuizzesPage() {
               transition={{ duration: 0.5 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -277,7 +277,7 @@ export default function QuizzesPage() {
           </p>
           <button
             onClick={() => setSelectedQuiz('readiness')}
-            className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105"
+            className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105"
           >
             Započni kviz spremnosti
           </button>

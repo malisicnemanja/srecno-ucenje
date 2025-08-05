@@ -76,8 +76,14 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-gradient-to-br from-night-900 via-night-800 to-night-900 text-white py-12 sm:py-16">
-      <div className="max-w-7xl mx-auto px-4">
+    <footer className="bg-night-800 text-white py-12 sm:py-16 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary-400 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-48 h-48 bg-secondary-400 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-accent-400 rounded-full filter blur-2xl animate-pulse" style={{ animationDelay: '2s' }} />
+      </div>
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Dynamic columns from CMS */}
           {footerColumns.map((column: any, index: number) => (
@@ -88,7 +94,7 @@ export default function Footer() {
               <ul className="space-y-2 text-gray-400">
                 {column.links?.map((link: any, linkIndex: number) => (
                   <li key={linkIndex}>
-                    <Link href={link.link} className="hover:text-white transition-colors">
+                    <Link href={link.link} className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">
                       {link.label}
                     </Link>
                   </li>
@@ -115,10 +121,10 @@ export default function Footer() {
               </div>
             </div>
             <div className="space-y-2 text-gray-400 text-sm">
-              <Link href="/legal/privatnost" className="block hover:text-white transition-colors">
+              <Link href="/legal/privatnost" className="block hover:text-white transition-all duration-300 hover:translate-x-1">
                 Politika privatnosti
               </Link>
-              <Link href="/legal/uslovi-koriscenja" className="block hover:text-white transition-colors">
+              <Link href="/legal/uslovi-koriscenja" className="block hover:text-white transition-all duration-300 hover:translate-x-1">
                 Uslovi korišćenja
               </Link>
             </div>
@@ -128,8 +134,8 @@ export default function Footer() {
         {/* Logo & Copyright */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mr-3">
-              <span className="text-white font-bold text-sm">SU</span>
+            <div className="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center mr-3 transition-all duration-300 hover:scale-110 hover:bg-primary-400">
+              <span className="text-white font-bold text-sm">S</span>
             </div>
             <span className="text-xl font-bold">{siteSettings?.siteName || 'Srećno učenje'}</span>
           </div>

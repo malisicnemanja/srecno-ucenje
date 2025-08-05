@@ -29,6 +29,14 @@ export default defineType({
       group: 'general',
     }),
     defineField({
+      name: 'siteSubtitle',
+      title: 'Podnaslov Sajta',
+      type: 'string',
+      placeholder: 'Metodologija',
+      description: 'Kratak podnaslov koji se prikazuje u header-u',
+      group: 'general',
+    }),
+    defineField({
       name: 'logo',
       title: 'Logo',
       type: 'image',
