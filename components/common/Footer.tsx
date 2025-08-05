@@ -67,16 +67,16 @@ export default function Footer() {
 
   const getHeaderColor = (colorAccent: string) => {
     const colorClasses = {
-      primary: 'text-green-400',
-      secondary: 'text-blue-400', 
-      accent: 'text-yellow-400',
-      warm: 'text-red-400'
+      primary: 'text-grass-400',
+      secondary: 'text-sky-400', 
+      accent: 'text-sun-400',
+      warm: 'text-heart-400'
     }
     return colorClasses[colorAccent as keyof typeof colorClasses] || 'text-white'
   }
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16">
+    <footer className="bg-gradient-to-br from-night-900 via-night-800 to-night-900 text-white py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Dynamic columns from CMS */}

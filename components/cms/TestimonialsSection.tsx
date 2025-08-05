@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
 
   if (isLoading) {
     return (
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {[1, 2, 3].map((i) => (
           <div key={i} className="bg-gray-100 rounded-lg p-6 animate-pulse">
             <div className="h-20 bg-gray-300 rounded mb-4"></div>
@@ -32,24 +32,24 @@ export default function TestimonialsSection() {
   const items = testimonials || []
 
   return (
-    <section className="py-16 bg-blue-50">
+    <section className="py-12 sm:py-16 bg-gradient-to-b from-sky-50 to-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-night-900">
           Šta Kažu Naši Klijenti
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {items.map((testimonial) => (
-            <div key={testimonial._id} className="bg-white rounded-lg shadow-lg p-6">
-              <div className="flex text-yellow-400 mb-4">
+            <div key={testimonial._id} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex text-sun-400 mb-4">
                 {[...Array(testimonial.rating || 5)].map((_, i) => (
-                  <span key={i}>★</span>
+                  <span key={i} className="text-lg sm:text-xl">★</span>
                 ))}
               </div>
-              <p className="text-gray-700 mb-4 italic">"{testimonial.content}"</p>
-              <div className="border-t pt-4">
-                <p className="font-semibold">{testimonial.name}</p>
+              <p className="text-night-700 mb-4 italic text-sm sm:text-base">"{testimonial.content}"</p>
+              <div className="border-t border-sky-100 pt-4">
+                <p className="font-semibold text-night-900">{testimonial.name}</p>
                 {testimonial.role && (
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <p className="text-sm text-night-600">{testimonial.role}</p>
                 )}
               </div>
             </div>
