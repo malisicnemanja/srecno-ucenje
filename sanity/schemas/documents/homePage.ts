@@ -92,6 +92,67 @@ const homePage = defineType({
           title: 'Featured Video URL',
           type: 'url',
         },
+        {
+          name: 'stories',
+          title: 'Success Stories',
+          type: 'array',
+          of: [{
+            type: 'object',
+            fields: [
+              {
+                name: 'name',
+                title: 'Name',
+                type: 'string',
+                validation: Rule => Rule.required()
+              },
+              {
+                name: 'role',
+                title: 'Role',
+                type: 'string'
+              },
+              {
+                name: 'location',
+                title: 'Location',
+                type: 'string'
+              },
+              {
+                name: 'story',
+                title: 'Story',
+                type: 'text'
+              },
+              {
+                name: 'yearStarted',
+                title: 'Year Started',
+                type: 'string'
+              },
+              {
+                name: 'metric',
+                title: 'Key Metric',
+                type: 'object',
+                fields: [
+                  {
+                    name: 'value',
+                    title: 'Value',
+                    type: 'string'
+                  },
+                  {
+                    name: 'label',
+                    title: 'Label',
+                    type: 'string'
+                  }
+                ]
+              },
+              {
+                name: 'image',
+                title: 'Image',
+                type: 'image',
+                options: {
+                  hotspot: true
+                }
+              }
+            ]
+          }]
+        },
       ],
     }),
     defineField({
