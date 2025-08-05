@@ -223,7 +223,7 @@ export default function BlogPostContent({ post, relatedPosts }: BlogPostContentP
                       {relatedPost.excerpt}
                     </p>
                     <a
-                      href={`/blog/${relatedPost.slug.current}`}
+                      href={`/blog/${relatedPost.slug?.current || 'no-slug'}`}
                       className="inline-flex items-center text-purple-600 font-medium hover:text-purple-700 transition-colors"
                     >
                       Pročitajte više

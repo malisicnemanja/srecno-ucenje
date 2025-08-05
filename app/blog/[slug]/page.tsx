@@ -80,13 +80,17 @@ export default async function BlogPostPage({ params }: Props) {
                 Blog
               </Link>
               <span>•</span>
-              <Link 
-                href={`/blog/kategorija/${post.category.slug.current}`}
-                className="hover:text-white transition-colors"
-              >
-                {post.category.name}
-              </Link>
-              <span>•</span>
+              {post.category?.slug?.current && (
+                <>
+                  <Link 
+                    href={`/blog/kategorija/${post.category.slug?.current || 'no-slug'}`}
+                    className="hover:text-white transition-colors"
+                  >
+                    {post.category.title || post.category.name}
+                  </Link>
+                  <span>•</span>
+                </>
+              )}
               <span className="text-white/60">{post.title}</span>
             </nav>
             
@@ -262,7 +266,7 @@ export default async function BlogPostPage({ params }: Props) {
                   return (
                     <Link
                       key={relatedPost._id}
-                      href={`/blog/${relatedPost.slug.current}`}
+                      href={`/blog/${relatedPost.slug?.current || 'no-slug'}`}
                       className="group"
                     >
                       <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:transform group-hover:scale-105">
@@ -336,15 +340,17 @@ export default async function BlogPostPage({ params }: Props) {
                 </PulseButton>
               </Link>
               
-              <Link href={`/blog/kategorija/${post.category?.slug?.current || ''}`}>
-                <PulseButton 
-                  variant="secondary"
-                  size="lg"
-                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-gray-900"
-                >
-                  Više iz kategorije
-                </PulseButton>
-              </Link>
+              {post.category?.slug?.current && (
+                <Link href={`/blog/kategorija/${post.category.slug.current}`}>
+                  <PulseButton 
+                    variant="secondary"
+                    size="lg"
+                    className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-gray-900"
+                  >
+                    Više iz kategorije
+                  </PulseButton>
+                </Link>
+              )}
             </div>
           </div>
         </div>

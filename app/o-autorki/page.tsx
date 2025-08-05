@@ -648,7 +648,7 @@ export default async function AboutAuthorPage() {
                 {data.featuredBooks.map((book, index) => (
                   <Link
                     key={book._id}
-                    href={`/knjige/${book.slug.current}`}
+                    href={`/knjige/${book.slug?.current || 'no-slug'}`}
                     className="group"
                   >
                     <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group-hover:transform group-hover:scale-105 border border-gray-100">

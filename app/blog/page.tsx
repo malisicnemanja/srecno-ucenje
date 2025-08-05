@@ -58,7 +58,7 @@ export default async function BlogPage() {
                   return (
                     <Link
                       key={category._id}
-                      href={`/blog/kategorija/${category.slug.current}`}
+                      href={`/blog/kategorija/${category.slug?.current || 'no-slug'}`}
                       className={`px-4 py-2 rounded-full ${theme.bg} ${theme.text} font-medium hover:scale-105 transition-transform`}
                     >
                       {category.name}
@@ -156,7 +156,7 @@ export default async function BlogPage() {
                       <span>{featuredPost.readingTime} min čitanja</span>
                     </div>
                     
-                    <Link href={`/blog/${featuredPost.slug.current}`}>
+                    <Link href={`/blog/${featuredPost.slug?.current || 'no-slug'}`}>
                       <PulseButton 
                         variant="primary"
                         size="lg"
@@ -192,7 +192,7 @@ export default async function BlogPage() {
                   .map((post) => (
                     <Link
                       key={post._id}
-                      href={`/blog/${post.slug.current}`}
+                      href={`/blog/${post.slug?.current || 'no-slug'}`}
                       className="group"
                     >
                       <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:transform group-hover:scale-105">

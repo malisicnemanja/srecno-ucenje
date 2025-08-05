@@ -107,7 +107,7 @@ export default function ExperiencesClient({ experiences, featuredExperiences }: 
                       </div>
                     </div>
 
-                    <Link href={`/iskustva/${featuredExperience.slug.current}`}>
+                    <Link href={`/iskustva/${featuredExperience.slug?.current || 'no-slug'}`}>
                       <PulseButton 
                         variant="primary"
                         size="lg"
@@ -139,7 +139,7 @@ export default function ExperiencesClient({ experiences, featuredExperiences }: 
             {experiences.map((experience) => (
               <Link
                 key={experience._id}
-                href={`/iskustva/${experience.slug.current}`}
+                href={`/iskustva/${experience.slug?.current || 'no-slug'}`}
                 className="group"
               >
                 <article className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">

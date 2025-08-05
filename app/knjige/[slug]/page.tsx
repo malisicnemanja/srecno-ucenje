@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { BookOpeningAnimation, FloatingLetters, AnimatedTitle, PulseButton } from '@/components/animations'
 import { getBookBySlug, getAllBooks, type Book } from '@/sanity/queries/books'
 import { PortableText } from '@portabletext/react'
+import BookCTAButtons from './BookCTAButtons'
 
 const portableTextComponents = {
   block: {
@@ -141,35 +142,7 @@ export default async function BookPage({ params }: Props) {
                 {book.heroText}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <PulseButton 
-                  variant="accent"
-                  size="lg"
-                  intensity="medium"
-                  className="bg-white text-gray-900 hover:bg-gray-100"
-                  onClick={() => {
-                    const aboutSection = document.getElementById('about-book')
-                    aboutSection?.scrollIntoView({ behavior: 'smooth' })
-                  }}
-                >
-                  Saznajte više
-                </PulseButton>
-                
-                {book.purchaseLinks && book.purchaseLinks.length > 0 && (
-                  <PulseButton 
-                    variant="secondary"
-                    size="lg"
-                    intensity="subtle"
-                    className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-gray-900"
-                    onClick={() => {
-                      const purchaseSection = document.getElementById('purchase')
-                      purchaseSection?.scrollIntoView({ behavior: 'smooth' })
-                    }}
-                  >
-                    Kupite knjigu
-                  </PulseButton>
-                )}
-              </div>
+              <BookCTAButtons hasPurchaseLinks={!!(book.purchaseLinks && book.purchaseLinks.length > 0)} />
             </div>
             
             {/* Desni deo - ilustracija */}

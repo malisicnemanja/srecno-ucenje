@@ -21,7 +21,7 @@ export function BookButtons({ book }: { book: Book }) {
   return (
     <div className="flex flex-col sm:flex-row gap-4">
       <Link 
-        href={`/knjige/${book.slug}`}
+        href={`/knjige/${book.slug || 'no-slug'}`}
         className="group relative px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 w-full sm:w-auto text-center overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300"></div>
@@ -31,7 +31,7 @@ export function BookButtons({ book }: { book: Book }) {
       </Link>
       
       <Link 
-        href={`/knjige/${book.slug}#order`}
+        href={`/knjige/${book.slug || 'no-slug'}#order`}
         className="group relative px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 w-full sm:w-auto text-center overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 transition-all duration-300"></div>

@@ -84,7 +84,7 @@ export default function ProgramsList() {
             </div>
           </div>
           <Link
-            href={`/programi/${program.slug.current}`}
+            href={`/programi/${program.slug?.current || 'no-slug'}`}
             className="mt-4 inline-block text-blue-600 hover:text-blue-700"
           >
             Saznajte više →

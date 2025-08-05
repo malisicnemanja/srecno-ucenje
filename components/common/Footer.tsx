@@ -94,7 +94,7 @@ export default function Footer() {
               <ul className="space-y-2 text-gray-400">
                 {column.links?.map((link: any, linkIndex: number) => (
                   <li key={linkIndex}>
-                    <Link href={link.link} className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">
+                    <Link href={link.link || '#'} className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">
                       {link.label}
                     </Link>
                   </li>

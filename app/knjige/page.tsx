@@ -346,8 +346,8 @@ export default async function BooksLandingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {books && books.length > 0 ? books.map((book) => (
               <Link 
-                key={book.slug.current}
-                href={`/knjige/${book.slug.current}`}
+                key={book.slug?.current || book._id}
+                href={`/knjige/${book.slug?.current || 'no-slug'}`}
                 className="group"
               >
                 <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:transform group-hover:scale-105">
@@ -404,7 +404,7 @@ export default async function BooksLandingPage() {
               {/* Leva strana - tekst */}
               <div className="space-y-8">
                 <h2 className="text-3xl lg:text-5xl font-bold text-primary-700">
-                  {landingData.seriesTitle}
+                  {landingData?.seriesTitle || 'Serijal knjiga'}
                 </h2>
                 <div className="prose prose-xl text-gray-700 leading-relaxed">
                   <p>
@@ -414,7 +414,7 @@ export default async function BooksLandingPage() {
                 
                 {/* Vrednosti serijala */}
                 <div className="grid grid-cols-2 gap-6">
-                  {landingData?.seriesValues?.map((value, index) => (
+                  {landingData?.seriesValues && landingData.seriesValues.map((value, index) => (
                     <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50">
                       <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
                         index === 0 ? 'bg-accent-400' :
@@ -498,7 +498,7 @@ export default async function BooksLandingPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             <div className="space-y-8">
               <h2 className="text-3xl lg:text-5xl font-bold text-secondary-700">
-                {landingData.authorSection.title}
+                {landingData?.authorSection?.title || 'O autorki'}
               </h2>
               <div className="prose prose-xl text-gray-700 leading-relaxed">
                 <p>
@@ -506,7 +506,7 @@ export default async function BooksLandingPage() {
                 </p>
               </div>
               
-              <AuthorButton linkToAbout={landingData.authorSection.linkToAbout} />
+              <AuthorButton linkToAbout={landingData?.authorSection?.linkToAbout || '/o-autorki'} />
             </div>
             
             <div className="relative">
@@ -550,15 +550,15 @@ export default async function BooksLandingPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8 leading-tight">
-              {landingData.ctaSection.title}
+              {landingData?.ctaSection?.title || 'Započnite čarobno putovanje kroz godišnja doba'}
             </h2>
             <p className="text-xl lg:text-2xl text-white/95 mb-10 leading-relaxed">
-              {landingData.ctaSection.description}
+              {landingData?.ctaSection?.description || 'Poklonite svom detetu jedinstveno obrazovno iskustvo koje spaja zabavu, učenje i razvoj kreativnosti'}
             </p>
             
             <CTAButtons 
-              primaryButton={landingData.ctaSection.primaryButton}
-              secondaryButton={landingData.ctaSection.secondaryButton}
+              primaryButton={landingData?.ctaSection?.primaryButton || { text: 'Pogledajte knjige', link: '#knjige' }}
+              secondaryButton={landingData?.ctaSection?.secondaryButton || { text: 'Kontaktirajte nas', link: '/kontakt' }}
             />
           </div>
         </div>

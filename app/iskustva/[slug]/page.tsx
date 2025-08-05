@@ -350,7 +350,7 @@ export default async function ExperiencePage({ params }: Props) {
                 {relatedExperiences.map((relatedExperience) => (
                   <Link
                     key={relatedExperience._id}
-                    href={`/iskustva/${relatedExperience.slug.current}`}
+                    href={`/iskustva/${relatedExperience.slug?.current || 'no-slug'}`}
                     className="group"
                   >
                     <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:transform group-hover:scale-105">
@@ -413,23 +413,25 @@ export default async function ExperiencePage({ params }: Props) {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <PulseButton 
-                variant="accent"
-                size="lg"
-                className="bg-white text-gray-900 hover:bg-gray-100"
-                onClick={() => window.location.href = '/iskustva'}
-              >
-                Sva iskustva
-              </PulseButton>
+              <Link href="/iskustva">
+                <PulseButton 
+                  variant="accent"
+                  size="lg"
+                  className="bg-white text-gray-900 hover:bg-gray-100"
+                >
+                  Sva iskustva
+                </PulseButton>
+              </Link>
               
-              <PulseButton 
-                variant="secondary"
-                size="lg"
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-gray-900"
-                onClick={() => window.location.href = '/kontakt'}
-              >
-                Podelite svoje iskustvo
-              </PulseButton>
+              <Link href="/kontakt">
+                <PulseButton 
+                  variant="secondary"
+                  size="lg"
+                  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-gray-900"
+                >
+                  Podelite svoje iskustvo
+                </PulseButton>
+              </Link>
             </div>
           </div>
         </div>

@@ -68,7 +68,7 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
           )}
         </div>
         <Link
-          href={`/blog/${post.slug.current}`}
+          href={`/blog/${post.slug?.current || 'no-slug'}`}
           className="text-blue-600 font-medium hover:text-blue-700"
         >
           Pročitajte više →
