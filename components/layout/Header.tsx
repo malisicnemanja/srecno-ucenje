@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useSiteSettings } from '@/contexts/SiteSettingsContext'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -10,6 +10,16 @@ export default function Header() {
   const { siteSettings, navigation, isLoading } = useSiteSettings()
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  
+  // Handle scroll for sticky header effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   
   // Default navigation data
   const defaultNavigation = {
@@ -36,32 +46,42 @@ export default function Header() {
   const getButtonClasses = (style: string) => {
     switch (style) {
       case 'secondary':
-        return 'bg-secondary-600 text-white px-4 py-2 rounded-lg hover:bg-secondary-700'
+        return 'bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700'
       case 'accent':
-        return 'bg-accent-600 text-white px-4 py-2 rounded-lg hover:bg-accent-700'
+        return 'bg-sun-600 text-white px-4 py-2 rounded-lg hover:bg-sun-700'
       default:
-        return 'bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700'
+        return 'bg-grass-600 text-white px-4 py-2 rounded-lg hover:bg-grass-700'
     }
   }
 
   return (
-    <header className="fixed top-0 w-full bg-white shadow-sm z-50">
+    <header className={`sticky top-0 w-full z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+        : 'bg-white shadow-sm'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="flex items-center justify-between h-16">
+        <nav className={`flex items-center justify-between transition-all duration-300 ${
+          scrolled ? 'h-14' : 'h-16'
+        }`}>
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             {settings.logo ? (
               <img 
                 src={settings.logo} 
                 alt={settings.siteName} 
-                className="h-12 w-auto"
+                className={`transition-all duration-300 ${scrolled ? 'h-10' : 'h-12'} w-auto`}
               />
             ) : (
               <>
-                <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center">
+                <div className={`bg-grass-600 rounded-full flex items-center justify-center transition-all duration-300 ${
+                  scrolled ? 'w-10 h-10' : 'w-12 h-12'
+                }`}>
                   <span className="text-white font-bold">SU</span>
                 </div>
-                <span className="text-xl font-bold text-gray-900">{settings.siteName}</span>
+                <span className={`font-bold text-night-900 transition-all duration-300 ${
+                  scrolled ? 'text-lg' : 'text-xl'
+                }`}>{settings.siteName}</span>
               </>
             )}
           </Link>
@@ -111,7 +131,7 @@ export default function Header() {
                 ) : (
                   <Link 
                     href={item.href || '#'} 
-                    className="text-gray-700 hover:text-primary-600 transition-colors"
+                    className="text-night-700 hover:text-grass-600 transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -132,7 +152,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-gray-100"
+            className="md:hidden p-2 rounded-md text-night-700 hover:text-grass-600 hover:bg-grass-50 transition-colors"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {mobileMenuOpen ? (
@@ -152,20 +172,20 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t"
+            className="md:hidden bg-white border-t border-sky-100"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {nav.mainMenu?.map((item: any, index: number) => (
                 <div key={index}>
                   {item.subItems && item.subItems.length > 0 ? (
                     <>
-                      <div className="px-3 py-2 text-gray-700 font-medium">{item.label}</div>
+                      <div className="px-3 py-2 text-night-700 font-medium">{item.label}</div>
                       <div className="ml-4">
                         {item.subItems.map((subItem: any, subIndex: number) => (
                           <Link
                             key={subIndex}
                             href={subItem.href}
-                            className="block px-3 py-2 text-gray-600 hover:text-primary-600"
+                            className="block px-3 py-2 text-night-600 hover:text-grass-600"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {subItem.label}
@@ -176,7 +196,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href || '#'}
-                      className="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50"
+                      className="block px-3 py-2 text-night-700 hover:text-grass-600 hover:bg-grass-50 rounded-md transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.label}
