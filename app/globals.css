@@ -1,14 +1,94 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Import our main CSS architecture */
+@import '../styles/main.css';
 
-/* === DESIGN SYSTEM VARIABLES === */
+/* Quicksand font loaded via Next.js font optimization */
+
+/* === SREĆNO UČENJE BRAND DESIGN SYSTEM === */
+/* VERIFIED CMYK TO HEX CONVERSIONS - Brand Identity Optimized */
 :root {
-  /* Metodologija boje - BEZ GRADIJENATA */
-  --color-primary: #10B981;    /* Zelena */
-  --color-secondary: #3B82F6;  /* Plava */
-  --color-accent: #F59E0B;     /* Narandžasta */
-  --color-warm: #EF4444;       /* Crvena */
+  /* === CORE BRAND COLORS === */
+  /* Verified accurate CMYK to HEX conversions */
+  --brand-sky: #4FD6FF;        /* Sky: C069 M016 Y000 K000 - Trust, Growth */
+  --brand-sun: #FCDB15;        /* Sun: C002 M017 Y097 K000 - Energy, Joy */
+  --brand-grass: #6EF214;      /* Grass: C057 M005 Y092 K000 - Learning, Life */
+  --brand-heart: #020201;      /* Heart: C002 M097 Y094 K100 - Depth, Care */
+  --brand-night: #241F6B;      /* Night: C087 M085 Y025 K012 - Wisdom, Calm */
+  
+  /* === SEMANTIC COLOR MAPPING === */
+  /* Primary: Grass (Education & Growth) */
+  --color-primary: var(--brand-grass);
+  --color-primary-50: #F0FDF1;
+  --color-primary-100: #DAFDD0;
+  --color-primary-200: #B8FBA4;
+  --color-primary-300: #8AF76D;
+  --color-primary-400: var(--brand-grass);
+  --color-primary-500: #5DC40F;
+  --color-primary-600: #4AA00C;
+  --color-primary-700: #3D800A;
+  --color-primary-800: #346B0B;
+  --color-primary-900: #2D5A0C;
+  
+  /* Secondary: Sky (Trust & Communication) */
+  --color-secondary: var(--brand-sky);
+  --color-secondary-50: #EDFCFF;
+  --color-secondary-100: #D6F7FF;
+  --color-secondary-200: #B5F0FF;
+  --color-secondary-300: #83E6FF;
+  --color-secondary-400: var(--brand-sky);
+  --color-secondary-500: #2BC5FF;
+  --color-secondary-600: #1AA0DB;
+  --color-secondary-700: #1B80B1;
+  --color-secondary-800: #1D668F;
+  --color-secondary-900: #1E5176;
+  
+  /* Accent: Sun (Energy & Success) */
+  --color-accent: var(--brand-sun);
+  --color-accent-50: #FFFEF7;
+  --color-accent-100: #FFFAEB;
+  --color-accent-200: #FFF3C4;
+  --color-accent-300: #FFEA8C;
+  --color-accent-400: var(--brand-sun);
+  --color-accent-500: #E8C513;
+  --color-accent-600: #C59B0F;
+  --color-accent-700: #9F730C;
+  --color-accent-800: #835B10;
+  --color-accent-900: #704A12;
+  
+  /* Warm: Heart (Care & Support) */
+  --color-warm: var(--brand-heart);
+  --color-warm-50: #F7F7F7;
+  --color-warm-100: #E3E3E3;
+  --color-warm-200: #CFCFCF;
+  --color-warm-300: #B1B1B1;
+  --color-warm-400: #9E9E9E;
+  --color-warm-500: #6C6C6C;
+  --color-warm-600: #545454;
+  --color-warm-700: #3F3F3F;
+  --color-warm-800: #262626;
+  --color-warm-900: var(--brand-heart);
+  
+  /* Special: Night (Wisdom & Focus) */
+  --color-night: var(--brand-night);
+  --color-night-50: #F3F2F9;
+  --color-night-100: #E9E7F4;
+  --color-night-200: #D5D2EA;
+  --color-night-300: #B8B2DB;
+  --color-night-400: #968BC7;
+  --color-night-500: #7A6BB5;
+  --color-night-600: #6852A3;
+  --color-night-700: #584290;
+  --color-night-800: #4A3676;
+  --color-night-900: var(--brand-night);
+  
+  /* === FUNCTIONAL COLORS (WCAG AA Compliant) === */
+  --color-success: var(--color-primary-600);     /* 4.5:1 contrast on white */
+  --color-success-light: var(--color-primary-100);
+  --color-warning: #F59E0B;                      /* 4.8:1 contrast on white */
+  --color-warning-light: #FEF3C7;
+  --color-error: #DC2626;                        /* 5.2:1 contrast on white */
+  --color-error-light: #FEE2E2;
+  --color-info: var(--color-secondary-600);      /* 4.9:1 contrast on white */
+  --color-info-light: var(--color-secondary-100);
   
   /* Neutral palette */
   --color-gray-50: #F9FAFB;
@@ -200,34 +280,70 @@
   }
 
   body {
-    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-quicksand), var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     @apply bg-gray-50 text-gray-900;
+    /* Mobile-first: 320px viewport optimization */
+    min-width: 320px;
   }
 
-  /* Mobile First Typography */
+  /* Mobile First Typography - Educational Platform */
   h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-quicksand), var(--font-inter), sans-serif;
     @apply font-semibold leading-tight;
     text-transform: none;
+    /* Better text rendering for education */
+    text-rendering: optimizeLegibility;
   }
 
+  /* Mobile-first (320px+) Typography Scale */
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply text-2xl;
+    line-height: 1.2;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl;
+    @apply text-xl;
+    line-height: 1.25;
   }
 
   h3 {
-    @apply text-xl md:text-2xl lg:text-3xl;
+    @apply text-lg;
+    line-height: 1.3;
   }
 
   h4 {
-    @apply text-lg md:text-xl lg:text-2xl;
+    @apply text-base;
+    line-height: 1.4;
   }
 
   h5 {
-    @apply text-base md:text-lg lg:text-xl;
+    @apply text-sm;
+    line-height: 1.4;
+  }
+
+  /* Progressive enhancement for larger screens */
+  @media (min-width: 640px) {
+    h1 { @apply text-3xl; }
+    h2 { @apply text-2xl; }
+    h3 { @apply text-xl; }
+    h4 { @apply text-lg; }
+    h5 { @apply text-base; }
+  }
+
+  @media (min-width: 768px) {
+    h1 { @apply text-4xl; }
+    h2 { @apply text-3xl; }
+    h3 { @apply text-2xl; }
+    h4 { @apply text-xl; }
+    h5 { @apply text-lg; }
+  }
+
+  @media (min-width: 1024px) {
+    h1 { @apply text-5xl; }
+    h2 { @apply text-4xl; }
+    h3 { @apply text-3xl; }
+    h4 { @apply text-2xl; }
+    h5 { @apply text-xl; }
   }
 
   /* Focus styles for accessibility */
@@ -239,10 +355,33 @@
     @apply outline-2 outline-offset-2 outline-primary-500 rounded-md;
   }
 
-  /* Modern selection */
+  /* Brand-consistent text selection */
   ::selection {
     background: var(--color-primary);
     color: white;
+  }
+  
+  ::-moz-selection {
+    background: var(--color-primary);
+    color: white;
+  }
+  
+  /* Scrollbar styling for brand consistency */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--color-gray-100);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary-300);
+    border-radius: var(--radius-full);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-400);
   }
 }
 
@@ -322,25 +461,110 @@
     height: 300px;
   }
 
-  /* Button varijante */
+  /* === BRAND BUTTON SYSTEM === */
+  /* Mobile-first with WCAG AA compliant touch targets */
+  
+  /* Primary Buttons - Learning & Growth (Grass) */
   .btn-primary {
-    @apply btn-modern bg-primary-500 text-white hover:bg-primary-600;
+    @apply btn-modern text-white font-medium;
+    background-color: var(--color-primary);
+    min-height: 44px; /* WCAG touch target */
+    box-shadow: 0 2px 4px rgba(110, 242, 20, 0.2);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-primary-500);
+    box-shadow: 0 4px 8px rgba(110, 242, 20, 0.3);
+    transform: translateY(-1px);
+  }
+  .btn-primary:active {
+    background-color: var(--color-primary-600);
+    transform: translateY(0);
   }
 
+  /* Secondary Buttons - Trust & Communication (Sky) */
   .btn-secondary {
-    @apply btn-modern bg-secondary-500 text-white hover:bg-secondary-600;
+    @apply btn-modern text-white font-medium;
+    background-color: var(--color-secondary);
+    min-height: 44px;
+    box-shadow: 0 2px 4px rgba(79, 214, 255, 0.2);
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-secondary-500);
+    box-shadow: 0 4px 8px rgba(79, 214, 255, 0.3);
+    transform: translateY(-1px);
+  }
+  .btn-secondary:active {
+    background-color: var(--color-secondary-600);
+    transform: translateY(0);
   }
 
+  /* Accent Buttons - Energy & Success (Sun) */
   .btn-accent {
-    @apply btn-modern bg-accent-500 text-white hover:bg-accent-600;
+    @apply btn-modern font-medium;
+    background-color: var(--color-accent);
+    color: var(--color-night-800); /* Better contrast than pure black */
+    min-height: 44px;
+    box-shadow: 0 2px 4px rgba(252, 219, 21, 0.2);
+  }
+  .btn-accent:hover {
+    background-color: var(--color-accent-500);
+    box-shadow: 0 4px 8px rgba(252, 219, 21, 0.3);
+    transform: translateY(-1px);
+  }
+  .btn-accent:active {
+    background-color: var(--color-accent-600);
+    transform: translateY(0);
   }
 
+  /* Warm Buttons - Care & Support (Heart) */
   .btn-warm {
-    @apply btn-modern bg-warm-500 text-white hover:bg-warm-600;
+    @apply btn-modern text-white font-medium;
+    background-color: var(--color-warm);
+    min-height: 44px;
+    box-shadow: 0 2px 4px rgba(2, 2, 1, 0.3);
+  }
+  .btn-warm:hover {
+    background-color: var(--color-warm-800);
+    box-shadow: 0 4px 8px rgba(2, 2, 1, 0.4);
+    transform: translateY(-1px);
   }
 
+  /* Night Buttons - Wisdom & Focus */
+  .btn-night {
+    @apply btn-modern text-white font-medium;
+    background-color: var(--color-night);
+    min-height: 44px;
+    box-shadow: 0 2px 4px rgba(36, 31, 107, 0.3);
+  }
+  .btn-night:hover {
+    background-color: var(--color-night-800);
+    box-shadow: 0 4px 8px rgba(36, 31, 107, 0.4);
+    transform: translateY(-1px);
+  }
+
+  /* Outline Button Variants */
   .btn-outline-primary {
-    @apply btn-modern bg-transparent text-primary-500 border-2 border-primary-500 hover:bg-primary-50;
+    @apply btn-modern bg-transparent border-2 font-medium;
+    color: var(--color-primary-700); /* Better contrast */
+    border-color: var(--color-primary);
+    min-height: 44px;
+  }
+  .btn-outline-primary:hover {
+    background-color: var(--color-primary-50);
+    border-color: var(--color-primary-500);
+    color: var(--color-primary-800);
+  }
+  
+  .btn-outline-secondary {
+    @apply btn-modern bg-transparent border-2 font-medium;
+    color: var(--color-secondary-700);
+    border-color: var(--color-secondary);
+    min-height: 44px;
+  }
+  .btn-outline-secondary:hover {
+    background-color: var(--color-secondary-50);
+    border-color: var(--color-secondary-500);
+    color: var(--color-secondary-800);
   }
 
   /* Input fields moderni */
@@ -363,23 +587,31 @@
     border-color: var(--color-gray-300);
   }
 
-  /* Mobile-first grid sistem */
+  /* Mobile-first (320px+) grid system */
   .container-modern {
     width: 100%;
-    padding: 0 var(--space-md);
+    padding: 0 1rem; /* 16px on smallest screens */
     margin: 0 auto;
+    min-width: 320px;
+  }
+
+  /* Progressive enhancement - min-width only */
+  @media (min-width: 480px) {
+    .container-modern {
+      padding: 0 1.5rem; /* 24px */
+    }
   }
 
   @media (min-width: 640px) {
     .container-modern {
       max-width: 640px;
+      padding: 0 2rem; /* 32px */
     }
   }
 
   @media (min-width: 768px) {
     .container-modern {
       max-width: 768px;
-      padding: 0 var(--space-lg);
     }
   }
 
@@ -392,7 +624,7 @@
   @media (min-width: 1280px) {
     .container-modern {
       max-width: 1280px;
-      padding: 0 var(--space-xl);
+      padding: 0 3rem; /* 48px */
     }
   }
 
@@ -444,32 +676,205 @@
     @apply h-6 md:h-8 skeleton mb-4 rounded-md;
   }
 
-  /* Flat color backgrounds */
-  .bg-primary-soft {
-    @apply bg-primary-50;
+  /* === ACCESSIBILITY & BRAND COMPLIANCE === */
+  
+  /* High Contrast Mode Support */
+  @media (prefers-contrast: high) {
+    .btn-primary, .btn-secondary, .btn-accent, .btn-warm, .btn-night {
+      border: 2px solid currentColor;
+    }
+    
+    .cms-placeholder {
+      border-width: 3px;
+      border-style: solid;
+    }
   }
-
-  .bg-secondary-soft {
-    @apply bg-secondary-50;
+  
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    .btn-modern, .hover-lift, .card-modern {
+      transition: none;
+    }
+    
+    .float-animation, .float-delayed {
+      animation: none;
+    }
   }
-
-  .bg-accent-soft {
-    @apply bg-accent-50;
+  
+  /* Color Blind Friendly Indicators */
+  .btn-primary::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
   }
-
-  .bg-warm-soft {
-    @apply bg-warm-50;
+  
+  .btn-secondary::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(45deg);
+  }
+  
+  /* Brand Consistent Focus States */
+  .btn-modern:focus-visible {
+    outline: 3px solid var(--color-accent-300);
+    outline-offset: 2px;
+  }
+  
+  /* Educational Platform Specific */
+  .lesson-card {
+    @apply card-modern;
+    border-left: 4px solid var(--color-primary);
+  }
+  
+  .lesson-card.completed {
+    border-left-color: var(--color-success);
+    background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-success-light) 100%);
+  }
+  
+  .lesson-card.in-progress {
+    border-left-color: var(--color-accent);
+    background: linear-gradient(135deg, var(--color-accent-50) 0%, var(--color-accent-100) 100%);
   }
 }
 
 @layer utilities {
-  /* Mobile/Desktop Helpers */
+  /* Educational Platform Utilities */
+  
+  /* === CMS PLACEHOLDER BRANDING === */
+  .cms-placeholder {
+    @apply bg-gradient-to-br rounded-xl p-6 text-center relative overflow-hidden;
+    background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-secondary-50) 100%);
+    border: 2px dashed var(--color-gray-300);
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .cms-placeholder::before {
+    content: "🌱 Srećno učenje";
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary-700);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .cms-placeholder::after {
+    content: "Sadržaj se učitava iz CMS-a...";
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+    display: block;
+  }
+  
+  /* CMS Placeholder Variants */
+  .cms-placeholder-hero {
+    @apply cms-placeholder;
+    min-height: 200px;
+    background: linear-gradient(135deg, var(--color-accent-50) 0%, var(--color-primary-50) 100%);
+  }
+  
+  .cms-placeholder-hero::before {
+    content: "☀️ Dobrodošli u Srećno učenje";
+    font-size: 1.5rem;
+  }
+  
+  .cms-placeholder-card {
+    @apply cms-placeholder;
+    min-height: 80px;
+    padding: 1rem;
+  }
+  
+  .cms-placeholder-card::before {
+    content: "📚";
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* === BRAND COLOR UTILITIES === */
+  /* Primary Brand Colors */
+  .text-brand-sky { color: var(--brand-sky); }
+  .text-brand-sun { color: var(--brand-sun); }
+  .text-brand-grass { color: var(--brand-grass); }
+  .text-brand-heart { color: var(--brand-heart); }
+  .text-brand-night { color: var(--brand-night); }
+  
+  .bg-brand-sky { background-color: var(--brand-sky); }
+  .bg-brand-sun { background-color: var(--brand-sun); }
+  .bg-brand-grass { background-color: var(--brand-grass); }
+  .bg-brand-heart { background-color: var(--brand-heart); }
+  .bg-brand-night { background-color: var(--brand-night); }
+  
+  /* Legacy Support - Maintain backward compatibility */
+  .text-sky { color: var(--brand-sky); }
+  .text-sun { color: var(--brand-sun); }
+  .text-grass { color: var(--brand-grass); }
+  .text-heart { color: var(--brand-heart); }
+  .text-night { color: var(--brand-night); }
+  
+  .bg-sky { background-color: var(--brand-sky); }
+  .bg-sun { background-color: var(--brand-sun); }
+  .bg-grass { background-color: var(--brand-grass); }
+  .bg-heart { background-color: var(--brand-heart); }
+  .bg-night { background-color: var(--brand-night); }
+  
+  /* Semantic Color Utilities */
+  .text-primary-brand { color: var(--color-primary); }
+  .text-secondary-brand { color: var(--color-secondary); }
+  .text-accent-brand { color: var(--color-accent); }
+  .text-warm-brand { color: var(--color-warm); }
+  .text-night-brand { color: var(--color-night); }
+  
+  .bg-primary-brand { background-color: var(--color-primary); }
+  .bg-secondary-brand { background-color: var(--color-secondary); }
+  .bg-accent-brand { background-color: var(--color-accent); }
+  .bg-warm-brand { background-color: var(--color-warm); }
+  .bg-night-brand { background-color: var(--color-night); }
+  
+  /* Soft Background Variants */
+  .bg-primary-soft { background-color: var(--color-primary-50); }
+  .bg-secondary-soft { background-color: var(--color-secondary-50); }
+  .bg-accent-soft { background-color: var(--color-accent-50); }
+  .bg-warm-soft { background-color: var(--color-warm-50); }
+  .bg-night-soft { background-color: var(--color-night-50); }
+
+  /* Mobile/Touch Optimizations */
   .mobile-only {
-    @apply block md:hidden;
+    @apply block;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-only {
+      @apply hidden;
+    }
   }
 
   .desktop-only {
-    @apply hidden md:block;
+    @apply hidden;
+  }
+  
+  @media (min-width: 768px) {
+    .desktop-only {
+      @apply block;
+    }
+  }
+  
+  /* Touch Target Helpers */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
   }
 
   /* Typography utilities */

@@ -1,0 +1,339 @@
+/**
+ * SREĆNO UČENJE - BOX SIZING
+ * Consistent box model for all elements
+ * Optimized for educational platform layouts
+ */
+
+/* === UNIVERSAL BOX SIZING === */
+
+/* Apply border-box to all elements for predictable sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* === SIZING OPTIMIZATIONS === */
+
+/* Ensure consistent sizing for replaced elements */
+img,
+video,
+canvas,
+svg,
+picture,
+iframe,
+embed,
+object {
+  box-sizing: border-box;
+  /* Prevent overflow issues */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form elements sizing */
+input,
+textarea,
+select,
+button {
+  box-sizing: border-box;
+  /* Ensure consistent sizing */
+  width: auto;
+  /* Better mobile touch targets */
+  min-height: var(--space-touch-min);
+}
+
+/* Full-width form elements when needed */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+textarea,
+select {
+  width: 100%;
+}
+
+/* === LAYOUT ELEMENTS === */
+
+/* Container sizing */
+.container,
+.container-fluid,
+main,
+section,
+article,
+aside,
+header,
+footer,
+nav {
+  box-sizing: border-box;
+}
+
+/* Card and component sizing */
+.card,
+.modal,
+.popup,
+.tooltip,
+.dropdown {
+  box-sizing: border-box;
+}
+
+/* === EDUCATIONAL COMPONENTS === */
+
+/* Lesson and quiz components */
+.lesson,
+.quiz,
+.exercise,
+.activity {
+  box-sizing: border-box;
+  /* Ensure consistent width calculations */
+  width: 100%;
+}
+
+/* Progress indicators */
+.progress,
+.progress-bar,
+.step-indicator {
+  box-sizing: border-box;
+}
+
+/* === GRID AND FLEX SIZING === */
+
+/* Grid items */
+.grid-item,
+.col,
+[class*="col-"] {
+  box-sizing: border-box;
+}
+
+/* Flex items */
+.flex-item,
+.flex-grow,
+.flex-shrink {
+  box-sizing: border-box;
+}
+
+/* === RESPONSIVE IMAGES AND MEDIA === */
+
+/* Responsive media containers */
+.media-container,
+.image-container,
+.video-container {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Aspect ratio containers */
+.aspect-ratio,
+.aspect-square,
+.aspect-video,
+.aspect-golden {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.aspect-ratio > *,
+.aspect-square > *,
+.aspect-video > *,
+.aspect-golden > * {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === BORDER AND PADDING CALCULATIONS === */
+
+/* Ensure borders don't add to width */
+.bordered,
+.outline,
+.focus-ring {
+  box-sizing: border-box;
+}
+
+/* Padding containers */
+.padded,
+.spaced,
+.gapped {
+  box-sizing: border-box;
+}
+
+/* === PRINT SIZING === */
+
+@media print {
+  /* Ensure consistent sizing in print */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    /* Prevent page breaks inside important elements */
+    page-break-inside: avoid;
+  }
+  
+  /* Page break control for educational content */
+  .lesson,
+  .quiz,
+  .exercise,
+  .section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  /* Avoid breaking headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+}
+
+/* === ACCESSIBILITY SIZING === */
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  /* Thicker borders for better visibility */
+  input,
+  textarea,
+  select,
+  button {
+    border-width: 2px;
+    /* Maintain box-sizing with thicker borders */
+    box-sizing: border-box;
+  }
+}
+
+/* Reduced motion - maintain sizing */
+@media (prefers-reduced-motion: reduce) {
+  /* Ensure transitions don't affect sizing */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+/* === MOBILE OPTIMIZATIONS === */
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Larger touch targets maintain box-sizing */
+  button,
+  input,
+  select,
+  textarea,
+  [role="button"],
+  [tabindex] {
+    box-sizing: border-box;
+    min-height: var(--space-touch-comfortable);
+    min-width: var(--space-touch-comfortable);
+  }
+}
+
+/* === CMS CONTENT SIZING === */
+
+/* CMS generated content */
+.cms-content,
+.portable-text,
+.rich-text {
+  box-sizing: border-box;
+}
+
+.cms-content *,
+.portable-text *,
+.rich-text * {
+  box-sizing: border-box;
+  /* Prevent overflow in CMS content */
+  max-width: 100%;
+}
+
+/* CMS images and media */
+.cms-content img,
+.cms-content video,
+.cms-content iframe,
+.portable-text img,
+.portable-text video,
+.rich-text img,
+.rich-text video {
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+}
+
+/* === UTILITY CLASSES === */
+
+/* Box sizing utilities */
+.box-border {
+  box-sizing: border-box;
+}
+
+.box-content {
+  box-sizing: content-box;
+}
+
+/* Width utilities with box-sizing */
+.w-full {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.w-auto {
+  width: auto;
+  box-sizing: border-box;
+}
+
+.w-fit {
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+/* Height utilities with box-sizing */
+.h-full {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.h-auto {
+  height: auto;
+  box-sizing: border-box;
+}
+
+.h-fit {
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+/* Max width utilities */
+.max-w-full {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.max-w-none {
+  max-width: none;
+  box-sizing: border-box;
+}
+
+/* Min/Max height utilities */
+.min-h-full {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.max-h-full {
+  max-height: 100%;
+  box-sizing: border-box;
+}

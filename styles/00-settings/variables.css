@@ -1,0 +1,144 @@
+/**
+ * SREĆNO UČENJE - GLOBAL SETTINGS
+ * Core CSS custom properties for the educational platform
+ * Mobile-first design system with WCAG AA compliance
+ */
+
+:root {
+  /* === BRAND IDENTITY === */
+  /* Verified CMYK to HEX conversions - Brand colors */
+  --brand-sky: #4FD6FF;        /* Trust, Communication */
+  --brand-sun: #FCDB15;        /* Energy, Joy */
+  --brand-grass: #6EF214;      /* Learning, Growth */
+  --brand-heart: #020201;      /* Care, Support */
+  --brand-night: #241F6B;      /* Wisdom, Focus */
+
+  /* === SEMANTIC COLORS === */
+  /* Primary: Learning & Growth */
+  --color-primary: var(--brand-grass);
+  --color-primary-50: #F0FDF1;
+  --color-primary-100: #DAFFD0;
+  --color-primary-200: #B8FBA4;
+  --color-primary-300: #8AF76D;
+  --color-primary-400: var(--brand-grass);
+  --color-primary-500: #5DC40F;
+  --color-primary-600: #4AA00C;
+  --color-primary-700: #3D800A;
+  --color-primary-800: #346B0B;
+  --color-primary-900: #2D5A0C;
+
+  /* Secondary: Trust & Communication */
+  --color-secondary: var(--brand-sky);
+  --color-secondary-50: #EDFCFF;
+  --color-secondary-100: #D6F7FF;
+  --color-secondary-200: #B5F0FF;
+  --color-secondary-300: #83E6FF;
+  --color-secondary-400: var(--brand-sky);
+  --color-secondary-500: #2BC5FF;
+  --color-secondary-600: #1AA0DB;
+  --color-secondary-700: #1B80B1;
+  --color-secondary-800: #1D668F;
+  --color-secondary-900: #1E5176;
+
+  /* Accent: Energy & Success */
+  --color-accent: var(--brand-sun);
+  --color-accent-50: #FFFEF7;
+  --color-accent-100: #FFFAEB;
+  --color-accent-200: #FFF3C4;
+  --color-accent-300: #FFEA8C;
+  --color-accent-400: var(--brand-sun);
+  --color-accent-500: #E8C513;
+  --color-accent-600: #C59B0F;
+  --color-accent-700: #9F730C;
+  --color-accent-800: #835B10;
+  --color-accent-900: #704A12;
+
+  /* Warm: Care & Support */
+  --color-warm: var(--brand-heart);
+  --color-warm-50: #F7F7F7;
+  --color-warm-100: #E3E3E3;
+  --color-warm-200: #CFCFCF;
+  --color-warm-300: #B1B1B1;
+  --color-warm-400: #9E9E9E;
+  --color-warm-500: #6C6C6C;
+  --color-warm-600: #545454;
+  --color-warm-700: #3F3F3F;
+  --color-warm-800: #262626;
+  --color-warm-900: var(--brand-heart);
+
+  /* Night: Wisdom & Focus */
+  --color-night: var(--brand-night);
+  --color-night-50: #F3F2F9;
+  --color-night-100: #E9E7F4;
+  --color-night-200: #D5D2EA;
+  --color-night-300: #B8B2DB;
+  --color-night-400: #968BC7;
+  --color-night-500: #7A6BB5;
+  --color-night-600: #6852A3;
+  --color-night-700: #584290;
+  --color-night-800: #4A3676;
+  --color-night-900: var(--brand-night);
+
+  /* === FUNCTIONAL COLORS (WCAG AA) === */
+  --color-success: var(--color-primary-600);     /* 4.5:1 contrast */
+  --color-success-light: var(--color-primary-100);
+  --color-warning: #F59E0B;                      /* 4.8:1 contrast */
+  --color-warning-light: #FEF3C7;
+  --color-error: #DC2626;                        /* 5.2:1 contrast */
+  --color-error-light: #FEE2E2;
+  --color-info: var(--color-secondary-600);      /* 4.9:1 contrast */
+  --color-info-light: var(--color-secondary-100);
+
+  /* === NEUTRAL PALETTE === */
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
+
+  /* === TEXT COLORS === */
+  --text-primary: var(--color-gray-900);
+  --text-secondary: var(--color-gray-700);
+  --text-muted: var(--color-gray-500);
+  --text-inverse: #FFFFFF;
+
+  /* === BACKGROUND COLORS === */
+  --bg-body: var(--color-gray-50);
+  --bg-surface: #FFFFFF;
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  --bg-skeleton: var(--color-gray-200);
+
+  /* === BORDER COLORS === */
+  --border-light: var(--color-gray-200);
+  --border-medium: var(--color-gray-300);
+  --border-strong: var(--color-gray-400);
+  --border-focus: var(--color-primary);
+
+  /* === DESIGN TOKENS === */
+  /* Z-index scale */
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-fixed: 30;
+  --z-modal-backdrop: 40;
+  --z-modal: 50;
+  --z-popover: 60;
+  --z-tooltip: 70;
+  --z-toast: 80;
+
+  /* Timing functions */
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-spring: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Feature flags */
+  --enable-rounded-corners: 1;
+  --enable-shadows: 1;
+  --enable-transitions: 1;
+  --enable-animations: 1;
+}

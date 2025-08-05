@@ -1,0 +1,237 @@
+/**
+ * SREĆNO UČENJE - CSS FUNCTIONS & CALCULATIONS
+ * Mathematical functions and calculations for the educational platform
+ */
+
+/* === SPACING FUNCTIONS === */
+/* These use CSS calc() for dynamic spacing calculations */
+
+:root {
+  /* Fluid spacing functions */
+  --fluid-space-xs: clamp(0.25rem, 0.5vw, 0.5rem);
+  --fluid-space-sm: clamp(0.5rem, 1vw, 1rem);
+  --fluid-space-md: clamp(1rem, 2vw, 2rem);
+  --fluid-space-lg: clamp(1.5rem, 3vw, 3rem);
+  --fluid-space-xl: clamp(2rem, 4vw, 4rem);
+  --fluid-space-2xl: clamp(3rem, 6vw, 6rem);
+  --fluid-space-3xl: clamp(4rem, 8vw, 8rem);
+
+  /* Fluid typography */
+  --fluid-text-xs: clamp(0.75rem, 0.875vw, 0.875rem);
+  --fluid-text-sm: clamp(0.875rem, 1vw, 1rem);
+  --fluid-text-base: clamp(1rem, 1.125vw, 1.125rem);
+  --fluid-text-lg: clamp(1.125rem, 1.25vw, 1.25rem);
+  --fluid-text-xl: clamp(1.25rem, 1.5vw, 1.5rem);
+  --fluid-text-2xl: clamp(1.5rem, 2vw, 2rem);
+  --fluid-text-3xl: clamp(1.875rem, 2.5vw, 2.5rem);
+  --fluid-text-4xl: clamp(2.25rem, 3vw, 3rem);
+  --fluid-text-5xl: clamp(3rem, 4vw, 4rem);
+  --fluid-text-6xl: clamp(3.75rem, 5vw, 5rem);
+
+  /* Container functions */
+  --container-fluid: calc(100% - var(--space-container-padding) * 2);
+  --container-bounded: min(var(--container-2xl), var(--container-fluid));
+
+  /* Grid functions */
+  --grid-1-col: calc((100% - var(--space-4) * 0) / 1);
+  --grid-2-col: calc((100% - var(--space-4) * 1) / 2);
+  --grid-3-col: calc((100% - var(--space-4) * 2) / 3);
+  --grid-4-col: calc((100% - var(--space-4) * 3) / 4);
+  --grid-5-col: calc((100% - var(--space-4) * 4) / 5);
+  --grid-6-col: calc((100% - var(--space-4) * 5) / 6);
+
+  /* Aspect ratio calculations */
+  --aspect-square: 1 / 1;
+  --aspect-video: 16 / 9;
+  --aspect-golden: 1.618 / 1;
+  --aspect-card: 3 / 4;
+  --aspect-hero: 21 / 9;
+
+  /* Educational ratios */
+  --aspect-lesson-preview: 4 / 3;
+  --aspect-quiz-image: 16 / 10;
+  --aspect-profile-avatar: 1 / 1;
+}
+
+/* === RESPONSIVE CALCULATIONS === */
+
+/* Viewport-based calculations */
+:root {
+  /* Full viewport calculations */
+  --vh-full: calc(100vh - var(--space-16)); /* Account for header */
+  --vh-hero: calc(100vh - var(--space-20));  /* Hero section height */
+  --vh-modal: calc(100vh - var(--space-24)); /* Modal max height */
+
+  /* Content area calculations */
+  --content-height: calc(100vh - var(--space-16) - var(--space-20)); /* Header + footer */
+  --sidebar-width: calc(100vw / 4);
+  --main-content-width: calc(100vw - var(--sidebar-width) - var(--space-8));
+
+  /* Safe area calculations (for mobile devices with notches) */
+  --safe-area-top: env(safe-area-inset-top, 0);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0);
+  --safe-area-left: env(safe-area-inset-left, 0);
+  --safe-area-right: env(safe-area-inset-right, 0);
+
+  /* Adjusted spacing for safe areas */
+  --safe-padding-top: calc(var(--space-4) + var(--safe-area-top));
+  --safe-padding-bottom: calc(var(--space-4) + var(--safe-area-bottom));
+  --safe-padding-left: calc(var(--space-4) + var(--safe-area-left));
+  --safe-padding-right: calc(var(--space-4) + var(--safe-area-right));
+}
+
+/* === COLOR FUNCTIONS === */
+
+/* Alpha channel calculations for overlays */
+:root {
+  /* Overlay opacities */
+  --overlay-light: rgba(255, 255, 255, 0.9);
+  --overlay-medium: rgba(255, 255, 255, 0.7);
+  --overlay-dark: rgba(0, 0, 0, 0.5);
+  --overlay-darker: rgba(0, 0, 0, 0.7);
+  --overlay-darkest: rgba(0, 0, 0, 0.9);
+
+  /* Brand color with alpha */
+  --primary-10: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  --primary-20: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --primary-30: color-mix(in srgb, var(--color-primary) 30%, transparent);
+  --primary-40: color-mix(in srgb, var(--color-primary) 40%, transparent);
+  --primary-50: color-mix(in srgb, var(--color-primary) 50%, transparent);
+
+  --secondary-10: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+  --secondary-20: color-mix(in srgb, var(--color-secondary) 20%, transparent);
+  --secondary-30: color-mix(in srgb, var(--color-secondary) 30%, transparent);
+
+  --accent-10: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  --accent-20: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  --accent-30: color-mix(in srgb, var(--color-accent) 30%, transparent);
+
+  /* Context-aware background colors */
+  --bg-success-subtle: color-mix(in srgb, var(--color-success) 5%, var(--bg-surface));
+  --bg-warning-subtle: color-mix(in srgb, var(--color-warning) 5%, var(--bg-surface));
+  --bg-error-subtle: color-mix(in srgb, var(--color-error) 5%, var(--bg-surface));
+  --bg-info-subtle: color-mix(in srgb, var(--color-info) 5%, var(--bg-surface));
+}
+
+/* === ANIMATION FUNCTIONS === */
+
+/* Timing calculations */
+:root {
+  /* Staggered animation delays */
+  --delay-1: calc(var(--transition-base) * 0.1);
+  --delay-2: calc(var(--transition-base) * 0.2);
+  --delay-3: calc(var(--transition-base) * 0.3);
+  --delay-4: calc(var(--transition-base) * 0.4);
+  --delay-5: calc(var(--transition-base) * 0.5);
+
+  /* Progressive duration scaling */
+  --duration-quick: calc(var(--transition-base) * 0.5);
+  --duration-medium: var(--transition-base);
+  --duration-slow: calc(var(--transition-base) * 1.5);
+  --duration-slower: calc(var(--transition-base) * 2);
+
+  /* Scroll-based calculations */
+  --scroll-trigger: calc(100vh - var(--space-32));
+  --parallax-speed: calc(var(--scroll-position, 0) * -0.5);
+}
+
+/* === EDUCATIONAL PLATFORM CALCULATIONS === */
+
+/* Age-appropriate sizing */
+:root {
+  /* Touch target scaling by age group */
+  --touch-preschool: calc(var(--space-touch-min) * 1.2);  /* Larger for small fingers */
+  --touch-elementary: var(--space-touch-min);              /* Standard size */
+  --touch-adult: calc(var(--space-touch-min) * 0.9);      /* Slightly smaller */
+
+  /* Font size scaling by reading level */
+  --font-beginner: calc(var(--text-body-size) * 1.125);   /* 18px if base is 16px */
+  --font-intermediate: var(--text-body-size);              /* 16px */
+  --font-advanced: calc(var(--text-body-size) * 0.875);   /* 14px */
+
+  /* Content width by age group */
+  --content-width-preschool: min(50ch, 100%);             /* Shorter lines for young readers */
+  --content-width-elementary: min(60ch, 100%);            /* Standard reading width */
+  --content-width-adult: min(70ch, 100%);                 /* Wider for efficient reading */
+
+  /* Lesson card sizing */
+  --card-height-preview: calc(var(--space-32) + var(--space-16)); /* 192px */
+  --card-height-detailed: calc(var(--space-48) + var(--space-16)); /* 256px */
+  --card-width-mobile: calc(100vw - var(--space-8));
+  --card-width-tablet: calc((100vw - var(--space-16)) / 2 - var(--space-4));
+  --card-width-desktop: calc((100vw - var(--space-24)) / 3 - var(--space-6));
+
+  /* Progress bar calculations */
+  --progress-height: var(--space-2);
+  --progress-height-large: var(--space-3);
+  --progress-border-radius: calc(var(--progress-height) / 2);
+
+  /* Quiz layout calculations */
+  --quiz-option-height: calc(var(--space-12) + var(--space-4)); /* Comfortable clicking */
+  --quiz-progress-width: calc(100% - var(--space-8));
+  --quiz-timer-size: var(--space-16);
+}
+
+/* === GRID SYSTEM CALCULATIONS === */
+
+/* CSS Grid with gap calculations */
+:root {
+  /* Auto-fit grid with minimum column width */
+  --grid-auto-fit-sm: repeat(auto-fit, minmax(250px, 1fr));
+  --grid-auto-fit-md: repeat(auto-fit, minmax(300px, 1fr));
+  --grid-auto-fit-lg: repeat(auto-fit, minmax(350px, 1fr));
+
+  /* Responsive grid columns */
+  --grid-cols-mobile: 1;
+  --grid-cols-tablet: 2;
+  --grid-cols-desktop: 3;
+  --grid-cols-wide: 4;
+
+  /* Grid area calculations */
+  --grid-area-header: 1 / 1 / 2 / -1;
+  --grid-area-sidebar: 2 / 1 / 3 / 2;
+  --grid-area-main: 2 / 2 / 3 / -1;
+  --grid-area-footer: 3 / 1 / 4 / -1;
+}
+
+/* === PERFORMANCE OPTIMIZATIONS === */
+
+/* Subpixel rendering optimizations */
+:root {
+  /* Transform optimizations */
+  --transform-gpu: translateZ(0);
+  --will-change-transform: transform;
+  --will-change-opacity: opacity;
+  --will-change-scroll: scroll-position;
+
+  /* Contain property for better performance */
+  --contain-layout: layout;
+  --contain-style: style;
+  --contain-paint: paint;
+  --contain-strict: strict;
+}
+
+/* === MATHEMATICAL RATIOS === */
+
+/* Golden ratio and other mathematical constants */
+:root {
+  --ratio-golden: 1.618;
+  --ratio-major-second: 1.125;
+  --ratio-minor-third: 1.2;
+  --ratio-major-third: 1.25;
+  --ratio-perfect-fourth: 1.333;
+  --ratio-augmented-fourth: 1.414;
+  --ratio-perfect-fifth: 1.5;
+  --ratio-golden-ratio: 1.618;
+
+  /* Typography scale based on golden ratio */
+  --scale-1: calc(1rem * var(--ratio-golden));
+  --scale-2: calc(var(--scale-1) * var(--ratio-golden));
+  --scale-3: calc(var(--scale-2) * var(--ratio-golden));
+  --scale-4: calc(var(--scale-3) * var(--ratio-golden));
+  
+  /* Negative scale */
+  --scale-neg-1: calc(1rem / var(--ratio-golden));
+  --scale-neg-2: calc(var(--scale-neg-1) / var(--ratio-golden));
+  --scale-neg-3: calc(var(--scale-neg-2) / var(--ratio-golden));
+}

@@ -1,0 +1,197 @@
+/**
+ * SREĆNO UČENJE - TYPOGRAPHY SYSTEM
+ * Mobile-first typography scale optimized for educational content
+ * Readable, accessible typography for all age groups
+ */
+
+:root {
+  /* === FONT FAMILIES === */
+  --font-primary: 'Quicksand', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+
+  /* === FONT WEIGHTS === */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* === FONT SIZES - MOBILE FIRST (320px+) === */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 1.875rem;    /* 30px */
+  --font-size-4xl: 2.25rem;     /* 36px */
+  --font-size-5xl: 3rem;        /* 48px */
+  --font-size-6xl: 3.75rem;     /* 60px */
+
+  /* === LINE HEIGHTS === */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* === LETTER SPACING === */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+
+  /* === EDUCATIONAL TYPOGRAPHY SCALES === */
+  
+  /* Display text - Hero sections */
+  --text-display-size: var(--font-size-4xl);
+  --text-display-line-height: var(--line-height-tight);
+  --text-display-weight: var(--font-weight-bold);
+  --text-display-spacing: var(--letter-spacing-tight);
+
+  /* Headings */
+  --text-h1-size: var(--font-size-3xl);
+  --text-h1-line-height: var(--line-height-tight);
+  --text-h1-weight: var(--font-weight-bold);
+  --text-h1-spacing: var(--letter-spacing-tight);
+
+  --text-h2-size: var(--font-size-2xl);
+  --text-h2-line-height: var(--line-height-snug);
+  --text-h2-weight: var(--font-weight-semibold);
+  --text-h2-spacing: var(--letter-spacing-normal);
+
+  --text-h3-size: var(--font-size-xl);
+  --text-h3-line-height: var(--line-height-snug);
+  --text-h3-weight: var(--font-weight-semibold);
+  --text-h3-spacing: var(--letter-spacing-normal);
+
+  --text-h4-size: var(--font-size-lg);
+  --text-h4-line-height: var(--line-height-normal);
+  --text-h4-weight: var(--font-weight-medium);
+  --text-h4-spacing: var(--letter-spacing-normal);
+
+  --text-h5-size: var(--font-size-base);
+  --text-h5-line-height: var(--line-height-normal);
+  --text-h5-weight: var(--font-weight-medium);
+  --text-h5-spacing: var(--letter-spacing-normal);
+
+  --text-h6-size: var(--font-size-sm);
+  --text-h6-line-height: var(--line-height-normal);
+  --text-h6-weight: var(--font-weight-medium);
+  --text-h6-spacing: var(--letter-spacing-wide);
+
+  /* Body text */
+  --text-body-size: var(--font-size-base);
+  --text-body-line-height: var(--line-height-relaxed);
+  --text-body-weight: var(--font-weight-normal);
+  --text-body-spacing: var(--letter-spacing-normal);
+
+  --text-body-large-size: var(--font-size-lg);
+  --text-body-large-line-height: var(--line-height-relaxed);
+  --text-body-large-weight: var(--font-weight-normal);
+  --text-body-large-spacing: var(--letter-spacing-normal);
+
+  --text-body-small-size: var(--font-size-sm);
+  --text-body-small-line-height: var(--line-height-normal);
+  --text-body-small-weight: var(--font-weight-normal);
+  --text-body-small-spacing: var(--letter-spacing-normal);
+
+  /* UI text */
+  --text-caption-size: var(--font-size-xs);
+  --text-caption-line-height: var(--line-height-normal);
+  --text-caption-weight: var(--font-weight-normal);
+  --text-caption-spacing: var(--letter-spacing-wide);
+
+  --text-label-size: var(--font-size-sm);
+  --text-label-line-height: var(--line-height-normal);
+  --text-label-weight: var(--font-weight-medium);
+  --text-label-spacing: var(--letter-spacing-normal);
+
+  --text-button-size: var(--font-size-sm);
+  --text-button-line-height: var(--line-height-normal);
+  --text-button-weight: var(--font-weight-medium);
+  --text-button-spacing: var(--letter-spacing-wide);
+}
+
+/* === RESPONSIVE TYPOGRAPHY === */
+/* Progressive enhancement for larger screens */
+
+@media (min-width: 640px) {
+  :root {
+    --text-display-size: var(--font-size-5xl);
+    --text-h1-size: var(--font-size-4xl);
+    --text-h2-size: var(--font-size-3xl);
+    --text-h3-size: var(--font-size-2xl);
+    --text-body-size: var(--font-size-lg);
+    --text-body-large-size: var(--font-size-xl);
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --text-display-size: var(--font-size-6xl);
+    --text-h1-size: var(--font-size-5xl);
+    --text-h2-size: var(--font-size-4xl);
+    --text-h3-size: var(--font-size-3xl);
+    --text-h4-size: var(--font-size-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    /* Larger typography for desktop reading */
+    --text-body-line-height: var(--line-height-loose);
+    --text-body-large-line-height: var(--line-height-loose);
+  }
+}
+
+/* === READING OPTIMIZATIONS === */
+
+/* For users who prefer larger text */
+@media (prefers-contrast: high) {
+  :root {
+    --font-weight-normal: var(--font-weight-medium);
+    --font-weight-medium: var(--font-weight-semibold);
+    --font-weight-semibold: var(--font-weight-bold);
+  }
+}
+
+/* Print optimizations */
+@media print {
+  :root {
+    --font-size-base: 12pt;
+    --font-size-lg: 14pt;
+    --font-size-xl: 16pt;
+    --font-size-2xl: 18pt;
+    --font-size-3xl: 24pt;
+    --font-size-4xl: 30pt;
+    
+    --text-body-line-height: 1.4;
+    --text-body-large-line-height: 1.4;
+  }
+}
+
+/* === EDUCATIONAL CONTEXT TYPOGRAPHY === */
+
+:root {
+  /* Age-appropriate font sizes */
+  --text-preschool-size: var(--font-size-lg);     /* Larger for young children */
+  --text-elementary-size: var(--font-size-base);  /* Standard reading size */
+  --text-middle-size: var(--font-size-sm);        /* Efficient reading */
+  --text-adult-size: var(--font-size-base);       /* Comfortable for adults */
+
+  /* Reading levels */
+  --text-beginner-line-height: var(--line-height-loose);
+  --text-intermediate-line-height: var(--line-height-relaxed);
+  --text-advanced-line-height: var(--line-height-normal);
+
+  /* Interactive text */
+  --text-quiz-question-size: var(--font-size-lg);
+  --text-quiz-answer-size: var(--font-size-base);
+  --text-lesson-title-size: var(--font-size-2xl);
+  --text-lesson-content-size: var(--font-size-base);
+}

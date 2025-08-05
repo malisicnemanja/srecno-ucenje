@@ -1,0 +1,439 @@
+/**
+ * SREĆNO UČENJE - CARD COMPONENTS
+ * Reusable card components for educational platform
+ * Mobile-first, accessible, interactive cards
+ */
+
+/* === BASE CARD === */
+
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-card);
+  padding: var(--space-card-padding);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-secondary);
+  transform: translateY(-2px);
+}
+
+/* === CARD VARIANTS === */
+
+/* Interactive/clickable cards */
+.card-interactive {
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card-interactive:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--color-primary-300);
+}
+
+.card-interactive:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-interactive:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Elevated card */
+.card-elevated {
+  box-shadow: var(--shadow-md);
+}
+
+.card-elevated:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Flat card */
+.card-flat {
+  box-shadow: none;
+  border: 1px solid var(--color-border-primary);
+}
+
+.card-flat:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--color-border-secondary);
+}
+
+/* Outlined card */
+.card-outlined {
+  box-shadow: none;
+  border: 2px solid var(--color-border-primary);
+}
+
+.card-outlined:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* === CARD SIZES === */
+
+.card-sm {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.card-md {
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+}
+
+.card-lg {
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+}
+
+.card-xl {
+  padding: var(--space-10);
+  border-radius: var(--radius-2xl);
+}
+
+/* === EDUCATIONAL CARD TYPES === */
+
+/* Lesson card */
+.lesson-card {
+  border-left: 4px solid var(--color-primary);
+  padding-left: calc(var(--space-card-padding) - 4px);
+}
+
+.lesson-card:hover {
+  border-left-color: var(--color-primary-700);
+  background-color: var(--color-primary-50);
+}
+
+.lesson-card.completed {
+  border-left-color: var(--color-success);
+  background: linear-gradient(135deg, var(--color-success-light) 0%, var(--color-primary-50) 100%);
+}
+
+.lesson-card.in-progress {
+  border-left-color: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-accent-100) 0%, var(--color-accent-50) 100%);
+}
+
+.lesson-card.locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+  border-left-color: var(--color-gray-300);
+  background-color: var(--color-gray-50);
+}
+
+.lesson-card.locked:hover {
+  transform: none;
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-gray-50);
+}
+
+/* Quiz card */
+.quiz-card {
+  border-top: 4px solid var(--color-secondary);
+  text-align: center;
+}
+
+.quiz-card:hover {
+  border-top-color: var(--color-secondary-700);
+  background-color: var(--color-secondary-50);
+}
+
+.quiz-card.completed {
+  border-top-color: var(--color-success);
+  background: linear-gradient(135deg, var(--color-success-light) 0%, var(--color-secondary-50) 100%);
+}
+
+/* Exercise card */
+.exercise-card {
+  border: 2px solid var(--color-accent-200);
+  background: linear-gradient(135deg, var(--color-accent-50) 0%, white 100%);
+}
+
+.exercise-card:hover {
+  border-color: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-accent-100) 0%, var(--color-accent-50) 100%);
+}
+
+/* Progress card */
+.progress-card {
+  background: linear-gradient(135deg, var(--color-night-50) 0%, white 100%);
+  border: 1px solid var(--color-night-200);
+}
+
+.progress-card:hover {
+  background: linear-gradient(135deg, var(--color-night-100) 0%, var(--color-night-50) 100%);
+  border-color: var(--color-night-300);
+}
+
+/* Achievement card */
+.achievement-card {
+  background: linear-gradient(135deg, var(--color-accent-100) 0%, var(--color-primary-100) 100%);
+  border: 2px solid var(--color-accent-300);
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: rotate(45deg);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* === CARD LAYOUTS === */
+
+/* Card with header */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+/* Card with footer */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border-primary);
+}
+
+/* Card body */
+.card-body {
+  flex: 1;
+}
+
+/* Card title */
+.card-title {
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--text-h4-size);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+/* Card subtitle */
+.card-subtitle {
+  margin: 0 0 var(--space-3) 0;
+  font-size: var(--text-body-small-size);
+  color: var(--text-muted);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Card text */
+.card-text {
+  margin: 0 0 var(--space-3) 0;
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+/* === CARD MEDIA === */
+
+/* Card with image */
+.card-image {
+  width: calc(100% + var(--space-card-padding) * 2);
+  margin: calc(var(--space-card-padding) * -1) calc(var(--space-card-padding) * -1) var(--space-4) calc(var(--space-card-padding) * -1);
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.card-image-bottom {
+  width: calc(100% + var(--space-card-padding) * 2);
+  margin: var(--space-4) calc(var(--space-card-padding) * -1) calc(var(--space-card-padding) * -1) calc(var(--space-card-padding) * -1);
+  border-radius: 0 0 var(--radius-card) var(--radius-card);
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+/* Card avatar */
+.card-avatar {
+  width: var(--space-12);
+  height: var(--space-12);
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  margin-right: var(--space-3);
+}
+
+/* === CARD ACTIONS === */
+
+.card-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.card-actions.card-actions-center {
+  justify-content: center;
+}
+
+.card-actions.card-actions-end {
+  justify-content: flex-end;
+}
+
+/* === CARD GROUPS === */
+
+.card-group {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .card-group {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-group {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+.card-group-2 {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .card-group-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card-group-4 {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .card-group-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-group-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* === ACCESSIBILITY === */
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card-interactive {
+    transition: none;
+    transform: none;
+  }
+  
+  .card:hover,
+  .card-interactive:hover {
+    transform: none;
+  }
+  
+  .achievement-card::before {
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .card {
+    border-width: 2px;
+  }
+  
+  .lesson-card {
+    border-left-width: 6px;
+  }
+  
+  .quiz-card {
+    border-top-width: 6px;
+  }
+  
+  .exercise-card {
+    border-width: 3px;
+  }
+}
+
+/* === DARK MODE === */
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+  
+  .card:hover {
+    border-color: var(--color-gray-600);
+  }
+  
+  .card-header,
+  .card-footer {
+    border-color: var(--color-gray-700);
+  }
+  
+  .lesson-card.completed {
+    background: linear-gradient(135deg, var(--color-success-light) 0%, var(--color-gray-800) 100%);
+  }
+  
+  .lesson-card.in-progress {
+    background: linear-gradient(135deg, var(--color-accent-200) 0%, var(--color-gray-800) 100%);
+  }
+}
+
+/* === PRINT STYLES === */
+
+@media print {
+  .card {
+    box-shadow: none;
+    border: 1px solid black;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .achievement-card::before {
+    display: none;
+  }
+}

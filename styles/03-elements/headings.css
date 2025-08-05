@@ -1,0 +1,431 @@
+/**
+ * SREĆNO UČENJE - HEADING ELEMENTS
+ * Educational platform heading typography
+ * Mobile-first, accessible, age-appropriate styling
+ */
+
+/* === BASE HEADING STYLES === */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Typography foundation */
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--text-primary);
+  
+  /* Spacing */
+  margin: 0 0 var(--space-4) 0;
+  
+  /* Text rendering optimizations */
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+  
+  /* Better line breaking */
+  overflow-wrap: break-word;
+  hyphens: auto;
+  text-wrap: balance;
+}
+
+/* === INDIVIDUAL HEADING STYLES === */
+
+h1 {
+  /* Display/Hero heading */
+  font-size: var(--text-h1-size);
+  line-height: var(--text-h1-line-height);
+  font-weight: var(--text-h1-weight);
+  letter-spacing: var(--text-h1-spacing);
+  margin-bottom: var(--space-6);
+  
+  /* Visual hierarchy */
+  color: var(--text-primary);
+}
+
+h2 {
+  /* Section heading */
+  font-size: var(--text-h2-size);
+  line-height: var(--text-h2-line-height);
+  font-weight: var(--text-h2-weight);
+  letter-spacing: var(--text-h2-spacing);
+  margin-bottom: var(--space-5);
+  margin-top: var(--space-8);
+  
+  /* Visual separation */
+  color: var(--text-primary);
+}
+
+h3 {
+  /* Subsection heading */
+  font-size: var(--text-h3-size);
+  line-height: var(--text-h3-line-height);
+  font-weight: var(--text-h3-weight);
+  letter-spacing: var(--text-h3-spacing);
+  margin-bottom: var(--space-4);
+  margin-top: var(--space-6);
+  
+  color: var(--text-primary);
+}
+
+h4 {
+  /* Component heading */
+  font-size: var(--text-h4-size);
+  line-height: var(--text-h4-line-height);
+  font-weight: var(--text-h4-weight);
+  letter-spacing: var(--text-h4-spacing);
+  margin-bottom: var(--space-3);
+  margin-top: var(--space-5);
+  
+  color: var(--text-secondary);
+}
+
+h5 {
+  /* Small section heading */
+  font-size: var(--text-h5-size);
+  line-height: var(--text-h5-line-height);
+  font-weight: var(--text-h5-weight);
+  letter-spacing: var(--text-h5-spacing);
+  margin-bottom: var(--space-2);
+  margin-top: var(--space-4);
+  
+  color: var(--text-secondary);
+}
+
+h6 {
+  /* Label/caption heading */
+  font-size: var(--text-h6-size);
+  line-height: var(--text-h6-line-height);
+  font-weight: var(--text-h6-weight);
+  letter-spacing: var(--text-h6-spacing);
+  margin-bottom: var(--space-2);
+  margin-top: var(--space-3);
+  
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* === FIRST HEADING ADJUSTMENTS === */
+
+/* Remove top margin from first headings */
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+/* === CONTEXTUAL HEADING STYLES === */
+
+/* Hero section headings */
+.hero h1,
+.hero-section h1 {
+  font-size: var(--text-display-size);
+  line-height: var(--text-display-line-height);
+  font-weight: var(--text-display-weight);
+  letter-spacing: var(--text-display-spacing);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+/* Page title headings */
+.page-title,
+main > h1:first-child {
+  font-size: var(--text-h1-size);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+/* Card headings */
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6 {
+  margin-top: 0;
+}
+
+.card h1:last-child,
+.card h2:last-child,
+.card h3:last-child,
+.card h4:last-child,
+.card h5:last-child,
+.card h6:last-child {
+  margin-bottom: 0;
+}
+
+/* Modal headings */
+.modal h1,
+.modal h2,
+.modal h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+/* === EDUCATIONAL CONTEXT STYLES === */
+
+/* Lesson headings */
+.lesson-title,
+.lesson h1 {
+  color: var(--color-primary-800);
+  border-left: 4px solid var(--color-primary);
+  padding-left: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+/* Quiz headings */
+.quiz-title,
+.quiz h1 {
+  color: var(--color-secondary-800);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.quiz-question h3,
+.question-title {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-4);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Exercise headings */
+.exercise-title,
+.exercise h1 {
+  color: var(--color-accent-800);
+  background-color: var(--color-accent-50);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-6);
+}
+
+/* Step headings for tutorials */
+.step-title,
+.step h3 {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-h4-size);
+  margin-bottom: var(--space-4);
+  display: inline-block;
+}
+
+.step-title::before,
+.step h3::before {
+  content: counter(step-counter) ". ";
+  font-weight: var(--font-weight-bold);
+}
+
+/* === AGE-APPROPRIATE STYLES === */
+
+/* Preschool (3-6 years) - Larger, friendlier */
+[data-age-group="preschool"] h1,
+[data-age-group="preschool"] h2,
+[data-age-group="preschool"] h3 {
+  font-size: calc(var(--text-h1-size) * 1.2);
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+}
+
+/* Elementary (6-12 years) - Standard educational */
+[data-age-group="elementary"] h1 {
+  color: var(--color-primary-700);
+}
+
+[data-age-group="elementary"] h2 {
+  color: var(--color-secondary-700);
+}
+
+/* Middle school (12-15 years) - More mature */
+[data-age-group="middle"] h1,
+[data-age-group="middle"] h2 {
+  color: var(--color-night-700);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Adults/Teachers - Professional styling */
+[data-age-group="adult"] h1,
+[data-age-group="adult"] h2,
+[data-age-group="adult"] h3 {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* === ACCESSIBILITY ENHANCEMENTS === */
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .lesson-title,
+  .lesson h1 {
+    border-left-width: 6px;
+  }
+  
+  .step-title,
+  .step h3 {
+    border: 2px solid var(--color-primary);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  /* Remove any animations on headings */
+  h1, h2, h3, h4, h5, h6 {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-gray-100);
+  }
+  
+  h4, h5 {
+    color: var(--color-gray-300);
+  }
+  
+  h6 {
+    color: var(--color-gray-400);
+  }
+  
+  .lesson-title,
+  .lesson h1 {
+    color: var(--color-primary-300);
+    border-left-color: var(--color-primary-400);
+  }
+  
+  .quiz-title,
+  .quiz h1 {
+    color: var(--color-secondary-300);
+  }
+  
+  .exercise-title,
+  .exercise h1 {
+    color: var(--color-accent-200);
+    background-color: var(--color-accent-900);
+  }
+}
+
+/* === PRINT STYLES === */
+
+@media print {
+  h1, h2, h3, h4, h5, h6 {
+    color: black;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  
+  h1 {
+    font-size: 24pt;
+    margin-bottom: 12pt;
+  }
+  
+  h2 {
+    font-size: 20pt;
+    margin-bottom: 10pt;
+    margin-top: 16pt;
+  }
+  
+  h3 {
+    font-size: 16pt;
+    margin-bottom: 8pt;
+    margin-top: 12pt;
+  }
+  
+  h4, h5, h6 {
+    font-size: 14pt;
+    margin-bottom: 6pt;
+    margin-top: 8pt;
+  }
+  
+  .lesson-title,
+  .lesson h1,
+  .quiz-title,
+  .quiz h1,
+  .exercise-title,
+  .exercise h1 {
+    background: none;
+    border: 1px solid black;
+    padding: 6pt;
+  }
+  
+  .step-title,
+  .step h3 {
+    background: none;
+    border: 1px solid black;
+    color: black;
+    padding: 4pt;
+  }
+}
+
+/* === UTILITY CLASSES === */
+
+/* Heading utilities */
+.heading-display {
+  font-size: var(--text-display-size);
+  line-height: var(--text-display-line-height);
+  font-weight: var(--text-display-weight);
+  letter-spacing: var(--text-display-spacing);
+}
+
+.heading-large {
+  font-size: var(--text-h1-size);
+  line-height: var(--text-h1-line-height);
+  font-weight: var(--text-h1-weight);
+}
+
+.heading-medium {
+  font-size: var(--text-h2-size);
+  line-height: var(--text-h2-line-height);
+  font-weight: var(--text-h2-weight);
+}
+
+.heading-small {
+  font-size: var(--text-h3-size);
+  line-height: var(--text-h3-line-height);
+  font-weight: var(--text-h3-weight);
+}
+
+/* Color utilities for headings */
+.heading-primary {
+  color: var(--color-primary-700);
+}
+
+.heading-secondary {
+  color: var(--color-secondary-700);
+}
+
+.heading-accent {
+  color: var(--color-accent-700);
+}
+
+.heading-muted {
+  color: var(--text-muted);
+}
+
+/* Alignment utilities */
+.heading-center {
+  text-align: center;
+}
+
+.heading-left {
+  text-align: left;
+}
+
+.heading-right {
+  text-align: right;
+}

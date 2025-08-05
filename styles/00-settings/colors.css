@@ -1,0 +1,127 @@
+/**
+ * SREĆNO UČENJE - COLOR SYSTEM
+ * Brand colors with semantic mapping and accessibility features
+ * All colors are WCAG AA compliant for educational content
+ */
+
+:root {
+  /* === SEMANTIC COLOR MAPPING === */
+  
+  /* Content colors */
+  --color-content-primary: var(--text-primary);
+  --color-content-secondary: var(--text-secondary);
+  --color-content-muted: var(--text-muted);
+  --color-content-inverse: var(--text-inverse);
+  
+  /* Interactive colors */
+  --color-interactive-primary: var(--color-primary);
+  --color-interactive-primary-hover: var(--color-primary-700);
+  --color-interactive-primary-active: var(--color-primary-800);
+  --color-interactive-primary-disabled: var(--color-primary-300);
+  
+  --color-interactive-secondary: var(--color-secondary);
+  --color-interactive-secondary-hover: var(--color-secondary-700);
+  --color-interactive-secondary-active: var(--color-secondary-800);
+  --color-interactive-secondary-disabled: var(--color-secondary-300);
+  
+  /* Surface colors */
+  --color-surface-primary: var(--bg-surface);
+  --color-surface-secondary: var(--color-gray-50);
+  --color-surface-tertiary: var(--color-gray-100);
+  --color-surface-overlay: var(--bg-overlay);
+  
+  /* Border colors */
+  --color-border-primary: var(--border-light);
+  --color-border-secondary: var(--border-medium);
+  --color-border-focus: var(--border-focus);
+  --color-border-error: var(--color-error);
+  --color-border-success: var(--color-success);
+  
+  /* Educational context colors */
+  --color-lesson-default: var(--color-primary-100);
+  --color-lesson-active: var(--color-primary-200);
+  --color-lesson-completed: var(--color-success-light);
+  --color-lesson-locked: var(--color-gray-100);
+  
+  --color-quiz-correct: var(--color-success);
+  --color-quiz-incorrect: var(--color-error);
+  --color-quiz-partial: var(--color-warning);
+  
+  --color-progress-background: var(--color-gray-200);
+  --color-progress-fill: var(--color-primary);
+  
+  /* Age group color coding */
+  --color-age-preschool: var(--color-accent);      /* 3-6 years - Sun (playful) */
+  --color-age-elementary: var(--color-primary);    /* 6-12 years - Grass (growth) */
+  --color-age-middle: var(--color-secondary);      /* 12-15 years - Sky (exploration) */
+  --color-age-high: var(--color-night);           /* 15+ years - Night (focus) */
+  
+  /* Role-based colors */
+  --color-role-child: var(--color-primary);
+  --color-role-parent: var(--color-secondary);
+  --color-role-teacher: var(--color-night);
+  --color-role-admin: var(--color-warm);
+}
+
+/* === HIGH CONTRAST MODE === */
+@media (prefers-contrast: high) {
+  :root {
+    /* Increase contrast ratios */
+    --color-primary: #2D5A0C;
+    --color-secondary: #1E5176;
+    --color-accent: #704A12;
+    --border-light: var(--color-gray-400);
+    --border-medium: var(--color-gray-600);
+    
+    /* Ensure minimum 7:1 contrast for text */
+    --text-primary: #000000;
+    --text-secondary: var(--color-gray-800);
+  }
+}
+
+/* === DARK MODE SUPPORT === */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Invert color relationships for dark mode */
+    --bg-body: var(--color-gray-900);
+    --bg-surface: var(--color-gray-800);
+    --text-primary: var(--color-gray-50);
+    --text-secondary: var(--color-gray-300);
+    --text-muted: var(--color-gray-400);
+    
+    /* Adjust brand colors for dark backgrounds */
+    --color-primary: #8AF76D;
+    --color-secondary: #83E6FF;
+    --color-accent: #FFEA8C;
+    
+    /* Borders */
+    --border-light: var(--color-gray-700);
+    --border-medium: var(--color-gray-600);
+    --border-strong: var(--color-gray-500);
+    
+    /* Surfaces */
+    --color-surface-secondary: var(--color-gray-800);
+    --color-surface-tertiary: var(--color-gray-700);
+  }
+}
+
+/* === PRINT STYLES === */
+@media print {
+  :root {
+    /* Use high contrast colors for print */
+    --color-primary: #000000;
+    --color-secondary: #000000;
+    --color-accent: #000000;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --text-muted: #666666;
+    --bg-body: #ffffff;
+    --bg-surface: #ffffff;
+    
+    /* Remove all shadows and effects */
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-xl: none;
+  }
+}

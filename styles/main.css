@@ -1,0 +1,159 @@
+/**
+ * SREĆNO UČENJE - MAIN CSS ENTRY POINT
+ * Mobile-first, scalable CSS architecture for educational platform
+ * 
+ * This file combines Tailwind CSS with our custom ITCSS architecture
+ * for maximum flexibility and maintainability.
+ */
+
+/* === TAILWIND BASE LAYER === */
+@tailwind base;
+
+/* === CUSTOM ITCSS ARCHITECTURE === */
+/* Import our ITCSS layers after Tailwind base but before components */
+@import './index.css';
+
+/* === TAILWIND COMPONENTS LAYER === */
+@tailwind components;
+
+/* === TAILWIND UTILITIES LAYER === */
+@tailwind utilities;
+
+/* === CUSTOM OVERRIDES === */
+/* Any overrides that need to come after Tailwind utilities */
+
+/* Component-specific overrides for Tailwind */
+@layer components {
+  /* Ensure our custom buttons work with Tailwind */
+  .btn {
+    @apply inline-flex items-center justify-center;
+  }
+  
+  /* Ensure our cards work with Tailwind */
+  .card {
+    @apply relative overflow-hidden;
+  }
+  
+  /* Container integration */
+  .container-modern {
+    @apply w-full mx-auto px-4;
+  }
+  
+  @screen sm {
+    .container-modern {
+      @apply px-6;
+    }
+  }
+  
+  @screen md {
+    .container-modern {
+      @apply max-w-2xl px-8;
+    }
+  }
+  
+  @screen lg {
+    .container-modern {
+      @apply max-w-4xl;
+    }
+  }
+  
+  @screen xl {
+    .container-modern {
+      @apply max-w-5xl px-12;
+    }
+  }
+  
+  @screen 2xl {
+    .container-modern {
+      @apply max-w-6xl;
+    }
+  }
+}
+
+/* === EDUCATIONAL PLATFORM INTEGRATION === */
+@layer utilities {
+  /* CMS integration utilities */
+  .cms-wrapper {
+    @apply w-full max-w-none;
+  }
+  
+  /* Age-appropriate responsive utilities */
+  .text-age-responsive {
+    @apply text-base;
+  }
+  
+  @screen sm {
+    .text-age-responsive {
+      @apply text-lg;
+    }
+  }
+  
+  @screen md {
+    .text-age-responsive {
+      @apply text-xl;
+    }
+  }
+  
+  /* Touch-friendly utilities */
+  .touch-friendly {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  @media (hover: none) and (pointer: coarse) {
+    .touch-friendly {
+      @apply min-h-[48px] min-w-[48px];
+    }
+  }
+  
+  /* Educational context utilities */
+  .lesson-layout {
+    @apply max-w-prose mx-auto px-4 py-8;
+  }
+  
+  .quiz-layout {
+    @apply max-w-2xl mx-auto px-4 py-6;
+  }
+  
+  .dashboard-layout {
+    @apply max-w-7xl mx-auto px-4 py-6;
+  }
+  
+  /* Brand consistency utilities */
+  .brand-shadow-primary {
+    box-shadow: 0 4px 14px 0 rgba(110, 242, 20, 0.25);
+  }
+  
+  .brand-shadow-secondary {
+    box-shadow: 0 4px 14px 0 rgba(79, 214, 255, 0.25);
+  }
+  
+  .brand-shadow-accent {
+    box-shadow: 0 4px 14px 0 rgba(252, 219, 21, 0.25);
+  }
+  
+  /* Focus ring utilities that complement Tailwind */
+  .focus-brand {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2;
+  }
+  
+  /* Accessibility utilities */
+  .sr-only-focusable:focus {
+    @apply not-sr-only;
+  }
+  
+  /* Loading state utilities */
+  .loading-shimmer {
+    background: linear-gradient(90deg, 
+      theme('colors.gray.200') 25%, 
+      theme('colors.gray.100') 50%, 
+      theme('colors.gray.200') 75%
+    );
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+  
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+}

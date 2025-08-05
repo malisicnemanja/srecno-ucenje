@@ -1,0 +1,321 @@
+/**
+ * SREĆNO UČENJE - CONTAINER OBJECTS
+ * Layout containers for educational platform
+ * Mobile-first responsive containers with consistent spacing
+ */
+
+/* === BASE CONTAINER === */
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+  
+  /* Mobile first - no max width */
+  max-width: none;
+}
+
+/* === RESPONSIVE CONTAINERS === */
+
+/* Small screens and up */
+@media (min-width: 480px) {
+  .container {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+}
+
+/* Medium screens and up */
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--container-md);
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+}
+
+/* Large screens and up */
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+}
+
+/* Extra large screens and up */
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-xl);
+    padding-left: var(--space-12);
+    padding-right: var(--space-12);
+  }
+}
+
+/* 2XL screens and up */
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-2xl);
+  }
+}
+
+/* 3XL screens and up */
+@media (min-width: 1440px) {
+  .container {
+    max-width: var(--container-3xl);
+  }
+}
+
+/* === CONTAINER VARIANTS === */
+
+/* Full width container */
+.container-fluid {
+  width: 100%;
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: none;
+}
+
+/* Narrow container for reading */
+.container-narrow {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+}
+
+/* Wide container for dashboards */
+.container-wide {
+  width: 100%;
+  max-width: var(--content-wide-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+}
+
+/* Compact container for modals */
+.container-compact {
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+/* === EDUCATIONAL CONTAINERS === */
+
+/* Lesson content container */
+.lesson-container {
+  width: 100%;
+  max-width: var(--content-width-elementary);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+}
+
+/* Quiz container */
+.quiz-container {
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+}
+
+/* Exercise container */
+.exercise-container {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+}
+
+/* Dashboard container */
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+}
+
+/* === AGE-APPROPRIATE CONTAINERS === */
+
+/* Preschool - Larger padding, narrower content */
+.container-preschool {
+  max-width: var(--content-width-preschool);
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Elementary - Standard educational width */
+.container-elementary {
+  max-width: var(--content-width-elementary);
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Adult/Teacher - Wider for efficiency */
+.container-adult {
+  max-width: var(--content-width-adult);
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === SECTION CONTAINERS === */
+
+/* Hero section container */
+.hero-container {
+  width: 100%;
+  max-width: none;
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Feature section container */
+.features-container {
+  width: 100%;
+  max-width: var(--container-2xl);
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Content section container */
+.content-container {
+  width: 100%;
+  max-width: var(--content-max-width);
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === SAFE AREA CONTAINERS === */
+
+/* Safe area container for mobile devices with notches */
+.container-safe {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--safe-padding-left);
+  padding-right: var(--safe-padding-right);
+  padding-top: var(--safe-padding-top);
+  padding-bottom: var(--safe-padding-bottom);
+}
+
+/* === PRINT CONTAINERS === */
+
+@media print {
+  .container,
+  .container-fluid,
+  .container-narrow,
+  .container-wide,
+  .container-compact {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* === UTILITY CLASSES === */
+
+/* No padding container */
+.container-no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Extra padding container */
+.container-extra-padding {
+  padding-left: calc(var(--space-container-padding) * 2);
+  padding-right: calc(var(--space-container-padding) * 2);
+}
+
+/* Vertical padding containers */
+.container-padding-y {
+  padding-top: var(--space-section-md);
+  padding-bottom: var(--space-section-md);
+}
+
+.container-padding-y-sm {
+  padding-top: var(--space-section-sm);
+  padding-bottom: var(--space-section-sm);
+}
+
+.container-padding-y-lg {
+  padding-top: var(--space-section-lg);
+  padding-bottom: var(--space-section-lg);
+}
+
+/* Centered containers */
+.container-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.container-center-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Flex containers */
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.container-flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* Grid containers */
+.container-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .container-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+}

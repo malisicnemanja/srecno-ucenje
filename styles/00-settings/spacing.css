@@ -1,0 +1,210 @@
+/**
+ * SREĆNO UČENJE - SPACING SYSTEM
+ * Mobile-first spacing scale for educational platform
+ * Consistent vertical rhythm and touch-friendly spacing
+ */
+
+:root {
+  /* === BASE SPACING SCALE === */
+  /* Mobile-first spacing (320px+) */
+  --space-0: 0;
+  --space-px: 1px;
+  --space-0-5: 0.125rem;   /* 2px */
+  --space-1: 0.25rem;      /* 4px */
+  --space-1-5: 0.375rem;   /* 6px */
+  --space-2: 0.5rem;       /* 8px */
+  --space-2-5: 0.625rem;   /* 10px */
+  --space-3: 0.75rem;      /* 12px */
+  --space-3-5: 0.875rem;   /* 14px */
+  --space-4: 1rem;         /* 16px */
+  --space-5: 1.25rem;      /* 20px */
+  --space-6: 1.5rem;       /* 24px */
+  --space-7: 1.75rem;      /* 28px */
+  --space-8: 2rem;         /* 32px */
+  --space-9: 2.25rem;      /* 36px */
+  --space-10: 2.5rem;      /* 40px */
+  --space-11: 2.75rem;     /* 44px - WCAG touch target */
+  --space-12: 3rem;        /* 48px */
+  --space-14: 3.5rem;      /* 56px */
+  --space-16: 4rem;        /* 64px */
+  --space-18: 4.5rem;      /* 72px */
+  --space-20: 5rem;        /* 80px */
+  --space-24: 6rem;        /* 96px */
+  --space-28: 7rem;        /* 112px */
+  --space-32: 8rem;        /* 128px */
+  --space-36: 9rem;        /* 144px */
+  --space-40: 10rem;       /* 160px */
+  --space-44: 11rem;       /* 176px */
+  --space-48: 12rem;       /* 192px */
+  --space-52: 13rem;       /* 208px */
+  --space-56: 14rem;       /* 224px */
+  --space-60: 15rem;       /* 240px */
+  --space-64: 16rem;       /* 256px */
+  --space-72: 18rem;       /* 288px */
+  --space-80: 20rem;       /* 320px */
+  --space-96: 24rem;       /* 384px */
+
+  /* === SEMANTIC SPACING === */
+  
+  /* Component spacing */
+  --space-component-xs: var(--space-1);
+  --space-component-sm: var(--space-2);
+  --space-component-md: var(--space-4);
+  --space-component-lg: var(--space-6);
+  --space-component-xl: var(--space-8);
+  --space-component-2xl: var(--space-12);
+
+  /* Layout spacing */
+  --space-layout-xs: var(--space-4);
+  --space-layout-sm: var(--space-6);
+  --space-layout-md: var(--space-8);
+  --space-layout-lg: var(--space-12);
+  --space-layout-xl: var(--space-16);
+  --space-layout-2xl: var(--space-24);
+
+  /* Section spacing */
+  --space-section-xs: var(--space-8);
+  --space-section-sm: var(--space-12);
+  --space-section-md: var(--space-16);
+  --space-section-lg: var(--space-24);
+  --space-section-xl: var(--space-32);
+  --space-section-2xl: var(--space-48);
+
+  /* === EDUCATIONAL SPACING === */
+  
+  /* Touch targets (WCAG AA compliant) */
+  --space-touch-min: var(--space-11);      /* 44px minimum */
+  --space-touch-comfortable: var(--space-12); /* 48px comfortable */
+  --space-touch-large: var(--space-14);    /* 56px large */
+
+  /* Content spacing */
+  --space-paragraph: var(--space-4);       /* Between paragraphs */
+  --space-list-item: var(--space-2);       /* Between list items */
+  --space-heading: var(--space-6);         /* After headings */
+  --space-content-block: var(--space-8);   /* Between content blocks */
+
+  /* Interactive spacing */
+  --space-button-padding-x: var(--space-4);
+  --space-button-padding-y: var(--space-3);
+  --space-input-padding-x: var(--space-3);
+  --space-input-padding-y: var(--space-2-5);
+  --space-card-padding: var(--space-6);
+  --space-modal-padding: var(--space-8);
+
+  /* Container padding */
+  --space-container-padding: var(--space-4); /* Mobile container padding */
+  --space-page-padding-top: var(--space-16); /* Top padding for pages */
+  --space-page-padding-bottom: var(--space-24); /* Bottom padding for pages */
+
+  /* === NEGATIVE SPACING === */
+  --space-negative-1: calc(-1 * var(--space-1));
+  --space-negative-2: calc(-1 * var(--space-2));
+  --space-negative-3: calc(-1 * var(--space-3));
+  --space-negative-4: calc(-1 * var(--space-4));
+  --space-negative-6: calc(-1 * var(--space-6));
+  --space-negative-8: calc(-1 * var(--space-8));
+  --space-negative-12: calc(-1 * var(--space-12));
+  --space-negative-16: calc(-1 * var(--space-16));
+
+  /* === BORDER RADIUS === */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;     /* 2px */
+  --radius-base: 0.25rem;    /* 4px */
+  --radius-md: 0.375rem;     /* 6px */
+  --radius-lg: 0.5rem;       /* 8px */
+  --radius-xl: 0.75rem;      /* 12px */
+  --radius-2xl: 1rem;        /* 16px */
+  --radius-3xl: 1.5rem;      /* 24px */
+  --radius-full: 9999px;
+
+  /* Educational component radius */
+  --radius-card: var(--radius-lg);
+  --radius-button: var(--radius-md);
+  --radius-input: var(--radius-md);
+  --radius-modal: var(--radius-xl);
+  --radius-avatar: var(--radius-full);
+
+  /* === SHADOWS === */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-2xl: 0 50px 100px -20px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+  /* Brand shadows */
+  --shadow-primary: 0 4px 14px 0 rgba(110, 242, 20, 0.25);
+  --shadow-secondary: 0 4px 14px 0 rgba(79, 214, 255, 0.25);
+  --shadow-accent: 0 4px 14px 0 rgba(252, 219, 21, 0.25);
+
+  /* === TRANSITIONS === */
+  --transition-fast: 150ms ease-out;
+  --transition-base: 200ms ease-out;
+  --transition-slow: 300ms ease-out;
+  --transition-slowest: 500ms ease-out;
+
+  /* Spring transitions */
+  --transition-spring: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-bounce: 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* === RESPONSIVE SPACING === */
+/* Progressive enhancement for larger screens */
+
+@media (min-width: 640px) {
+  :root {
+    --space-container-padding: var(--space-6);
+    --space-section-md: var(--space-20);
+    --space-section-lg: var(--space-28);
+    --space-section-xl: var(--space-40);
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --space-container-padding: var(--space-8);
+    --space-section-md: var(--space-24);
+    --space-section-lg: var(--space-32);
+    --space-section-xl: var(--space-48);
+    --space-section-2xl: var(--space-64);
+    
+    /* Larger component spacing on tablets */
+    --space-card-padding: var(--space-8);
+    --space-modal-padding: var(--space-12);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --space-container-padding: var(--space-12);
+    --space-section-lg: var(--space-40);
+    --space-section-xl: var(--space-56);
+    --space-section-2xl: var(--space-80);
+    
+    /* Desktop spacing */
+    --space-card-padding: var(--space-10);
+    --space-modal-padding: var(--space-16);
+  }
+}
+
+/* === PRINT SPACING === */
+@media print {
+  :root {
+    /* Reduce spacing for print */
+    --space-section-md: var(--space-8);
+    --space-section-lg: var(--space-12);
+    --space-section-xl: var(--space-16);
+    --space-card-padding: var(--space-4);
+    --space-paragraph: var(--space-2);
+    
+    /* Remove shadows for print */
+    --shadow-xs: none;
+    --shadow-sm: none;
+    --shadow-base: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-xl: none;
+  }
+}

@@ -1,5 +1,5 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Quicksand } from 'next/font/google'
 import StickyHeader from '@/components/common/StickyHeader'
 import Footer from '@/components/common/Footer'
 import GoogleAnalytics from '@/components/common/GoogleAnalytics'
@@ -10,12 +10,20 @@ import PerformanceMonitor from '@/components/common/PerformanceMonitor'
 import NotificationBarWrapper from '@/components/common/NotificationBarWrapper'
 import { Metadata } from 'next'
 
-// Optimize font loading
+// Educational platform fonts - optimized loading
 const inter = Inter({ 
   subsets: ['latin', 'latin-ext'],
   display: 'swap',
   preload: true,
   variable: '--font-inter',
+})
+
+const quicksand = Quicksand({
+  subsets: ['latin', 'latin-ext'],
+  display: 'swap',
+  preload: true,
+  variable: '--font-quicksand',
+  weight: ['300', '400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {
@@ -67,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="sr" className={inter.className}>
+    <html lang="sr" className={`${inter.variable} ${quicksand.variable}`}>
       <head>
         <GoogleAnalytics />
         <link rel="manifest" href="/manifest.json" />

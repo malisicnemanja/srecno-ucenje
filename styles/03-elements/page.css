@@ -1,0 +1,380 @@
+/**
+ * SREĆNO UČENJE - PAGE ELEMENTS
+ * Base HTML element styling for educational platform
+ * Mobile-first, accessible, optimized for learning content
+ */
+
+/* === ROOT DOCUMENT === */
+
+html {
+  /* Font smoothing for better readability */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Better text rendering */
+  text-rendering: optimizeLegibility;
+  
+  /* Smooth scrolling for educational navigation */
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--space-20);
+  
+  /* Prevent zoom on form focus (iOS) */
+  -webkit-text-size-adjust: 100%;
+  
+  /* Tab size for code examples */
+  tab-size: 4;
+  
+  /* Base font setup */
+  font-family: var(--font-primary);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line-height);
+}
+
+/* === BODY === */
+
+body {
+  /* Base styling */
+  font-family: var(--font-primary);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line-height);
+  font-weight: var(--text-body-weight);
+  color: var(--text-primary);
+  background-color: var(--bg-body);
+  
+  /* Mobile optimization */
+  min-width: 320px;
+  overflow-x: hidden;
+  
+  /* Better touch scrolling */
+  -webkit-overflow-scrolling: touch;
+  
+  /* Remove default margins */
+  margin: 0;
+  padding: 0;
+  
+  /* Typography enhancements */
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-variant-ligatures: common-ligatures;
+  
+  /* Better hyphenation for educational content */
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}
+
+/* === MAIN STRUCTURAL ELEMENTS === */
+
+main {
+  /* Main content area */
+  display: block;
+  min-height: calc(100vh - var(--space-32)); /* Account for header/footer */
+  padding-top: var(--safe-padding-top);
+  padding-bottom: var(--safe-padding-bottom);
+}
+
+section {
+  /* Section spacing */
+  margin-bottom: var(--space-section-md);
+}
+
+article {
+  /* Article content styling */
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+aside {
+  /* Sidebar content */
+  font-size: var(--text-body-small-size);
+  line-height: var(--text-body-small-line-height);
+  color: var(--text-secondary);
+}
+
+header {
+  /* Header styling */
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+footer {
+  /* Footer styling */
+  background-color: var(--color-gray-100);
+  color: var(--text-secondary);
+  padding: var(--space-section-sm) 0;
+  margin-top: var(--space-section-lg);
+}
+
+nav {
+  /* Navigation styling */
+  font-weight: var(--font-weight-medium);
+}
+
+/* === ADDRESS AND CONTACT === */
+
+address {
+  font-style: normal;
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* === FIGURE AND FIGCAPTION === */
+
+figure {
+  margin: var(--space-6) 0;
+}
+
+figcaption {
+  font-size: var(--text-caption-size);
+  line-height: var(--text-caption-line-height);
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: var(--space-2);
+  font-style: italic;
+}
+
+/* === DETAILS AND SUMMARY === */
+
+details {
+  margin: var(--space-4) 0;
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background-color: var(--bg-surface);
+}
+
+summary {
+  padding: var(--space-4);
+  background-color: var(--color-gray-50);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+  border-bottom: 1px solid var(--color-border-primary);
+  min-height: var(--space-touch-min);
+  display: flex;
+  align-items: center;
+  transition: background-color var(--transition-base);
+}
+
+summary:hover {
+  background-color: var(--color-gray-100);
+}
+
+summary:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: -3px;
+  background-color: var(--color-primary-50);
+}
+
+details[open] summary {
+  border-bottom-color: var(--color-border-primary);
+}
+
+details > *:not(summary) {
+  padding: var(--space-4);
+}
+
+/* === EDUCATIONAL CONTENT OPTIMIZATIONS === */
+
+/* Better reading experience */
+body.reading-mode {
+  font-size: var(--text-body-large-size);
+  line-height: var(--line-height-loose);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-container-padding);
+}
+
+/* Age-appropriate styling */
+body[data-age-group="preschool"] {
+  font-size: var(--text-preschool-size);
+  line-height: var(--text-beginner-line-height);
+}
+
+body[data-age-group="elementary"] {
+  font-size: var(--text-elementary-size);
+  line-height: var(--text-intermediate-line-height);
+}
+
+body[data-age-group="middle"] {
+  font-size: var(--text-middle-size);
+  line-height: var(--text-advanced-line-height);
+}
+
+/* === ACCESSIBILITY ENHANCEMENTS === */
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  header,
+  footer {
+    border-width: 2px;
+  }
+  
+  details,
+  summary {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  summary {
+    transition: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-gray-900);
+    color: var(--color-gray-100);
+  }
+  
+  main {
+    background-color: var(--color-gray-900);
+  }
+  
+  header {
+    background-color: var(--color-gray-800);
+    border-bottom-color: var(--color-gray-700);
+  }
+  
+  footer {
+    background-color: var(--color-gray-800);
+    color: var(--color-gray-300);
+  }
+  
+  details {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+  
+  summary {
+    background-color: var(--color-gray-700);
+    border-bottom-color: var(--color-gray-600);
+  }
+  
+  summary:hover {
+    background-color: var(--color-gray-600);
+  }
+}
+
+/* === PRINT STYLES === */
+
+@media print {
+  html {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  body {
+    background: white;
+    color: black;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    padding: 0;
+    min-height: auto;
+  }
+  
+  header,
+  footer,
+  nav,
+  aside {
+    display: none;
+  }
+  
+  section {
+    margin-bottom: 1rem;
+    page-break-inside: avoid;
+  }
+  
+  details summary {
+    display: none;
+  }
+  
+  details {
+    border: none;
+  }
+  
+  details > *:not(summary) {
+    padding: 0;
+  }
+}
+
+/* === RESPONSIVE ENHANCEMENTS === */
+
+/* Small screens */
+@media (max-width: 479px) {
+  body {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+  }
+  
+  main {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  body {
+    font-size: var(--text-body-large-size);
+    line-height: var(--text-body-large-line-height);
+  }
+  
+  main {
+    padding-left: var(--space-container-padding);
+    padding-right: var(--space-container-padding);
+  }
+  
+  section {
+    margin-bottom: var(--space-section-lg);
+  }
+}
+
+/* === FOCUS MANAGEMENT === */
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  z-index: var(--z-tooltip);
+  transition: top var(--transition-base);
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Focus ring for keyboard navigation */
+*:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Remove focus outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}

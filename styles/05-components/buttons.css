@@ -1,0 +1,541 @@
+/**
+ * SREĆNO UČENJE - BUTTON COMPONENTS
+ * Educational platform button system
+ * Mobile-first, WCAG AA compliant, touch-friendly
+ */
+
+/* === BASE BUTTON === */
+
+.btn {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  
+  /* Sizing */
+  padding: var(--space-button-padding-y) var(--space-button-padding-x);
+  min-height: var(--space-touch-min);
+  min-width: var(--space-touch-min);
+  
+  /* Typography */
+  font-family: var(--font-primary);
+  font-size: var(--text-button-size);
+  line-height: var(--text-button-line-height);
+  font-weight: var(--text-button-weight);
+  letter-spacing: var(--text-button-spacing);
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  
+  /* Appearance */
+  border: none;
+  border-radius: var(--radius-button);
+  background: none;
+  cursor: pointer;
+  user-select: none;
+  
+  /* Interactions */
+  transition: all var(--transition-base);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  
+  /* Accessibility */
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* === PRIMARY BUTTONS === */
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  background-color: var(--color-primary-800);
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:focus-visible {
+  box-shadow: var(--shadow-primary), 0 0 0 3px var(--primary-30);
+}
+
+/* === SECONDARY BUTTONS === */
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+  box-shadow: var(--shadow-secondary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:active {
+  background-color: var(--color-secondary-800);
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:focus-visible {
+  box-shadow: var(--shadow-secondary), 0 0 0 3px var(--secondary-30);
+}
+
+/* === ACCENT BUTTONS === */
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-night-800);
+  box-shadow: var(--shadow-accent);
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent-500);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-accent:active {
+  background-color: var(--color-accent-600);
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-accent:focus-visible {
+  box-shadow: var(--shadow-accent), 0 0 0 3px var(--accent-30);
+}
+
+/* === OUTLINE BUTTONS === */
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary-700);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-700);
+  color: var(--color-primary-800);
+}
+
+.btn-outline:active {
+  background-color: var(--color-primary-100);
+}
+
+.btn-outline-secondary {
+  color: var(--color-secondary-700);
+  border-color: var(--color-secondary);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--color-secondary-50);
+  border-color: var(--color-secondary-700);
+  color: var(--color-secondary-800);
+}
+
+.btn-outline-accent {
+  color: var(--color-accent-700);
+  border-color: var(--color-accent);
+}
+
+.btn-outline-accent:hover {
+  background-color: var(--color-accent-50);
+  border-color: var(--color-accent-700);
+  color: var(--color-accent-800);
+}
+
+/* === GHOST BUTTONS === */
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-primary-700);
+  border: none;
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+}
+
+.btn-ghost:active {
+  background-color: var(--color-primary-200);
+}
+
+.btn-ghost-secondary {
+  color: var(--color-secondary-700);
+}
+
+.btn-ghost-secondary:hover {
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-800);
+}
+
+/* === BUTTON SIZES === */
+
+.btn-xs {
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-xs);
+  min-height: var(--space-8);
+  border-radius: var(--radius-sm);
+}
+
+.btn-sm {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+  min-height: var(--space-10);
+  border-radius: var(--radius-md);
+}
+
+.btn-md {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-base);
+  min-height: var(--space-touch-min);
+  border-radius: var(--radius-button);
+}
+
+.btn-lg {
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-lg);
+  min-height: var(--space-touch-comfortable);
+  border-radius: var(--radius-lg);
+}
+
+.btn-xl {
+  padding: var(--space-5) var(--space-8);
+  font-size: var(--font-size-xl);
+  min-height: var(--space-14);
+  border-radius: var(--radius-xl);
+}
+
+/* === BUTTON SHAPES === */
+
+.btn-square {
+  padding: var(--space-3);
+  aspect-ratio: 1;
+  border-radius: var(--radius-button);
+}
+
+.btn-circle {
+  padding: var(--space-3);
+  aspect-ratio: 1;
+  border-radius: var(--radius-full);
+}
+
+.btn-pill {
+  border-radius: var(--radius-full);
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+/* === FULL WIDTH BUTTONS === */
+
+.btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+/* === EDUCATIONAL BUTTON VARIANTS === */
+
+/* Start lesson button */
+.btn-start-lesson {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-600) 100%);
+  color: white;
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-primary);
+  position: relative;
+}
+
+.btn-start-lesson::before {
+  content: '▶';
+  margin-right: var(--space-2);
+  font-size: 0.875em;
+}
+
+.btn-start-lesson:hover {
+  background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-700) 100%);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Complete lesson button */
+.btn-complete {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.btn-complete::before {
+  content: '✓';
+  margin-right: var(--space-2);
+}
+
+.btn-complete:hover {
+  background-color: var(--color-success);
+  transform: scale(1.05);
+}
+
+/* Quiz answer buttons */
+.btn-quiz-option {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 2px solid var(--color-border-primary);
+  text-align: left;
+  width: 100%;
+  padding: var(--space-4);
+  justify-content: flex-start;
+  min-height: var(--space-16);
+  border-radius: var(--radius-lg);
+}
+
+.btn-quiz-option:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-50);
+}
+
+.btn-quiz-option.correct {
+  border-color: var(--color-success);
+  background-color: var(--color-success-light);
+  color: var(--color-success);
+}
+
+.btn-quiz-option.incorrect {
+  border-color: var(--color-error);
+  background-color: var(--color-error-light);
+  color: var(--color-error);
+}
+
+.btn-quiz-option.selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+}
+
+/* Progress buttons */
+.btn-next-lesson {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn-next-lesson::after {
+  content: '→';
+  margin-left: var(--space-2);
+}
+
+.btn-prev-lesson {
+  background-color: var(--color-gray-600);
+  color: white;
+}
+
+.btn-prev-lesson::before {
+  content: '←';
+  margin-right: var(--space-2);
+}
+
+/* Achievement button */
+.btn-achievement {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-achievement::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(45deg);
+  animation: shimmer 2s infinite;
+}
+
+/* === BUTTON GROUPS === */
+
+.btn-group {
+  display: inline-flex;
+  border-radius: var(--radius-button);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.btn-group .btn {
+  border-radius: 0;
+  margin: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-group .btn:first-child {
+  border-top-left-radius: var(--radius-button);
+  border-bottom-left-radius: var(--radius-button);
+}
+
+.btn-group .btn:last-child {
+  border-top-right-radius: var(--radius-button);
+  border-bottom-right-radius: var(--radius-button);
+  border-right: none;
+}
+
+.btn-group-vertical {
+  flex-direction: column;
+}
+
+.btn-group-vertical .btn {
+  border-right: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-group-vertical .btn:first-child {
+  border-radius: var(--radius-button) var(--radius-button) 0 0;
+}
+
+.btn-group-vertical .btn:last-child {
+  border-radius: 0 0 var(--radius-button) var(--radius-button);
+  border-bottom: none;
+}
+
+/* === LOADING STATES === */
+
+.btn-loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  margin: -0.6em 0 0 -0.6em;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: var(--radius-full);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === ACCESSIBILITY ENHANCEMENTS === */
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+  
+  .btn-achievement::before {
+    animation: none;
+  }
+  
+  .btn-loading::after {
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .btn {
+    border: 2px solid currentColor;
+  }
+  
+  .btn-outline {
+    border-width: 3px;
+  }
+  
+  .btn-quiz-option {
+    border-width: 3px;
+  }
+}
+
+/* === DARK MODE === */
+
+@media (prefers-color-scheme: dark) {
+  .btn-quiz-option {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+    color: var(--color-gray-100);
+  }
+  
+  .btn-quiz-option:hover {
+    background-color: var(--color-gray-700);
+    border-color: var(--color-primary-400);
+  }
+  
+  .btn-ghost {
+    color: var(--color-gray-300);
+  }
+  
+  .btn-ghost:hover {
+    background-color: var(--color-gray-800);
+    color: var(--color-gray-100);
+  }
+}
+
+/* === PRINT STYLES === */
+
+@media print {
+  .btn {
+    background: none !important;
+    color: black !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  
+  .btn::before,
+  .btn::after {
+    display: none;
+  }
+}
+
+/* === TOUCH DEVICE OPTIMIZATIONS === */
+
+@media (hover: none) and (pointer: coarse) {
+  .btn {
+    min-height: var(--space-touch-comfortable);
+    padding: var(--space-4) var(--space-6);
+  }
+  
+  .btn-sm {
+    min-height: var(--space-touch-min);
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  .btn-quiz-option {
+    min-height: var(--space-20);
+    padding: var(--space-5);
+  }
+}

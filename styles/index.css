@@ -1,0 +1,73 @@
+/**
+ * SREĆNO UČENJE - ITCSS ARCHITECTURE
+ * Mobile-First, Scalable CSS Architecture for Educational Platform
+ * 
+ * ITCSS Structure:
+ * 1. Settings – Global variables, configuration
+ * 2. Tools – Mixins and functions
+ * 3. Generic – CSS resets, normalize
+ * 4. Elements – Bare HTML elements
+ * 5. Objects – Layout patterns, grids
+ * 6. Components – UI components
+ * 7. Utilities – Helper classes
+ */
+
+/* === 1. SETTINGS === */
+@import './00-settings/variables.css';
+@import './00-settings/breakpoints.css';
+@import './00-settings/colors.css';
+@import './00-settings/typography.css';
+@import './00-settings/spacing.css';
+
+/* === 2. TOOLS === */
+@import './01-tools/mixins.css';
+@import './01-tools/functions.css';
+
+/* === 3. GENERIC === */
+@import './02-generic/reset.css';
+@import './02-generic/normalize.css';
+@import './02-generic/box-sizing.css';
+
+/* === 4. ELEMENTS === */
+@import './03-elements/page.css';
+@import './03-elements/headings.css';
+@import './03-elements/text.css';
+@import './03-elements/links.css';
+@import './03-elements/forms.css';
+@import './03-elements/buttons.css';
+@import './03-elements/images.css';
+
+/* === 5. OBJECTS === */
+@import './04-objects/container.css';
+@import './04-objects/grid.css';
+@import './04-objects/layout.css';
+@import './04-objects/media.css';
+@import './04-objects/list.css';
+
+/* === 6. COMPONENTS === */
+@import './05-components/header.css';
+@import './05-components/navigation.css';
+@import './05-components/hero.css';
+@import './05-components/card.css';
+@import './05-components/buttons.css';
+@import './05-components/forms.css';
+@import './05-components/modal.css';
+@import './05-components/toast.css';
+@import './05-components/loader.css';
+@import './05-components/quiz.css';
+@import './05-components/lesson.css';
+@import './05-components/footer.css';
+
+/* === 7. UTILITIES === */
+@import './06-utilities/display.css';
+@import './06-utilities/spacing.css';
+@import './06-utilities/typography.css';
+@import './06-utilities/colors.css';
+@import './06-utilities/layout.css';
+@import './06-utilities/accessibility.css';
+@import './06-utilities/animations.css';
+
+/* === CMS CONTENT === */
+@import './cms/placeholders.css';
+@import './cms/content-wrappers.css';
+@import './cms/portable-text.css';

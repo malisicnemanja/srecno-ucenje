@@ -1,0 +1,323 @@
+/**
+ * SREĆNO UČENJE - COLOR UTILITIES
+ * Brand color utility classes for educational platform
+ * Consistent color application across components
+ */
+
+/* === BRAND COLOR UTILITIES === */
+
+/* Primary brand colors (direct brand colors) */
+.text-brand-sky { color: var(--brand-sky) !important; }
+.text-brand-sun { color: var(--brand-sun) !important; }
+.text-brand-grass { color: var(--brand-grass) !important; }
+.text-brand-heart { color: var(--brand-heart) !important; }
+.text-brand-night { color: var(--brand-night) !important; }
+
+.bg-brand-sky { background-color: var(--brand-sky) !important; }
+.bg-brand-sun { background-color: var(--brand-sun) !important; }
+.bg-brand-grass { background-color: var(--brand-grass) !important; }
+.bg-brand-heart { background-color: var(--brand-heart) !important; }
+.bg-brand-night { background-color: var(--brand-night) !important; }
+
+/* === SEMANTIC COLOR UTILITIES === */
+
+/* Primary colors (semantic mapping) */
+.text-primary-50 { color: var(--color-primary-50) !important; }
+.text-primary-100 { color: var(--color-primary-100) !important; }
+.text-primary-200 { color: var(--color-primary-200) !important; }
+.text-primary-300 { color: var(--color-primary-300) !important; }
+.text-primary-400 { color: var(--color-primary-400) !important; }
+.text-primary-500 { color: var(--color-primary-500) !important; }
+.text-primary-600 { color: var(--color-primary-600) !important; }
+.text-primary-700 { color: var(--color-primary-700) !important; }
+.text-primary-800 { color: var(--color-primary-800) !important; }
+.text-primary-900 { color: var(--color-primary-900) !important; }
+
+.bg-primary-50 { background-color: var(--color-primary-50) !important; }
+.bg-primary-100 { background-color: var(--color-primary-100) !important; }
+.bg-primary-200 { background-color: var(--color-primary-200) !important; }
+.bg-primary-300 { background-color: var(--color-primary-300) !important; }
+.bg-primary-400 { background-color: var(--color-primary-400) !important; }
+.bg-primary-500 { background-color: var(--color-primary-500) !important; }
+.bg-primary-600 { background-color: var(--color-primary-600) !important; }
+.bg-primary-700 { background-color: var(--color-primary-700) !important; }
+.bg-primary-800 { background-color: var(--color-primary-800) !important; }
+.bg-primary-900 { background-color: var(--color-primary-900) !important; }
+
+/* Secondary colors */
+.text-secondary-50 { color: var(--color-secondary-50) !important; }
+.text-secondary-100 { color: var(--color-secondary-100) !important; }
+.text-secondary-200 { color: var(--color-secondary-200) !important; }
+.text-secondary-300 { color: var(--color-secondary-300) !important; }
+.text-secondary-400 { color: var(--color-secondary-400) !important; }
+.text-secondary-500 { color: var(--color-secondary-500) !important; }
+.text-secondary-600 { color: var(--color-secondary-600) !important; }
+.text-secondary-700 { color: var(--color-secondary-700) !important; }
+.text-secondary-800 { color: var(--color-secondary-800) !important; }
+.text-secondary-900 { color: var(--color-secondary-900) !important; }
+
+.bg-secondary-50 { background-color: var(--color-secondary-50) !important; }
+.bg-secondary-100 { background-color: var(--color-secondary-100) !important; }
+.bg-secondary-200 { background-color: var(--color-secondary-200) !important; }
+.bg-secondary-300 { background-color: var(--color-secondary-300) !important; }
+.bg-secondary-400 { background-color: var(--color-secondary-400) !important; }
+.bg-secondary-500 { background-color: var(--color-secondary-500) !important; }
+.bg-secondary-600 { background-color: var(--color-secondary-600) !important; }
+.bg-secondary-700 { background-color: var(--color-secondary-700) !important; }
+.bg-secondary-800 { background-color: var(--color-secondary-800) !important; }
+.bg-secondary-900 { background-color: var(--color-secondary-900) !important; }
+
+/* Accent colors */
+.text-accent-50 { color: var(--color-accent-50) !important; }
+.text-accent-100 { color: var(--color-accent-100) !important; }
+.text-accent-200 { color: var(--color-accent-200) !important; }
+.text-accent-300 { color: var(--color-accent-300) !important; }
+.text-accent-400 { color: var(--color-accent-400) !important; }
+.text-accent-500 { color: var(--color-accent-500) !important; }
+.text-accent-600 { color: var(--color-accent-600) !important; }
+.text-accent-700 { color: var(--color-accent-700) !important; }
+.text-accent-800 { color: var(--color-accent-800) !important; }
+.text-accent-900 { color: var(--color-accent-900) !important; }
+
+.bg-accent-50 { background-color: var(--color-accent-50) !important; }
+.bg-accent-100 { background-color: var(--color-accent-100) !important; }
+.bg-accent-200 { background-color: var(--color-accent-200) !important; }
+.bg-accent-300 { background-color: var(--color-accent-300) !important; }
+.bg-accent-400 { background-color: var(--color-accent-400) !important; }
+.bg-accent-500 { background-color: var(--color-accent-500) !important; }
+.bg-accent-600 { background-color: var(--color-accent-600) !important; }
+.bg-accent-700 { background-color: var(--color-accent-700) !important; }
+.bg-accent-800 { background-color: var(--color-accent-800) !important; }
+.bg-accent-900 { background-color: var(--color-accent-900) !important; }
+
+/* === FUNCTIONAL COLOR UTILITIES === */
+
+/* Success colors */
+.text-success { color: var(--color-success) !important; }
+.text-success-light { color: var(--color-success-light) !important; }
+.bg-success { background-color: var(--color-success) !important; }
+.bg-success-light { background-color: var(--color-success-light) !important; }
+
+/* Warning colors */
+.text-warning { color: var(--color-warning) !important; }
+.text-warning-light { color: var(--color-warning-light) !important; }
+.bg-warning { background-color: var(--color-warning) !important; }
+.bg-warning-light { background-color: var(--color-warning-light) !important; }
+
+/* Error colors */
+.text-error { color: var(--color-error) !important; }
+.text-error-light { color: var(--color-error-light) !important; }
+.bg-error { background-color: var(--color-error) !important; }
+.bg-error-light { background-color: var(--color-error-light) !important; }
+
+/* Info colors */
+.text-info { color: var(--color-info) !important; }
+.text-info-light { color: var(--color-info-light) !important; }
+.bg-info { background-color: var(--color-info) !important; }
+.bg-info-light { background-color: var(--color-info-light) !important; }
+
+/* === NEUTRAL COLOR UTILITIES === */
+
+.text-gray-50 { color: var(--color-gray-50) !important; }
+.text-gray-100 { color: var(--color-gray-100) !important; }
+.text-gray-200 { color: var(--color-gray-200) !important; }
+.text-gray-300 { color: var(--color-gray-300) !important; }
+.text-gray-400 { color: var(--color-gray-400) !important; }
+.text-gray-500 { color: var(--color-gray-500) !important; }
+.text-gray-600 { color: var(--color-gray-600) !important; }
+.text-gray-700 { color: var(--color-gray-700) !important; }
+.text-gray-800 { color: var(--color-gray-800) !important; }
+.text-gray-900 { color: var(--color-gray-900) !important; }
+
+.bg-gray-50 { background-color: var(--color-gray-50) !important; }
+.bg-gray-100 { background-color: var(--color-gray-100) !important; }
+.bg-gray-200 { background-color: var(--color-gray-200) !important; }
+.bg-gray-300 { background-color: var(--color-gray-300) !important; }
+.bg-gray-400 { background-color: var(--color-gray-400) !important; }
+.bg-gray-500 { background-color: var(--color-gray-500) !important; }
+.bg-gray-600 { background-color: var(--color-gray-600) !important; }
+.bg-gray-700 { background-color: var(--color-gray-700) !important; }
+.bg-gray-800 { background-color: var(--color-gray-800) !important; }
+.bg-gray-900 { background-color: var(--color-gray-900) !important; }
+
+/* === SEMANTIC TEXT COLORS === */
+
+.text-primary { color: var(--text-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-muted { color: var(--text-muted) !important; }
+.text-inverse { color: var(--text-inverse) !important; }
+
+/* === SEMANTIC BACKGROUND COLORS === */
+
+.bg-body { background-color: var(--bg-body) !important; }
+.bg-surface { background-color: var(--bg-surface) !important; }
+.bg-overlay { background-color: var(--bg-overlay) !important; }
+
+/* === BORDER COLOR UTILITIES === */
+
+.border-primary { border-color: var(--color-primary) !important; }
+.border-secondary { border-color: var(--color-secondary) !important; }
+.border-accent { border-color: var(--color-accent) !important; }
+.border-success { border-color: var(--color-success) !important; }
+.border-warning { border-color: var(--color-warning) !important; }
+.border-error { border-color: var(--color-error) !important; }
+.border-info { border-color: var(--color-info) !important; }
+
+.border-gray-100 { border-color: var(--color-gray-100) !important; }
+.border-gray-200 { border-color: var(--color-gray-200) !important; }
+.border-gray-300 { border-color: var(--color-gray-300) !important; }
+.border-gray-400 { border-color: var(--color-gray-400) !important; }
+.border-gray-500 { border-color: var(--color-gray-500) !important; }
+
+.border-light { border-color: var(--color-border-primary) !important; }
+.border-medium { border-color: var(--color-border-secondary) !important; }
+
+/* === EDUCATIONAL CONTEXT COLORS === */
+
+/* Age group colors */
+.text-age-preschool { color: var(--color-age-preschool) !important; }
+.text-age-elementary { color: var(--color-age-elementary) !important; }
+.text-age-middle { color: var(--color-age-middle) !important; }
+.text-age-high { color: var(--color-age-high) !important; }
+
+.bg-age-preschool { background-color: var(--color-age-preschool) !important; }
+.bg-age-elementary { background-color: var(--color-age-elementary) !important; }
+.bg-age-middle { background-color: var(--color-age-middle) !important; }
+.bg-age-high { background-color: var(--color-age-high) !important; }
+
+/* Role colors */
+.text-role-child { color: var(--color-role-child) !important; }
+.text-role-parent { color: var(--color-role-parent) !important; }
+.text-role-teacher { color: var(--color-role-teacher) !important; }
+.text-role-admin { color: var(--color-role-admin) !important; }
+
+.bg-role-child { background-color: var(--color-role-child) !important; }
+.bg-role-parent { background-color: var(--color-role-parent) !important; }
+.bg-role-teacher { background-color: var(--color-role-teacher) !important; }
+.bg-role-admin { background-color: var(--color-role-admin) !important; }
+
+/* Lesson state colors */
+.text-lesson-default { color: var(--color-lesson-default) !important; }
+.text-lesson-active { color: var(--color-lesson-active) !important; }
+.text-lesson-completed { color: var(--color-lesson-completed) !important; }
+.text-lesson-locked { color: var(--color-lesson-locked) !important; }
+
+.bg-lesson-default { background-color: var(--color-lesson-default) !important; }
+.bg-lesson-active { background-color: var(--color-lesson-active) !important; }
+.bg-lesson-completed { background-color: var(--color-lesson-completed) !important; }
+.bg-lesson-locked { background-color: var(--color-lesson-locked) !important; }
+
+/* Quiz state colors */
+.text-quiz-correct { color: var(--color-quiz-correct) !important; }
+.text-quiz-incorrect { color: var(--color-quiz-incorrect) !important; }
+.text-quiz-partial { color: var(--color-quiz-partial) !important; }
+
+.bg-quiz-correct { background-color: var(--color-quiz-correct) !important; }
+.bg-quiz-incorrect { background-color: var(--color-quiz-incorrect) !important; }
+.bg-quiz-partial { background-color: var(--color-quiz-partial) !important; }
+
+/* === ALPHA/OPACITY UTILITIES === */
+
+.text-opacity-10 { color: var(--primary-10) !important; }
+.text-opacity-20 { color: var(--primary-20) !important; }
+.text-opacity-30 { color: var(--primary-30) !important; }
+.text-opacity-40 { color: var(--primary-40) !important; }
+.text-opacity-50 { color: var(--primary-50) !important; }
+
+.bg-opacity-10 { background-color: var(--primary-10) !important; }
+.bg-opacity-20 { background-color: var(--primary-20) !important; }
+.bg-opacity-30 { background-color: var(--primary-30) !important; }
+.bg-opacity-40 { background-color: var(--primary-40) !important; }
+.bg-opacity-50 { background-color: var(--primary-50) !important; }
+
+/* === GRADIENT UTILITIES === */
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-600) 100%) !important;
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-600) 100%) !important;
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-600) 100%) !important;
+}
+
+.bg-gradient-rainbow {
+  background: linear-gradient(135deg, var(--brand-grass) 0%, var(--brand-sky) 25%, var(--brand-sun) 50%, var(--brand-night) 75%, var(--brand-heart) 100%) !important;
+}
+
+/* Soft gradient backgrounds */
+.bg-gradient-soft-primary {
+  background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-primary-100) 100%) !important;
+}
+
+.bg-gradient-soft-secondary {
+  background: linear-gradient(135deg, var(--color-secondary-50) 0%, var(--color-secondary-100) 100%) !important;
+}
+
+.bg-gradient-soft-accent {
+  background: linear-gradient(135deg, var(--color-accent-50) 0%, var(--color-accent-100) 100%) !important;
+}
+
+/* === HOVER UTILITIES === */
+
+.hover\:text-primary:hover { color: var(--color-primary) !important; }
+.hover\:text-primary-700:hover { color: var(--color-primary-700) !important; }
+.hover\:text-secondary:hover { color: var(--color-secondary) !important; }
+.hover\:text-accent:hover { color: var(--color-accent) !important; }
+
+.hover\:bg-primary:hover { background-color: var(--color-primary) !important; }
+.hover\:bg-primary-50:hover { background-color: var(--color-primary-50) !important; }
+.hover\:bg-primary-100:hover { background-color: var(--color-primary-100) !important; }
+.hover\:bg-secondary:hover { background-color: var(--color-secondary) !important; }
+.hover\:bg-accent:hover { background-color: var(--color-accent) !important; }
+
+/* === FOCUS UTILITIES === */
+
+.focus\:text-primary:focus { color: var(--color-primary) !important; }
+.focus\:bg-primary-50:focus { background-color: var(--color-primary-50) !important; }
+.focus\:border-primary:focus { border-color: var(--color-primary) !important; }
+
+/* === RESPONSIVE COLOR UTILITIES === */
+
+/* Small screens and up */
+@media (min-width: 640px) {
+  .sm\:text-primary { color: var(--color-primary) !important; }
+  .sm\:bg-primary { background-color: var(--color-primary) !important; }
+}
+
+/* Medium screens and up */
+@media (min-width: 768px) {
+  .md\:text-primary { color: var(--color-primary) !important; }
+  .md\:bg-primary { background-color: var(--color-primary) !important; }
+}
+
+/* Large screens and up */
+@media (min-width: 1024px) {
+  .lg\:text-primary { color: var(--color-primary) !important; }
+  .lg\:bg-primary { background-color: var(--color-primary) !important; }
+}
+
+/* === DARK MODE UTILITIES === */
+
+@media (prefers-color-scheme: dark) {
+  .dark\:text-gray-100 { color: var(--color-gray-100) !important; }
+  .dark\:text-gray-300 { color: var(--color-gray-300) !important; }
+  .dark\:bg-gray-800 { background-color: var(--color-gray-800) !important; }
+  .dark\:bg-gray-900 { background-color: var(--color-gray-900) !important; }
+}
+
+/* === PRINT COLOR UTILITIES === */
+
+@media print {
+  .print\:text-black { color: black !important; }
+  .print\:bg-white { background-color: white !important; }
+  .print\:bg-transparent { background-color: transparent !important; }
+  
+  /* Remove gradients in print */
+  [class*="bg-gradient"] {
+    background: white !important;
+  }
+}

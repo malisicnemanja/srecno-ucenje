@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-import { colors } from './lib/design-tokens'
+import { colors, brandColors, spacing, borderRadius, typography } from './lib/design-tokens'
 
 const config: Config = {
   content: [
@@ -9,17 +9,64 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // Brand color system for Srećno učenje
       colors: {
+        // Brand colors (converted from CMYK)
+        sky: brandColors.sky,
+        sun: brandColors.sun, 
+        grass: brandColors.grass,
+        heart: brandColors.heart,
+        night: brandColors.night,
+        
+        // Scale colors for design system
         primary: colors.primary,
         secondary: colors.secondary,
         accent: colors.accent,
         warm: colors.warm,
         gray: colors.gray,
+        nightColors: colors.night,
+        
         // Legacy support
         green: colors.primary,
         blue: colors.secondary,
         yellow: colors.accent,
         red: colors.warm,
+      },
+      
+      // Mobile-first spacing system
+      spacing,
+      
+      // Educational platform border radius
+      borderRadius,
+      
+      // Typography scales
+      fontSize: {
+        // Mobile sizes (320px+)
+        'display-mobile': [typography.mobile.display.size, typography.mobile.display.lineHeight],
+        'h1-mobile': [typography.mobile.h1.size, typography.mobile.h1.lineHeight],
+        'h2-mobile': [typography.mobile.h2.size, typography.mobile.h2.lineHeight],
+        'h3-mobile': [typography.mobile.h3.size, typography.mobile.h3.lineHeight],
+        'body-mobile': [typography.mobile.body.size, typography.mobile.body.lineHeight],
+        'small-mobile': [typography.mobile.small.size, typography.mobile.small.lineHeight],
+        'tiny-mobile': [typography.mobile.tiny.size, typography.mobile.tiny.lineHeight],
+        
+        // Tablet sizes (768px+) 
+        'display-tablet': [typography.tablet.display.size, typography.tablet.display.lineHeight],
+        'h1-tablet': [typography.tablet.h1.size, typography.tablet.h1.lineHeight],
+        'h2-tablet': [typography.tablet.h2.size, typography.tablet.h2.lineHeight],
+        'h3-tablet': [typography.tablet.h3.size, typography.tablet.h3.lineHeight],
+        'body-tablet': [typography.tablet.body.size, typography.tablet.body.lineHeight],
+        'small-tablet': [typography.tablet.small.size, typography.tablet.small.lineHeight],
+        'tiny-tablet': [typography.tablet.tiny.size, typography.tablet.tiny.lineHeight],
+        
+        // Desktop sizes (1024px+)
+        'display-desktop': [typography.desktop.display.size, typography.desktop.display.lineHeight],
+        'h1-desktop': [typography.desktop.h1.size, typography.desktop.h1.lineHeight],
+        'h2-desktop': [typography.desktop.h2.size, typography.desktop.h2.lineHeight],
+        'h3-desktop': [typography.desktop.h3.size, typography.desktop.h3.lineHeight],
+        'body-desktop': [typography.desktop.body.size, typography.desktop.body.lineHeight],
+        'small-desktop': [typography.desktop.small.size, typography.desktop.small.lineHeight],
+        'tiny-desktop': [typography.desktop.tiny.size, typography.desktop.tiny.lineHeight],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

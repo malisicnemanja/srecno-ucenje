@@ -1,0 +1,472 @@
+/**
+ * SREĆNO UČENJE - CSS RESET
+ * Modern CSS reset optimized for educational platform
+ * Based on modern-normalize with educational accessibility enhancements
+ */
+
+/* === DOCUMENT & ROOT === */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Improve consistency of default fonts */
+  line-height: 1.15;
+  /* Prevent adjustments of font size after orientation changes in iOS */
+  -webkit-text-size-adjust: 100%;
+  /* Remove default margin */
+  margin: 0;
+  /* Ensure consistent tab size */
+  tab-size: 4;
+  /* Set smooth scrolling for educational content */
+  scroll-behavior: smooth;
+  /* Account for fixed headers */
+  scroll-padding-top: var(--space-20);
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+body {
+  /* Remove default margin */
+  margin: 0;
+  /* Set minimum width for mobile devices */
+  min-width: 320px;
+  /* Improve text rendering */
+  font-family: var(--font-primary);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line-height);
+  color: var(--text-primary);
+  background-color: var(--bg-body);
+  /* Enable hardware acceleration */
+  transform: translateZ(0);
+}
+
+/* === SECTIONING === */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Reset heading margins for consistent spacing */
+  margin: 0;
+  /* Inherit font family */
+  font-family: var(--font-primary);
+  /* Improve text rendering for headings */
+  text-rendering: optimizeLegibility;
+  /* Better line breaking */
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+p,
+blockquote,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+/* === GROUPING === */
+
+hr {
+  /* Add correct box sizing */
+  box-sizing: content-box;
+  height: 0;
+  /* Show overflow */
+  overflow: visible;
+  /* Reset styling */
+  border: none;
+  border-top: 1px solid var(--color-border-primary);
+  margin: var(--space-6) 0;
+}
+
+pre {
+  /* Correct inheritance and scaling of font size */
+  font-family: var(--font-mono);
+  font-size: 1em;
+  /* Reset white space handling */
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+code,
+kbd,
+samp {
+  /* Correct inheritance and scaling of font size */
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  /* Add background for inline code */
+  background-color: var(--color-gray-100);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+/* === TEXT-LEVEL === */
+
+a {
+  /* Remove default styling */
+  background-color: transparent;
+  text-decoration: none;
+  color: var(--color-primary);
+  /* Improve clickability */
+  cursor: pointer;
+  /* Better touch targets */
+  min-height: var(--space-11);
+  display: inline-flex;
+  align-items: center;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-primary-700);
+}
+
+abbr[title] {
+  /* Remove default styling */
+  border-bottom: none;
+  /* Add dotted underline */
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  /* Add correct font weight */
+  font-weight: var(--font-weight-bold);
+}
+
+small {
+  /* Add correct font size */
+  font-size: var(--font-size-sm);
+}
+
+sub,
+sup {
+  /* Prevent affecting line height */
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* === EMBEDDED === */
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  /* Make media responsive by default */
+  max-width: 100%;
+  height: auto;
+  /* Remove default border */
+  border: 0;
+  /* Improve image rendering */
+  image-rendering: optimizeQuality;
+}
+
+img {
+  /* Remove border when inside link */
+  border-style: none;
+  /* Better default display */
+  display: block;
+}
+
+svg {
+  /* Hide overflow by default */
+  overflow: hidden;
+  /* Better alignment */
+  vertical-align: middle;
+}
+
+/* === TABULAR === */
+
+table {
+  /* Remove default border spacing */
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* Make tables responsive */
+  width: 100%;
+  max-width: 100%;
+}
+
+th,
+td {
+  /* Reset text alignment */
+  text-align: left;
+  /* Add padding for readability */
+  padding: var(--space-2) var(--space-3);
+  /* Add borders for clarity */
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+th {
+  /* Make headers bold */
+  font-weight: var(--font-weight-semibold);
+  /* Add background for headers */
+  background-color: var(--color-gray-50);
+}
+
+/* === FORMS === */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  /* Remove default styling */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  /* Restore clickability */
+  cursor: pointer;
+  /* Remove default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* Better touch targets */
+  min-height: var(--space-touch-min);
+  /* Improve accessibility */
+  touch-action: manipulation;
+}
+
+button:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input,
+textarea,
+select {
+  /* Remove default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* Better touch targets */
+  min-height: var(--space-touch-min);
+  /* Add default styling */
+  background-color: var(--bg-surface);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-input);
+  padding: var(--space-input-padding-y) var(--space-input-padding-x);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-color: var(--color-primary);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  /* Reset size for checkboxes and radios */
+  width: var(--space-4);
+  height: var(--space-4);
+  min-height: var(--space-4);
+  /* Better positioning */
+  margin-right: var(--space-2);
+  flex-shrink: 0;
+}
+
+textarea {
+  /* Allow vertical resize only */
+  resize: vertical;
+  /* Minimum height */
+  min-height: var(--space-24);
+}
+
+fieldset {
+  /* Reset fieldset styles */
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+}
+
+legend {
+  /* Style legends */
+  font-weight: var(--font-weight-semibold);
+  padding: 0 var(--space-2);
+  color: var(--text-secondary);
+}
+
+/* === INTERACTIVE === */
+
+summary {
+  /* Add pointer cursor */
+  cursor: pointer;
+  /* Better touch targets */
+  min-height: var(--space-touch-min);
+  display: flex;
+  align-items: center;
+}
+
+details {
+  /* Add spacing */
+  margin: var(--space-4) 0;
+}
+
+details[open] summary {
+  /* Add margin when open */
+  margin-bottom: var(--space-4);
+}
+
+/* === EDUCATIONAL ACCESSIBILITY === */
+
+/* Improve focus visibility for educational content */
+*:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Better selection colors */
+::selection {
+  background-color: var(--primary-30);
+  color: var(--text-primary);
+}
+
+::-moz-selection {
+  background-color: var(--primary-30);
+  color: var(--text-primary);
+}
+
+/* Improve scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-300);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary-400);
+}
+
+/* === REDUCED MOTION === */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* === HIGH CONTRAST === */
+
+@media (prefers-contrast: high) {
+  /* Improve contrast for high contrast mode */
+  button,
+  input,
+  select,
+  textarea {
+    border-width: 2px;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  *:focus-visible {
+    outline-width: 4px;
+  }
+}
+
+/* === PRINT === */
+
+@media print {
+  /* Optimize for print */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: underline;
+    color: black !important;
+  }
+  
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: smaller;
+  }
+  
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+  
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  button,
+  input,
+  select,
+  textarea {
+    border: 1px solid black !important;
+  }
+}

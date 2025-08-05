@@ -1,0 +1,562 @@
+/**
+ * SREĆNO UČENJE - CMS CONTENT WRAPPERS
+ * Wrapper components for CMS-driven content
+ * Consistent styling for dynamic content areas
+ */
+
+/* === BASE CONTENT WRAPPER === */
+
+.cms-content {
+  /* Typography for CMS content */
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary);
+  font-family: var(--font-secondary);
+  
+  /* Better text rendering */
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+  
+  /* Responsive typography */
+  font-size: var(--text-body-size);
+  
+  /* Content width optimization */
+  max-width: var(--content-max-width);
+}
+
+/* === CONTENT ELEMENT SPACING === */
+
+.cms-content > * {
+  margin-bottom: var(--space-4);
+}
+
+.cms-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.cms-content > *:first-child {
+  margin-top: 0;
+}
+
+/* === HEADING STYLING === */
+
+.cms-content h1,
+.cms-content h2,
+.cms-content h3,
+.cms-content h4,
+.cms-content h5,
+.cms-content h6 {
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cms-content h1:first-child,
+.cms-content h2:first-child,
+.cms-content h3:first-child {
+  margin-top: 0;
+}
+
+.cms-content h1 {
+  font-size: var(--text-h1-size);
+  color: var(--color-primary-800);
+  border-bottom: 2px solid var(--color-primary-200);
+  padding-bottom: var(--space-2);
+}
+
+.cms-content h2 {
+  font-size: var(--text-h2-size);
+  color: var(--color-secondary-800);
+}
+
+.cms-content h3 {
+  font-size: var(--text-h3-size);
+  color: var(--text-primary);
+}
+
+.cms-content h4 {
+  font-size: var(--text-h4-size);
+  color: var(--text-secondary);
+}
+
+.cms-content h5,
+.cms-content h6 {
+  font-size: var(--text-h5-size);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+/* === PARAGRAPH STYLING === */
+
+.cms-content p {
+  margin-bottom: var(--space-paragraph);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--text-body-size);
+  color: var(--text-primary);
+}
+
+.cms-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lead paragraph */
+.cms-content .lead,
+.cms-content p:first-of-type {
+  font-size: var(--text-body-large-size);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+/* === LIST STYLING === */
+
+.cms-content ul,
+.cms-content ol {
+  margin-bottom: var(--space-paragraph);
+  padding-left: var(--space-6);
+}
+
+.cms-content ul {
+  list-style-type: disc;
+}
+
+.cms-content ol {
+  list-style-type: decimal;
+}
+
+.cms-content li {
+  margin-bottom: var(--space-list-item);
+  line-height: var(--line-height-relaxed);
+}
+
+.cms-content li:last-child {
+  margin-bottom: 0;
+}
+
+/* Nested lists */
+.cms-content ul ul,
+.cms-content ol ol,
+.cms-content ul ol,
+.cms-content ol ul {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.cms-content ul ul {
+  list-style-type: circle;
+}
+
+.cms-content ul ul ul {
+  list-style-type: square;
+}
+
+/* Custom list markers for educational content */
+.cms-content ul.checklist {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cms-content ul.checklist li {
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+.cms-content ul.checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-success);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.2em;
+}
+
+.cms-content ul.steps {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: step-counter;
+}
+
+.cms-content ul.steps li {
+  position: relative;
+  padding-left: var(--space-12);
+  counter-increment: step-counter;
+}
+
+.cms-content ul.steps li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--color-primary);
+  color: white;
+  width: var(--space-8);
+  height: var(--space-8);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+}
+
+/* === LINK STYLING === */
+
+.cms-content a {
+  color: var(--color-primary-700);
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary-300);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  transition: all var(--transition-base);
+}
+
+.cms-content a:hover {
+  color: var(--color-primary-800);
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 3px;
+}
+
+.cms-content a:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* External links */
+.cms-content a[href^="http"]:not([href*="srecno-ucenje"])::after {
+  content: ' ↗';
+  font-size: 0.8em;
+  color: var(--text-muted);
+}
+
+/* === BLOCKQUOTE STYLING === */
+
+.cms-content blockquote {
+  border-left: 4px solid var(--color-primary);
+  padding-left: var(--space-4);
+  margin: var(--space-6) 0;
+  font-style: italic;
+  color: var(--text-secondary);
+  background-color: var(--color-primary-50);
+  padding: var(--space-4);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  position: relative;
+}
+
+.cms-content blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: var(--space-4);
+  font-size: 3em;
+  color: var(--color-primary-300);
+  line-height: 1;
+}
+
+.cms-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.cms-content blockquote cite {
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-700);
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.cms-content blockquote cite::before {
+  content: "— ";
+}
+
+/* === IMAGE STYLING === */
+
+.cms-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  margin: var(--space-6) 0;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.cms-content img:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Figure and figcaption */
+.cms-content figure {
+  margin: var(--space-8) 0;
+  text-align: center;
+}
+
+.cms-content figcaption {
+  font-size: var(--text-caption-size);
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: var(--space-2);
+  padding: 0 var(--space-4);
+}
+
+/* === CODE STYLING === */
+
+.cms-content code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background-color: var(--color-gray-100);
+  color: var(--color-primary-800);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-gray-200);
+}
+
+.cms-content pre {
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-100);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin: var(--space-6) 0;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  box-shadow: var(--shadow-sm);
+}
+
+.cms-content pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+}
+
+/* === TABLE STYLING === */
+
+.cms-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-6) 0;
+  font-size: var(--font-size-sm);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.cms-content th,
+.cms-content td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+.cms-content th {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+.cms-content tr:hover {
+  background-color: var(--color-gray-50);
+}
+
+.cms-content tr:last-child td {
+  border-bottom: none;
+}
+
+/* === HORIZONTAL RULE === */
+
+.cms-content hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+  margin: var(--space-8) 0;
+  border-radius: var(--radius-full);
+}
+
+/* === MARK/HIGHLIGHT === */
+
+.cms-content mark {
+  background-color: var(--color-accent-200);
+  color: var(--color-accent-900);
+  padding: var(--space-0-5) var(--space-1);
+  border-radius: var(--radius-sm);
+}
+
+/* === EDUCATIONAL CONTENT TYPES === */
+
+/* Lesson content wrapper */
+.cms-lesson-content {
+  background-color: var(--color-primary-50);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-primary);
+}
+
+/* Quiz content wrapper */
+.cms-quiz-content {
+  background-color: var(--color-secondary-50);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border-top: 4px solid var(--color-secondary);
+}
+
+/* Exercise content wrapper */
+.cms-exercise-content {
+  background-color: var(--color-accent-50);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-accent-200);
+}
+
+/* Important content callout */
+.cms-content .callout {
+  background-color: var(--color-info-light);
+  border: 1px solid var(--color-info);
+  border-left: 4px solid var(--color-info);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  margin: var(--space-6) 0;
+}
+
+.cms-content .callout.warning {
+  background-color: var(--color-warning-light);
+  border-color: var(--color-warning);
+}
+
+.cms-content .callout.error {
+  background-color: var(--color-error-light);
+  border-color: var(--color-error);
+}
+
+.cms-content .callout.success {
+  background-color: var(--color-success-light);
+  border-color: var(--color-success);
+}
+
+/* === RESPONSIVE CONTENT === */
+
+@media (max-width: 479px) {
+  .cms-content {
+    font-size: var(--font-size-sm);
+  }
+  
+  .cms-content h1 {
+    font-size: var(--text-h2-size);
+  }
+  
+  .cms-content h2 {
+    font-size: var(--text-h3-size);
+  }
+  
+  .cms-content table {
+    font-size: var(--font-size-xs);
+  }
+  
+  .cms-content th,
+  .cms-content td {
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
+/* === ACCESSIBILITY === */
+
+@media (prefers-contrast: high) {
+  .cms-content {
+    color: black;
+  }
+  
+  .cms-content h1,
+  .cms-content h2,
+  .cms-content h3 {
+    color: black;
+  }
+  
+  .cms-content a {
+    text-decoration-thickness: 3px;
+  }
+  
+  .cms-content blockquote {
+    border-left-width: 6px;
+  }
+}
+
+/* === DARK MODE === */
+
+@media (prefers-color-scheme: dark) {
+  .cms-content {
+    color: var(--color-gray-100);
+  }
+  
+  .cms-content h1 {
+    color: var(--color-primary-300);
+    border-bottom-color: var(--color-primary-700);
+  }
+  
+  .cms-content h2 {
+    color: var(--color-secondary-300);
+  }
+  
+  .cms-content blockquote {
+    background-color: var(--color-gray-800);
+    border-left-color: var(--color-primary-400);
+    color: var(--color-gray-300);
+  }
+  
+  .cms-content code {
+    background-color: var(--color-gray-800);
+    color: var(--color-primary-300);
+    border-color: var(--color-gray-700);
+  }
+  
+  .cms-content th {
+    background-color: var(--color-gray-800);
+    color: var(--color-primary-300);
+  }
+  
+  .cms-content tr:hover {
+    background-color: var(--color-gray-800);
+  }
+}
+
+/* === PRINT STYLES === */
+
+@media print {
+  .cms-content {
+    color: black;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .cms-content h1,
+  .cms-content h2,
+  .cms-content h3,
+  .cms-content h4,
+  .cms-content h5,
+  .cms-content h6 {
+    color: black;
+    page-break-after: avoid;
+  }
+  
+  .cms-content blockquote,
+  .cms-content figure,
+  .cms-content table {
+    page-break-inside: avoid;
+  }
+  
+  .cms-content a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .cms-content a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: smaller;
+  }
+}
