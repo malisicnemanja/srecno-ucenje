@@ -147,6 +147,29 @@ export default defineType({
           ]
         }
       ]
+    }),
+    defineField({
+      name: 'footerMenu',
+      title: 'Footer Menu',
+      type: 'array',
+      description: 'Simple footer menu links (Privacy, Terms, etc.)',
+      of: [{
+        type: 'object',
+        fields: [
+          {
+            name: 'title',
+            title: 'Title',
+            type: 'string',
+            validation: (Rule) => Rule.required()
+          },
+          {
+            name: 'url',
+            title: 'URL',
+            type: 'string',
+            validation: (Rule) => Rule.required()
+          }
+        ]
+      }]
     })
   ]
 })
