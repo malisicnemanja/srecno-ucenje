@@ -40,11 +40,11 @@
 
 /* Background Colors - Gradient Variants */
 .u-bg-sky-gradient {
-  background: linear-gradient(135deg, var(--brand-sky, #5DBFDB) 0%, rgba(93, 191, 219, 0.8) 100%) !important;
+  background: var(--brand-sky, #5DBFDB) !important;
   color: white !important;
 }
 .u-bg-sun-gradient {
-  background: linear-gradient(135deg, var(--brand-sun, #FDD835) 0%, rgba(253, 216, 53, 0.8) 100%) !important;
+  background: var(--brand-sun, #FDD835) !important;
   color: var(--brand-night, #3E4C59) !important;
 }
 .u-bg-grass-gradient {

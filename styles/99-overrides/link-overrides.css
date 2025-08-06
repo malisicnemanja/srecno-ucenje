@@ -1,0 +1,115 @@
+/**
+ * LINK OVERRIDES
+ * Final overrides to ensure NO GREEN UNDERLINES anywhere
+ * This file loads last to override any conflicting styles
+ */
+
+/* === UNIVERSAL LINK OVERRIDES === */
+
+/* Reset ALL links to inherit parent color */
+*:is(a, [role="link"]) {
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease !important;
+}
+
+/* Hover states - opacity + currentColor underline only */
+*:is(a, [role="link"]):hover {
+  opacity: 0.8 !important;
+  text-decoration: underline !important;
+  text-decoration-color: currentColor !important;
+  text-underline-offset: 2px !important;
+}
+
+/* Focus states */
+*:is(a, [role="link"]):focus-visible {
+  opacity: 0.8 !important;
+  text-decoration: underline !important;
+  text-decoration-color: currentColor !important;
+  text-underline-offset: 2px !important;
+  outline: 2px solid currentColor !important;
+  outline-offset: 2px !important;
+  border-radius: 0.25rem !important;
+}
+
+/* === COMPONENT SPECIFIC OVERRIDES === */
+
+/* Header links */
+.c-header *:is(a, [role="link"]):hover {
+  text-decoration-color: currentColor !important;
+}
+
+/* Footer links */
+.c-footer *:is(a, [role="link"]):hover {
+  text-decoration-color: currentColor !important;
+}
+
+/* Navigation links */
+nav *:is(a, [role="link"]):hover {
+  text-decoration-color: currentColor !important;
+}
+
+/* Button links - no underlines */
+*:is(.btn, .button, [role="button"]) *:is(a, [role="link"]),
+*:is(a, [role="link"]):is(.btn, .button, [role="button"]) {
+  text-decoration: none !important;
+}
+
+*:is(.btn, .button, [role="button"]) *:is(a, [role="link"]):hover,
+*:is(a, [role="link"]):is(.btn, .button, [role="button"]):hover {
+  text-decoration: none !important;
+}
+
+/* Card links - no underlines */
+*:is(.card, [class*="card"]) > *:is(a, [role="link"]),
+*:is(a, [role="link"]):has(.card, [class*="card"]) {
+  text-decoration: none !important;
+}
+
+*:is(.card, [class*="card"]) > *:is(a, [role="link"]):hover,
+*:is(a, [role="link"]):has(.card, [class*="card"]):hover {
+  text-decoration: none !important;
+}
+
+/* === TAILWIND OVERRIDES === */
+
+/* Override any Tailwind utility classes */
+*[class*="text-primary"] *:is(a, [role="link"]),
+*[class*="text-green"] *:is(a, [role="link"]),
+*[class*="decoration-primary"] *:is(a, [role="link"]),
+*[class*="decoration-green"] *:is(a, [role="link"]) {
+  color: inherit !important;
+  text-decoration-color: currentColor !important;
+}
+
+/* === BRAND VARIABLE OVERRIDES === */
+
+/* Ensure CSS variables don't override */
+:root {
+  --tw-underline-color: currentColor !important;
+  --link-color: inherit !important;
+  --link-decoration-color: currentColor !important;
+}
+
+/* Override any remaining primary color usage in links */
+*:is(a, [role="link"]):not(.btn):not(.button):not([role="button"]) {
+  --tw-text-opacity: 1 !important;
+}
+
+/* === PRINT OVERRIDES === */
+@media print {
+  *:is(a, [role="link"]) {
+    color: inherit !important;
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+  }
+}
+
+/* === HIGH CONTRAST OVERRIDES === */
+@media (prefers-contrast: high) {
+  *:is(a, [role="link"]):hover,
+  *:is(a, [role="link"]):focus-visible {
+    outline: 3px solid currentColor !important;
+    outline-offset: 2px !important;
+  }
+}

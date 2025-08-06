@@ -32,8 +32,8 @@ export default function Header() {
       { label: 'FAQ', href: '/faq' },
     ],
     ctaButton: {
-      text: 'Zakaži poziv',
-      href: '/kontakt',
+      text: 'Zakaži',
+      href: '/zakazivanje',
       style: 'primary'
     }
   }
@@ -143,7 +143,7 @@ export default function Header() {
             {nav.ctaButton?.href && (
               <SafeLink 
                 href={nav.ctaButton.href || '/'} 
-                className={getButtonClasses(nav.ctaButton.style)}
+                className={`${getButtonClasses(nav.ctaButton.style)} btn-sm c-header__cta`}
               >
                 {nav.ctaButton.text}
               </SafeLink>
@@ -206,7 +206,7 @@ export default function Header() {
               
               {nav.ctaButton?.href && (
                 <SafeLink                   href={nav.ctaButton.href || '/'}
-                  className={`c-mobile-menu__cta ${getButtonClasses(nav.ctaButton.style)}`}
+                  className={`c-mobile-menu__cta ${getButtonClasses(nav.ctaButton.style)} btn-sm`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {nav.ctaButton.text}

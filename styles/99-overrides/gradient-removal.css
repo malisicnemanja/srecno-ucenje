@@ -1,0 +1,149 @@
+/**
+ * PHASE 3: GLOBAL GRADIENT REMOVAL OVERRIDE
+ * Complete removal of ALL gradients across the entire application
+ * This file ensures NO gradients can be applied anywhere
+ */
+
+/* === GLOBAL GRADIENT OVERRIDE === */
+
+/* Remove all gradients from ALL elements */
+*,
+*::before,
+*::after {
+  background-image: none !important;
+}
+
+/* Force specific gradient-related properties to none */
+* {
+  background: var(--element-bg-override, inherit) !important;
+}
+
+/* Remove gradients from common gradient classes */
+.bg-gradient-to-r,
+.bg-gradient-to-l,
+.bg-gradient-to-t,
+.bg-gradient-to-b,
+.bg-gradient-to-br,
+.bg-gradient-to-bl,
+.bg-gradient-to-tr,
+.bg-gradient-to-tl,
+[class*="bg-gradient"] {
+  background-image: none !important;
+  background: var(--color-gray-50) !important;
+}
+
+/* Override any potential Tailwind gradients */
+[class*="gradient"] {
+  background-image: none !important;
+}
+
+/* Force button backgrounds to solid colors only */
+.btn,
+button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  background-image: none !important;
+}
+
+/* Override any CSS custom properties that might contain gradients */
+:root {
+  --tw-gradient-from: transparent !important;
+  --tw-gradient-to: transparent !important;
+  --tw-gradient-stops: transparent !important;
+}
+
+/* Remove any potential mask gradients */
+*[style*="mask-image"],
+*[style*="-webkit-mask-image"] {
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+/* Override any potential SVG gradients */
+linearGradient,
+radialGradient {
+  display: none !important;
+}
+
+/* Remove text gradients */
+.text-gradient,
+.text-gradient-primary,
+.text-gradient-secondary,
+[style*="background-clip: text"],
+[style*="-webkit-background-clip: text"] {
+  background: none !important;
+  background-image: none !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  color: var(--color-primary) !important;
+}
+
+/* Force CMS placeholder to solid background */
+.cms-placeholder,
+.cms-placeholder-hero,
+.cms-placeholder-card {
+  background-image: none !important;
+}
+
+/* Ensure cards have solid backgrounds */
+.card-modern,
+.lesson-card,
+[class*="card"] {
+  background-image: none !important;
+  background: white !important;
+}
+
+/* Override any potential hero section gradients */
+.c-hero-home,
+[class*="hero"] {
+  background-image: none !important;
+  background: var(--color-gray-50) !important;
+}
+
+/* Remove gradients from any hover states */
+*:hover {
+  background-image: none !important;
+}
+
+/* Remove gradients from any focus states */
+*:focus {
+  background-image: none !important;
+}
+
+/* Remove gradients from any active states */
+*:active {
+  background-image: none !important;
+}
+
+/* === DEVELOPER DEBUG === */
+/* Add red border to any element that somehow still has a gradient */
+@media (prefers-reduced-motion: no-preference) {
+  [style*="gradient"]:not(.gradient-debug-ignore) {
+    border: 2px solid red !important;
+    position: relative;
+  }
+  
+  [style*="gradient"]:not(.gradient-debug-ignore)::after {
+    content: "GRADIENT DETECTED!";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: red;
+    color: white;
+    padding: 2px 4px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 9999;
+  }
+}
+
+/* === PRINT SAFETY === */
+@media print {
+  * {
+    background-image: none !important;
+    background: white !important;
+  }
+}

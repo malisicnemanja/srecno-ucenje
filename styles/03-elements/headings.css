@@ -19,8 +19,8 @@ h6 {
   letter-spacing: var(--letter-spacing-normal);
   color: var(--text-primary);
   
-  /* Spacing */
-  margin: 0 0 var(--space-4) 0;
+  /* Spacing - Compact */
+  margin: 0 0 var(--space-heading, 1rem) 0;
   
   /* Text rendering optimizations */
   text-rendering: optimizeLegibility;
@@ -40,7 +40,7 @@ h1 {
   line-height: var(--text-h1-line-height);
   font-weight: var(--text-h1-weight);
   letter-spacing: var(--text-h1-spacing);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-component-xl, 1.5rem); /* 24px - compact */
   
   /* Visual hierarchy */
   color: var(--text-primary);
@@ -52,8 +52,8 @@ h2 {
   line-height: var(--text-h2-line-height);
   font-weight: var(--text-h2-weight);
   letter-spacing: var(--text-h2-spacing);
-  margin-bottom: var(--space-5);
-  margin-top: var(--space-8);
+  margin-bottom: var(--space-component-lg, 1rem); /* 16px */
+  margin-top: var(--space-component-xl, 1.5rem); /* 24px */
   
   /* Visual separation */
   color: var(--text-primary);
@@ -65,8 +65,8 @@ h3 {
   line-height: var(--text-h3-line-height);
   font-weight: var(--text-h3-weight);
   letter-spacing: var(--text-h3-spacing);
-  margin-bottom: var(--space-4);
-  margin-top: var(--space-6);
+  margin-bottom: var(--space-component-md, 0.75rem); /* 12px */
+  margin-top: var(--space-component-lg, 1rem); /* 16px */
   
   color: var(--text-primary);
 }
@@ -77,8 +77,8 @@ h4 {
   line-height: var(--text-h4-line-height);
   font-weight: var(--text-h4-weight);
   letter-spacing: var(--text-h4-spacing);
-  margin-bottom: var(--space-3);
-  margin-top: var(--space-5);
+  margin-bottom: var(--space-component-sm, 0.375rem); /* 6px */
+  margin-top: var(--space-component-md, 0.75rem); /* 12px */
   
   color: var(--text-secondary);
 }
@@ -89,8 +89,8 @@ h5 {
   line-height: var(--text-h5-line-height);
   font-weight: var(--text-h5-weight);
   letter-spacing: var(--text-h5-spacing);
-  margin-bottom: var(--space-2);
-  margin-top: var(--space-4);
+  margin-bottom: var(--space-component-xs, 0.25rem); /* 4px */
+  margin-top: var(--space-component-sm, 0.375rem); /* 6px */
   
   color: var(--text-secondary);
 }
@@ -101,8 +101,8 @@ h6 {
   line-height: var(--text-h6-line-height);
   font-weight: var(--text-h6-weight);
   letter-spacing: var(--text-h6-spacing);
-  margin-bottom: var(--space-2);
-  margin-top: var(--space-3);
+  margin-bottom: var(--space-component-xs, 0.25rem); /* 4px */
+  margin-top: var(--space-component-xs, 0.25rem); /* 4px */
   
   color: var(--text-muted);
   text-transform: uppercase;

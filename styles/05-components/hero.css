@@ -289,9 +289,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 80%, rgba(110, 242, 20, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(79, 214, 255, 0.1) 0%, transparent 50%);
+  background: var(--color-gray-50);
   z-index: 1;
 }
 
@@ -559,12 +557,7 @@
 }
 
 .brush-stroke--gradient::after {
-  background: linear-gradient(
-    45deg,
-    var(--color-sun),
-    var(--color-accent-600),
-    var(--color-sun)
-  );
+  background: var(--color-sun);
 }
 
 /* Interactive brush stroke */

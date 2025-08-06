@@ -27,6 +27,11 @@ import publications from './publications'
 import trainingProgram from './trainingProgram'
 import locationData from './locationData'
 import franchiseSteps from './franchiseSteps'
+import franchiseApplication from './franchise-application'
+import franchiseSection from './franchise-sections'
+import franchiseField from './franchise-fields'
+import franchiseMotivational from './franchise-motivational'
+import franchiseApplicationSubmission from './franchise-application-submission'
 import book from './documents/book'
 import booksLanding from './documents/booksLanding'
 import experience from './documents/experience'
@@ -84,6 +89,11 @@ export const schemaTypes = [
   trainingProgram,
   locationData,
   franchiseSteps,
+  franchiseApplication,
+  franchiseSection,
+  franchiseField,
+  franchiseMotivational,
+  franchiseApplicationSubmission,
   book,
   booksLanding,
   experience,

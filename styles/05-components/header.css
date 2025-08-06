@@ -8,29 +8,48 @@
 
 .c-header {
   /* Layout */
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 100%;
   background-color: var(--bg-surface);
   border-bottom: 1px solid var(--border-light);
   
   /* Elevation */
   box-shadow: var(--shadow-sm);
-  z-index: var(--z-sticky);
-}
-
-.c-header.is-sticky {
-  position: sticky;
-  top: 0;
+  z-index: 100;
   backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.95);
 }
 
-.c-header.is-fixed {
-  position: fixed;
+/* Notification bar coordination */
+.has-notification .c-header {
+  top: var(--notification-height, 40px);
+}
+
+.c-notification-bar {
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: var(--z-fixed);
+  z-index: 101;
+  height: var(--notification-height, 40px);
+}
+
+/* Enhanced sticky behavior for all screen sizes */
+@media (max-width: 767px) {
+  .c-header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+  }
+}
+
+@media (min-width: 768px) {
+  .c-header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+  }
 }
 
 /* Header container */
@@ -128,7 +147,10 @@
 }
 
 .c-header__nav-link:hover {
-  color: var(--color-primary);
+  opacity: 0.8;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
   background-color: var(--color-primary-50);
 }
 
@@ -154,6 +176,23 @@
 @media (min-width: 768px) {
   .c-header__actions {
     gap: var(--space-3);
+  }
+}
+
+/* CTA Button Styles */
+.c-header__cta {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.875rem;
+  min-height: 36px;
+  white-space: nowrap;
+}
+
+/* Mobile CTA adjustments */
+@media (max-width: 767px) {
+  .c-header__cta {
+    min-height: 40px;
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.875rem;
   }
 }
 
@@ -368,7 +407,10 @@
 
 .c-header__mobile-nav-link:hover,
 .c-header__mobile-nav-link.is-active {
-  color: var(--color-primary);
+  opacity: 0.8;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
   background-color: var(--color-primary-50);
   border-color: var(--color-primary-200);
 }
@@ -416,7 +458,10 @@
 }
 
 .c-breadcrumb__link:hover {
-  color: var(--color-primary);
+  opacity: 0.8;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
 }
 
 .c-breadcrumb__separator {

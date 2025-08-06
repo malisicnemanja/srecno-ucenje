@@ -138,13 +138,12 @@ export default function StickyHeader() {
       ]
     },
     { name: 'Resursi', href: '/resursi' },
-    { name: 'Konsultacije', href: '/zakazivanje' },
   ]
 
   // Get CTA button data with fallback
   const ctaButton = navigationData?.ctaButton || {
-    text: 'Započnite Sada',
-    href: '/kontakt',
+    text: 'Zakaži',
+    href: '/zakazivanje',
     style: 'primary'
   }
 
@@ -248,14 +247,14 @@ export default function StickyHeader() {
                 </div>
               ))}
               
-              {/* Desktop CTA Button */}
+              {/* Desktop CTA Button - Updated to Perfect Contrast */}
               <SafeLink                 href={ctaButton.href || '/'}
-                className={`ml-4 px-5 py-2.5 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 ${
+                className={`ml-4 btn btn-sm ${
                   ctaButton.style === 'primary' 
-                    ? 'bg-primary-500 text-white hover:bg-primary-600 hover:shadow-primary-500/30'
+                    ? 'btn--primary'
                     : ctaButton.style === 'secondary'
-                    ? 'bg-secondary-500 text-white hover:bg-secondary-600 hover:shadow-secondary-500/30'
-                    : 'bg-accent-500 text-white hover:bg-accent-600 hover:shadow-accent-500/30'
+                    ? 'btn--secondary'
+                    : 'btn--warning'
                 }`}
               >
                 {ctaButton.text}
@@ -294,10 +293,10 @@ export default function StickyHeader() {
           </div>
         </div>
 
-        {/* Progress indicator */}
+        {/* Progress indicator - NO GRADIENTS */}
         <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gray-100">
           <div
-            className="h-full bg-gradient-to-r from-primary-400 to-primary-600 transition-all duration-150"
+            className="h-full bg-brand-grass transition-all duration-150"
             style={{ width: `${scrollProgress}%` }}
           />
         </div>
@@ -408,14 +407,14 @@ export default function StickyHeader() {
               </div>
             ))}
 
-            {/* CTA Button */}
+            {/* CTA Button - Updated to Perfect Contrast */}
             <SafeLink               href={ctaButton.href || '/'}
-              className={`mt-6 block w-full text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
+              className={`mt-6 btn btn-sm btn-block ${
                 ctaButton.style === 'primary' 
-                  ? 'bg-primary-600 hover:bg-primary-700'
+                  ? 'btn--primary'
                   : ctaButton.style === 'secondary'
-                  ? 'bg-blue-600 hover:bg-blue-700'
-                  : 'bg-yellow-600 hover:bg-yellow-700'
+                  ? 'btn--secondary'
+                  : 'btn--warning'
               }`}
             >
               {ctaButton.text}

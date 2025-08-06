@@ -8,11 +8,11 @@
  * Flexible card system with brand colors and educational context
  */
 
-/* Base Card */
+/* Base Card - Compact */
 .c-card {
   background: var(--bg-surface, #ffffff);
   border-radius: var(--radius-md, 0.5rem);
-  padding: var(--space-lg, 1.5rem);
+  padding: var(--space-card-padding, 1rem); /* Uses compact card padding */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: all 0.3s var(--ease-smooth, ease);
   display: flex;
@@ -87,34 +87,34 @@
 
 /* Background Color Variants */
 .c-card--bg-sky {
-  background: linear-gradient(135deg, var(--brand-sky, #5DBFDB) 0%, rgba(93, 191, 219, 0.1) 100%);
+  background: var(--brand-sky, #5DBFDB);
   color: var(--brand-night, #3E4C59);
 }
 
 .c-card--bg-sun {
-  background: linear-gradient(135deg, var(--brand-sun, #FDD835) 0%, rgba(253, 216, 53, 0.1) 100%);
+  background: var(--brand-sun, #FDD835);
   color: var(--brand-night, #3E4C59);
 }
 
 .c-card--bg-grass {
-  background: linear-gradient(135deg, var(--brand-grass, #7CB342) 0%, rgba(124, 179, 66, 0.1) 100%);
+  background: var(--brand-grass, #7CB342);
   color: white;
 }
 
 .c-card--bg-heart {
-  background: linear-gradient(135deg, var(--brand-heart, #E53935) 0%, rgba(229, 57, 53, 0.1) 100%);
+  background: var(--brand-heart, #E53935);
   color: white;
 }
 
 .c-card--bg-night {
-  background: linear-gradient(135deg, var(--brand-night, #3E4C59) 0%, rgba(62, 76, 89, 0.1) 100%);
+  background: var(--brand-night, #3E4C59);
   color: white;
 }
 
-/* Card Structure Elements */
+/* Card Structure Elements - Compact */
 .c-card__header {
-  margin-bottom: var(--space-md, 1rem);
-  padding-bottom: var(--space-sm, 0.5rem);
+  margin-bottom: var(--space-component-md, 0.75rem); /* 12px */
+  padding-bottom: var(--space-component-sm, 0.375rem); /* 6px */
   border-bottom: 1px solid var(--border-light, #e5e7eb);
 }
 
@@ -122,8 +122,8 @@
   font-size: var(--text-lg, 1.125rem);
   font-weight: 600;
   color: var(--text-primary, #111827);
-  margin: 0 0 var(--space-xs, 0.25rem) 0;
-  line-height: 1.4;
+  margin: 0 0 var(--space-component-xs, 0.25rem) 0;
+  line-height: 1.3; /* Slightly tighter */
 }
 
 .c-card__subtitle {
@@ -136,7 +136,7 @@
 .c-card__content {
   color: var(--text-primary, #111827);
   flex: 1;
-  line-height: 1.6;
+  line-height: 1.5; /* Reduced from 1.6 */
 }
 
 .c-card__content > *:last-child {
@@ -144,20 +144,20 @@
 }
 
 .c-card__footer {
-  margin-top: var(--space-md, 1rem);
-  padding-top: var(--space-sm, 0.5rem);
+  margin-top: var(--space-component-md, 0.75rem); /* 12px */
+  padding-top: var(--space-component-sm, 0.375rem); /* 6px */
   border-top: 1px solid var(--border-light, #e5e7eb);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-sm, 0.5rem);
+  gap: var(--space-component-sm, 0.375rem); /* 6px */
 }
 
 .c-card__actions {
   display: flex;
-  gap: var(--space-sm, 0.5rem);
+  gap: var(--space-component-sm, 0.375rem); /* 6px */
   align-items: center;
-  margin-top: var(--space-md, 1rem);
+  margin-top: var(--space-component-md, 0.75rem); /* 12px */
 }
 
 /* Educational Context Cards */
@@ -173,7 +173,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--brand-sky, #5DBFDB), var(--brand-grass, #7CB342));
+  background: var(--brand-sky, #5DBFDB);
 }
 
 .c-card--lesson-active {
@@ -223,17 +223,17 @@
   background: rgba(253, 216, 53, 0.05);
 }
 
-/* Card Sizes */
+/* Card Sizes - Compact */
 .c-card--sm {
-  padding: var(--space-md, 1rem);
+  padding: var(--space-component-md, 0.75rem); /* 12px */
 }
 
 .c-card--lg {
-  padding: var(--space-xl, 2rem);
+  padding: var(--space-component-xl, 1.5rem); /* 24px */
 }
 
 .c-card--xl {
-  padding: var(--space-2xl, 3rem);
+  padding: var(--space-component-2xl, 2rem); /* 32px */
 }
 
 /* Responsive Design */

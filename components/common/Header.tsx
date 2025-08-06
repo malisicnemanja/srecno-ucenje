@@ -56,8 +56,7 @@ const fallbackMenuItems: NavigationItem[] = [
     href: '/kontakt',
     subItems: [
       { label: 'Kontaktirajte nas', href: '/kontakt' },
-      { label: 'Lokacije', href: '/lokacije' },
-      { label: 'Zakažite konsultacije', href: '/zakazivanje' }
+      { label: 'Lokacije', href: '/lokacije' }
     ]
   }
 ]
@@ -67,7 +66,7 @@ export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [navigation, setNavigation] = useState<Navigation | null>(null)
   const [menuItems, setMenuItems] = useState<NavigationItem[]>(fallbackMenuItems)
-  const [ctaButton, setCTAButton] = useState<{ text: string; href: string; style: 'primary' | 'secondary' | 'accent' }>({ text: 'Zakažite konsultacije', href: '/zakazivanje', style: 'primary' })
+  const [ctaButton, setCTAButton] = useState<{ text: string; href: string; style: 'primary' | 'secondary' | 'accent' }>({ text: 'Zakaži', href: '/zakazivanje', style: 'primary' })
   const pathname = usePathname()
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -274,7 +273,7 @@ export default function Header() {
               {/* Mobile CTA */}
               <SafeLink 
                 href={ctaButton.href || '/zakazivanje'}
-                className={`block w-full px-6 py-3 rounded-xl font-medium text-center transition-colors mt-4 ${
+                className={`block w-full px-4 py-3 rounded-xl text-sm font-medium text-center transition-colors mt-4 min-h-[44px] flex items-center justify-center ${
                   ctaButton.style === 'primary' ? 'bg-primary-600 text-white hover:bg-primary-700' :
                   ctaButton.style === 'secondary' ? 'bg-secondary-600 text-white hover:bg-secondary-700' :
                   'bg-accent-600 text-white hover:bg-accent-700'

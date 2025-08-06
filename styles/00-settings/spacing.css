@@ -44,31 +44,31 @@
   --space-80: 20rem;       /* 320px */
   --space-96: 24rem;       /* 384px */
 
-  /* === SEMANTIC SPACING === */
+  /* === SEMANTIC SPACING - COMPACT === */
   
-  /* Component spacing */
-  --space-component-xs: var(--space-1);
-  --space-component-sm: var(--space-2);
-  --space-component-md: var(--space-4);
-  --space-component-lg: var(--space-6);
-  --space-component-xl: var(--space-8);
-  --space-component-2xl: var(--space-12);
+  /* Component spacing - reduced by ~50% */
+  --space-component-xs: var(--space-1);    /* 4px */
+  --space-component-sm: var(--space-1-5);  /* 6px */
+  --space-component-md: var(--space-3);    /* 12px */
+  --space-component-lg: var(--space-4);    /* 16px */
+  --space-component-xl: var(--space-6);    /* 24px */
+  --space-component-2xl: var(--space-8);   /* 32px */
 
-  /* Layout spacing */
-  --space-layout-xs: var(--space-4);
-  --space-layout-sm: var(--space-6);
-  --space-layout-md: var(--space-8);
-  --space-layout-lg: var(--space-12);
-  --space-layout-xl: var(--space-16);
-  --space-layout-2xl: var(--space-24);
+  /* Layout spacing - compact */
+  --space-layout-xs: var(--space-3);    /* 12px */
+  --space-layout-sm: var(--space-4);    /* 16px */
+  --space-layout-md: var(--space-6);    /* 24px */
+  --space-layout-lg: var(--space-8);    /* 32px */
+  --space-layout-xl: var(--space-12);   /* 48px */
+  --space-layout-2xl: var(--space-16);  /* 64px */
 
-  /* Section spacing */
-  --space-section-xs: var(--space-8);
-  --space-section-sm: var(--space-12);
-  --space-section-md: var(--space-16);
-  --space-section-lg: var(--space-24);
-  --space-section-xl: var(--space-32);
-  --space-section-2xl: var(--space-48);
+  /* Section spacing - compact */
+  --space-section-xs: var(--space-6);    /* 24px */
+  --space-section-sm: var(--space-8);    /* 32px */
+  --space-section-md: var(--space-12);   /* 48px */
+  --space-section-lg: var(--space-16);   /* 64px */
+  --space-section-xl: var(--space-20);   /* 80px */
+  --space-section-2xl: var(--space-24);  /* 96px */
 
   /* === EDUCATIONAL SPACING === */
   
@@ -77,24 +77,24 @@
   --space-touch-comfortable: var(--space-12); /* 48px comfortable */
   --space-touch-large: var(--space-14);    /* 56px large */
 
-  /* Content spacing */
-  --space-paragraph: var(--space-4);       /* Between paragraphs */
-  --space-list-item: var(--space-2);       /* Between list items */
-  --space-heading: var(--space-6);         /* After headings */
-  --space-content-block: var(--space-8);   /* Between content blocks */
+  /* Content spacing - compact */
+  --space-paragraph: var(--space-3);       /* 12px - Between paragraphs */
+  --space-list-item: var(--space-1-5);     /* 6px - Between list items */
+  --space-heading: var(--space-4);         /* 16px - After headings */
+  --space-content-block: var(--space-6);   /* 24px - Between content blocks */
 
-  /* Interactive spacing */
-  --space-button-padding-x: var(--space-4);
-  --space-button-padding-y: var(--space-3);
-  --space-input-padding-x: var(--space-3);
-  --space-input-padding-y: var(--space-2-5);
-  --space-card-padding: var(--space-6);
-  --space-modal-padding: var(--space-8);
+  /* Interactive spacing - compact */
+  --space-button-padding-x: var(--space-3);    /* 12px */
+  --space-button-padding-y: var(--space-2);    /* 8px */
+  --space-input-padding-x: var(--space-3);     /* 12px */
+  --space-input-padding-y: var(--space-2);     /* 8px */
+  --space-card-padding: var(--space-4);        /* 16px - was 24px */
+  --space-modal-padding: var(--space-6);       /* 24px - was 32px */
 
-  /* Container padding */
-  --space-container-padding: var(--space-4); /* Mobile container padding */
-  --space-page-padding-top: var(--space-16); /* Top padding for pages */
-  --space-page-padding-bottom: var(--space-24); /* Bottom padding for pages */
+  /* Container padding - compact */
+  --space-container-padding: var(--space-3); /* 12px - Mobile container padding */
+  --space-page-padding-top: var(--space-12); /* 48px - Top padding for pages */
+  --space-page-padding-bottom: var(--space-16); /* 64px - Bottom padding for pages */
 
   /* === NEGATIVE SPACING === */
   --space-negative-1: calc(-1 * var(--space-1));
@@ -155,37 +155,37 @@
 
 @media (min-width: 640px) {
   :root {
-    --space-container-padding: var(--space-6);
-    --space-section-md: var(--space-20);
-    --space-section-lg: var(--space-28);
-    --space-section-xl: var(--space-40);
+    --space-container-padding: var(--space-4);    /* 16px - was 24px */
+    --space-section-md: var(--space-14);          /* 56px - was 80px */
+    --space-section-lg: var(--space-18);          /* 72px - was 112px */
+    --space-section-xl: var(--space-24);          /* 96px - was 160px */
   }
 }
 
 @media (min-width: 768px) {
   :root {
-    --space-container-padding: var(--space-8);
-    --space-section-md: var(--space-24);
-    --space-section-lg: var(--space-32);
-    --space-section-xl: var(--space-48);
-    --space-section-2xl: var(--space-64);
+    --space-container-padding: var(--space-6);     /* 24px - was 32px */
+    --space-section-md: var(--space-16);           /* 64px - was 96px */
+    --space-section-lg: var(--space-20);           /* 80px - was 128px */
+    --space-section-xl: var(--space-28);           /* 112px - was 192px */
+    --space-section-2xl: var(--space-36);          /* 144px - was 256px */
     
-    /* Larger component spacing on tablets */
-    --space-card-padding: var(--space-8);
-    --space-modal-padding: var(--space-12);
+    /* Larger component spacing on tablets - compact */
+    --space-card-padding: var(--space-6);          /* 24px - was 32px */
+    --space-modal-padding: var(--space-8);         /* 32px - was 48px */
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --space-container-padding: var(--space-12);
-    --space-section-lg: var(--space-40);
-    --space-section-xl: var(--space-56);
-    --space-section-2xl: var(--space-80);
+    --space-container-padding: var(--space-8);     /* 32px - was 48px */
+    --space-section-lg: var(--space-24);           /* 96px - was 160px */
+    --space-section-xl: var(--space-32);           /* 128px - was 224px */
+    --space-section-2xl: var(--space-44);          /* 176px - was 320px */
     
-    /* Desktop spacing */
-    --space-card-padding: var(--space-10);
-    --space-modal-padding: var(--space-16);
+    /* Desktop spacing - compact */
+    --space-card-padding: var(--space-8);          /* 32px - was 40px */
+    --space-modal-padding: var(--space-12);        /* 48px - was 64px */
   }
 }
 

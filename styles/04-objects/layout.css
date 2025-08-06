@@ -4,19 +4,19 @@
    ========================================================================== */
 
 /**
- * Stack layout - vertical spacing
+ * Stack layout - vertical spacing - Compact
  */
 .o-stack {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md, 1rem);
+  gap: var(--space-component-md, 0.75rem); /* 12px instead of 16px */
 }
 
-.o-stack--xs { gap: var(--space-xs, 0.25rem); }
-.o-stack--sm { gap: var(--space-sm, 0.5rem); }
-.o-stack--lg { gap: var(--space-lg, 1.5rem); }
-.o-stack--xl { gap: var(--space-xl, 2rem); }
-.o-stack--2xl { gap: var(--space-2xl, 3rem); }
+.o-stack--xs { gap: var(--space-component-xs, 0.25rem); } /* 4px */
+.o-stack--sm { gap: var(--space-component-sm, 0.375rem); } /* 6px */
+.o-stack--lg { gap: var(--space-component-lg, 1rem); } /* 16px */
+.o-stack--xl { gap: var(--space-component-xl, 1.5rem); } /* 24px */
+.o-stack--2xl { gap: var(--space-component-2xl, 2rem); } /* 32px */
 
 .o-stack--center {
   align-items: center;
@@ -27,12 +27,12 @@
 }
 
 /**
- * Cluster layout - horizontal wrapping
+ * Cluster layout - horizontal wrapping - Compact
  */
 .o-cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-md, 1rem);
+  gap: var(--space-component-md, 0.75rem); /* 12px */
   align-items: center;
 }
 
@@ -53,12 +53,12 @@
 }
 
 /**
- * Sidebar layout
+ * Sidebar layout - Compact
  */
 .o-sidebar {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-lg, 1.5rem);
+  gap: var(--space-component-lg, 1rem); /* 16px */
 }
 
 .o-sidebar > :first-child {
@@ -80,13 +80,13 @@
 }
 
 /**
- * Cover layout - hero sections
+ * Cover layout - hero sections - Compact
  */
 .o-cover {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: var(--space-md, 1rem);
+  padding: var(--space-component-lg, 1rem); /* 16px */
 }
 
 .o-cover__principal {
@@ -126,12 +126,12 @@
 }
 
 /**
- * Switcher - responsive flex to stack
+ * Switcher - responsive flex to stack - Compact
  */
 .o-switcher {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-md, 1rem);
+  gap: var(--space-component-md, 0.75rem); /* 12px */
 }
 
 .o-switcher > * {
@@ -145,7 +145,7 @@
 .o-center {
   margin-inline: auto;
   max-width: var(--center-max, 60rem);
-  padding-inline: var(--space-md, 1rem);
+  padding-inline: var(--space-container-padding, 0.75rem); /* Uses responsive container padding */
 }
 
 .o-center--narrow {
@@ -157,11 +157,11 @@
 }
 
 /**
- * Reel - horizontal scrolling
+ * Reel - horizontal scrolling - Compact
  */
 .o-reel {
   display: flex;
-  gap: var(--space-md, 1rem);
+  gap: var(--space-component-md, 0.75rem); /* 12px */
   overflow-x: auto;
   scrollbar-width: thin;
 }

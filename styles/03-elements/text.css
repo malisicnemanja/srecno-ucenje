@@ -3,10 +3,11 @@
  * Default styles for text content
  */
 
-/* Paragraphs */
+/* Paragraphs - Compact */
 p {
-  @apply text-base leading-relaxed text-gray-700;
-  margin-bottom: 1rem;
+  @apply text-base text-gray-700;
+  line-height: 1.6; /* Changed from leading-relaxed (1.75) to 1.6 */
+  margin-bottom: var(--paragraph-spacing, 0.75rem); /* 12px instead of 16px */
 }
 
 p:last-child {
@@ -60,30 +61,32 @@ code {
 pre {
   background-color: #111827;
   color: #f3f4f6;
-  padding: 1rem;
+  padding: var(--space-component-lg, 1rem); /* 16px */
   border-radius: 0.5rem;
   overflow-x: auto;
-  margin: 1.5rem 0;
+  margin: var(--space-content-block, 1.5rem) 0; /* 24px */
 }
 
 pre code {
   @apply bg-transparent text-inherit p-0;
 }
 
-/* Blockquotes */
+/* Blockquotes - Compact */
 blockquote {
   @apply border-l-4 border-primary-500 pl-4 py-2 italic text-gray-700;
-  margin: 1.5rem 0;
+  margin: var(--space-paragraph, 0.75rem) 0; /* 12px instead of 24px */
+  line-height: 1.5; /* Tighter line-height */
 }
 
 blockquote cite {
   @apply block mt-2 text-sm text-gray-600 not-italic;
 }
 
-/* Lists - moved from previous location */
+/* Lists - moved from previous location - Compact */
 ul,
 ol {
-  @apply ml-6 mb-4;
+  @apply ml-6;
+  margin-bottom: var(--space-paragraph, 0.75rem); /* 12px instead of 16px */
 }
 
 ul {
@@ -95,7 +98,7 @@ ol {
 }
 
 li {
-  @apply mb-2;
+  margin-bottom: var(--space-list-item, 0.375rem); /* 6px instead of 8px */
 }
 
 li:last-child {
@@ -108,17 +111,19 @@ li ol {
   @apply mt-2 mb-0;
 }
 
-/* Definition lists */
+/* Definition lists - Compact */
 dl {
-  @apply mb-4;
+  margin-bottom: var(--space-paragraph, 0.75rem); /* 12px */
 }
 
 dt {
-  @apply font-semibold text-gray-900 mb-1;
+  @apply font-semibold text-gray-900;
+  margin-bottom: var(--space-component-xs, 0.25rem); /* 4px */
 }
 
 dd {
-  @apply ml-4 mb-2 text-gray-700;
+  @apply ml-4 text-gray-700;
+  margin-bottom: var(--space-list-item, 0.375rem); /* 6px */
 }
 
 /* Horizontal rules */

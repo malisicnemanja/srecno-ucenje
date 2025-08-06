@@ -113,6 +113,31 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
               S.listItem()
                 .title('Programi obuke')
                 .child(S.documentTypeList('trainingProgram').title('Programi obuke')),
+              S.divider(),
+              S.listItem()
+                .title('Prijava za franšizu')
+                .child(
+                  S.list()
+                    .title('Prijava za franšizu')
+                    .items([
+                      S.listItem()
+                        .title('Glavna aplikacija')
+                        .child(S.documentTypeList('franchiseApplication').title('Aplikacije')),
+                      S.listItem()
+                        .title('Sekcije')
+                        .child(S.documentTypeList('franchiseSection').title('Sekcije')),
+                      S.listItem()
+                        .title('Polja')
+                        .child(S.documentTypeList('franchiseField').title('Polja')),
+                      S.listItem()
+                        .title('Motivacioni sadržaj')
+                        .child(S.documentTypeList('franchiseMotivational').title('Motivacioni sadržaj')),
+                      S.divider(),
+                      S.listItem()
+                        .title('Poslate prijave')
+                        .child(S.documentTypeList('franchiseApplicationSubmission').title('Poslate prijave')),
+                    ])
+                ),
             ])
         ),
 
@@ -312,6 +337,11 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
             'locationData',
             'franchiseSteps',
             'trainingProgram',
+            'franchiseApplication',
+            'franchiseSection',
+            'franchiseField',
+            'franchiseMotivational',
+            'franchiseApplicationSubmission',
             'legalPage',
             'errorPage',
             'virtualClassroom',

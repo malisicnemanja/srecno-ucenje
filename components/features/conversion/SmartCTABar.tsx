@@ -40,8 +40,8 @@ export default function SmartCTABar() {
       {
         text: 'Besplatne konsultacije za nove partnere',
         icon: <Gift size={20} className="inline mr-2" />,
-        cta: 'Zakažite poziv',
-        link: '/kontakt',
+        cta: 'Zakaži',
+        link: '/zakazivanje',
         delay: 25000,
       },
       {

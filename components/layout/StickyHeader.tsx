@@ -103,7 +103,6 @@ export default function StickyHeader() {
       ]
     },
     { name: 'Resursi', href: '/resursi' },
-    { name: 'Konsultacije', href: '/zakazivanje' },
   ]
 
   return (
@@ -208,10 +207,10 @@ export default function StickyHeader() {
               ))}
               
               {/* Desktop CTA Button */}
-              <SafeLink                 href="/kontakt"
-                className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
+              <SafeLink                 href="/zakazivanje"
+                className="ml-4 bg-green-600 text-white px-3 py-2 text-sm rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 min-h-[36px] flex items-center"
               >
-                Započnite Sada
+                Zakaži
               </SafeLink>
             </nav>
 
@@ -362,10 +361,10 @@ export default function StickyHeader() {
             ))}
 
             {/* CTA Button */}
-            <SafeLink               href="/kontakt"
-              className="mt-6 block w-full bg-green-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
+            <SafeLink               href="/zakazivanje"
+              className="mt-6 block w-full bg-green-600 text-white text-center py-3 px-4 text-sm rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 min-h-[44px] flex items-center justify-center"
             >
-              Započnite Sada
+              Zakaži
             </SafeLink>
           </nav>
         </div>

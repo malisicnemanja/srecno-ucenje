@@ -40,7 +40,7 @@ export default function ExitIntentPopup({ pageType = 'default' }: ExitIntentPopu
           title: 'Imate još pitanja?',
           subtitle: 'Naš tim je tu da vam pomogne',
           offer: 'Besplatne 30-min konsultacije',
-          cta: 'Zakažite poziv',
+          cta: 'Zakaži',
         }
       case 'home':
         return {

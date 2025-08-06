@@ -28,7 +28,7 @@ export default async function HomePage() {
         position: "above"
       },
       primaryCta: {
-        text: "Zakaži 30-min poziv",
+        text: "Zakaži",
         href: "/kontakt"
       },
       secondaryCta: {
@@ -65,10 +65,10 @@ export default async function HomePage() {
               {pageData.hero?.subtitle || fallbackData.hero.subtitle}
             </p>
             <div className="c-hero-home__actions">
-              <a href="/kontakt" className="btn btn-hero btn-hero-arrow">
+              <a href="/kontakt" className="btn btn--primary btn-lg">
                 Zakaži razgovor
               </a>
-              <a href="/o-nama" className="btn btn-hero-grass">
+              <a href="/o-nama" className="btn btn--outline btn--outline-primary btn-lg">
                 Saznaj više
               </a>
             </div>

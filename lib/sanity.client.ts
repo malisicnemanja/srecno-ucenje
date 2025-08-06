@@ -10,10 +10,11 @@ export const apiVersion = '2024-01-01'
 const USE_MOCK = false // Set to false when using real Sanity
 
 export const client = createClient({
-  projectId: '08ctxj6y', // Hardcode for now to avoid env issues
-  dataset: 'production',
+  projectId: projectId, // Use the correct project ID from env
+  dataset: dataset,
   apiVersion,
   useCdn: false, // Disable CDN for now
+  token: process.env.NEXT_PUBLIC_SANITY_WRITE_TOKEN, // Add token for read access
 })
 
 // Temporary urlFor function that returns direct URLs

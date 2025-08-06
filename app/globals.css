@@ -102,13 +102,19 @@
   --color-gray-800: #1F2937;
   --color-gray-900: #111827;
   
-  /* Spacing sistem */
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-2xl: 4rem;
+  /* Spacing sistem - Compact Version */
+  --space-xs: 0.25rem;     /* 4px - bilo 8px */
+  --space-sm: 0.5rem;      /* 8px - bilo 16px */
+  --space-md: 0.75rem;     /* 12px - bilo 24px */
+  --space-lg: 1rem;        /* 16px - bilo 32px */
+  --space-xl: 1.5rem;      /* 24px - bilo 48px */
+  --space-2xl: 2rem;       /* 32px - bilo 64px */
+  --space-3xl: 3rem;       /* 48px - bilo 96px */
+  
+  /* New compact semantic spacing */
+  --paragraph-spacing: 0.75rem;
+  --section-padding: 2rem;
+  --section-padding-mobile: 1.5rem;
   
   /* Border radius - moderni, glatki */
   --radius-sm: 0.5rem;
@@ -129,6 +135,11 @@
   --transition-base: 250ms ease;
   --transition-slow: 350ms ease;
   --transition-spring: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* === LINK SYSTEM OVERRIDES === */
+  /* NO GREEN UNDERLINES - always currentColor */
+  --link-underline: currentColor !important;
+  --link-decoration: currentColor !important;
 }
 
 /* === MODERN ANIMATIONS === */
@@ -284,6 +295,7 @@
     @apply bg-gray-50 text-gray-900;
     /* Mobile-first: 320px viewport optimization */
     min-width: 320px;
+    line-height: 1.5; /* Reduced from 1.75 */
   }
 
   /* Mobile First Typography - Educational Platform */
@@ -293,6 +305,7 @@
     text-transform: none;
     /* Better text rendering for education */
     text-rendering: optimizeLegibility;
+    margin-bottom: var(--space-md); /* Compact heading margins */
   }
 
   /* Mobile-first (320px+) Typography Scale */
@@ -415,12 +428,12 @@
     box-shadow: var(--shadow-xl);
   }
 
-  /* Clean card dizajn */
+  /* Clean card dizajn - Compact */
   .card-modern {
     background: white;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
-    padding: var(--space-lg);
+    padding: var(--space-lg); /* Now 16px instead of 32px */
     transition: all var(--transition-base);
     border: 1px solid var(--color-gray-100);
   }
@@ -431,9 +444,9 @@
     transform: translateY(-2px);
   }
 
-  /* Moderne dugmad - BEZ GRADIJENATA */
+  /* Moderne dugmad - BEZ GRADIJENATA - Compact */
   .btn-modern {
-    padding: var(--space-sm) var(--space-lg);
+    padding: var(--space-sm) var(--space-lg); /* Now 8px 16px instead of 16px 32px */
     border-radius: var(--radius-md);
     font-weight: 500;
     transition: all var(--transition-base);
@@ -985,9 +998,15 @@
     @apply text-lg md:text-xl text-gray-600 leading-relaxed;
   }
 
-  /* Section Styles */
+  /* Section Styles - Compact */
   .section-padding {
-    @apply py-16 md:py-20 lg:py-24;
+    padding-block: var(--section-padding-mobile);
+  }
+  
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-block: var(--section-padding);
+    }
   }
 
   /* Grid Layouts */
@@ -1096,8 +1115,9 @@
   
   /* === CMS PLACEHOLDER BRANDING === */
   .cms-placeholder {
-    @apply bg-gradient-to-br rounded-xl p-6 text-center relative overflow-hidden;
-    background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-secondary-50) 100%);
+    @apply rounded-xl p-6 text-center relative overflow-hidden;
+    background: var(--color-primary-50);
+    background-image: none !important;
     border: 2px dashed var(--color-gray-300);
     min-height: 120px;
     display: flex;
@@ -1126,7 +1146,8 @@
   .cms-placeholder-hero {
     @apply cms-placeholder;
     min-height: 200px;
-    background: linear-gradient(135deg, var(--color-accent-50) 0%, var(--color-primary-50) 100%);
+    background: var(--color-accent-50);
+    background-image: none !important;
   }
   
   .cms-placeholder-hero::before {
@@ -1256,12 +1277,11 @@
     z-index: 60;
   }
 
-  /* Text gradients (subtle) */
+  /* Text gradients REMOVED - solid colors only */
   .text-gradient-primary {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-primary) !important;
+    background: none !important;
+    background-image: none !important;
   }
 
   /* Icon sizing */
@@ -1296,5 +1316,61 @@
 
   .animate-count-up {
     animation: countUp 0.8s ease-out;
+  }
+
+  /* === GLOBAL LINK SYSTEM === */
+  /* Override any existing link styles with new system */
+  
+  /* Ensure all links use inherit color and currentColor underlines */
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+    transition: opacity 0.2s ease !important;
+  }
+  
+  a:hover {
+    opacity: 0.8 !important;
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-underline-offset: 2px !important;
+  }
+  
+  a:focus-visible {
+    opacity: 0.8 !important;
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-underline-offset: 2px !important;
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+  
+  /* Header specific link overrides */
+  .c-header a:hover {
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-underline-offset: 2px !important;
+  }
+  
+  /* Footer specific link overrides */
+  .c-footer a:hover {
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-underline-offset: 2px !important;
+  }
+  
+  /* Button links should not have underlines */
+  a.btn,
+  a.button,
+  .btn a,
+  .button a {
+    text-decoration: none !important;
+  }
+  
+  a.btn:hover,
+  a.button:hover,
+  .btn a:hover,
+  .button a:hover {
+    text-decoration: none !important;
   }
 }
