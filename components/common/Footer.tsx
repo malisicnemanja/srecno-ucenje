@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import { useSanityQuery } from '@/hooks/useSanity'
 import { MailIcon, PhoneIcon, GlobeIcon } from '@/components/icons'
 
@@ -94,9 +95,9 @@ export default function Footer() {
               <ul className="space-y-2 text-gray-400">
                 {column.links?.map((link: any, linkIndex: number) => (
                   <li key={linkIndex}>
-                    <Link href={link.link || '#'} className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">
+                    <SafeLink href={link.link || '#'} className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">
                       {link.label}
-                    </Link>
+                    </SafeLink>
                   </li>
                 ))}
               </ul>
@@ -121,12 +122,12 @@ export default function Footer() {
               </div>
             </div>
             <div className="space-y-2 text-gray-400 text-sm">
-              <Link href="/legal/privatnost" className="block hover:text-white transition-all duration-300 hover:translate-x-1">
+              <SafeLink href="/legal/privatnost" className="block hover:text-white transition-all duration-300 hover:translate-x-1">
                 Politika privatnosti
-              </Link>
-              <Link href="/legal/uslovi-koriscenja" className="block hover:text-white transition-all duration-300 hover:translate-x-1">
+              </SafeLink>
+              <SafeLink href="/legal/uslovi-koriscenja" className="block hover:text-white transition-all duration-300 hover:translate-x-1">
                 Uslovi korišćenja
-              </Link>
+              </SafeLink>
             </div>
           </div>
         </div>

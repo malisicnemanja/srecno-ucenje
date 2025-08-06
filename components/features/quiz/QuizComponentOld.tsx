@@ -424,7 +424,7 @@ export default function QuizComponent({ quizData, quizType }: QuizProps) {
                   {result.ctaText && result.ctaLink && (
                     <div className="text-center mt-8">
                       <a
-                        href={result.ctaLink}
+                        href={result.ctaLink || '/'}
                         className="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors transform hover:scale-105"
                       >
                         {result.ctaText}

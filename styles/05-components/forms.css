@@ -1,0 +1,1099 @@
+/**
+ * SREĆNO UČENJE - FORM COMPONENTS
+ * Comprehensive form system for educational platform
+ * Mobile-first, accessible, and user-friendly forms
+ */
+
+/* === BASE FORM === */
+
+.c-form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.c-form--wide {
+  max-width: 800px;
+}
+
+.c-form--narrow {
+  max-width: 400px;
+}
+
+/* Form sections */
+.c-form__section {
+  margin-bottom: var(--space-6);
+}
+
+.c-form__section:last-child {
+  margin-bottom: 0;
+}
+
+.c-form__section-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.c-form__section-description {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+  line-height: var(--line-height-relaxed);
+}
+
+/* === FORM GROUPS === */
+
+.c-form__group {
+  margin-bottom: var(--space-4);
+  position: relative;
+}
+
+.c-form__group--horizontal {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .c-form__group--horizontal {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+}
+
+.c-form__group--inline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* === FORM LABELS === */
+
+.c-form__label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  line-height: var(--line-height-base);
+}
+
+.c-form__label--required::after {
+  content: ' *';
+  color: var(--color-error);
+  font-weight: var(--font-weight-normal);
+}
+
+.c-form__label--optional::after {
+  content: ' (optional)';
+  color: var(--text-muted);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Inline labels for checkboxes and radios */
+.c-form__label--inline {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0;
+  cursor: pointer;
+  user-select: none;
+  font-weight: var(--font-weight-normal);
+}
+
+/* === FORM INPUTS === */
+
+.c-form__input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  line-height: var(--line-height-base);
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.c-form__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.c-form__input:disabled {
+  background-color: var(--color-gray-100);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.c-form__input::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+/* Input sizes */
+.c-form__input--sm {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+}
+
+.c-form__input--lg {
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--font-size-lg);
+}
+
+/* Input variants */
+.c-form__input--error {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px var(--color-error-light);
+}
+
+.c-form__input--success {
+  border-color: var(--color-success);
+  box-shadow: 0 0 0 3px var(--color-success-light);
+}
+
+/* === TEXTAREA === */
+
+.c-form__textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: var(--line-height-relaxed);
+}
+
+.c-form__textarea--auto {
+  resize: none;
+  overflow: hidden;
+}
+
+/* === SELECT === */
+
+.c-form__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right var(--space-3) center;
+  background-size: 1em;
+  padding-right: var(--space-10);
+  cursor: pointer;
+}
+
+.c-form__select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+/* === CHECKBOX & RADIO === */
+
+.c-form__checkbox,
+.c-form__radio {
+  appearance: none;
+  width: var(--space-5);
+  height: var(--space-5);
+  border: 2px solid var(--border-medium);
+  background-color: var(--bg-surface);
+  margin-right: var(--space-2);
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+}
+
+.c-form__checkbox {
+  border-radius: var(--radius-sm);
+}
+
+.c-form__radio {
+  border-radius: var(--radius-full);
+}
+
+.c-form__checkbox:checked,
+.c-form__radio:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.c-form__checkbox:checked::before {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+
+.c-form__radio:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: var(--radius-full);
+}
+
+.c-form__checkbox:focus,
+.c-form__radio:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.c-form__checkbox:disabled,
+.c-form__radio:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* === FILE UPLOAD === */
+
+.c-form__file {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+}
+
+.c-form__file-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
+}
+
+.c-form__file-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-4);
+  border: 2px dashed var(--border-medium);
+  border-radius: var(--radius-md);
+  background-color: var(--color-gray-50);
+  color: var(--text-muted);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-base);
+  text-align: center;
+  min-height: 120px;
+}
+
+.c-form__file:hover .c-form__file-button {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary);
+}
+
+.c-form__file--has-file .c-form__file-button {
+  border-style: solid;
+  background-color: var(--color-success-light);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.c-form__file-icon {
+  font-size: var(--font-size-2xl);
+}
+
+.c-form__file-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.c-form__file-label {
+  font-weight: var(--font-weight-semibold);
+}
+
+.c-form__file-hint {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+/* === INPUT GROUPS === */
+
+.c-form__input-group {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.c-form__input-group .c-form__input {
+  border-radius: 0;
+  border-right: 0;
+}
+
+.c-form__input-group .c-form__input:first-child {
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+}
+
+.c-form__input-group .c-form__input:last-child {
+  border-top-right-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+  border-right: 1px solid var(--border-medium);
+}
+
+.c-form__addon {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-gray-100);
+  border: 1px solid var(--border-medium);
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+.c-form__addon--prepend {
+  border-right: 0;
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+}
+
+.c-form__addon--append {
+  border-left: 0;
+  border-top-right-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+}
+
+/* === FORM VALIDATION === */
+
+.c-form__help {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  margin-top: var(--space-1);
+  line-height: var(--line-height-base);
+}
+
+.c-form__error {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--color-error);
+  margin-top: var(--space-1);
+  line-height: var(--line-height-base);
+}
+
+.c-form__success {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--color-success);
+  margin-top: var(--space-1);
+  line-height: var(--line-height-base);
+}
+
+/* Validation icons */
+.c-form__group--error .c-form__input {
+  border-color: var(--color-error);
+  padding-right: var(--space-10);
+}
+
+.c-form__group--success .c-form__input {
+  border-color: var(--color-success);
+  padding-right: var(--space-10);
+}
+
+.c-form__validation-icon {
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: var(--font-size-sm);
+}
+
+.c-form__group--error .c-form__validation-icon {
+  color: var(--color-error);
+}
+
+.c-form__group--success .c-form__validation-icon {
+  color: var(--color-success);
+}
+
+/* === FORM ACTIONS === */
+
+.c-form__actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-light);
+}
+
+.c-form__actions--center {
+  justify-content: center;
+}
+
+.c-form__actions--end {
+  justify-content: flex-end;
+}
+
+.c-form__actions--between {
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  .c-form__actions {
+    flex-direction: column;
+  }
+  
+  .c-form__actions .btn {
+    width: 100%;
+  }
+}
+
+/* === EDUCATIONAL FORM VARIANTS === */
+
+/* Quiz form */
+.c-form--quiz {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+}
+
+.c-form--quiz .c-form__group {
+  margin-bottom: var(--space-6);
+}
+
+/* Assessment form */
+.c-form--assessment {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-secondary-200);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+}
+
+/* Login/Register forms */
+.c-form--auth {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+  max-width: 400px;
+}
+
+.c-form--auth .c-form__title {
+  text-align: center;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+}
+
+/* Contact form */
+.c-form--contact {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 1px solid var(--border-light);
+}
+
+/* Search form */
+.c-form--search {
+  position: relative;
+  max-width: 500px;
+}
+
+.c-form--search .c-form__input {
+  padding-left: var(--space-12);
+  border-radius: var(--radius-full);
+}
+
+.c-form--search .c-form__search-icon {
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* === RANGE INPUT === */
+
+.c-form__range {
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-gray-200);
+  outline: none;
+  cursor: pointer;
+}
+
+.c-form__range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.c-form__range::-webkit-slider-thumb:hover {
+  background: var(--color-primary-600);
+  transform: scale(1.1);
+}
+
+.c-form__range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+/* === PROGRESS INDICATOR === */
+
+.c-form__progress {
+  width: 100%;
+  height: 4px;
+  background: var(--color-gray-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-6);
+}
+
+.c-form__progress-bar {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+.c-form__progress-text {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+/* === ACCESSIBILITY ENHANCEMENTS === */
+
+@media (prefers-reduced-motion: reduce) {
+  .c-form__input,
+  .c-form__checkbox,
+  .c-form__radio,
+  .c-form__file-button,
+  .c-form__range::-webkit-slider-thumb,
+  .c-form__progress-bar {
+    transition: none;
+  }
+  
+  .c-form__range::-webkit-slider-thumb:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .c-form__input,
+  .c-form__select,
+  .c-form__textarea {
+    border-width: 2px;
+  }
+  
+  .c-form__checkbox,
+  .c-form__radio {
+    border-width: 3px;
+  }
+}
+
+/* === DARK MODE === */
+
+@media (prefers-color-scheme: dark) {
+  .c-form__input,
+  .c-form__select,
+  .c-form__textarea {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+    color: var(--color-gray-100);
+  }
+  
+  .c-form__input:disabled {
+    background-color: var(--color-gray-700);
+    color: var(--color-gray-400);
+  }
+  
+  .c-form__checkbox,
+  .c-form__radio {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+  
+  .c-form__file-button {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+    color: var(--color-gray-300);
+  }
+  
+  .c-form__addon {
+    background-color: var(--color-gray-700);
+    border-color: var(--color-gray-600);
+    color: var(--color-gray-300);
+  }
+  
+  .c-form--quiz,
+  .c-form--auth,
+  .c-form--contact {
+    background: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+}
+
+/* === MODERN CUSTOM FORM COMPONENTS === */
+
+/* === FLOATING LABELS === */
+
+.c-form__group--floating {
+  position: relative;
+  margin-bottom: var(--space-6);
+}
+
+.c-form__input--floating {
+  padding: var(--space-4) var(--space-4) var(--space-3) var(--space-4);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.c-form__label--floating {
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  padding: 0 var(--space-1);
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.c-form__input--floating:focus + .c-form__label--floating,
+.c-form__input--floating:not(:placeholder-shown) + .c-form__label--floating,
+.c-form__input--floating.has-value + .c-form__label--floating {
+  top: 0;
+  transform: translateY(-50%) scale(0.85);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  left: calc(var(--space-4) - var(--space-1));
+}
+
+.c-form__input--floating:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-100), 0 4px 12px rgba(123, 195, 66, 0.15);
+  outline: none;
+}
+
+/* === CUSTOM STYLED DROPDOWNS === */
+
+.c-form__select-custom {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.c-form__select-custom .c-form__input {
+  appearance: none;
+  background-image: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  padding-right: var(--space-12);
+}
+
+.c-form__select-icon {
+  position: absolute;
+  right: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 3;
+  width: var(--space-5);
+  height: var(--space-5);
+  color: var(--text-muted);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.c-form__select-custom:hover .c-form__select-icon,
+.c-form__select-custom:focus-within .c-form__select-icon {
+  color: var(--color-primary);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Custom dropdown menu */
+.c-form__select-dropdown {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  left: 0;
+  right: 0;
+  background: var(--bg-surface);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px) scale(0.95);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.c-form__select-custom--open .c-form__select-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.c-form__select-option {
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  border-left: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.c-form__select-option:hover {
+  background: var(--color-primary-50);
+  border-left-color: var(--color-primary);
+  color: var(--color-primary-700);
+  transform: translateX(2px);
+}
+
+.c-form__select-option:active {
+  background: var(--color-primary-100);
+  transform: translateX(4px);
+}
+
+.c-form__select-option--selected {
+  background: var(--color-primary-100);
+  border-left-color: var(--color-primary);
+  color: var(--color-primary-800);
+  font-weight: var(--font-weight-medium);
+}
+
+/* === CUSTOM DATE PICKER === */
+
+.c-form__datepicker {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.c-form__datepicker-input {
+  cursor: pointer;
+  padding-right: var(--space-12);
+}
+
+.c-form__datepicker-icon {
+  position: absolute;
+  right: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 3;
+  width: var(--space-5);
+  height: var(--space-5);
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.c-form__datepicker:hover .c-form__datepicker-icon,
+.c-form__datepicker:focus-within .c-form__datepicker-icon {
+  color: var(--color-primary);
+}
+
+.c-form__datepicker-calendar {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  left: 0;
+  background: var(--bg-surface);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.05);
+  padding: var(--space-4);
+  z-index: 1000;
+  min-width: 320px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px) scale(0.9);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.c-form__datepicker--open .c-form__datepicker-calendar {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.c-form__datepicker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.c-form__datepicker-nav {
+  background: none;
+  border: none;
+  width: var(--space-8);
+  height: var(--space-8);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.c-form__datepicker-nav:hover {
+  background: var(--color-primary-50);
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.c-form__datepicker-title {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.c-form__datepicker-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-1);
+}
+
+.c-form__datepicker-day {
+  width: var(--space-10);
+  height: var(--space-10);
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  transition: all 0.2s ease-out;
+  position: relative;
+}
+
+.c-form__datepicker-day:hover {
+  background: var(--color-primary-100);
+  transform: scale(1.05);
+}
+
+.c-form__datepicker-day--today {
+  background: var(--color-accent-100);
+  color: var(--color-accent-800);
+  font-weight: var(--font-weight-bold);
+}
+
+.c-form__datepicker-day--selected {
+  background: var(--color-primary);
+  color: white;
+  font-weight: var(--font-weight-bold);
+}
+
+.c-form__datepicker-day--outside {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.c-form__datepicker-day--disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* === ENHANCED FOCUS STATES === */
+
+.c-form__input:focus,
+.c-form__textarea:focus,
+.c-form__select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 
+    0 0 0 3px var(--color-primary-100),
+    0 4px 12px rgba(123, 195, 66, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.05);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+/* === VALIDATION WITH CSS ICONS === */
+
+.c-form__validation-icon {
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--space-5);
+  height: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  transition: all 0.3s ease;
+}
+
+.c-form__group--error .c-form__validation-icon {
+  background: var(--color-error);
+  color: white;
+}
+
+.c-form__group--error .c-form__validation-icon::before {
+  content: '✕';
+}
+
+.c-form__group--success .c-form__validation-icon {
+  background: var(--color-success);
+  color: white;
+}
+
+.c-form__group--success .c-form__validation-icon::before {
+  content: '✓';
+}
+
+.c-form__group--warning .c-form__validation-icon {
+  background: var(--color-warning);
+  color: white;
+}
+
+.c-form__group--warning .c-form__validation-icon::before {
+  content: '!';
+}
+
+/* Error/Success input states with enhanced animations */
+.c-form__input--error {
+  border-color: var(--color-error);
+  animation: shakeError 0.5s ease-in-out;
+}
+
+.c-form__input--success {
+  border-color: var(--color-success);
+  animation: successPulse 0.6s ease-out;
+}
+
+@keyframes shakeError {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 var(--color-success);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 8px rgba(104, 159, 56, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(104, 159, 56, 0);
+  }
+}
+
+/* === FORM MICRO-ANIMATIONS === */
+
+.c-form__input,
+.c-form__textarea,
+.c-form__select {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.c-form__input:hover:not(:focus),
+.c-form__textarea:hover:not(:focus) {
+  border-color: var(--color-primary-300);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* === CHECKBOX AND RADIO ENHANCEMENTS === */
+
+.c-form__checkbox,
+.c-form__radio {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.c-form__checkbox:hover,
+.c-form__radio:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 8px rgba(123, 195, 66, 0.1);
+}
+
+.c-form__checkbox:checked,
+.c-form__radio:checked {
+  animation: checkboxSuccess 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes checkboxSuccess {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* === PRINT STYLES === */
+
+@media print {
+  .c-form__actions {
+    display: none;
+  }
+  
+  .c-form__input,
+  .c-form__select,
+  .c-form__textarea {
+    background: white !important;
+    border: 1px solid black !important;
+    color: black !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  .c-form--quiz,
+  .c-form--assessment,
+  .c-form--auth,
+  .c-form--contact {
+    background: white !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+  }
+  
+  .c-form__select-dropdown,
+  .c-form__datepicker-calendar {
+    display: none !important;
+  }
+}

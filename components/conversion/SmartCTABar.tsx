@@ -97,7 +97,7 @@ export default function SmartCTABar() {
             
             <div className="flex items-center space-x-2">
               <a
-                href={content.href}
+                href={content.href || '/'}
                 className="bg-white text-primary-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm md:text-base whitespace-nowrap"
               >
                 {content.cta}

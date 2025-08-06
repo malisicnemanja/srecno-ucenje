@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import AnimatedHeadline, { AnimatedSubheadline } from '@/components/ui/AnimatedHeadline'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
 import { 
@@ -243,13 +244,13 @@ export default function UcionicaPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <Link href="/3d-ucionica" className="btn-primary group">
+                <SafeLink href="/3d-ucionica" className="btn-primary group">
                   <SparklesSVG size={20} className="mr-2 group-hover:scale-110 transition-transform" />
                   3D Virtuelni obilazak
-                </Link>
-                <Link href="/zakazivanje" className="btn-outline-primary">
+                </SafeLink>
+                <SafeLink href="/zakazivanje" className="btn-outline-primary">
                   Zakažite posetu
-                </Link>
+                </SafeLink>
               </motion.div>
 
               {/* Stats mini cards */}
@@ -554,10 +555,10 @@ export default function UcionicaPage() {
                 viewport={{ once: true }}
                 className="text-center mt-12"
               >
-                <Link href="/3d-ucionica" className="btn-primary inline-flex items-center group">
+                <SafeLink href="/3d-ucionica" className="btn-primary inline-flex items-center group">
                   <RocketSVG size={20} className="mr-2 group-hover:translate-x-1 transition-transform" />
                   Pokreni 3D virtuelni obilazak
-                </Link>
+                </SafeLink>
               </motion.div>
             </div>
 
@@ -698,9 +699,9 @@ export default function UcionicaPage() {
                 className="text-center mt-16"
               >
                 <p className="text-gray-600 mb-4">Niste sigurni koji program je najbolji za vaše dete?</p>
-                <Link href="/zakazivanje" className="btn-primary">
+                <SafeLink href="/zakazivanje" className="btn-primary">
                   Zakažite besplatne konsultacije
-                </Link>
+                </SafeLink>
               </motion.div>
             </div>
           </motion.section>
@@ -743,13 +744,13 @@ export default function UcionicaPage() {
               Zakažite besplatnu posetu i demo čas. Vaše dete će obožavati našu učionicu!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/zakazivanje" className="btn bg-white text-accent-600 hover:bg-gray-100 hover:scale-105 transition-all">
+              <SafeLink href="/zakazivanje" className="btn bg-white text-accent-600 hover:bg-gray-100 hover:scale-105 transition-all">
                 <CalendarSVG size={20} className="mr-2" />
                 Zakažite posetu
-              </Link>
-              <Link href="/kontakt" className="btn border-2 border-white text-white hover:bg-white hover:text-accent-600 transition-all">
+              </SafeLink>
+              <SafeLink href="/kontakt" className="btn border-2 border-white text-white hover:bg-white hover:text-accent-600 transition-all">
                 Kontaktirajte nas
-              </Link>
+              </SafeLink>
             </div>
           </motion.div>
         </div>

@@ -40,6 +40,7 @@
 /* === 5. OBJECTS === */
 @import './04-objects/container.css';
 @import './04-objects/grid.css';
+@import './04-objects/grid-extended.css';
 @import './04-objects/layout.css';
 @import './04-objects/media.css';
 @import './04-objects/list.css';
@@ -61,8 +62,11 @@
 /* === 7. UTILITIES === */
 @import './06-utilities/display.css';
 @import './06-utilities/spacing.css';
+@import './06-utilities/spacing-extended.css';
 @import './06-utilities/typography.css';
+@import './06-utilities/headings.css';
 @import './06-utilities/colors.css';
+@import './06-utilities/brand-colors.css';
 @import './06-utilities/layout.css';
 @import './06-utilities/accessibility.css';
 @import './06-utilities/animations.css';

@@ -24,45 +24,45 @@ export default function PricingSection({
   ctaLink = '/kontakt' 
 }: PricingSectionProps) {
   return (
-    <section className="py-12 sm:py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-night-900">{title}</h2>
+    <section className="l-section">
+      <div className="o-container">
+        <h2 className="u-h2 u-text-center u-m-b-md">{title}</h2>
         {subtitle && (
-          <p className="text-lg sm:text-xl text-night-600 text-center mb-8 sm:mb-12">{subtitle}</p>
+          <p className="u-text-lg u-text-secondary u-text-center u-m-b-xl">{subtitle}</p>
         )}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
+        <div className="c-pricing-grid">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`rounded-lg shadow-lg p-6 sm:p-8 transition-all duration-300 ${
+              className={`c-pricing-card ${
                 plan.featured
-                  ? 'bg-grass-600 text-white transform scale-100 sm:scale-105 ring-4 ring-sun-400 ring-opacity-50'
-                  : 'bg-white hover:shadow-xl'
+                  ? 'c-pricing-card--featured'
+                  : 'c-pricing-card--default'
               }`}
             >
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">{plan.name}</h3>
-              <div className="text-2xl sm:text-3xl font-bold mb-6">
+              <h3 className="c-pricing-card__title">{plan.name}</h3>
+              <div className="c-pricing-card__price">
                 {plan.price} {plan.currency || 'RSD'}
                 {plan.period && (
-                  <span className="text-sm sm:text-base font-normal">/{plan.period}</span>
+                  <span className="c-pricing-card__period">/{plan.period}</span>
                 )}
               </div>
-              <ul className="space-y-3 mb-8">
+              <ul className="c-pricing-card__features">
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-start">
-                    <span className={`mr-2 mt-0.5 ${plan.featured ? 'text-sun-300' : 'text-grass-500'}`}>
+                  <li key={i} className="c-pricing-card__feature">
+                    <span className={`c-pricing-card__check ${plan.featured ? 'c-pricing-card__check--featured' : 'c-pricing-card__check--default'}`}>
                       ✓
                     </span>
-                    <span className="text-sm sm:text-base">{feature}</span>
+                    <span className="c-pricing-card__feature-text">{feature}</span>
                   </li>
                 ))}
               </ul>
               <a
-                href={ctaLink}
-                className={`block text-center py-3 rounded-lg font-semibold transition-all duration-200 ${
+                href={ctaLink || '/'}
+                className={`btn ${
                   plan.featured
-                    ? 'bg-white text-grass-600 hover:bg-sun-50 hover:text-grass-700 shadow-md'
-                    : 'bg-grass-600 text-white hover:bg-grass-700 hover:shadow-lg transform hover:-translate-y-0.5'
+                    ? 'btn-card-outline'
+                    : 'btn-hero-grass'
                 }`}
               >
                 {plan.buttonText || 'Izaberite Paket'}

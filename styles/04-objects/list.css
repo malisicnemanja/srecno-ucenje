@@ -1,0 +1,284 @@
+/* ==========================================================================
+   LIST OBJECT
+   Enhanced list patterns and layouts
+   ========================================================================== */
+
+/**
+ * Base list resets
+ */
+.o-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * Bare list - no bullets/numbers
+ */
+.o-list--bare {
+  list-style: none;
+  padding-left: 0;
+}
+
+.o-list--bare > li {
+  padding-left: 0;
+}
+
+/**
+ * Inline list
+ */
+.o-list--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md, 1rem);
+}
+
+.o-list--inline > li {
+  display: inline-flex;
+}
+
+/**
+ * Divided list
+ */
+.o-list--divided > li {
+  border-bottom: 1px solid var(--color-gray-200, #e5e7eb);
+  padding: var(--space-sm, 0.5rem) 0;
+}
+
+.o-list--divided > li:first-child {
+  padding-top: 0;
+}
+
+.o-list--divided > li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/**
+ * Spaced list
+ */
+.o-list--spaced > li {
+  margin-bottom: var(--space-md, 1rem);
+}
+
+.o-list--spaced > li:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Striped list
+ */
+.o-list--striped > li:nth-child(odd) {
+  background-color: var(--color-gray-50, #f9fafb);
+}
+
+.o-list--striped > li {
+  padding: var(--space-sm, 0.5rem);
+}
+
+/**
+ * Hoverable list
+ */
+.o-list--hoverable > li {
+  padding: var(--space-sm, 0.5rem);
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.o-list--hoverable > li:hover {
+  background-color: var(--color-gray-100, #f3f4f6);
+}
+
+/**
+ * Numbered list
+ */
+.o-list--numbered {
+  counter-reset: list-counter;
+}
+
+.o-list--numbered > li {
+  counter-increment: list-counter;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.o-list--numbered > li::before {
+  content: counter(list-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-500, #3b82f6);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/**
+ * Checkmark list
+ */
+.o-list--check > li {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.o-list--check > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 8px;
+  height: 4px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  top: 8px;
+  color: var(--color-green-500, #10b981);
+  font-weight: bold;
+}
+
+/**
+ * Icon list
+ */
+.o-list--icon > li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm, 0.5rem);
+}
+
+.o-list--icon > li > .icon {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.125rem;
+}
+
+/**
+ * Definition list
+ */
+.o-dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-sm, 0.5rem) var(--space-md, 1rem);
+}
+
+.o-dl dt {
+  font-weight: 600;
+  color: var(--color-gray-700, #374151);
+}
+
+.o-dl dd {
+  margin: 0;
+  color: var(--color-gray-600, #4b5563);
+}
+
+/* Stacked definition list */
+.o-dl--stacked {
+  display: block;
+}
+
+.o-dl--stacked dt {
+  margin-bottom: var(--space-xs, 0.25rem);
+}
+
+.o-dl--stacked dd {
+  margin-bottom: var(--space-md, 1rem);
+  margin-left: 0;
+}
+
+/**
+ * Timeline list
+ */
+.o-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.o-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-gray-300, #d1d5db);
+}
+
+.o-timeline > li {
+  position: relative;
+  padding-bottom: var(--space-lg, 1.5rem);
+}
+
+.o-timeline > li:last-child {
+  padding-bottom: 0;
+}
+
+.o-timeline > li::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--color-primary-500, #3b82f6);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--color-gray-300, #d1d5db);
+}
+
+/**
+ * Breadcrumb list
+ */
+.o-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.o-breadcrumb > li {
+  display: flex;
+  align-items: center;
+}
+
+.o-breadcrumb > li:not(:last-child)::after {
+  content: "/";
+  margin: 0 var(--space-sm, 0.5rem);
+  color: var(--color-gray-400, #9ca3af);
+}
+
+/* Chevron separator variant */
+.o-breadcrumb--chevron > li:not(:last-child)::after {
+  content: "›";
+}
+
+/* Arrow separator variant */
+.o-breadcrumb--arrow > li:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-left: 4px;
+}
+
+/**
+ * Tag list
+ */
+.o-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs, 0.25rem);
+}
+
+.o-tag-list > li {
+  padding: var(--space-xs, 0.25rem) var(--space-sm, 0.5rem);
+  background: var(--color-gray-100, #f3f4f6);
+  border-radius: var(--radius-full, 9999px);
+  font-size: 0.875rem;
+}

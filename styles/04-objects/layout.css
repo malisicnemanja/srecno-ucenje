@@ -1,0 +1,184 @@
+/* ==========================================================================
+   LAYOUT OBJECT
+   Layout helpers and structural objects
+   ========================================================================== */
+
+/**
+ * Stack layout - vertical spacing
+ */
+.o-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md, 1rem);
+}
+
+.o-stack--xs { gap: var(--space-xs, 0.25rem); }
+.o-stack--sm { gap: var(--space-sm, 0.5rem); }
+.o-stack--lg { gap: var(--space-lg, 1.5rem); }
+.o-stack--xl { gap: var(--space-xl, 2rem); }
+.o-stack--2xl { gap: var(--space-2xl, 3rem); }
+
+.o-stack--center {
+  align-items: center;
+}
+
+.o-stack--end {
+  align-items: flex-end;
+}
+
+/**
+ * Cluster layout - horizontal wrapping
+ */
+.o-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md, 1rem);
+  align-items: center;
+}
+
+.o-cluster--start {
+  align-items: flex-start;
+}
+
+.o-cluster--end {
+  align-items: flex-end;
+}
+
+.o-cluster--between {
+  justify-content: space-between;
+}
+
+.o-cluster--around {
+  justify-content: space-around;
+}
+
+/**
+ * Sidebar layout
+ */
+.o-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg, 1.5rem);
+}
+
+.o-sidebar > :first-child {
+  flex: 1 1 30%;
+  min-width: 250px;
+}
+
+.o-sidebar > :last-child {
+  flex: 999 1 70%;
+  min-width: 50%;
+}
+
+.o-sidebar--reverse > :first-child {
+  order: 2;
+}
+
+.o-sidebar--reverse > :last-child {
+  order: 1;
+}
+
+/**
+ * Cover layout - hero sections
+ */
+.o-cover {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: var(--space-md, 1rem);
+}
+
+.o-cover__principal {
+  margin-block: auto;
+}
+
+.o-cover--centered {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/**
+ * Frame - aspect ratio container
+ */
+.o-frame {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.o-frame--square { aspect-ratio: 1; }
+.o-frame--4-3 { aspect-ratio: 4 / 3; }
+.o-frame--3-2 { aspect-ratio: 3 / 2; }
+.o-frame--21-9 { aspect-ratio: 21 / 9; }
+
+.o-frame > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.o-frame--contain > * {
+  object-fit: contain;
+}
+
+/**
+ * Switcher - responsive flex to stack
+ */
+.o-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md, 1rem);
+}
+
+.o-switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--switcher-threshold, 30rem) - 100%) * 999);
+}
+
+/**
+ * Center - horizontal centering
+ */
+.o-center {
+  margin-inline: auto;
+  max-width: var(--center-max, 60rem);
+  padding-inline: var(--space-md, 1rem);
+}
+
+.o-center--narrow {
+  max-width: var(--center-narrow, 45rem);
+}
+
+.o-center--wide {
+  max-width: var(--center-wide, 75rem);
+}
+
+/**
+ * Reel - horizontal scrolling
+ */
+.o-reel {
+  display: flex;
+  gap: var(--space-md, 1rem);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.o-reel::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.o-reel::-webkit-scrollbar-track {
+  background: var(--color-gray-100, #f3f4f6);
+}
+
+.o-reel::-webkit-scrollbar-thumb {
+  background: var(--color-gray-400, #9ca3af);
+  border-radius: 0.25rem;
+}
+
+.o-reel > * {
+  flex: 0 0 auto;
+}

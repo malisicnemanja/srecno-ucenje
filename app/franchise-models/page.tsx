@@ -8,6 +8,7 @@ import {
 import { useSanityQuery } from '@/hooks/useSanity'
 import SkeletonLoader from '@/components/ui/SkeletonLoader'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import { useState } from 'react'
 
 const franchiseModelsQuery = `*[_type == "franchiseModel"] | order(order asc) {
@@ -252,12 +253,11 @@ export default function FransizaModeliPage() {
                       ))}
                     </ul>
 
-                    <Link
-                      href="/zakazivanje"
+                    <SafeLink                       href="/zakazivanje"
                       className={`btn btn-${model.color || 'primary'} w-full text-center`}
                     >
                       Započnite sada
-                    </Link>
+                    </SafeLink>
                   </motion.div>
                 </motion.div>
               )
@@ -376,7 +376,7 @@ export default function FransizaModeliPage() {
               viewport={{ once: true }}
               transition={{ delay: 0.5, type: "spring" }}
             >
-              <Link 
+              <SafeLink 
                 href="/zakazivanje" 
                 className="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-bold text-lg rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover:bg-gray-50 group"
               >
@@ -389,7 +389,7 @@ export default function FransizaModeliPage() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </Link>
+              </SafeLink>
             </motion.div>
             
             {/* Trust indicators */}

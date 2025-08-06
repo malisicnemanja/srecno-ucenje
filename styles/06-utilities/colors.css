@@ -7,17 +7,17 @@
 /* === BRAND COLOR UTILITIES === */
 
 /* Primary brand colors (direct brand colors) */
-.text-brand-sky { color: var(--brand-sky) !important; }
-.text-brand-sun { color: var(--brand-sun) !important; }
-.text-brand-grass { color: var(--brand-grass) !important; }
-.text-brand-heart { color: var(--brand-heart) !important; }
-.text-brand-night { color: var(--brand-night) !important; }
+.text-brand-sky { color: var(--color-sky) !important; }
+.text-brand-sun { color: var(--color-sun) !important; }
+.text-brand-grass { color: var(--color-grass) !important; }
+.text-brand-heart { color: var(--color-heart) !important; }
+.text-brand-night { color: var(--color-night) !important; }
 
-.bg-brand-sky { background-color: var(--brand-sky) !important; }
-.bg-brand-sun { background-color: var(--brand-sun) !important; }
-.bg-brand-grass { background-color: var(--brand-grass) !important; }
-.bg-brand-heart { background-color: var(--brand-heart) !important; }
-.bg-brand-night { background-color: var(--brand-night) !important; }
+.bg-brand-sky { background-color: var(--color-sky) !important; }
+.bg-brand-sun { background-color: var(--color-sun) !important; }
+.bg-brand-grass { background-color: var(--color-grass) !important; }
+.bg-brand-heart { background-color: var(--color-heart) !important; }
+.bg-brand-night { background-color: var(--color-night) !important; }
 
 /* === SEMANTIC COLOR UTILITIES === */
 
@@ -233,32 +233,32 @@
 /* === GRADIENT UTILITIES === */
 
 .bg-gradient-primary {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-600) 100%) !important;
+  background-color: var(--color-primary) !important;
 }
 
 .bg-gradient-secondary {
-  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-600) 100%) !important;
+  background-color: var(--color-secondary) !important;
 }
 
 .bg-gradient-accent {
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-600) 100%) !important;
+  background-color: var(--color-accent) !important;
 }
 
 .bg-gradient-rainbow {
-  background: linear-gradient(135deg, var(--brand-grass) 0%, var(--brand-sky) 25%, var(--brand-sun) 50%, var(--brand-night) 75%, var(--brand-heart) 100%) !important;
+  background-color: var(--color-grass) !important;
 }
 
 /* Soft gradient backgrounds */
 .bg-gradient-soft-primary {
-  background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-primary-100) 100%) !important;
+  background-color: var(--color-primary-50) !important;
 }
 
 .bg-gradient-soft-secondary {
-  background: linear-gradient(135deg, var(--color-secondary-50) 0%, var(--color-secondary-100) 100%) !important;
+  background-color: var(--color-secondary-50) !important;
 }
 
 .bg-gradient-soft-accent {
-  background: linear-gradient(135deg, var(--color-accent-50) 0%, var(--color-accent-100) 100%) !important;
+  background-color: var(--color-accent-50) !important;
 }
 
 /* === HOVER UTILITIES === */

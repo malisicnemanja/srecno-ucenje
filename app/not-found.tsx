@@ -7,6 +7,7 @@ import {
 } from '@/components/icons'
 import { HappyStudents, ReadingChild } from '@/components/illustrations/ChildIllustrations'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 
 export default function NotFound() {
   return (
@@ -83,14 +84,14 @@ export default function NotFound() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link href="/" className="btn-primary group">
+                <SafeLink href="/" className="btn-primary group">
                   <HeartIcon size={20} className="mr-2" />
                   Početna stranica
-                </Link>
-                <Link href="/zakazivanje" className="btn-secondary">
+                </SafeLink>
+                <SafeLink href="/zakazivanje" className="btn-secondary">
                   <CalendarIcon size={20} className="mr-2" />
                   Zakažite konsultacije
-                </Link>
+                </SafeLink>
               </div>
 
               {/* Quick links */}
@@ -124,7 +125,7 @@ export default function NotFound() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8 + index * 0.1 }}
                   >
-                    <Link href={link.href} className="block">
+                    <SafeLink href={link.href || '/'} className="block">
                       <motion.div
                         className={`card text-center border border-${link.color}-200 hover:border-${link.color}-300 transition-all`}
                         whileHover={{ y: -5, scale: 1.02 }}
@@ -146,7 +147,7 @@ export default function NotFound() {
                           {link.description}
                         </p>
                       </motion.div>
-                    </Link>
+                    </SafeLink>
                   </motion.div>
                 ))}
               </div>

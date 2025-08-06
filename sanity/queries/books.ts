@@ -1,7 +1,8 @@
-import { client } from '@/sanity/client'
+import { groq } from 'next-sanity'
+import { sanityFetch } from '@/lib/sanity.client'
 
 // Query for books landing page data
-export const booksLandingQuery = `
+export const booksLandingQuery = groq`
   *[_type == "booksLanding"][0] {
     heroTitle,
     heroSubtitle,
@@ -45,7 +46,7 @@ export const booksLandingQuery = `
 `
 
 // Query for all books
-export const allBooksQuery = `
+export const allBooksQuery = groq`
   *[_type == "book"] | order(order asc) {
     _id,
     title,
@@ -145,7 +146,7 @@ export const allBooksQuery = `
 `
 
 // Query for single book by slug
-export const bookBySlugQuery = `
+export const bookBySlugQuery = groq`
   *[_type == "book" && slug.current == $slug][0] {
     _id,
     title,
@@ -257,7 +258,7 @@ export const bookBySlugQuery = `
 // Fetch functions
 export async function getBooksLandingData() {
   try {
-    return await client.fetch(booksLandingQuery)
+    return await sanityFetch({ query: booksLandingQuery })
   } catch (error) {
     console.error('Error fetching books landing data:', error)
     return null
@@ -266,7 +267,7 @@ export async function getBooksLandingData() {
 
 export async function getAllBooks() {
   try {
-    return await client.fetch(allBooksQuery)
+    return await sanityFetch({ query: allBooksQuery })
   } catch (error) {
     console.error('Error fetching books:', error)
     return []
@@ -275,7 +276,7 @@ export async function getAllBooks() {
 
 export async function getBookBySlug(slug: string) {
   try {
-    return await client.fetch(bookBySlugQuery, { slug })
+    return await sanityFetch({ query: bookBySlugQuery, params: { slug } })
   } catch (error) {
     console.error('Error fetching book by slug:', error)
     return null

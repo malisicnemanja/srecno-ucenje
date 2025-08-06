@@ -1,4 +1,4 @@
-import { client } from '@/sanity/client'
+import { client } from '@/sanity/client.js'
 
 // Query for all experiences
 export const allExperiencesQuery = `

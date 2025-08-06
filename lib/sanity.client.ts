@@ -1,8 +1,8 @@
 import { createClient } from 'next-sanity'
-import imageUrlBuilder from '@sanity/image-url'
+// import imageUrlBuilder from '@sanity/image-url'
 import { mockSanityData } from './sanity-mock-store'
 
-export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'srecno-ucenje-demo'
+export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '08ctxj6y'
 export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 export const apiVersion = '2024-01-01'
 
@@ -10,16 +10,45 @@ export const apiVersion = '2024-01-01'
 const USE_MOCK = false // Set to false when using real Sanity
 
 export const client = createClient({
-  projectId,
-  dataset,
+  projectId: '08ctxj6y', // Hardcode for now to avoid env issues
+  dataset: 'production',
   apiVersion,
-  useCdn: process.env.NODE_ENV === 'production',
+  useCdn: false, // Disable CDN for now
 })
 
-const builder = imageUrlBuilder(client)
-
+// Temporary urlFor function that returns direct URLs
 export function urlFor(source: any) {
-  return builder.image(source)
+  // Return a builder-like object that can chain methods
+  return {
+    image: (src: any) => ({
+      width: () => ({
+        height: () => ({
+          url: () => src?.url || src?.asset?.url || ''
+        }),
+        url: () => src?.url || src?.asset?.url || ''
+      }),
+      height: () => ({
+        width: () => ({
+          url: () => src?.url || src?.asset?.url || ''
+        }),
+        url: () => src?.url || src?.asset?.url || ''
+      }),
+      url: () => src?.url || src?.asset?.url || ''
+    }),
+    width: () => ({
+      height: () => ({
+        url: () => source?.url || source?.asset?.url || ''
+      }),
+      url: () => source?.url || source?.asset?.url || ''
+    }),
+    height: () => ({
+      width: () => ({
+        url: () => source?.url || source?.asset?.url || ''
+      }),
+      url: () => source?.url || source?.asset?.url || ''
+    }),
+    url: () => source?.url || source?.asset?.url || ''
+  }
 }
 
 // Fetch function for server components

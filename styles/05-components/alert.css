@@ -1,0 +1,523 @@
+/**
+ * SREĆNO UČENJE - ALERT COMPONENTS
+ * Alert messages and notifications for educational platform
+ * Mobile-first, WCAG AA compliant, accessible alerts
+ */
+
+/* === BASE ALERT === */
+
+.c-alert {
+  /* Layout */
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+  
+  /* Typography */
+  font-size: var(--text-body-size);
+  line-height: var(--line-height-relaxed);
+  
+  /* Interactions */
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.c-alert:last-child {
+  margin-bottom: 0;
+}
+
+/* Alert icon */
+.c-alert__icon {
+  flex-shrink: 0;
+  width: var(--space-5);
+  height: var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--space-1);
+}
+
+/* Alert content */
+.c-alert__content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Alert title */
+.c-alert__title {
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--space-1) 0;
+  font-size: var(--text-body-size);
+}
+
+/* Alert description */
+.c-alert__description {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Alert close button */
+.c-alert__close {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--space-6);
+  height: var(--space-6);
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all var(--transition-base);
+  margin-top: var(--space-1);
+}
+
+.c-alert__close:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.c-alert__close:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 1px;
+}
+
+/* === ALERT VARIANTS === */
+
+/* Success alert */
+.c-alert--success {
+  background-color: var(--color-success-light);
+  border-color: var(--color-success-300);
+  color: var(--color-success-800);
+}
+
+.c-alert--success .c-alert__icon {
+  color: var(--color-success);
+}
+
+.c-alert--success .c-alert__close:hover {
+  background-color: var(--color-success-200);
+}
+
+/* Warning alert */
+.c-alert--warning {
+  background-color: var(--color-warning-light);
+  border-color: var(--color-warning-300);
+  color: var(--color-warning-800);
+}
+
+.c-alert--warning .c-alert__icon {
+  color: var(--color-warning);
+}
+
+.c-alert--warning .c-alert__close:hover {
+  background-color: var(--color-warning-200);
+}
+
+/* Error alert */
+.c-alert--error {
+  background-color: var(--color-error-light);
+  border-color: var(--color-error-300);
+  color: var(--color-error-800);
+}
+
+.c-alert--error .c-alert__icon {
+  color: var(--color-error);
+}
+
+.c-alert--error .c-alert__close:hover {
+  background-color: var(--color-error-200);
+}
+
+/* Info alert */
+.c-alert--info {
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-200);
+  color: var(--color-primary-800);
+}
+
+.c-alert--info .c-alert__icon {
+  color: var(--color-primary);
+}
+
+.c-alert--info .c-alert__close:hover {
+  background-color: var(--color-primary-100);
+}
+
+/* Neutral alert */
+.c-alert--neutral {
+  background-color: var(--color-gray-50);
+  border-color: var(--color-gray-200);
+  color: var(--color-gray-800);
+}
+
+.c-alert--neutral .c-alert__icon {
+  color: var(--color-gray-600);
+}
+
+.c-alert--neutral .c-alert__close:hover {
+  background-color: var(--color-gray-100);
+}
+
+/* === ALERT STYLES === */
+
+/* Filled alerts */
+.c-alert--filled.c-alert--success {
+  background-color: var(--color-success);
+  color: white;
+  border-color: var(--color-success);
+}
+
+.c-alert--filled.c-alert--warning {
+  background-color: var(--color-warning);
+  color: var(--color-night-800);
+  border-color: var(--color-warning);
+}
+
+.c-alert--filled.c-alert--error {
+  background-color: var(--color-error);
+  color: white;
+  border-color: var(--color-error);
+}
+
+.c-alert--filled.c-alert--info {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.c-alert--filled.c-alert--neutral {
+  background-color: var(--color-gray-600);
+  color: white;
+  border-color: var(--color-gray-600);
+}
+
+/* Outlined alerts */
+.c-alert--outlined {
+  background-color: transparent;
+  border-width: 2px;
+}
+
+.c-alert--outlined.c-alert--success {
+  border-color: var(--color-success);
+  color: var(--color-success-700);
+}
+
+.c-alert--outlined.c-alert--warning {
+  border-color: var(--color-warning);
+  color: var(--color-warning-700);
+}
+
+.c-alert--outlined.c-alert--error {
+  border-color: var(--color-error);
+  color: var(--color-error-700);
+}
+
+.c-alert--outlined.c-alert--info {
+  border-color: var(--color-primary);
+  color: var(--color-primary-700);
+}
+
+.c-alert--outlined.c-alert--neutral {
+  border-color: var(--color-gray-400);
+  color: var(--color-gray-700);
+}
+
+/* === ALERT SIZES === */
+
+.c-alert--sm {
+  padding: var(--space-3);
+  font-size: var(--text-body-small-size);
+}
+
+.c-alert--sm .c-alert__icon {
+  width: var(--space-4);
+  height: var(--space-4);
+}
+
+.c-alert--sm .c-alert__close {
+  width: var(--space-5);
+  height: var(--space-5);
+}
+
+.c-alert--lg {
+  padding: var(--space-6);
+  font-size: var(--text-body-large-size);
+}
+
+.c-alert--lg .c-alert__icon {
+  width: var(--space-6);
+  height: var(--space-6);
+}
+
+.c-alert--lg .c-alert__close {
+  width: var(--space-8);
+  height: var(--space-8);
+}
+
+/* === EDUCATIONAL ALERT VARIANTS === */
+
+/* Lesson completion alert */
+.c-alert--lesson-complete {
+  background-color: var(--color-primary);
+  border-color: var(--color-success);
+  color: var(--color-success-800);
+  position: relative;
+  overflow: hidden;
+}
+
+.c-alert--lesson-complete::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: var(--color-primary);
+  transform: rotate(45deg);
+  animation: shimmer 2s infinite;
+}
+
+/* Quiz feedback alerts */
+.c-alert--quiz-correct {
+  background-color: var(--color-success-light);
+  border-left: 4px solid var(--color-success);
+  color: var(--color-success-800);
+}
+
+.c-alert--quiz-incorrect {
+  background-color: var(--color-error-light);
+  border-left: 4px solid var(--color-error);
+  color: var(--color-error-800);
+}
+
+/* Progress milestone alert */
+.c-alert--milestone {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-accent-300);
+  color: var(--color-primary-800);
+}
+
+/* Study reminder alert */
+.c-alert--reminder {
+  background-color: var(--color-secondary-50);
+  border-color: var(--color-secondary-200);
+  color: var(--color-secondary-800);
+}
+
+/* === ALERT ANIMATIONS === */
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* Slide in animation */
+.c-alert--animated {
+  animation: slideInDown 0.3s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade out animation */
+.c-alert--dismissing {
+  animation: fadeOut 0.2s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* === ALERT ACTIONS === */
+
+.c-alert__actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.c-alert__action {
+  padding: var(--space-1) var(--space-3);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-body-small-size);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.c-alert__action--primary {
+  background-color: currentColor;
+  color: white;
+}
+
+.c-alert__action--secondary {
+  background-color: transparent;
+  color: currentColor;
+  border: 1px solid currentColor;
+}
+
+.c-alert__action:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+/* === ACCESSIBILITY === */
+
+.c-alert[role="alert"] {
+  /* Ensure screen readers announce immediately */
+}
+
+.c-alert[role="status"] {
+  /* Polite announcements */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-alert--animated,
+  .c-alert--dismissing {
+    animation: none;
+  }
+  
+  .c-alert--lesson-complete::before {
+    animation: none;
+  }
+  
+  .c-alert__action:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .c-alert {
+    border-width: 2px;
+  }
+  
+  .c-alert--outlined {
+    border-width: 3px;
+  }
+  
+  .c-alert--quiz-correct,
+  .c-alert--quiz-incorrect {
+    border-left-width: 6px;
+  }
+}
+
+/* === DARK MODE === */
+
+@media (prefers-color-scheme: dark) {
+  .c-alert {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+    color: var(--color-gray-100);
+  }
+  
+  .c-alert--success {
+    background-color: rgba(34, 197, 94, 0.1);
+    border-color: var(--color-success-700);
+    color: var(--color-success-300);
+  }
+  
+  .c-alert--warning {
+    background-color: rgba(251, 191, 36, 0.1);
+    border-color: var(--color-warning-700);
+    color: var(--color-warning-300);
+  }
+  
+  .c-alert--error {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-color: var(--color-error-700);
+    color: var(--color-error-300);
+  }
+  
+  .c-alert--info {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: var(--color-primary-700);
+    color: var(--color-primary-300);
+  }
+  
+  .c-alert--neutral {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-600);
+    color: var(--color-gray-300);
+  }
+}
+
+/* === PRINT STYLES === */
+
+@media print {
+  .c-alert {
+    box-shadow: none;
+    border: 1px solid black;
+    background: white !important;
+    color: black !important;
+    page-break-inside: avoid;
+  }
+  
+  .c-alert__close {
+    display: none;
+  }
+  
+  .c-alert--lesson-complete::before {
+    display: none;
+  }
+}
+
+/* === TOAST NOTIFICATIONS === */
+
+.c-alert--toast {
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 1050;
+  max-width: 400px;
+  width: calc(100vw - var(--space-8));
+  margin-bottom: 0;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 640px) {
+  .c-alert--toast {
+    width: auto;
+    min-width: 300px;
+  }
+}
+
+/* Toast container */
+.c-alert-stack {
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  pointer-events: none;
+}
+
+.c-alert-stack .c-alert {
+  pointer-events: auto;
+  margin-bottom: 0;
+}

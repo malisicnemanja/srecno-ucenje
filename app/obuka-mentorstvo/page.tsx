@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import { BookIcon, StarIcon, RocketIcon, CheckIcon } from '@/components/icons'
 
 export default function ObukaMentorstvo() {
@@ -44,12 +45,12 @@ export default function ObukaMentorstvo() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <Link href="/zakazivanje" className="btn-primary px-8 py-4 text-lg">
+              <SafeLink href="/zakazivanje" className="btn-primary px-8 py-4 text-lg">
                 Zakažite konsultacije
-              </Link>
-              <Link href="/franchise-models" className="btn-outline-primary px-8 py-4 text-lg">
+              </SafeLink>
+              <SafeLink href="/franchise-models" className="btn-outline-primary px-8 py-4 text-lg">
                 Saznajte više
-              </Link>
+              </SafeLink>
             </motion.div>
           </div>
         </div>
@@ -128,9 +129,9 @@ export default function ObukaMentorstvo() {
             <p className="text-xl text-gray-600 mb-8">
               Kontaktirajte nas i zakažite besplatnu konsultaciju o našim programima obuke
             </p>
-            <Link href="/zakazivanje" className="btn-primary px-8 py-4 text-lg">
+            <SafeLink href="/zakazivanje" className="btn-primary px-8 py-4 text-lg">
               Zakažite konsultacije
-            </Link>
+            </SafeLink>
           </div>
         </div>
       </section>

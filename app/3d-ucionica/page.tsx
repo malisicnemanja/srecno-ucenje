@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import AnimatedHeadline, { AnimatedSubheadline } from '@/components/ui/AnimatedHeadline'
 import { 
   RocketIcon as RocketSVG, SparklesIcon as SparklesSVG, CalendarIcon as CalendarSVG,
@@ -263,9 +264,9 @@ export default function VirtualTourPage() {
                   </>
                 )}
               </button>
-              <Link href="/zakazivanje" className="btn border-2 border-white text-white hover:bg-white hover:text-gray-900">
+              <SafeLink href="/zakazivanje" className="btn border-2 border-white text-white hover:bg-white hover:text-gray-900">
                 Zakažite pravu posetu
-              </Link>
+              </SafeLink>
             </motion.div>
 
             {/* Device selector */}
@@ -484,10 +485,10 @@ export default function VirtualTourPage() {
                 <PlayIcon size={20} className="mr-2" />
                 Pokreni 3D obilazak
               </button>
-              <Link href="/zakazivanje" className="btn border-2 border-white text-white hover:bg-white hover:text-secondary-600">
+              <SafeLink href="/zakazivanje" className="btn border-2 border-white text-white hover:bg-white hover:text-secondary-600">
                 <CalendarSVG size={20} className="mr-2" />
                 Zakažite pravu posetu
-              </Link>
+              </SafeLink>
             </div>
           </motion.div>
         </div>
@@ -540,10 +541,10 @@ export default function VirtualTourPage() {
               
               <div className="border-t pt-6">
                 <p className="text-gray-600 mb-4">Do tada, pozivamo vas da nas posetite uživo!</p>
-                <Link href="/zakazivanje" className="btn-primary inline-flex items-center">
+                <SafeLink href="/zakazivanje" className="btn-primary inline-flex items-center">
                   <CalendarSVG size={20} className="mr-2" />
                   Zakažite pravu posetu
-                </Link>
+                </SafeLink>
               </div>
             </div>
           </motion.div>

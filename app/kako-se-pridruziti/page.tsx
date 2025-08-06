@@ -8,6 +8,7 @@ import {
 } from '@/components/icons'
 import { HappyStudents, ReadingChild } from '@/components/illustrations/ChildIllustrations'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import { useSanityQuery } from '@/hooks/useSanity'
 import { franchiseStepsQuery, programsQuery, faqsQuery } from '@/lib/sanity.queries'
 
@@ -204,10 +205,10 @@ export default function KakoSePridruziti() {
                 </div>
               </div>
 
-              <Link href="/zakazivanje" className="btn-primary">
+              <SafeLink href="/zakazivanje" className="btn-primary">
                 <CalendarIcon size={20} className="mr-2" />
                 Započnite danas
-              </Link>
+              </SafeLink>
             </motion.div>
 
             <motion.div
@@ -306,8 +307,7 @@ export default function KakoSePridruziti() {
                     )}
                     
                     {step.action && (
-                      <Link
-                        href={step.action.link}
+                      <SafeLink                         href={step.action.link || '/'}
                         className="btn-primary group"
                       >
                         {step.action.text}
@@ -317,7 +317,7 @@ export default function KakoSePridruziti() {
                         >
                           →
                         </motion.span>
-                      </Link>
+                      </SafeLink>
                     )}
                   </div>
                 </div>
@@ -491,8 +491,7 @@ export default function KakoSePridruziti() {
                   ))}
                 </div>
                 
-                <Link
-                  href="/zakazivanje"
+                <SafeLink                   href="/zakazivanje"
                   className={`block text-center py-4 rounded-xl font-semibold transition ${
                     plan.featured
                       ? 'bg-white text-accent-600 hover:bg-gray-100'
@@ -500,7 +499,7 @@ export default function KakoSePridruziti() {
                   }`}
                 >
                   Izaberite Paket
-                </Link>
+                </SafeLink>
               </motion.div>
             ))}
           </div>
@@ -547,9 +546,9 @@ export default function KakoSePridruziti() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <Link href="/faq" className="btn-warm">
+            <SafeLink href="/faq" className="btn-warm">
               Pogledajte sva pitanja
-            </Link>
+            </SafeLink>
           </motion.div>
         </div>
       </section>
@@ -579,20 +578,18 @@ export default function KakoSePridruziti() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/zakazivanje"
+              <SafeLink                 href="/zakazivanje"
                 className="btn bg-white text-primary-600 hover:bg-gray-100 group"
               >
                 <CalendarIcon size={20} className="mr-2" />
                 Zakažite Konsultacije
-              </Link>
-              <Link
-                href="tel:+381601234567"
+              </SafeLink>
+              <SafeLink                 href="tel:+381601234567"
                 className="btn bg-primary-400 text-white hover:bg-primary-300"
               >
                 <PhoneIcon size={20} className="mr-2" />
                 Pozovite Nas
-              </Link>
+              </SafeLink>
             </div>
             
             <motion.div

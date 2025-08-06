@@ -1,0 +1,111 @@
+/* ==========================================================================
+   GRID OBJECT EXTENSIONS
+   Extended grid system for complete Tailwind replacement
+   ========================================================================== */
+
+/**
+ * Enhanced Grid System
+ * Responsive grid layouts with automatic mobile stacking
+ */
+
+/* Base Grid */
+.o-grid {
+  display: grid;
+  gap: var(--space-md, 1rem);
+}
+
+/* Grid Columns */
+.o-grid--1 { grid-template-columns: 1fr; }
+.o-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.o-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.o-grid--4 { grid-template-columns: repeat(4, 1fr); }
+.o-grid--5 { grid-template-columns: repeat(5, 1fr); }
+.o-grid--6 { grid-template-columns: repeat(6, 1fr); }
+.o-grid--12 { grid-template-columns: repeat(12, 1fr); }
+
+/* Grid Gap Variations */
+.o-grid--gap-xs { gap: var(--space-xs, 0.25rem); }
+.o-grid--gap-sm { gap: var(--space-sm, 0.5rem); }
+.o-grid--gap-lg { gap: var(--space-lg, 1.5rem); }
+.o-grid--gap-xl { gap: var(--space-xl, 2rem); }
+
+/* Auto-fit Grids */
+.o-grid--auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.o-grid--auto-fit-sm {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.o-grid--auto-fit-lg {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 640px) {
+  .o-grid--2,
+  .o-grid--3,
+  .o-grid--4,
+  .o-grid--5,
+  .o-grid--6,
+  .o-grid--12 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .o-grid--4,
+  .o-grid--5,
+  .o-grid--6,
+  .o-grid--12 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .o-grid--6,
+  .o-grid--12 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Flex Layout Objects */
+.o-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.o-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.o-flex-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.o-flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.o-flex-end {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.o-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.o-flex-wrap {
+  flex-wrap: wrap;
+}

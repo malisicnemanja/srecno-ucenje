@@ -147,24 +147,24 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-white rounded-2xl shadow-xl p-8 text-center"
+        className="c-card u-text-center"
       >
-        <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg className="w-10 h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="c-success-icon u-m-b-md">
+          <svg className="c-success-icon__svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">Uspešno zakazano!</h3>
-        <p className="text-gray-600 mb-6">
+        <h3 className="u-h3 u-m-b-sm">Uspešno zakazano!</h3>
+        <p className="u-text-secondary u-m-b-lg">
           Potvrda je automatski preuzeta. Dodatno ćemo vas kontaktirati sa detaljima.
         </p>
-        <div className="bg-gray-50 rounded-lg p-4 text-left">
-          <p className="text-sm text-gray-600">
-            <span className="font-semibold">Tip konsultacija:</span><br />
+        <div className="c-info-box">
+          <p className="u-text-sm u-text-secondary">
+            <span className="u-text-bold">Tip konsultacija:</span><br />
             {consultationTypes.find(t => t.value === formData.consultationType)?.label}
           </p>
-          <p className="text-sm text-gray-600 mt-2">
-            <span className="font-semibold">Željeni termin:</span><br />
+          <p className="u-text-sm u-text-secondary u-m-t-sm">
+            <span className="u-text-bold">Željeni termin:</span><br />
             {new Date(formData.preferredDate).toLocaleDateString('sr-RS')} u {formData.preferredTime}h
           </p>
         </div>
@@ -173,27 +173,26 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8">
+    <div className="c-card">
       <div className="mb-8">
         {/* Progress Steps */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="o-flex-between mb-8">
           {[1, 2, 3].map((step) => (
-            <div key={step} className="flex items-center">
+            <div key={step} className="o-cluster">
               <div
-                className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold ${
+                className={`c-step-indicator ${
                   currentStep >= step
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-gray-200 text-gray-600'
+                    ? 'c-step-indicator--active'
+                    : 'c-step-indicator--inactive'
                 }`}
               >
                 {step}
               </div>
               {step < 3 && (
                 <div
-                  className={`w-full h-1 mx-2 ${
-                    currentStep > step ? 'bg-primary-600' : 'bg-gray-200'
+                  className={`c-step-connector ${
+                    currentStep > step ? 'c-step-connector--active' : 'c-step-connector--inactive'
                   }`}
-                  style={{ width: '100px' }}
                 />
               )}
             </div>
@@ -201,12 +200,12 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
         </div>
 
         {/* Step Titles */}
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+        <h2 className="u-h2 u-m-b-sm">
           {currentStep === 1 && 'Izaberite tip konsultacija'}
           {currentStep === 2 && 'Vaši podaci'}
           {currentStep === 3 && 'Dodatne informacije'}
         </h2>
-        <p className="text-gray-600">
+        <p className="u-text-secondary">
           {currentStep === 1 && 'Odaberite temu i termin koji vam odgovara'}
           {currentStep === 2 && 'Kako možemo da vas kontaktiramo'}
           {currentStep === 3 && 'Pomozite nam da se bolje pripremimo (opciono)'}
@@ -221,19 +220,19 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
           >
-            <div className="space-y-6">
+            <div className="o-stack o-stack--lg">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-3">
+                <label className="u-label u-m-b-sm">
                   Tip konsultacija
                 </label>
-                <div className="grid gap-3">
+                <div className="o-stack">
                   {consultationTypes.map((type) => (
                     <label
                       key={type.value}
-                      className={`flex items-center justify-between p-4 rounded-lg border-2 cursor-pointer transition-all ${
+                      className={`c-option-card ${
                         formData.consultationType === type.value
-                          ? 'border-primary-500 bg-primary-50'
-                          : 'border-gray-200 hover:border-gray-300'
+                          ? 'c-option-card--selected'
+                          : 'c-option-card--default'
                       }`}
                     >
                       <input
@@ -245,11 +244,11 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                         className="sr-only"
                       />
                       <div>
-                        <p className="font-semibold text-gray-900">{type.label}</p>
-                        <p className="text-sm text-gray-600">Trajanje: {type.duration}</p>
+                        <p className="u-text-bold">{type.label}</p>
+                        <p className="u-text-sm u-text-secondary">Trajanje: {type.duration}</p>
                       </div>
                       {formData.consultationType === type.value && (
-                        <svg className="w-6 h-6 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="c-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       )}
@@ -258,9 +257,9 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                 </div>
               </div>
 
-              <div className="space-y-6">
+              <div className="o-stack o-stack--lg">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="u-label u-m-b-sm">
                     Željeni datum
                   </label>
                   <CalendarPicker
@@ -278,7 +277,7 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label className="u-label u-m-b-sm">
                       Željeno vreme
                     </label>
                     <TimePicker
@@ -301,9 +300,9 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
           >
-            <div className="space-y-6">
+            <div className="o-stack o-stack--lg">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="u-label u-m-b-sm">
                   Ime i prezime
                 </label>
                 <input
@@ -312,13 +311,13 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="input-modern"
                 />
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="o-grid o-grid--2 o-grid--gap-lg">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="u-label u-m-b-sm">
                     Email adresa
                   </label>
                   <input
@@ -327,12 +326,12 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                    className="input-modern"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="u-label u-m-b-sm">
                     Telefon
                   </label>
                   <input
@@ -341,13 +340,13 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                    className="input-modern"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="u-label u-m-b-sm">
                   Grad
                 </label>
                 <input
@@ -357,7 +356,7 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                   onChange={handleChange}
                   required
                   placeholder="npr. Beograd"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="input-modern"
                 />
               </div>
             </div>
@@ -371,17 +370,17 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
           >
-            <div className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+            <div className="o-stack o-stack--lg">
+              <div className="o-grid o-grid--2 o-grid--gap-lg">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="u-label u-m-b-sm">
                     Poslovno iskustvo
                   </label>
                   <select
                     name="experience"
                     value={formData.experience}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                    className="input-modern"
                   >
                     <option value="">Izaberite</option>
                     <option value="none">Bez iskustva</option>
@@ -392,14 +391,14 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="u-label u-m-b-sm">
                     Budžet za investiciju
                   </label>
                   <select
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                    className="input-modern"
                   >
                     <option value="">Izaberite</option>
                     <option value="under_20k">Do 20.000 EUR</option>
@@ -411,7 +410,7 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="u-label u-m-b-sm">
                   Dodatne napomene
                 </label>
                 <textarea
@@ -420,7 +419,7 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                   onChange={handleChange}
                   rows={4}
                   placeholder="Postavite pitanja ili nam recite više o vašim ciljevima..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="input-modern"
                 />
               </div>
             </div>
@@ -428,12 +427,12 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
         )}
 
         {/* Navigation Buttons */}
-        <div className="flex justify-between mt-8">
+        <div className="o-flex-between u-m-t-lg">
           {currentStep > 1 && (
             <button
               type="button"
               onClick={prevStep}
-              className="px-6 py-3 border border-gray-300 rounded-lg font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+              className="btn btn-card btn-card-arrow"
             >
               Nazad
             </button>
@@ -444,7 +443,7 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
               type="button"
               onClick={nextStep}
               disabled={!isStepValid()}
-              className="ml-auto px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn btn-form btn-form-send ml-auto"
             >
               Sledeće
             </button>
@@ -452,7 +451,7 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
             <button
               type="submit"
               disabled={isSubmitting || !isStepValid()}
-              className="ml-auto px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className={`btn ${isSubmitting ? 'btn-loading' : 'btn-form btn-form-send'} u-ml-auto`}
             >
               {isSubmitting ? 'Slanje...' : 'Zakaži konsultacije'}
             </button>

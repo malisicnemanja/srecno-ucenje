@@ -1,0 +1,623 @@
+/**
+ * SREĆNO UČENJE - ACCORDION COMPONENTS
+ * Collapsible content sections for educational platform
+ * Mobile-first, WCAG AA compliant, accessible accordions
+ */
+
+/* === BASE ACCORDION === */
+
+.c-accordion {
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-surface);
+  overflow: hidden;
+}
+
+/* Accordion item */
+.c-accordion__item {
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+.c-accordion__item:last-child {
+  border-bottom: none;
+}
+
+/* Accordion header/trigger */
+.c-accordion__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  min-height: var(--space-touch-min);
+  
+  /* Typography */
+  font-family: var(--font-primary);
+  font-size: var(--text-body-size);
+  font-weight: var(--font-weight-medium);
+  text-align: left;
+  color: var(--text-primary);
+  
+  /* Appearance */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  
+  /* Interactions */
+  transition: all var(--transition-base);
+  user-select: none;
+}
+
+.c-accordion__header:hover {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-700);
+}
+
+.c-accordion__header:focus {
+  outline: none;
+  background-color: var(--color-primary-50);
+  box-shadow: inset 0 0 0 2px var(--color-primary);
+}
+
+.c-accordion__header[aria-expanded="true"] {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+/* Accordion title */
+.c-accordion__title {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  margin: 0;
+}
+
+/* Accordion icon */
+.c-accordion__icon {
+  flex-shrink: 0;
+  width: var(--space-5);
+  height: var(--space-5);
+  color: var(--color-gray-500);
+  transition: all var(--transition-base);
+}
+
+.c-accordion__header:hover .c-accordion__icon {
+  color: var(--color-primary-600);
+}
+
+.c-accordion__header[aria-expanded="true"] .c-accordion__icon {
+  color: var(--color-primary);
+  transform: rotate(180deg);
+}
+
+/* Accordion badge */
+.c-accordion__badge {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+  border-radius: var(--radius-full);
+  padding: var(--space-0-5) var(--space-2);
+  font-size: var(--text-caption-size);
+  font-weight: var(--font-weight-medium);
+  margin-left: var(--space-2);
+}
+
+.c-accordion__header:hover .c-accordion__badge {
+  background-color: var(--color-primary-200);
+  color: var(--color-primary-800);
+}
+
+/* === ACCORDION CONTENT === */
+
+.c-accordion__content {
+  overflow: hidden;
+  transition: all var(--transition-base);
+  max-height: 0;
+  opacity: 0;
+}
+
+.c-accordion__item[aria-expanded="true"] .c-accordion__content {
+  max-height: none;
+  opacity: 1;
+}
+
+.c-accordion__body {
+  padding: var(--space-5);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* === ACCORDION VARIANTS === */
+
+/* Flat accordion */
+.c-accordion--flat {
+  border: none;
+  background: none;
+  border-radius: 0;
+}
+
+.c-accordion--flat .c-accordion__item {
+  border: none;
+  border-bottom: 1px solid var(--color-border-primary);
+  border-radius: 0;
+}
+
+.c-accordion--flat .c-accordion__header {
+  padding: var(--space-4) 0;
+}
+
+.c-accordion--flat .c-accordion__body {
+  padding: var(--space-4) 0;
+}
+
+/* Card accordion */
+.c-accordion--card .c-accordion__item {
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+  background-color: white;
+}
+
+.c-accordion--card .c-accordion__item:last-child {
+  margin-bottom: 0;
+}
+
+.c-accordion--card .c-accordion__header[aria-expanded="true"] {
+  border-bottom: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+/* Minimal accordion */
+.c-accordion--minimal {
+  border: none;
+  background: none;
+}
+
+.c-accordion--minimal .c-accordion__item {
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.c-accordion--minimal .c-accordion__header {
+  padding: var(--space-3) 0;
+  background: none;
+}
+
+.c-accordion--minimal .c-accordion__header:hover {
+  background: none;
+  color: var(--color-primary);
+}
+
+.c-accordion--minimal .c-accordion__header[aria-expanded="true"] {
+  background: none;
+  color: var(--color-primary);
+  border-bottom: none;
+}
+
+.c-accordion--minimal .c-accordion__body {
+  padding: 0 0 var(--space-4) 0;
+}
+
+/* === ACCORDION SIZES === */
+
+.c-accordion--sm .c-accordion__header {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-body-small-size);
+  min-height: var(--space-10);
+}
+
+.c-accordion--sm .c-accordion__body {
+  padding: var(--space-3) var(--space-4);
+}
+
+.c-accordion--sm .c-accordion__icon {
+  width: var(--space-4);
+  height: var(--space-4);
+}
+
+.c-accordion--lg .c-accordion__header {
+  padding: var(--space-6) var(--space-8);
+  font-size: var(--text-body-large-size);
+  min-height: var(--space-touch-comfortable);
+}
+
+.c-accordion--lg .c-accordion__body {
+  padding: var(--space-6) var(--space-8);
+}
+
+.c-accordion--lg .c-accordion__icon {
+  width: var(--space-6);
+  height: var(--space-6);
+}
+
+/* === EDUCATIONAL ACCORDION VARIANTS === */
+
+/* FAQ accordion */
+.c-accordion--faq .c-accordion__header {
+  align-items: flex-start;
+  padding-top: var(--space-5);
+}
+
+.c-accordion--faq .c-accordion__title::before {
+  content: 'Q: ';
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-right: var(--space-1);
+}
+
+.c-accordion--faq .c-accordion__body::before {
+  content: 'A: ';
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-secondary);
+  margin-right: var(--space-1);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+/* Lesson accordion */
+.c-accordion--lessons .c-accordion__header {
+  padding-left: var(--space-12);
+  position: relative;
+}
+
+.c-accordion--lessons .c-accordion__lesson-number {
+  position: absolute;
+  left: var(--space-4);
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--space-6);
+  height: var(--space-6);
+  border-radius: var(--radius-full);
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-body-small-size);
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-base);
+}
+
+.c-accordion--lessons .c-accordion__header:hover .c-accordion__lesson-number {
+  background-color: var(--color-primary-200);
+  color: var(--color-primary-700);
+}
+
+.c-accordion--lessons .c-accordion__header[aria-expanded="true"] .c-accordion__lesson-number {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Lesson status indicators */
+.c-accordion--lessons .c-accordion__item--completed .c-accordion__lesson-number {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.c-accordion--lessons .c-accordion__item--completed .c-accordion__lesson-number::after {
+  content: '✓';
+}
+
+.c-accordion--lessons .c-accordion__item--in-progress .c-accordion__lesson-number {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.c-accordion--lessons .c-accordion__item--locked .c-accordion__lesson-number {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-400);
+}
+
+.c-accordion--lessons .c-accordion__item--locked .c-accordion__lesson-number::after {
+  content: '🔒';
+}
+
+.c-accordion--lessons .c-accordion__item--locked .c-accordion__header {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Module accordion */
+.c-accordion--modules .c-accordion__header {
+  background-color: var(--color-primary);
+  border-left: 4px solid var(--color-primary-200);
+}
+
+.c-accordion--modules .c-accordion__header:hover {
+  background-color: var(--color-primary);
+  border-left-color: var(--color-primary);
+}
+
+.c-accordion--modules .c-accordion__header[aria-expanded="true"] {
+  background-color: var(--color-primary);
+  border-left-color: var(--color-primary);
+}
+
+.c-accordion--modules .c-accordion__module-progress {
+  font-size: var(--text-caption-size);
+  color: var(--color-gray-600);
+  margin-top: var(--space-1);
+}
+
+.c-accordion--modules .c-accordion__progress-bar {
+  width: 60px;
+  height: var(--space-1);
+  background-color: var(--color-gray-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-left: var(--space-2);
+}
+
+.c-accordion--modules .c-accordion__progress-fill {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-base);
+}
+
+/* Quiz accordion */
+.c-accordion--quiz .c-accordion__item {
+  margin-bottom: var(--space-4);
+}
+
+.c-accordion--quiz .c-accordion__header {
+  background-color: var(--color-secondary-50);
+  border-left: 4px solid var(--color-secondary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.c-accordion--quiz .c-accordion__header:hover {
+  background-color: var(--color-secondary-100);
+}
+
+.c-accordion--quiz .c-accordion__header[aria-expanded="true"] {
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-800);
+}
+
+.c-accordion--quiz .c-accordion__question-number {
+  background-color: var(--color-secondary);
+  color: white;
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-caption-size);
+  font-weight: var(--font-weight-bold);
+  margin-right: var(--space-2);
+}
+
+/* === NESTED ACCORDIONS === */
+
+.c-accordion .c-accordion {
+  border: none;
+  background: none;
+  margin: var(--space-2) 0;
+}
+
+.c-accordion .c-accordion .c-accordion__header {
+  padding-left: var(--space-8);
+  font-size: var(--text-body-small-size);
+  background-color: var(--color-gray-50);
+}
+
+.c-accordion .c-accordion .c-accordion__body {
+  padding-left: var(--space-8);
+  background-color: var(--color-gray-50);
+}
+
+/* === ACCORDION WITH ICONS === */
+
+.c-accordion__header-icon {
+  width: var(--space-5);
+  height: var(--space-5);
+  margin-right: var(--space-3);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* === ACCORDION LOADING STATE === */
+
+.c-accordion__item--loading .c-accordion__header {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c-accordion__item--loading .c-accordion__icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === ACCESSIBILITY === */
+
+.c-accordion__header[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-accordion__content,
+  .c-accordion__icon,
+  .c-accordion__lesson-number,
+  .c-accordion__progress-fill {
+    transition: none;
+  }
+  
+  .c-accordion__header[aria-expanded="true"] .c-accordion__icon {
+    transform: none;
+  }
+  
+  .c-accordion__item--loading .c-accordion__icon {
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .c-accordion {
+    border-width: 2px;
+  }
+  
+  .c-accordion__item {
+    border-bottom-width: 2px;
+  }
+  
+  .c-accordion__header:focus {
+    box-shadow: inset 0 0 0 3px var(--color-primary);
+  }
+  
+  .c-accordion--modules .c-accordion__header {
+    border-left-width: 6px;
+  }
+  
+  .c-accordion--quiz .c-accordion__header {
+    border-left-width: 6px;
+  }
+}
+
+/* === MOBILE ADAPTATIONS === */
+
+@media (max-width: 640px) {
+  .c-accordion__header {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-body-small-size);
+    min-height: var(--space-touch-comfortable);
+  }
+  
+  .c-accordion__body {
+    padding: var(--space-4);
+  }
+  
+  .c-accordion__icon {
+    width: var(--space-4);
+    height: var(--space-4);
+  }
+  
+  .c-accordion--lessons .c-accordion__header {
+    padding-left: var(--space-10);
+  }
+  
+  .c-accordion--lessons .c-accordion__lesson-number {
+    left: var(--space-3);
+    width: var(--space-5);
+    height: var(--space-5);
+  }
+  
+  .c-accordion .c-accordion .c-accordion__header {
+    padding-left: var(--space-6);
+  }
+  
+  .c-accordion .c-accordion .c-accordion__body {
+    padding-left: var(--space-6);
+  }
+}
+
+/* === DARK MODE === */
+
+@media (prefers-color-scheme: dark) {
+  .c-accordion {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+  
+  .c-accordion__item {
+    border-color: var(--color-gray-700);
+  }
+  
+  .c-accordion__header {
+    color: var(--color-gray-200);
+  }
+  
+  .c-accordion__header:hover {
+    background-color: var(--color-gray-700);
+    color: var(--color-primary-300);
+  }
+  
+  .c-accordion__header:focus {
+    background-color: var(--color-gray-700);
+    box-shadow: inset 0 0 0 2px var(--color-primary-400);
+  }
+  
+  .c-accordion__header[aria-expanded="true"] {
+    background-color: var(--color-gray-700);
+    color: var(--color-primary-300);
+    border-color: var(--color-gray-600);
+  }
+  
+  .c-accordion__body {
+    color: var(--color-gray-300);
+  }
+  
+  .c-accordion__icon {
+    color: var(--color-gray-400);
+  }
+  
+  .c-accordion__header:hover .c-accordion__icon {
+    color: var(--color-primary-300);
+  }
+  
+  .c-accordion__badge {
+    background-color: var(--color-gray-700);
+    color: var(--color-gray-300);
+  }
+  
+  .c-accordion__header:hover .c-accordion__badge {
+    background-color: var(--color-primary-800);
+    color: var(--color-primary-200);
+  }
+  
+  .c-accordion--card .c-accordion__item {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+  
+  .c-accordion--modules .c-accordion__header {
+    background-color: var(--color-primary);
+    border-left-color: var(--color-primary-700);
+  }
+  
+  .c-accordion--quiz .c-accordion__header {
+    background-color: var(--color-secondary-900);
+    border-left-color: var(--color-secondary-700);
+  }
+}
+
+/* === PRINT STYLES === */
+
+@media print {
+  .c-accordion {
+    border: 1px solid black;
+    background: white;
+  }
+  
+  .c-accordion__content {
+    max-height: none !important;
+    opacity: 1 !important;
+  }
+  
+  .c-accordion__header {
+    background: white !important;
+    color: black !important;
+    page-break-inside: avoid;
+  }
+  
+  .c-accordion__body {
+    color: black !important;
+    page-break-inside: avoid;
+  }
+  
+  .c-accordion__icon {
+    display: none;
+  }
+  
+  .c-accordion__header::after {
+    content: " (Expanded)";
+    font-size: 0.8em;
+    font-style: italic;
+  }
+}

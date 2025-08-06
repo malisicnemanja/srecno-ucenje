@@ -3,6 +3,7 @@
 import { useSanityQuery } from '@/hooks/useSanity'
 import { programsQuery } from '@/lib/sanity.queries'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import { BookIcon, BrainIcon, SparklesIcon, TargetIcon } from '@/components/icons'
 
 interface Program {
@@ -83,12 +84,11 @@ export default function ProgramsList() {
               <span className="font-medium">{program.groupSize}</span>
             </div>
           </div>
-          <Link
-            href={`/programi/${program.slug?.current || 'no-slug'}`}
+          <SafeLink             href={`/programi/${program.slug?.current || 'no-slug'}`}
             className="mt-4 inline-block text-blue-600 hover:text-blue-700"
           >
             Saznajte više →
-          </Link>
+          </SafeLink>
         </div>
       ))}
     </div>

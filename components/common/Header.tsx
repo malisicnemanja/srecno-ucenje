@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import { client } from '@/lib/sanity.client'
@@ -111,7 +112,7 @@ export default function Header() {
       <div className="container">
         <nav className="flex items-center justify-between h-20" ref={dropdownRef}>
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 z-[110]">
+          <SafeLink href="/" className="flex items-center space-x-3 z-[110]">
             <motion.div 
               className="w-14 h-14 flex items-center justify-center"
               whileHover={{ scale: 1.05 }}
@@ -123,7 +124,7 @@ export default function Header() {
               <span className="text-2xl font-bold text-gray-900">Srećno učenje</span>
               <p className="text-xs text-gray-600 -mt-1">Centar za brzo čitanje</p>
             </div>
-          </Link>
+          </SafeLink>
           
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -147,14 +148,13 @@ export default function Header() {
                     </svg>
                   </button>
                 ) : (
-                  <Link
-                    href={item.href}
+                  <SafeLink                     href={item.href || '#'}
                     className={`text-gray-700 hover:text-primary-600 transition-colors font-medium ${
                       pathname === item.href ? 'text-primary-600' : ''
                     }`}
                   >
                     {item.label}
-                  </Link>
+                  </SafeLink>
                 )}
 
                 {/* Dropdown Menu */}
@@ -168,13 +168,12 @@ export default function Header() {
                       className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden z-[120]"
                     >
                       {item.subItems.map((subItem, index) => (
-                        <Link
-                          key={subItem.href}
-                          href={subItem.href}
+                        <SafeLink                           key={subItem.href}
+                          href={subItem.href || '#'}
                           className="block px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
                         >
                           {subItem.label}
-                        </Link>
+                        </SafeLink>
                       ))}
                     </motion.div>
                   )}
@@ -183,8 +182,8 @@ export default function Header() {
             ))}
 
             {/* CTA Button */}
-            <Link 
-              href={ctaButton.href}
+            <SafeLink 
+              href={ctaButton.href || '/zakazivanje'}
               className={`px-6 py-3 rounded-xl font-medium transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${
                 ctaButton.style === 'primary' ? 'bg-primary-600 text-white hover:bg-primary-700' :
                 ctaButton.style === 'secondary' ? 'bg-secondary-600 text-white hover:bg-secondary-700' :
@@ -192,7 +191,7 @@ export default function Header() {
               }`}
             >
               {ctaButton.text}
-            </Link>
+            </SafeLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -249,34 +248,32 @@ export default function Header() {
                             className="pl-8 space-y-1"
                           >
                             {item.subItems.map((subItem) => (
-                              <Link
-                                key={subItem.href}
-                                href={subItem.href}
+                              <SafeLink                                 key={subItem.href}
+                                href={subItem.href || '#'}
                                 className="block px-4 py-2 text-gray-600 hover:text-primary-600 transition-colors"
                               >
                                 {subItem.label}
-                              </Link>
+                              </SafeLink>
                             ))}
                           </motion.div>
                         )}
                       </AnimatePresence>
                     </div>
                   ) : (
-                    <Link
-                      href={item.href}
+                    <SafeLink                       href={item.href || '#'}
                       className={`block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors font-medium ${
                         pathname === item.href ? 'text-primary-600 bg-primary-50' : ''
                       }`}
                     >
                       {item.label}
-                    </Link>
+                    </SafeLink>
                   )}
                 </div>
               ))}
               
               {/* Mobile CTA */}
-              <Link 
-                href={ctaButton.href}
+              <SafeLink 
+                href={ctaButton.href || '/zakazivanje'}
                 className={`block w-full px-6 py-3 rounded-xl font-medium text-center transition-colors mt-4 ${
                   ctaButton.style === 'primary' ? 'bg-primary-600 text-white hover:bg-primary-700' :
                   ctaButton.style === 'secondary' ? 'bg-secondary-600 text-white hover:bg-secondary-700' :
@@ -284,7 +281,7 @@ export default function Header() {
                 }`}
               >
                 {ctaButton.text}
-              </Link>
+              </SafeLink>
             </div>
           </motion.div>
         )}

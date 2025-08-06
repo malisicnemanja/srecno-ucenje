@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import { 
   AnimatedHeroText, 
   FloatingElement, 
@@ -92,18 +93,18 @@ export default function EnhancedAnimatedHeroSection({
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
                 {ctaText && ctaLink && (
-                  <Link href={ctaLink}>
+                  <SafeLink href={ctaLink || '/'}>
                     <OptimizedCTAButton
                       urgent={urgent}
                       className="min-w-[200px]"
                     >
                       {ctaText}
                     </OptimizedCTAButton>
-                  </Link>
+                  </SafeLink>
                 )}
                 
                 {secondaryCtaText && secondaryCtaLink && (
-                  <Link href={secondaryCtaLink}>
+                  <SafeLink href={secondaryCtaLink || '/'}>
                     <OptimizedPulseButton
                       variant="secondary"
                       animation="pulse"
@@ -112,7 +113,7 @@ export default function EnhancedAnimatedHeroSection({
                     >
                       {secondaryCtaText}
                     </OptimizedPulseButton>
-                  </Link>
+                  </SafeLink>
                 )}
               </StaggeredList>
             </div>

@@ -6,6 +6,63 @@
 
 /* === BASE CMS PLACEHOLDER === */
 
+.cms-missing-content {
+  /* Layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  /* Sizing */
+  min-height: 120px;
+  padding: var(--space-4);
+  
+  /* Appearance */
+  background: #fff3cd;
+  border: 2px dashed var(--color-sun);
+  border-radius: var(--radius-lg);
+  
+  /* Typography */
+  text-align: center;
+  color: #856404;
+  
+  /* Animation */
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cms-missing-content:hover {
+  border-color: var(--color-accent-700);
+  background: #ffeeba;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Modern CSS icon instead of emoji */
+.cms-missing-content::before {
+  content: '';
+  width: 32px;
+  height: 32px;
+  background: var(--color-sun);
+  border-radius: 50%;
+  margin-bottom: var(--space-2);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Warning icon using CSS */
+.cms-missing-content::before {
+  background: var(--color-sun);
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>');
+  mask-size: 20px 20px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+/* Legacy placeholder for backwards compatibility */
 .cms-placeholder {
   /* Layout */
   display: flex;
@@ -18,7 +75,7 @@
   padding: var(--space-6);
   
   /* Appearance */
-  background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-secondary-50) 100%);
+  background-color: var(--color-primary-50);
   border: 2px dashed var(--color-border-primary);
   border-radius: var(--radius-card);
   
@@ -32,12 +89,18 @@
 }
 
 .cms-placeholder::before {
-  content: '🌱 Srećno učenje';
+  content: '';
   display: block;
-  font-size: var(--text-h4-size);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-primary-700);
-  margin-bottom: var(--space-2);
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  margin: 0 auto var(--space-2);
+  position: relative;
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>');
+  mask-size: 16px 16px;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
 .cms-placeholder::after {
@@ -52,7 +115,7 @@
 /* Hero placeholder */
 .cms-placeholder-hero {
   min-height: 200px;
-  background: linear-gradient(135deg, var(--color-accent-50) 0%, var(--color-primary-50) 100%);
+  background-color: var(--color-primary);
   border: 3px dashed var(--color-accent-300);
 }
 
@@ -75,8 +138,12 @@
 }
 
 .cms-placeholder-card::before {
-  content: '📚';
-  font-size: var(--text-h3-size);
+  content: '';
+  display: block;
+  width: 32px;
+  height: 24px;
+  background-color: var(--color-primary);
+  border-radius: 4px;
   margin-bottom: var(--space-1);
 }
 
@@ -87,7 +154,7 @@
 
 /* Lesson placeholder */
 .cms-placeholder-lesson {
-  background: linear-gradient(135deg, var(--color-primary-100) 0%, var(--color-primary-50) 100%);
+  background-color: var(--color-primary);
   border-color: var(--color-primary-300);
   border-left: 4px solid var(--color-primary);
 }
@@ -103,7 +170,7 @@
 
 /* Quiz placeholder */
 .cms-placeholder-quiz {
-  background: linear-gradient(135deg, var(--color-secondary-100) 0%, var(--color-secondary-50) 100%);
+  background-color: var(--color-primary);
   border-color: var(--color-secondary-300);
   border-top: 4px solid var(--color-secondary);
 }
@@ -119,7 +186,7 @@
 
 /* Exercise placeholder */
 .cms-placeholder-exercise {
-  background: linear-gradient(135deg, var(--color-accent-100) 0%, var(--color-accent-50) 100%);
+  background-color: var(--color-primary);
   border-color: var(--color-accent-300);
 }
 
@@ -134,7 +201,7 @@
 
 /* Progress placeholder */
 .cms-placeholder-progress {
-  background: linear-gradient(135deg, var(--color-night-100) 0%, var(--color-night-50) 100%);
+  background-color: var(--color-primary);
   border-color: var(--color-night-300);
 }
 
@@ -194,7 +261,7 @@
 /* === LOADING PLACEHOLDERS === */
 
 .cms-placeholder-loading {
-  background: linear-gradient(90deg, var(--color-gray-200) 25%, var(--color-gray-100) 50%, var(--color-gray-200) 75%);
+  background-color: var(--color-primary);
   background-size: 200% 100%;
   animation: loading 1.5s infinite;
   border-style: solid;
@@ -217,7 +284,7 @@
 /* Skeleton text lines */
 .cms-skeleton-text {
   height: var(--space-4);
-  background: linear-gradient(90deg, var(--color-gray-200) 25%, var(--color-gray-100) 50%, var(--color-gray-200) 75%);
+  background-color: var(--color-primary);
   background-size: 200% 100%;
   animation: loading 1.5s infinite;
   border-radius: var(--radius-sm);
@@ -244,7 +311,7 @@
 .cms-skeleton-title {
   height: var(--space-6);
   width: 70%;
-  background: linear-gradient(90deg, var(--color-gray-300) 25%, var(--color-gray-200) 50%, var(--color-gray-300) 75%);
+  background-color: var(--color-primary);
   background-size: 200% 100%;
   animation: loading 1.5s infinite;
   border-radius: var(--radius-md);
@@ -254,7 +321,7 @@
 /* === ERROR PLACEHOLDERS === */
 
 .cms-placeholder-error {
-  background: linear-gradient(135deg, var(--color-error-light) 0%, var(--color-error-50) 100%);
+  background-color: var(--color-primary);
   border: 2px dashed var(--color-error);
   color: var(--color-error);
 }
@@ -271,7 +338,7 @@
 
 /* Empty state placeholders */
 .cms-placeholder-empty {
-  background: linear-gradient(135deg, var(--color-gray-100) 0%, var(--color-gray-50) 100%);
+  background-color: var(--color-primary);
   border: 2px dashed var(--color-gray-300);
 }
 
@@ -305,7 +372,7 @@
 
 /* Add content placeholder */
 .cms-placeholder-add {
-  background: linear-gradient(135deg, var(--color-primary-50) 0%, white 100%);
+  background-color: var(--color-primary);
   border: 2px dashed var(--color-primary-300);
   cursor: pointer;
 }
@@ -321,7 +388,7 @@
 }
 
 .cms-placeholder-add:hover {
-  background: linear-gradient(135deg, var(--color-primary-100) 0%, var(--color-primary-50) 100%);
+  background-color: var(--color-primary);
   border-color: var(--color-primary);
 }
 
@@ -380,7 +447,7 @@
 
 @media (prefers-color-scheme: dark) {
   .cms-placeholder {
-    background: linear-gradient(135deg, var(--color-gray-800) 0%, var(--color-gray-700) 100%);
+    background-color: var(--color-primary);
     border-color: var(--color-gray-600);
     color: var(--color-gray-300);
   }
@@ -390,17 +457,17 @@
   }
   
   .cms-placeholder-loading {
-    background: linear-gradient(90deg, var(--color-gray-700) 25%, var(--color-gray-600) 50%, var(--color-gray-700) 75%);
+    background-color: var(--color-primary);
     background-size: 200% 100%;
   }
   
   .cms-skeleton-text {
-    background: linear-gradient(90deg, var(--color-gray-700) 25%, var(--color-gray-600) 50%, var(--color-gray-700) 75%);
+    background-color: var(--color-primary);
     background-size: 200% 100%;
   }
   
   .cms-skeleton-title {
-    background: linear-gradient(90deg, var(--color-gray-600) 25%, var(--color-gray-500) 50%, var(--color-gray-600) 75%);
+    background-color: var(--color-primary);
     background-size: 200% 100%;
   }
 }

@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { PortableText } from '@portabletext/react'
@@ -97,9 +98,9 @@ export default async function ExperiencePage({ params }: Props) {
           <div className="max-w-4xl mx-auto text-white">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-white/80 text-sm mb-8">
-              <Link href="/iskustva" className="hover:text-white transition-colors">
+              <SafeLink href="/iskustva" className="hover:text-white transition-colors">
                 Iskustva
-              </Link>
+              </SafeLink>
               <span>•</span>
               <span className="text-white/60">{experience.destination}</span>
             </nav>
@@ -348,8 +349,7 @@ export default async function ExperiencePage({ params }: Props) {
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {relatedExperiences.map((relatedExperience) => (
-                  <Link
-                    key={relatedExperience._id}
+                  <SafeLink                     key={relatedExperience._id}
                     href={`/iskustva/${relatedExperience.slug?.current || 'no-slug'}`}
                     className="group"
                   >
@@ -386,7 +386,7 @@ export default async function ExperiencePage({ params }: Props) {
                         </div>
                       </div>
                     </article>
-                  </Link>
+                  </SafeLink>
                 ))}
               </div>
             </div>
@@ -413,7 +413,7 @@ export default async function ExperiencePage({ params }: Props) {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/iskustva">
+              <SafeLink href="/iskustva">
                 <PulseButton 
                   variant="accent"
                   size="lg"
@@ -421,9 +421,9 @@ export default async function ExperiencePage({ params }: Props) {
                 >
                   Sva iskustva
                 </PulseButton>
-              </Link>
+              </SafeLink>
               
-              <Link href="/kontakt">
+              <SafeLink href="/kontakt">
                 <PulseButton 
                   variant="secondary"
                   size="lg"
@@ -431,7 +431,7 @@ export default async function ExperiencePage({ params }: Props) {
                 >
                   Podelite svoje iskustvo
                 </PulseButton>
-              </Link>
+              </SafeLink>
             </div>
           </div>
         </div>

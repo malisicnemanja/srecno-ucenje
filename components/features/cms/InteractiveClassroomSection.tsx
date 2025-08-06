@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import OptimizedImage from '@/components/ui/OptimizedImage'
 
 interface InteractiveClassroomSectionProps {
@@ -81,8 +82,7 @@ export default function InteractiveClassroomSection({
               </li>
             </ul>
 
-            <Link
-              href="/ucionica"
+            <SafeLink               href="/ucionica"
               className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               {ctaText}
@@ -99,7 +99,7 @@ export default function InteractiveClassroomSection({
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </Link>
+            </SafeLink>
           </div>
 
           {/* Preview Image */}

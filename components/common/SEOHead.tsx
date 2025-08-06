@@ -30,7 +30,7 @@ export default function SEOHead({ seoData, structuredData }: SEOHeadProps) {
     <Head>
       {/* Canonical URL */}
       {seoData.canonicalUrl && (
-        <link rel="canonical" href={seoData.canonicalUrl} />
+        <link rel="canonical" href={seoData.canonicalUrl || '/'} />
       )}
       
       {/* Robots */}

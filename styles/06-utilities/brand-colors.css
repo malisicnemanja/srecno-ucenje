@@ -1,0 +1,242 @@
+/* ==========================================================================
+   BRAND COLOR UTILITIES
+   Complete brand color system for Srećno učenje
+   ========================================================================== */
+
+/**
+ * Brand Color Utilities
+ * Background, text, and border colors using the 5-color brand system
+ * Sky, Sun, Grass, Heart, Night
+ */
+
+/* Background Colors - Brand */
+.u-bg-sky { background-color: var(--brand-sky, #5DBFDB) !important; }
+.u-bg-sun { background-color: var(--brand-sun, #FDD835) !important; }
+.u-bg-grass { background-color: var(--brand-grass, #7CB342) !important; }
+.u-bg-heart { background-color: var(--brand-heart, #E53935) !important; }
+.u-bg-night { background-color: var(--brand-night, #3E4C59) !important; }
+
+/* Background Colors - Light Variants */
+.u-bg-sky-light { 
+  background-color: rgba(93, 191, 219, 0.1) !important; 
+  color: var(--brand-sky, #5DBFDB) !important;
+}
+.u-bg-sun-light { 
+  background-color: rgba(253, 216, 53, 0.1) !important; 
+  color: var(--brand-night, #3E4C59) !important;
+}
+.u-bg-grass-light { 
+  background-color: rgba(124, 179, 66, 0.1) !important; 
+  color: var(--brand-grass, #7CB342) !important;
+}
+.u-bg-heart-light { 
+  background-color: rgba(229, 57, 53, 0.1) !important; 
+  color: var(--brand-heart, #E53935) !important;
+}
+.u-bg-night-light { 
+  background-color: rgba(62, 76, 89, 0.1) !important; 
+  color: var(--brand-night, #3E4C59) !important;
+}
+
+/* Background Colors - Gradient Variants */
+.u-bg-sky-gradient {
+  background: linear-gradient(135deg, var(--brand-sky, #5DBFDB) 0%, rgba(93, 191, 219, 0.8) 100%) !important;
+  color: white !important;
+}
+.u-bg-sun-gradient {
+  background: linear-gradient(135deg, var(--brand-sun, #FDD835) 0%, rgba(253, 216, 53, 0.8) 100%) !important;
+  color: var(--brand-night, #3E4C59) !important;
+}
+.u-bg-grass-gradient {
+  background: linear-gradient(135deg, var(--brand-grass, #7CB342) 0%, rgba(124, 179, 66, 0.8) 100%) !important;
+  color: white !important;
+}
+.u-bg-heart-gradient {
+  background: linear-gradient(135deg, var(--brand-heart, #E53935) 0%, rgba(229, 57, 53, 0.8) 100%) !important;
+  color: white !important;
+}
+.u-bg-night-gradient {
+  background: linear-gradient(135deg, var(--brand-night, #3E4C59) 0%, rgba(62, 76, 89, 0.8) 100%) !important;
+  color: white !important;
+}
+
+/* Text Colors - Brand */
+.u-text-sky { color: var(--brand-sky, #5DBFDB) !important; }
+.u-text-sun { color: var(--brand-sun, #FDD835) !important; }
+.u-text-grass { color: var(--brand-grass, #7CB342) !important; }
+.u-text-heart { color: var(--brand-heart, #E53935) !important; }
+.u-text-night { color: var(--brand-night, #3E4C59) !important; }
+
+/* Text Colors - Dark Variants (for better contrast) */
+.u-text-sky-dark { color: var(--brand-sky-dark, #4A9FBF) !important; }
+.u-text-sun-dark { color: var(--brand-sun-dark, #F9A825) !important; }
+.u-text-grass-dark { color: var(--brand-grass-dark, #689F38) !important; }
+.u-text-heart-dark { color: var(--brand-heart-dark, #C62828) !important; }
+.u-text-night-dark { color: var(--brand-night-dark, #2C3E50) !important; }
+
+/* Border Colors - Brand */
+.u-border-sky { border-color: var(--brand-sky, #5DBFDB) !important; }
+.u-border-sun { border-color: var(--brand-sun, #FDD835) !important; }
+.u-border-grass { border-color: var(--brand-grass, #7CB342) !important; }
+.u-border-heart { border-color: var(--brand-heart, #E53935) !important; }
+.u-border-night { border-color: var(--brand-night, #3E4C59) !important; }
+
+/* Border Colors - Light Variants */
+.u-border-sky-light { border-color: rgba(93, 191, 219, 0.3) !important; }
+.u-border-sun-light { border-color: rgba(253, 216, 53, 0.3) !important; }
+.u-border-grass-light { border-color: rgba(124, 179, 66, 0.3) !important; }
+.u-border-heart-light { border-color: rgba(229, 57, 53, 0.3) !important; }
+.u-border-night-light { border-color: rgba(62, 76, 89, 0.3) !important; }
+
+/* Border Styles */
+.u-border-l-sky { border-left: 4px solid var(--brand-sky, #5DBFDB) !important; }
+.u-border-l-sun { border-left: 4px solid var(--brand-sun, #FDD835) !important; }
+.u-border-l-grass { border-left: 4px solid var(--brand-grass, #7CB342) !important; }
+.u-border-l-heart { border-left: 4px solid var(--brand-heart, #E53935) !important; }
+.u-border-l-night { border-left: 4px solid var(--brand-night, #3E4C59) !important; }
+
+.u-border-t-sky { border-top: 4px solid var(--brand-sky, #5DBFDB) !important; }
+.u-border-t-sun { border-top: 4px solid var(--brand-sun, #FDD835) !important; }
+.u-border-t-grass { border-top: 4px solid var(--brand-grass, #7CB342) !important; }
+.u-border-t-heart { border-top: 4px solid var(--brand-heart, #E53935) !important; }
+.u-border-t-night { border-top: 4px solid var(--brand-night, #3E4C59) !important; }
+
+/* Educational Context Colors */
+.u-bg-lesson-default { background-color: var(--color-lesson-default, rgba(124, 179, 66, 0.1)) !important; }
+.u-bg-lesson-active { background-color: var(--color-lesson-active, rgba(124, 179, 66, 0.2)) !important; }
+.u-bg-lesson-completed { background-color: var(--color-lesson-completed, rgba(124, 179, 66, 0.15)) !important; }
+.u-bg-lesson-locked { background-color: var(--color-lesson-locked, #f9fafb) !important; }
+
+.u-text-lesson-default { color: var(--brand-grass, #7CB342) !important; }
+.u-text-lesson-active { color: var(--brand-grass-dark, #689F38) !important; }
+.u-text-lesson-completed { color: var(--brand-grass, #7CB342) !important; }
+.u-text-lesson-locked { color: var(--color-gray-400, #9ca3af) !important; }
+
+/* Quiz State Colors */
+.u-bg-quiz-correct { background-color: rgba(124, 179, 66, 0.1) !important; }
+.u-bg-quiz-incorrect { background-color: rgba(229, 57, 53, 0.1) !important; }
+.u-bg-quiz-partial { background-color: rgba(253, 216, 53, 0.1) !important; }
+
+.u-text-quiz-correct { color: var(--brand-grass, #7CB342) !important; }
+.u-text-quiz-incorrect { color: var(--brand-heart, #E53935) !important; }
+.u-text-quiz-partial { color: var(--brand-sun-dark, #F9A825) !important; }
+
+.u-border-quiz-correct { border-color: var(--brand-grass, #7CB342) !important; }
+.u-border-quiz-incorrect { border-color: var(--brand-heart, #E53935) !important; }
+.u-border-quiz-partial { border-color: var(--brand-sun, #FDD835) !important; }
+
+/* Age Group Colors */
+.u-bg-age-preschool { background-color: var(--color-age-preschool, #FDD835) !important; }
+.u-bg-age-elementary { background-color: var(--color-age-elementary, #7CB342) !important; }
+.u-bg-age-middle { background-color: var(--color-age-middle, #5DBFDB) !important; }
+.u-bg-age-high { background-color: var(--color-age-high, #3E4C59) !important; }
+
+.u-text-age-preschool { color: var(--color-age-preschool, #FDD835) !important; }
+.u-text-age-elementary { color: var(--color-age-elementary, #7CB342) !important; }
+.u-text-age-middle { color: var(--color-age-middle, #5DBFDB) !important; }
+.u-text-age-high { color: var(--color-age-high, #3E4C59) !important; }
+
+/* Role-based Colors */
+.u-bg-role-child { background-color: var(--color-role-child, #7CB342) !important; }
+.u-bg-role-parent { background-color: var(--color-role-parent, #5DBFDB) !important; }
+.u-bg-role-teacher { background-color: var(--color-role-teacher, #3E4C59) !important; }
+.u-bg-role-admin { background-color: var(--color-role-admin, #E53935) !important; }
+
+.u-text-role-child { color: var(--color-role-child, #7CB342) !important; }
+.u-text-role-parent { color: var(--color-role-parent, #5DBFDB) !important; }
+.u-text-role-teacher { color: var(--color-role-teacher, #3E4C59) !important; }
+.u-text-role-admin { color: var(--color-role-admin, #E53935) !important; }
+
+/* Hover Effects */
+.u-hover-sky:hover { color: var(--brand-sky, #5DBFDB) !important; }
+.u-hover-sun:hover { color: var(--brand-sun-dark, #F9A825) !important; }
+.u-hover-grass:hover { color: var(--brand-grass, #7CB342) !important; }
+.u-hover-heart:hover { color: var(--brand-heart, #E53935) !important; }
+.u-hover-night:hover { color: var(--brand-night, #3E4C59) !important; }
+
+.u-hover-bg-sky:hover { background-color: var(--brand-sky, #5DBFDB) !important; }
+.u-hover-bg-sun:hover { background-color: var(--brand-sun, #FDD835) !important; }
+.u-hover-bg-grass:hover { background-color: var(--brand-grass, #7CB342) !important; }
+.u-hover-bg-heart:hover { background-color: var(--brand-heart, #E53935) !important; }
+.u-hover-bg-night:hover { background-color: var(--brand-night, #3E4C59) !important; }
+
+/* Focus States */
+.u-focus-sky:focus { 
+  outline-color: var(--brand-sky, #5DBFDB) !important; 
+  box-shadow: 0 0 0 3px rgba(93, 191, 219, 0.2) !important;
+}
+.u-focus-sun:focus { 
+  outline-color: var(--brand-sun, #FDD835) !important; 
+  box-shadow: 0 0 0 3px rgba(253, 216, 53, 0.2) !important;
+}
+.u-focus-grass:focus { 
+  outline-color: var(--brand-grass, #7CB342) !important; 
+  box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.2) !important;
+}
+.u-focus-heart:focus { 
+  outline-color: var(--brand-heart, #E53935) !important; 
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.2) !important;
+}
+.u-focus-night:focus { 
+  outline-color: var(--brand-night, #3E4C59) !important; 
+  box-shadow: 0 0 0 3px rgba(62, 76, 89, 0.2) !important;
+}
+
+/* Semantic Color Mappings (Tailwind equivalents) */
+.u-bg-primary { background-color: var(--brand-grass, #7CB342) !important; }
+.u-bg-secondary { background-color: var(--brand-sky, #5DBFDB) !important; }
+.u-bg-accent { background-color: var(--brand-sun, #FDD835) !important; }
+.u-bg-danger { background-color: var(--brand-heart, #E53935) !important; }
+.u-bg-dark { background-color: var(--brand-night, #3E4C59) !important; }
+
+.u-text-primary { color: var(--brand-grass, #7CB342) !important; }
+.u-text-secondary { color: var(--brand-sky, #5DBFDB) !important; }
+.u-text-accent { color: var(--brand-sun-dark, #F9A825) !important; }
+.u-text-danger { color: var(--brand-heart, #E53935) !important; }
+.u-text-dark { color: var(--brand-night, #3E4C59) !important; }
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .u-text-sun,
+  .u-text-accent {
+    color: var(--brand-sun-dark, #F9A825) !important;
+  }
+  
+  .u-bg-sun-light,
+  .u-bg-accent-light {
+    background-color: rgba(249, 168, 37, 0.2) !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .u-bg-sky { background-color: rgba(93, 191, 219, 0.8) !important; }
+  .u-bg-sun { background-color: rgba(253, 216, 53, 0.9) !important; }
+  .u-bg-grass { background-color: rgba(124, 179, 66, 0.8) !important; }
+  .u-bg-heart { background-color: rgba(229, 57, 53, 0.8) !important; }
+  
+  .u-text-sky { color: #83E6FF !important; }
+  .u-text-sun { color: #FFEA8C !important; }
+  .u-text-grass { color: #8AF76D !important; }
+  .u-text-heart { color: #FF6B6B !important; }
+  .u-text-night { color: #E5E7EB !important; }
+}
+
+/* Print Styles */
+@media print {
+  .u-bg-sky,
+  .u-bg-sun,
+  .u-bg-grass,
+  .u-bg-heart,
+  .u-bg-night { 
+    background-color: transparent !important; 
+  }
+  
+  .u-text-sky,
+  .u-text-sun,
+  .u-text-grass,
+  .u-text-heart,
+  .u-text-night { 
+    color: black !important; 
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { FloatingLetters, AnimatedTitle } from '@/components/animations'
@@ -646,8 +647,7 @@ export default async function AboutAuthorPage() {
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {data.featuredBooks.map((book, index) => (
-                  <Link
-                    key={book._id}
+                  <SafeLink                     key={book._id}
                     href={`/knjige/${book.slug?.current || 'no-slug'}`}
                     className="group"
                   >
@@ -695,7 +695,7 @@ export default async function AboutAuthorPage() {
                         </div>
                       </div>
                     </div>
-                  </Link>
+                  </SafeLink>
                 ))}
               </div>
               

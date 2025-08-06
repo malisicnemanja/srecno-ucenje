@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import OptimizedImage from '@/components/ui/OptimizedImage'
 import { usePathname } from 'next/navigation'
 import { useSanityQuery } from '@/hooks/useSanity'
@@ -117,7 +118,7 @@ export default function StickyHeader() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
+            <SafeLink href="/" className="flex items-center space-x-2">
               {siteSettings?.logo ? (
                 <OptimizedImage
                   src={urlFor(siteSettings.logo).width(128).height(128).url()}
@@ -136,7 +137,7 @@ export default function StickyHeader() {
               <span className="text-xl lg:text-2xl font-bold text-gray-900">
                 {siteSettings?.siteName || 'Srećno učenje'}
               </span>
-            </Link>
+            </SafeLink>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6" ref={dropdownRef}>
@@ -178,9 +179,8 @@ export default function StickyHeader() {
                       >
                         <div className="py-2">
                           {item.dropdown.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              href={subItem.href}
+                            <SafeLink                               key={subItem.name}
+                              href={subItem.href || '/'}
                               className={`block px-4 py-2 text-sm transition-colors duration-200 ${
                                 pathname === subItem.href
                                   ? 'bg-green-50 text-green-600'
@@ -188,14 +188,13 @@ export default function StickyHeader() {
                               }`}
                             >
                               {subItem.name}
-                            </Link>
+                            </SafeLink>
                           ))}
                         </div>
                       </div>
                     </>
                   ) : (
-                    <Link
-                      href={item.href}
+                    <SafeLink                       href={item.href || '/'}
                       className={`text-sm font-medium transition-colors duration-200 ${
                         pathname === item.href
                           ? 'text-green-600'
@@ -203,18 +202,17 @@ export default function StickyHeader() {
                       }`}
                     >
                       {item.name}
-                    </Link>
+                    </SafeLink>
                   )}
                 </div>
               ))}
               
               {/* Desktop CTA Button */}
-              <Link
-                href="/kontakt"
+              <SafeLink                 href="/kontakt"
                 className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
               >
                 Započnite Sada
-              </Link>
+              </SafeLink>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -336,9 +334,8 @@ export default function StickyHeader() {
                       }`}
                     >
                       {item.dropdown.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
+                        <SafeLink                           key={subItem.name}
+                          href={subItem.href || '/'}
                           className={`block py-2 px-4 rounded-lg text-sm transition-all duration-200 ${
                             pathname === subItem.href
                               ? 'bg-green-50 text-green-600'
@@ -346,13 +343,12 @@ export default function StickyHeader() {
                           }`}
                         >
                           {subItem.name}
-                        </Link>
+                        </SafeLink>
                       ))}
                     </div>
                   </>
                 ) : (
-                  <Link
-                    href={item.href}
+                  <SafeLink                     href={item.href || '/'}
                     className={`block py-3 px-4 rounded-lg text-base font-medium transition-all duration-200 ${
                       pathname === item.href
                         ? 'bg-green-50 text-green-600'
@@ -360,18 +356,17 @@ export default function StickyHeader() {
                     }`}
                   >
                     {item.name}
-                  </Link>
+                  </SafeLink>
                 )}
               </div>
             ))}
 
             {/* CTA Button */}
-            <Link
-              href="/kontakt"
+            <SafeLink               href="/kontakt"
               className="mt-6 block w-full bg-green-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
             >
               Započnite Sada
-            </Link>
+            </SafeLink>
           </nav>
         </div>
       </div>

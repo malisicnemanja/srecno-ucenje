@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 
 interface Author {
   name: string
@@ -67,12 +68,11 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
             </>
           )}
         </div>
-        <Link
-          href={`/blog/${post.slug?.current || 'no-slug'}`}
+        <SafeLink           href={`/blog/${post.slug?.current || 'no-slug'}`}
           className="text-blue-600 font-medium hover:text-blue-700"
         >
           Pročitajte više →
-        </Link>
+        </SafeLink>
       </div>
     </article>
   )

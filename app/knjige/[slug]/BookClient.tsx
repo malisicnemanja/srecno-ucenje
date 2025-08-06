@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { AnimatedTitle, PulseButton } from '@/components/animations'
 import ShareButtons from './ShareButtons'
@@ -26,13 +27,13 @@ export default function BookClient({ book, relatedBooks, bookUrl }: any) {
         } opacity-50`} />
         
         <div className="container mx-auto px-4 relative z-10">
-          <Link 
+          <SafeLink 
             href="/knjige"
             className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 mb-8 transition-colors"
           >
             <ChevronLeft className="w-5 h-5" />
             <span>Nazad na sve knjige</span>
-          </Link>
+          </SafeLink>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Book Cover */}

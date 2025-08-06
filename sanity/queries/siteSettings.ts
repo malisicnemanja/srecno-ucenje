@@ -1,7 +1,8 @@
-import { client } from '@/sanity/client.js'
+import { groq } from 'next-sanity'
+import { sanityFetch } from '@/lib/sanity.client'
 
 // Query for site settings
-export const siteSettingsQuery = `
+export const siteSettingsQuery = groq`
   *[_type == "siteSettings"][0] {
     siteName,
     siteDescription,
@@ -63,7 +64,7 @@ export const siteSettingsQuery = `
 // Fetch function
 export async function getSiteSettings() {
   try {
-    return await client.fetch(siteSettingsQuery)
+    return await sanityFetch({ query: siteSettingsQuery })
   } catch (error) {
     console.error('Error fetching site settings:', error)
     return null

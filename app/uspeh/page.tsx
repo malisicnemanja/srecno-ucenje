@@ -34,6 +34,7 @@ const ChartSVG = ({ size = 24, className = '' }: { size?: number; className?: st
 )
 
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 
 // Fallback success stories data (used when CMS is unavailable)
 const fallbackSuccessStories = [
@@ -352,13 +353,13 @@ export default function UspehPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <Link href="#stories" className="btn-primary group">
+              <SafeLink href="#stories" className="btn-primary group">
                 <SparklesSVG size={20} className="mr-2 group-hover:scale-110 transition-transform" />
                 Pročitajte priče
-              </Link>
-              <Link href="/zakazivanje" className="btn-outline-primary">
+              </SafeLink>
+              <SafeLink href="/zakazivanje" className="btn-outline-primary">
                 Započnite svoju priču
-              </Link>
+              </SafeLink>
             </motion.div>
           </div>
         </div>
@@ -744,13 +745,13 @@ export default function UspehPage() {
               Pridružite se hiljadama učenika koji su transformisali svoj način učenja
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/zakazivanje" className="btn bg-white text-primary-600 hover:bg-gray-100 hover:scale-105 transition-all">
+              <SafeLink href="/zakazivanje" className="btn bg-white text-primary-600 hover:bg-gray-100 hover:scale-105 transition-all">
                 <StarSVG size={20} className="mr-2" />
                 Zakažite besplatnu procenu
-              </Link>
-              <Link href="/kontakt" className="btn border-2 border-white text-white hover:bg-white hover:text-primary-600 transition-all">
+              </SafeLink>
+              <SafeLink href="/kontakt" className="btn border-2 border-white text-white hover:bg-white hover:text-primary-600 transition-all">
                 Kontaktirajte nas
-              </Link>
+              </SafeLink>
             </div>
           </motion.div>
         </div>
@@ -859,12 +860,11 @@ export default function UspehPage() {
                       ))}
                     </ul>
 
-                    <Link
-                      href="/zakazivanje"
+                    <SafeLink                       href="/zakazivanje"
                       className="btn-primary w-full text-center"
                     >
                       Započnite svoju priču uspeha
-                    </Link>
+                    </SafeLink>
                   </div>
                 )
               })()}

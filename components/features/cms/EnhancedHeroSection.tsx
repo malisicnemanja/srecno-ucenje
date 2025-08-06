@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import { GeneralIcon } from '@/components/icons/GeneralIcon'
 
 interface TrustBadge {
@@ -147,14 +148,12 @@ export default function EnhancedHeroSection({
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up animation-delay-600">
-          <Link
-            href={primaryCta.link}
+          <SafeLink             href={primaryCta.link || '/'}
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-green-600 rounded-lg hover:bg-green-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
           >
             {primaryCta.text}
-          </Link>
-          <Link
-            href={secondaryCta.link}
+          </SafeLink>
+          <SafeLink             href={secondaryCta.link || '/'}
             className={`inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg transform hover:scale-105 transition-all duration-200 ${
               videoUrl
                 ? 'text-white border-2 border-white hover:bg-white hover:text-gray-900'
@@ -162,7 +161,7 @@ export default function EnhancedHeroSection({
             }`}
           >
             {secondaryCta.text}
-          </Link>
+          </SafeLink>
         </div>
 
         {/* Trust Badges */}

@@ -1,0 +1,244 @@
+/**
+ * FORM ELEMENTS
+ * Default styles for form inputs and controls
+ */
+
+/* Form wrapper */
+form {
+  @apply space-y-4;
+}
+
+/* Labels */
+label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+/* Required indicator */
+label.required::after,
+label:has(+ :required)::after {
+  content: " *";
+  @apply text-red-500;
+}
+
+/* Base input styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+textarea,
+select {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg;
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500;
+  @apply transition-colors;
+}
+
+/* Textarea specific */
+textarea {
+  @apply min-h-[100px] resize-y;
+}
+
+/* Select specific */
+select {
+  @apply appearance-none bg-white;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+/* File input */
+input[type="file"] {
+  @apply w-full text-sm text-gray-500;
+  @apply file:mr-4 file:py-2 file:px-4;
+  @apply file:rounded-lg file:border-0;
+  @apply file:text-sm file:font-semibold;
+  @apply file:bg-primary-50 file:text-primary-700;
+  @apply hover:file:bg-primary-100;
+}
+
+/* Checkboxes and Radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+  @apply w-4 h-4 text-primary-600 border-gray-300 focus:ring-primary-500;
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+/* Range slider */
+input[type="range"] {
+  @apply w-full;
+}
+
+/* Color picker */
+input[type="color"] {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+/* Disabled state */
+input:disabled,
+textarea:disabled,
+select:disabled {
+  @apply bg-gray-100 cursor-not-allowed opacity-60;
+}
+
+/* Invalid state */
+input:invalid,
+textarea:invalid,
+select:invalid {
+  @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+}
+
+/* Valid state */
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+  @apply border-green-500;
+}
+
+/* Placeholder */
+::placeholder {
+  @apply text-gray-400;
+}
+
+/* Field groups */
+.field-group {
+  @apply space-y-1;
+}
+
+/* Input groups */
+.input-group {
+  @apply flex;
+}
+
+.input-group input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group button,
+.input-group .addon {
+  padding: 0.5rem 1rem;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-left: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+/* Help text */
+.help-text {
+  @apply text-sm text-gray-600 mt-1;
+}
+
+/* Error text */
+.error-text {
+  @apply text-sm text-red-600 mt-1;
+}
+
+/* Success text */
+.success-text {
+  @apply text-sm text-green-600 mt-1;
+}
+
+/* Fieldset */
+fieldset {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+legend {
+  @apply text-lg font-semibold text-gray-900 px-2;
+}
+
+/* Button styles (form-specific) */
+button[type="submit"],
+button[type="button"],
+button[type="reset"] {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+button[type="submit"]:focus,
+button[type="button"]:focus,
+button[type="reset"]:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  ring: 2px solid currentColor;
+  ring-offset: 2px;
+}
+
+button[type="submit"] {
+  @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+}
+
+button[type="button"] {
+  @apply bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500;
+}
+
+button[type="reset"] {
+  @apply bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 focus:ring-gray-500;
+}
+
+/* Loading state */
+.form-loading {
+  @apply opacity-60 pointer-events-none;
+}
+
+/* Switch/Toggle */
+.switch {
+  @apply relative inline-flex items-center cursor-pointer;
+}
+
+.switch input {
+  @apply sr-only;
+}
+
+.switch .slider {
+  width: 2.75rem;
+  height: 1.5rem;
+  background-color: #e5e7eb;
+  border-radius: 50px;
+}
+
+.switch .slider::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  transition: all 0.3s;
+}
+
+.switch input:focus + .slider {
+  ring: 4px solid #a3e635;
+  ring-opacity: 0.3;
+}
+
+.switch input:checked + .slider {
+  background-color: #65a30d;
+}
+
+.switch input:checked + .slider::after {
+  transform: translateX(1.25rem);
+}

@@ -171,7 +171,7 @@ export default function SmartCTABar() {
                       {currentMessage.icon}{currentMessage.text}
                     </p>
                     <a
-                      href={currentMessage.link}
+                      href={currentMessage.link || '/'}
                       onClick={handleClick}
                       className="bg-white text-green-600 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap"
                     >

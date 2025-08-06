@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { BookOpeningAnimation, FloatingLetters, AnimatedTitle, PulseButton } from '@/components/animations'
@@ -120,9 +121,9 @@ export default async function BookPage({ params }: Props) {
             <div className="space-y-8 text-white">
               <div className="space-y-4">
                 <div className="flex items-center gap-2 text-white/80 text-sm">
-                  <Link href="/knjige" className="hover:text-white transition-colors">
+                  <SafeLink href="/knjige" className="hover:text-white transition-colors">
                     Knjige
-                  </Link>
+                  </SafeLink>
                   <span>•</span>
                   <span>{book.year}</span>
                 </div>
@@ -414,7 +415,7 @@ export default async function BookPage({ params }: Props) {
                 {book.purchaseLinks.map((link, index) => (
                   <a
                     key={index}
-                    href={link.url}
+                    href={link.url || '/'}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-primary-300 hover:shadow-lg transition-all duration-300"
@@ -465,7 +466,7 @@ export default async function BookPage({ params }: Props) {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/knjige">
+              <SafeLink href="/knjige">
                 <PulseButton 
                   variant="accent"
                   size="lg"
@@ -474,9 +475,9 @@ export default async function BookPage({ params }: Props) {
                 >
                   Sve knjige
                 </PulseButton>
-              </Link>
+              </SafeLink>
               
-              <Link href="/kontakt">
+              <SafeLink href="/kontakt">
                 <PulseButton 
                   variant="secondary"
                   size="lg"
@@ -485,7 +486,7 @@ export default async function BookPage({ params }: Props) {
                 >
                   Kontaktirajte nas
                 </PulseButton>
-              </Link>
+              </SafeLink>
             </div>
           </div>
         </div>

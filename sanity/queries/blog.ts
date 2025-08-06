@@ -1,7 +1,8 @@
-import { client } from '@/sanity/client'
+import { groq } from 'next-sanity'
+import { sanityFetch } from '@/lib/sanity.client'
 
 // Query for all blog posts
-export const allBlogPostsQuery = `
+export const allBlogPostsQuery = groq`
   *[_type == "blogPost"] | order(publishedDate desc) {
     _id,
     title,
@@ -50,7 +51,7 @@ export const allBlogPostsQuery = `
 `
 
 // Query for featured blog posts
-export const featuredBlogPostsQuery = `
+export const featuredBlogPostsQuery = groq`
   *[_type == "blogPost" && isFeatured == true] | order(publishedDate desc) {
     _id,
     title,
@@ -94,7 +95,7 @@ export const featuredBlogPostsQuery = `
 `
 
 // Query for single blog post by slug
-export const blogPostBySlugQuery = `
+export const blogPostBySlugQuery = groq`
   *[_type == "blogPost" && slug.current == $slug][0] {
     _id,
     title,
@@ -146,7 +147,7 @@ export const blogPostBySlugQuery = `
 `
 
 // Query for blog posts by category
-export const blogPostsByCategoryQuery = `
+export const blogPostsByCategoryQuery = groq`
   *[_type == "blogPost" && category->slug.current == $categorySlug] | order(publishedDate desc) {
     _id,
     title,
@@ -190,7 +191,7 @@ export const blogPostsByCategoryQuery = `
 `
 
 // Query for all blog categories
-export const allBlogCategoriesQuery = `
+export const allBlogCategoriesQuery = groq`
   *[_type == "blogCategory"] | order(name asc) {
     _id,
     name,
@@ -202,7 +203,7 @@ export const allBlogCategoriesQuery = `
 `
 
 // Query for related blog posts
-export const relatedBlogPostsQuery = `
+export const relatedBlogPostsQuery = groq`
   *[_type == "blogPost" && _id != $postId && (
     category->_id == $categoryId ||
     count(tags[@ in $tags]) > 0
@@ -239,7 +240,7 @@ export const relatedBlogPostsQuery = `
 // Fetch functions
 export async function getAllBlogPosts() {
   try {
-    return await client.fetch(allBlogPostsQuery)
+    return await sanityFetch({ query: allBlogPostsQuery })
   } catch (error) {
     console.error('Error fetching blog posts:', error)
     return []
@@ -248,7 +249,7 @@ export async function getAllBlogPosts() {
 
 export async function getFeaturedBlogPosts() {
   try {
-    return await client.fetch(featuredBlogPostsQuery)
+    return await sanityFetch({ query: featuredBlogPostsQuery })
   } catch (error) {
     console.error('Error fetching featured blog posts:', error)
     return []
@@ -257,7 +258,7 @@ export async function getFeaturedBlogPosts() {
 
 export async function getBlogPostBySlug(slug: string) {
   try {
-    return await client.fetch(blogPostBySlugQuery, { slug })
+    return await sanityFetch({ query: blogPostBySlugQuery, params: { slug } })
   } catch (error) {
     console.error('Error fetching blog post by slug:', error)
     return null
@@ -266,7 +267,7 @@ export async function getBlogPostBySlug(slug: string) {
 
 export async function getBlogPostsByCategory(categorySlug: string) {
   try {
-    return await client.fetch(blogPostsByCategoryQuery, { categorySlug })
+    return await sanityFetch({ query: blogPostsByCategoryQuery, params: { categorySlug } })
   } catch (error) {
     console.error('Error fetching blog posts by category:', error)
     return []
@@ -275,7 +276,7 @@ export async function getBlogPostsByCategory(categorySlug: string) {
 
 export async function getAllBlogCategories() {
   try {
-    return await client.fetch(allBlogCategoriesQuery)
+    return await sanityFetch({ query: allBlogCategoriesQuery })
   } catch (error) {
     console.error('Error fetching blog categories:', error)
     return []
@@ -284,7 +285,7 @@ export async function getAllBlogCategories() {
 
 export async function getRelatedBlogPosts(postId: string, categoryId: string, tags: string[]) {
   try {
-    return await client.fetch(relatedBlogPostsQuery, { postId, categoryId, tags })
+    return await sanityFetch({ query: relatedBlogPostsQuery, params: { postId, categoryId, tags } })
   } catch (error) {
     console.error('Error fetching related blog posts:', error)
     return []

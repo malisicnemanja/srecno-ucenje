@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import OptimizedImage from '@/components/ui/OptimizedImage'
 import { usePathname } from 'next/navigation'
 import { useSanityQuery } from '@/hooks/useSanity'
@@ -159,7 +160,7 @@ export default function StickyHeader() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 lg:h-24">
             {/* Logo - Veći i bolje uklopljen */}
-            <Link href="/" className="flex items-center space-x-3 group">
+            <SafeLink href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <img
                   src="/logo.svg"
@@ -177,7 +178,7 @@ export default function StickyHeader() {
                   Metodologija
                 </span>
               </div>
-            </Link>
+            </SafeLink>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6" ref={dropdownRef}>
@@ -219,9 +220,8 @@ export default function StickyHeader() {
                       >
                         <div className="py-2">
                           {item.dropdown.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              href={subItem.href}
+                            <SafeLink                               key={subItem.name}
+                              href={subItem.href || '/'}
                               className={`block px-4 py-2 text-sm transition-colors duration-200 ${
                                 pathname === subItem.href
                                   ? 'bg-primary-50 text-primary-600'
@@ -229,14 +229,13 @@ export default function StickyHeader() {
                               }`}
                             >
                               {subItem.name}
-                            </Link>
+                            </SafeLink>
                           ))}
                         </div>
                       </div>
                     </>
                   ) : (
-                    <Link
-                      href={item.href}
+                    <SafeLink                       href={item.href || '/'}
                       className={`text-sm font-medium transition-colors duration-200 ${
                         pathname === item.href
                           ? 'text-primary-600'
@@ -244,14 +243,13 @@ export default function StickyHeader() {
                       }`}
                     >
                       {item.name}
-                    </Link>
+                    </SafeLink>
                   )}
                 </div>
               ))}
               
               {/* Desktop CTA Button */}
-              <Link
-                href={ctaButton.href}
+              <SafeLink                 href={ctaButton.href || '/'}
                 className={`ml-4 px-5 py-2.5 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 ${
                   ctaButton.style === 'primary' 
                     ? 'bg-primary-500 text-white hover:bg-primary-600 hover:shadow-primary-500/30'
@@ -261,7 +259,7 @@ export default function StickyHeader() {
                 }`}
               >
                 {ctaButton.text}
-              </Link>
+              </SafeLink>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -383,9 +381,8 @@ export default function StickyHeader() {
                       }`}
                     >
                       {item.dropdown.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
+                        <SafeLink                           key={subItem.name}
+                          href={subItem.href || '/'}
                           className={`block py-2 px-4 rounded-lg text-sm transition-all duration-200 ${
                             pathname === subItem.href
                               ? 'bg-primary-50 text-primary-600'
@@ -393,13 +390,12 @@ export default function StickyHeader() {
                           }`}
                         >
                           {subItem.name}
-                        </Link>
+                        </SafeLink>
                       ))}
                     </div>
                   </>
                 ) : (
-                  <Link
-                    href={item.href}
+                  <SafeLink                     href={item.href || '/'}
                     className={`block py-3 px-4 rounded-lg text-base font-medium transition-all duration-200 ${
                       pathname === item.href
                         ? 'bg-primary-50 text-primary-600'
@@ -407,14 +403,13 @@ export default function StickyHeader() {
                     }`}
                   >
                     {item.name}
-                  </Link>
+                  </SafeLink>
                 )}
               </div>
             ))}
 
             {/* CTA Button */}
-            <Link
-              href={ctaButton.href}
+            <SafeLink               href={ctaButton.href || '/'}
               className={`mt-6 block w-full text-white text-center py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
                 ctaButton.style === 'primary' 
                   ? 'bg-primary-600 hover:bg-primary-700'
@@ -424,7 +419,7 @@ export default function StickyHeader() {
               }`}
             >
               {ctaButton.text}
-            </Link>
+            </SafeLink>
           </nav>
         </div>
       </div>

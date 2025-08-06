@@ -2,6 +2,7 @@
 
 import PulseButton from '@/components/ui/PulseButton'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 
 export function HeroButtons() {
   const scrollToSection = (id: string) => {
@@ -32,21 +33,21 @@ export function HeroButtons() {
 
 export function BooksButton() {
   return (
-    <Link href="/knjige">
+    <SafeLink href="/knjige">
       <PulseButton 
         variant="primary"
         size="lg"
       >
         Sva dela autorke
       </PulseButton>
-    </Link>
+    </SafeLink>
   )
 }
 
 export function CTAButtons() {
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      <Link href="/kontakt">
+      <SafeLink href="/kontakt">
         <PulseButton 
           variant="accent"
           size="lg"
@@ -54,9 +55,9 @@ export function CTAButtons() {
         >
           Kontakt
         </PulseButton>
-      </Link>
+      </SafeLink>
       
-      <Link href="/knjige">
+      <SafeLink href="/knjige">
         <PulseButton 
           variant="secondary"
           size="lg"
@@ -64,7 +65,7 @@ export function CTAButtons() {
         >
           Istražite knjige
         </PulseButton>
-      </Link>
+      </SafeLink>
     </div>
   )
 }

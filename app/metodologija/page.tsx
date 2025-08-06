@@ -12,6 +12,7 @@ import {
 } from '@/components/icons'
 import { BrainGrowth, ReadingChild } from '@/components/illustrations/ChildIllustrations'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 
 const methodologyQuery = `*[_type == "methodology"][0]{
   title,
@@ -135,12 +136,12 @@ export default function MethodologyPage() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link href="/zakazivanje" className="btn-primary">
+                <SafeLink href="/zakazivanje" className="btn-primary">
                   Zakaži demo čas
-                </Link>
-                <Link href="#methods" className="btn-outline-primary">
+                </SafeLink>
+                <SafeLink href="#methods" className="btn-outline-primary">
                   Saznaj više
-                </Link>
+                </SafeLink>
               </div>
             </motion.div>
 
@@ -376,9 +377,9 @@ export default function MethodologyPage() {
             <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
               Zakažite besplatan demo čas i uverite se sami u efikasnost naše metodologije
             </p>
-            <Link href="/zakazivanje" className="btn bg-white text-primary-600 hover:bg-gray-100">
+            <SafeLink href="/zakazivanje" className="btn bg-white text-primary-600 hover:bg-gray-100">
               Zakaži demo čas
-            </Link>
+            </SafeLink>
           </motion.div>
         </div>
       </section>

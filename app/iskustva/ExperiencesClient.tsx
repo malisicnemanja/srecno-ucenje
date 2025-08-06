@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { FloatingLetters, AnimatedTitle, PulseButton } from '@/components/animations'
 import { Experience } from '@/sanity/queries/experience'
@@ -107,14 +108,14 @@ export default function ExperiencesClient({ experiences, featuredExperiences }: 
                       </div>
                     </div>
 
-                    <Link href={`/iskustva/${featuredExperience.slug?.current || 'no-slug'}`}>
+                    <SafeLink href={`/iskustva/${featuredExperience.slug?.current || 'no-slug'}`}>
                       <PulseButton 
                         variant="primary"
                         size="lg"
                       >
                         Pročitajte više
                       </PulseButton>
-                    </Link>
+                    </SafeLink>
                   </div>
                 </div>
               </div>
@@ -137,8 +138,7 @@ export default function ExperiencesClient({ experiences, featuredExperiences }: 
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {experiences.map((experience) => (
-              <Link
-                key={experience._id}
+              <SafeLink                 key={experience._id}
                 href={`/iskustva/${experience.slug?.current || 'no-slug'}`}
                 className="group"
               >
@@ -207,7 +207,7 @@ export default function ExperiencesClient({ experiences, featuredExperiences }: 
                     </div>
                   </div>
                 </article>
-              </Link>
+              </SafeLink>
             ))}
           </div>
         </div>
@@ -223,7 +223,7 @@ export default function ExperiencesClient({ experiences, featuredExperiences }: 
             Podelite svoja iskustva sa našom zajednicom i inspirišite druge
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/kontakt">
+            <SafeLink href="/kontakt">
               <PulseButton 
                 variant="primary"
                 size="lg"
@@ -231,7 +231,7 @@ export default function ExperiencesClient({ experiences, featuredExperiences }: 
               >
                 Podelite iskustvo
               </PulseButton>
-            </Link>
+            </SafeLink>
             
             <PulseButton 
               variant="secondary"

@@ -1,0 +1,173 @@
+/**
+ * IMAGE ELEMENTS
+ * Base styles for images and media
+ */
+
+/* Base image styles */
+img {
+  @apply max-w-full h-auto;
+  display: block;
+}
+
+/* Responsive images */
+img.responsive {
+  @apply w-full h-auto;
+}
+
+/* Image with caption */
+figure {
+  @apply mb-6;
+}
+
+figure img {
+  @apply mb-2;
+}
+
+figcaption {
+  @apply text-sm text-gray-600 text-center italic;
+}
+
+/* Rounded images */
+img.rounded {
+  border-radius: 0.5rem;
+}
+
+img.rounded-full {
+  border-radius: 50%;
+}
+
+/* Image borders */
+img.bordered {
+  @apply border-2 border-gray-200;
+}
+
+/* Image shadows */
+img.shadow {
+  @apply shadow-lg;
+}
+
+/* Image overlays */
+.image-overlay {
+  @apply relative overflow-hidden;
+}
+
+.image-overlay::after {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-t from-black/50 to-transparent;
+}
+
+/* Avatar images */
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-sm {
+  width: 2rem;
+  height: 2rem;
+}
+
+.avatar-lg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.avatar-xl {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Thumbnail images */
+.thumbnail {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Gallery grid */
+.image-gallery {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Lazy loading placeholder */
+img[loading="lazy"] {
+  @apply bg-gray-100;
+}
+
+/* Broken image styling */
+img:not([src]),
+img[src=""],
+img:not([alt]) {
+  @apply bg-gray-200;
+  position: relative;
+}
+
+img:not([src])::after,
+img[src=""]::after {
+  content: "🖼";
+  @apply absolute inset-0 flex items-center justify-center text-gray-400 text-2xl;
+}
+
+/* SVG icons */
+svg {
+  @apply fill-current;
+}
+
+svg.icon {
+  @apply w-6 h-6;
+}
+
+svg.icon-sm {
+  @apply w-4 h-4;
+}
+
+svg.icon-lg {
+  @apply w-8 h-8;
+}
+
+/* Video elements */
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Picture element */
+picture {
+  @apply block;
+}
+
+picture img {
+  @apply w-full h-auto;
+}
+
+/* Object fit utilities */
+.object-contain {
+  object-fit: contain;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.object-fill {
+  object-fit: fill;
+}
+
+.object-none {
+  object-fit: none;
+}
+
+.object-scale-down {
+  object-fit: scale-down;
+}

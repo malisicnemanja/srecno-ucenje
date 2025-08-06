@@ -1,0 +1,545 @@
+/**
+ * SREĆNO UČENJE - TOAST COMPONENTS
+ * Toast notification system for user feedback
+ * Accessible, mobile-friendly, and educational context-aware
+ */
+
+/* === TOAST CONTAINER === */
+
+.c-toast-container {
+  position: fixed;
+  z-index: var(--z-toast);
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+/* Container positions */
+.c-toast-container--top-right {
+  top: 0;
+  right: 0;
+}
+
+.c-toast-container--top-left {
+  top: 0;
+  left: 0;
+}
+
+.c-toast-container--top-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.c-toast-container--bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.c-toast-container--bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.c-toast-container--bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 640px) {
+  .c-toast-container {
+    left: var(--space-4) !important;
+    right: var(--space-4) !important;
+    transform: none !important;
+    padding: var(--space-2);
+  }
+}
+
+/* === BASE TOAST === */
+
+.c-toast {
+  /* Layout */
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  max-width: 400px;
+  min-width: 300px;
+  padding: var(--space-4);
+  
+  /* Appearance */
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(8px);
+  
+  /* Interactions */
+  pointer-events: all;
+  cursor: pointer;
+  user-select: none;
+  
+  /* Animations */
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s var(--ease-out-cubic);
+}
+
+.c-toast.c-toast--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.c-toast.c-toast--removing {
+  opacity: 0;
+  transform: translateX(100%) scale(0.8);
+  transition: all 0.2s ease-in;
+}
+
+@media (max-width: 640px) {
+  .c-toast {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/* Toast from left containers */
+.c-toast-container--top-left .c-toast,
+.c-toast-container--bottom-left .c-toast {
+  transform: translateX(-100%);
+}
+
+.c-toast-container--top-left .c-toast.c-toast--removing,
+.c-toast-container--bottom-left .c-toast.c-toast--removing {
+  transform: translateX(-100%) scale(0.8);
+}
+
+/* Toast from top/bottom center */
+.c-toast-container--top-center .c-toast {
+  transform: translateY(-100%);
+}
+
+.c-toast-container--top-center .c-toast.c-toast--removing {
+  transform: translateY(-100%) scale(0.8);
+}
+
+.c-toast-container--bottom-center .c-toast {
+  transform: translateY(100%);
+}
+
+.c-toast-container--bottom-center .c-toast.c-toast--removing {
+  transform: translateY(100%) scale(0.8);
+}
+
+/* === TOAST VARIANTS === */
+
+/* Success toast */
+.c-toast--success {
+  background-color: var(--color-success-light);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.c-toast--success .c-toast__icon {
+  color: var(--color-success);
+  background-color: var(--color-success);
+}
+
+/* Error toast */
+.c-toast--error {
+  background-color: var(--color-error-light);
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+.c-toast--error .c-toast__icon {
+  color: var(--color-error);
+  background-color: var(--color-error);
+}
+
+/* Warning toast */
+.c-toast--warning {
+  background-color: var(--color-warning-light);
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+}
+
+.c-toast--warning .c-toast__icon {
+  color: var(--color-warning);
+  background-color: var(--color-warning);
+}
+
+/* Info toast */
+.c-toast--info {
+  background-color: var(--color-info-light);
+  border-color: var(--color-info);
+  color: var(--color-info);
+}
+
+.c-toast--info .c-toast__icon {
+  color: var(--color-info);
+  background-color: var(--color-info);
+}
+
+/* Loading toast */
+.c-toast--loading {
+  background-color: var(--color-gray-100);
+  border-color: var(--color-gray-300);
+  color: var(--text-primary);
+}
+
+.c-toast--loading .c-toast__icon {
+  animation: spin 1s linear infinite;
+}
+
+/* === TOAST ELEMENTS === */
+
+.c-toast__icon {
+  flex-shrink: 0;
+  width: var(--space-5);
+  height: var(--space-5);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+
+.c-toast__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.c-toast__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-1);
+  color: inherit;
+}
+
+.c-toast__message {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-secondary);
+  word-wrap: break-word;
+}
+
+.c-toast__close {
+  flex-shrink: 0;
+  width: var(--space-5);
+  height: var(--space-5);
+  border: none;
+  background: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all var(--transition-base);
+  margin-left: var(--space-2);
+}
+
+.c-toast__close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+}
+
+.c-toast__close:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+/* === TOAST PROGRESS === */
+
+.c-toast--with-progress {
+  padding-bottom: var(--space-3);
+}
+
+.c-toast__progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  overflow: hidden;
+}
+
+.c-toast__progress-bar {
+  height: 100%;
+  background-color: currentColor;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: transform linear;
+}
+
+.c-toast--with-progress.c-toast--visible .c-toast__progress-bar {
+  transform: translateX(0);
+}
+
+/* === EDUCATIONAL TOAST VARIANTS === */
+
+/* Achievement toast */
+.c-toast--achievement {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.c-toast--achievement::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: var(--color-primary);
+  transform: rotate(45deg);
+  animation: shimmer 2s infinite;
+}
+
+.c-toast--achievement .c-toast__icon {
+  background-color: var(--color-primary);
+  color: white;
+  font-size: var(--font-size-sm);
+}
+
+/* Lesson complete toast */
+.c-toast--lesson-complete {
+  background-color: var(--color-primary);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.c-toast--lesson-complete .c-toast__icon::before {
+  content: '🎉';
+  font-size: var(--font-size-base);
+}
+
+/* Quiz result toast */
+.c-toast--quiz-result {
+  background-color: var(--color-primary);
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+/* Streak toast */
+.c-toast--streak {
+  background-color: var(--color-primary);
+  border-color: var(--color-accent);
+  color: var(--color-accent-700);
+}
+
+.c-toast--streak .c-toast__icon::before {
+  content: '🔥';
+  font-size: var(--font-size-base);
+}
+
+/* Level up toast */
+.c-toast--level-up {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary-700);
+  transform: scale(1.05);
+}
+
+.c-toast--level-up.c-toast--visible {
+  animation: levelUpPulse 0.6s ease-out;
+}
+
+@keyframes levelUpPulse {
+  0% { transform: scale(1.05) translateX(0); }
+  50% { transform: scale(1.1) translateX(0); }
+  100% { transform: scale(1.05) translateX(0); }
+}
+
+/* === TOAST ACTIONS === */
+
+.c-toast__actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.c-toast__action {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid currentColor;
+  background: none;
+  color: inherit;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.c-toast__action:hover {
+  background-color: currentColor;
+  color: white;
+}
+
+.c-toast__action--primary {
+  background-color: currentColor;
+  color: white;
+}
+
+.c-toast__action--primary:hover {
+  opacity: 0.8;
+}
+
+/* === TOAST STACK === */
+
+.c-toast-container .c-toast:not(:first-child) {
+  margin-top: calc(var(--space-2) * -1);
+  transform: translateX(100%) scale(0.95);
+  opacity: 0.8;
+}
+
+.c-toast-container .c-toast:not(:first-child).c-toast--visible {
+  transform: translateX(0) scale(0.95);
+}
+
+.c-toast-container .c-toast:nth-child(3) {
+  transform: translateX(100%) scale(0.9);
+  opacity: 0.6;
+}
+
+.c-toast-container .c-toast:nth-child(3).c-toast--visible {
+  transform: translateX(0) scale(0.9);
+}
+
+.c-toast-container .c-toast:nth-child(n+4) {
+  display: none;
+}
+
+/* === ANIMATIONS === */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* === ACCESSIBILITY ENHANCEMENTS === */
+
+@media (prefers-reduced-motion: reduce) {
+  .c-toast {
+    transition: opacity 0.3s ease;
+  }
+  
+  .c-toast--removing {
+    transition: opacity 0.2s ease;
+  }
+  
+  .c-toast--loading .c-toast__icon {
+    animation: none;
+  }
+  
+  .c-toast--achievement::before {
+    animation: none;
+  }
+  
+  .c-toast--level-up.c-toast--visible {
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .c-toast {
+    border-width: 2px;
+  }
+  
+  .c-toast--success,
+  .c-toast--error,
+  .c-toast--warning,
+  .c-toast--info {
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+  }
+}
+
+/* === REDUCED MOTION === */
+
+@media (prefers-reduced-motion: reduce) {
+  .c-toast-container .c-toast:not(:first-child) {
+    transform: translateX(0);
+    margin-top: var(--space-2);
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+/* === DARK MODE === */
+
+@media (prefers-color-scheme: dark) {
+  .c-toast {
+    background-color: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+    color: var(--color-gray-100);
+  }
+  
+  .c-toast--loading {
+    background-color: var(--color-gray-700);
+    border-color: var(--color-gray-600);
+  }
+  
+  .c-toast__message {
+    color: var(--color-gray-300);
+  }
+  
+  .c-toast__close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .c-toast--achievement {
+    background-color: var(--color-primary);
+  }
+  
+  .c-toast--lesson-complete {
+    background-color: var(--color-primary);
+  }
+}
+
+/* === PRINT STYLES === */
+
+@media print {
+  .c-toast-container {
+    display: none;
+  }
+}
+
+/* === SCREEN READER SUPPORT === */
+
+.c-toast[role="alert"] {
+  /* Ensure screen readers announce the toast */
+  position: relative;
+}
+
+.c-toast__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

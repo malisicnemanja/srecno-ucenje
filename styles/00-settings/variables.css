@@ -6,78 +6,78 @@
 
 :root {
   /* === BRAND IDENTITY === */
-  /* Verified CMYK to HEX conversions - Brand colors */
-  --brand-sky: #4FD6FF;        /* Trust, Communication */
-  --brand-sun: #FCDB15;        /* Energy, Joy */
-  --brand-grass: #6EF214;      /* Learning, Growth */
-  --brand-heart: #020201;      /* Care, Support */
-  --brand-night: #241F6B;      /* Wisdom, Focus */
+  /* Official brand colors - Srećno učenje identity */
+  --color-sky: #5DBFDB;        /* Trust, Communication */
+  --color-sun: #FDD835;        /* Energy, Joy */
+  --color-grass: #7CB342;      /* Learning, Growth */
+  --color-heart: #E53935;      /* Care, Support */
+  --color-night: #3E4C59;      /* Wisdom, Focus */
 
   /* === SEMANTIC COLORS === */
   /* Primary: Learning & Growth */
-  --color-primary: var(--brand-grass);
-  --color-primary-50: #F0FDF1;
-  --color-primary-100: #DAFFD0;
-  --color-primary-200: #B8FBA4;
-  --color-primary-300: #8AF76D;
-  --color-primary-400: var(--brand-grass);
-  --color-primary-500: #5DC40F;
-  --color-primary-600: #4AA00C;
-  --color-primary-700: #3D800A;
-  --color-primary-800: #346B0B;
-  --color-primary-900: #2D5A0C;
+  --color-primary: var(--color-grass);
+  --color-primary-50: #F1F8E9;
+  --color-primary-100: #DCEDC8;
+  --color-primary-200: #C5E1A5;
+  --color-primary-300: #AED581;
+  --color-primary-400: var(--color-grass);
+  --color-primary-500: #8BC34A;
+  --color-primary-600: #689F38;
+  --color-primary-700: #558B2F;
+  --color-primary-800: #33691E;
+  --color-primary-900: #1B5E20;
 
   /* Secondary: Trust & Communication */
-  --color-secondary: var(--brand-sky);
-  --color-secondary-50: #EDFCFF;
-  --color-secondary-100: #D6F7FF;
-  --color-secondary-200: #B5F0FF;
-  --color-secondary-300: #83E6FF;
-  --color-secondary-400: var(--brand-sky);
-  --color-secondary-500: #2BC5FF;
-  --color-secondary-600: #1AA0DB;
-  --color-secondary-700: #1B80B1;
-  --color-secondary-800: #1D668F;
-  --color-secondary-900: #1E5176;
+  --color-secondary: var(--color-sky);
+  --color-secondary-50: #E0F2F1;
+  --color-secondary-100: #B2DFDB;
+  --color-secondary-200: #80CBC4;
+  --color-secondary-300: #4DB6AC;
+  --color-secondary-400: var(--color-sky);
+  --color-secondary-500: #26A69A;
+  --color-secondary-600: #00897B;
+  --color-secondary-700: #00796B;
+  --color-secondary-800: #00695C;
+  --color-secondary-900: #004D40;
 
   /* Accent: Energy & Success */
-  --color-accent: var(--brand-sun);
-  --color-accent-50: #FFFEF7;
-  --color-accent-100: #FFFAEB;
-  --color-accent-200: #FFF3C4;
-  --color-accent-300: #FFEA8C;
-  --color-accent-400: var(--brand-sun);
-  --color-accent-500: #E8C513;
-  --color-accent-600: #C59B0F;
-  --color-accent-700: #9F730C;
-  --color-accent-800: #835B10;
-  --color-accent-900: #704A12;
+  --color-accent: var(--color-sun);
+  --color-accent-50: #FFF9C4;
+  --color-accent-100: #FFF59D;
+  --color-accent-200: #FFF176;
+  --color-accent-300: #FFEE58;
+  --color-accent-400: var(--color-sun);
+  --color-accent-500: #FFEB3B;
+  --color-accent-600: #FDD835;
+  --color-accent-700: #FBC02D;
+  --color-accent-800: #F9A825;
+  --color-accent-900: #F57F17;
 
   /* Warm: Care & Support */
-  --color-warm: var(--brand-heart);
-  --color-warm-50: #F7F7F7;
-  --color-warm-100: #E3E3E3;
-  --color-warm-200: #CFCFCF;
-  --color-warm-300: #B1B1B1;
-  --color-warm-400: #9E9E9E;
-  --color-warm-500: #6C6C6C;
-  --color-warm-600: #545454;
-  --color-warm-700: #3F3F3F;
-  --color-warm-800: #262626;
-  --color-warm-900: var(--brand-heart);
+  --color-warm: var(--color-heart);
+  --color-warm-50: #FFEBEE;
+  --color-warm-100: #FFCDD2;
+  --color-warm-200: #EF9A9A;
+  --color-warm-300: #E57373;
+  --color-warm-400: var(--color-heart);
+  --color-warm-500: #F44336;
+  --color-warm-600: #E53935;
+  --color-warm-700: #D32F2F;
+  --color-warm-800: #C62828;
+  --color-warm-900: #B71C1C;
 
   /* Night: Wisdom & Focus */
-  --color-night: var(--brand-night);
-  --color-night-50: #F3F2F9;
-  --color-night-100: #E9E7F4;
-  --color-night-200: #D5D2EA;
-  --color-night-300: #B8B2DB;
-  --color-night-400: #968BC7;
-  --color-night-500: #7A6BB5;
-  --color-night-600: #6852A3;
-  --color-night-700: #584290;
-  --color-night-800: #4A3676;
-  --color-night-900: var(--brand-night);
+  --color-night: var(--color-night);
+  --color-night-50: #ECEFF1;
+  --color-night-100: #CFD8DC;
+  --color-night-200: #B0BEC5;
+  --color-night-300: #90A4AE;
+  --color-night-400: var(--color-night);
+  --color-night-500: #607D8B;
+  --color-night-600: #546E7A;
+  --color-night-700: #455A64;
+  --color-night-800: #37474F;
+  --color-night-900: #263238;
 
   /* === FUNCTIONAL COLORS (WCAG AA) === */
   --color-success: var(--color-primary-600);     /* 4.5:1 contrast */

@@ -14,6 +14,7 @@ import {
   MapPinIcon as LocationSVG, PhoneIcon as PhoneSVG, TargetIcon
 } from '@/components/icons'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 
 const methodologyQuery = `*[_type == "methodology"][0]{
   title,
@@ -293,13 +294,13 @@ export default function MethodologyPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <Link href="/zakazivanje" className="btn-primary group">
+                <SafeLink href="/zakazivanje" className="btn-primary group">
                   <CalendarSVG size={20} className="mr-2 group-hover:scale-110 transition-transform" />
                   Zakaži demo čas
-                </Link>
-                <Link href="#methods" className="btn-outline-primary">
+                </SafeLink>
+                <SafeLink href="#methods" className="btn-outline-primary">
                   Saznaj više
-                </Link>
+                </SafeLink>
               </motion.div>
 
               {/* Stats badges */}
@@ -874,13 +875,13 @@ export default function MethodologyPage() {
               Zakažite besplatan demo čas i uverite se sami u efikasnost naše metodologije
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/zakazivanje" className="btn bg-white text-primary-600 hover:bg-gray-100 hover:scale-105 transition-all">
+              <SafeLink href="/zakazivanje" className="btn bg-white text-primary-600 hover:bg-gray-100 hover:scale-105 transition-all">
                 <CalendarSVG size={20} className="mr-2" />
                 Zakaži demo čas
-              </Link>
-              <Link href="/franchise-models" className="btn border-2 border-white text-white hover:bg-white hover:text-primary-600 transition-all">
+              </SafeLink>
+              <SafeLink href="/franchise-models" className="btn border-2 border-white text-white hover:bg-white hover:text-primary-600 transition-all">
                 Postani franšizer
-              </Link>
+              </SafeLink>
             </div>
           </motion.div>
         </div>

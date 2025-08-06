@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { PortableText } from '@portabletext/react'
@@ -76,18 +77,18 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="max-w-4xl mx-auto text-white">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-white/80 text-sm mb-8">
-              <Link href="/blog" className="hover:text-white transition-colors">
+              <SafeLink href="/blog" className="hover:text-white transition-colors">
                 Blog
-              </Link>
+              </SafeLink>
               <span>•</span>
               {post.category?.slug?.current && (
                 <>
-                  <Link 
+                  <SafeLink 
                     href={`/blog/kategorija/${post.category.slug?.current || 'no-slug'}`}
                     className="hover:text-white transition-colors"
                   >
                     {post.category.title || post.category.name}
-                  </Link>
+                  </SafeLink>
                   <span>•</span>
                 </>
               )}
@@ -264,8 +265,7 @@ export default async function BlogPostPage({ params }: Props) {
                   const relatedTheme = themeColors[relatedPost.category.color] || themeColors.primary
                   
                   return (
-                    <Link
-                      key={relatedPost._id}
+                    <SafeLink                       key={relatedPost._id}
                       href={`/blog/${relatedPost.slug?.current || 'no-slug'}`}
                       className="group"
                     >
@@ -302,7 +302,7 @@ export default async function BlogPostPage({ params }: Props) {
                           </div>
                         </div>
                       </article>
-                    </Link>
+                    </SafeLink>
                   )
                 })}
               </div>
@@ -330,7 +330,7 @@ export default async function BlogPostPage({ params }: Props) {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/blog">
+              <SafeLink href="/blog">
                 <PulseButton 
                   variant="accent"
                   size="lg"
@@ -338,10 +338,10 @@ export default async function BlogPostPage({ params }: Props) {
                 >
                   Svi članci
                 </PulseButton>
-              </Link>
+              </SafeLink>
               
               {post.category?.slug?.current && (
-                <Link href={`/blog/kategorija/${post.category.slug?.current || 'no-slug'}`}>
+                <SafeLink href={`/blog/kategorija/${post.category.slug?.current || 'no-slug'}`}>
                   <PulseButton 
                     variant="secondary"
                     size="lg"
@@ -349,7 +349,7 @@ export default async function BlogPostPage({ params }: Props) {
                   >
                     Više iz kategorije
                   </PulseButton>
-                </Link>
+                </SafeLink>
               )}
             </div>
           </div>

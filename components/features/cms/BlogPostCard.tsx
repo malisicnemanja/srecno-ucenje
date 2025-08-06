@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { urlFor } from '@/lib/sanity.client'
@@ -44,59 +45,59 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       whileHover={{ y: -5 }}
-      className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+      className="c-blog-card"
     >
-      <div className="relative h-48 overflow-hidden">
+      <div className="c-blog-card__image">
         {post.featuredImage ? (
           <Image
             src={urlFor(post.featuredImage).width(400).height(200).url()}
             alt={post.title}
             fill
-            className="object-cover group-hover:scale-110 transition-transform duration-500"
+            className="c-blog-card__img"
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
-            <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="c-blog-card__placeholder">
+            <svg className="c-blog-card__placeholder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
           </div>
         )}
-        <div className="absolute top-4 left-4">
+        <div className="c-blog-card__category">
           {post.category && (
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/90 text-purple-700 backdrop-blur-sm">
+            <span className="c-blog-card__category-tag">
               {post.category.title}
             </span>
           )}
         </div>
       </div>
       
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-purple-600 transition-colors">
+      <div className="c-blog-card__content">
+        <h3 className="c-blog-card__title">
           {post.title}
         </h3>
         
-        <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
+        <p className="c-blog-card__excerpt">
           {post.excerpt}
         </p>
         
-        <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-          <div className="flex items-center">
+        <div className="c-blog-card__meta">
+          <div className="c-blog-card__author">
             {post.author && (
               <>
-                <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-2">
-                  <span className="text-purple-600 font-semibold text-xs">
+                <div className="c-blog-card__avatar">
+                  <span className="c-blog-card__avatar-text">
                     {post.author.name.charAt(0)}
                   </span>
                 </div>
                 <span>{post.author.name}</span>
-                <span className="mx-2">•</span>
+                <span className="c-blog-card__separator">•</span>
               </>
             )}
             <span>{publishDate}</span>
           </div>
           {post.readTime && (
-            <div className="flex items-center">
-              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="c-blog-card__read-time">
+              <svg className="c-blog-card__time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span>{post.readTime} min</span>
@@ -104,15 +105,14 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
           )}
         </div>
         
-        <Link
-          href={`/blog/${post.slug?.current || 'no-slug'}`}
-          className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors group-hover:translate-x-1 transform duration-200"
+        <SafeLink           href={`/blog/${post.slug?.current || 'no-slug'}`}
+          className="c-blog-card__link"
         >
           Pročitajte više
-          <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="c-blog-card__arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
-        </Link>
+        </SafeLink>
       </div>
     </motion.article>
   )

@@ -11,6 +11,7 @@ import {
 import { HappyStudents } from '@/components/illustrations/ChildIllustrations'
 import SkeletonLoader from '@/components/ui/SkeletonLoader'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 
 interface FAQ {
   _id: string
@@ -390,13 +391,13 @@ export default function FAQPage() {
               Naš tim je tu da vam pomogne sa svim dodatnim pitanjima o franšizi i programima
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/zakazivanje" className="btn-primary">
+              <SafeLink href="/zakazivanje" className="btn-primary">
                 <CalendarIcon size={20} className="mr-2" />
                 Zakažite konsultacije
-              </Link>
-              <Link href="/kontakt" className="btn-outline-primary">
+              </SafeLink>
+              <SafeLink href="/kontakt" className="btn-outline-primary">
                 Kontaktirajte nas
-              </Link>
+              </SafeLink>
             </div>
           </motion.div>
           </div>

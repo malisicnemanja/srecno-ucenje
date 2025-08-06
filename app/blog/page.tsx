@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { FloatingLetters, AnimatedTitle, PulseButton } from '@/components/animations'
 import { getAllBlogPosts, getFeaturedBlogPosts, getAllBlogCategories, type BlogPost, type BlogCategory } from '@/sanity/queries/blog'
@@ -56,8 +57,7 @@ export default async function BlogPage() {
                 {categories.map((category) => {
                   const theme = themeColors[category.color] || themeColors.primary
                   return (
-                    <Link
-                      key={category._id}
+                    <SafeLink                       key={category._id}
                       href={`/blog/kategorija/${category.slug?.current || 'no-slug'}`}
                       className={`px-4 py-2 rounded-full ${theme.bg} ${theme.text} font-medium hover:scale-105 transition-transform`}
                     >
@@ -65,7 +65,7 @@ export default async function BlogPage() {
                       {category.postCount && (
                         <span className="ml-2 text-sm opacity-75">({category.postCount})</span>
                       )}
-                    </Link>
+                    </SafeLink>
                   )
                 })}
               </div>
@@ -156,14 +156,14 @@ export default async function BlogPage() {
                       <span>{featuredPost.readingTime} min čitanja</span>
                     </div>
                     
-                    <Link href={`/blog/${featuredPost.slug?.current || 'no-slug'}`}>
+                    <SafeLink href={`/blog/${featuredPost.slug?.current || 'no-slug'}`}>
                       <PulseButton 
                         variant="primary"
                         size="lg"
                       >
                         Pročitajte više
                       </PulseButton>
-                    </Link>
+                    </SafeLink>
                   </div>
                 </div>
               </div>
@@ -190,8 +190,7 @@ export default async function BlogPage() {
                 {posts
                   .filter(post => !post.isFeatured) // Ne prikazuj istaknut članak ponovo
                   .map((post) => (
-                    <Link
-                      key={post._id}
+                    <SafeLink                       key={post._id}
                       href={`/blog/${post.slug?.current || 'no-slug'}`}
                       className="group"
                     >
@@ -263,7 +262,7 @@ export default async function BlogPage() {
                           )}
                         </div>
                       </article>
-                    </Link>
+                    </SafeLink>
                   ))}
               </div>
             ) : (

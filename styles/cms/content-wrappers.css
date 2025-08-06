@@ -375,7 +375,7 @@
 .cms-content hr {
   border: none;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+  background-color: var(--color-primary);
   margin: var(--space-8) 0;
   border-radius: var(--radius-full);
 }

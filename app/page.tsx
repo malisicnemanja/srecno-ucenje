@@ -55,20 +55,20 @@ export default async function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center py-20 overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+      <section className="c-hero-home">
+        <div className="o-container c-hero-home__container">
+          <div className="c-hero-home__content">
+            <h1 className="c-hero-home__title">
               {pageData.hero?.title || fallbackData.hero.title}
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
+            <p className="c-hero-home__subtitle">
               {pageData.hero?.subtitle || fallbackData.hero.subtitle}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/kontakt" className="btn btn--primary px-8 py-4 text-lg">
+            <div className="c-hero-home__actions">
+              <a href="/kontakt" className="btn btn-hero btn-hero-arrow">
                 Zakaži razgovor
               </a>
-              <a href="/o-nama" className="btn btn--outline-primary px-8 py-4 text-lg">
+              <a href="/o-nama" className="btn btn-hero-grass">
                 Saznaj više
               </a>
             </div>
@@ -77,22 +77,22 @@ export default async function HomePage() {
       </section>
 
       {/* Benefits Grid */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+      <section className="l-section bg-white">
+        <div className="container">
+          <div className="o-grid o-grid--4 o-grid--gap-lg">
             {(pageData.features || fallbackData.features).map((feature: any, i: number) => (
-              <div key={i} className="text-center">
-                <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={i} className="c-feature-item">
+                <div className="c-feature-item__icon">
                   {feature.icon === 'partnership' ? (
-                    <PartnershipIcon size={32} className="text-primary" />
+                    <PartnershipIcon size={32} className="c-feature-item__svg" />
                   ) : feature.icon === 'trending' ? (
-                    <TrendingUpIcon size={32} className="text-primary" />
+                    <TrendingUpIcon size={32} className="c-feature-item__svg" />
                   ) : (
-                    <span className="text-3xl">{feature.icon}</span>
+                    <span className="c-feature-item__emoji">{feature.icon}</span>
                   )}
                 </div>
-                <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="c-feature-item__title">{feature.title}</h3>
+                <p className="c-feature-item__description">{feature.description}</p>
               </div>
             ))}
           </div>

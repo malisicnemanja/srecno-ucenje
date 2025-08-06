@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 
 interface HeroProps {
   title: string
@@ -37,20 +38,18 @@ export default function HeroSection({
           {(ctaText || secondaryCtaText) && (
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {ctaText && ctaLink && (
-                <Link
-                  href={ctaLink}
+                <SafeLink                   href={ctaLink || '/'}
                   className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
                 >
                   {ctaText}
-                </Link>
+                </SafeLink>
               )}
               {secondaryCtaText && secondaryCtaLink && (
-                <Link
-                  href={secondaryCtaLink}
+                <SafeLink                   href={secondaryCtaLink || '/'}
                   className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition"
                 >
                   {secondaryCtaText}
-                </Link>
+                </SafeLink>
               )}
             </div>
           )}

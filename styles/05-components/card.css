@@ -1,439 +1,318 @@
+/* ==========================================================================
+   CARD COMPONENT
+   Comprehensive card system to replace Tailwind card patterns
+   ========================================================================== */
+
 /**
- * SREĆNO UČENJE - CARD COMPONENTS
- * Reusable card components for educational platform
- * Mobile-first, accessible, interactive cards
+ * Base Card Component
+ * Flexible card system with brand colors and educational context
  */
 
-/* === BASE CARD === */
-
-.card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--color-border-primary);
-  border-radius: var(--radius-card);
-  padding: var(--space-card-padding);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
+/* Base Card */
+.c-card {
+  background: var(--bg-surface, #ffffff);
+  border-radius: var(--radius-md, 0.5rem);
+  padding: var(--space-lg, 1.5rem);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s var(--ease-smooth, ease);
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
 }
 
-.card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-border-secondary);
+/* Card Variants */
+.c-card--elevated {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
-/* === CARD VARIANTS === */
+.c-card--bordered {
+  border: 2px solid var(--border-light, #e5e7eb);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
 
-/* Interactive/clickable cards */
-.card-interactive {
+.c-card--flat {
+  box-shadow: none;
+  border: 1px solid var(--border-light, #e5e7eb);
+}
+
+/* Interactive Cards */
+.c-card--hover {
   cursor: pointer;
   user-select: none;
-  -webkit-tap-highlight-color: transparent;
 }
 
-.card-interactive:hover {
-  box-shadow: var(--shadow-lg);
+.c-card--hover:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   transform: translateY(-4px);
-  border-color: var(--color-primary-300);
 }
 
-.card-interactive:active {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+.c-card--interactive {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s var(--ease-smooth, ease);
 }
 
-.card-interactive:focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 2px;
+.c-card--interactive:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
-/* Elevated card */
-.card-elevated {
-  box-shadow: var(--shadow-md);
+.c-card--interactive:active {
+  transform: translateY(0);
+  transition-duration: 0.1s;
 }
 
-.card-elevated:hover {
-  box-shadow: var(--shadow-lg);
+/* Brand Color Variants */
+.c-card--sky {
+  border-left: 4px solid var(--brand-sky, #5DBFDB);
 }
 
-/* Flat card */
-.card-flat {
-  box-shadow: none;
-  border: 1px solid var(--color-border-primary);
+.c-card--sun {
+  border-left: 4px solid var(--brand-sun, #FDD835);
 }
 
-.card-flat:hover {
-  box-shadow: var(--shadow-sm);
-  border-color: var(--color-border-secondary);
+.c-card--grass {
+  border-left: 4px solid var(--brand-grass, #7CB342);
 }
 
-/* Outlined card */
-.card-outlined {
-  box-shadow: none;
-  border: 2px solid var(--color-border-primary);
+.c-card--heart {
+  border-left: 4px solid var(--brand-heart, #E53935);
 }
 
-.card-outlined:hover {
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-sm);
+.c-card--night {
+  border-left: 4px solid var(--brand-night, #3E4C59);
 }
 
-/* === CARD SIZES === */
-
-.card-sm {
-  padding: var(--space-4);
-  border-radius: var(--radius-md);
+/* Background Color Variants */
+.c-card--bg-sky {
+  background: linear-gradient(135deg, var(--brand-sky, #5DBFDB) 0%, rgba(93, 191, 219, 0.1) 100%);
+  color: var(--brand-night, #3E4C59);
 }
 
-.card-md {
-  padding: var(--space-6);
-  border-radius: var(--radius-lg);
+.c-card--bg-sun {
+  background: linear-gradient(135deg, var(--brand-sun, #FDD835) 0%, rgba(253, 216, 53, 0.1) 100%);
+  color: var(--brand-night, #3E4C59);
 }
 
-.card-lg {
-  padding: var(--space-8);
-  border-radius: var(--radius-xl);
+.c-card--bg-grass {
+  background: linear-gradient(135deg, var(--brand-grass, #7CB342) 0%, rgba(124, 179, 66, 0.1) 100%);
+  color: white;
 }
 
-.card-xl {
-  padding: var(--space-10);
-  border-radius: var(--radius-2xl);
+.c-card--bg-heart {
+  background: linear-gradient(135deg, var(--brand-heart, #E53935) 0%, rgba(229, 57, 53, 0.1) 100%);
+  color: white;
 }
 
-/* === EDUCATIONAL CARD TYPES === */
-
-/* Lesson card */
-.lesson-card {
-  border-left: 4px solid var(--color-primary);
-  padding-left: calc(var(--space-card-padding) - 4px);
+.c-card--bg-night {
+  background: linear-gradient(135deg, var(--brand-night, #3E4C59) 0%, rgba(62, 76, 89, 0.1) 100%);
+  color: white;
 }
 
-.lesson-card:hover {
-  border-left-color: var(--color-primary-700);
-  background-color: var(--color-primary-50);
+/* Card Structure Elements */
+.c-card__header {
+  margin-bottom: var(--space-md, 1rem);
+  padding-bottom: var(--space-sm, 0.5rem);
+  border-bottom: 1px solid var(--border-light, #e5e7eb);
 }
 
-.lesson-card.completed {
-  border-left-color: var(--color-success);
-  background: linear-gradient(135deg, var(--color-success-light) 0%, var(--color-primary-50) 100%);
+.c-card__title {
+  font-size: var(--text-lg, 1.125rem);
+  font-weight: 600;
+  color: var(--text-primary, #111827);
+  margin: 0 0 var(--space-xs, 0.25rem) 0;
+  line-height: 1.4;
 }
 
-.lesson-card.in-progress {
-  border-left-color: var(--color-accent);
-  background: linear-gradient(135deg, var(--color-accent-100) 0%, var(--color-accent-50) 100%);
+.c-card__subtitle {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--text-secondary, #6b7280);
+  margin: 0;
+  font-weight: 400;
 }
 
-.lesson-card.locked {
-  opacity: 0.6;
-  cursor: not-allowed;
-  border-left-color: var(--color-gray-300);
-  background-color: var(--color-gray-50);
-}
-
-.lesson-card.locked:hover {
-  transform: none;
-  box-shadow: var(--shadow-sm);
-  background-color: var(--color-gray-50);
-}
-
-/* Quiz card */
-.quiz-card {
-  border-top: 4px solid var(--color-secondary);
-  text-align: center;
-}
-
-.quiz-card:hover {
-  border-top-color: var(--color-secondary-700);
-  background-color: var(--color-secondary-50);
-}
-
-.quiz-card.completed {
-  border-top-color: var(--color-success);
-  background: linear-gradient(135deg, var(--color-success-light) 0%, var(--color-secondary-50) 100%);
-}
-
-/* Exercise card */
-.exercise-card {
-  border: 2px solid var(--color-accent-200);
-  background: linear-gradient(135deg, var(--color-accent-50) 0%, white 100%);
-}
-
-.exercise-card:hover {
-  border-color: var(--color-accent);
-  background: linear-gradient(135deg, var(--color-accent-100) 0%, var(--color-accent-50) 100%);
-}
-
-/* Progress card */
-.progress-card {
-  background: linear-gradient(135deg, var(--color-night-50) 0%, white 100%);
-  border: 1px solid var(--color-night-200);
-}
-
-.progress-card:hover {
-  background: linear-gradient(135deg, var(--color-night-100) 0%, var(--color-night-50) 100%);
-  border-color: var(--color-night-300);
-}
-
-/* Achievement card */
-.achievement-card {
-  background: linear-gradient(135deg, var(--color-accent-100) 0%, var(--color-primary-100) 100%);
-  border: 2px solid var(--color-accent-300);
-  position: relative;
-  overflow: hidden;
-}
-
-.achievement-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transform: rotate(45deg);
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
-  }
-  100% {
-    transform: translateX(100%) translateY(100%) rotate(45deg);
-  }
-}
-
-/* === CARD LAYOUTS === */
-
-/* Card with header */
-.card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--space-4);
-  padding-bottom: var(--space-3);
-  border-bottom: 1px solid var(--color-border-primary);
-}
-
-/* Card with footer */
-.card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: var(--space-4);
-  padding-top: var(--space-3);
-  border-top: 1px solid var(--color-border-primary);
-}
-
-/* Card body */
-.card-body {
+.c-card__content {
+  color: var(--text-primary, #111827);
   flex: 1;
+  line-height: 1.6;
 }
 
-/* Card title */
-.card-title {
-  margin: 0 0 var(--space-2) 0;
-  font-size: var(--text-h4-size);
-  font-weight: var(--font-weight-semibold);
-  color: var(--text-primary);
-}
-
-/* Card subtitle */
-.card-subtitle {
-  margin: 0 0 var(--space-3) 0;
-  font-size: var(--text-body-small-size);
-  color: var(--text-muted);
-  font-weight: var(--font-weight-normal);
-}
-
-/* Card text */
-.card-text {
-  margin: 0 0 var(--space-3) 0;
-  color: var(--text-secondary);
-  line-height: var(--line-height-relaxed);
-}
-
-.card-text:last-child {
+.c-card__content > *:last-child {
   margin-bottom: 0;
 }
 
-/* === CARD MEDIA === */
-
-/* Card with image */
-.card-image {
-  width: calc(100% + var(--space-card-padding) * 2);
-  margin: calc(var(--space-card-padding) * -1) calc(var(--space-card-padding) * -1) var(--space-4) calc(var(--space-card-padding) * -1);
-  border-radius: var(--radius-card) var(--radius-card) 0 0;
-  object-fit: cover;
-  aspect-ratio: 16 / 9;
-}
-
-.card-image-bottom {
-  width: calc(100% + var(--space-card-padding) * 2);
-  margin: var(--space-4) calc(var(--space-card-padding) * -1) calc(var(--space-card-padding) * -1) calc(var(--space-card-padding) * -1);
-  border-radius: 0 0 var(--radius-card) var(--radius-card);
-  object-fit: cover;
-  aspect-ratio: 16 / 9;
-}
-
-/* Card avatar */
-.card-avatar {
-  width: var(--space-12);
-  height: var(--space-12);
-  border-radius: var(--radius-full);
-  object-fit: cover;
-  margin-right: var(--space-3);
-}
-
-/* === CARD ACTIONS === */
-
-.card-actions {
+.c-card__footer {
+  margin-top: var(--space-md, 1rem);
+  padding-top: var(--space-sm, 0.5rem);
+  border-top: 1px solid var(--border-light, #e5e7eb);
   display: flex;
-  gap: var(--space-2);
-  margin-top: var(--space-4);
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm, 0.5rem);
 }
 
-.card-actions.card-actions-center {
-  justify-content: center;
+.c-card__actions {
+  display: flex;
+  gap: var(--space-sm, 0.5rem);
+  align-items: center;
+  margin-top: var(--space-md, 1rem);
 }
 
-.card-actions.card-actions-end {
-  justify-content: flex-end;
+/* Educational Context Cards */
+.c-card--lesson {
+  border: 2px solid var(--border-light, #e5e7eb);
+  position: relative;
 }
 
-/* === CARD GROUPS === */
-
-.card-group {
-  display: grid;
-  gap: var(--space-4);
-  grid-template-columns: 1fr;
+.c-card--lesson::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand-sky, #5DBFDB), var(--brand-grass, #7CB342));
 }
 
-@media (min-width: 640px) {
-  .card-group {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
-  }
+.c-card--lesson-active {
+  border-color: var(--brand-grass, #7CB342);
+  box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.1);
 }
 
-@media (min-width: 1024px) {
-  .card-group {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-8);
-  }
+.c-card--lesson-completed {
+  border-color: var(--brand-grass, #7CB342);
+  background: rgba(124, 179, 66, 0.05);
 }
 
-.card-group-2 {
-  display: grid;
-  gap: var(--space-4);
-  grid-template-columns: 1fr;
+.c-card--lesson-completed::after {
+  content: '✓';
+  position: absolute;
+  top: var(--space-sm, 0.5rem);
+  right: var(--space-sm, 0.5rem);
+  color: var(--brand-grass, #7CB342);
+  font-size: var(--text-lg, 1.125rem);
+  font-weight: bold;
 }
 
-@media (min-width: 640px) {
-  .card-group-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.c-card--lesson-locked {
+  opacity: 0.6;
+  background: var(--color-gray-50, #f9fafb);
+  cursor: not-allowed;
 }
 
-.card-group-4 {
-  display: grid;
-  gap: var(--space-4);
-  grid-template-columns: 1fr;
+/* Quiz Cards */
+.c-card--quiz {
+  border: 2px solid var(--border-light, #e5e7eb);
+  transition: all 0.3s var(--ease-smooth, ease);
 }
 
-@media (min-width: 640px) {
-  .card-group-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.c-card--quiz-correct {
+  border-color: var(--brand-grass, #7CB342);
+  background: rgba(124, 179, 66, 0.05);
 }
 
-@media (min-width: 1024px) {
-  .card-group-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.c-card--quiz-incorrect {
+  border-color: var(--brand-heart, #E53935);
+  background: rgba(229, 57, 53, 0.05);
 }
 
-/* === ACCESSIBILITY === */
-
-@media (prefers-reduced-motion: reduce) {
-  .card,
-  .card-interactive {
-    transition: none;
-    transform: none;
-  }
-  
-  .card:hover,
-  .card-interactive:hover {
-    transform: none;
-  }
-  
-  .achievement-card::before {
-    animation: none;
-  }
+.c-card--quiz-partial {
+  border-color: var(--brand-sun, #FDD835);
+  background: rgba(253, 216, 53, 0.05);
 }
 
-@media (prefers-contrast: high) {
-  .card {
-    border-width: 2px;
-  }
-  
-  .lesson-card {
-    border-left-width: 6px;
-  }
-  
-  .quiz-card {
-    border-top-width: 6px;
+/* Card Sizes */
+.c-card--sm {
+  padding: var(--space-md, 1rem);
+}
+
+.c-card--lg {
+  padding: var(--space-xl, 2rem);
+}
+
+.c-card--xl {
+  padding: var(--space-2xl, 3rem);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .c-card {
+    padding: var(--space-md, 1rem);
+    border-radius: var(--radius-sm, 0.375rem);
   }
   
-  .exercise-card {
-    border-width: 3px;
+  .c-card--lg {
+    padding: var(--space-lg, 1.5rem);
+  }
+  
+  .c-card--xl {
+    padding: var(--space-xl, 2rem);
+  }
+  
+  .c-card__footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-sm, 0.5rem);
+  }
+  
+  .c-card__actions {
+    justify-content: center;
   }
 }
 
-/* === DARK MODE === */
-
+/* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
-  .card {
-    background-color: var(--color-gray-800);
-    border-color: var(--color-gray-700);
+  .c-card {
+    background: var(--color-gray-800, #1f2937);
+    border-color: var(--color-gray-700, #374151);
   }
   
-  .card:hover {
-    border-color: var(--color-gray-600);
+  .c-card__title {
+    color: var(--color-gray-100, #f3f4f6);
   }
   
-  .card-header,
-  .card-footer {
-    border-color: var(--color-gray-700);
+  .c-card__subtitle {
+    color: var(--color-gray-400, #9ca3af);
   }
   
-  .lesson-card.completed {
-    background: linear-gradient(135deg, var(--color-success-light) 0%, var(--color-gray-800) 100%);
+  .c-card__content {
+    color: var(--color-gray-200, #e5e7eb);
   }
   
-  .lesson-card.in-progress {
-    background: linear-gradient(135deg, var(--color-accent-200) 0%, var(--color-gray-800) 100%);
+  .c-card__header,
+  .c-card__footer {
+    border-color: var(--color-gray-700, #374151);
   }
 }
 
-/* === PRINT STYLES === */
-
+/* Print Styles */
 @media print {
-  .card {
-    box-shadow: none;
-    border: 1px solid black;
-    page-break-inside: avoid;
+  .c-card {
+    background: white !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+    transform: none !important;
     break-inside: avoid;
   }
   
-  .card:hover {
-    transform: none;
-    box-shadow: none;
+  .c-card--hover:hover {
+    transform: none !important;
+    box-shadow: none !important;
   }
-  
-  .achievement-card::before {
-    display: none;
-  }
+}
+
+/* Performance Optimizations */
+.c-card {
+  contain: layout style paint;
+}
+
+.c-card--hover,
+.c-card--interactive {
+  will-change: transform, box-shadow;
+}
+
+.c-card:not(:hover):not(:focus-within) {
+  will-change: auto;
 }

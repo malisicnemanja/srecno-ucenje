@@ -58,7 +58,7 @@ export default function PricingSection({
                 ))}
               </ul>
               <a
-                href={ctaLink}
+                href={ctaLink || '/'}
                 className={`block text-center py-3 rounded-lg font-semibold transition ${
                   plan.featured
                     ? 'bg-white text-blue-600 hover:bg-gray-100'

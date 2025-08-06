@@ -223,7 +223,7 @@ export default function GoogleLocationMap({ viewMode = 'map', fallbackApiKey }: 
       <div className="border-t pt-4 space-y-2">
         {location.phone && (
           <a
-            href={`tel:${location.phone}`}
+            href={`tel:${location.phone || ''}${after}`}
             className="flex items-center text-sm text-gray-600 hover:text-primary-600 transition-colors"
             onClick={(e) => e.stopPropagation()}
           >
@@ -233,7 +233,7 @@ export default function GoogleLocationMap({ viewMode = 'map', fallbackApiKey }: 
         )}
         {location.email && (
           <a
-            href={`mailto:${location.email}`}
+            href={`mailto:${location.email || ''}${after}`}
             className="flex items-center text-sm text-gray-600 hover:text-primary-600 transition-colors"
             onClick={(e) => e.stopPropagation()}
           >

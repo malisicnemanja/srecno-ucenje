@@ -26,25 +26,11 @@ export default function OptimizedPulseButton({
 }: OptimizedPulseButtonProps) {
   const buttonRef = useRef<HTMLButtonElement>(null)
 
+  // Mapiranje na naše nove CSS klase
   const variants = {
-    primary: {
-      bg: 'bg-primary-600 hover:bg-primary-700 active:bg-primary-800',
-      text: 'text-white',
-      ring: 'focus:ring-primary-400',
-      shadow: 'shadow-primary-500/25'
-    },
-    secondary: {
-      bg: 'bg-secondary-600 hover:bg-secondary-700 active:bg-secondary-800',
-      text: 'text-white',
-      ring: 'focus:ring-secondary-400',
-      shadow: 'shadow-secondary-500/25'
-    },
-    accent: {
-      bg: 'bg-accent-600 hover:bg-accent-700 active:bg-accent-800',
-      text: 'text-white',
-      ring: 'focus:ring-accent-400',
-      shadow: 'shadow-accent-500/25'
-    }
+    primary: 'btn-hero', // Sun color with Filled → Outline animation
+    secondary: 'btn-hero-grass', // Grass color variant  
+    accent: 'btn-cta' // Heart color with scale effect
   }
 
   const sizes = {
@@ -113,12 +99,8 @@ export default function OptimizedPulseButton({
     <button
       ref={buttonRef}
       className={`
-        relative rounded-lg font-semibold transition-all duration-200 
-        ${currentVariant.bg} ${currentVariant.text} ${currentSize}
-        ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer transform hover:scale-105 active:scale-95'}
-        focus:outline-none focus:ring-2 focus:ring-offset-2 ${currentVariant.ring}
-        ${getShadowIntensity()} ${currentVariant.shadow}
-        btn-press touch-feedback
+        btn ${currentVariant}
+        ${disabled ? 'opacity-50 cursor-not-allowed' : ''}
         ${className}
       `}
       onClick={disabled ? undefined : onClick}

@@ -6,12 +6,12 @@
  * for maximum flexibility and maintainability.
  */
 
+/* === CUSTOM ITCSS ARCHITECTURE === */
+/* Import must come first to avoid PostCSS warnings */
+@import './index.css';
+
 /* === TAILWIND BASE LAYER === */
 @tailwind base;
-
-/* === CUSTOM ITCSS ARCHITECTURE === */
-/* Import our ITCSS layers after Tailwind base but before components */
-@import './index.css';
 
 /* === TAILWIND COMPONENTS LAYER === */
 @tailwind components;
@@ -120,15 +120,15 @@
   
   /* Brand consistency utilities */
   .brand-shadow-primary {
-    box-shadow: 0 4px 14px 0 rgba(110, 242, 20, 0.25);
+    box-shadow: 0 4px 14px 0 rgba(124, 179, 66, 0.25);
   }
   
   .brand-shadow-secondary {
-    box-shadow: 0 4px 14px 0 rgba(79, 214, 255, 0.25);
+    box-shadow: 0 4px 14px 0 rgba(93, 191, 219, 0.25);
   }
   
   .brand-shadow-accent {
-    box-shadow: 0 4px 14px 0 rgba(252, 219, 21, 0.25);
+    box-shadow: 0 4px 14px 0 rgba(253, 216, 53, 0.25);
   }
   
   /* Focus ring utilities that complement Tailwind */
@@ -143,11 +143,7 @@
   
   /* Loading state utilities */
   .loading-shimmer {
-    background: linear-gradient(90deg, 
-      theme('colors.gray.200') 25%, 
-      theme('colors.gray.100') 50%, 
-      theme('colors.gray.200') 75%
-    );
+    background-color: var(--color-gray-200);
     background-size: 200% 100%;
     animation: loading 1.5s infinite;
   }

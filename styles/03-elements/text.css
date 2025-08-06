@@ -1,0 +1,136 @@
+/**
+ * TEXT ELEMENTS
+ * Default styles for text content
+ */
+
+/* Paragraphs */
+p {
+  @apply text-base leading-relaxed text-gray-700;
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Strong & Bold */
+strong,
+b {
+  @apply font-semibold text-gray-900;
+}
+
+/* Emphasis */
+em,
+i {
+  @apply italic;
+}
+
+/* Small text */
+small {
+  @apply text-sm;
+}
+
+/* Mark/Highlight */
+mark {
+  background-color: #fef08a;
+  color: #111827;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+/* Abbreviations */
+abbr[title] {
+  @apply underline decoration-dotted cursor-help;
+}
+
+/* Code */
+code {
+  background-color: #f3f4f6;
+  color: #dc2626;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-family: ui-monospace, SFMono-Regular, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+}
+
+pre {
+  background-color: #111827;
+  color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+pre code {
+  @apply bg-transparent text-inherit p-0;
+}
+
+/* Blockquotes */
+blockquote {
+  @apply border-l-4 border-primary-500 pl-4 py-2 italic text-gray-700;
+  margin: 1.5rem 0;
+}
+
+blockquote cite {
+  @apply block mt-2 text-sm text-gray-600 not-italic;
+}
+
+/* Lists - moved from previous location */
+ul,
+ol {
+  @apply ml-6 mb-4;
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+li {
+  @apply mb-2;
+}
+
+li:last-child {
+  @apply mb-0;
+}
+
+/* Nested lists */
+li ul,
+li ol {
+  @apply mt-2 mb-0;
+}
+
+/* Definition lists */
+dl {
+  @apply mb-4;
+}
+
+dt {
+  @apply font-semibold text-gray-900 mb-1;
+}
+
+dd {
+  @apply ml-4 mb-2 text-gray-700;
+}
+
+/* Horizontal rules */
+hr {
+  @apply border-t border-gray-300 my-8;
+}
+
+/* Text utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}

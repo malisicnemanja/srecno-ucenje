@@ -8,6 +8,7 @@ import AnalyticsProvider from '@/components/common/AnalyticsProvider'
 import ConversionElements from '@/components/features/conversion/ConversionElements'
 import PerformanceMonitor from '@/components/common/PerformanceMonitor'
 import NotificationBarWrapper from '@/components/common/NotificationBarWrapper'
+import ErrorTracker from '@/components/common/ErrorTracker'
 import { Metadata } from 'next'
 
 // Educational platform fonts - optimized loading
@@ -88,6 +89,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <Providers>
           <AnalyticsProvider>
+            <ErrorTracker />
             <PerformanceMonitor />
             <NotificationBarWrapper />
             <StickyHeader />

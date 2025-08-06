@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 
 interface FAQ {
   _id: string
@@ -79,8 +80,7 @@ export default function HomeFAQsSection({
 
         {/* Link to full FAQ page */}
         <div className="text-center mt-8">
-          <Link
-            href="/faq"
+          <SafeLink             href="/faq"
             className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
           >
             Pogledajte sva česta pitanja
@@ -97,7 +97,7 @@ export default function HomeFAQsSection({
                 d="M9 5l7 7-7 7"
               />
             </svg>
-          </Link>
+          </SafeLink>
         </div>
       </div>
     </section>

@@ -369,12 +369,12 @@
   
   &.completed {
     border-left-color: var(--color-success);
-    background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-success-light) 100%);
+    background-color: var(--color-primary);
   }
   
   &.in-progress {
     border-left-color: var(--color-accent);
-    background: linear-gradient(135deg, var(--color-accent-50) 0%, var(--color-accent-100) 100%);
+    background-color: var(--color-primary);
   }
   
   &.locked {
@@ -424,7 +424,7 @@
 /* === CMS MIXINS === */
 
 @define-mixin cms-placeholder {
-  background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-secondary-50) 100%);
+  background-color: var(--color-primary);
   border: 2px dashed var(--color-border-primary);
   border-radius: var(--radius-card);
   padding: var(--space-card-padding);

@@ -39,7 +39,7 @@ export default function ContactInfo() {
       {contactInfo.email && (
         <div>
           <h3 className="font-semibold mb-1">Email</h3>
-          <a href={`mailto:${contactInfo.email}`} className="text-blue-600 hover:underline">
+          <a href={`mailto:${contactInfo.email || ''}${after}`} className="text-blue-600 hover:underline">
             {contactInfo.email}
           </a>
         </div>
@@ -48,7 +48,7 @@ export default function ContactInfo() {
       {contactInfo.phone && (
         <div>
           <h3 className="font-semibold mb-1">Telefon</h3>
-          <a href={`tel:${contactInfo.phone}`} className="text-blue-600 hover:underline">
+          <a href={`tel:${contactInfo.phone || ''}${after}`} className="text-blue-600 hover:underline">
             {contactInfo.phone}
           </a>
         </div>

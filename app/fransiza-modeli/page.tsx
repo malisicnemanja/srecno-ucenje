@@ -8,6 +8,7 @@ import {
 import { useSanityQuery } from '@/hooks/useSanity'
 import SkeletonLoader from '@/components/ui/SkeletonLoader'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import { useState } from 'react'
 
 const franchiseModelsQuery = `*[_type == "franchiseModel"] | order(order asc) {
@@ -252,12 +253,11 @@ export default function FransizaModeliPage() {
                       ))}
                     </ul>
 
-                    <Link
-                      href="/zakazivanje"
+                    <SafeLink                       href="/zakazivanje"
                       className={`btn btn-${model.color || 'primary'} w-full text-center`}
                     >
                       Započnite sada
-                    </Link>
+                    </SafeLink>
                   </motion.div>
                 </motion.div>
               )
@@ -335,9 +335,9 @@ export default function FransizaModeliPage() {
             <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
               Bez brige! Naš tim će vam pomoći da izaberete najbolju opciju za vaše potrebe i ciljeve.
             </p>
-            <Link href="/zakazivanje" className="btn bg-white text-warm-600 hover:bg-gray-100">
+            <SafeLink href="/zakazivanje" className="btn bg-white text-warm-600 hover:bg-gray-100">
               Zakažite besplatne konsultacije
-            </Link>
+            </SafeLink>
           </motion.div>
         </div>
       </section>

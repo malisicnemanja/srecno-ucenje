@@ -394,7 +394,7 @@ hr.thick {
 
 hr.branded {
   height: 3px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+  background-color: var(--color-primary);
   border-radius: var(--radius-full);
 }
 

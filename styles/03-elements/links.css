@@ -1,0 +1,108 @@
+/**
+ * LINK ELEMENTS
+ * Default styles for links and anchors
+ */
+
+/* Base link styles */
+a {
+  @apply text-primary-600 underline decoration-primary-200 underline-offset-2 transition-colors;
+}
+
+a:hover {
+  @apply text-primary-700 decoration-primary-400;
+}
+
+a:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  ring: 2px solid #3b82f6;
+  ring-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+a:visited {
+  @apply text-purple-600;
+}
+
+/* External links */
+a[target="_blank"]::after {
+  content: " ↗";
+  @apply text-xs align-super;
+}
+
+/* Button-style links */
+a.btn,
+a.button {
+  @apply no-underline;
+}
+
+/* Navigation links */
+nav a {
+  @apply no-underline;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100vh;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  z-index: 50;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Breadcrumb links */
+.breadcrumb a {
+  @apply text-gray-600 hover:text-gray-900 no-underline;
+}
+
+/* Footer links */
+footer a {
+  @apply text-gray-400 hover:text-white no-underline;
+}
+
+/* Card links - removes underline for card wrappers */
+.card-link,
+a:has(.card) {
+  @apply no-underline;
+}
+
+/* Active link states */
+a.active,
+a[aria-current="page"] {
+  @apply text-primary-700 font-semibold;
+}
+
+/* Disabled links */
+a[aria-disabled="true"],
+a.disabled {
+  @apply opacity-50 cursor-not-allowed pointer-events-none;
+}
+
+/* Phone and email links */
+a[href^="tel:"],
+a[href^="mailto:"] {
+  @apply whitespace-nowrap;
+}
+
+/* Download links */
+a[download]::before {
+  content: "⬇ ";
+  @apply mr-1;
+}
+
+/* Hash/anchor links */
+a[href^="#"] {
+  @apply scroll-smooth;
+}
+
+/* Link with icon */
+a:has(svg) {
+  @apply inline-flex items-center gap-2;
+}

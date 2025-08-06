@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import { Mail, Phone, Globe } from 'lucide-react'
 import { useSiteSettings } from '@/contexts/SiteSettingsContext'
 
@@ -49,32 +50,32 @@ export default function Footer() {
   const getColorClass = (color: string) => {
     switch (color) {
       case 'secondary':
-        return 'text-secondary-400'
+        return 'u-text-brand-sky'
       case 'accent':
-        return 'text-accent-400'
+        return 'u-text-brand-sun'
       case 'warm':
-        return 'text-warm-400'
+        return 'u-text-brand-heart'
       default:
-        return 'text-primary-400'
+        return 'u-text-brand-grass'
     }
   }
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+    <footer className="l-footer">
+      <div className="container">
+        <div className="o-grid o-grid--1 md:o-grid--2 lg:o-grid--4 o-grid--gap-lg u-m-b-xl">
           {/* Dynamic Footer Columns */}
           {footerColumns.map((column: any, index: number) => (
             <div key={index}>
-              <h4 className={`font-semibold mb-4 text-white ${column.colorAccent ? getColorClass(column.colorAccent) : ''}`}>
+              <h4 className={`c-footer-heading ${column.colorAccent ? getColorClass(column.colorAccent) : ''}`}>
                 {column.title}
               </h4>
-              <ul className="space-y-2 text-gray-400">
+              <ul className="c-footer-links">
                 {column.links?.map((link: any, linkIndex: number) => (
                   <li key={linkIndex}>
-                    <Link href={link.href || link.link || '#'} className="hover:text-white transition-colors">
+                    <SafeLink href={link.href || link.link || '#'} className="c-footer-link">
                       {link.label}
-                    </Link>
+                    </SafeLink>
                   </li>
                 ))}
               </ul>
@@ -83,64 +84,64 @@ export default function Footer() {
           
           {/* Contact Column */}
           <div>
-            <h4 className="font-semibold mb-4 text-white">Kontakt</h4>
-            <div className="text-gray-400 mb-4 space-y-2">
+            <h4 className="c-footer-heading">Kontakt</h4>
+            <div className="c-contact-info u-m-b-md">
               {contactInfo.email && (
-                <p className="flex items-center">
-                  <Mail size={16} className="mr-2" /> 
+                <p className="o-cluster">
+                  <Mail size={16} className="u-mr-xs" /> 
                   {contactInfo.email}
                 </p>
               )}
               {contactInfo.phone && (
-                <p className="flex items-center">
-                  <Phone size={16} className="mr-2" /> 
+                <p className="o-cluster">
+                  <Phone size={16} className="u-mr-xs" /> 
                   {contactInfo.phone}
                 </p>
               )}
               {contactInfo.address && (
-                <p className="flex items-center">
-                  <Globe size={16} className="mr-2" /> 
+                <p className="o-cluster">
+                  <Globe size={16} className="u-mr-xs" /> 
                   {contactInfo.address}
                 </p>
               )}
             </div>
-            <div className="space-y-2 text-gray-400 text-sm">
-              <Link href="/legal/privatnost" className="block hover:text-white transition-colors">
+            <div className="c-legal-links">
+              <SafeLink href="/legal/privatnost" className="c-legal-link">
                 Politika privatnosti
-              </Link>
-              <Link href="/legal/uslovi-koriscenja" className="block hover:text-white transition-colors">
+              </SafeLink>
+              <SafeLink href="/legal/uslovi-koriscenja" className="c-legal-link">
                 Uslovi korišćenja
-              </Link>
+              </SafeLink>
             </div>
           </div>
         </div>
         
         {/* Logo & Copyright */}
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-3 mb-4 md:mb-0">
+        <div className="c-footer-bottom">
+          <div className="c-footer-bottom__content">
+            <div className="c-footer-brand">
               {contactInfo.logo ? (
                 <img 
                   src={contactInfo.logo} 
                   alt={contactInfo.siteName} 
-                  className="h-14 w-auto"
+                  className="c-footer-logo"
                 />
               ) : (
                 <>
-                  <div className="w-14 h-14 gradient-primary rounded-full flex items-center justify-center shadow-lg shadow-primary-500/25">
-                    <span className="text-white font-bold text-2xl">SU</span>
+                  <div className="c-footer-logo-circle">
+                    <span className="c-footer-logo-text">SU</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{contactInfo.siteName}</h3>
-                    <p className="text-gray-300 text-sm">Franšiza obrazovne metodologije</p>
+                    <h3 className="c-footer-site-name">{contactInfo.siteName}</h3>
+                    <p className="c-footer-tagline">Franšiza obrazovne metodologije</p>
                   </div>
                 </>
               )}
             </div>
             
-            <div className="text-center md:text-right text-gray-400 text-sm">
+            <div className="c-footer-copyright">
               <p>&copy; {new Date().getFullYear()} {contactInfo.siteName}. Sva prava zadržana.</p>
-              <p className="mt-1">Metodologija Srećno učenje je autorsko delo Željane Radojičić Lukić.</p>
+              <p className="u-m-t-xs">Metodologija Srećno učenje je autorsko delo Željane Radojičić Lukić.</p>
             </div>
           </div>
         </div>

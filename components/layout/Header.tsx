@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import { useSiteSettings } from '@/contexts/SiteSettingsContext'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDownIcon } from '@/components/icons'
@@ -44,50 +45,51 @@ export default function Header() {
   }
   
   const getButtonClasses = (style: string) => {
+    // Novi button sistem sa animacijama
     switch (style) {
       case 'secondary':
-        return 'bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700'
+        return 'btn btn-header-outline' // Outline → Filled animacija
       case 'accent':
-        return 'bg-sun-600 text-white px-4 py-2 rounded-lg hover:bg-sun-700'
+        return 'btn btn-hero-sun' // Sun boja za accent
       default:
-        return 'bg-grass-600 text-white px-4 py-2 rounded-lg hover:bg-grass-700'
+        return 'btn btn-header' // Night boja za header (Filled → Outline)
     }
   }
 
   return (
-    <header className={`sticky top-0 w-full z-50 transition-all duration-300 ${
+    <header className={`l-header ${
       scrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-        : 'bg-white shadow-sm'
+        ? 'l-header--scrolled' 
+        : 'l-header--default'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className={`flex items-center justify-between transition-all duration-300 ${
-          scrolled ? 'h-14' : 'h-16'
+      <div className="container">
+        <nav className={`o-flex-between ${
+          scrolled ? 'l-header__nav--compact' : 'l-header__nav--full'
         }`}>
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <SafeLink href="/" className="o-cluster">
             {settings.logo ? (
               <img 
                 src={settings.logo} 
                 alt={settings.siteName} 
-                className={`transition-all duration-300 ${scrolled ? 'h-10' : 'h-12'} w-auto`}
+                className={`${scrolled ? 'l-logo--compact' : 'l-logo--full'}`}
               />
             ) : (
               <>
-                <div className={`bg-grass-600 rounded-full flex items-center justify-center transition-all duration-300 ${
-                  scrolled ? 'w-10 h-10' : 'w-12 h-12'
+                <div className={`c-logo-circle ${
+                  scrolled ? 'c-logo-circle--compact' : 'c-logo-circle--full'
                 }`}>
-                  <span className="text-white font-bold">SU</span>
+                  <span className="c-logo-circle__text">SU</span>
                 </div>
-                <span className={`font-bold text-night-900 transition-all duration-300 ${
-                  scrolled ? 'text-lg' : 'text-xl'
+                <span className={`c-logo-text ${
+                  scrolled ? 'c-logo-text--compact' : 'c-logo-text--full'
                 }`}>{settings.siteName}</span>
               </>
             )}
-          </Link>
+          </SafeLink>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="desktop-only o-cluster o-cluster--gap-lg">
             {nav.mainMenu?.map((item: any, index: number) => (
               <div key={index} className="relative">
                 {item.subItems && item.subItems.length > 0 ? (
@@ -95,10 +97,10 @@ export default function Header() {
                     <button
                       onMouseEnter={() => setOpenDropdown(item.label)}
                       onMouseLeave={() => setOpenDropdown(null)}
-                      className="flex items-center text-gray-700 hover:text-primary-600 transition-colors"
+                      className="c-nav-dropdown"
                     >
                       {item.label}
-                      <ChevronDownIcon size={16} className="ml-1" />
+                      <ChevronDownIcon size={16} className="u-ml-xs" />
                     </button>
                     
                     <AnimatePresence>
@@ -110,51 +112,50 @@ export default function Header() {
                           transition={{ duration: 0.2 }}
                           onMouseEnter={() => setOpenDropdown(item.label)}
                           onMouseLeave={() => setOpenDropdown(null)}
-                          className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50"
+                          className="c-dropdown-menu"
                         >
                           {item.subItems.map((subItem: any, subIndex: number) => (
-                            <Link
-                              key={subIndex}
-                              href={subItem.href}
-                              className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors"
+                            <SafeLink                               key={subIndex}
+                              href={subItem.href || '#'}
+                              className="c-dropdown-item"
                             >
-                              <div className="font-medium">{subItem.label}</div>
+                              <div className="c-dropdown-item__title">{subItem.label}</div>
                               {subItem.description && (
-                                <div className="text-sm text-gray-500">{subItem.description}</div>
+                                <div className="c-dropdown-item__desc">{subItem.description}</div>
                               )}
-                            </Link>
+                            </SafeLink>
                           ))}
                         </motion.div>
                       )}
                     </AnimatePresence>
                   </>
                 ) : (
-                  <Link 
+                  <SafeLink 
                     href={item.href || '#'} 
-                    className="text-night-700 hover:text-grass-600 transition-colors"
+                    className="c-nav-link"
                   >
                     {item.label}
-                  </Link>
+                  </SafeLink>
                 )}
               </div>
             ))}
             
             {nav.ctaButton?.href && (
-              <Link 
-                href={nav.ctaButton.href} 
+              <SafeLink 
+                href={nav.ctaButton.href || '/'} 
                 className={getButtonClasses(nav.ctaButton.style)}
               >
                 {nav.ctaButton.text}
-              </Link>
+              </SafeLink>
             )}
           </div>
           
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-md text-night-700 hover:text-grass-600 hover:bg-grass-50 transition-colors"
+            className="mobile-only c-mobile-menu-toggle"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="c-mobile-menu-toggle__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {mobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -172,47 +173,44 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-sky-100"
+            className="mobile-only c-mobile-menu"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="c-mobile-menu__content">
               {nav.mainMenu?.map((item: any, index: number) => (
                 <div key={index}>
                   {item.subItems && item.subItems.length > 0 ? (
                     <>
-                      <div className="px-3 py-2 text-night-700 font-medium">{item.label}</div>
-                      <div className="ml-4">
+                      <div className="c-mobile-menu__title">{item.label}</div>
+                      <div className="c-mobile-menu__submenu">
                         {item.subItems.map((subItem: any, subIndex: number) => (
-                          <Link
-                            key={subIndex}
-                            href={subItem.href}
-                            className="block px-3 py-2 text-night-600 hover:text-grass-600"
+                          <SafeLink                             key={subIndex}
+                            href={subItem.href || '#'}
+                            className="c-mobile-menu__sublink"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {subItem.label}
-                          </Link>
+                          </SafeLink>
                         ))}
                       </div>
                     </>
                   ) : (
-                    <Link
-                      href={item.href || '#'}
-                      className="block px-3 py-2 text-night-700 hover:text-grass-600 hover:bg-grass-50 rounded-md transition-colors"
+                    <SafeLink                       href={item.href || '#'}
+                      className="c-mobile-menu__link"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.label}
-                    </Link>
+                    </SafeLink>
                   )}
                 </div>
               ))}
               
               {nav.ctaButton?.href && (
-                <Link
-                  href={nav.ctaButton.href}
-                  className={`block mx-3 text-center ${getButtonClasses(nav.ctaButton.style)}`}
+                <SafeLink                   href={nav.ctaButton.href || '/'}
+                  className={`c-mobile-menu__cta ${getButtonClasses(nav.ctaButton.style)}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {nav.ctaButton.text}
-                </Link>
+                </SafeLink>
               )}
             </div>
           </motion.div>

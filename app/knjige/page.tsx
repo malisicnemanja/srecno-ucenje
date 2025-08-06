@@ -1,12 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { BookOpeningAnimation, FloatingLetters, AnimatedTitle } from '@/components/animations'
 import { UsersIcon } from '@/components/icons'
 import { AuthorButton, CTAButtons, HeroButtons } from '@/components/features/books/BooksInteractive'
-import { client } from '@/lib/sanity.client'
-import { urlFor } from '@/lib/sanity.client'
+import { getBooksLandingData, getAllBooks } from '@/sanity/queries/books'
 import { BookOpen, Star, Palette, Leaf, Book, Sparkles, StarIcon } from 'lucide-react'
+
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Čarobno selo - Luka godišnjih doba | Knjige Željane Radojičić Lukić',
@@ -19,40 +21,10 @@ export const metadata: Metadata = {
   }
 }
 
-const booksLandingQuery = `*[_type == "booksLanding"][0]{
-  heroTitle,
-  heroSubtitle,
-  heroDescription,
-  seriesTitle,
-  seriesDescription,
-  seriesValues,
-  authorSection,
-  ctaSection
-}`
-
-const booksQuery = `*[_type == "book"] | order(order asc){
-  title,
-  subtitle,
-  slug,
-  colorTheme,
-  year,
-  heroText,
-  coverImage {
-    ...,
-    asset-> {
-      url,
-      metadata {
-        lqip
-      }
-    }
-  },
-  order
-}`
-
 export default async function BooksLandingPage() {
   // Fetch CMS data
-  const landingData = await client.fetch(booksLandingQuery)
-  const booksFromCMS = await client.fetch(booksQuery)
+  const landingData = await getBooksLandingData()
+  const booksFromCMS = await getAllBooks()
   
   if (!landingData) {
     return (
@@ -345,7 +317,7 @@ export default async function BooksLandingPage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {books && books.length > 0 ? books.map((book) => (
-              <Link 
+              <SafeLink 
                 key={book.slug?.current || book._id}
                 href={`/knjige/${book.slug?.current || 'no-slug'}`}
                 className="group"
@@ -353,9 +325,9 @@ export default async function BooksLandingPage() {
                 <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:transform group-hover:scale-105">
                   {/* Book cover */}
                   <div className="relative h-64 overflow-hidden">
-                    {book.coverImage ? (
+                    {book.coverImage?.asset?.url ? (
                       <Image
-                        src={urlFor(book.coverImage).url()}
+                        src={book.coverImage.asset.url}
                         alt={book.coverImage?.alt || book.title}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -388,7 +360,7 @@ export default async function BooksLandingPage() {
                     </p>
                   </div>
                 </div>
-              </Link>
+              </SafeLink>
             )) : (
               <p className="text-center text-gray-500 col-span-4">Knjige će uskoro biti dostupne.</p>
             )}
