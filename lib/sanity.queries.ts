@@ -5,8 +5,9 @@ export const siteSettingsQuery = groq`
   *[_type == "siteSettings"][0] {
     _id,
     siteName,
+    siteSubtitle,
     siteDescription,
-    logo,
+    "logo": logo.asset->url,
     email,
     phone,
     address,
@@ -627,5 +628,99 @@ export const virtualClassroomQuery = groq`
       keywords,
       ogImage
     }
+  }
+`
+
+// Franchise Models Page Query
+export const franchiseModelsPageQuery = groq`
+  *[_type == "franchiseModelsPage"][0] {
+    _id,
+    title,
+    hero {
+      alternatingTitles,
+      subtitle,
+      description,
+      floatingElements[] {
+        text,
+        icon,
+        position,
+        delay
+      },
+      backgroundVideo,
+      backgroundImage
+    },
+    statistics {
+      title,
+      stats[] {
+        number,
+        label,
+        icon,
+        suffix,
+        animationDuration
+      }
+    },
+    packagesSection {
+      title,
+      subtitle,
+      packages[]->
+    },
+    ctaSections[] {
+      title,
+      description,
+      buttonText,
+      buttonLink,
+      backgroundColor,
+      image
+    },
+    seo
+  }
+`
+
+// Franchise Package Query
+export const franchisePackagesQuery = groq`
+  *[_type == "franchisePackage" && active == true] | order(order asc) {
+    _id,
+    name,
+    tagline,
+    price {
+      amount,
+      currency,
+      period,
+      displayText
+    },
+    features[] {
+      text,
+      included,
+      highlight,
+      tooltip
+    },
+    benefits,
+    target,
+    investment {
+      initial,
+      monthly,
+      royalty,
+      marketingFee
+    },
+    support {
+      training,
+      marketing,
+      operational
+    },
+    timeline[] {
+      phase,
+      duration,
+      description
+    },
+    highlighted,
+    badge,
+    ctaButton {
+      text,
+      link,
+      style
+    },
+    testimonials[]->,
+    faq[]->,
+    order
   }
 `

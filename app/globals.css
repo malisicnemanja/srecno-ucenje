@@ -1,5 +1,144 @@
-/* Import our main CSS architecture */
-@import '../styles/main.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === ACCESSIBILITY ENHANCEMENTS === */
+/* High contrast focus indicators */
+*:focus {
+  outline: 2px solid var(--brand-sun) !important;
+  outline-offset: 2px !important;
+}
+
+/* Enhanced focus for interactive elements */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[role="button"]:focus,
+[role="menuitem"]:focus,
+[tabindex]:focus {
+  outline: 3px solid var(--brand-sun) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 1px var(--brand-sun) !important;
+}
+
+/* Focus within containers */
+.focus-within\:ring-2:focus-within {
+  --tw-ring-color: var(--brand-sun);
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.sr-only-focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: inherit !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --brand-sky: #0066CC;
+    --brand-sun: #FFD700;
+    --brand-grass: #009900;
+    --brand-heart: #CC0000;
+    --brand-night: #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Touch target sizing */
+@media (hover: none) {
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"],
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Skip navigation styles */
+.skip-link {
+  background: var(--brand-night);
+  color: white;
+  padding: 12px 16px;
+  position: absolute;
+  top: -120px;
+  left: 8px;
+  z-index: 1000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 8px;
+  outline: 3px solid var(--brand-sun);
+  outline-offset: 2px;
+}
+
+/* Error message styling */
+[role="alert"],
+.error-message {
+  color: var(--brand-heart);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Form validation states */
+input[aria-invalid="true"],
+textarea[aria-invalid="true"],
+select[aria-invalid="true"] {
+  border-color: var(--brand-heart) !important;
+  box-shadow: 0 0 0 1px var(--brand-heart) !important;
+}
+
+input[aria-invalid="true"]:focus,
+textarea[aria-invalid="true"]:focus,
+select[aria-invalid="true"]:focus {
+  outline-color: var(--brand-heart) !important;
+  box-shadow: 0 0 0 1px var(--brand-heart), 0 0 0 3px rgba(229, 57, 53, 0.2) !important;
+}
+
+/* Ensure sufficient color contrast */
+.text-gray-400 {
+  color: #6B7280 !important; /* WCAG AA compliant */
+}
+
+.text-gray-500 {
+  color: #4B5563 !important; /* WCAG AA compliant */
+}
 
 /* Quicksand font loaded via Next.js font optimization */
 
@@ -295,7 +434,11 @@
     @apply bg-gray-50 text-gray-900;
     /* Mobile-first: 320px viewport optimization */
     min-width: 320px;
-    line-height: 1.5; /* Reduced from 1.75 */
+    line-height: 1.5;
+    /* Mobile performance optimizations */
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    position: relative;
   }
 
   /* Mobile First Typography - Educational Platform */
@@ -305,7 +448,10 @@
     text-transform: none;
     /* Better text rendering for education */
     text-rendering: optimizeLegibility;
-    margin-bottom: var(--space-md); /* Compact heading margins */
+    margin-bottom: var(--space-md);
+    /* Prevent text from wrapping poorly on small screens */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   /* Mobile-first (320px+) Typography Scale */
@@ -359,13 +505,21 @@
     h5 { @apply text-xl; }
   }
 
-  /* Focus styles for accessibility */
+  /* Focus styles for accessibility - Enhanced for mobile */
   *:focus {
     @apply outline-none;
   }
 
   *:focus-visible {
     @apply outline-2 outline-offset-2 outline-primary-500 rounded-md;
+  }
+  
+  /* Touch device focus improvements */
+  @media (pointer: coarse) {
+    *:focus-visible {
+      outline-width: 3px;
+      outline-offset: 3px;
+    }
   }
 
   /* Brand-consistent text selection */
@@ -1224,6 +1378,18 @@
       @apply hidden;
     }
   }
+  
+  /* Prevent zoom on inputs on iOS */
+  @supports (-webkit-touch-callout: none) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea,
+    select {
+      font-size: 16px !important;
+    }
+  }
 
   .desktop-only {
     @apply hidden;
@@ -1235,10 +1401,30 @@
     }
   }
   
-  /* Touch Target Helpers */
+  /* Touch Target Helpers - Enhanced */
   .touch-target {
     min-height: 44px;
     min-width: 44px;
+    position: relative;
+  }
+  
+  .touch-target::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max(100%, 44px);
+    height: max(100%, 44px);
+    z-index: -1;
+  }
+  
+  /* Larger touch targets for small screens */
+  @media (max-width: 640px) {
+    .touch-target {
+      min-height: 48px;
+      min-width: 48px;
+    }
   }
 
   /* Typography utilities */
@@ -1301,7 +1487,7 @@
     @apply w-12 h-12;
   }
 
-  /* Animation utilities */
+  /* Animation utilities - Mobile optimized */
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
   }
@@ -1316,6 +1502,15 @@
 
   .animate-count-up {
     animation: countUp 0.8s ease-out;
+  }
+  
+  /* Mobile-specific animations */
+  @media (max-width: 768px) {
+    .animate-fade-in,
+    .animate-slide-up,
+    .animate-scale-in {
+      animation-duration: 0.3s;
+    }
   }
 
   /* === GLOBAL LINK SYSTEM === */

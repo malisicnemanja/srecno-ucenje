@@ -1,16 +1,16 @@
-// SREĆNO UČENJE BRAND COLORS - UPDATED TO CLIENT SPECIFICATIONS
+// SREĆNO UČENJE BRAND COLORS - EXACT CLIENT SPECIFICATIONS
 // Brand Identity Optimized - Represents Education, Trust, and Growth
 export const brandColors = {
-  // Sky: Trust, Communication, Openness - Updated to match requirements
-  sky: '#5DBFDB',    // Client specification
-  // Sun: Energy, Joy, Success - Updated to match requirements  
-  sun: '#FDD835',    // Client specification
-  // Grass: Learning, Growth, Life - Updated to match requirements
-  grass: '#7CB342',  // Client specification
-  // Heart: Care, Depth, Support - Updated to match requirements
-  heart: '#E53935',  // Client specification
-  // Night: Wisdom, Focus, Calm - Updated to match requirements
-  night: '#3E4C59',  // Client specification
+  // Sky: Trust, Communication, Openness
+  sky: '#5DBFDB',    // Client specification - exact
+  // Sun: Energy, Joy, Success  
+  sun: '#F4C950',    // Client specification - exact
+  // Grass: Learning, Growth, Life
+  grass: '#91C733',  // Client specification - exact
+  // Heart: Care, Depth, Support
+  heart: '#E53935',  // Client specification - exact
+  // Night: Wisdom, Focus, Calm
+  night: '#1E293B',  // Client specification - exact
 }
 
 // Semantic Brand Mapping for Educational Platform
@@ -24,70 +24,70 @@ export const semanticBrandColors = {
 
 // WCAG AA Compliant Color Scales for Educational Platform
 export const colors = {
-  // Primary: Grass (Learning & Growth) - Updated to client brand colors
+  // Primary: Grass (Learning & Growth) - Updated to exact client brand colors
   primary: {
-    50: '#F3F8F1',   // Lightest - Background use
-    100: '#E7F0DD',  // Very light - Soft backgrounds
-    200: '#C8E1B5',  // Light - Hover states
-    300: '#A9D28D',  // Medium light - Disabled states
-    400: '#7CB342',  // Brand color - Main CTA (client spec)
-    500: '#6A9E39',  // Medium - Hover (4.5:1 contrast)
-    600: '#588930',  // Medium dark - Active states (5.1:1 contrast)
-    700: '#467427',  // Dark - Text on light (7.2:1 contrast)
-    800: '#345F1E',  // Very dark - High contrast text
-    900: '#224A15',  // Darkest - Maximum contrast
+    50: '#F4F9F0',   // Lightest - Background use
+    100: '#E9F3E1',  // Very light - Soft backgrounds
+    200: '#D2E7C2',  // Light - Hover states
+    300: '#BBDBA3',  // Medium light - Disabled states
+    400: '#91C733',  // Brand grass (exact client spec)
+    500: '#7DB327',  // Medium - Hover (4.5:1 contrast)
+    600: '#6A9F1D',  // Medium dark - Active states (5.1:1 contrast)
+    700: '#578B13',  // Dark - Text on light (7.2:1 contrast)
+    800: '#447709',  // Very dark - High contrast text
+    900: '#316300',  // Darkest - Maximum contrast
   },
-  // Sky (Cyan) - Secondary brand color - Updated to client spec
+  // Sky (Cyan) - Secondary brand color - Exact client spec
   secondary: {
     50: '#EBF8FC',
     100: '#D7F1F8', 
     200: '#AFE3F1',
     300: '#87D5EA',
-    400: '#5DBFDB',  // Brand sky (client spec)
+    400: '#5DBFDB',  // Brand sky (exact client spec)
     500: '#4DA6C4',  // Hover state
     600: '#3D8DAD',
     700: '#2D7496',
     800: '#1D5B7F',
     900: '#0D4268',
   },
-  // Sun (Yellow) - Accent brand color - Updated to client spec
+  // Sun (Yellow) - Accent brand color - Exact client spec
   accent: {
     50: '#FFFEF7',
     100: '#FFFAEB',
-    200: '#FFF3C4',
-    300: '#FFEC8C',
-    400: '#FDD835',  // Brand sun (client spec)
-    500: '#E8C513',  // Hover state
-    600: '#C59B0F',
-    700: '#9F730C',
-    800: '#835B10',
-    900: '#704A12',
+    200: '#FEF3C7',
+    300: '#FDE68A',
+    400: '#F4C950',  // Brand sun (exact client spec)
+    500: '#E8B308',  // Hover state
+    600: '#D69E07',
+    700: '#B45309',
+    800: '#92400E',
+    900: '#78350F',
   },
-  // Heart (Red) - Warm/contrast color - Updated to client spec
+  // Heart (Red) - Warm/contrast color - Exact client spec
   warm: {
     50: '#FDEBEB',
     100: '#FBD7D7',
     200: '#F7AFAF',
     300: '#F38787',
-    400: '#E53935',  // Brand heart (client spec - red)
+    400: '#E53935',  // Brand heart (exact client spec)
     500: '#CE2E2A',  // Hover state
     600: '#B7231F',
     700: '#A01814',
     800: '#890D09',
     900: '#720200',
   },
-  // Night (Dark Blue-Gray) - Special accent - Updated to client spec
+  // Night (Dark Blue-Gray) - Special accent - Exact client spec
   night: {
-    50: '#EBEEF2',
-    100: '#D7DDE5',
-    200: '#AFBBCB',
-    300: '#8799B1',
-    400: '#5F7797',
-    500: '#4D6177',
-    600: '#3E4C59',  // Brand night (client spec)
-    700: '#323E48',
-    800: '#263037',
-    900: '#1A2226',
+    50: '#F8FAFC',
+    100: '#F1F5F9',
+    200: '#E2E8F0',
+    300: '#CBD5E1',
+    400: '#94A3B8',
+    500: '#64748B',
+    600: '#475569',
+    700: '#334155',
+    800: '#1E293B',  // Brand night (exact client spec)
+    900: '#0F172A',
   },
   gray: {
     50: '#f9fafb',
@@ -148,9 +148,10 @@ export const animations = {
   },
 }
 
-// Educational brand gradients (subtle, appropriate for learning platform)
+// Educational brand gradients - NO GRADIENTS per client spec
+// Keeping for legacy support only - DO NOT USE
 export const gradients = {
-  // Brand gradients using actual brand colors
+  // Legacy support - DO NOT USE (client specified no gradients)
   grass: `linear-gradient(135deg, ${brandColors.grass} 0%, ${colors.primary[500]} 100%)`,
   sky: `linear-gradient(135deg, ${brandColors.sky} 0%, ${colors.secondary[500]} 100%)`,
   sun: `linear-gradient(135deg, ${brandColors.sun} 0%, ${colors.accent[500]} 100%)`,
@@ -233,4 +234,52 @@ export const typography = {
     small: { size: '1.125rem', lineHeight: '1.5' },    // 18px
     tiny: { size: '1rem', lineHeight: '1.4' },         // 16px
   },
+}
+
+// Color Rotation System for Dynamic UI
+export const colorRotation = {
+  // Primary rotation sequence for main elements
+  primary: [brandColors.grass, brandColors.sky, brandColors.sun, brandColors.heart, brandColors.night],
+  
+  // Educational contexts - specific color meanings
+  educational: {
+    subjects: {
+      mathematics: brandColors.night,  // Wisdom, logic
+      language: brandColors.sky,       // Communication
+      science: brandColors.grass,      // Growth, life
+      arts: brandColors.heart,         // Emotion, creativity
+      sports: brandColors.sun,         // Energy, success
+    },
+    difficulty: {
+      beginner: brandColors.grass,     // Growth, starting
+      intermediate: brandColors.sky,   // Trust, progress  
+      advanced: brandColors.sun,       // Success, achievement
+      expert: brandColors.night,       // Wisdom, mastery
+      challenge: brandColors.heart,    // Passion, determination
+    },
+    emotions: {
+      happy: brandColors.sun,          // Joy, success
+      confident: brandColors.grass,    // Growth, strength
+      curious: brandColors.sky,        // Openness, learning
+      focused: brandColors.night,      // Concentration, depth
+      passionate: brandColors.heart,   // Love for learning
+    }
+  },
+  
+  // Utility functions for color cycling
+  getRotationColor: (index: number, sequence: string[] = colorRotation.primary): string => {
+    return sequence[index % sequence.length];
+  },
+  
+  getSubjectColor: (subject: keyof typeof colorRotation.educational.subjects): string => {
+    return colorRotation.educational.subjects[subject];
+  },
+  
+  getDifficultyColor: (level: keyof typeof colorRotation.educational.difficulty): string => {
+    return colorRotation.educational.difficulty[level];
+  },
+  
+  getEmotionColor: (emotion: keyof typeof colorRotation.educational.emotions): string => {
+    return colorRotation.educational.emotions[emotion];
+  }
 }

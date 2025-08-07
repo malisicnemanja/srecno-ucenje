@@ -1,1 +1,101 @@
-if(!self.define){let e,a={};const s=(s,i)=>(s=new URL(s+".js",i).href,a[s]||new Promise(a=>{if("document"in self){const e=document.createElement("script");e.src=s,e.onload=a,document.head.appendChild(e)}else e=s,importScripts(s),a()}).then(()=>{let e=a[s];if(!e)throw new Error(`Module ${s} didn’t register its module`);return e}));self.define=(i,c)=>{const n=e||("document"in self?document.currentScript.src:"")||location.href;if(a[n])return;let r={};const t=e=>s(e,n),u={module:{uri:n},exports:r,require:t};a[n]=Promise.all(i.map(e=>u[e]||t(e))).then(e=>(c(...e),r))}}define(["./workbox-cb477421"],function(e){"use strict";importScripts(),self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"/_next/app-build-manifest.json",revision:"73523b700d401d06acdc5dad2d3fd282"},{url:"/_next/static/0uYO-mfY6CEJlhoam6-xO/_buildManifest.js",revision:"b38a497a897a652aab797f06bcc96f2d"},{url:"/_next/static/0uYO-mfY6CEJlhoam6-xO/_ssgManifest.js",revision:"b6652df95db52feb4daf4eca35380933"},{url:"/_next/static/chunks/0fcc2550-04f292b5b603f396.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/11390db7-7092a8e35d19a2e6.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/140f2a61-dea6f3560471a7a6.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/1437-6cd064835d80232d.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/1516-de555e543a42c145.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/1520-f092fa8b3c5e280e.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/1918-1a1dbfd42ec36bc1.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/240e3fc2-ab77d410b01a7f47.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/2580-7f3a6d562b50724b.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/2fee9890.a233737a0ea2c44f.js",revision:"a233737a0ea2c44f"},{url:"/_next/static/chunks/3008-46930063514682cb.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/3084-e63e0cd4e0ca97c4.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/3204862b-25eeed934c564e3e.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/3683.2c4c75f781f09d8c.js",revision:"2c4c75f781f09d8c"},{url:"/_next/static/chunks/3780-981d85d62f16605f.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/3909-a0d3ed9e377a4620.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/4854.996936d712d93e36.js",revision:"996936d712d93e36"},{url:"/_next/static/chunks/4e6af11a.5c9b44162fcc0aa1.js",revision:"5c9b44162fcc0aa1"},{url:"/_next/static/chunks/52774a7f-51f0f8eae05d806e.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/5337.4b10b2314eccd5bc.js",revision:"4b10b2314eccd5bc"},{url:"/_next/static/chunks/5396-4634902cafce2cf6.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/5578.14e1148558e988c0.js",revision:"14e1148558e988c0"},{url:"/_next/static/chunks/5686-d46bd85a2abb6790.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/58e02751-2302dcd3d006d9db.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/5927.4d8e461e220f2ea4.js",revision:"4d8e461e220f2ea4"},{url:"/_next/static/chunks/6338.89da1f2d6e881532.js",revision:"89da1f2d6e881532"},{url:"/_next/static/chunks/6454-fa4e8fa1768de737.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/6657-9c50e26ce19669f4.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/6903-a66d58e123961fd0.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/70-a8fd3e3be63b9be4.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/7064611b-6aeb35ce46fd5023.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/7171-12f6cf6a66daddde.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/7497-985c0254031ff6b4.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/7822.5d797d70cba47fc0.js",revision:"5d797d70cba47fc0"},{url:"/_next/static/chunks/8236-d38a4c32bd9a1bea.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/8286-dbe0a27a97a934e6.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/8495.67970c1b05991318.js",revision:"67970c1b05991318"},{url:"/_next/static/chunks/8708-9c23bb87c4a47a28.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/8900-0580568bb74edb6d.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/8b2568fe-d51f1045c96b0f1e.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/9279.2e3f98b5ca26d84d.js",revision:"2e3f98b5ca26d84d"},{url:"/_next/static/chunks/9534.879a95fb30a7c9ed.js",revision:"879a95fb30a7c9ed"},{url:"/_next/static/chunks/9684-7ee25ed72d98256f.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/9906-17afa1dd75f84714.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/a121e903-df5374352c4b884a.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/a4634e51.4367616797fe81be.js",revision:"4367616797fe81be"},{url:"/_next/static/chunks/a621794b-4ad944e316ec6c00.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/%5Blocale%5D/layout-57d2c07450b5feb8.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/%5Blocale%5D/page-cd90f42655be2151.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/3d-ucionica/page-0e79773f635daf9e.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/_not-found/page-d51882b0404bd41a.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/blog/%5Bslug%5D/page-3f8cbb32777558c7.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/blog/loading-44681a4c3aa9002b.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/blog/page-adc30fc494d2cb49.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/button-test/page-b0c9ae6c670cee4c.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/error-7d477375de70ecb5.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/faq/page-429563c84929bb3f.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/franchise-models/page-46de217230f377dc.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/fransiza-modeli/page-5fe344104af2dccf.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/fransiza/prijava/page-459cd554df0a7af9.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/global-error-d4f1ed0151303991.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/iskustva/%5Bslug%5D/page-e6e47f24c79af8d7.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/iskustva/loading-a42f4e432d07a6e1.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/iskustva/page-1bcbb5b9e28cf547.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/kako-se-pridruziti/page-87fa4cdeb820be06.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/kalkulatori/page-2592af813874d795.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/knjige/%5Bslug%5D/page-86582919f486f155.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/knjige/page-5df10988bb3ebdba.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/kontakt/page-05b2a0419f81023d.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/kvizovi/page-6c26671dff64e418.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/layout-9cd6e8ce3e7c5ddc.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/legal/privatnost/page-4a8f9a13c31ce5bd.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/legal/uslovi-koriscenja/page-17a049ec60cfbcfe.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/lokacije/page-2385e29ac95949c7.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/methodology/page-622aed41d41f4d45.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/metodologija/page-5ebb3c9fa184eab0.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/not-found-01c73ff976c681a5.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/o-autorki/loading-04b6b3872e87a285.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/o-autorki/page-2e2cb29885b0a997.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/obuka-mentorstvo/page-0b33290fbbcf737a.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/page-f07ca94d1296f941.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/resursi/page-8ba951c9a349cdad.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/studio/%5B%5B...index%5D%5D/page-6b6c34a7220455cd.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/test-pdf/page-c2a3d055568871c8.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/ucionica/page-f24fd2ff5a0e4b28.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/uspeh/page-3056543dea0382d3.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/app/zakazivanje/page-968ef21dc95c8c39.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/b2d98e07-8afffbc5617111fb.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/c0e7568e-f430ed4701e20586.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/c23fc295-91952b28d70c916b.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/c7286869-9004c91c0e0a7638.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/ca377847-3b7007510cb2035f.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/ccd63cfe-0bca482548f85c1b.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/da441d7b-727d658c47497289.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/fd9d1056-f705b863b825396f.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/ff804112-b59c80d050385ff7.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/framework-4d0c9a4e343883e3.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/main-9f1186c6bf1e1f5a.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/main-app-8fbc0f00cec92507.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/pages/_app-59ac086afd2f3d4e.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/pages/_error-0a57859873b5a90c.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/polyfills-42372ed130431b0a.js",revision:"846118c33b2c0e922d7b3a7676f81f6f"},{url:"/_next/static/chunks/sanity-ca69c1d28eb4cd93.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/chunks/webpack-0b7382f2cbe1e85a.js",revision:"0uYO-mfY6CEJlhoam6-xO"},{url:"/_next/static/css/15abdfc429e3f07d.css",revision:"15abdfc429e3f07d"},{url:"/_next/static/css/2f2647ecc780c200.css",revision:"2f2647ecc780c200"},{url:"/_next/static/css/8763d8df45a07d8f.css",revision:"8763d8df45a07d8f"},{url:"/_next/static/media/1fa61d2b53a053f3-s.p.woff2",revision:"0a0e0b97ff2b690add7ebaea19552819"},{url:"/_next/static/media/26a46d62cd723877-s.woff2",revision:"befd9c0fdfa3d8a645d5f95717ed6420"},{url:"/_next/static/media/55c55f0601d81cf3-s.woff2",revision:"43828e14271c77b87e3ed582dbff9f74"},{url:"/_next/static/media/581909926a08bbc8-s.woff2",revision:"f0b86e7c24f455280b8df606b89af891"},{url:"/_next/static/media/8e9860b6e62d6359-s.p.woff2",revision:"01ba6c2a184b8cba08b0d57167664d75"},{url:"/_next/static/media/97e0cb1ae144a2a9-s.woff2",revision:"e360c61c5bd8d90639fd4503c829c2dc"},{url:"/_next/static/media/c9d2740a66c9a4f1-s.p.woff2",revision:"0e4e1eab58f36e1a68c6c92aaa372d79"},{url:"/_next/static/media/d426c6df177f02c4-s.woff2",revision:"298dad715b7fb495ee710d24e42d180d"},{url:"/_next/static/media/df0a9ae256c0569c-s.woff2",revision:"d54db44de5ccb18886ece2fda72bdfe0"},{url:"/_next/static/media/e4af272ccee01ff0-s.p.woff2",revision:"65850a373e258f1c897a2b3d75eb74de"},{url:"/images/autorka/zeljana-fotografija.png",revision:"18534e508d93c501feb2812c23448b40"},{url:"/images/autorka/zeljana-fotografija.webp",revision:"adbaae6736372835327c202d110e0e0e"},{url:"/images/autorka/zeljana-ilustracija.png",revision:"2eb6d1a4c8e987910b5a94599ecfbb28"},{url:"/images/autorka/zeljana-ilustracija.webp",revision:"a3c4ea7d1f67c610ba32fac945ab33bb"},{url:"/images/jesenja-gozba-cover-lg.webp",revision:"6f007ecd3dac437a817760923d7a9096"},{url:"/images/jesenja-gozba-cover-md.webp",revision:"fa4e5db525aba1a3d864fec44fc5c513"},{url:"/images/jesenja-gozba-cover-sm.webp",revision:"951b4807bf0a2a2fccf10921e8fd3d06"},{url:"/images/jesenja-gozba-cover-xl.webp",revision:"64868111d8f204072e0db8fcefe73a33"},{url:"/images/jesenja-gozba-cover.jpg",revision:"365c12169c91dc065470cbf4d769178a"},{url:"/images/jesenja-gozba-cover.webp",revision:"e7ba978840c3c9f5ce6630a4ab5c4429"},{url:"/images/jesenja-gozba/decak-luka.png",revision:"356d5fa410c860382e41b219caff3585"},{url:"/images/jesenja-gozba/decak-luka.webp",revision:"1a6be9e63f3ec35cd2843c09b73d8485"},{url:"/images/jesenja-gozba/mitra.png",revision:"11870ab72d2139a097ebb63adf6b0178"},{url:"/images/jesenja-gozba/mitra.webp",revision:"225c77e5c951ae867f595a1e06083317"},{url:"/images/jesenja-gozba/vila-jeseni.jpg",revision:"341de597f7a26afc4e48b756fa15e955"},{url:"/images/jesenja-gozba/vila-jeseni.webp",revision:"ed45531bd087b305e83c1271b3a66e2d"},{url:"/images/letnja-vreva-cover-lg.webp",revision:"4a5d44152c6b19b08bda35236c373dc8"},{url:"/images/letnja-vreva-cover-md.webp",revision:"831c763cd70cfc8a115c034b8c5121ab"},{url:"/images/letnja-vreva-cover-sm.webp",revision:"cf371a2a04892f3862576c534ec0a9ee"},{url:"/images/letnja-vreva-cover-xl.webp",revision:"f5b8091c77d7495f76af58257f58a0e5"},{url:"/images/letnja-vreva-cover.jpg",revision:"dfd606d4fc443f1f0281eff0888dfed0"},{url:"/images/letnja-vreva-cover.webp",revision:"887c6b3315c8d04173a65305bf98f9f8"},{url:"/images/letnja-vreva/petar.png",revision:"658b00e783800082aedd99dbd5bc7ab6"},{url:"/images/letnja-vreva/petar.webp",revision:"9b5930051331420198a3e7166c0cbf91"},{url:"/images/letnja-vreva/vida-alternative.png",revision:"258166101079c595d836768da00e98b2"},{url:"/images/letnja-vreva/vida-alternative.webp",revision:"6cef6ae99e4f2bcce5e9985db3e703e5"},{url:"/images/letnja-vreva/vida.png",revision:"d41d8cd98f00b204e9800998ecf8427e"},{url:"/images/letnja-vreva/vila-leta.png",revision:"3a84a1942a74636fa65cf42a0c876451"},{url:"/images/letnja-vreva/vila-leta.webp",revision:"048108045ec45cab39c36e367ab9315d"},{url:"/images/prolecna-zurba-cover-lg.webp",revision:"7b80199b063d18fc6297167cc28a93ed"},{url:"/images/prolecna-zurba-cover-md.webp",revision:"d4b381309d0818bec4583762bb194592"},{url:"/images/prolecna-zurba-cover-sm.webp",revision:"3cdb690685f0ec6ab91f639fe81c256c"},{url:"/images/prolecna-zurba-cover-xl.webp",revision:"9ae18518081b6611de448fbd5982cdd5"},{url:"/images/prolecna-zurba-cover.jpg",revision:"52476651e94dfe5b5ebadd494d4891d1"},{url:"/images/prolecna-zurba-cover.webp",revision:"6a6357bc5687dc03385912ac4e77c3fe"},{url:"/images/prolecna-zurba/dragoljupce.png",revision:"9f148592a320784754257adeff5c063c"},{url:"/images/prolecna-zurba/dragoljupce.webp",revision:"094b8af4ebef2a017a56357bed865d6a"},{url:"/images/prolecna-zurba/nada.png",revision:"6987b072ff04fba2f9dc61b972dd72fe"},{url:"/images/prolecna-zurba/nada.webp",revision:"76a61efe223e2958ac7836c0e67ab594"},{url:"/images/prolecna-zurba/vila-proleca.png",revision:"a1b8d454d56779f94aabce18ae643b06"},{url:"/images/prolecna-zurba/vila-proleca.webp",revision:"879371521a3e8da1b2d48a5759583d15"},{url:"/images/zimski-mir-cover-lg.webp",revision:"fb4da5e21ac9cee17d724e44c34a4a29"},{url:"/images/zimski-mir-cover-md.webp",revision:"fb0909d5121e8856bd2bb216c763601b"},{url:"/images/zimski-mir-cover-sm.webp",revision:"024cfd74f1ce91ec34b6bb0a8518f169"},{url:"/images/zimski-mir-cover-xl.webp",revision:"b305d4be72ef9a9be3a66f45c880c3b3"},{url:"/images/zimski-mir-cover.jpg",revision:"e478f94fb7c852dcc52906abacf94f4f"},{url:"/images/zimski-mir-cover.webp",revision:"46b5900afcc0a5a2ae240cfbb5813df3"},{url:"/images/zimski-mir/sava-alternative.png",revision:"0d1554b8d592d239e42a789f58f03596"},{url:"/images/zimski-mir/sava-alternative.webp",revision:"c91dcf2f409a563e97940f76b84c8431"},{url:"/images/zimski-mir/sava.png",revision:"d41d8cd98f00b204e9800998ecf8427e"},{url:"/images/zimski-mir/vera.png",revision:"0d1554b8d592d239e42a789f58f03596"},{url:"/images/zimski-mir/vera.webp",revision:"c91dcf2f409a563e97940f76b84c8431"},{url:"/images/zimski-mir/vila-zime.jpg",revision:"8645345d5e378765ea95f405e68d71d3"},{url:"/images/zimski-mir/vila-zime.webp",revision:"9bc6d2779b7caa5f97829806bc397bdc"},{url:"/logo.svg",revision:"235288e1bd2ebf9ff36123c4bbab142f"},{url:"/manifest.json",revision:"187f92d71f9919adabbc563b448e4a3b"},{url:"/sw 2.js",revision:"71a1d758319c7e08d60ab8dc9938c6eb"},{url:"/sw 3.js",revision:"d47d351bdfabdd61b4be75d73f89854e"}],{ignoreURLParametersMatching:[]}),e.cleanupOutdatedCaches(),e.registerRoute("/",new e.NetworkFirst({cacheName:"start-url",plugins:[{cacheWillUpdate:async({request:e,response:a,event:s,state:i})=>a&&"opaqueredirect"===a.type?new Response(a.body,{status:200,statusText:"OK",headers:a.headers}):a}]}),"GET"),e.registerRoute(/^https?.*/,new e.NetworkFirst({cacheName:"offlineCache",plugins:[new e.ExpirationPlugin({maxEntries:200,maxAgeSeconds:86400})]}),"GET")});
+/**
+ * Copyright 2018 Google Inc. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// If the loader is already loaded, just stop.
+if (!self.define) {
+  let registry = {};
+
+  // Used for `eval` and `importScripts` where we can't get script URL by other means.
+  // In both cases, it's safe to use a global var because those functions are synchronous.
+  let nextDefineUri;
+
+  const singleRequire = (uri, parentUri) => {
+    uri = new URL(uri + ".js", parentUri).href;
+    return registry[uri] || (
+      
+        new Promise(resolve => {
+          if ("document" in self) {
+            const script = document.createElement("script");
+            script.src = uri;
+            script.onload = resolve;
+            document.head.appendChild(script);
+          } else {
+            nextDefineUri = uri;
+            importScripts(uri);
+            resolve();
+          }
+        })
+      
+      .then(() => {
+        let promise = registry[uri];
+        if (!promise) {
+          throw new Error(`Module ${uri} didn’t register its module`);
+        }
+        return promise;
+      })
+    );
+  };
+
+  self.define = (depsNames, factory) => {
+    const uri = nextDefineUri || ("document" in self ? document.currentScript.src : "") || location.href;
+    if (registry[uri]) {
+      // Module is already loading or loaded.
+      return;
+    }
+    let exports = {};
+    const require = depUri => singleRequire(depUri, uri);
+    const specialDeps = {
+      module: { uri },
+      exports,
+      require
+    };
+    registry[uri] = Promise.all(depsNames.map(
+      depName => specialDeps[depName] || require(depName)
+    )).then(deps => {
+      factory(...deps);
+      return exports;
+    });
+  };
+}
+define(['./workbox-e43f5367'], (function (workbox) { 'use strict';
+
+  importScripts();
+  self.skipWaiting();
+  workbox.clientsClaim();
+  workbox.registerRoute("/", new workbox.NetworkFirst({
+    "cacheName": "start-url",
+    plugins: [{
+      cacheWillUpdate: async ({
+        request,
+        response,
+        event,
+        state
+      }) => {
+        if (response && response.type === 'opaqueredirect') {
+          return new Response(response.body, {
+            status: 200,
+            statusText: 'OK',
+            headers: response.headers
+          });
+        }
+        return response;
+      }
+    }]
+  }), 'GET');
+  workbox.registerRoute(/.*/i, new workbox.NetworkOnly({
+    "cacheName": "dev",
+    plugins: []
+  }), 'GET');
+
+}));
+//# sourceMappingURL=sw.js.map

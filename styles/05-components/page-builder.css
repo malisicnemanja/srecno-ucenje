@@ -1,0 +1,490 @@
+/**
+ * PageBuilder Component Styles
+ * Stilovi za dinamičke CMS sekcije
+ */
+
+/* ================================
+   PAGE BUILDER CONTAINER
+   ================================ */
+
+.page-builder {
+  /* Container layout */
+  min-height: 100vh;
+  position: relative;
+}
+
+.page-builder--loading {
+  overflow: hidden;
+}
+
+.page-builder--preview {
+  position: relative;
+}
+
+.page-builder--preview::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #5DBFDB, #F4C950, #91C733, #E53935);
+  z-index: 1000;
+}
+
+.page-builder__loading-indicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 50;
+  
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  color: white;
+  
+  padding: 8px 16px;
+  border-radius: 24px;
+  
+  font-size: 14px;
+  font-weight: 500;
+  
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.page-builder__sections {
+  /* Section spacing */
+  > * + * {
+    /* Automatic section spacing može biti overriden po sekciji */
+  }
+}
+
+/* ================================
+   SECTION WRAPPER
+   ================================ */
+
+.section-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-wrapper[data-section-color="sky"] {
+  --section-primary: var(--color-sky);
+}
+
+.section-wrapper[data-section-color="sun"] {
+  --section-primary: var(--color-sun);
+}
+
+.section-wrapper[data-section-color="grass"] {
+  --section-primary: var(--color-grass);
+}
+
+.section-wrapper[data-section-color="heart"] {
+  --section-primary: var(--color-heart);
+}
+
+.section-wrapper[data-section-color="night"] {
+  --section-primary: var(--color-night);
+}
+
+/* ================================
+   SECTION LOADING STATES
+   ================================ */
+
+.section-loading {
+  position: relative;
+  min-height: 200px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+.section-loading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ================================
+   SECTION ERROR STATES
+   ================================ */
+
+.section-error {
+  position: relative;
+  isolation: isolate;
+}
+
+.section-error::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(239, 68, 68, 0.1),
+    rgba(239, 68, 68, 0.1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  
+  z-index: -1;
+}
+
+/* ================================
+   PREVIEW MODE STYLING
+   ================================ */
+
+.section-preview {
+  position: relative;
+  outline: 2px dashed rgba(59, 130, 246, 0.5);
+  outline-offset: -2px;
+}
+
+.section-preview:hover {
+  outline-color: rgba(59, 130, 246, 0.8);
+}
+
+.section-preview-controls {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.section-preview:hover .section-preview-controls {
+  opacity: 1;
+}
+
+.preview-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  color: white;
+  
+  padding: 4px 8px;
+  border-radius: 12px;
+  
+  font-size: 11px;
+  font-weight: 500;
+  font-family: ui-monospace, monospace;
+}
+
+.preview-type {
+  color: #60A5FA;
+}
+
+.preview-color {
+  color: #34D399;
+}
+
+.preview-index {
+  color: #FBBF24;
+}
+
+/* ================================
+   ANALYTICS PANEL
+   ================================ */
+
+.page-builder__analytics {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 50;
+  
+  max-width: 400px;
+  
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  color: white;
+  
+  border-radius: 12px;
+  overflow: hidden;
+  
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+}
+
+.preview-analytics summary {
+  padding: 12px 16px;
+  cursor: pointer;
+  
+  background: rgba(255, 255, 255, 0.05);
+  
+  font-weight: 600;
+  
+  user-select: none;
+  
+  transition: background-color 0.2s ease;
+}
+
+.preview-analytics summary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.preview-analytics[open] summary {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.analytics-data {
+  padding: 16px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.analytics-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.analytics-item label {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.analytics-item span {
+  color: white;
+  font-weight: 600;
+}
+
+.analytics-item span.error {
+  color: #EF4444;
+}
+
+.color-palette {
+  margin-bottom: 16px;
+}
+
+.color-palette label {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.color-swatches {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.color-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: help;
+}
+
+.error-details {
+  margin-top: 16px;
+}
+
+.error-details label {
+  display: block;
+  color: #EF4444;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.error-details pre {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 6px;
+  padding: 8px;
+  overflow-x: auto;
+  font-size: 10px;
+}
+
+/* ================================
+   SECTION-SPECIFIC STYLES
+   ================================ */
+
+/* Hero Section */
+.section-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Cards Grid */
+.section-cards-grid .card {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-cards-grid .card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    transparent 50%
+  );
+  
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.section-cards-grid .card:hover::before {
+  opacity: 1;
+}
+
+/* Timeline */
+.timeline-horizontal {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.timeline-horizontal::-webkit-scrollbar {
+  height: 6px;
+}
+
+.timeline-horizontal::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.timeline-horizontal::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+/* Stats Section */
+.section-stats .stat-item {
+  position: relative;
+}
+
+.section-stats .stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 2px;
+  height: 20px;
+  
+  background: var(--section-primary, currentColor);
+  opacity: 0.3;
+}
+
+/* CTA Section */
+.section-cta {
+  position: relative;
+  text-align: center;
+}
+
+.section-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 768px) {
+  .page-builder__loading-indicator {
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .page-builder__analytics {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    max-width: none;
+  }
+  
+  .analytics-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .section-preview-controls {
+    position: relative;
+    top: auto;
+    right: auto;
+    
+    opacity: 1;
+    margin: 8px 0;
+  }
+}
+
+/* ================================
+   PRINT STYLES
+   ================================ */
+
+@media print {
+  .page-builder__loading-indicator,
+  .page-builder__analytics,
+  .section-preview-controls {
+    display: none !important;
+  }
+  
+  .section-wrapper {
+    break-inside: avoid;
+  }
+  
+  .page-builder--preview::before {
+    display: none;
+  }
+}

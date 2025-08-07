@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development next dev",
+    "dev": "cross-env NEXT_PUBLIC_APP_ENV=production next dev",
     "build": "cross-env NODE_ENV=production next build",
     "start": "cross-env NODE_ENV=production next start",
     "lint": "next lint",
@@ -14,7 +14,10 @@
     "test:run": "vitest run",
     "populate-cms": "tsx scripts/populate-cms.ts",
     "populate-content": "tsx scripts/populate-additional-content.ts",
-    "populate-all": "npm run populate-cms && npm run populate-content"
+    "populate-all": "npm run populate-cms && npm run populate-content",
+    "perf:check": "node scripts/performance-check.js",
+    "perf:analyze": "cross-env ANALYZE=true npm run build",
+    "perf:budget": "npm run build && bundlesize"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.0",

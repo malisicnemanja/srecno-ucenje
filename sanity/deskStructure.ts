@@ -93,20 +93,7 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
                         .child(S.documentTypeList('calculatorResult').title('Rezultati kalkulatora')),
                     ])
                 ),
-              S.listItem()
-                .title('Kvizovi')
-                .child(
-                  S.list()
-                    .title('Kvizovi')
-                    .items([
-                      S.listItem()
-                        .title('Pitanja kvizova')
-                        .child(S.documentTypeList('quiz').title('Pitanja kvizova')),
-                      S.listItem()
-                        .title('Rezultati kvizova')
-                        .child(S.documentTypeList('quizResult').title('Rezultati kvizova')),
-                    ])
-                ),
+              // Kvizovi su uklonjeni - funkcionalnost prebačena u franšiza aplikaciju
               S.listItem()
                 .title('Koraci franšize')
                 .child(S.documentTypeList('franchiseSteps').title('Koraci franšize')),
@@ -316,8 +303,6 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
             'notificationBar',
             'calculatorSettings',
             'calculatorResult',
-            'quiz',
-            'quizResult',
             'resource',
             'faq',
             'faqCategory',

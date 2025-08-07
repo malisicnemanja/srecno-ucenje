@@ -1,0 +1,470 @@
+/*
+ * SREĆNO UČENJE - MICRO-INTERACTIONS
+ * Subtle animations that enhance user experience
+ */
+
+/* Button Hover States */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+  transform: translateZ(0); /* GPU acceleration */
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* Primary Button Variations */
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+}
+
+.btn-secondary:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Link Underline Animations */
+.link-animated {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.link-animated::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+}
+
+.link-animated:hover::after {
+  width: 100%;
+}
+
+/* Slide-in underline */
+.link-slide::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.link-slide:hover::after {
+  width: 100%;
+}
+
+/* Fade-in underline */
+.link-fade::after {
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.link-fade:hover::after {
+  opacity: 1;
+}
+
+/* Bounce underline */
+.link-bounce::after {
+  transition: width 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Form Field Focus Animations */
+.form-field {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+  background: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Floating label animation */
+.form-field-floating {
+  position: relative;
+}
+
+.form-label-floating {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  color: #6b7280;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+  transform-origin: left center;
+}
+
+.form-input:focus + .form-label-floating,
+.form-input:not(:placeholder-shown) + .form-label-floating {
+  transform: translateY(-24px) scale(0.85);
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+/* Checkbox Animations */
+.checkbox-animated {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.checkbox-animated input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-animated .checkmark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+}
+
+.checkbox-animated .checkmark::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.checkbox-animated input:checked + .checkmark {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  transform: scale(1.1);
+}
+
+.checkbox-animated input:checked + .checkmark::after {
+  transform: rotate(45deg) scale(1);
+}
+
+.checkbox-animated:hover .checkmark {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Radio Button Animations */
+.radio-animated {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.radio-animated input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-animated .radio-mark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+}
+
+.radio-animated .radio-mark::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.radio-animated input:checked + .radio-mark {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  transform: scale(1.1);
+}
+
+.radio-animated input:checked + .radio-mark::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.radio-animated:hover .radio-mark {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Switch Toggle Animations */
+.switch-toggle {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.switch-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+}
+
+.switch-slider::before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.switch-toggle input:checked + .switch-slider {
+  background-color: #3b82f6;
+}
+
+.switch-toggle input:checked + .switch-slider::before {
+  transform: translateX(20px) scale(1.1);
+}
+
+.switch-toggle:hover .switch-slider::before {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Hover Effects */
+.card-interactive {
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+  cursor: pointer;
+  transform: translateZ(0); /* GPU acceleration */
+}
+
+.card-interactive:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-interactive:hover .card-content {
+  transform: translateY(-4px);
+}
+
+/* Image Hover Effects */
+.image-hover-zoom {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-hover-zoom img {
+  transition: transform 0.5s cubic-bezier(0.25, 0.25, 0.25, 1);
+  transform: scale(1);
+}
+
+.image-hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* Tooltip Animations */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+  transform: translateY(10px);
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Badge Animations */
+.badge-animated {
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+}
+
+.badge-animated:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.badge-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Progress Bar Animations */
+.progress-animated {
+  width: 100%;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-animated::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  border-radius: 4px;
+  transition: width 0.8s cubic-bezier(0.25, 0.25, 0.25, 1);
+  position: relative;
+}
+
+/* Notification Slide-in */
+.notification-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.notification-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+}
+
+.notification-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.notification-exit-active {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.25, 1);
+}
+
+/* Responsive Considerations */
+@media (hover: none) {
+  /* Remove hover effects on touch devices */
+  .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .card-interactive:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

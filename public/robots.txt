@@ -1,0 +1,89 @@
+# Robots.txt for Srećno učenje - Educational franchise website
+# Serbian speed reading and memory methodology franchise
+
+User-agent: *
+Allow: /
+
+# Disallow CMS and administrative areas
+Disallow: /studio
+Disallow: /studio/*
+Disallow: /admin/*
+Disallow: /api/*
+Disallow: /_next/*
+Disallow: /test-*
+Disallow: /button-test
+
+# Disallow preview and draft content
+Disallow: /*?preview=true
+Disallow: /*?draft=true
+Disallow: /*?token=*
+
+# Disallow search and filter parameters
+Disallow: /*?search=*
+Disallow: /*?filter=*
+Disallow: /*?page=*
+
+# Allow important pages for SEO
+Allow: /fransiza/prijava
+Allow: /fransiza-modeli
+Allow: /kako-se-pridruziti
+Allow: /blog
+Allow: /blog/*
+Allow: /faq
+Allow: /skolice
+Allow: /kontakt
+Allow: /o-autorki
+Allow: /metodologija
+Allow: /iskustva
+Allow: /iskustva/*
+
+# Special rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+Disallow: /studio/*
+Disallow: /api/*
+Disallow: /*?preview=true
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+Disallow: /studio/*
+Disallow: /api/*
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 3
+Disallow: /studio/*
+Disallow: /api/*
+
+# Block spam and aggressive bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: LinkpadBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://srecno-ucenje.rs/sitemap.xml
+
+# Host declaration (helps search engines understand the preferred domain)
+Host: srecno-ucenje.rs

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import SafeLink from '@/components/common/SafeLink'
@@ -5,10 +6,158 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { PortableText } from '@portabletext/react'
 import { FloatingLetters, PulseButton } from '@/components/animations'
+import { BrushUnderline, BrushStrokeText } from '@/components/animations/BrushUnderline'
+import { Button } from '@/components/ui'
+import { 
+  Icons,
+  BookIcon,
+  ClockIcon,
+  HeartIcon,
+  EmailIcon,
+  ChatIcon,
+  ArrowRightIcon,
+  StarIcon
+} from '@/components/ui/Icons'
 import { getBlogPostBySlug, getRelatedBlogPosts, getAllBlogPosts, type BlogPost } from '@/sanity/queries/blog'
+import StructuredData from '@/components/common/StructuredData'
+import { generateBlogPostMetadata, generateBlogPostStructuredData, baseUrl } from '@/lib/seo-config'
 
 interface Props {
   params: { slug: string }
+}
+
+
+// Social Share Component
+function SocialShare({ title, url }: { title: string; url: string }) {
+  const shareData = {
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+    email: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`
+  }
+
+  return (
+    <div className="flex items-center gap-4">
+      <span className="text-gray-700 font-medium">Podelite:</span>
+      <div className="flex items-center gap-2">
+        <Button
+          variant="outline"
+          color="sky"
+          size="sm"
+          onClick={() => window.open(shareData.facebook, '_blank')}
+          leftIcon={<ChatIcon size={16} />}
+        >
+          Facebook
+        </Button>
+        <Button
+          variant="outline"
+          color="sky"
+          size="sm"
+          onClick={() => window.open(shareData.twitter, '_blank')}
+          leftIcon={<ChatIcon size={16} />}
+        >
+          Twitter
+        </Button>
+        <Button
+          variant="outline"
+          color="grass"
+          size="sm"
+          onClick={() => window.open(shareData.linkedin, '_blank')}
+          leftIcon={<ChatIcon size={16} />}
+        >
+          LinkedIn
+        </Button>
+        <Button
+          variant="outline"
+          color="heart"
+          size="sm"
+          onClick={() => window.open(shareData.email, '_blank')}
+          leftIcon={<EmailIcon size={16} />}
+        >
+          Email
+        </Button>
+      </div>
+    </div>
+  )
+}
+
+// Newsletter Signup Component
+function NewsletterSignup() {
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    
+    setIsSubmitted(true)
+    setIsSubmitting(false)
+    setEmail('')
+  }
+
+  if (isSubmitted) {
+    return (
+      <div className="bg-[#91C733] rounded-2xl p-8 text-white text-center">
+        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <Icons.Check size={32} className="text-white" />
+        </div>
+        <h3 className="text-2xl font-bold mb-2">Hvala vam!</h3>
+        <p className="text-lg opacity-90">
+          Uspešno ste se prijavili za naš newsletter. Uskoro ćete dobiti najnovije članke!
+        </p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="bg-[#F4C950] rounded-2xl p-8 text-center">
+      <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+        <EmailIcon size={32} className="text-white" />
+      </div>
+      
+      <div className="mb-6">
+        <h3 className="text-2xl font-bold text-white mb-2">
+          <BrushStrokeText 
+            wordsToHighlight={['newsletter']}
+            brushColor="#1E293B"
+            brushVariant="underline"
+          >
+            Prijavite se za naš newsletter
+          </BrushStrokeText>
+        </h3>
+        <p className="text-lg text-white/90">
+          Budite prvi koji će saznati za nove članke i savete za srećno učenje!
+        </p>
+      </div>
+      
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+        <div className="flex flex-col sm:flex-row gap-3">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Unesite vašu email adresu"
+            required
+            className="flex-1 px-4 py-3 rounded-lg border-0 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-white focus:outline-none"
+          />
+          <Button
+            type="submit"
+            variant="filled"
+            color="night"
+            size="md"
+            loading={isSubmitting}
+            className="whitespace-nowrap"
+          >
+            Prijavite se
+          </Button>
+        </div>
+      </form>
+    </div>
+  )
 }
 
 // Generate static params for all blog posts
@@ -19,26 +168,49 @@ export async function generateStaticParams() {
   }))
 }
 
-// Generate metadata for each blog post
+// Generate metadata for each blog post with comprehensive SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getBlogPostBySlug(params.slug)
   
   if (!post) {
     return {
-      title: 'Članak nije pronađen',
+      title: 'Članak nije pronađen - Srećno učenje',
+      description: 'Traženi članak nije pronađen. Vratite se na blog i istražite druge korisne članke o brzom čitanju i memoriji.',
+      robots: {
+        index: false,
+        follow: false
+      }
     }
   }
 
-  return {
-    title: post.seo?.metaTitle || `${post.title} | Blog`,
-    description: post.seo?.metaDescription || post.excerpt,
-    keywords: post.tags,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      images: post.featuredImage?.asset?.url ? [post.featuredImage.asset.url] : [],
-    },
-  }
+  return generateBlogPostMetadata(params.slug, post)
+}
+
+'use client'
+
+function ReadingProgressBarClient() {
+  const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    const updateProgress = () => {
+      const scrollTop = window.scrollY
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight
+      const progress = (scrollTop / docHeight) * 100
+      setProgress(Math.min(100, Math.max(0, progress)))
+    }
+
+    window.addEventListener('scroll', updateProgress)
+    return () => window.removeEventListener('scroll', updateProgress)
+  }, [])
+
+  return (
+    <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+      <div 
+        className="h-full bg-[#5DBFDB] transition-all duration-150 ease-out"
+        style={{ width: `${progress}%` }}
+      />
+    </div>
+  )
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -50,22 +222,64 @@ export default async function BlogPostPage({ params }: Props) {
 
   // Get related posts
   const relatedPosts = await getRelatedBlogPosts(post._id, post.category._id, post.tags)
-
-  const themeColors = {
-    primary: { gradient: 'from-primary-500 to-primary-600', bg: 'bg-primary-50', text: 'text-primary-600' },
-    secondary: { gradient: 'from-secondary-500 to-secondary-600', bg: 'bg-secondary-50', text: 'text-secondary-600' },
-    accent: { gradient: 'from-accent-500 to-accent-600', bg: 'bg-accent-50', text: 'text-accent-600' },
-    warm: { gradient: 'from-warm-500 to-warm-600', bg: 'bg-warm-50', text: 'text-warm-600' },
-    red: { gradient: 'from-red-500 to-red-600', bg: 'bg-red-50', text: 'text-red-600' },
-    purple: { gradient: 'from-purple-500 to-purple-600', bg: 'bg-purple-50', text: 'text-purple-600' }
+  
+  // Generate structured data
+  const structuredData = generateBlogPostStructuredData(params.slug, post)
+  
+  // Generate breadcrumb structured data
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Početna",
+        "item": baseUrl
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": `${baseUrl}/blog`
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.category?.name || "Članci",
+        "item": `${baseUrl}/blog/kategorija/${post.category?.slug?.current || 'opste'}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": post.title,
+        "item": `${baseUrl}/blog/${params.slug}`
+      }
+    ]
   }
 
-  const theme = themeColors[post.category.color] || themeColors.primary
+  const brandColors = {
+    primary: { bg: '#5DBFDB', light: '#E0F7FA', text: '#0D7377' },
+    secondary: { bg: '#F4C950', light: '#FFF8E1', text: '#F57C00' },
+    accent: { bg: '#91C733', light: '#F1F8E9', text: '#4A5A2C' },
+    warm: { bg: '#E53935', light: '#FFEBEE', text: '#B71C1C' },
+    night: { bg: '#1E293B', light: '#F8FAFC', text: '#334155' }
+  }
+
+  const theme = brandColors.primary // Use sky color as default
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : ''
 
   return (
-    <main className="relative">
+    <>
+      {/* Structured Data */}
+      <StructuredData data={structuredData} id="blog-post-structured-data" />
+      <StructuredData data={breadcrumbStructuredData} id="blog-breadcrumb-structured-data" />
+      
+      <main className="relative">
+      <ReadingProgressBarClient />
+      
       {/* Hero sekcija */}
-      <section className={`relative min-h-[70vh] bg-gradient-to-br ${theme.gradient} overflow-hidden`}>
+      <section className="relative min-h-[70vh] bg-[#5DBFDB] overflow-hidden">
         <FloatingLetters 
           className="opacity-20"
           count={15}
@@ -98,13 +312,22 @@ export default async function BlogPostPage({ params }: Props) {
             {/* Category badge */}
             <div className="mb-6">
               <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white font-medium">
+                <BookIcon size={16} className="mr-2" />
                 {post.category.name}
               </span>
             </div>
             
-            {/* Title */}
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-              {post.title}
+            {/* Title with brush underline */}
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 relative">
+              <BrushStrokeText 
+                wordsToHighlight={[post.title.split(' ').slice(-2).join(' ')]} // Highlight last 2 words
+                brushColor="#F4C950"
+                brushVariant="underline"
+                brushStyle="rough"
+                className="relative z-10"
+              >
+                {post.title}
+              </BrushStrokeText>
             </h1>
             
             {/* Excerpt */}
@@ -113,7 +336,7 @@ export default async function BlogPostPage({ params }: Props) {
             </p>
             
             {/* Meta informacije */}
-            <div className="flex items-center gap-6 text-white/80">
+            <div className="flex flex-wrap items-center gap-6 text-white/80">
               <div className="flex items-center gap-3">
                 {post.author.image && (
                   <Image
@@ -128,7 +351,10 @@ export default async function BlogPostPage({ params }: Props) {
                 )}
                 <div>
                   <p className="font-medium text-white">{post.author.name}</p>
-                  <p className="text-sm text-white/70">Autor</p>
+                  <p className="text-sm text-white/70 flex items-center gap-1">
+                    <Icons.Pencil size={12} />
+                    Autor
+                  </p>
                 </div>
               </div>
               
@@ -142,7 +368,17 @@ export default async function BlogPostPage({ params }: Props) {
                     day: 'numeric'
                   })}
                 </p>
-                <p className="text-sm text-white/70">{post.readingTime} min čitanja</p>
+                <p className="text-sm text-white/70 flex items-center gap-1">
+                  <ClockIcon size={12} />
+                  {post.readingTime} min čitanja
+                </p>
+              </div>
+              
+              <div className="h-12 w-px bg-white/20" />
+              
+              <div className="flex items-center gap-2">
+                <HeartIcon size={16} className="text-[#F4C950]" />
+                <span className="text-sm text-white/70">Korisno za učenje</span>
               </div>
             </div>
           </div>
@@ -169,24 +405,65 @@ export default async function BlogPostPage({ params }: Props) {
         </section>
       )}
 
+      {/* Social sharing */}
+      <section className="py-8 bg-gray-50 border-b">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <SocialShare title={post.title} url={currentUrl} />
+          </div>
+        </div>
+      </section>
+
       {/* Sadržaj članka */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg prose-slate max-w-none">
               {post.content && (
                 <PortableText 
                   value={post.content}
                   components={{
                     block: {
-                      h1: ({children}) => <h1 className="text-3xl font-bold text-gray-900 mb-6 mt-12">{children}</h1>,
-                      h2: ({children}) => <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-10">{children}</h2>,
-                      h3: ({children}) => <h3 className="text-xl font-bold text-gray-900 mb-4 mt-8">{children}</h3>,
-                      normal: ({children}) => <p className="text-gray-700 leading-relaxed mb-6">{children}</p>,
+                      h1: ({children}) => (
+                        <h1 className="text-3xl font-bold text-[#1E293B] mb-6 mt-12 relative">
+                          <BrushStrokeText 
+                            wordsToHighlight={[String(children).split(' ').slice(-1)[0]]}
+                            brushColor="#91C733"
+                            brushVariant="underline"
+                          >
+                            {String(children)}
+                          </BrushStrokeText>
+                        </h1>
+                      ),
+                      h2: ({children}) => (
+                        <h2 className="text-2xl font-bold text-[#1E293B] mb-4 mt-10 relative">
+                          <BrushStrokeText 
+                            wordsToHighlight={[String(children).split(' ').slice(-1)[0]]}
+                            brushColor="#F4C950"
+                            brushVariant="underline"
+                          >
+                            {String(children)}
+                          </BrushStrokeText>
+                        </h2>
+                      ),
+                      h3: ({children}) => (
+                        <h3 className="text-xl font-bold text-[#1E293B] mb-4 mt-8 relative">
+                          <BrushStrokeText 
+                            wordsToHighlight={[String(children).split(' ').slice(-1)[0]]}
+                            brushColor="#5DBFDB"
+                            brushVariant="underline"
+                          >
+                            {String(children)}
+                          </BrushStrokeText>
+                        </h3>
+                      ),
+                      normal: ({children}) => (
+                        <p className="text-gray-700 leading-relaxed mb-6 text-lg">{children}</p>
+                      ),
                     },
                     marks: {
-                      strong: ({children}) => <strong className="font-semibold text-gray-900">{children}</strong>,
-                      em: ({children}) => <em className="italic">{children}</em>,
+                      strong: ({children}) => <strong className="font-semibold text-[#1E293B]">{children}</strong>,
+                      em: ({children}) => <em className="italic text-[#5DBFDB]">{children}</em>,
                     }
                   }}
                 />
@@ -196,12 +473,15 @@ export default async function BlogPostPage({ params }: Props) {
             {/* Tagovi */}
             {post.tags && post.tags.length > 0 && (
               <div className="mt-12 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Tagovi:</h3>
+                <h3 className="text-lg font-semibold text-[#1E293B] mb-4 flex items-center gap-2">
+                  <StarIcon size={20} className="text-[#F4C950]" />
+                  Tagovi:
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className={`px-3 py-1 rounded-full text-sm font-medium ${theme.bg} ${theme.text}`}
+                      className="px-4 py-2 rounded-full text-sm font-medium bg-[#E0F7FA] text-[#0D7377] hover:bg-[#5DBFDB] hover:text-white transition-colors duration-200 cursor-pointer"
                     >
                       #{tag}
                     </span>
@@ -213,31 +493,74 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Author bio */}
+      {/* Enhanced Author bio */}
       {post.author.bio && (
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gradient-to-br from-[#F8FAFC] to-[#E2E8F0]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-lg p-8">
-                <div className="flex items-start gap-6">
-                  {post.author.image && (
-                    <Image
-                      src={post.author.image.asset.url}
-                      alt={post.author.name}
-                      width={80}
-                      height={80}
-                      className="rounded-full"
-                      placeholder="blur"
-                      blurDataURL={post.author.image.asset.metadata.lqip}
-                    />
-                  )}
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                <div className="flex flex-col md:flex-row items-start gap-6">
+                  <div className="flex-shrink-0">
+                    {post.author.image && (
+                      <div className="relative">
+                        <Image
+                          src={post.author.image.asset.url}
+                          alt={post.author.name}
+                          width={100}
+                          height={100}
+                          className="rounded-full border-4 border-[#5DBFDB]/20"
+                          placeholder="blur"
+                          blurDataURL={post.author.image.asset.metadata.lqip}
+                        />
+                        <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-[#91C733] rounded-full flex items-center justify-center">
+                          <Icons.Check size={16} className="text-white" />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      O autoru: {post.author.name}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
+                    <div className="mb-4">
+                      <h3 className="text-2xl font-bold text-[#1E293B] mb-2 relative">
+                        <BrushStrokeText 
+                          wordsToHighlight={['autoru']}
+                          brushColor="#F4C950"
+                          brushVariant="underline"
+                        >
+                          O autoru: {post.author.name}
+                        </BrushStrokeText>
+                      </h3>
+                      <div className="flex items-center gap-2 text-sm text-gray-600 mb-3">
+                        <Icons.Pencil size={14} />
+                        <span>Stručni saradnik</span>
+                        <span className="w-1 h-1 bg-gray-400 rounded-full" />
+                        <Icons.Trophy size={14} className="text-[#F4C950]" />
+                        <span>5+ godina iskustva</span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-700 leading-relaxed text-lg mb-6">
                       {post.author.bio}
                     </p>
+                    
+                    <div className="flex flex-wrap gap-3">
+                      <Button
+                        variant="outline"
+                        color="sky"
+                        size="sm"
+                        leftIcon={<EmailIcon size={16} />}
+                      >
+                        Kontaktirajte autora
+                      </Button>
+                      <Button
+                        variant="outline"
+                        color="grass"
+                        size="sm"
+                        leftIcon={<BookIcon size={16} />}
+                      >
+                        Više članaka
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -246,109 +569,165 @@ export default async function BlogPostPage({ params }: Props) {
         </section>
       )}
 
-      {/* Povezani članci */}
+      {/* Newsletter signup */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <NewsletterSignup />
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Povezani članci */}
       {relatedPosts && relatedPosts.length > 0 && (
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                  Povezani članci
+                <h2 className="text-3xl lg:text-4xl font-bold text-[#1E293B] mb-4 relative">
+                  <BrushStrokeText 
+                    wordsToHighlight={['članci']}
+                    brushColor="#E53935"
+                    brushVariant="underline"
+                    brushStyle="rough"
+                  >
+                    Povezani članci
+                  </BrushStrokeText>
                 </h2>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-gray-600 flex items-center justify-center gap-2">
+                  <BookIcon size={20} className="text-[#5DBFDB]" />
                   Istražite više članaka iz slične kategorije
                 </p>
               </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {relatedPosts.map((relatedPost) => {
-                  const relatedTheme = themeColors[relatedPost.category.color] || themeColors.primary
-                  
-                  return (
-                    <SafeLink                       key={relatedPost._id}
-                      href={`/blog/${relatedPost.slug?.current || 'no-slug'}`}
-                      className="group"
-                    >
-                      <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:transform group-hover:scale-105">
-                        <div className="relative h-48 overflow-hidden">
-                          <Image
-                            src={relatedPost.featuredImage.asset.url}
-                            alt={relatedPost.featuredImage.alt || relatedPost.title}
-                            fill
-                            className="object-cover group-hover:scale-110 transition-transform duration-300"
-                            placeholder="blur"
-                            blurDataURL={relatedPost.featuredImage.asset.metadata.lqip}
-                          />
-                          
-                          <div className="absolute top-4 left-4">
-                            <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${relatedTheme.bg} ${relatedTheme.text}`}>
-                              {relatedPost.category.name}
-                            </span>
-                          </div>
+                {relatedPosts.map((relatedPost, index) => (
+                  <SafeLink
+                    key={relatedPost._id}
+                    href={`/blog/${relatedPost.slug?.current || 'no-slug'}`}
+                    className="group"
+                  >
+                    <article className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group-hover:transform group-hover:scale-105 border border-gray-100">
+                      <div className="relative h-48 overflow-hidden">
+                        <Image
+                          src={relatedPost.featuredImage.asset.url}
+                          alt={relatedPost.featuredImage.alt || relatedPost.title}
+                          fill
+                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                          placeholder="blur"
+                          blurDataURL={relatedPost.featuredImage.asset.metadata.lqip}
+                        />
+                        
+                        <div className="absolute top-4 left-4">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/90 text-[#1E293B] backdrop-blur-sm">
+                            <BookIcon size={12} className="mr-1" />
+                            {relatedPost.category.name}
+                          </span>
                         </div>
                         
-                        <div className="p-6">
-                          <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-primary-600 transition-colors">
-                            {relatedPost.title}
-                          </h3>
-                          
-                          <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
-                            {relatedPost.excerpt}
-                          </p>
-                          
-                          <div className="flex items-center justify-between text-xs text-gray-500">
+                        <div className="absolute top-4 right-4">
+                          <div className="w-8 h-8 bg-[#5DBFDB] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                            {index + 1}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="p-6">
+                        <h3 className="text-lg font-bold text-[#1E293B] mb-3 line-clamp-2 group-hover:text-[#5DBFDB] transition-colors duration-300">
+                          {relatedPost.title}
+                        </h3>
+                        
+                        <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
+                          {relatedPost.excerpt}
+                        </p>
+                        
+                        <div className="flex items-center justify-between text-xs text-gray-500">
+                          <div className="flex items-center gap-2">
+                            <Icons.Pencil size={12} />
                             <span>{relatedPost.author.name}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <ClockIcon size={12} />
                             <span>{relatedPost.readingTime} min</span>
                           </div>
                         </div>
-                      </article>
-                    </SafeLink>
-                  )
-                })}
+                        
+                        <div className="mt-4 pt-4 border-t border-gray-100">
+                          <Button
+                            variant="outline"
+                            color="sky"
+                            size="sm"
+                            fullWidth
+                            rightIcon={<ArrowRightIcon size={14} />}
+                            className="group-hover:bg-[#5DBFDB] group-hover:text-white group-hover:border-[#5DBFDB]"
+                          >
+                            Pročitajte više
+                          </Button>
+                        </div>
+                      </div>
+                    </article>
+                  </SafeLink>
+                ))}
               </div>
             </div>
           </div>
         </section>
       )}
 
-      {/* CTA sekcija */}
-      <section className={`py-20 bg-gradient-to-r ${theme.gradient} relative overflow-hidden`}>
+      {/* Enhanced CTA sekcija */}
+      <section className="py-20 bg-[#1E293B] relative overflow-hidden">
         <FloatingLetters 
           className="opacity-10"
           count={20}
           speed="medium"
-          colors={['#ffffff']}
+          colors={['#5DBFDB', '#F4C950', '#91C733']}
         />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Istražite više članaka
-            </h2>
-            <p className="text-xl opacity-90 mb-8">
-              Otkrijte još saveta i priča iz sveta srećnog učenja
-            </p>
+            <div className="mb-8">
+              <div className="w-16 h-16 bg-[#5DBFDB]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BookIcon size={32} className="text-[#5DBFDB]" />
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6 relative">
+                <BrushStrokeText 
+                  wordsToHighlight={['članaka']}
+                  brushColor="#F4C950"
+                  brushVariant="underline"
+                  brushStyle="rough"
+                >
+                  Istražite više članaka
+                </BrushStrokeText>
+              </h2>
+              <p className="text-xl opacity-90 mb-8">
+                Otkrijte još saveta i priča iz sveta srećnog učenja
+              </p>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <SafeLink href="/blog">
-                <PulseButton 
-                  variant="accent"
+                <Button 
+                  variant="filled"
+                  color="sky"
                   size="lg"
-                  className="bg-white text-gray-900 hover:bg-gray-100"
+                  leftIcon={<BookIcon size={20} />}
+                  className="min-w-[180px]"
                 >
                   Svi članci
-                </PulseButton>
+                </Button>
               </SafeLink>
               
               {post.category?.slug?.current && (
                 <SafeLink href={`/blog/kategorija/${post.category.slug?.current || 'no-slug'}`}>
-                  <PulseButton 
-                    variant="secondary"
+                  <Button 
+                    variant="outline"
+                    color="sun"
                     size="lg"
-                    className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-gray-900"
+                    leftIcon={<StarIcon size={20} />}
+                    className="min-w-[180px] border-[#F4C950] text-[#F4C950] hover:bg-[#F4C950] hover:text-white"
                   >
                     Više iz kategorije
-                  </PulseButton>
+                  </Button>
                 </SafeLink>
               )}
             </div>
@@ -356,5 +735,6 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
     </main>
+    </>
   )
 }

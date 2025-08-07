@@ -3,8 +3,9 @@ import { siteSettingsQuery } from '@/lib/sanity.queries'
 
 interface SiteSettings {
   siteName: string
+  siteSubtitle: string
   siteDescription: string
-  logo: any
+  logo: string | null
   email: string
   phone: string
   address: string
@@ -26,6 +27,7 @@ export function useSiteSettings() {
   // Provide fallback values for critical settings
   const siteSettings = {
     siteName: data?.siteName || 'Srećno učenje',
+    siteSubtitle: data?.siteSubtitle || 'Centar za brzo čitanje',
     siteDescription: data?.siteDescription || 'Franšiza obrazovne metodologije za brzo čitanje i mentalnu aritmetiku',
     email: data?.email || 'carobnoselo@gmail.com',
     phone: data?.phone || '063.394.251',

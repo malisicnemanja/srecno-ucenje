@@ -3,7 +3,7 @@ const withPWA = require('next-pwa')({
   dest: 'public',
   register: true,
   skipWaiting: true,
-  disable: process.env.NODE_ENV === 'development',
+  disable: process.env.NEXT_PUBLIC_APP_ENV !== 'production',
   buildExcludes: [/middleware-manifest\.json$/],
   publicExcludes: ['!robots.txt', '!sitemap.xml'],
   runtimeCaching: [
@@ -15,6 +15,19 @@ const withPWA = require('next-pwa')({
         expiration: {
           maxEntries: 200,
           maxAgeSeconds: 24 * 60 * 60, // 24 hours
+        },
+        networkTimeoutSeconds: 3, // Faster timeout for better UX
+      },
+    },
+    // Optimized image caching
+    {
+      urlPattern: /\.(?:png|jpg|jpeg|webp|avif|gif|svg)$/,
+      handler: 'StaleWhileRevalidate',
+      options: {
+        cacheName: 'images',
+        expiration: {
+          maxEntries: 100,
+          maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
         },
       },
     },
@@ -85,7 +98,7 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NEXT_PUBLIC_APP_ENV === 'production' && process.env.NODE_ENV === 'production', // Remove console logs only in true production
   },
   // Headers for better caching
   async headers() {

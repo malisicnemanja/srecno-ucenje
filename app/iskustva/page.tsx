@@ -1,23 +1,65 @@
 import { Metadata } from 'next'
-import { getAllExperiences, getFeaturedExperiences } from '@/sanity/queries/experience'
-import ExperiencesClient from './ExperiencesClient'
+import SuccessStoriesClient from './SuccessStoriesClient'
+import { client } from '@/lib/sanity.client'
+import { groq } from 'next-sanity'
 
 export const metadata: Metadata = {
-  title: 'Iskustva | Putovanja i priče iz sveta',
-  description: 'Putovanja, radionice i posebni događaji koji obogaćuju naš obrazovni proces. Istražite priče iz sveta obrazovanja.',
-  keywords: ['iskustva', 'putovanja', 'radionice', 'obrazovni događaji', 'konferencije', 'međunarodna saradnja'],
+  title: 'Priče Uspeha | Transformacija kroz učenje',
+  description: 'Otkrijte neverovatne transformacije naših učenika - od prvog dana do vrhunskih rezultata. Priče koje inspirišu i motivišu.',
+  keywords: ['priče uspeha', 'transformacija', 'rezultati', 'brzo čitanje', 'memorija', 'koncentracija', 'iskustva učenika'],
   openGraph: {
-    title: 'Iskustva iz sveta obrazovanja',
-    description: 'Priče sa putovanja i događaja koji inspirišu i obogaćuju obrazovni proces',
+    title: 'Priče Uspeha - Transformacija kroz učenje',
+    description: 'Otkrijte neverovatne transformacije naših učenika kroz inspiratvne priče o uspehu',
     type: 'website',
   }
 }
 
-export default async function ExperiencesPage() {
-  const [experiences, featuredExperiences] = await Promise.all([
-    getAllExperiences(),
-    getFeaturedExperiences()
+const successStoriesQuery = groq`
+  *[_type == "successStory"] | order(publishedAt desc) {
+    _id,
+    studentName,
+    age,
+    program->{
+      _id,
+      title
+    },
+    testimonial,
+    results[]{
+      metric,
+      label
+    },
+    beforeSkills,
+    afterSkills,
+    video{
+      url,
+      thumbnail{
+        asset->{
+          _id,
+          url
+        }
+      },
+      description
+    },
+    featured,
+    publishedAt,
+    location
+  }
+`
+
+const statsQuery = groq`
+  {
+    "totalStudents": count(*[_type == "successStory"]),
+    "averageImprovement": 85,
+    "programsOffered": count(*[_type == "program"]),
+    "satisfactionRate": 98
+  }
+`
+
+export default async function SuccessStoriesPage() {
+  const [successStories, stats] = await Promise.all([
+    client.fetch(successStoriesQuery),
+    client.fetch(statsQuery)
   ])
 
-  return <ExperiencesClient experiences={experiences} featuredExperiences={featuredExperiences} />
+  return <SuccessStoriesClient successStories={successStories} stats={stats} />
 }

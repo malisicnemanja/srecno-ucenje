@@ -50,8 +50,8 @@ export default function NotificationBar({ data }: NotificationBarProps) {
 
   if (!data || !data.isActive || isDismissed) return null
 
-  const bgColor = data.backgroundColor || 'bg-brand-grass-soft'
-  const textColor = data.textColor || 'u-text-brand-night'
+  const bgColor = data.backgroundColor || 'bg-brand-grass bg-opacity-10'
+  const textColor = data.textColor || 'text-brand-night'
 
   return (
     <AnimatePresence>
@@ -61,17 +61,17 @@ export default function NotificationBar({ data }: NotificationBarProps) {
           animate={{ height: 'auto', opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className={`c-notification-bar ${bgColor}`}
+          className={`${bgColor} border-b border-brand-grass border-opacity-20`}
         >
-          <div className="container">
-            <div className="c-notification-bar__content">
-              <div className="c-notification-bar__message">
+          <div className="container mx-auto px-4 max-w-7xl">
+            <div className="flex items-center justify-between py-3">
+              <div className="flex items-center space-x-3">
                 <SparklesSVG 
                   size={16} 
-                  className={`c-notification-bar__icon ${textColor}`} 
+                  className={`${textColor} opacity-80`} 
                 />
                 
-                <p className={`c-notification-bar__text ${textColor}`}>
+                <p className={`${textColor} text-sm font-medium`}>
                   {data.message}
                   
                   {data.linkText && data.linkUrl && (
@@ -79,7 +79,7 @@ export default function NotificationBar({ data }: NotificationBarProps) {
                       {' '}
                       <SafeLink 
                         href={data.linkUrl || '/'}
-                        className={`c-notification-bar__link ${textColor}`}
+                        className={`${textColor} font-semibold underline hover:no-underline transition-all duration-200`}
                       >
                         {data.linkText}
                       </SafeLink>
@@ -90,16 +90,13 @@ export default function NotificationBar({ data }: NotificationBarProps) {
 
               <button
                 onClick={handleDismiss}
-                className={`c-notification-bar__close ${textColor}`}
+                className={`${textColor} hover:opacity-60 transition-opacity duration-200 p-1 rounded-md`}
                 aria-label="Zatvori obaveštenje"
               >
                 <CloseSVG size={16} />
               </button>
             </div>
           </div>
-
-          {/* Suptilni gradient na dnu */}
-          <div className="c-notification-bar__border" />
         </motion.div>
       )}
     </AnimatePresence>

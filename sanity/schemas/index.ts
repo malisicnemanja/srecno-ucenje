@@ -14,8 +14,9 @@ import homePage from './documents/homePage'
 import methodology from './documents/methodology'
 import calculatorSettings from './documents/calculatorSettings'
 import calculatorResult from './documents/calculatorResult'
-import quiz from './documents/quiz'
-import quizResult from './documents/quizResult'
+// DEPRECATED: Remove quiz schemas - functionality moved to franchise application
+// import quiz from './documents/quiz'
+// import quizResult from './documents/quizResult'
 import resource from './documents/resource'
 import booking from './documents/booking'
 import newsletterSubscriber from './documents/newsletterSubscriber'
@@ -25,6 +26,26 @@ import authorTimeline from './authorTimeline'
 import authorAchievements from './authorAchievements'
 import publications from './publications'
 import trainingProgram from './trainingProgram'
+// New comprehensive franchise schemas
+import franchiseModelsPage from './documents/franchiseModelsPage'
+import franchisePackage from './documents/franchisePackage'
+import howToJoinPage from './documents/howToJoinPage'
+import franchiseApplicationPage from './documents/franchiseApplicationPage'
+import financialCalculatorPage from './documents/financialCalculatorPage'
+import school from './documents/school'
+import schoolsPage from './documents/schoolsPage'
+import enhancedFranchiseField from './documents/enhancedFranchiseField'
+import migrationStrategy from './documents/migrationStrategy'
+
+// Modern CMS Architecture
+import modernPage from './documents/modernPage'
+import modernFranchisePackage from './documents/modernFranchisePackage'
+import modernFranchiseLocation from './documents/modernFranchiseLocation'
+import modernFranchiseFAQ from './documents/modernFranchiseFAQ'
+import modernSiteSettings from './documents/modernSiteSettings'
+import modernNavigation from './documents/modernNavigation'
+
+// Legacy schemas (to be migrated)
 import locationData from './locationData'
 import franchiseSteps from './franchiseSteps'
 import franchiseApplication from './franchise-application'
@@ -58,6 +79,15 @@ import leadMagnet from './objects/leadMagnet'
 import enhancedHero from './objects/enhancedHero'
 import pageBuilder from './objects/pageBuilder'
 import navigationSettings from './objects/navigationSettings'
+import validationRules from './objects/validationRules'
+
+// Modern CMS Objects
+import button from './objects/button'
+import modernHero from './objects/modernHero'
+import pageSection from './objects/pageSection'
+import franchiseProcess from './objects/franchiseProcess'
+import modernPricingPlan from './objects/modernPricingPlan'
+import modernTestimonial from './objects/modernTestimonial'
 
 export const schemaTypes = [
   // Documents
@@ -76,8 +106,9 @@ export const schemaTypes = [
   methodology,
   calculatorSettings,
   calculatorResult,
-  quiz,
-  quizResult,
+  // DEPRECATED: Quiz functionality moved to franchise application
+  // quiz,
+  // quizResult,
   resource,
   booking,
   newsletterSubscriber,
@@ -87,6 +118,26 @@ export const schemaTypes = [
   authorAchievements,
   publications,
   trainingProgram,
+  // New franchise CMS architecture
+  franchiseModelsPage,
+  franchisePackage,
+  howToJoinPage,
+  franchiseApplicationPage,
+  financialCalculatorPage,
+  school,
+  schoolsPage,
+  enhancedFranchiseField,
+  migrationStrategy,
+  
+  // Modern CMS Architecture
+  modernPage,
+  modernFranchisePackage,
+  modernFranchiseLocation,
+  modernFranchiseFAQ,
+  modernSiteSettings,
+  modernNavigation,
+  
+  // Legacy schemas (to be migrated)
   locationData,
   franchiseSteps,
   franchiseApplication,
@@ -119,4 +170,13 @@ export const schemaTypes = [
   enhancedHero,
   pageBuilder,
   navigationSettings,
+  validationRules,
+  
+  // Modern CMS Objects
+  button,
+  modernHero,
+  pageSection,
+  franchiseProcess,
+  modernPricingPlan,
+  modernTestimonial,
 ]

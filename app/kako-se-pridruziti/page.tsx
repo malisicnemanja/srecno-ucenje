@@ -1,649 +1,547 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { 
-  PhoneIcon, CalendarIcon, UsersIcon, CheckIcon,
-  StarIcon, AwardIcon, ClockIcon, TargetIcon,
-  SparklesIcon, HeartIcon, BookIcon, BrainIcon
-} from '@/components/icons'
-import { HappyStudents, ReadingChild } from '@/components/illustrations/ChildIllustrations'
+import { useState, useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import Link from 'next/link'
-import SafeLink from '@/components/common/SafeLink'
 import { useSanityQuery } from '@/hooks/useSanity'
-import { franchiseStepsQuery, programsQuery, faqsQuery } from '@/lib/sanity.queries'
+import Icons from '@/components/ui/Icons'
+import { Button } from '@/components/ui/Button'
+import BrushUnderline from '@/components/ui/BrushUnderline'
+import AlternatingText from '@/components/ui/AlternatingText'
 
-// Move fallback data to top of component
-const fallbackSteps = [
-  {
-    title: 'Kontaktirajte Nas',
-    description: 'Pozovite nas ili popunite kontakt formu na našem sajtu',
-    details: [
-      'Telefonske konsultacije radnim danima 9-20h',
-      'Online forma dostupna 24/7',
-      'Odgovor u roku od 24h'
-    ],
-    icon: PhoneIcon,
-    iconColor: 'primary'
-  },
-  {
-    title: 'Besplatna Procena',
-    description: 'Zakažite besplatnu procenu sposobnosti vašeg deteta',
-    details: [
-      'Testiranje traje 30-45 minuta',
-      'Procena čitalačkih sposobnosti',
-      'Analiza matematičkih veština'
-    ],
-    icon: CalendarIcon,
-    iconColor: 'secondary'
-  },
-  {
-    title: 'Upis u Grupu',
-    description: 'Vaše dete se upisuje u odgovarajuću grupu prema uzrastu i nivou',
-    details: [
-      'Male grupe do 8 učenika',
-      'Homogene grupe po nivou znanja',
-      'Fleksibilni termini'
-    ],
-    icon: UsersIcon,
-    iconColor: 'accent'
-  },
-  {
-    title: 'Početak Programa',
-    description: 'Započinjemo sa programom i praćenjem napretka',
-    details: [
-      'Redovno praćenje napretka',
-      'Mesečni izveštaji roditeljima',
-      'Sertifikat po završetku'
-    ],
-    icon: SparklesIcon,
-    iconColor: 'warm'
-  }
-];
-
-// Fallback programs data
-const fallbackPrograms = [
-  {
-    icon: <BookIcon size={48} className="text-primary" />,
-    title: 'Brzočitanje',
-    description: 'Ovladajte veštinom brzog čitanja uz potpuno razumevanje',
-    age: '7-16 godina',
-    duration: '6 meseci',
-    groupSize: '6-8 učenika'
-  },
-  {
-    icon: <BrainIcon size={48} className="text-primary" />,
-    title: 'Mentalna Aritmetika',
-    description: 'Naučite da računate brže od kalkulatora',
-    age: '5-14 godina',
-    duration: '12 meseci',
-    groupSize: '6-8 učenika'
-  },
-  {
-    icon: <TargetIcon size={48} className="text-primary" />,
-    title: 'Kombinovani Program',
-    description: 'Najbolje iz oba programa za maksimalne rezultate',
-    age: '7-14 godina',
-    duration: '12 meseci',
-    groupSize: '6-8 učenika'
-  }
-];
-
-// Fallback FAQs data
-const fallbackFaqs = [
-  {
-    question: 'Da li postoji probni period?',
-    answer: 'Da, nudimo besplatan probni čas kako bi vaše dete moglo da se upozna sa našim metodama pre upisa.'
-  },
-  {
-    question: 'Koliko traje jedan čas?',
-    answer: 'Standardni čas traje 60 minuta za brzočitanje i 90 minuta za mentalnu aritmetiku.'
-  },
-  {
-    question: 'Šta ako dete propušti čas?',
-    answer: 'Propušteni časovi se mogu nadoknaditi u dogovoru sa instruktorom, u okviru tekućeg meseca.'
-  },
-  {
-    question: 'Da li postoje popusti?',
-    answer: 'Da, nudimo porodične popuste od 10% za drugo dete i 15% za treće dete iz iste porodice.'
-  }
-];
-
-export default function KakoSePridruziti() {
-  // Fetch franchise steps from Sanity
-  const { data: franchiseData, isLoading } = useSanityQuery(franchiseStepsQuery)
-  const { data: programsData } = useSanityQuery(programsQuery)
-  const { data: faqsData } = useSanityQuery(faqsQuery)
+// Timeline Item Component
+const TimelineItem = ({ step, index, isActive, onClick }: any) => {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true })
   
-  // Use Sanity data if available, otherwise use fallback
-  const steps = franchiseData?.[0]?.steps || fallbackSteps
-  const programs = programsData || fallbackPrograms
-  const faqs = faqsData?.filter(faq => faq.category === 'franchise') || fallbackFaqs
+  const colors = ['sky', 'sun', 'grass', 'heart', 'night'] as const
+  const color = colors[index % colors.length]
+  
+  const iconMap = {
+    contact: Icons.Phone,
+    meeting: Icons.Video,
+    training: Icons.Graduation,
+    launch: Icons.Rocket,
+    support: Icons.Handshake
+  }
+  
+  const Icon = iconMap[step.icon as keyof typeof iconMap] || Icons.Phone
+  
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+      animate={inView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className={`relative flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center gap-8`}
+    >
+      {/* Content Card */}
+      <motion.div
+        onClick={onClick}
+        whileHover={{ scale: 1.02 }}
+        className={`flex-1 cursor-pointer ${index % 2 === 0 ? 'text-right' : 'text-left'}`}
+      >
+        <motion.div
+          className={`bg-white rounded-2xl p-6 shadow-lg border-2 transition-all ${
+            isActive 
+              ? `border-brand-${color} shadow-2xl` 
+              : 'border-gray-100 hover:border-gray-200'
+          }`}
+        >
+          <div className={`flex items-start gap-4 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+            <Icon className={`w-12 h-12 text-brand-${color} flex-shrink-0`} animate={false} />
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">{step.title}</h3>
+              <p className="text-gray-600 mb-4">{step.description}</p>
+              
+              {/* Details List */}
+              <ul className={`space-y-2 mb-4 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                {step.details.map((detail: string, i: number) => (
+                  <motion.li
+                    key={i}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? 10 : -10 }}
+                    animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0.7, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    className={`flex items-center gap-2 text-sm text-gray-700 ${
+                      index % 2 === 0 ? 'flex-row-reverse' : ''
+                    }`}
+                  >
+                    <Icons.Check className={`w-4 h-4 text-brand-${color}`} animate={false} />
+                    <span>{detail}</span>
+                  </motion.li>
+                ))}
+              </ul>
+              
+              <div className={`flex items-center gap-4 ${index % 2 === 0 ? 'justify-end' : ''}`}>
+                <span className={`inline-block px-3 py-1 bg-brand-${color}/10 text-brand-${color} rounded-full text-sm font-medium`}>
+                  {step.estimatedTime}
+                </span>
+                {isActive && (
+                  <motion.span
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="text-xs text-gray-500"
+                  >
+                    Klikni za detalje
+                  </motion.span>
+                )}
+              </div>
+            </div>
+          </div>
+          
+          {/* Expanded Content */}
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={isActive ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <div className="pt-4 mt-4 border-t border-gray-100">
+              <p className="text-gray-700">{step.expandedContent}</p>
+            </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+      
+      {/* Timeline Node */}
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        className="relative z-10"
+      >
+        <motion.div
+          animate={isActive ? {
+            scale: [1, 1.2, 1],
+            boxShadow: [`0 0 0 0 rgba(93, 191, 219, 0.4)`, `0 0 0 20px rgba(93, 191, 219, 0)`, `0 0 0 0 rgba(93, 191, 219, 0)`]
+          } : {}}
+          transition={{ duration: 2, repeat: Infinity }}
+          className={`w-16 h-16 rounded-full flex items-center justify-center border-4 ${
+            isActive 
+              ? `bg-brand-${color} border-white` 
+              : 'bg-white border-gray-300'
+          }`}
+        >
+          <span className={`text-2xl font-bold ${isActive ? 'text-white' : 'text-gray-400'}`}>
+            {index + 1}
+          </span>
+        </motion.div>
+      </motion.div>
+      
+      {/* Empty space for alternating layout */}
+      <div className="flex-1" />
+    </motion.div>
+  )
+}
+
+// Statistics Component
+const Statistics = () => {
+  const stats = [
+    { number: '127+', label: 'Aktivnih franšiza', icon: Icons.Location },
+    { number: '15,000+', label: 'Srećne dece', icon: Icons.Heart },
+    { number: '98%', label: 'Zadovoljnih partnera', icon: Icons.Trophy },
+    { number: '12', label: 'Meseci ROI', icon: Icons.Graph }
+  ]
+  
+  return (
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      {stats.map((stat, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: i * 0.1 }}
+          className="text-center"
+        >
+          <stat.icon className="w-12 h-12 mx-auto mb-3 text-brand-sky" />
+          <div className="text-3xl font-bold text-gray-900">{stat.number}</div>
+          <div className="text-sm text-gray-600">{stat.label}</div>
+        </motion.div>
+      ))}
+    </div>
+  )
+}
+
+// FAQ Component
+const FAQSection = ({ faqs }: { faqs: any[] }) => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+  
+  return (
+    <div className="space-y-4">
+      {faqs.map((faq, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: i * 0.05 }}
+        >
+          <button
+            onClick={() => setActiveIndex(activeIndex === i ? null : i)}
+            className="w-full text-left p-6 bg-white rounded-xl hover:shadow-lg transition-shadow"
+          >
+            <div className="flex justify-between items-center">
+              <h4 className="text-lg font-semibold text-gray-900">{faq.question}</h4>
+              <motion.div
+                animate={{ rotate: activeIndex === i ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Icons.ChevronDown className="w-5 h-5 text-brand-sky" animate={false} />
+              </motion.div>
+            </div>
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={activeIndex === i ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <p className="mt-4 text-gray-600">{faq.answer}</p>
+            </motion.div>
+          </button>
+        </motion.div>
+      ))}
+    </div>
+  )
+}
+
+// Query for CMS data
+const howToJoinQuery = `*[_type == "howToJoinPage"][0] {
+  hero {
+    title,
+    subtitle,
+    highlightedText,
+    ctaText,
+    ctaLink
+  },
+  processSteps[] {
+    title,
+    description,
+    icon,
+    details[],
+    expandedContent,
+    estimatedTime
+  },
+  faqs[] {
+    question,
+    answer,
+    category
+  },
+  finalCTA {
+    title,
+    subtitle,
+    primaryButton {
+      text,
+      link
+    },
+    secondaryButton {
+      text,
+      link
+    }
+  }
+}`
+
+// Fallback data
+const fallbackData = {
+  hero: {
+    title: "Vaš put do uspešne franšize",
+    subtitle: "Jednostavan i transparentan proces u 5 koraka",
+    highlightedText: "5 koraka",
+    ctaText: "Započni svoju priču",
+    ctaLink: "/fransiza/prijava"
+  },
+  processSteps: [
+    {
+      title: "Prvi kontakt",
+      description: "Popunite formu ili nas pozovite - počinje vaša franšizna priča",
+      icon: "contact",
+      details: [
+        "Online forma dostupna 24/7",
+        "Telefonske konsultacije",
+        "Odgovor u roku od 24h",
+        "Besplatna procena"
+      ],
+      expandedContent: "Nakon što nas kontaktirate, naš stručni tim će detaljno analizirati vašu situaciju i ciljeve. Ova faza je ključna za pravilno usmeravanje kroz ceo proces.",
+      estimatedTime: "1-2 dana"
+    },
+    {
+      title: "Dublje upoznavanje",
+      description: "Lični sastanak i predstavljanje koncepta",
+      icon: "meeting",
+      details: [
+        "Predstavljanje metodologije",
+        "Analiza tržišta",
+        "Finansijski plan",
+        "Prvi uvid u materijale"
+      ],
+      expandedContent: "Organizujemo detaljnu prezentaciju gde ćete upoznati našu metodologiju i poslovni model. Analiziraćemo potencijal vaše lokacije.",
+      estimatedTime: "3-5 dana"
+    },
+    {
+      title: "Intenzivna obuka",
+      description: "Sveobuhvatna priprema za vođenje franšize",
+      icon: "training",
+      details: [
+        "7-14 dana obuke",
+        "Praktični rad",
+        "Sertifikacija",
+        "Priručnici i materijali"
+      ],
+      expandedContent: "Prolazite kroz intenzivnu obuku koja pokriva sve aspekte vođenja uspešne obrazovne franšize.",
+      estimatedTime: "7-14 dana"
+    },
+    {
+      title: "Lansiranje centra",
+      description: "Otvaranje vašeg obrazovnog centra",
+      icon: "launch",
+      details: [
+        "Marketing kampanja",
+        "Otvorena vrata",
+        "Prvi učenici",
+        "Medijska podrška"
+      ],
+      expandedContent: "Uz našu potpunu podršku otvarate svoj centar. Pomažemo u svim aspektima lansiranja.",
+      estimatedTime: "14-21 dan"
+    },
+    {
+      title: "Stalna podrška",
+      description: "Kontinuirana pomoć i razvoj",
+      icon: "support",
+      details: [
+        "24/7 podrška",
+        "Mesečni mentoring",
+        "Novi materijali",
+        "Zajednica franšizera"
+      ],
+      expandedContent: "Nikad niste sami - naš tim je uvek tu za vas sa podrškom, savetima i resursima.",
+      estimatedTime: "Doživotno"
+    }
+  ],
+  faqs: [
+    {
+      question: "Koliko je potrebno početno ulaganje?",
+      answer: "Početno ulaganje zavisi od izabranog franšiznog paketa i kreće se od 2.900€ do 9.900€. Ova investicija uključuje licencu, obuku, početne materijale i marketing podršku.",
+      category: "finansije"
+    },
+    {
+      question: "Da li je potrebno prethodno iskustvo u obrazovanju?",
+      answer: "Ne, prethodno iskustvo nije neophodno. Naša sveobuhvatna obuka će vas pripremiti za sve aspekte vođenja obrazovnog centra. Važna je ljubav prema radu sa decom i posvećenost.",
+      category: "zahtevi"
+    },
+    {
+      question: "Koliko brzo mogu očekivati povraćaj investicije?",
+      answer: "Većina naših franšizera dostiže profitabilnost u prvih 6-12 meseci, a potpun povraćaj investicije u roku od 12-18 meseci, u zavisnosti od lokacije i zalaganja.",
+      category: "finansije"
+    },
+    {
+      question: "Kakvu podršku mogu očekivati nakon otvaranja?",
+      answer: "Pružamo kontinuiranu podršku koja uključuje mesečni mentoring, pristup novim materijalima, marketing kampanje, tehničku podršku i pristup zajednici uspešnih franšizera.",
+      category: "podrska"
+    }
+  ],
+  finalCTA: {
+    title: "Spremni da započnete svoju priču?",
+    subtitle: "Pridružite se porodici od preko 127 uspešnih obrazovnih centara",
+    primaryButton: {
+      text: "Prijavite se sada",
+      link: "/fransiza/prijava"
+    },
+    secondaryButton: {
+      text: "Zakažite konsultacije",
+      link: "/zakazivanje"
+    }
+  }
+}
+
+export default function HowToJoinPage() {
+  const { data, isLoading } = useSanityQuery(howToJoinQuery)
+  const pageData = data || fallbackData
+  const [activeStep, setActiveStep] = useState(0)
+  
   return (
     <main className="min-h-screen">
-      {/* Enhanced Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary-100/80 via-secondary-100/60 to-accent-100/70 min-h-[90vh] flex items-center">
-        {/* Floating animated elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Floating particles with vibrant colors */}
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-sky-50 to-white py-20 overflow-hidden">
+        <motion.div
+          className="absolute inset-0 opacity-10"
+          animate={{
+            backgroundPosition: ['0% 0%', '100% 100%'],
+          }}
+          transition={{ duration: 20, repeat: Infinity, repeatType: 'reverse' }}
+          style={{
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%235DBFDB" fill-opacity="0.2"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+          }}
+        />
+        
+        <div className="container relative">
           <motion.div
-            className="absolute top-20 right-20 w-24 h-24 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full opacity-60"
-            animate={{ 
-              y: [0, -30, 0],
-              x: [0, 20, 0],
-              scale: [1, 1.3, 1]
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute top-1/3 left-16 w-16 h-16 bg-gradient-to-br from-secondary-400 to-secondary-500 rounded-full opacity-50"
-            animate={{ 
-              rotate: [0, 360],
-              scale: [1, 1.2, 1]
-            }}
-            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 right-1/4 w-20 h-20 bg-gradient-to-br from-accent-400 to-accent-500 rounded-full opacity-40"
-            animate={{ 
-              y: [0, -25, 0],
-              rotate: [0, 180, 360]
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-20 left-20 w-12 h-12 bg-gradient-to-br from-warm-400 to-warm-500 rounded-full opacity-70"
-            animate={{ 
-              x: [0, 30, 0],
-              y: [0, -15, 0]
-            }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          />
-          
-          {/* Additional smaller particles */}
-          <motion.div
-            className="absolute top-1/2 right-1/3 w-8 h-8 bg-primary-300 rounded-full opacity-60"
-            animate={{ 
-              scale: [1, 1.5, 1],
-              opacity: [0.6, 1, 0.6]
-            }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute top-2/3 left-1/3 w-6 h-6 bg-secondary-300 rounded-full opacity-50"
-            animate={{ 
-              y: [0, -20, 0],
-              x: [0, 15, 0]
-            }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </div>
-
-        <div className="container relative pt-32 pb-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              {pageData.hero.title.split(' ').map((word: string, i: number) => (
+                <span key={i}>
+                  {i === 2 ? (
+                    <span className="relative inline-block mx-2">
+                      {word}
+                      <BrushUnderline color="sun" style="wavy" thickness="medium" />
+                    </span>
+                  ) : (
+                    word + ' '
+                  )}
+                </span>
+              ))}
+            </h1>
+            
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              {pageData.hero.subtitle}
+            </p>
+            
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-                <span className="text-gradient-primary">Kako Se</span>{' '}
-                <span className="text-gradient-rainbow">Pridružiti</span>
-              </h1>
-              
-              <p className="text-xl text-gray-600 mb-8">
-                Jednostavan i transparentan proces prijave za naše programe brzočitanja i mentalne aritmetike
-              </p>
-
-              <div className="flex items-center space-x-6 mb-8">
-                <div className="flex items-center space-x-2">
-                  <ClockIcon size={24} className="text-primary-500" />
-                  <span className="text-sm text-gray-600">Brzo i efikasno</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <HeartIcon size={24} className="text-warm-500" />
-                  <span className="text-sm text-gray-600">Personalizovano</span>
-                </div>
-              </div>
-
-              <SafeLink href="/zakazivanje" className="btn-primary">
-                <CalendarIcon size={20} className="mr-2" />
-                Započnite danas
-              </SafeLink>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              transition={{ delay: 0.3 }}
             >
-              <HappyStudents className="w-full h-auto" />
+              <Button
+                color="sky"
+                variant="filled"
+                size="lg"
+                onClick={() => window.location.href = pageData.hero.ctaLink}
+              >
+                {pageData.hero.ctaText}
+              </Button>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
-
-      {/* Steps Section */}
-      <section className="py-20 bg-gradient-to-b from-white via-primary-50/30 to-secondary-50/20">
+      
+      {/* Timeline Section */}
+      <section className="py-20 bg-gray-50">
         <div className="container">
-          <motion.div 
-            className="text-center mb-16"
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4">
-              <span className="text-gradient-primary">5 jednostavnih</span> koraka
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Vaš put do uspeha u{' '}
+              <AlternatingText
+                words={['5 koraka', '30 dana', 'jednom potezu']}
+                interval={3000}
+                animationMode="fade"
+                color="sky"
+              />
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Od prvog kontakta do početka transformacije vašeg deteta
+            <p className="text-xl text-gray-600">
+              Kliknite na svaki korak da saznate više
             </p>
           </motion.div>
           
-          <div className="max-w-5xl mx-auto">
-            {isLoading ? (
-              <div className="text-center py-12">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto"></div>
-                <p className="mt-4 text-gray-600">Učitavanje koraka...</p>
-              </div>
-            ) : (
-            steps.map((step, index) => (
-              <motion.div 
-                key={index} 
-                className="relative mb-16 last:mb-0"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-              >
-                {/* Connector line */}
-                {index < steps.length - 1 && (
-                  <motion.div 
-                    className="absolute left-8 top-20 bottom-0 w-1 bg-gradient-to-b from-primary-300 to-primary-100"
-                    initial={{ scaleY: 0 }}
-                    whileInView={{ scaleY: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: (index * 0.2) + 0.3, duration: 0.5 }}
-                    style={{ transformOrigin: 'top' }}
-                  />
-                )}
-                
-                <div className="flex items-start">
-                  {/* Step number */}
-                  <motion.div 
-                    className="flex-shrink-0 w-16 h-16 gradient-primary text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg z-10 relative"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    {index + 1}
-                  </motion.div>
-                  
-                  {/* Step content */}
-                  <div className="ml-8 flex-grow">
-                    <h3 className="text-3xl font-bold mb-4 text-gradient-primary">{step.title}</h3>
-                    <p className="text-gray-600 mb-6 text-lg leading-relaxed">{step.description}</p>
-                    
-                    {step.details && (
-                      <motion.div 
-                        className="bg-gradient-to-br from-white to-primary-50/50 rounded-xl p-6 mb-6 border border-primary-200 shadow-lg"
-                        whileHover={{ y: -2, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
-                      >
-                        <div className="grid gap-3">
-                          {step.details.map((detail, i) => (
-                            <motion.div 
-                              key={i} 
-                              className="flex items-start"
-                              initial={{ opacity: 0, x: -10 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              viewport={{ once: true }}
-                              transition={{ delay: (index * 0.2) + (i * 0.1) }}
-                            >
-                              <CheckIcon className="text-primary-500 mr-3 mt-1 flex-shrink-0" size={18} />
-                              <span className="text-gray-700">{detail}</span>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                    
-                    {step.action && (
-                      <SafeLink                         href={step.action.link || '/'}
-                        className="btn-primary group"
-                      >
-                        {step.action.text}
-                        <motion.span
-                          className="ml-2 group-hover:translate-x-1 transition-transform"
-                          whileHover={{ x: 5 }}
-                        >
-                          →
-                        </motion.span>
-                      </SafeLink>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))
-            )}
+          {/* Timeline */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Vertical Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-brand-sky via-brand-sun to-brand-heart opacity-20" />
+            
+            {/* Timeline Items */}
+            <div className="space-y-16">
+              {pageData.processSteps.map((step: any, index: number) => (
+                <TimelineItem
+                  key={index}
+                  step={step}
+                  index={index}
+                  isActive={activeStep === index}
+                  onClick={() => setActiveStep(index)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Programs Overview */}
-      <section className="py-20 gradient-soft-secondary">
+      
+      {/* Statistics Section */}
+      <section className="py-20 bg-white">
         <div className="container">
-          <motion.div 
-            className="text-center mb-16"
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold mb-4">
-              <span className="text-gradient-secondary">Dostupni</span> Programi
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Brojevi koji govore
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Izaberite program koji najbolje odgovara uzrastu i potrebama vašeg deteta
+            <p className="text-xl text-gray-600">
+              Pridružite se uspešnoj priči
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {programs.map((program, index) => {
-              const Icon = program.icon === 'book' ? BookIcon : 
-                         program.icon === 'brain' ? BrainIcon : 
-                         program.icon === 'target' ? TargetIcon : BookIcon;
-              return (
-              <motion.div 
-                key={index} 
-                className="card-interactive bg-white border border-secondary-100"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
-              >
-                <motion.div 
-                  className="text-5xl mb-6 text-center"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  {program.icon && typeof program.icon !== 'string' ? program.icon : <Icon size={48} className="text-primary mx-auto" />}
-                </motion.div>
-                <h3 className="text-2xl font-bold mb-4 text-center text-gradient-secondary">{program.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed text-center">{program.description}</p>
-                
-                <div className="space-y-3 bg-secondary-50 rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="flex items-center">
-                      <UsersIcon size={16} className="mr-2 text-secondary-500" />
-                      Uzrast:
-                    </span>
-                    <span className="font-semibold text-secondary-600">{program.ageGroup || program.age}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="flex items-center">
-                      <ClockIcon size={16} className="mr-2 text-secondary-500" />
-                      Trajanje:
-                    </span>
-                    <span className="font-semibold text-secondary-600">{program.duration}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="flex items-center">
-                      <TargetIcon size={16} className="mr-2 text-secondary-500" />
-                      Grupa:
-                    </span>
-                    <span className="font-semibold text-secondary-600">{program.groupSize}</span>
-                  </div>
-                </div>
-              </motion.div>
-              )
-            })}
-          </div>
+          <Statistics />
         </div>
       </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-accent-50/60 via-warm-50/40 to-primary-50/30 relative overflow-hidden">
-        {/* Floating background elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <motion.div
-            className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-accent-200 to-accent-300 rounded-full opacity-30"
-            animate={{ 
-              scale: [1, 1.2, 1],
-              rotate: [0, 180, 360]
-            }}
-            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-20 right-10 w-24 h-24 bg-gradient-to-br from-primary-200 to-primary-300 rounded-full opacity-40"
-            animate={{ 
-              y: [0, -20, 0],
-              x: [0, 10, 0]
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </div>
-        <div className="container relative z-10">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-4">
-              <span className="text-gradient-accent">Cenovnik</span> i Paketi
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Transparentne cene sa najboljem odnosu cene i vrednosti
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                className={`rounded-2xl shadow-soft p-8 relative ${
-                  plan.featured
-                    ? 'gradient-accent text-white transform scale-105 shadow-xl'
-                    : 'bg-white border border-accent-200'
-                }`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-              >
-                {plan.featured && (
-                  <motion.div 
-                    className="absolute -top-4 left-1/2 transform -translate-x-1/2"
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    <span className="bg-white text-accent-600 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                      <StarIcon size={16} className="inline mr-1" />
-                      Najpopularniji
-                    </span>
-                  </motion.div>
-                )}
-                
-                <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
-                <div className="text-4xl font-bold mb-6">
-                  {plan.price}
-                  <span className="text-lg font-normal opacity-80">/mesečno</span>
-                </div>
-                
-                <div className="space-y-4 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <motion.div 
-                      key={i} 
-                      className="flex items-center"
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: (index * 0.1) + (i * 0.05) }}
-                    >
-                      <CheckIcon 
-                        className={`mr-3 flex-shrink-0 ${plan.featured ? 'text-white' : 'text-accent-500'}`} 
-                        size={18} 
-                      />
-                      <span>{feature}</span>
-                    </motion.div>
-                  ))}
-                </div>
-                
-                <SafeLink                   href="/zakazivanje"
-                  className={`block text-center py-4 rounded-xl font-semibold transition ${
-                    plan.featured
-                      ? 'bg-white text-accent-600 hover:bg-gray-100'
-                      : 'gradient-accent text-white hover:shadow-lg'
-                  }`}
-                >
-                  Izaberite Paket
-                </SafeLink>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* FAQ Section */}
-      <section className="py-20 gradient-soft-warm">
+      <section className="py-20 bg-gray-50">
         <div className="container">
-          <motion.div 
-            className="text-center mb-16"
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold mb-4">
-              <span className="text-gradient-warm">Često Postavljana</span> Pitanja
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Često postavljana pitanja
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Odgovori na najčešća pitanja o procesu prijavljivanja
+            <p className="text-xl text-gray-600">
+              Sve što trebate znati pre pristupanja
             </p>
           </motion.div>
           
-          <div className="max-w-4xl mx-auto space-y-6">
-            {faqs.map((faq, index) => (
-              <motion.div 
-                key={index} 
-                className="card bg-white border border-warm-200"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -2 }}
-              >
-                <h3 className="text-xl font-bold mb-4 text-gradient-warm">{faq.question}</h3>
-                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-              </motion.div>
-            ))}
+          <div className="max-w-3xl mx-auto">
+            <FAQSection faqs={pageData.faqs} />
           </div>
-          
-          <motion.div 
-            className="text-center mt-12"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <SafeLink href="/faq" className="btn-warm">
-              Pogledajte sva pitanja
-            </SafeLink>
-          </motion.div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 gradient-primary text-white">
+      
+      {/* Final CTA */}
+      <section className="py-20 bg-brand-night text-white">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <SparklesIcon size={48} className="mx-auto mb-6" />
-            </motion.div>
+            <Icons.Heart className="w-16 h-16 mx-auto mb-8 text-brand-heart" />
             
             <h2 className="text-4xl font-bold mb-6">
-              Spremni da Započnete Transformaciju?
+              {pageData.finalCTA.title}
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-              Kontaktirajte nas danas i rezervišite mesto za vaše dete u našem programu
+            
+            <p className="text-xl mb-12 max-w-3xl mx-auto opacity-90">
+              {pageData.finalCTA.subtitle}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <SafeLink                 href="/zakazivanje"
-                className="btn bg-white text-primary-600 hover:bg-gray-100 group"
+              <Button
+                color="sky"
+                variant="filled"
+                size="lg"
+                onClick={() => window.location.href = pageData.finalCTA.primaryButton.link}
               >
-                <CalendarIcon size={20} className="mr-2" />
-                Zakažite Konsultacije
-              </SafeLink>
-              <SafeLink                 href="tel:+381601234567"
-                className="btn bg-primary-400 text-white hover:bg-primary-300"
+                {pageData.finalCTA.primaryButton.text}
+              </Button>
+              <Button
+                color="sky"
+                variant="outline"
+                size="lg"
+                onClick={() => window.location.href = pageData.finalCTA.secondaryButton.link}
               >
-                <PhoneIcon size={20} className="mr-2" />
-                Pozovite Nas
-              </SafeLink>
+                {pageData.finalCTA.secondaryButton.text}
+              </Button>
             </div>
-            
-            <motion.div
-              className="mt-12 max-w-md mx-auto"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-            >
-              <ReadingChild className="w-full h-auto" />
-            </motion.div>
           </motion.div>
         </div>
       </section>
     </main>
-  );
+  )
 }
-
-
-const pricingPlans = [
-  {
-    name: 'Osnovni',
-    price: '8.000 RSD',
-    features: [
-      '4 časa mesečno',
-      'Grupni časovi',
-      'Osnovni materijali',
-      'Mesečni izveštaji'
-    ],
-    featured: false
-  },
-  {
-    name: 'Standardni',
-    price: '12.000 RSD',
-    features: [
-      '8 časova mesečno',
-      'Grupni časovi',
-      'Svi materijali uključeni',
-      'Nedeljni izveštaji',
-      'Online podrška'
-    ],
-    featured: true
-  },
-  {
-    name: 'Premium',
-    price: '20.000 RSD',
-    features: [
-      '8 časova mesečno',
-      'Kombinacija grupa/individual',
-      'Premium materijali',
-      'Personalizovan pristup',
-      '24/7 online podrška',
-      'Dodatni mentoring'
-    ],
-    featured: false
-  }
-];

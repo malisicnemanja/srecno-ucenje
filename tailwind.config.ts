@@ -11,12 +11,19 @@ const config: Config = {
     extend: {
       // Brand color system for Srećno učenje
       colors: {
-        // Brand colors (converted from CMYK)
+        // Direct brand colors (converted from CMYK)
         sky: brandColors.sky,
         sun: brandColors.sun, 
         grass: brandColors.grass,
         heart: brandColors.heart,
         night: brandColors.night,
+        
+        // Brand-prefixed colors for components
+        'brand-sky': brandColors.sky,
+        'brand-sun': brandColors.sun,
+        'brand-grass': brandColors.grass,
+        'brand-heart': brandColors.heart,
+        'brand-night': brandColors.night,
         
         // Scale colors for design system
         primary: colors.primary,

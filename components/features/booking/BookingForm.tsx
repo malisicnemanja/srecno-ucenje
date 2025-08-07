@@ -7,6 +7,7 @@ import { trackEvent } from '@/lib/analytics'
 import CalendarPicker from './CalendarPicker'
 import TimePicker from './TimePicker'
 import { generateConsultationPDF, generateFilename } from '@/lib/pdf-generator'
+import { DeviceDetection, FormUtils, TouchUtils } from '@/lib/mobile-utils'
 
 interface BookingFormProps {
   preselectedType?: string
@@ -42,12 +43,18 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [currentStep, setCurrentStep] = useState(1)
+  const [isMobile, setIsMobile] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     })
+    
+    // Add haptic feedback on mobile for better UX
+    if (isMobile) {
+      TouchUtils.addHapticFeedback('light')
+    }
   }
 
   const calculateLeadScore = () => {
@@ -70,6 +77,16 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
     
     return Math.min(score, 100)
   }
+
+  // Mobile detection and form optimization
+  useEffect(() => {
+    setIsMobile(DeviceDetection.isMobile())
+    // Optimize form inputs for mobile
+    if (DeviceDetection.isMobile()) {
+      FormUtils.optimizeInputs()
+      FormUtils.preventInputZoom()
+    }
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -119,12 +136,22 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
   const nextStep = () => {
     if (currentStep < 3) {
       setCurrentStep(currentStep + 1)
+      if (isMobile) {
+        TouchUtils.addHapticFeedback('medium')
+        // Smooth scroll to top on mobile
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
     }
   }
 
   const prevStep = () => {
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1)
+      if (isMobile) {
+        TouchUtils.addHapticFeedback('light')
+        // Smooth scroll to top on mobile
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
     }
   }
 
@@ -147,24 +174,24 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="c-card u-text-center"
+        className="bg-white rounded-xl shadow-lg p-8 text-center max-w-md mx-auto"
       >
-        <div className="c-success-icon u-m-b-md">
-          <svg className="c-success-icon__svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="w-16 h-16 bg-brand-grass rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="u-h3 u-m-b-sm">Uspešno zakazano!</h3>
-        <p className="u-text-secondary u-m-b-lg">
+        <h3 className="text-2xl font-bold text-gray-900 mb-3">Uspešno zakazano!</h3>
+        <p className="text-gray-600 mb-6">
           Potvrda je automatski preuzeta. Dodatno ćemo vas kontaktirati sa detaljima.
         </p>
-        <div className="c-info-box">
-          <p className="u-text-sm u-text-secondary">
-            <span className="u-text-bold">Tip konsultacija:</span><br />
+        <div className="bg-gray-50 rounded-lg p-4 text-left space-y-2">
+          <p className="text-sm text-gray-600">
+            <span className="font-semibold">Tip konsultacija:</span><br />
             {consultationTypes.find(t => t.value === formData.consultationType)?.label}
           </p>
-          <p className="u-text-sm u-text-secondary u-m-t-sm">
-            <span className="u-text-bold">Željeni termin:</span><br />
+          <p className="text-sm text-gray-600">
+            <span className="font-semibold">Željeni termin:</span><br />
             {new Date(formData.preferredDate).toLocaleDateString('sr-RS')} u {formData.preferredTime}h
           </p>
         </div>
@@ -173,25 +200,27 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
   }
 
   return (
-    <div className="c-card">
+    <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
       <div className="mb-8">
         {/* Progress Steps */}
-        <div className="o-flex-between mb-8">
+        <div className="flex justify-between items-center mb-8" role="progressbar" aria-valuenow={currentStep} aria-valuemin={1} aria-valuemax={3} aria-label={`Korak ${currentStep} od 3`}>
           {[1, 2, 3].map((step) => (
-            <div key={step} className="o-cluster">
+            <div key={step} className="flex items-center">
               <div
-                className={`c-step-indicator ${
+                className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-all duration-200 ${
                   currentStep >= step
-                    ? 'c-step-indicator--active'
-                    : 'c-step-indicator--inactive'
+                    ? 'bg-brand-grass text-white'
+                    : 'bg-gray-200 text-gray-600'
                 }`}
+                aria-current={currentStep === step ? 'step' : undefined}
+                aria-label={`Korak ${step}${currentStep === step ? ' - trenutni korak' : currentStep > step ? ' - završen' : ' - sledeći'}`}
               >
                 {step}
               </div>
               {step < 3 && (
                 <div
-                  className={`c-step-connector ${
-                    currentStep > step ? 'c-step-connector--active' : 'c-step-connector--inactive'
+                  className={`w-16 md:w-24 h-1 mx-2 transition-all duration-200 ${
+                    currentStep > step ? 'bg-brand-grass' : 'bg-gray-200'
                   }`}
                 />
               )}
@@ -200,12 +229,12 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
         </div>
 
         {/* Step Titles */}
-        <h2 className="u-h2 u-m-b-sm">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
           {currentStep === 1 && 'Izaberite tip konsultacija'}
           {currentStep === 2 && 'Vaši podaci'}
           {currentStep === 3 && 'Dodatne informacije'}
         </h2>
-        <p className="u-text-secondary">
+        <p className="text-gray-600">
           {currentStep === 1 && 'Odaberite temu i termin koji vam odgovara'}
           {currentStep === 2 && 'Kako možemo da vas kontaktiramo'}
           {currentStep === 3 && 'Pomozite nam da se bolje pripremimo (opciono)'}
@@ -220,19 +249,19 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
           >
-            <div className="o-stack o-stack--lg">
+            <div className="space-y-8">
               <div>
-                <label className="u-label u-m-b-sm">
+                <label className="block text-lg font-semibold text-gray-900 mb-4">
                   Tip konsultacija
                 </label>
-                <div className="o-stack">
+                <div className="space-y-3">
                   {consultationTypes.map((type) => (
                     <label
                       key={type.value}
-                      className={`c-option-card ${
+                      className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
                         formData.consultationType === type.value
-                          ? 'c-option-card--selected'
-                          : 'c-option-card--default'
+                          ? 'border-brand-grass bg-brand-grass bg-opacity-5'
+                          : 'border-gray-200 hover:border-gray-300'
                       }`}
                     >
                       <input
@@ -243,23 +272,25 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                         onChange={handleChange}
                         className="sr-only"
                       />
-                      <div>
-                        <p className="u-text-bold">{type.label}</p>
-                        <p className="u-text-sm u-text-secondary">Trajanje: {type.duration}</p>
+                      <div className="flex justify-between items-center">
+                        <div>
+                          <p className="font-semibold text-gray-900">{type.label}</p>
+                          <p className="text-sm text-gray-600">Trajanje: {type.duration}</p>
+                        </div>
+                        {formData.consultationType === type.value && (
+                          <svg className="w-6 h-6 text-brand-grass" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
                       </div>
-                      {formData.consultationType === type.value && (
-                        <svg className="c-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      )}
                     </label>
                   ))}
                 </div>
               </div>
 
-              <div className="o-stack o-stack--lg">
+              <div className="space-y-6">
                 <div>
-                  <label className="u-label u-m-b-sm">
+                  <label className="block text-lg font-semibold text-gray-900 mb-4">
                     Željeni datum
                   </label>
                   <CalendarPicker
@@ -277,7 +308,7 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <label className="u-label u-m-b-sm">
+                    <label className="block text-lg font-semibold text-gray-900 mb-4">
                       Željeno vreme
                     </label>
                     <TimePicker
@@ -300,9 +331,9 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
           >
-            <div className="o-stack o-stack--lg">
+            <div className="space-y-6">
               <div>
-                <label className="u-label u-m-b-sm">
+                <label className="block text-lg font-semibold text-gray-900 mb-2">
                   Ime i prezime
                 </label>
                 <input
@@ -311,13 +342,15 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="input-modern"
+                  autoComplete="name"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-grass focus:border-transparent transition-all duration-200 text-base"
+                  style={{ fontSize: '16px' }} // Prevent zoom on iOS
                 />
               </div>
 
-              <div className="o-grid o-grid--2 o-grid--gap-lg">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="u-label u-m-b-sm">
+                  <label className="block text-lg font-semibold text-gray-900 mb-2">
                     Email adresa
                   </label>
                   <input
@@ -326,12 +359,15 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="input-modern"
+                    autoComplete="email"
+                    inputMode="email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-grass focus:border-transparent transition-all duration-200 text-base"
+                    style={{ fontSize: '16px' }} // Prevent zoom on iOS
                   />
                 </div>
 
                 <div>
-                  <label className="u-label u-m-b-sm">
+                  <label className="block text-lg font-semibold text-gray-900 mb-2">
                     Telefon
                   </label>
                   <input
@@ -340,13 +376,16 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="input-modern"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-grass focus:border-transparent transition-all duration-200 text-base"
+                    style={{ fontSize: '16px' }} // Prevent zoom on iOS
                   />
                 </div>
               </div>
 
               <div>
-                <label className="u-label u-m-b-sm">
+                <label className="block text-lg font-semibold text-gray-900 mb-2">
                   Grad
                 </label>
                 <input
@@ -356,7 +395,9 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                   onChange={handleChange}
                   required
                   placeholder="npr. Beograd"
-                  className="input-modern"
+                  autoComplete="address-level2"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-grass focus:border-transparent transition-all duration-200 text-base"
+                  style={{ fontSize: '16px' }} // Prevent zoom on iOS
                 />
               </div>
             </div>
@@ -370,17 +411,18 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
           >
-            <div className="o-stack o-stack--lg">
-              <div className="o-grid o-grid--2 o-grid--gap-lg">
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="u-label u-m-b-sm">
+                  <label className="block text-lg font-semibold text-gray-900 mb-2">
                     Poslovno iskustvo
                   </label>
                   <select
                     name="experience"
                     value={formData.experience}
                     onChange={handleChange}
-                    className="input-modern"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-grass focus:border-transparent transition-all duration-200 text-base appearance-none bg-white"
+                    style={{ fontSize: '16px' }} // Prevent zoom on iOS
                   >
                     <option value="">Izaberite</option>
                     <option value="none">Bez iskustva</option>
@@ -391,14 +433,15 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
                 </div>
 
                 <div>
-                  <label className="u-label u-m-b-sm">
+                  <label className="block text-lg font-semibold text-gray-900 mb-2">
                     Budžet za investiciju
                   </label>
                   <select
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="input-modern"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-grass focus:border-transparent transition-all duration-200 text-base appearance-none bg-white"
+                    style={{ fontSize: '16px' }} // Prevent zoom on iOS
                   >
                     <option value="">Izaberite</option>
                     <option value="under_20k">Do 20.000 EUR</option>
@@ -410,16 +453,17 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
               </div>
 
               <div>
-                <label className="u-label u-m-b-sm">
+                <label className="block text-lg font-semibold text-gray-900 mb-2">
                   Dodatne napomene
                 </label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={4}
+                  rows={isMobile ? 3 : 4}
                   placeholder="Postavite pitanja ili nam recite više o vašim ciljevima..."
-                  className="input-modern"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-grass focus:border-transparent transition-all duration-200 text-base resize-none"
+                  style={{ fontSize: '16px' }} // Prevent zoom on iOS
                 />
               </div>
             </div>
@@ -427,14 +471,17 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
         )}
 
         {/* Navigation Buttons */}
-        <div className="o-flex-between u-m-t-lg">
+        <div className="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
           {currentStep > 1 && (
             <button
               type="button"
               onClick={prevStep}
-              className="btn btn-card btn-card-arrow"
+              className="flex items-center space-x-2 px-6 py-3 text-gray-600 hover:text-gray-900 transition-colors duration-200"
             >
-              Nazad
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              <span>Nazad</span>
             </button>
           )}
           
@@ -443,7 +490,11 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
               type="button"
               onClick={nextStep}
               disabled={!isStepValid()}
-              className="btn btn-form btn-form-send ml-auto"
+              className={`ml-auto px-8 py-3 rounded-lg font-semibold transition-all duration-200 min-h-[44px] active:scale-95 ${
+                isStepValid() 
+                  ? 'bg-brand-grass text-white hover:bg-opacity-90' 
+                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              }`}
             >
               Sledeće
             </button>
@@ -451,7 +502,11 @@ export default function BookingForm({ preselectedType }: BookingFormProps) {
             <button
               type="submit"
               disabled={isSubmitting || !isStepValid()}
-              className={`btn ${isSubmitting ? 'btn-loading' : 'btn-form btn-form-send'} u-ml-auto`}
+              className={`ml-auto px-8 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                isSubmitting || !isStepValid()
+                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  : 'bg-brand-grass text-white hover:bg-opacity-90'
+              }`}
             >
               {isSubmitting ? 'Slanje...' : 'Zakaži konsultacije'}
             </button>

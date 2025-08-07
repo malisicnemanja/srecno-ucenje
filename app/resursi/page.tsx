@@ -519,21 +519,21 @@ const FolderSVG = () => (
 
 // Category Icon SVG Components
 const RocketSVG = () => (
-  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-blue-500"
+  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-primary-500"
     animate={{ y: [0, -2, 0] }} transition={{ duration: 2, repeat: Infinity }}>
     <path d="M8 1L4 7h2v6l2-2 2 2V7h2L8 1z" fill="currentColor" />
   </motion.svg>
 )
 
 const BrainSVG = () => (
-  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-purple-500"
+  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-secondary-500"
     animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 3, repeat: Infinity }}>
     <path d="M4 4c0-2 2-4 4-4s4 2 4 4c0 1-1 2-1 3s1 2 1 3c0 2-2 4-4 4s-4-2-4-4c0-1 1-2 1-3s-1-2-1-3z" fill="currentColor" />
   </motion.svg>
 )
 
 const ChartSVG = () => (
-  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-green-500"
+  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-primary-500"
     animate={{ rotate: [0, 5, -5, 0] }} transition={{ duration: 4, repeat: Infinity }}>
     <rect x="2" y="10" width="2" height="4" fill="currentColor" />
     <rect x="6" y="6" width="2" height="8" fill="currentColor" />
@@ -542,14 +542,14 @@ const ChartSVG = () => (
 )
 
 const MegaphoneSVG = () => (
-  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-red-500"
+  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-warm-500"
     animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2.5, repeat: Infinity }}>
     <path d="M1 8l3-2v4l-3-2zm4-2h8l2 2-2 2H5V6z" fill="currentColor" />
   </motion.svg>
 )
 
 const GraduationSVG = () => (
-  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-indigo-500"
+  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-accent-500"
     animate={{ y: [0, -1, 0] }} transition={{ duration: 3, repeat: Infinity }}>
     <path d="M8 2L2 5l6 3 6-3-6-3zm0 6L5 6.5v3L8 12l3-2.5v-3L8 8z" fill="currentColor" />
   </motion.svg>
@@ -563,7 +563,7 @@ const ScaleLegalSVG = () => (
 )
 
 const TrendingSVG = () => (
-  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-orange-500"
+  <motion.svg width="16" height="16" viewBox="0 0 16 16" className="text-primary-500"
     animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
     <path d="M2 12l3-3 2 2 7-7v3h2V2h-5v2h3l-5 5-2-2-3 3 1 2z" fill="currentColor" />
   </motion.svg>
@@ -712,9 +712,9 @@ export default function ResourceCenterPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-secondary-50/30 to-accent-50/20 min-h-[85vh] flex items-center">
+      <section className="relative overflow-hidden bg-secondary-50 min-h-[85vh] flex items-center">
         {/* Floating animated elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Resource Library - top left */}
@@ -844,8 +844,8 @@ export default function ResourceCenterPage() {
               </motion.div>
 
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-gray-900 leading-tight">
-                <span className="text-gradient-secondary">Centar</span>{' '}
-                <span className="text-gradient-accent">Resursa</span>
+                <span className="text-secondary-600">Centar</span>{' '}
+                <span className="text-accent-600">Resursa</span>
               </h1>
               
               <p className="text-xl lg:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -994,7 +994,7 @@ export default function ResourceCenterPage() {
                           width="16" 
                           height="16" 
                           viewBox="0 0 16 16" 
-                          className="text-yellow-500"
+                          className="text-accent-500"
                           animate={{ rotate: [0, 15, -15, 0] }}
                           transition={{ duration: 3, repeat: Infinity }}
                         >
@@ -1193,7 +1193,7 @@ export default function ResourceCenterPage() {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-3 rounded-xl font-bold hover:from-primary-600 hover:to-primary-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+                    className="w-full bg-primary-500 hover:bg-primary-600 text-white py-3 rounded-xl font-bold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center justify-center">
@@ -1276,7 +1276,7 @@ function ResourceCard({
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className={`bg-gradient-to-r from-${cardColor}-500 to-${cardColor}-600 text-white text-xs font-bold py-2 px-4 text-center relative`}
+          className={`bg-${cardColor}-500 text-white text-xs font-bold py-2 px-4 text-center relative`}
         >
           <span className="flex items-center justify-center">
             <Star size={16} className="mr-1" fill="currentColor" /> ISTAKNUTO
@@ -1360,7 +1360,7 @@ function ResourceCard({
           onClick={() => onDownload(resource)}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className={`w-full bg-gradient-to-r from-${cardColor}-500 to-${cardColor}-600 text-white py-3 rounded-xl font-bold hover:from-${cardColor}-600 hover:to-${cardColor}-700 transition-all duration-200 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5`}
+          className={`w-full bg-${cardColor}-500 hover:bg-${cardColor}-600 text-white py-3 rounded-xl font-bold transition-all duration-200 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5`}
         >
           {resource.requiresLead ? (
             <>
@@ -1395,7 +1395,7 @@ function ResourceCard({
       </div>
 
       {/* Hover glow effect */}
-      <div className={`absolute inset-0 bg-gradient-to-br from-${cardColor}-400/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl`} />
+      <div className={`absolute inset-0 bg-${cardColor}-50 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl`} />
     </motion.div>
   )
 }

@@ -48,16 +48,22 @@
 /* === 6. COMPONENTS === */
 @import './05-components/header.css';
 @import './05-components/navigation.css';
+@import './05-components/mega-menu.css';
 @import './05-components/hero.css';
 @import './05-components/card.css';
 @import './05-components/buttons.css';
 @import './05-components/forms.css';
 @import './05-components/modal.css';
 @import './05-components/toast.css';
+@import './05-components/skeleton.css';
+@import './05-components/bottom-sheet.css';
+@import './05-components/form-progress.css';
 @import './05-components/loader.css';
 @import './05-components/quiz.css';
 @import './05-components/lesson.css';
 @import './05-components/footer.css';
+@import './05-components/micro-interactions.css';
+@import './05-components/page-builder.css';
 
 /* === 7. UTILITIES === */
 @import './06-utilities/display.css';
@@ -70,6 +76,12 @@
 @import './06-utilities/layout.css';
 @import './06-utilities/accessibility.css';
 @import './06-utilities/animations.css';
+
+/* === ANIMATION SYSTEM === */
+@import '../animations.css';
+
+/* === MOBILE OPTIMIZATIONS === */
+@import './mobile-optimizations.css';
 
 /* === CMS CONTENT === */
 @import './cms/placeholders.css';
