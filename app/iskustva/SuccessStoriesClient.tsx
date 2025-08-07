@@ -7,14 +7,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Play, Star, TrendingUp, Users, Award, BookOpen, Brain, Focus, Trophy, Clock, MapPin, Quote, Filter, X, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import AchievementBadge from '@/components/ui/AchievementBadge'
-import { 
-  WordByWordReveal, 
-  NumberCounter, 
-  BrushUnderline, 
-  ScrollReveal, 
-  OptimizedAnimatedCounter,
-  FadeInOnScroll
-} from '@/components/animations'
+import { WordByWordReveal, NumberCounter } from '@/components/animations/TextAnimations'
+import { BrushUnderline } from '@/components/animations/BrushUnderline'
+import ScrollReveal from '@/components/animations/ScrollReveal'
+import OptimizedAnimatedCounter from '@/components/animations/OptimizedAnimatedCounter'
+import { FadeInOnScroll } from '@/components/animations/ScrollTrigger'
 import { StaggeredList } from '@/components/animations/ScrollTrigger'
 
 interface Result {
@@ -146,7 +143,7 @@ export default function SuccessStoriesClient({ successStories = [], stats }: Suc
 
       // Achievement filter - simplified for demo
       let achievementMatch = true
-      if (selectedFilters.achievement !== 'svi') {
+      if (selectedFilters.achievement !== 'svi' && story.results) {
         const hasCompetition = story.results.some(r => r.label.toLowerCase().includes('takmič'))
         const hasImprovement = story.results.some(r => r.metric.includes('%'))
         const hasCertificate = story.results.some(r => r.label.toLowerCase().includes('sertif'))
@@ -176,6 +173,7 @@ export default function SuccessStoriesClient({ successStories = [], stats }: Suc
   }
 
   const getBadgeType = (results: Result[]) => {
+    if (!results || results.length === 0) return 'course-complete'
     if (results.some(r => r.label.toLowerCase().includes('takmič'))) return 'champion'
     if (results.some(r => r.metric.includes('%'))) return 'fast-learner'
     return 'course-complete'

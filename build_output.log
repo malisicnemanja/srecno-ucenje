@@ -1,0 +1,53 @@
+
+> srecno-ucenje@1.0.0 build
+> cross-env NODE_ENV=production next build
+
+  ▲ Next.js 14.2.31
+  - Environments: .env.local
+  - Experiments (use with caution):
+    · esmExternals
+    · instrumentationHook
+
+   Creating an optimized production build ...
+> [PWA] Compile server
+> [PWA] Compile server
+> [PWA] Compile client (static)
+> [PWA] Auto register service worker with: /Users/nemanjamalisic/Desktop/srecno-ucenje 2/node_modules/next-pwa/register.js
+> [PWA] Service worker: /Users/nemanjamalisic/Desktop/srecno-ucenje 2/public/sw.js
+> [PWA]   url: /sw.js
+> [PWA]   scope: /
+Failed to compile.
+
+./components/ui/Button.tsx
+Module parse failed: Duplicate export 'Button' (112:9)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+ * ./node_modules/unplugin/dist/webpack/loaders/transform.js
+You may need an additional loader to handle the result of these loaders.
+| };
+| export default Button;
+> export { Button };
+| 
+
+Import trace for requested module:
+./components/ui/Button.tsx
+./app/fransiza-modeli/page.tsx
+
+./components/ui/Button.tsx
+Module parse failed: Duplicate export 'Button' (7:15)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/index.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+ * ./node_modules/unplugin/dist/webpack/loaders/transform.js
+You may need an additional loader to handle the result of these loaders.
+| 
+| const e1 = createProxy(String.raw`/Users/nemanjamalisic/Desktop/srecno-ucenje 2/components/ui/Button.tsx#Button`);
+> export { e1 as Button };
+
+Import trace for requested module:
+./components/ui/Button.tsx
+./app/blog/page.tsx
+
+
+> Build failed because of webpack errors

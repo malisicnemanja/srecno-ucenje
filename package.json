@@ -15,6 +15,10 @@
     "populate-cms": "tsx scripts/populate-cms.ts",
     "populate-content": "tsx scripts/populate-additional-content.ts",
     "populate-all": "npm run populate-cms && npm run populate-content",
+    "migrate-faq": "tsx scripts/migrate-faq-data.ts",
+    "verify-faq": "tsx scripts/verify-faq-migration.ts",
+    "fix-orphaned-faqs": "tsx scripts/fix-orphaned-faqs.ts",
+    "migrate-faq-complete": "tsx scripts/run-faq-migration.ts",
     "perf:check": "node scripts/performance-check.js",
     "perf:analyze": "cross-env ANALYZE=true npm run build",
     "perf:budget": "npm run build && bundlesize"
@@ -25,6 +29,7 @@
     "@react-google-maps/api": "^2.20.7",
     "@react-pdf/renderer": "^4.3.0",
     "@sanity/client": "^6.10.0",
+    "@sanity/color-input": "^4.0.6",
     "@sanity/icons": "^3.7.4",
     "@sanity/image-url": "^1.1.0",
     "@sentry/nextjs": "^10.0.0",

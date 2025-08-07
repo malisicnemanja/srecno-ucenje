@@ -4,13 +4,13 @@
  * All components respect reduced motion preferences and optimize for mobile
  */
 
-// Core animation components
+// Core animation components - ScrollTrigger exports
 export { default as ScrollTrigger, FadeInOnScroll, SlideUpOnScroll, ScaleInOnScroll, StaggeredList, useScrollTrigger } from './ScrollTrigger'
 
 // Page transitions
 export { default as PageTransition, RouteTransition, usePageTransition } from './PageTransition'
 
-// Scroll reveal animations
+// Scroll reveal animations - ScrollReveal exports
 export { default as ScrollReveal, StaggeredReveal, FadeInList, ImageReveal, useScrollReveal } from './ScrollReveal'
 
 // Text animations (enhanced)

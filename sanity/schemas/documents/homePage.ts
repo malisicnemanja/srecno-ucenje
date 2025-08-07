@@ -182,7 +182,7 @@ const homePage = defineType({
     }),
     defineField({
       name: 'homeFAQ',
-      title: 'Home FAQ (Direct)',
+      title: 'Home FAQ (References)',
       type: 'object',
       fields: [
         {
@@ -195,30 +195,8 @@ const homePage = defineType({
           name: 'faqs',
           title: 'FAQs',
           type: 'array',
-          of: [
-            {
-              type: 'object',
-              fields: [
-                {
-                  name: 'question',
-                  title: 'Question',
-                  type: 'string',
-                  validation: (Rule) => Rule.required(),
-                },
-                {
-                  name: 'answer',
-                  title: 'Answer',
-                  type: 'text',
-                  validation: (Rule) => Rule.required(),
-                },
-                {
-                  name: 'category',
-                  title: 'Category',
-                  type: 'string',
-                },
-              ],
-            },
-          ],
+          of: [{ type: 'reference', to: [{ type: 'faq' }] }],
+          validation: (Rule) => Rule.max(10),
         },
       ],
     }),

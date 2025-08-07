@@ -1,11 +1,11 @@
 import { defineType } from 'sanity'
-import { QuestionMarkIcon } from '@sanity/icons'
+import { HelpCircleIcon } from '@sanity/icons'
 
 export default defineType({
   name: 'modernFranchiseFAQ',
   title: 'Franchise FAQ',
   type: 'document',
-  icon: QuestionMarkIcon,
+  icon: HelpCircleIcon,
   fields: [
     {
       name: 'question',

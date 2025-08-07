@@ -247,13 +247,9 @@ export interface HomePage extends SanityDocument {
     sectionTitle?: string
     faqs?: FAQ[]
   }
-  homeFAQ?: { // legacy field
+  homeFAQ?: {
     sectionTitle?: string
-    faqs?: {
-      question?: string
-      answer?: string
-      category?: string
-    }[]
+    faqs?: FAQ[]
   }
   interactiveClassroom?: {
     sectionTitle?: string

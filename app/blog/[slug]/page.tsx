@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import SafeLink from '@/components/common/SafeLink'
@@ -7,7 +6,7 @@ import { notFound } from 'next/navigation'
 import { PortableText } from '@portabletext/react'
 import { FloatingLetters, PulseButton } from '@/components/animations'
 import { BrushUnderline, BrushStrokeText } from '@/components/animations/BrushUnderline'
-import { Button } from '@/components/ui'
+import { Button } from '@/components/ui/Button'
 import { 
   Icons,
   BookIcon,
@@ -40,79 +39,49 @@ function SocialShare({ title, url }: { title: string; url: string }) {
     <div className="flex items-center gap-4">
       <span className="text-gray-700 font-medium">Podelite:</span>
       <div className="flex items-center gap-2">
-        <Button
-          variant="outline"
-          color="sky"
-          size="sm"
-          onClick={() => window.open(shareData.facebook, '_blank')}
-          leftIcon={<ChatIcon size={16} />}
+        <a
+          href={shareData.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium bg-transparent text-[#5DBFDB] border-2 border-[#5DBFDB] rounded-lg hover:bg-[#5DBFDB] hover:text-white transition-all duration-300"
         >
+          <ChatIcon size={16} />
           Facebook
-        </Button>
-        <Button
-          variant="outline"
-          color="sky"
-          size="sm"
-          onClick={() => window.open(shareData.twitter, '_blank')}
-          leftIcon={<ChatIcon size={16} />}
+        </a>
+        <a
+          href={shareData.twitter}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium bg-transparent text-[#5DBFDB] border-2 border-[#5DBFDB] rounded-lg hover:bg-[#5DBFDB] hover:text-white transition-all duration-300"
         >
+          <ChatIcon size={16} />
           Twitter
-        </Button>
-        <Button
-          variant="outline"
-          color="grass"
-          size="sm"
-          onClick={() => window.open(shareData.linkedin, '_blank')}
-          leftIcon={<ChatIcon size={16} />}
+        </a>
+        <a
+          href={shareData.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium bg-transparent text-[#91C733] border-2 border-[#91C733] rounded-lg hover:bg-[#91C733] hover:text-white transition-all duration-300"
         >
+          <ChatIcon size={16} />
           LinkedIn
-        </Button>
-        <Button
-          variant="outline"
-          color="heart"
-          size="sm"
-          onClick={() => window.open(shareData.email, '_blank')}
-          leftIcon={<EmailIcon size={16} />}
+        </a>
+        <a
+          href={shareData.email}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium bg-transparent text-[#E53935] border-2 border-[#E53935] rounded-lg hover:bg-[#E53935] hover:text-white transition-all duration-300"
         >
+          <EmailIcon size={16} />
           Email
-        </Button>
+        </a>
       </div>
     </div>
   )
 }
 
-// Newsletter Signup Component
+// Newsletter Signup Component - Server-side rendered version
 function NewsletterSignup() {
-  const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setIsSubmitted(true)
-    setIsSubmitting(false)
-    setEmail('')
-  }
-
-  if (isSubmitted) {
-    return (
-      <div className="bg-[#91C733] rounded-2xl p-8 text-white text-center">
-        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-          <Icons.Check size={32} className="text-white" />
-        </div>
-        <h3 className="text-2xl font-bold mb-2">Hvala vam!</h3>
-        <p className="text-lg opacity-90">
-          Uspešno ste se prijavili za naš newsletter. Uskoro ćete dobiti najnovije članke!
-        </p>
-      </div>
-    )
-  }
-
   return (
     <div className="bg-[#F4C950] rounded-2xl p-8 text-center">
       <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -134,26 +103,21 @@ function NewsletterSignup() {
         </p>
       </div>
       
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+      <form action="/api/newsletter" method="POST" className="max-w-md mx-auto">
         <div className="flex flex-col sm:flex-row gap-3">
           <input
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            name="email"
             placeholder="Unesite vašu email adresu"
             required
             className="flex-1 px-4 py-3 rounded-lg border-0 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-white focus:outline-none"
           />
-          <Button
+          <button
             type="submit"
-            variant="filled"
-            color="night"
-            size="md"
-            loading={isSubmitting}
-            className="whitespace-nowrap"
+            className="px-4 py-3 text-base font-medium bg-[#1E293B] text-white border-2 border-[#1E293B] rounded-lg hover:bg-transparent hover:text-[#1E293B] transition-all duration-300 whitespace-nowrap"
           >
             Prijavite se
-          </Button>
+          </button>
         </div>
       </form>
     </div>
@@ -186,32 +150,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return generateBlogPostMetadata(params.slug, post)
 }
 
-'use client'
 
-function ReadingProgressBarClient() {
-  const [progress, setProgress] = useState(0)
-
-  useEffect(() => {
-    const updateProgress = () => {
-      const scrollTop = window.scrollY
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight
-      const progress = (scrollTop / docHeight) * 100
-      setProgress(Math.min(100, Math.max(0, progress)))
-    }
-
-    window.addEventListener('scroll', updateProgress)
-    return () => window.removeEventListener('scroll', updateProgress)
-  }, [])
-
-  return (
-    <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
-      <div 
-        className="h-full bg-[#5DBFDB] transition-all duration-150 ease-out"
-        style={{ width: `${progress}%` }}
-      />
-    </div>
-  )
-}
+// Reading progress bar component removed for build compatibility
 
 export default async function BlogPostPage({ params }: Props) {
   const post = await getBlogPostBySlug(params.slug)
@@ -276,7 +216,7 @@ export default async function BlogPostPage({ params }: Props) {
       <StructuredData data={breadcrumbStructuredData} id="blog-breadcrumb-structured-data" />
       
       <main className="relative">
-      <ReadingProgressBarClient />
+      {/* Reading progress bar removed for build compatibility */}
       
       {/* Hero sekcija */}
       <section className="relative min-h-[70vh] bg-[#5DBFDB] overflow-hidden">
@@ -424,39 +364,54 @@ export default async function BlogPostPage({ params }: Props) {
                   value={post.content}
                   components={{
                     block: {
-                      h1: ({children}) => (
-                        <h1 className="text-3xl font-bold text-[#1E293B] mb-6 mt-12 relative">
-                          <BrushStrokeText 
-                            wordsToHighlight={[String(children).split(' ').slice(-1)[0]]}
-                            brushColor="#91C733"
-                            brushVariant="underline"
-                          >
-                            {String(children)}
-                          </BrushStrokeText>
-                        </h1>
-                      ),
-                      h2: ({children}) => (
-                        <h2 className="text-2xl font-bold text-[#1E293B] mb-4 mt-10 relative">
-                          <BrushStrokeText 
-                            wordsToHighlight={[String(children).split(' ').slice(-1)[0]]}
-                            brushColor="#F4C950"
-                            brushVariant="underline"
-                          >
-                            {String(children)}
-                          </BrushStrokeText>
-                        </h2>
-                      ),
-                      h3: ({children}) => (
-                        <h3 className="text-xl font-bold text-[#1E293B] mb-4 mt-8 relative">
-                          <BrushStrokeText 
-                            wordsToHighlight={[String(children).split(' ').slice(-1)[0]]}
-                            brushColor="#5DBFDB"
-                            brushVariant="underline"
-                          >
-                            {String(children)}
-                          </BrushStrokeText>
-                        </h3>
-                      ),
+                      h1: ({children}) => {
+                        const text = typeof children === 'string' ? children : Array.isArray(children) ? children.join('') : String(children || '')
+                        const words = text.split(' ').filter(Boolean)
+                        const lastWord = words.length > 0 ? words[words.length - 1] : ''
+                        return (
+                          <h1 className="text-3xl font-bold text-[#1E293B] mb-6 mt-12 relative">
+                            <BrushStrokeText 
+                              wordsToHighlight={lastWord ? [lastWord] : []}
+                              brushColor="#91C733"
+                              brushVariant="underline"
+                            >
+                              {text}
+                            </BrushStrokeText>
+                          </h1>
+                        )
+                      },
+                      h2: ({children}) => {
+                        const text = typeof children === 'string' ? children : Array.isArray(children) ? children.join('') : String(children || '')
+                        const words = text.split(' ').filter(Boolean)
+                        const lastWord = words.length > 0 ? words[words.length - 1] : ''
+                        return (
+                          <h2 className="text-2xl font-bold text-[#1E293B] mb-4 mt-10 relative">
+                            <BrushStrokeText 
+                              wordsToHighlight={lastWord ? [lastWord] : []}
+                              brushColor="#F4C950"
+                              brushVariant="underline"
+                            >
+                              {text}
+                            </BrushStrokeText>
+                          </h2>
+                        )
+                      },
+                      h3: ({children}) => {
+                        const text = typeof children === 'string' ? children : Array.isArray(children) ? children.join('') : String(children || '')
+                        const words = text.split(' ').filter(Boolean)
+                        const lastWord = words.length > 0 ? words[words.length - 1] : ''
+                        return (
+                          <h3 className="text-xl font-bold text-[#1E293B] mb-4 mt-8 relative">
+                            <BrushStrokeText 
+                              wordsToHighlight={lastWord ? [lastWord] : []}
+                              brushColor="#5DBFDB"
+                              brushVariant="underline"
+                            >
+                              {text}
+                            </BrushStrokeText>
+                          </h3>
+                        )
+                      },
                       normal: ({children}) => (
                         <p className="text-gray-700 leading-relaxed mb-6 text-lg">{children}</p>
                       ),
@@ -544,22 +499,20 @@ export default async function BlogPostPage({ params }: Props) {
                     </p>
                     
                     <div className="flex flex-wrap gap-3">
-                      <Button
-                        variant="outline"
-                        color="sky"
-                        size="sm"
-                        leftIcon={<EmailIcon size={16} />}
+                      <a
+                        href="/kontakt"
+                        className="inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium bg-transparent text-[#5DBFDB] border-2 border-[#5DBFDB] rounded-lg hover:bg-[#5DBFDB] hover:text-white transition-all duration-300"
                       >
+                        <EmailIcon size={16} />
                         Kontaktirajte autora
-                      </Button>
-                      <Button
-                        variant="outline"
-                        color="grass"
-                        size="sm"
-                        leftIcon={<BookIcon size={16} />}
+                      </a>
+                      <a
+                        href="/blog"
+                        className="inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium bg-transparent text-[#91C733] border-2 border-[#91C733] rounded-lg hover:bg-[#91C733] hover:text-white transition-all duration-300"
                       >
+                        <BookIcon size={16} />
                         Više članaka
-                      </Button>
+                      </a>
                     </div>
                   </div>
                 </div>

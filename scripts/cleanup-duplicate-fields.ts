@@ -24,7 +24,6 @@ const cleanupRules: CleanupRule[] = [
     fieldsToRemove: [
       'enhancedHero.ctaPrimary',
       'enhancedHero.ctaSecondary',
-      'homeFAQ',
       'newsletterCTA',
     ],
   },
@@ -140,7 +139,6 @@ async function verifyDataIntegrity() {
         'homePage': {
           'enhancedHero.ctaPrimary': 'enhancedHero.primaryCta',
           'enhancedHero.ctaSecondary': 'enhancedHero.secondaryCta',
-          'homeFAQ': 'homeFaqs',
           'newsletterCTA': 'newsletter',
         },
         'testimonial': {

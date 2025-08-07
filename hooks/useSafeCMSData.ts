@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import * as React from 'react'
 import { 
   validateLinks, 
   validateNavigationData, 
@@ -96,7 +97,7 @@ export const useValidatePageLinks = () => {
 }
 
 // Export a provider component for app-wide validation
-export const CMSDataValidator: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const CMSDataValidator = ({ children }: { children: React.ReactNode }) => {
   useValidatePageLinks()
-  return <>{children}</>
+  return React.createElement(React.Fragment, {}, children)
 }

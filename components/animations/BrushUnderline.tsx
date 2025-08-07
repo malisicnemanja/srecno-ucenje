@@ -128,7 +128,7 @@ export const BrushUnderline = ({
 
 // Enhanced brush stroke with text integration
 interface BrushStrokeTextProps {
-  children: string
+  children: React.ReactNode
   wordsToHighlight?: string[]
   brushColor?: string
   brushVariant?: 'underline' | 'highlight' | 'circle'
@@ -154,10 +154,22 @@ export const BrushStrokeText = ({
     }, animationDelay)
     
     return () => clearTimeout(timer)
-  }, [])
+  }, [animationDelay])
   
   const renderTextWithBrushStrokes = () => {
-    const words = children.split(' ')
+    // Convert children to string safely
+    const text = typeof children === 'string' 
+      ? children 
+      : Array.isArray(children) 
+        ? children.join('') 
+        : String(children || '')
+    
+    // If no text or no words to highlight, return as is
+    if (!text || wordsToHighlight.length === 0) {
+      return text
+    }
+    
+    const words = text.split(' ')
     
     return words.map((word, index) => {
       const shouldHighlight = wordsToHighlight.some(highlightWord => 

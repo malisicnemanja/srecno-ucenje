@@ -56,7 +56,30 @@ export const homePagesQuery = groq`
     franchiseSteps,
     franchiseModels,
     successStories,
-    homeFaqs,
+    homeFaqs {
+      sectionTitle,
+      faqs[]->{
+        _id,
+        question,
+        answer,
+        category->{
+          name
+        },
+        order
+      }
+    },
+    homeFAQ {
+      sectionTitle,
+      faqs[]->{
+        _id,
+        question,
+        answer,
+        category->{
+          name
+        },
+        order
+      }
+    },
     interactiveClassroom,
     leadMagnets,
     newsletter,
@@ -455,6 +478,30 @@ export const homePageQuery = groq`
       authorRole,
       content,
       rating
+    },
+    homeFaqs {
+      sectionTitle,
+      faqs[]->{
+        _id,
+        question,
+        answer,
+        category->{
+          name
+        },
+        order
+      }
+    },
+    homeFAQ {
+      sectionTitle,
+      faqs[]->{
+        _id,
+        question,
+        answer,
+        category->{
+          name
+        },
+        order
+      }
     },
     cta {
       title,

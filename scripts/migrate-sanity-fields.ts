@@ -29,8 +29,6 @@ const migrationRules: MigrationRule[] = [
       // Migrate CTA fields
       { from: 'enhancedHero.ctaPrimary', to: 'enhancedHero.primaryCta' },
       { from: 'enhancedHero.ctaSecondary', to: 'enhancedHero.secondaryCta' },
-      // Standardize FAQ fields
-      { from: 'homeFAQ', to: 'homeFaqs' },
       { from: 'newsletterCTA', to: 'newsletter' },
     ],
   },

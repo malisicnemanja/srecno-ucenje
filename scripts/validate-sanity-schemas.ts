@@ -103,7 +103,7 @@ function checkRequiredFields(doc: any, type: string, result: ValidationResult) {
 // Check for deprecated fields that shouldn't exist anymore
 function checkDeprecatedFields(doc: any, type: string, result: ValidationResult) {
   const deprecatedFields: { [key: string]: string[] } = {
-    'homePage': ['homeFAQ', 'newsletterCTA', 'enhancedHero.ctaPrimary', 'enhancedHero.ctaSecondary'],
+    'homePage': ['newsletterCTA', 'enhancedHero.ctaPrimary', 'enhancedHero.ctaSecondary'],
     'testimonial': ['name', 'role'],
     'blogPost': ['readingTime'],
     'program': ['ageRange'],

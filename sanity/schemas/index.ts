@@ -14,9 +14,6 @@ import homePage from './documents/homePage'
 import methodology from './documents/methodology'
 import calculatorSettings from './documents/calculatorSettings'
 import calculatorResult from './documents/calculatorResult'
-// DEPRECATED: Remove quiz schemas - functionality moved to franchise application
-// import quiz from './documents/quiz'
-// import quizResult from './documents/quizResult'
 import resource from './documents/resource'
 import booking from './documents/booking'
 import newsletterSubscriber from './documents/newsletterSubscriber'
@@ -26,7 +23,8 @@ import authorTimeline from './authorTimeline'
 import authorAchievements from './authorAchievements'
 import publications from './publications'
 import trainingProgram from './trainingProgram'
-// New comprehensive franchise schemas
+
+// Comprehensive franchise schemas (clean, modern versions)
 import franchiseModelsPage from './documents/franchiseModelsPage'
 import franchisePackage from './documents/franchisePackage'
 import howToJoinPage from './documents/howToJoinPage'
@@ -37,7 +35,7 @@ import schoolsPage from './documents/schoolsPage'
 import enhancedFranchiseField from './documents/enhancedFranchiseField'
 import migrationStrategy from './documents/migrationStrategy'
 
-// Modern CMS Architecture
+// Modern CMS Architecture (core admin functionality)
 import modernPage from './documents/modernPage'
 import modernFranchisePackage from './documents/modernFranchisePackage'
 import modernFranchiseLocation from './documents/modernFranchiseLocation'
@@ -45,7 +43,7 @@ import modernFranchiseFAQ from './documents/modernFranchiseFAQ'
 import modernSiteSettings from './documents/modernSiteSettings'
 import modernNavigation from './documents/modernNavigation'
 
-// Legacy schemas (to be migrated)
+// Legacy schemas (preserved for data integrity)
 import locationData from './locationData'
 import franchiseSteps from './franchiseSteps'
 import franchiseApplication from './franchise-application'
@@ -62,7 +60,7 @@ import legalPage from './documents/legalPages'
 import bookingPage from './documents/bookingPage'
 import virtualClassroom from './documents/virtualClassroom'
 
-// Object types
+// Object types (core building blocks)
 import hero from './objects/hero'
 import cta from './objects/cta'
 import feature from './objects/feature'
@@ -81,7 +79,7 @@ import pageBuilder from './objects/pageBuilder'
 import navigationSettings from './objects/navigationSettings'
 import validationRules from './objects/validationRules'
 
-// Modern CMS Objects
+// Modern CMS Objects (enhanced UI components)
 import button from './objects/button'
 import modernHero from './objects/modernHero'
 import pageSection from './objects/pageSection'
@@ -90,35 +88,14 @@ import modernPricingPlan from './objects/modernPricingPlan'
 import modernTestimonial from './objects/modernTestimonial'
 
 export const schemaTypes = [
-  // Documents
+  // === CORE DOCUMENTS (Essential for admin operation) ===
   siteSettings,
-  page,
-  blogPost,
-  blogCategory,
-  author,
-  successStory,
-  program,
-  faq,
-  faqCategory,
-  testimonial,
-  teamMember,
   homePage,
-  methodology,
-  calculatorSettings,
-  calculatorResult,
-  // DEPRECATED: Quiz functionality moved to franchise application
-  // quiz,
-  // quizResult,
-  resource,
-  booking,
-  newsletterSubscriber,
-  notificationBar,
   navigation,
-  authorTimeline,
-  authorAchievements,
-  publications,
-  trainingProgram,
-  // New franchise CMS architecture
+  notificationBar,
+  
+  // === FRANCHISE MANAGEMENT (Primary business focus) ===
+  // Modern franchise architecture
   franchiseModelsPage,
   franchisePackage,
   howToJoinPage,
@@ -129,7 +106,7 @@ export const schemaTypes = [
   enhancedFranchiseField,
   migrationStrategy,
   
-  // Modern CMS Architecture
+  // Modern CMS components
   modernPage,
   modernFranchisePackage,
   modernFranchiseLocation,
@@ -137,7 +114,7 @@ export const schemaTypes = [
   modernSiteSettings,
   modernNavigation,
   
-  // Legacy schemas (to be migrated)
+  // Legacy franchise (preserved for backward compatibility)
   locationData,
   franchiseSteps,
   franchiseApplication,
@@ -145,15 +122,62 @@ export const schemaTypes = [
   franchiseField,
   franchiseMotivational,
   franchiseApplicationSubmission,
+  
+  // Financial tools
+  calculatorSettings,
+  calculatorResult,
+  
+  // === CONTENT MANAGEMENT ===
+  // Pages and navigation
+  page,
+  
+  // Blog system
+  blogPost,
+  blogCategory,
+  
+  // Educational content
+  methodology,
+  program,
+  trainingProgram,
+  virtualClassroom,
+  resource,
+  
+  // Books and publications
   book,
   booksLanding,
-  experience,
+  publications,
+  
+  // === PEOPLE & TESTIMONIALS ===
+  // Author information
+  author,
   aboutAuthor,
-  errorPage,
-  legalPage,
+  authorTimeline,
+  authorAchievements,
+  
+  // Team and testimonials
+  teamMember,
+  successStory,
+  testimonial,
+  
+  // === CUSTOMER INTERACTION ===
+  // Bookings and consultations
+  booking,
   bookingPage,
-  virtualClassroom,
-  // Objects
+  
+  // Support and communication
+  faq,
+  faqCategory,
+  newsletterSubscriber,
+  
+  // === LOCATIONS & EXPERIENCES ===
+  experience,
+  
+  // === ADMINISTRATIVE PAGES ===
+  legalPage,
+  errorPage,
+  
+  // === OBJECT TYPES (Building blocks for all documents) ===
+  // Core objects
   hero,
   cta,
   feature,
@@ -172,7 +196,7 @@ export const schemaTypes = [
   navigationSettings,
   validationRules,
   
-  // Modern CMS Objects
+  // Modern objects (enhanced UX)
   button,
   modernHero,
   pageSection,
@@ -180,3 +204,35 @@ export const schemaTypes = [
   modernPricingPlan,
   modernTestimonial,
 ]
+
+// Export configuration for easy access
+export const schemaConfig = {
+  // Core categories for admin organization
+  categories: {
+    core: ['siteSettings', 'homePage', 'navigation', 'notificationBar'],
+    franchise: ['franchisePackage', 'school', 'franchiseApplication', 'calculatorSettings'],
+    content: ['blogPost', 'program', 'resource', 'book'],
+    people: ['author', 'teamMember', 'testimonial'],
+    customer: ['booking', 'faq', 'newsletterSubscriber'],
+    pages: ['page', 'legalPage', 'errorPage'],
+  },
+  
+  // Priority schemas for dashboard
+  priority: [
+    'franchiseApplicationSubmission', // Most important - incoming applications
+    'homePage', // Main website entry
+    'siteSettings', // Core configuration
+    'franchisePackage', // Business offerings
+    'school', // Locations
+    'blogPost', // Content marketing
+    'testimonial', // Social proof
+  ],
+  
+  // Hidden from main navigation (technical schemas)
+  hidden: [
+    'migrationStrategy',
+    'validationRules',
+    'navigationSettings',
+    'enhancedFranchiseField',
+  ],
+}

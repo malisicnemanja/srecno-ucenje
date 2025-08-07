@@ -1,5 +1,6 @@
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
+import { colorInput } from '@sanity/color-input'
 // import { visionTool } from '@sanity/vision' // Removed to reduce bundle size
 import { schemaTypes } from './sanity/schemas'
 import { deskStructure } from './sanity/deskStructure'
@@ -17,8 +18,9 @@ const projectId = '08ctxj6y'
 const dataset = 'production'
 
 export default defineConfig({
-  name: 'default',
-  title: 'Srećno učenje',
+  name: 'srecno-ucenje-admin',
+  title: '🏢 Srećno učenje - Upravljanje franšizom',
+  subtitle: 'Profesionalni admin panel za upravljanje franšizama',
   basePath: '/studio',
 
   projectId,
@@ -27,6 +29,11 @@ export default defineConfig({
   plugins: [
     structureTool({
       structure: deskStructure,
+      name: 'admin-dashboard',
+      title: 'Admin Dashboard',
+    }),
+    colorInput({
+      enableAlpha: true,
     }),
     // Vision tool removed to reduce bundle size - can be added back in development if needed
   ],
@@ -39,4 +46,11 @@ export default defineConfig({
     projectId,
     dataset,
   },
+
+  // Theme configuration removed to prevent potential React rendering issues
+
+  // Studio configuration removed to prevent React errors
+
+  // Document actions customization simplified to prevent React errors
+  // Removed complex filtering to avoid potential issues with action objects
 })
