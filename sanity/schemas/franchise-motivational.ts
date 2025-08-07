@@ -67,14 +67,14 @@ export default defineType({
               type: 'string',
               options: {
                 list: [
-                  { title: '🏢 Franšize/Lokacije', value: 'franchise' },
-                  { title: '👥 Polaznici/Korisnici', value: 'users' },
-                  { title: '👨‍🏫 Edukatori/Treneri', value: 'educators' },
-                  { title: '📈 Uspešnost/Rast', value: 'growth' },
-                  { title: '⭐ Ocena/Kvalitet', value: 'rating' },
-                  { title: '🎓 Sertifikati', value: 'certificates' },
-                  { title: '🏆 Nagrade', value: 'awards' },
-                  { title: '📍 Gradovi', value: 'cities' }
+                  { title: 'Franšize/Lokacije', value: 'franchise' },
+                  { title: 'Polaznici/Korisnici', value: 'users' },
+                  { title: 'Edukatori/Treneri', value: 'educators' },
+                  { title: 'Uspešnost/Rast', value: 'growth' },
+                  { title: 'Ocena/Kvalitet', value: 'rating' },
+                  { title: 'Sertifikati', value: 'certificates' },
+                  { title: 'Nagrade', value: 'awards' },
+                  { title: 'Gradovi', value: 'cities' }
                 ]
               }
             }),
@@ -172,14 +172,14 @@ export default defineType({
               type: 'string',
               options: {
                 list: [
-                  { title: '🎓 Obuka/Edukacija', value: 'education' },
-                  { title: '🤝 Podrška/Pomoć', value: 'support' },
-                  { title: '📈 Marketing/Promocija', value: 'marketing' },
-                  { title: '💼 Biznis model', value: 'business' },
-                  { title: '🛠️ Alati/Resursi', value: 'tools' },
-                  { title: '🏆 Brend/Reputacija', value: 'brand' },
-                  { title: '💰 Finansije/Profitabilnost', value: 'finance' },
-                  { title: '🌐 Mreža/Zajednica', value: 'network' }
+                  { title: 'Obuka/Edukacija', value: 'education' },
+                  { title: 'Podrška/Pomoć', value: 'support' },
+                  { title: 'Marketing/Promocija', value: 'marketing' },
+                  { title: 'Biznis model', value: 'business' },
+                  { title: 'Alati/Resursi', value: 'tools' },
+                  { title: 'Brend/Reputacija', value: 'brand' },
+                  { title: 'Finansije/Profitabilnost', value: 'finance' },
+                  { title: 'Mreža/Zajednica', value: 'network' }
                 ]
               }
             })

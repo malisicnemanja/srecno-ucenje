@@ -144,9 +144,9 @@ export default defineType({
     },
     prepare({ title, subtitle, media }) {
       const statusLabel = {
-        'active': '✅ Aktivan',
-        'coming-soon': '🔜 Uskoro',
-        'in-preparation': '🚧 U pripremi'
+        'active': 'Aktivan',
+        'coming-soon': 'Uskoro',
+        'in-preparation': 'U pripremi'
       }
       return {
         title,

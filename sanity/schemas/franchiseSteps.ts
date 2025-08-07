@@ -25,14 +25,14 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: '📞 Telefon/Kontakt', value: 'phone' },
-          { title: '🗓️ Kalendar/Zakazivanje', value: 'calendar' },
-          { title: '💬 Razgovor/Konsultacije', value: 'chat' },
-          { title: '🤝 Ugovor/Potpisivanje', value: 'contract' },
-          { title: '🎓 Obuka/Edukacija', value: 'education' },
-          { title: '🚀 Pokretanje/Start', value: 'launch' },
-          { title: '📊 Analiza/Procena', value: 'analysis' },
-          { title: '🏗️ Izgradnja/Setup', value: 'setup' }
+          { title: 'Telefon/Kontakt', value: 'phone' },
+          { title: 'Kalendar/Zakazivanje', value: 'calendar' },
+          { title: 'Razgovor/Konsultacije', value: 'chat' },
+          { title: 'Ugovor/Potpisivanje', value: 'contract' },
+          { title: 'Obuka/Edukacija', value: 'education' },
+          { title: 'Pokretanje/Start', value: 'launch' },
+          { title: 'Analiza/Procena', value: 'analysis' },
+          { title: 'Izgradnja/Setup', value: 'setup' }
         ]
       },
       validation: Rule => Rule.required()
@@ -119,21 +119,9 @@ export default defineType({
       isActive: 'isActive'
     },
     prepare({ title, order, icon, isActive }) {
-      const iconMap: Record<string, string> = {
-        phone: '📞',
-        calendar: '🗓️',
-        chat: '💬',
-        contract: '🤝',
-        education: '🎓',
-        launch: '🚀',
-        analysis: '📊',
-        setup: '🏗️'
-      }
-      
       return {
         title: `${order}. ${title}`,
-        subtitle: isActive ? 'Aktivno' : 'Neaktivno',
-        media: iconMap[icon] || '📍'
+        subtitle: isActive ? 'Aktivno' : 'Neaktivno'
       }
     }
   },

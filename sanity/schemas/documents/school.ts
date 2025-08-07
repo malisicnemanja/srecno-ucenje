@@ -303,13 +303,13 @@ export default defineType({
     },
     prepare({ title, subtitle, status, media, featured }) {
       const statusLabel = {
-        'active': '✅ Aktivna',
-        'coming-soon': '🔜 Uskoro',
-        'in-preparation': '🚧 U pripremi',
-        'closed': '❌ Zatvorena'
+        'active': 'Aktivna',
+        'coming-soon': 'Uskoro',
+        'in-preparation': 'U pripremi',
+        'closed': 'Zatvorena'
       }
       return {
-        title: `${title} ${featured ? '⭐' : ''}`,
+        title: `${title} ${featured ? '(Istaknuta)' : ''}`,
         subtitle: `${subtitle} - ${statusLabel[status as keyof typeof statusLabel] || status}`,
         media
       }
