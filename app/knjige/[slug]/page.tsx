@@ -40,10 +40,18 @@ interface Props {
 
 // Generate static params for all books
 export async function generateStaticParams() {
-  const books = await getAllBooks()
-  return books.map((book: Book) => ({
-    slug: book.slug.current,
-  }))
+  try {
+    const books = await getAllBooks()
+    if (!books || books.length === 0) {
+      return []
+    }
+    return books.map((book: Book) => ({
+      slug: book.slug.current,
+    }))
+  } catch (error) {
+    console.error('Error in generateStaticParams:', error)
+    return []
+  }
 }
 
 // Generate metadata for each book

@@ -1,10 +1,16 @@
-import { PartnershipIcon, TrendingUpIcon } from '@/components/icons'
+import { PartnershipIcon, TrendingUpIcon, BrainIcon, HeartIcon } from '@/components/icons'
 import { homePageQuery } from '@/lib/sanity.queries'
 import { sanityFetch } from '@/lib/sanity.client'
 import HeroSection from '@/components/features/cms/HeroSection'
 import type { HeroSectionProps } from '@/components/features/cms/HeroSection'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import { 
+  Users, MapPin, TrendingUp, Calendar, 
+  Phone, Check, Book, Rocket,
+  Brain, Handshake, Award, Heart,
+  ChevronDown, ArrowRight
+} from 'lucide-react'
 
 // Generate metadata from CMS data
 export async function generateMetadata(): Promise<Metadata> {
@@ -73,16 +79,34 @@ export default async function HomePage() {
         <section className="py-16 bg-gradient-to-br from-sky-500 via-sky-600 to-sky-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {pageData.statistics.map((stat: any) => (
-                <div key={stat._key || stat.number} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                    {stat.number || stat.value}
+              {pageData.statistics.map((stat: any, index: number) => {
+                const IconComponent = stat.icon === 'users' ? Users :
+                  stat.icon === 'location' ? MapPin :
+                  stat.icon === 'chart' ? TrendingUp :
+                  stat.icon === 'calendar' ? Calendar :
+                  Award;
+                
+                return (
+                  <div key={stat._key || stat.number} className="text-center group hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-center mb-3">
+                      <div className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-white/20 transition-all duration-300">
+                        <IconComponent size={32} className="text-white" />
+                      </div>
+                    </div>
+                    <div className="text-3xl md:text-4xl font-bold text-white mb-2 animate-pulse">
+                      {stat.number || stat.value}
+                    </div>
+                    <div className="text-white/90 text-sm md:text-base font-medium">
+                      {stat.label}
+                    </div>
+                    {stat.description && (
+                      <div className="text-white/70 text-xs mt-1">
+                        {stat.description}
+                      </div>
+                    )}
                   </div>
-                  <div className="text-white/80 text-sm md:text-base">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -128,11 +152,15 @@ export default async function HomePage() {
                   {/* Icon */}
                   <div className={`w-14 h-14 ${colors.accent} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     {feature.icon === 'partnership' ? (
-                      <PartnershipIcon size={24} className="text-white" />
+                      <Handshake size={24} className="text-white" />
                     ) : feature.icon === 'trending' ? (
-                      <TrendingUpIcon size={24} className="text-white" />
+                      <TrendingUp size={24} className="text-white" />
+                    ) : feature.icon === 'brain' ? (
+                      <Brain size={24} className="text-white" />
+                    ) : feature.icon === 'heart' ? (
+                      <Heart size={24} className="text-white" />
                     ) : (
-                      <span className="text-2xl text-white">{feature.icon}</span>
+                      <Award size={24} className="text-white" />
                     )}
                   </div>
                   
@@ -204,7 +232,19 @@ export default async function HomePage() {
                     {/* Content */}
                     <div className={`${colors.light} ${colors.border} border-2 rounded-xl p-6`}>
                       {step.icon && (
-                        <div className="text-3xl mb-4">{step.icon}</div>
+                        <div className="mb-4 flex justify-center">
+                          {step.icon === 'phone' ? (
+                            <Phone size={32} className="text-sky-600" />
+                          ) : step.icon === 'check' ? (
+                            <Check size={32} className="text-grass-600" />
+                          ) : step.icon === 'book' ? (
+                            <Book size={32} className="text-sun-600" />
+                          ) : step.icon === 'rocket' ? (
+                            <Rocket size={32} className="text-heart-600" />
+                          ) : (
+                            <Award size={32} className="text-sky-600" />
+                          )}
+                        </div>
                       )}
                       <h3 className="text-h3-mobile font-bold text-night-700 mb-3">
                         {step.title}
@@ -290,9 +330,7 @@ export default async function HomePage() {
                         {faq.question}
                       </h3>
                       <div className="flex-shrink-0 w-6 h-6 text-sky-600">
-                        <svg className="w-full h-full transform group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <ChevronDown className="w-full h-full transform group-open:rotate-180 transition-transform duration-200" />
                       </div>
                     </div>
                   </summary>
@@ -311,9 +349,7 @@ export default async function HomePage() {
                 className="inline-flex items-center px-6 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition-colors duration-200"
               >
                 Pogledajte sva pitanja
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </div>
@@ -342,10 +378,11 @@ export default async function HomePage() {
               <input 
                 type="email" 
                 placeholder="Vaša email adresa" 
-                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+                className="flex-1 px-4 py-3 rounded-lg border border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-white/50 transition-all duration-300"
               />
-              <button className="px-8 py-3 bg-white text-sky-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-200">
+              <button className="px-8 py-3 bg-white text-sky-700 font-semibold rounded-lg hover:bg-gray-50 hover:scale-105 transition-all duration-200 flex items-center justify-center group">
                 {pageData.newsletterCTA.ctaText || 'Prijavite se'}
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
             </div>
           </div>

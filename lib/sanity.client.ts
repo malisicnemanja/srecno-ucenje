@@ -1,13 +1,13 @@
 import { createClient } from 'next-sanity'
 // import imageUrlBuilder from '@sanity/image-url'
-import { mockSanityData } from './sanity-mock-store'
+import { mockSanityData } from './sanity-mock-store-updated'
 
 export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '08ctxj6y'
 export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 export const apiVersion = '2024-01-01'
 
 // Use mock mode for development
-const USE_MOCK = false // Set to false when using real Sanity
+const USE_MOCK = true // Set to false when using real Sanity
 
 export const client = createClient({
   projectId: projectId, // Use the correct project ID from env
