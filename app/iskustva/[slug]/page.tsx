@@ -4,6 +4,7 @@ import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { PortableText } from '@portabletext/react'
+import { portableTextComponents } from '@/components/features/cms/PortableTextComponents'
 import { FloatingLetters, PulseButton } from '@/components/animations'
 import { getExperienceBySlug, getRelatedExperiences, getAllExperiences, type Experience } from '@/sanity/queries/experience'
 import { Calendar, Car, Droplet, Shirt, DollarSign, Smartphone, Utensils, Hotel, FileText, Zap, MapPin, Clock, Lightbulb, Edit3 } from 'lucide-react'
@@ -179,18 +180,7 @@ export default async function ExperiencePage({ params }: Props) {
               {experience.content && (
                 <PortableText 
                   value={experience.content}
-                  components={{
-                    block: {
-                      h1: ({children}) => <h1 className="text-3xl font-bold text-gray-900 mb-6 mt-12">{children}</h1>,
-                      h2: ({children}) => <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-10">{children}</h2>,
-                      h3: ({children}) => <h3 className="text-xl font-bold text-gray-900 mb-4 mt-8">{children}</h3>,
-                      normal: ({children}) => <p className="text-gray-700 leading-relaxed mb-6">{children}</p>,
-                    },
-                    marks: {
-                      strong: ({children}) => <strong className="font-semibold text-gray-900">{children}</strong>,
-                      em: ({children}) => <em className="italic">{children}</em>,
-                    }
-                  }}
+                  components={portableTextComponents}
                 />
               )}
             </div>
@@ -222,15 +212,7 @@ export default async function ExperiencePage({ params }: Props) {
                     <div className="prose prose-lg max-w-none">
                       <PortableText 
                         value={chapter.content}
-                        components={{
-                          block: {
-                            normal: ({children}) => <p className="text-gray-700 leading-relaxed mb-4">{children}</p>,
-                          },
-                          marks: {
-                            strong: ({children}) => <strong className="font-semibold text-gray-900">{children}</strong>,
-                            em: ({children}) => <em className="italic">{children}</em>,
-                          }
-                        }}
+                        components={portableTextComponents}
                       />
                     </div>
                   </div>

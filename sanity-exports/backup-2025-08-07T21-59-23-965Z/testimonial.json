@@ -1,0 +1,405 @@
+{
+  "_type": "testimonial",
+  "_exportedAt": "2025-08-07T21:59:25.979Z",
+  "_count": 20,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T01:48:10Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFeUO",
+      "_rev": "rWY7A01dUL9wO4NRChI81U",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T20:15:58Z",
+      "authorName": "Milica Stojanović",
+      "authorRole": "Majka dvoje dece",
+      "backReferences": [],
+      "content": "Neverovatna promena kod moje dece! Marko sada obožava da čita, a Ana je postala prava matematička zvezda. Preporučujem svima!",
+      "featured": true,
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:10Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFepa",
+      "_rev": "rWY7A01dUL9wO4NRChI87Q",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T20:15:59Z",
+      "authorName": "Petar Nikolić",
+      "authorRole": "Otac",
+      "backReferences": [],
+      "content": "Najbolja investicija u budućnost našeg deteta. Rezultati su vidljivi već nakon mesec dana.",
+      "featured": true,
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:08:54Z",
+      "_id": "adpXclQvR9WWEgUkbtDlbd",
+      "_rev": "SVDvN8W2oCA8eZWngRmd2w",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T20:16:00Z",
+      "authorName": "Marija Petrović",
+      "authorRole": "Vlasnica franšize",
+      "backReferences": [],
+      "businessMetrics": {
+        "monthlyRevenue": 4500,
+        "monthsInBusiness": 24,
+        "roi": "320%",
+        "studentCount": 180
+      },
+      "content": "Za 2 godine sam vratila celu investiciju i sada imam stabilan mesečni prihod od 4,500€. Podrška tima je fantastična - nikad nisam bila sama u ovom poslu.",
+      "featured": true,
+      "location": "Novi Sad",
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:08:58Z",
+      "_id": "atDdCAAfWCLcotj1z9HJRX",
+      "_rev": "rWY7A01dUL9wO4NRChI8JI",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T20:16:01Z",
+      "authorName": "Jovana Đorđević",
+      "authorRole": "Vlasnica centra",
+      "backReferences": [],
+      "businessMetrics": {
+        "monthlyRevenue": 1800,
+        "monthsInBusiness": 8,
+        "roi": "85%",
+        "studentCount": 62
+      },
+      "content": "Iako sam tek na početku, već vidim rezultate. Deca vole program, roditelji su zadovoljni, a ja gradim profitabilan biznis.",
+      "featured": false,
+      "location": "Pančevo",
+      "rating": 4,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:10Z",
+      "_id": "drafts.EIn1TO6kzkBkpMuRkFFeUO",
+      "_rev": "88391e22-bc26-48cb-9afb-92456b45e305",
+      "_system": {
+        "base": {
+          "id": "EIn1TO6kzkBkpMuRkFFeUO",
+          "rev": "rWY7A01dUL9wO4NRChI81U"
+        }
+      },
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T20:15:58Z",
+      "authorName": "Milica Stojanović",
+      "authorRole": "Majka dvoje dece",
+      "backReferences": [],
+      "content": "Neverovatna promena kod moje dece! Marko sada obožava da čita, a Ana je postala prava matematička zvezda. Preporučujem svima!",
+      "featured": true,
+      "name": "Milica Stojanović",
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:25Z",
+      "_id": "drafts.testimonial-2418c05f-8899-4d9d-9973-d101f7f5800b",
+      "_rev": "33d180b4-1a47-40de-bfd3-26ebf93bffd2",
+      "_system": {
+        "base": {
+          "id": "testimonial-2418c05f-8899-4d9d-9973-d101f7f5800b",
+          "rev": "SVDvN8W2oCA8eZWngRmdlw"
+        }
+      },
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T20:16:07Z",
+      "authorName": "Stefan Marković",
+      "authorRole": "Franšizer iz Niša",
+      "backReferences": [],
+      "content": "Najbolja poslovna odluka u mom životu. Podrška je neverovatna, a rezultati govore sami za sebe.",
+      "featured": true,
+      "name": "Stefan Marković",
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:08:55Z",
+      "_id": "jsO7i4LmwGEnLQvVmoJo7P",
+      "_rev": "RSzTvGgTwtY6EErbXk11nI",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T20:16:02Z",
+      "authorName": "Stefan Jovanović",
+      "authorRole": "Direktor centra",
+      "backReferences": [],
+      "businessMetrics": {
+        "monthlyRevenue": 3800,
+        "monthsInBusiness": 30,
+        "roi": "280%",
+        "studentCount": 145
+      },
+      "content": "Ovo je najbolja poslovna odluka koju sam doneo. Investicija se vratila za 14 meseci, a sada imam stabilno rastući biznis koji pomaže deci.",
+      "featured": true,
+      "location": "Niš",
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:08:56Z",
+      "_id": "jsO7i4LmwGEnLQvVmoJoRF",
+      "_rev": "SVDvN8W2oCA8eZWngRmdPR",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T20:16:03Z",
+      "authorName": "Ana Nikolić",
+      "authorRole": "Osnivačica centra",
+      "backReferences": [],
+      "businessMetrics": {
+        "monthlyRevenue": 2900,
+        "monthsInBusiness": 12,
+        "roi": "190%",
+        "studentCount": 95
+      },
+      "content": "Počela sam sa nula iskustva u obrazovanju. Zahvaljujući detaljnoj obuci i kontinuiranoj podršci, centar prosperira već godinu dana.",
+      "featured": false,
+      "location": "Kragujevac",
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:08:57Z",
+      "_id": "jsO7i4LmwGEnLQvVmoJol5",
+      "_rev": "SVDvN8W2oCA8eZWngS3hLR",
+      "_system": {
+        "base": {
+          "id": "jsO7i4LmwGEnLQvVmoJol5",
+          "rev": "RSzTvGgTwtY6EErbXk12EW"
+        }
+      },
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T22:34:35Z",
+      "authorName": "Miloš Stojanović",
+      "authorRole": "Partner franšize",
+      "backReferences": [],
+      "businessMetrics": {
+        "monthlyRevenue": 2100,
+        "monthsInBusiness": 16,
+        "roi": "165%",
+        "studentCount": 78
+      },
+      "content": "Marketing podrška je neverovatna - konstantno dobijam nova deca bez dodatnih troškova. Biznis raste mesečno.",
+      "featured": false,
+      "location": "Subotica",
+      "name": "Miloš Stojanović",
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:14Z",
+      "_id": "testimonial-0e3d1429-e8a4-4a0d-bf98-9b15a1bb7ced",
+      "_rev": "RSzTvGgTwtY6EErbXkECSU",
+      "_system": {
+        "base": {
+          "id": "testimonial-0e3d1429-e8a4-4a0d-bf98-9b15a1bb7ced",
+          "rev": "RSzTvGgTwtY6EErbXk12LK"
+        }
+      },
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T22:34:52Z",
+      "authorName": "Jelena Nikolić",
+      "authorRole": "Roditelj",
+      "backReferences": [],
+      "content": "Moje dete je potpuno promenilo stav prema učenju. Jedva čeka da ide na časove!",
+      "featured": true,
+      "name": "Jelena Nikolić",
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T22:45:55Z",
+      "_id": "testimonial-1",
+      "_rev": "SVDvN8W2oCA8eZWngS4RQw",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T22:45:55Z",
+      "author": "Milica Jovanović",
+      "backReferences": [
+        {
+          "_id": "homepage",
+          "_type": "page"
+        }
+      ],
+      "category": "parent",
+      "featured": true,
+      "rating": 5,
+      "references": [
+        {
+          "_id": "homepage",
+          "_type": "page",
+          "name": null,
+          "title": "Početna strana - Srećno učenje"
+        }
+      ],
+      "role": "Mama Ane (10 godina)",
+      "text": "Srećno učenje je promenilo život mog deteta. Od deteta koje je mrzelo da čita, Ana je postala pravi bibliofilčić!"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:24Z",
+      "_id": "testimonial-1888d872-17b3-4c75-8900-32ec08037c08",
+      "_rev": "SVDvN8W2oCA8eZWngRmdYR",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T20:16:06Z",
+      "authorName": "Jelena Nikolić",
+      "authorRole": "Roditelj",
+      "backReferences": [],
+      "content": "Moje dete je potpuno promenilo stav prema učenju. Jedva čeka da ide na časove!",
+      "featured": true,
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T22:45:56Z",
+      "_id": "testimonial-2",
+      "_rev": "RSzTvGgTwtY6EErbXkEija",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T22:45:56Z",
+      "author": "Dr. Stefan Nikolić",
+      "backReferences": [
+        {
+          "_id": "homepage",
+          "_type": "page"
+        }
+      ],
+      "category": "professional",
+      "featured": true,
+      "rating": 5,
+      "references": [
+        {
+          "_id": "homepage",
+          "_type": "page",
+          "name": null,
+          "title": "Početna strana - Srećno učenje"
+        }
+      ],
+      "role": "Pedagog, Novi Sad",
+      "text": "Kao pedagog sa 20 godina iskustva, mogu reći da je ova metodologija nešto revolucionarno u obrazovanju."
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:25Z",
+      "_id": "testimonial-2418c05f-8899-4d9d-9973-d101f7f5800b",
+      "_rev": "SVDvN8W2oCA8eZWngRmdlw",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T20:16:07Z",
+      "authorName": "Stefan Marković",
+      "authorRole": "Franšizer iz Niša",
+      "backReferences": [],
+      "content": "Najbolja poslovna odluka u mom životu. Podrška je neverovatna, a rezultati govore sami za sebe.",
+      "featured": true,
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T22:45:57Z",
+      "_id": "testimonial-3",
+      "_rev": "rWY7A01dUL9wO4NRChTdNk",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T22:45:57Z",
+      "author": "Marko Petrović",
+      "backReferences": [
+        {
+          "_id": "homepage",
+          "_type": "page"
+        }
+      ],
+      "category": "franchise",
+      "featured": true,
+      "rating": 5,
+      "references": [
+        {
+          "_id": "homepage",
+          "_type": "page",
+          "name": null,
+          "title": "Početna strana - Srećno učenje"
+        }
+      ],
+      "role": "Vlasnik franšize, Beograd",
+      "text": "Franšiza je bila odlična investicija. ROI od 250% u prvoj godini rada je nadmašio sva očekivanja."
+    },
+    {
+      "_createdAt": "2025-08-05T22:45:58Z",
+      "_id": "testimonial-4",
+      "_rev": "rWY7A01dUL9wO4NRChTdTg",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T22:45:58Z",
+      "author": "Jovana Stojanović",
+      "backReferences": [],
+      "category": "parent",
+      "featured": false,
+      "rating": 5,
+      "references": [],
+      "role": "Mama Luke (8 godina)",
+      "text": "Luka je sa trojke u matematici došao do petice za samo 4 meseca. Neverovatno!"
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:17Z",
+      "_id": "testimonial-40999edb-2ea0-439d-a030-5bbf345356ea",
+      "_rev": "RSzTvGgTwtY6EErbXk12S8",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T20:16:08Z",
+      "authorName": "Milica Pavlović",
+      "authorRole": "Učenica 8. razred",
+      "backReferences": [],
+      "content": "Konačno razumem matematiku! Nastavnici su super i sve objašnjavaju na zanimljiv način.",
+      "featured": false,
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T22:45:59Z",
+      "_id": "testimonial-5",
+      "_rev": "RSzTvGgTwtY6EErbXkEk6f",
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T22:45:59Z",
+      "author": "Ana Miletić",
+      "backReferences": [],
+      "category": "franchise",
+      "featured": false,
+      "rating": 5,
+      "references": [],
+      "role": "Vlasnica franšize, Niš",
+      "text": "Podrška franšize je izvanredna. Uvek imamo pomoć kada nam je potrebna."
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:15Z",
+      "_id": "testimonial-cc5510d4-ea2c-4c30-932f-b742adbf8513",
+      "_rev": "RSzTvGgTwtY6EErbXkEC4f",
+      "_system": {
+        "base": {
+          "id": "testimonial-cc5510d4-ea2c-4c30-932f-b742adbf8513",
+          "rev": "SVDvN8W2oCA8eZWngRmeHR"
+        }
+      },
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T22:34:18Z",
+      "authorName": "Stefan Marković",
+      "authorRole": "Franšizer iz Niša",
+      "backReferences": [],
+      "content": "Najbolja poslovna odluka u mom životu. Podrška je neverovatna, a rezultati govore sami za sebe.",
+      "featured": true,
+      "name": "Stefan Marković",
+      "rating": 5,
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:26Z",
+      "_id": "testimonial-f8b93849-4a48-43b9-85bd-242cd3051cea",
+      "_rev": "rWY7A01dUL9wO4NRChTA2W",
+      "_system": {
+        "base": {
+          "id": "testimonial-f8b93849-4a48-43b9-85bd-242cd3051cea",
+          "rev": "RSzTvGgTwtY6EErbXk12mY"
+        }
+      },
+      "_type": "testimonial",
+      "_updatedAt": "2025-08-05T22:34:23Z",
+      "authorName": "Milica Pavlović",
+      "authorRole": "Učenica 8. razred",
+      "backReferences": [],
+      "content": "Konačno razumem matematiku! Nastavnici su super i sve objašnjavaju na zanimljiv način.",
+      "featured": false,
+      "name": "Milica Pavlović",
+      "rating": 5,
+      "references": []
+    }
+  ]
+}

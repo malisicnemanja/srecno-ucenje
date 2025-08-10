@@ -1,0 +1,245 @@
+{
+  "_type": "author",
+  "_exportedAt": "2025-08-07T21:59:24.773Z",
+  "_count": 4,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T01:48:00Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFdgw",
+      "_rev": "EIn1TO6kzkBkpMuRkFFddP",
+      "_type": "author",
+      "_updatedAt": "2025-08-03T01:48:00Z",
+      "backReferences": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFe5f",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "adpXclQvR9WWEgUkbtGXgS",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IyeF",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IypT",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IzFf",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5TiyAX7",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5TiyAq5",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoMeAf",
+          "_type": "blogPost"
+        }
+      ],
+      "bio": "Doktor pedagoških nauka sa 15 godina iskustva u radu sa decom. Autor nekoliko knjiga o modernim metodama učenja.",
+      "name": "Dr. Milica Jovanović",
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFe5f",
+          "_type": "blogPost",
+          "name": null,
+          "title": "5 tehnika brzočitanja koje svako dete može da nauči"
+        },
+        {
+          "_id": "adpXclQvR9WWEgUkbtGXgS",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Prvi meseci rada: Šta očekivati kao novi franšizer"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IyeF",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Kako da odaberete pravu lokaciju za obrazovni centar"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IypT",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Marketing strategije koje rade za obrazovne centre"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IzFf",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Finansijsko planiranje za franšizere: Vodič kroz prve godine"
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5TiyAX7",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Priča o Marku - od mrzitelja knjiga do bibliotekara"
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5TiyAq5",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Značaj čitanja u digitalnom dobu"
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoMeAf",
+          "_type": "blogPost",
+          "name": null,
+          "title": "5 razloga zašto je obrazovna franšiza najbolja investicija u 2024."
+        }
+      ],
+      "slug": {
+        "current": "dr-milica-jovanovic"
+      },
+      "title": "Stručnjak za brzočitanje"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:02Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFdv4",
+      "_rev": "EIn1TO6kzkBkpMuRkFFdrX",
+      "_type": "author",
+      "_updatedAt": "2025-08-03T01:48:02Z",
+      "backReferences": [
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sit",
+          "_type": "blogPost"
+        }
+      ],
+      "bio": "Specijalista za rad sa decom i porodičnu terapiju. Pomaže roditeljima da razumeju i podrže razvoj svoje dece.",
+      "name": "Psiholog Marija Stojanović",
+      "references": [
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sit",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Kako da motivišete dete za učenje"
+        }
+      ],
+      "slug": {
+        "current": "marija-stojanovic"
+      },
+      "title": "Dečji psiholog"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:02Z",
+      "_id": "author-default",
+      "_rev": "jsO7i4LmwGEnLQvVmoNQIP",
+      "_type": "author",
+      "_updatedAt": "2025-08-05T03:19:46Z",
+      "backReferences": [
+        {
+          "_id": "blogPost-6122bf02-386f-40d5-ad89-a865f616f89f",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "blogPost-788a2b68-59d9-44e5-a925-316f9c45a4a7",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "blogPost-8dd225af-137e-48e0-8a5b-c6e211ba8df1",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "blogPost-b89e8814-05d6-4437-ae1c-14ec0373e124",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "blogPost-e31bfedf-f623-4c8e-8ca5-9a5839d405c9",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "blogPost-fb235c77-7f02-4c84-b19f-1bff02f036dd",
+          "_type": "blogPost"
+        }
+      ],
+      "bio": "Stručni tim Srećnog učenja sa preko 15 godina iskustva u obrazovanju i razvoju franšize.",
+      "image": null,
+      "name": "Tim Srećno učenje",
+      "references": [
+        {
+          "_id": "blogPost-6122bf02-386f-40d5-ad89-a865f616f89f",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Kako naša metodologija pomaže deci da zavole učenje"
+        },
+        {
+          "_id": "blogPost-788a2b68-59d9-44e5-a925-316f9c45a4a7",
+          "_type": "blogPost",
+          "name": null,
+          "title": "5 razloga zašto je sada pravo vreme za obrazovnu franšizu"
+        },
+        {
+          "_id": "blogPost-8dd225af-137e-48e0-8a5b-c6e211ba8df1",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Od nastavnice do uspešne preduzetnice: Priča Marije Petrović"
+        },
+        {
+          "_id": "blogPost-b89e8814-05d6-4437-ae1c-14ec0373e124",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Kako naša metodologija pomaže deci da zavole učenje"
+        },
+        {
+          "_id": "blogPost-e31bfedf-f623-4c8e-8ca5-9a5839d405c9",
+          "_type": "blogPost",
+          "name": null,
+          "title": "5 razloga zašto je sada pravo vreme za obrazovnu franšizu"
+        },
+        {
+          "_id": "blogPost-fb235c77-7f02-4c84-b19f-1bff02f036dd",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Od nastavnice do uspešne preduzetnice: Priča Marije Petrović"
+        }
+      ],
+      "slug": {
+        "current": "tim-srecno-ucenje"
+      }
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:01Z",
+      "_id": "hWo33GCGxd3rDeD5TiyAE9",
+      "_rev": "hWo33GCGxd3rDeD5TiyA9P",
+      "_type": "author",
+      "_updatedAt": "2025-08-03T01:48:01Z",
+      "backReferences": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFeJn",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sZt",
+          "_type": "blogPost"
+        }
+      ],
+      "bio": "Profesor matematike i sertifikovani instruktor mentalne aritmetike sa međunarodnim iskustvom.",
+      "name": "Prof. Stefan Nikolić",
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFeJn",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Novo istraživanje o efikasnosti mentalne aritmetike"
+        },
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sZt",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Kako mentalna aritmetika pomaže u razvoju mozga"
+        }
+      ],
+      "slug": {
+        "current": "prof-stefan-nikolic"
+      },
+      "title": "Instruktor mentalne aritmetike"
+    }
+  ]
+}

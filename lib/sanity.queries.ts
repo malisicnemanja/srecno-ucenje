@@ -438,46 +438,76 @@ export const testimonialsQuery = groq`
   }
 `
 
-// Home Page Query
+// Home Page Query - Updated to match actual schema - Get the complete document
 export const homePageQuery = groq`
-  *[_type == "homePage"][0] {
+  *[_type == "homePage" && _id == "homePage"][0] {
     _id,
-    hero {
+    enhancedHero {
       title,
       subtitle,
       description,
-      image,
       buttons[]{
+        _key,
         text,
         link,
         variant
-      }
-    },
-    features[]{
-      icon,
-      title,
-      description
+      },
+      "image": image.asset->url,
+      "videoBackground": videoBackground.asset->url
     },
     statistics[]{
+      _key,
       value,
       label,
-      icon
+      icon,
+      description,
+      color
     },
-    successStories[]->{
-      _id,
-      studentName,
-      age,
-      testimonial,
-      program->{
-        title
+    differentiators {
+      sectionTitle,
+      items[] {
+        _key,
+        title,
+        description,
+        icon
       }
     },
-    testimonials[]->{
-      _id,
-      authorName,
-      authorRole,
-      content,
-      rating
+    franchiseSteps {
+      sectionTitle,
+      steps[] {
+        _key,
+        number,
+        title,
+        description,
+        icon
+      }
+    },
+    franchiseModels {
+      sectionTitle,
+      models[] {
+        _key,
+        name,
+        price,
+        features[],
+        highlighted
+      }
+    },
+    successStories {
+      sectionTitle,
+      featuredVideo,
+      stories[] {
+        _key,
+        name,
+        role,
+        location,
+        story,
+        yearStarted,
+        metric {
+          value,
+          label
+        },
+        "image": image.asset->url
+      }
     },
     homeFaqs {
       sectionTitle,
@@ -491,23 +521,33 @@ export const homePageQuery = groq`
         order
       }
     },
-    homeFAQ {
+    interactiveClassroom {
       sectionTitle,
-      faqs[]->{
-        _id,
-        question,
-        answer,
-        category->{
-          name
-        },
-        order
+      description,
+      "previewImage": previewImage.asset->url,
+      ctaText
+    },
+    leadMagnets {
+      sectionTitle,
+      resources[] {
+        _key,
+        title,
+        description,
+        downloadUrl,
+        "previewImage": previewImage.asset->url
       }
     },
-    cta {
+    newsletterCTA {
       title,
       description,
-      buttonText,
-      buttonLink
+      incentive,
+      ctaText
+    },
+    seo {
+      metaTitle,
+      metaDescription,
+      keywords,
+      "ogImage": ogImage.asset->url
     }
   }
 `

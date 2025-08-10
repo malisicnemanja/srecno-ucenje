@@ -1,0 +1,855 @@
+{
+  "_type": "faqCategory",
+  "_exportedAt": "2025-08-07T21:59:26.181Z",
+  "_count": 17,
+  "documents": [
+    {
+      "_createdAt": "2025-08-05T03:10:04Z",
+      "_id": "adpXclQvR9WWEgUkbtDqyC",
+      "_rev": "adpXclQvR9WWEgUkbtDquN",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-05T03:10:04Z",
+      "backReferences": [
+        {
+          "_id": "adpXclQvR9WWEgUkbtDtcZ",
+          "_type": "faq"
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoJwFJ",
+          "_type": "faq"
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoJwRD",
+          "_type": "faq"
+        }
+      ],
+      "description": "Edukacija i kontinuirana podrška",
+      "name": "Obuka i podrška",
+      "order": 3,
+      "references": [
+        {
+          "_id": "adpXclQvR9WWEgUkbtDtcZ",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoJwFJ",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoJwRD",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "_type": "slug",
+        "current": "obuka-podrska"
+      }
+    },
+    {
+      "_createdAt": "2025-08-05T03:19:49Z",
+      "_id": "faqCategory-0ce949d5-34d7-408a-a877-998a4bf7eb1b",
+      "_rev": "adpXclQvR9WWEgUkbtHDbo",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-05T03:19:49Z",
+      "backReferences": [
+        {
+          "_id": "faq-3f56014f-9ed6-4cc4-9021-0532a3d55219",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-a7897e9d-aa6b-4efe-9d57-df4eb5927b31",
+          "_type": "faq"
+        }
+      ],
+      "description": "Sve o obuci, mentorstvu i kontinuiranoj podršci",
+      "order": 3,
+      "references": [
+        {
+          "_id": "faq-3f56014f-9ed6-4cc4-9021-0532a3d55219",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-a7897e9d-aa6b-4efe-9d57-df4eb5927b31",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "current": "obuka-podrska"
+      },
+      "title": "Obuka i podrška"
+    },
+    {
+      "_createdAt": "2025-08-05T03:19:48Z",
+      "_id": "faqCategory-0ea134cb-88f6-4616-89de-81bf3a3054bd",
+      "_rev": "jsO7i4LmwGEnLQvVmoNRBx",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-05T03:19:48Z",
+      "backReferences": [
+        {
+          "_id": "faq-00ec4751-685c-4392-8f5e-981f71c0c5a8",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-0ab40f0a-627b-46c8-bca1-9e44cb392b01",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-81f05fde-16ae-4a3a-8baa-c9b0c9fc0c92",
+          "_type": "faq"
+        }
+      ],
+      "description": "Investicija, troškovi, prihodi i ROI",
+      "order": 2,
+      "references": [
+        {
+          "_id": "faq-00ec4751-685c-4392-8f5e-981f71c0c5a8",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-0ab40f0a-627b-46c8-bca1-9e44cb392b01",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-81f05fde-16ae-4a3a-8baa-c9b0c9fc0c92",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "current": "finansijska-pitanja"
+      },
+      "title": "Finansijska pitanja"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:03Z",
+      "_id": "faqCategory-13cb2bc0-c9ac-4c6f-924f-71d551be5ec1",
+      "_rev": "atDdCAAfWCLcotj1z8G4Fz",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-04T21:16:03Z",
+      "backReferences": [
+        {
+          "_id": "faq-ab5790e3-1967-417c-ae85-6bef73049303",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-fd10a8ca-25d8-4ee8-ae39-8b250364c921",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-fdd378f5-77ac-4b3d-b98c-beeaf2f26da5",
+          "_type": "faq"
+        }
+      ],
+      "description": "Osnovna pitanja o Srećno učenje franšizi",
+      "order": 1,
+      "references": [
+        {
+          "_id": "faq-ab5790e3-1967-417c-ae85-6bef73049303",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-fd10a8ca-25d8-4ee8-ae39-8b250364c921",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-fdd378f5-77ac-4b3d-b98c-beeaf2f26da5",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "current": "opsta-pitanja"
+      },
+      "title": "Opšta pitanja o franšizi"
+    },
+    {
+      "_createdAt": "2025-08-05T03:19:47Z",
+      "_id": "faqCategory-1ef2c184-522e-44e6-b85f-a2bba903439f",
+      "_rev": "adpXclQvR9WWEgUkbtHDEs",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-05T03:19:47Z",
+      "backReferences": [
+        {
+          "_id": "faq-1b3d363e-e8dd-45f9-a0c4-12b2f4f58cfe",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-e56957fa-0f99-4c84-9706-f2ea098c6b38",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-f881f0af-29f4-4de5-abcd-65a88360332e",
+          "_type": "faq"
+        }
+      ],
+      "description": "Osnovna pitanja o Srećno učenje franšizi",
+      "order": 1,
+      "references": [
+        {
+          "_id": "faq-1b3d363e-e8dd-45f9-a0c4-12b2f4f58cfe",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-e56957fa-0f99-4c84-9706-f2ea098c6b38",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-f881f0af-29f4-4de5-abcd-65a88360332e",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "current": "opsta-pitanja"
+      },
+      "title": "Opšta pitanja o franšizi"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:05Z",
+      "_id": "faqCategory-62a0038f-9f0f-4575-a19b-8b8d00932ce5",
+      "_rev": "atDdCAAfWCLcotj1z8G4gB",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-04T21:16:05Z",
+      "backReferences": [
+        {
+          "_id": "faq-3cc31acd-a09d-4791-9885-b5c38548cf61",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-6fccd843-098b-4c2e-9801-d28222e56e0c",
+          "_type": "faq"
+        }
+      ],
+      "description": "Sve o obuci, mentorstvu i kontinuiranoj podršci",
+      "order": 3,
+      "references": [
+        {
+          "_id": "faq-3cc31acd-a09d-4791-9885-b5c38548cf61",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-6fccd843-098b-4c2e-9801-d28222e56e0c",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "current": "obuka-podrska"
+      },
+      "title": "Obuka i podrška"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:06Z",
+      "_id": "faqCategory-692f095f-80cb-4551-b768-6b0b008edb91",
+      "_rev": "atDdCAAfWCLcotj1z8G4nf",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-04T21:16:06Z",
+      "backReferences": [
+        {
+          "_id": "faq-972fa3d6-32fd-43ca-b04f-af17005a94e0",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-e0121326-a7b0-4624-84ce-ca38beb1ed7a",
+          "_type": "faq"
+        }
+      ],
+      "description": "Svakodnevno poslovanje i upravljanje centrom",
+      "order": 4,
+      "references": [
+        {
+          "_id": "faq-972fa3d6-32fd-43ca-b04f-af17005a94e0",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-e0121326-a7b0-4624-84ce-ca38beb1ed7a",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "current": "operativna-pitanja"
+      },
+      "title": "Operativna pitanja"
+    },
+    {
+      "_createdAt": "2025-08-05T03:19:50Z",
+      "_id": "faqCategory-b10f85d1-bc5f-420f-9469-70cab0f407dc",
+      "_rev": "jsO7i4LmwGEnLQvVmoNRZl",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-05T03:19:50Z",
+      "backReferences": [
+        {
+          "_id": "faq-5d8bd671-2a78-4154-80b9-d25598279bd3",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-cbde5b94-6c21-46fe-9579-8822613781aa",
+          "_type": "faq"
+        }
+      ],
+      "description": "Svakodnevno poslovanje i upravljanje centrom",
+      "order": 4,
+      "references": [
+        {
+          "_id": "faq-5d8bd671-2a78-4154-80b9-d25598279bd3",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-cbde5b94-6c21-46fe-9579-8822613781aa",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "current": "operativna-pitanja"
+      },
+      "title": "Operativna pitanja"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:04Z",
+      "_id": "faqCategory-b6f9aba7-75b8-4c20-9309-6e8faaee28fd",
+      "_rev": "LRuNsVxy2neCREmRL1oMWh",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-04T21:16:04Z",
+      "backReferences": [
+        {
+          "_id": "faq-004b5dd6-4e27-44b9-b81e-272926286923",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-d8458672-bb94-43d6-add6-d58e303db918",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-e467af0f-3cf4-4644-8a64-77a14612877e",
+          "_type": "faq"
+        }
+      ],
+      "description": "Investicija, troškovi, prihodi i ROI",
+      "order": 2,
+      "references": [
+        {
+          "_id": "faq-004b5dd6-4e27-44b9-b81e-272926286923",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-d8458672-bb94-43d6-add6-d58e303db918",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-e467af0f-3cf4-4644-8a64-77a14612877e",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "current": "finansijska-pitanja"
+      },
+      "title": "Finansijska pitanja"
+    },
+    {
+      "_createdAt": "2025-08-07T19:42:48Z",
+      "_id": "faqCategory.franchise",
+      "_rev": "YBiWwTMhT8IS37yZZlo3Uc",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-07T19:42:48Z",
+      "backReferences": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFgCdS",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-4",
+          "_type": "faq"
+        }
+      ],
+      "color": "accent",
+      "description": "Pitanja o franšizi i poslovanju",
+      "icon": "🏢",
+      "isActive": true,
+      "name": "Franšiza",
+      "order": 3,
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFgCdS",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-4",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": "franchise"
+    },
+    {
+      "_createdAt": "2025-08-07T19:42:46Z",
+      "_id": "faqCategory.general",
+      "_rev": "tqJG5yH49IKSFNIKiO14qB",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-07T19:42:46Z",
+      "backReferences": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFcYI",
+          "_type": "faq"
+        },
+        {
+          "_id": "drafts.hWo33GCGxd3rDeD5Tiy99l",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-3",
+          "_type": "faq"
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5Tiy8qn",
+          "_type": "faq"
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5Tiy99l",
+          "_type": "faq"
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5Tiy9Sj",
+          "_type": "faq"
+        },
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sKt",
+          "_type": "faq"
+        }
+      ],
+      "color": "primary",
+      "description": "Često postavljana opšta pitanja",
+      "icon": "❓",
+      "isActive": true,
+      "name": "Opšta pitanja",
+      "order": 1,
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFcYI",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "drafts.hWo33GCGxd3rDeD5Tiy99l",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-3",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5Tiy8qn",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5Tiy99l",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5Tiy9Sj",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sKt",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": "general"
+    },
+    {
+      "_createdAt": "2025-08-07T19:42:50Z",
+      "_id": "faqCategory.opsta-pitanja",
+      "_rev": "oWtMwMRBoarauLfrKjSAkb",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-07T19:42:50Z",
+      "backReferences": [
+        {
+          "_id": "faq.da-li-mogu-zadrzati-svoj-posao-dok-pokrecem-fransizu",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq.kakva-je-konkurencija-na-trzistu",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq.koliko-brzo-mogu-ocekivati-povrat-investicije",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq.koliko-je-potrebno-iskustva-u-obrazovanju",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq.sta-ako-trebam-pomoc-nakon-otvaranja",
+          "_type": "faq"
+        }
+      ],
+      "color": "primary",
+      "description": "Pitanja u kategoriji: Opšta pitanja",
+      "icon": "❓",
+      "isActive": true,
+      "name": "Opšta pitanja",
+      "order": 999,
+      "references": [
+        {
+          "_id": "faq.da-li-mogu-zadrzati-svoj-posao-dok-pokrecem-fransizu",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq.kakva-je-konkurencija-na-trzistu",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq.koliko-brzo-mogu-ocekivati-povrat-investicije",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq.koliko-je-potrebno-iskustva-u-obrazovanju",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq.sta-ako-trebam-pomoc-nakon-otvaranja",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": "opsta-pitanja"
+    },
+    {
+      "_createdAt": "2025-08-07T19:42:47Z",
+      "_id": "faqCategory.programs",
+      "_rev": "YBiWwTMhT8IS37yZZlo3QY",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-07T19:42:47Z",
+      "backReferences": [
+        {
+          "_id": "faq-1",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-2",
+          "_type": "faq"
+        },
+        {
+          "_id": "faq-6",
+          "_type": "faq"
+        },
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sBt",
+          "_type": "faq"
+        },
+        {
+          "_id": "hZm6tMI3obk6ZBXKfAVrRt",
+          "_type": "faq"
+        }
+      ],
+      "color": "secondary",
+      "description": "Pitanja o našim obrazovnim programima",
+      "icon": "📚",
+      "isActive": true,
+      "name": "Programi",
+      "order": 2,
+      "references": [
+        {
+          "_id": "faq-1",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-2",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "faq-6",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sBt",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "hZm6tMI3obk6ZBXKfAVrRt",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": "programs"
+    },
+    {
+      "_createdAt": "2025-08-07T19:42:49Z",
+      "_id": "faqCategory.technical",
+      "_rev": "oWtMwMRBoarauLfrKjSAfD",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-07T19:42:49Z",
+      "backReferences": [
+        {
+          "_id": "faq-5",
+          "_type": "faq"
+        }
+      ],
+      "color": "neutral",
+      "description": "Tehnička pitanja i podrška",
+      "icon": "🔧",
+      "isActive": true,
+      "name": "Tehnička podrška",
+      "order": 4,
+      "references": [
+        {
+          "_id": "faq-5",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": "technical"
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:02Z",
+      "_id": "jsO7i4LmwGEnLQvVmoJtEp",
+      "_rev": "jsO7i4LmwGEnLQvVmoJtAr",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-05T03:10:02Z",
+      "backReferences": [
+        {
+          "_id": "adpXclQvR9WWEgUkbtDr9f",
+          "_type": "faq"
+        },
+        {
+          "_id": "adpXclQvR9WWEgUkbtDrL8",
+          "_type": "faq"
+        },
+        {
+          "_id": "adpXclQvR9WWEgUkbtDreF",
+          "_type": "faq"
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoJuSD",
+          "_type": "faq"
+        }
+      ],
+      "description": "Osnovno o franšiznom modelu i uslovima",
+      "name": "Franšiza osnove",
+      "order": 1,
+      "references": [
+        {
+          "_id": "adpXclQvR9WWEgUkbtDr9f",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "adpXclQvR9WWEgUkbtDrL8",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "adpXclQvR9WWEgUkbtDreF",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoJuSD",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "_type": "slug",
+        "current": "fransiza-osnove"
+      }
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:03Z",
+      "_id": "jsO7i4LmwGEnLQvVmoJtYf",
+      "_rev": "jsO7i4LmwGEnLQvVmoJtUh",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-05T03:10:03Z",
+      "backReferences": [
+        {
+          "_id": "adpXclQvR9WWEgUkbtDsKI",
+          "_type": "faq"
+        },
+        {
+          "_id": "adpXclQvR9WWEgUkbtDsl3",
+          "_type": "faq"
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoJvTh",
+          "_type": "faq"
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoJvnX",
+          "_type": "faq"
+        }
+      ],
+      "description": "Finansijski aspekti franšize",
+      "name": "Investicija i zarada",
+      "order": 2,
+      "references": [
+        {
+          "_id": "adpXclQvR9WWEgUkbtDsKI",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "adpXclQvR9WWEgUkbtDsl3",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoJvTh",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoJvnX",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "_type": "slug",
+        "current": "investicija-zarada"
+      }
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:05Z",
+      "_id": "jsO7i4LmwGEnLQvVmoJu0R",
+      "_rev": "jsO7i4LmwGEnLQvVmoJtwT",
+      "_type": "faqCategory",
+      "_updatedAt": "2025-08-05T03:10:05Z",
+      "backReferences": [
+        {
+          "_id": "adpXclQvR9WWEgUkbtDu3K",
+          "_type": "faq"
+        },
+        {
+          "_id": "adpXclQvR9WWEgUkbtDuEn",
+          "_type": "faq"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9HOkp",
+          "_type": "faq"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9HOw3",
+          "_type": "faq"
+        }
+      ],
+      "description": "Lokacija, marketing i promocija",
+      "name": "Teritorija i marketing",
+      "order": 4,
+      "references": [
+        {
+          "_id": "adpXclQvR9WWEgUkbtDu3K",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "adpXclQvR9WWEgUkbtDuEn",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9HOkp",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9HOw3",
+          "_type": "faq",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "_type": "slug",
+        "current": "teritorija-marketing"
+      }
+    }
+  ]
+}

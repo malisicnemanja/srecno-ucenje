@@ -1,0 +1,213 @@
+{
+  "exportTimestamp": "2025-08-07T21:59:27.682Z",
+  "sanityProject": {
+    "projectId": "08ctxj6y",
+    "dataset": "production"
+  },
+  "stats": {
+    "totalDocuments": 245,
+    "successfulExports": 28,
+    "failedExports": 0,
+    "documentCounts": {
+      "siteSettings": 3,
+      "homePage": 1,
+      "navigation": 3,
+      "notificationBar": 0,
+      "blogPost": 17,
+      "blogCategory": 15,
+      "author": 4,
+      "methodology": 2,
+      "program": 3,
+      "trainingProgram": 0,
+      "virtualClassroom": 0,
+      "resource": 10,
+      "book": 9,
+      "booksLanding": 2,
+      "publications": 0,
+      "aboutAuthor": 4,
+      "authorTimeline": 0,
+      "authorAchievements": 0,
+      "teamMember": 0,
+      "successStory": 10,
+      "testimonial": 20,
+      "faq": 55,
+      "faqCategory": 17,
+      "locationData": 10,
+      "franchiseSteps": 1,
+      "franchiseApplication": 2,
+      "franchiseSection": 4,
+      "franchiseField": 24,
+      "franchiseMotivational": 2,
+      "franchiseApplicationSubmission": 0,
+      "calculatorSettings": 2,
+      "calculatorResult": 13,
+      "booking": 5,
+      "bookingPage": 1,
+      "newsletterSubscriber": 1,
+      "page": 5,
+      "legalPage": 0,
+      "errorPage": 0,
+      "experience": 0
+    },
+    "errors": []
+  },
+  "files": [
+    {
+      "filename": "aboutAuthor.json",
+      "size": 39288,
+      "type": "aboutAuthor"
+    },
+    {
+      "filename": "assets.json",
+      "size": 14979,
+      "type": "assets"
+    },
+    {
+      "filename": "author.json",
+      "size": 7400,
+      "type": "author"
+    },
+    {
+      "filename": "blogCategory.json",
+      "size": 11729,
+      "type": "blogCategory"
+    },
+    {
+      "filename": "blogPost.json",
+      "size": 25227,
+      "type": "blogPost"
+    },
+    {
+      "filename": "book.json",
+      "size": 28312,
+      "type": "book"
+    },
+    {
+      "filename": "booking.json",
+      "size": 3199,
+      "type": "booking"
+    },
+    {
+      "filename": "bookingPage.json",
+      "size": 3834,
+      "type": "bookingPage"
+    },
+    {
+      "filename": "booksLanding.json",
+      "size": 5678,
+      "type": "booksLanding"
+    },
+    {
+      "filename": "calculatorResult.json",
+      "size": 10789,
+      "type": "calculatorResult"
+    },
+    {
+      "filename": "calculatorSettings.json",
+      "size": 5369,
+      "type": "calculatorSettings"
+    },
+    {
+      "filename": "faq.json",
+      "size": 36146,
+      "type": "faq"
+    },
+    {
+      "filename": "faqCategory.json",
+      "size": 21538,
+      "type": "faqCategory"
+    },
+    {
+      "filename": "franchiseApplication.json",
+      "size": 4528,
+      "type": "franchiseApplication"
+    },
+    {
+      "filename": "franchiseField.json",
+      "size": 24491,
+      "type": "franchiseField"
+    },
+    {
+      "filename": "franchiseMotivational.json",
+      "size": 10701,
+      "type": "franchiseMotivational"
+    },
+    {
+      "filename": "franchiseSection.json",
+      "size": 7106,
+      "type": "franchiseSection"
+    },
+    {
+      "filename": "franchiseSteps.json",
+      "size": 539,
+      "type": "franchiseSteps"
+    },
+    {
+      "filename": "homePage.json",
+      "size": 16351,
+      "type": "homePage"
+    },
+    {
+      "filename": "locationData.json",
+      "size": 8614,
+      "type": "locationData"
+    },
+    {
+      "filename": "methodology.json",
+      "size": 12674,
+      "type": "methodology"
+    },
+    {
+      "filename": "navigation.json",
+      "size": 3397,
+      "type": "navigation"
+    },
+    {
+      "filename": "newsletterSubscriber.json",
+      "size": 577,
+      "type": "newsletterSubscriber"
+    },
+    {
+      "filename": "page.json",
+      "size": 13749,
+      "type": "page"
+    },
+    {
+      "filename": "program.json",
+      "size": 3296,
+      "type": "program"
+    },
+    {
+      "filename": "resource.json",
+      "size": 7386,
+      "type": "resource"
+    },
+    {
+      "filename": "schema-info.json",
+      "size": 2291,
+      "type": "schema-info"
+    },
+    {
+      "filename": "siteSettings.json",
+      "size": 11540,
+      "type": "siteSettings"
+    },
+    {
+      "filename": "successStory.json",
+      "size": 11675,
+      "type": "successStory"
+    },
+    {
+      "filename": "testimonial.json",
+      "size": 13407,
+      "type": "testimonial"
+    }
+  ],
+  "nextSteps": [
+    "1. Review the content analysis report",
+    "2. Run the migration analysis script",
+    "3. Create the migration plan",
+    "4. Test migration on development dataset first",
+    "5. Execute migration with backup verification"
+  ]
+}

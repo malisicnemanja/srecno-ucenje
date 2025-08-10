@@ -1,0 +1,121 @@
+{
+  "_type": "program",
+  "_exportedAt": "2025-08-07T21:59:24.976Z",
+  "_count": 3,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T01:47:46Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFcD6",
+      "_rev": "RSzTvGgTwtY6EErbXk12tM",
+      "_type": "program",
+      "_updatedAt": "2025-08-05T20:16:11Z",
+      "ageGroup": "5-14 godina",
+      "backReferences": [
+        {
+          "_id": "drafts.hWo33GCGxd3rDeD5TiyB4J",
+          "_type": "successStory"
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5TiyB4J",
+          "_type": "successStory"
+        }
+      ],
+      "benefits": [
+        "Brže mentalno računanje",
+        "Razvoj oba hemisfera mozga",
+        "Poboljšana memorija",
+        "Bolja logika",
+        "Veća kreativnost",
+        "Samopouzdanje u matematici"
+      ],
+      "description": "Naučite da računate brže od kalkulatora koristeći moć vizualizacije",
+      "duration": "12 meseci",
+      "groupSize": "6-8 učenika",
+      "icon": "calculator",
+      "order": 2,
+      "references": [
+        {
+          "_id": "drafts.hWo33GCGxd3rDeD5TiyB4J",
+          "_type": "successStory",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5TiyB4J",
+          "_type": "successStory",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "current": "mentalna-aritmetika"
+      },
+      "title": "Mentalna aritmetika"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:47Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFcNh",
+      "_rev": "RSzTvGgTwtY6EErbXk130A",
+      "_type": "program",
+      "_updatedAt": "2025-08-05T20:16:12Z",
+      "ageGroup": "7-14 godina",
+      "backReferences": [],
+      "benefits": [
+        "Kompletan kognitivni razvoj",
+        "Ušteda vremena i novca",
+        "Sinergija programa",
+        "Brži napredak",
+        "Sveobuhvatni rezultati"
+      ],
+      "description": "Najbolje iz oba programa za maksimalne rezultate",
+      "duration": "12 meseci",
+      "groupSize": "6-8 učenika",
+      "icon": "target",
+      "order": 3,
+      "references": [],
+      "slug": {
+        "current": "kombinovani-program"
+      },
+      "title": "Kombinovani program"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:45Z",
+      "_id": "hWo33GCGxd3rDeD5Tiy8cZ",
+      "_rev": "RSzTvGgTwtY6EErbXk136y",
+      "_type": "program",
+      "_updatedAt": "2025-08-05T20:16:13Z",
+      "ageGroup": "7-16 godina",
+      "backReferences": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFf0B",
+          "_type": "successStory"
+        }
+      ],
+      "benefits": [
+        "Čitanje 3-5 puta brže",
+        "Bolje razumevanje pročitanog",
+        "Poboljšana koncentracija",
+        "Veće samopouzdanje",
+        "Bolje ocene u školi",
+        "Ljubav prema knjigama"
+      ],
+      "description": "Ovladajte veštinom brzog čitanja uz potpuno razumevanje pročitanog teksta",
+      "duration": "6 meseci",
+      "groupSize": "6-8 učenika",
+      "icon": "book",
+      "order": 1,
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFf0B",
+          "_type": "successStory",
+          "name": null,
+          "title": null
+        }
+      ],
+      "slug": {
+        "current": "brzocitanje"
+      },
+      "title": "Brzočitanje"
+    }
+  ]
+}

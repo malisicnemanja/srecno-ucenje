@@ -1,0 +1,258 @@
+{
+  "_type": "resource",
+  "_exportedAt": "2025-08-07T21:59:25.216Z",
+  "_count": 10,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T02:50:37Z",
+      "_id": "EIn1TO6kzkBkpMuRkFf93p",
+      "_rev": "EIn1TO6kzkBkpMuRkFf90I",
+      "_type": "resource",
+      "_updatedAt": "2025-08-03T02:50:37Z",
+      "backReferences": [],
+      "category": "methodology",
+      "description": "Detaljan pregled naše obrazovne metodologije sa primerima iz prakse.",
+      "featured": true,
+      "fileSize": 2.8,
+      "pages": 32,
+      "references": [],
+      "requiresLead": false,
+      "resourceType": "pdf",
+      "slug": {
+        "current": "metodologija-srecno-ucenje-pregled"
+      },
+      "tags": [
+        "metodologija",
+        "obrazovanje",
+        "deca",
+        "učenje"
+      ],
+      "title": "Metodologija Srećno učenje - Pregled"
+    },
+    {
+      "_createdAt": "2025-08-03T02:50:44Z",
+      "_id": "EIn1TO6kzkBkpMuRkFf9EQ",
+      "_rev": "EIn1TO6kzkBkpMuRkFf9At",
+      "_type": "resource",
+      "_updatedAt": "2025-08-03T02:50:44Z",
+      "backReferences": [],
+      "category": "business_plans",
+      "description": "Prilagođen template za kreiranje biznis plana vašeg Srećno učenje centra.",
+      "featured": true,
+      "fileSize": 2.5,
+      "pages": 28,
+      "references": [],
+      "requiresLead": true,
+      "resourceType": "presentation",
+      "slug": {
+        "current": "template-biznis-plana"
+      },
+      "tags": [
+        "biznis plan",
+        "template",
+        "prezentacija",
+        "franšiza"
+      ],
+      "title": "Template biznis plana"
+    },
+    {
+      "_createdAt": "2025-08-03T02:50:36Z",
+      "_id": "hWo33GCGxd3rDeD5TjSJql",
+      "_rev": "hWo33GCGxd3rDeD5TjSJm1",
+      "_type": "resource",
+      "_updatedAt": "2025-08-03T02:50:36Z",
+      "backReferences": [],
+      "category": "business_plans",
+      "description": "Detaljni Excel template za projekciju prihoda i rashoda vašeg centra.",
+      "fileSize": 1.2,
+      "references": [],
+      "requiresLead": true,
+      "resourceType": "excel",
+      "slug": {
+        "current": "finansijski-kalkulator-excel"
+      },
+      "tags": [
+        "finansije",
+        "excel",
+        "kalkulator",
+        "biznis plan"
+      ],
+      "title": "Finansijski kalkulator - Excel template"
+    },
+    {
+      "_createdAt": "2025-08-03T02:50:41Z",
+      "_id": "hWo33GCGxd3rDeD5TjSK4z",
+      "_rev": "hWo33GCGxd3rDeD5TjSK0F",
+      "_type": "resource",
+      "_updatedAt": "2025-08-03T02:50:41Z",
+      "backReferences": [],
+      "category": "training",
+      "description": "Video snimak tipičnog radnog dana u našem centru sa komentarima.",
+      "fileSize": 125,
+      "references": [],
+      "requiresLead": true,
+      "resourceType": "video",
+      "slug": {
+        "current": "video-prezentacija-dan-u-centru"
+      },
+      "tags": [
+        "video",
+        "trening",
+        "dan u centru",
+        "edukacija"
+      ],
+      "title": "Video prezentacija - Dan u centru"
+    },
+    {
+      "_createdAt": "2025-08-03T02:50:42Z",
+      "_id": "hWo33GCGxd3rDeD5TjSKJD",
+      "_rev": "hWo33GCGxd3rDeD5TjSKET",
+      "_type": "resource",
+      "_updatedAt": "2025-08-03T02:50:42Z",
+      "backReferences": [],
+      "category": "business_plans",
+      "description": "Vizuelni prikaz povrata investicije tokom prve godine poslovanja.",
+      "fileSize": 0.8,
+      "references": [],
+      "requiresLead": false,
+      "resourceType": "infographic",
+      "slug": {
+        "current": "infografika-roi-12-meseci"
+      },
+      "tags": [
+        "ROI",
+        "infografika",
+        "investicija",
+        "prva godina"
+      ],
+      "title": "Infografika - ROI u 12 meseci"
+    },
+    {
+      "_createdAt": "2025-08-03T02:50:43Z",
+      "_id": "hWo33GCGxd3rDeD5TjSKXR",
+      "_rev": "hWo33GCGxd3rDeD5TjSKSh",
+      "_type": "resource",
+      "_updatedAt": "2025-08-03T02:50:43Z",
+      "backReferences": [],
+      "category": "training",
+      "description": "Osnove pedagogije i praktični saveti za rad sa decom različitih uzrasta.",
+      "fileSize": 3.2,
+      "pages": 42,
+      "references": [],
+      "requiresLead": true,
+      "resourceType": "pdf",
+      "slug": {
+        "current": "prirucnik-rad-sa-decom"
+      },
+      "tags": [
+        "edukacija",
+        "deca",
+        "pedagogija",
+        "priručnik"
+      ],
+      "title": "Priručnik za rad sa decom"
+    },
+    {
+      "_createdAt": "2025-08-03T02:50:35Z",
+      "_id": "hZm6tMI3obk6ZBXKfAUx1t",
+      "_rev": "hZm6tMI3obk6ZBXKfAUwyt",
+      "_type": "resource",
+      "_updatedAt": "2025-08-03T02:50:35Z",
+      "backReferences": [],
+      "category": "franchise_guide",
+      "description": "Sve što trebate znati o pokretanju Srećno učenje franšize. Od prvog koraka do otvaranja centra.",
+      "featured": true,
+      "fileSize": 3.5,
+      "pages": 45,
+      "references": [],
+      "requiresLead": true,
+      "resourceType": "pdf",
+      "slug": {
+        "current": "kompletan-vodic-fransizu-2024"
+      },
+      "tags": [
+        "franšiza",
+        "vodič",
+        "početnici",
+        "2024"
+      ],
+      "title": "Kompletan vodič za franšizu - 2024"
+    },
+    {
+      "_createdAt": "2025-08-03T02:50:38Z",
+      "_id": "hZm6tMI3obk6ZBXKfAUxAt",
+      "_rev": "hZm6tMI3obk6ZBXKfAUx7t",
+      "_type": "resource",
+      "_updatedAt": "2025-08-03T02:50:38Z",
+      "backReferences": [],
+      "category": "marketing",
+      "description": "Kompletan set marketing materijala i strategija za promociju vašeg centra.",
+      "fileSize": 4.2,
+      "pages": 56,
+      "references": [],
+      "requiresLead": true,
+      "resourceType": "pdf",
+      "slug": {
+        "current": "marketing-prirucnik-fransizere"
+      },
+      "tags": [
+        "marketing",
+        "promocija",
+        "strategija",
+        "franšiza"
+      ],
+      "title": "Marketing priručnik za franšizere"
+    },
+    {
+      "_createdAt": "2025-08-03T02:50:39Z",
+      "_id": "hZm6tMI3obk6ZBXKfAUxJt",
+      "_rev": "hZm6tMI3obk6ZBXKfAUxGt",
+      "_type": "resource",
+      "_updatedAt": "2025-08-03T02:50:39Z",
+      "backReferences": [],
+      "category": "case_studies",
+      "description": "Kako je naš partner u Novom Sadu dostigao profitabilnost za 8 meseci.",
+      "featured": true,
+      "fileSize": 1.8,
+      "pages": 18,
+      "references": [],
+      "requiresLead": true,
+      "resourceType": "pdf",
+      "slug": {
+        "current": "studija-slucaja-novi-sad"
+      },
+      "tags": [
+        "studija slučaja",
+        "uspeh",
+        "Novi Sad",
+        "profitabilnost"
+      ],
+      "title": "Studija slučaja - Centar Novi Sad"
+    },
+    {
+      "_createdAt": "2025-08-03T02:50:40Z",
+      "_id": "hZm6tMI3obk6ZBXKfAUxSt",
+      "_rev": "hZm6tMI3obk6ZBXKfAUxPt",
+      "_type": "resource",
+      "_updatedAt": "2025-08-03T02:50:40Z",
+      "backReferences": [],
+      "category": "legal",
+      "description": "Lista svih pravnih dokumenata i procedura potrebnih za otvaranje centra.",
+      "fileSize": 0.5,
+      "pages": 8,
+      "references": [],
+      "requiresLead": false,
+      "resourceType": "checklist",
+      "slug": {
+        "current": "pravni-okvir-checklist"
+      },
+      "tags": [
+        "pravni",
+        "dokumenti",
+        "checklist",
+        "franšiza"
+      ],
+      "title": "Pravni okvir franšize - Checklist"
+    }
+  ]
+}

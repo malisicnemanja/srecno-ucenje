@@ -1,0 +1,169 @@
+{
+  "_type": "booksLanding",
+  "_exportedAt": "2025-08-07T21:59:25.424Z",
+  "_count": 2,
+  "documents": [
+    {
+      "_createdAt": "2025-08-07T20:12:53Z",
+      "_id": "booksLanding",
+      "_rev": "oWtMwMRBoarauLfrKjVkEJ",
+      "_type": "booksLanding",
+      "_updatedAt": "2025-08-07T20:16:16Z",
+      "authorSection": {
+        "ctaText": "Saznajte više o autorki",
+        "description": [
+          {
+            "_key": "acddf350c4af",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "64abdf066bd0",
+                "_type": "span",
+                "marks": [],
+                "text": "Učiteljica, spisateljica i kreatorka metodologije Srećnog učenja"
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          }
+        ],
+        "image": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6f5037222a0f6bc9c9557560f040de380556a33d-1024x1536-png",
+            "_type": "reference"
+          }
+        },
+        "linkToAbout": "/o-autorki",
+        "title": "O autorki"
+      },
+      "backReferences": [],
+      "booksCarouselTitle": "Istražite sve knjige",
+      "ctaSection": {
+        "primaryButton": {
+          "text": "Poručite sada"
+        },
+        "secondaryButton": {
+          "text": "Kontaktirajte nas",
+          "url": "/kontakt"
+        },
+        "title": "Nabavite komplet knjiga"
+      },
+      "heroSubtitle": "Obrazovni serijal knjiga Željane Radojičić Lukić",
+      "heroTitle": "Čarobno selo - Luka godišnjih doba",
+      "references": [],
+      "seo": {
+        "keywords": [
+          "dečje knjige",
+          "obrazovne knjige",
+          "godišnja doba",
+          "čarobno selo",
+          "Željana Radojičić Lukić",
+          "vile",
+          "bajka i nauka"
+        ],
+        "metaDescription": "Obrazovni serijal od četiri knjige koje prate godišnja doba. Spoj bajke i nauke za decu uzrasta 5-12 godina.",
+        "metaTitle": "Čarobno selo - Knjige Željane Radojičić Lukić"
+      },
+      "seriesDescription": [
+        {
+          "_key": "3f23758c4437",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "821cffaecbe9",
+              "_type": "span",
+              "marks": [],
+              "text": "Najbolje knjige za decu"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "seriesTitle": "O serijalu knjiga",
+      "seriesValues": [
+        {
+          "_key": "7104e54753dd",
+          "description": "Vrlina koja menja svet",
+          "icon": "creativity",
+          "title": "Kreativnost"
+        },
+        {
+          "_key": "2c2a8efdfe85",
+          "description": "Vrlina života",
+          "icon": "creativity",
+          "title": "Dobrota"
+        },
+        {
+          "_key": "9ac5a8bb4e54",
+          "description": "Vrlina koja pomera granice",
+          "icon": "knowledge",
+          "title": "Znanje"
+        },
+        {
+          "_key": "05f71c42b644",
+          "description": "Ono šta nas čuva",
+          "icon": "nature",
+          "title": "Priroda"
+        }
+      ],
+      "showBooksCarousel": true
+    },
+    {
+      "_createdAt": "2025-08-03T11:23:07Z",
+      "_id": "hWo33GCGxd3rDeD5TjrvFd",
+      "_rev": "hWo33GCGxd3rDeD5TjrvAt",
+      "_type": "booksLanding",
+      "_updatedAt": "2025-08-03T11:23:07Z",
+      "authorSection": {
+        "achievements": [
+          "Dobitnica Global Teacher Prize",
+          "Svetosavska nagrada",
+          "Autorka metodologije Srećnog učenja",
+          "Osnivačica festivala Kreativna čarolija"
+        ],
+        "description": "Željana Radojičić Lukić je učiteljica i spisateljica sa više od 20 godina iskustva u obrazovanju. Kreatorka je metodologije Srećnog učenja i osnivačica Čarobnog sela.",
+        "title": "O autorki"
+      },
+      "backReferences": [],
+      "features": [
+        {
+          "description": "Svaka knjiga sadrži pažljivo osmišljene priče koje uče važne životne lekcije",
+          "icon": "book",
+          "title": "Edukativne priče"
+        },
+        {
+          "description": "Praktični zadaci koji povezuju različite oblasti učenja",
+          "icon": "tasks",
+          "title": "Integrativni zadaci"
+        },
+        {
+          "description": "Prelepe ilustracije srpskih umetnika koje oživaljavaju priče",
+          "icon": "art",
+          "title": "Ilustracije"
+        },
+        {
+          "description": "Dodatni digitalni sadržaji dostupni putem QR kodova",
+          "icon": "qr",
+          "title": "QR kodovi"
+        }
+      ],
+      "heroSubtitle": "Četiri čarobne knjige koje prate godišnje cikluse i uče decu o prirodi, emocijama i vrednostima",
+      "heroTitle": "Luka godišnjih doba",
+      "references": [],
+      "seo": {
+        "keywords": [
+          "luka godišnjih doba",
+          "dečje knjige",
+          "edukativne priče",
+          "srećno učenje",
+          "željana radojičić lukić"
+        ],
+        "metaDescription": "Otkrijte serijal \"Luka godišnjih doba\" - četiri edukativne knjige koje prate godišnje cikluse i uče decu o prirodi i vrednostima.",
+        "metaTitle": "Knjige - Luka godišnjih doba | Srećno učenje"
+      },
+      "seriesDescription": "Serijal \"Luka godišnjih doba\" je jedinstvena kolekcija od četiri knjige koje prate avanture dečaka Luke kroz sve četiri godišnje doba. Svaka knjiga donosi priču o jednom godišnjem dobu sa svojom vilom čuvaricom, učeći decu o prirodnim ciklusima, emocionalnoj inteligenciji i važnim životnim vrednostima."
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "_type": "calculatorSettings",
+  "_exportedAt": "2025-08-07T21:59:26.828Z",
+  "_count": 2,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T02:23:16Z",
+      "_id": "EIn1TO6kzkBkpMuRkFHzTz",
+      "_rev": "EIn1TO6kzkBkpMuRkFHzQS",
+      "_type": "calculatorSettings",
+      "_updatedAt": "2025-08-03T02:23:16Z",
+      "backReferences": [],
+      "cities": [
+        {
+          "demandLevel": "high",
+          "name": "Beograd",
+          "priceMultiplier": 1.2
+        },
+        {
+          "demandLevel": "high",
+          "name": "Novi Sad",
+          "priceMultiplier": 1
+        },
+        {
+          "demandLevel": "medium",
+          "name": "Niš",
+          "priceMultiplier": 0.9
+        },
+        {
+          "demandLevel": "medium",
+          "name": "Kragujevac",
+          "priceMultiplier": 0.85
+        },
+        {
+          "demandLevel": "medium",
+          "name": "Subotica",
+          "priceMultiplier": 0.8
+        },
+        {
+          "demandLevel": "low",
+          "name": "Pančevo",
+          "priceMultiplier": 0.8
+        }
+      ],
+      "franchiseModels": [
+        {
+          "basePrice": 15000,
+          "description": "Osnovni paket za početnike",
+          "includedItems": [
+            "Licenca za korišćenje brenda",
+            "Osnovna obuka (3 dana)",
+            "Početni set materijala",
+            "Online podrška 6 meseci"
+          ],
+          "name": "Starter"
+        },
+        {
+          "basePrice": 25000,
+          "description": "Profesionalni paket sa dodatnim resursima",
+          "includedItems": [
+            "Licenca za korišćenje brenda",
+            "Napredna obuka (5 dana)",
+            "Kompletan set materijala",
+            "Online podrška 12 meseci",
+            "Marketing paket",
+            "Softver za upravljanje"
+          ],
+          "name": "Professional"
+        },
+        {
+          "basePrice": 40000,
+          "description": "Premium paket sa potpunom podrškom",
+          "includedItems": [
+            "Ekskluzivna licenca za teritoriju",
+            "VIP obuka (7 dana + mentoring)",
+            "Premium materijali i oprema",
+            "Neograničena podrška",
+            "Kompletan marketing sistem",
+            "Softver i hardver",
+            "Pomoć pri zapošljavanju"
+          ],
+          "name": "Premium"
+        }
+      ],
+      "operationalCosts": {
+        "monthlyMarketing": 500,
+        "monthlyOther": 300,
+        "monthlyUtilities": 400,
+        "staffSalaryPerPerson": 800
+      },
+      "references": [],
+      "renovationCosts": {
+        "basic": 100,
+        "premium": 250,
+        "standard": 150
+      },
+      "revenueSettings": {
+        "averageChildrenPerGroup": 12,
+        "groupsPerDay": 4,
+        "pricePerChild": 50,
+        "workingDaysPerMonth": 22
+      },
+      "spaceRequirements": {
+        "minSquareMeters": 80,
+        "optimalSquareMeters": 150,
+        "pricePerSquareMeter": 10
+      }
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:33Z",
+      "_id": "calculatorSettings",
+      "_rev": "RSzTvGgTwtY6EErbXkEb9w",
+      "_type": "calculatorSettings",
+      "_updatedAt": "2025-08-05T22:42:33Z",
+      "backReferences": [],
+      "investmentCalculator": {
+        "description": "Saznajte koliko je potrebno da investirate za vaš tip centra",
+        "packageOptions": [
+          {
+            "features": [
+              "Osnovna obuka",
+              "Materijali za 30 učenika",
+              "Online podrška 6 meseci"
+            ],
+            "name": "Starter",
+            "price": 3500
+          },
+          {
+            "features": [
+              "Proširena obuka",
+              "Materijali za 60 učenika",
+              "Online podrška 12 meseci",
+              "Teritorijalna ekskluzivnost"
+            ],
+            "name": "Professional",
+            "price": 7500
+          },
+          {
+            "features": [
+              "Master obuka",
+              "Materijali za 100+ učenika",
+              "Online podrška 24 meseci",
+              "Mentorstvo 1 godinu"
+            ],
+            "name": "Premium",
+            "price": 12000
+          }
+        ],
+        "title": "Kalkulator Investicije"
+      },
+      "references": [],
+      "roiCalculator": {
+        "description": "Izračunajte potencijalni povrat na investiciju za vaš Srećno učenje centar",
+        "formulas": {
+          "annualRevenue": "monthlyRevenue * 12",
+          "monthlyRevenue": "studentsPerMonth * pricePerStudent",
+          "roiPercentage": "((annualRevenue - initialInvestment) / initialInvestment) * 100"
+        },
+        "parameters": [
+          {
+            "default": 7500,
+            "label": "Početna investicija (€)",
+            "max": 15000,
+            "min": 3500,
+            "name": "initialInvestment",
+            "type": "number"
+          },
+          {
+            "default": 50,
+            "label": "Broj učenika mesečno",
+            "max": 200,
+            "min": 10,
+            "name": "studentsPerMonth",
+            "type": "number"
+          },
+          {
+            "default": 80,
+            "label": "Cena po učeniku (€)",
+            "max": 150,
+            "min": 30,
+            "name": "pricePerStudent",
+            "type": "number"
+          }
+        ],
+        "title": "ROI Kalkulator za Franchise"
+      }
+    }
+  ]
+}

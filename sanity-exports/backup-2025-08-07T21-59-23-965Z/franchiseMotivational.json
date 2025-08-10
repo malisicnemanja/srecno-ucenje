@@ -1,0 +1,283 @@
+{
+  "_type": "franchiseMotivational",
+  "_exportedAt": "2025-08-07T21:59:26.671Z",
+  "_count": 2,
+  "documents": [
+    {
+      "_createdAt": "2025-08-06T13:06:30Z",
+      "_id": "SBvfECCtZ11PRIA8QdEr11",
+      "_rev": "SBvfECCtZ11PRIA8QdEqyw",
+      "_type": "franchiseMotivational",
+      "_updatedAt": "2025-08-06T13:06:30Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMqJZ",
+          "_type": "franchiseApplication"
+        }
+      ],
+      "benefits": [
+        {
+          "description": "Kompletna obuka za metodologiju, upravljanje biznisom i rad sa roditeljima",
+          "icon": "education",
+          "title": "Sveobuhvatna obuka"
+        },
+        {
+          "description": "Готови marketinški materijali, web prezentacija i društvene mreže",
+          "icon": "marketing",
+          "title": "Marketing podrška"
+        },
+        {
+          "description": "Stalan kontakt sa timom, mesečni sastanci i dodatne obuke",
+          "icon": "support",
+          "title": "Kontinuirana podrška"
+        },
+        {
+          "description": "Preko 90% franšiza postiže profitabilnost u prvoj godini rada",
+          "icon": "finance",
+          "title": "Dokazana profitabilnost"
+        },
+        {
+          "description": "Možete raditi part-time ili full-time, prilagodite posao svom ritmu",
+          "icon": "business",
+          "title": "Fleksibilnost rada"
+        },
+        {
+          "description": "Pristup zajednici od preko 450 edukatora širom Srbije",
+          "icon": "network",
+          "title": "Jaka mreža kolega"
+        }
+      ],
+      "ctaSection": {
+        "description": "Pridružite se mreži uspešnih edukatora i započnite svoju franšizu priču već danas. Proces prijave traje samo 10 minuta.",
+        "primaryButton": {
+          "action": "scroll_to_form",
+          "text": "Prijavite se sada"
+        },
+        "secondaryButton": {
+          "link": "/fransize",
+          "text": "Saznajte više o franšizi"
+        },
+        "title": "Spremni ste za sledeći korak?"
+      },
+      "description": "Franšiza Srećno učenje vam omogućava da pokrenete svoj edukacijski biznis uz podršku dokazane metodologije, kontinuiranu obuku i marketing podršku iskusnog tima.",
+      "faqSection": {
+        "items": [
+          {
+            "answer": "Početna investicija se kreće od 2.000 do 5.000 evra, što pokriva licencnu naknadu, početni materijal i marketing podrušku za prvih 6 meseci.",
+            "question": "Koliko novca je potrebno za početak?"
+          },
+          {
+            "answer": "Ne morate imati formalno iskustvo. Naša obuka pokriva sve što vam je potrebno - od metodologije rada sa decom do upravljanja biznisom.",
+            "question": "Da li moram da imam iskustvo u edukaciji?"
+          },
+          {
+            "answer": "Od potpisivanja ugovora do prve grupe polaznika prođe obično 4-6 nedelja, u zavisnosti od vašeg tempa i lokalne tražnje.",
+            "question": "Koliko vremena treba da se franšiza pokrene?"
+          },
+          {
+            "answer": "Kontinuiranu podršku kroz mesečne sastanke, pristup bazi materijala, marketing podršku i direktnu komunikaciju sa timom.",
+            "question": "Kakvu podršku dobijam tokom rada?"
+          }
+        ],
+        "title": "Najčešće postavljana pitanja"
+      },
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMqJZ",
+          "_type": "franchiseApplication",
+          "name": null,
+          "title": "Prijava za franšizu Srećno učenje"
+        }
+      ],
+      "statistics": [
+        {
+          "icon": "franchise",
+          "label": "aktivnih franšiza",
+          "number": "127",
+          "suffix": "+"
+        },
+        {
+          "icon": "users",
+          "label": "zadovoljnih polaznika",
+          "number": "15,000",
+          "suffix": "+"
+        },
+        {
+          "icon": "educators",
+          "label": "sertifikovanih edukatora",
+          "number": "450",
+          "suffix": "+"
+        },
+        {
+          "icon": "rating",
+          "label": "prosečna ocena",
+          "number": "4.9",
+          "suffix": "/5"
+        }
+      ],
+      "subtitle": "Postanite deo uspešne priče Srećno učenje",
+      "testimonials": [
+        {
+          "location": "Novi Sad",
+          "name": "Milica Stanković",
+          "quote": "Prelazak iz korporativnog sveta u obrazovanje kroz Srećno učenje bila je najbolja odluka moje karijere. Za godinu dana sam izgradila stabilnu bazu od preko 80 polaznika.",
+          "rating": 5,
+          "role": "Vlasnik franšize Novi Sad Centar"
+        },
+        {
+          "location": "Kragujevac",
+          "name": "Ana Marić",
+          "quote": "Metodologija Srećnog učenja dala mi je strukturu koju sam tražila. Deca napreduju brže nego što sam očekivala, a roditelji su prezadovoljni rezultatima.",
+          "rating": 5,
+          "role": "Franšiza Kragujevac"
+        },
+        {
+          "location": "Niš",
+          "name": "Marko Jovanović",
+          "quote": "Kontinuirana podrška tima i kvalitetni materijali omogućili su mi da se fokusiram na ono što volim - rad sa decom. Biznis se vodi gotovo sam.",
+          "rating": 5,
+          "role": "Franšiza Niš Medijana"
+        }
+      ],
+      "title": "Pridružite se najvećoj edukacionoj mreži u Srbiji"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:22Z",
+      "_id": "tqJG5yH49IKSFNIKiLWC4j",
+      "_rev": "tqJG5yH49IKSFNIKiLWC2x",
+      "_type": "franchiseMotivational",
+      "_updatedAt": "2025-08-06T13:21:22Z",
+      "backReferences": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXRv",
+          "_type": "franchiseApplication"
+        }
+      ],
+      "benefits": [
+        {
+          "description": "Kompletna obuka za metodologiju, upravljanje biznisom i rad sa roditeljima",
+          "icon": "education",
+          "title": "Sveobuhvatna obuka"
+        },
+        {
+          "description": "Готови marketinški materijali, web prezentacija i društvene mreže",
+          "icon": "marketing",
+          "title": "Marketing podrška"
+        },
+        {
+          "description": "Stalan kontakt sa timom, mesečni sastanci i dodatne obuke",
+          "icon": "support",
+          "title": "Kontinuirana podrška"
+        },
+        {
+          "description": "Preko 90% franšiza postiže profitabilnost u prvoj godini rada",
+          "icon": "finance",
+          "title": "Dokazana profitabilnost"
+        },
+        {
+          "description": "Možete raditi part-time ili full-time, prilagodite posao svom ritmu",
+          "icon": "business",
+          "title": "Fleksibilnost rada"
+        },
+        {
+          "description": "Pristup zajednici od preko 450 edukatora širom Srbije",
+          "icon": "network",
+          "title": "Jaka mreža kolega"
+        }
+      ],
+      "ctaSection": {
+        "description": "Pridružite se mreži uspešnih edukatora i započnite svoju franšizu priču već danas. Proces prijave traje samo 10 minuta.",
+        "primaryButton": {
+          "action": "scroll_to_form",
+          "text": "Prijavite se sada"
+        },
+        "secondaryButton": {
+          "link": "/fransize",
+          "text": "Saznajte više o franšizi"
+        },
+        "title": "Spremni ste za sledeći korak?"
+      },
+      "description": "Franšiza Srećno učenje vam omogućava da pokrenete svoj edukacijski biznis uz podršku dokazane metodologije, kontinuiranu obuku i marketing podršku iskusnog tima.",
+      "faqSection": {
+        "items": [
+          {
+            "answer": "Početna investicija se kreće od 2.000 do 5.000 evra, što pokriva licencnu naknadu, početni materijal i marketing podrušku za prvih 6 meseci.",
+            "question": "Koliko novca je potrebno za početak?"
+          },
+          {
+            "answer": "Ne morate imati formalno iskustvo. Naša obuka pokriva sve što vam je potrebno - od metodologije rada sa decom do upravljanja biznisom.",
+            "question": "Da li moram da imam iskustvo u edukaciji?"
+          },
+          {
+            "answer": "Od potpisivanja ugovora do prve grupe polaznika prođe obično 4-6 nedelja, u zavisnosti od vašeg tempa i lokalne tražnje.",
+            "question": "Koliko vremena treba da se franšiza pokrene?"
+          },
+          {
+            "answer": "Kontinuiranu podršku kroz mesečne sastanke, pristup bazi materijala, marketing podršku i direktnu komunikaciju sa timom.",
+            "question": "Kakvu podršku dobijam tokom rada?"
+          }
+        ],
+        "title": "Najčešće postavljana pitanja"
+      },
+      "references": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXRv",
+          "_type": "franchiseApplication",
+          "name": null,
+          "title": "Prijava za franšizu Srećno učenje"
+        }
+      ],
+      "statistics": [
+        {
+          "icon": "franchise",
+          "label": "aktivnih franšiza",
+          "number": "127",
+          "suffix": "+"
+        },
+        {
+          "icon": "users",
+          "label": "zadovoljnih polaznika",
+          "number": "15,000",
+          "suffix": "+"
+        },
+        {
+          "icon": "educators",
+          "label": "sertifikovanih edukatora",
+          "number": "450",
+          "suffix": "+"
+        },
+        {
+          "icon": "rating",
+          "label": "prosečna ocena",
+          "number": "4.9",
+          "suffix": "/5"
+        }
+      ],
+      "subtitle": "Postanite deo uspešne priče Srećno učenje",
+      "testimonials": [
+        {
+          "location": "Novi Sad",
+          "name": "Milica Stanković",
+          "quote": "Prelazak iz korporativnog sveta u obrazovanje kroz Srećno učenje bila je najbolja odluka moje karijere. Za godinu dana sam izgradila stabilnu bazu od preko 80 polaznika.",
+          "rating": 5,
+          "role": "Vlasnik franšize Novi Sad Centar"
+        },
+        {
+          "location": "Kragujevac",
+          "name": "Ana Marić",
+          "quote": "Metodologija Srećnog učenja dala mi je strukturu koju sam tražila. Deca napreduju brže nego što sam očekivala, a roditelji su prezadovoljni rezultatima.",
+          "rating": 5,
+          "role": "Franšiza Kragujevac"
+        },
+        {
+          "location": "Niš",
+          "name": "Marko Jovanović",
+          "quote": "Kontinuirana podrška tima i kvalitetni materijali omogućili su mi da se fokusiram na ono što volim - rad sa decom. Biznis se vodi gotovo sam.",
+          "rating": 5,
+          "role": "Franšiza Niš Medijana"
+        }
+      ],
+      "title": "Pridružite se najvećoj edukacionoj mreži u Srbiji"
+    }
+  ]
+}

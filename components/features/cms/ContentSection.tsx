@@ -5,38 +5,29 @@
  */
 
 import React from 'react'
+import { PortableText } from '@portabletext/react'
 import { ContentSectionProps } from '@/types/sections'
 import { brandColors, getContrastColor } from '@/lib/color-rotation'
+import { SimplePortableTextRenderer, portableTextComponents } from './PortableTextComponents'
 
-// Simplified Portable Text renderer - replace with your actual implementation
+// Portable Text renderer with proper handling
 const PortableTextRenderer: React.FC<{ content: any }> = ({ content }) => {
-  // Ovde bi trebalo implementirati pravi Portable Text renderer
-  // Za sada koristimo jednostavan prikaz
-  if (typeof content === 'string') {
-    return <p>{content}</p>
+  if (!content) {
+    return null
   }
   
-  if (Array.isArray(content)) {
+  // If content has _type or is an array of blocks, use full PortableText
+  if (Array.isArray(content) || (content._type && content._type !== 'string')) {
     return (
-      <div className="space-y-4">
-        {content.map((block, index) => (
-          <div key={index}>
-            {block.children ? (
-              <p>
-                {block.children.map((child: any, childIndex: number) => (
-                  <span key={childIndex}>{child.text || ''}</span>
-                ))}
-              </p>
-            ) : (
-              <p>{block.text || JSON.stringify(block)}</p>
-            )}
-          </div>
-        ))}
-      </div>
+      <PortableText 
+        value={content}
+        components={portableTextComponents}
+      />
     )
   }
-
-  return <div>Content</div>
+  
+  // Fallback to simple renderer
+  return <SimplePortableTextRenderer content={content} />
 }
 
 const ContentSection: React.FC<ContentSectionProps> = ({

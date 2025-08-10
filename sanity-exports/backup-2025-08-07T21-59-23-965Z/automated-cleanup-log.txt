@@ -1,0 +1,62 @@
+[2025-08-08T06:16:20.960Z] [INFO] Starting automated cleanup session - 2025-08-08T06:16:20.960Z
+[2025-08-08T06:16:20.961Z] [PROGRESS] Testing connection...
+[2025-08-08T06:16:21.230Z] [SUCCESS] Connected to Sanity successfully
+[2025-08-08T06:16:21.231Z] [PROGRESS] Starting deletion of 13 calculator result items
+[2025-08-08T06:16:21.232Z] [PROGRESS] Processing batch 1 (5 items)
+[2025-08-08T06:16:22.211Z] [SUCCESS] Successfully deleted calculator result: EIn1TO6kzkBkpMuRkFfJpQ
+[2025-08-08T06:16:23.596Z] [SUCCESS] Successfully deleted calculator result: EIn1TO6kzkBkpMuRkFgcGy
+[2025-08-08T06:16:24.692Z] [SUCCESS] Successfully deleted calculator result: EIn1TO6kzkBkpMuRkGY5vK
+[2025-08-08T06:16:25.820Z] [SUCCESS] Successfully deleted calculator result: EIn1TO6kzkBkpMuRkGYjyV
+[2025-08-08T06:16:26.722Z] [SUCCESS] Successfully deleted calculator result: RSzTvGgTwtY6EErbXmHqYB
+[2025-08-08T06:16:26.924Z] [INFO] Progress: 38% (5/13)
+[2025-08-08T06:16:27.926Z] [PROGRESS] Processing batch 2 (5 items)
+[2025-08-08T06:16:28.752Z] [SUCCESS] Successfully deleted calculator result: RSzTvGgTwtY6EErbXmHqln
+[2025-08-08T06:16:29.781Z] [SUCCESS] Successfully deleted calculator result: RSzTvGgTwtY6EErbXmHqw0
+[2025-08-08T06:16:30.793Z] [SUCCESS] Successfully deleted calculator result: RSzTvGgTwtY6EErbXmHr6D
+[2025-08-08T06:16:31.852Z] [SUCCESS] Successfully deleted calculator result: SBvfECCtZ11PRIA8QdD56u
+[2025-08-08T06:16:33.457Z] [SUCCESS] Successfully deleted calculator result: SVDvN8W2oCA8eZWngUb3qw
+[2025-08-08T06:16:33.659Z] [INFO] Progress: 77% (10/13)
+[2025-08-08T06:16:34.660Z] [PROGRESS] Processing batch 3 (3 items)
+[2025-08-08T06:16:35.786Z] [SUCCESS] Successfully deleted calculator result: SVDvN8W2oCA8eZWngUb44R
+[2025-08-08T06:16:36.889Z] [SUCCESS] Successfully deleted calculator result: hZm6tMI3obk6ZBXKfAWHZt
+[2025-08-08T06:16:37.943Z] [SUCCESS] Successfully deleted calculator result: rWY7A01dUL9wO4NRCjB8Qe
+[2025-08-08T06:16:38.145Z] [INFO] Progress: 100% (13/13)
+[2025-08-08T06:16:38.147Z] [PROGRESS] Starting deletion of 2 about author items
+[2025-08-08T06:16:38.147Z] [PROGRESS] Processing batch 1 (2 items)
+[2025-08-08T06:16:38.970Z] [SUCCESS] Successfully deleted about author: drafts.EIn1TO6kzkBkpMuRkFy78E
+[2025-08-08T06:16:40.011Z] [SUCCESS] Successfully deleted about author: aboutAuthor
+[2025-08-08T06:16:40.214Z] [INFO] Progress: 100% (2/2)
+[2025-08-08T06:16:40.215Z] [PROGRESS] Starting deletion of 13 FAQ item items
+[2025-08-08T06:16:40.216Z] [PROGRESS] Processing batch 1 (6 items)
+[2025-08-08T06:16:41.006Z] [SUCCESS] Successfully deleted FAQ item: faq-004b5dd6-4e27-44b9-b81e-272926286923
+[2025-08-08T06:16:42.050Z] [SUCCESS] Successfully deleted FAQ item: faq-d8458672-bb94-43d6-add6-d58e303db918
+[2025-08-08T06:16:43.088Z] [SUCCESS] Successfully deleted FAQ item: hZm6tMI3obk6ZBXKfA9sBt
+[2025-08-08T06:16:44.121Z] [SUCCESS] Successfully deleted FAQ item: faq-ab5790e3-1967-417c-ae85-6bef73049303
+[2025-08-08T06:16:45.150Z] [SUCCESS] Successfully deleted FAQ item: hZm6tMI3obk6ZBXKfA9sKt
+[2025-08-08T06:16:46.165Z] [SUCCESS] Successfully deleted FAQ item: hWo33GCGxd3rDeD5Tiy8qn
+[2025-08-08T06:16:46.367Z] [INFO] Progress: 46% (6/13)
+[2025-08-08T06:16:47.369Z] [PROGRESS] Processing batch 2 (6 items)
+[2025-08-08T06:16:48.235Z] [SUCCESS] Successfully deleted FAQ item: faq-3cc31acd-a09d-4791-9885-b5c38548cf61
+[2025-08-08T06:16:49.235Z] [SUCCESS] Successfully deleted FAQ item: faq-972fa3d6-32fd-43ca-b04f-af17005a94e0
+[2025-08-08T06:16:50.251Z] [SUCCESS] Successfully deleted FAQ item: faq-6fccd843-098b-4c2e-9801-d28222e56e0c
+[2025-08-08T06:16:51.272Z] [SUCCESS] Successfully deleted FAQ item: faq-e467af0f-3cf4-4644-8a64-77a14612877e
+[2025-08-08T06:16:52.331Z] [SUCCESS] Successfully deleted FAQ item: faq-e0121326-a7b0-4624-84ce-ca38beb1ed7a
+[2025-08-08T06:16:53.315Z] [SUCCESS] Successfully deleted FAQ item: faq-fdd378f5-77ac-4b3d-b98c-beeaf2f26da5
+[2025-08-08T06:16:53.517Z] [INFO] Progress: 92% (12/13)
+[2025-08-08T06:16:54.518Z] [PROGRESS] Processing batch 3 (1 items)
+[2025-08-08T06:16:55.333Z] [SUCCESS] Successfully deleted FAQ item: faq-fd10a8ca-25d8-4ee8-ae39-8b250364c921
+[2025-08-08T06:16:55.535Z] [INFO] Progress: 100% (13/13)
+[2025-08-08T06:16:55.536Z] [PROGRESS] Updating location fields: centerCount → centreCount
+[2025-08-08T06:16:55.624Z] [INFO] Found 10 locations to update
+[2025-08-08T06:16:57.019Z] [SUCCESS] Updated Novi Sad: centerCount → centreCount (2)
+[2025-08-08T06:16:58.404Z] [SUCCESS] Updated Pančevo: centerCount → centreCount (1)
+[2025-08-08T06:16:59.443Z] [SUCCESS] Updated Beograd: centerCount → centreCount (3)
+[2025-08-08T06:17:00.477Z] [SUCCESS] Updated Niš: centerCount → centreCount (1)
+[2025-08-08T06:17:01.495Z] [SUCCESS] Updated Subotica: centerCount → centreCount (1)
+[2025-08-08T06:17:03.514Z] [SUCCESS] Updated Smederevo: centerCount → centreCount (0)
+[2025-08-08T06:17:04.549Z] [SUCCESS] Updated Kragujevac: centerCount → centreCount (1)
+[2025-08-08T06:17:05.574Z] [SUCCESS] Updated Zrenjanin: centerCount → centreCount (1)
+[2025-08-08T06:17:06.597Z] [SUCCESS] Updated Valjevo: centerCount → centreCount (0)
+[2025-08-08T06:17:07.692Z] [SUCCESS] Updated Čačak: centerCount → centreCount (0)
+[2025-08-08T06:17:07.996Z] [INFO] Summary saved to cleanup-summary.json
+[2025-08-08T06:17:07.997Z] [SUCCESS] 🎉 Cleanup completed successfully!

@@ -1,0 +1,95 @@
+{
+  "quickHomePage": {
+    "_type": "homePage",
+    "enhancedHero": {
+      "title": "Pokrenite uspešnu obrazovnu franšizu",
+      "subtitle": "Pridružite se mreži od preko 50 centara širom Srbije i transformišite obrazovanje u vašoj zajednici.",
+      "badge": "Franšiza #1 u Srbiji",
+      "primaryCta": {
+        "text": "Počnite danas",
+        "href": "/franchise-application"
+      },
+      "secondaryCta": {
+        "text": "Saznajte više",
+        "href": "/o-nama"
+      },
+      "backgroundType": "pattern",
+      "backgroundPattern": "dots"
+    },
+    "statistics": [
+      {
+        "number": "20000",
+        "suffix": "+",
+        "label": "Dece",
+        "description": "prošlo kroz naše programe"
+      },
+      {
+        "number": "50",
+        "suffix": "+",
+        "label": "Centara",
+        "description": "širom Srbije"
+      },
+      {
+        "number": "15",
+        "suffix": "",
+        "label": "Godina",
+        "description": "iskustva u obrazovanju"
+      },
+      {
+        "number": "95",
+        "suffix": "%",
+        "label": "Zadovoljstvo",
+        "description": "partnera i roditelja"
+      }
+    ],
+    "newsletter": {
+      "title": "Budite informisani",
+      "description": "Prijavite se za najnovije vesti o franšiza prilikama.",
+      "ctaText": "Prijavite se"
+    },
+    "seo": {
+      "title": "Srećno učenje - Obrazovna franšiza",
+      "description": "Pridružite se najuspešnijoj mreži obrazovnih centara u Srbiji. Dokazana metodologija, kompletna podrška."
+    }
+  },
+  "quickFAQCategories": [
+    {
+      "_type": "faqCategory",
+      "name": "Opšte",
+      "slug": {
+        "_type": "slug",
+        "current": "opste"
+      },
+      "description": "Osnovna pitanja o franšizi"
+    },
+    {
+      "_type": "faqCategory",
+      "name": "Finansije",
+      "slug": {
+        "_type": "slug",
+        "current": "finansije"
+      },
+      "description": "Pitanja o investiciji i profitabilnosti"
+    }
+  ],
+  "quickFAQs": [
+    {
+      "_type": "faq",
+      "question": "Kolika je početna investicija?",
+      "answer": "Početna investicija se kreće od 8.000€ do 25.000€ zavisno od modela franšize koji birate.",
+      "order": 1
+    },
+    {
+      "_type": "faq",
+      "question": "Kada mogu očekivati povraćaj investicije?",
+      "answer": "Većina naših partnera ostvaruje povraćaj investicije između 18-30 meseci.",
+      "order": 2
+    },
+    {
+      "_type": "faq",
+      "question": "Kakva podrška se pruža?",
+      "answer": "Pružamo kompletnu obuku, kontinuiranu podršku, marketing materijale i 24/7 tehničku podršku.",
+      "order": 3
+    }
+  ]
+}

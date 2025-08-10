@@ -1,0 +1,402 @@
+{
+  "_type": "siteSettings",
+  "_exportedAt": "2025-08-07T21:59:24.233Z",
+  "_count": 3,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T01:47:44Z",
+      "_id": "hZm6tMI3obk6ZBXKfA9s2t",
+      "_rev": "SVDvN8W2oCA8eZWngS3UQR",
+      "_system": {
+        "base": {
+          "id": "hZm6tMI3obk6ZBXKfA9s2t",
+          "rev": "hZm6tMI3obk6ZBXKfA9rzt"
+        }
+      },
+      "_type": "siteSettings",
+      "_updatedAt": "2025-08-05T22:24:52Z",
+      "address": "Bulevar oslobođenja 123, 21000 Novi Sad",
+      "backReferences": [],
+      "email": "info@srecno-ucenje.rs",
+      "logo": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-3fa0a24118b1ece64de4f8be3a8b38686a188276-1772x1772-png",
+          "_type": "reference"
+        }
+      },
+      "navigationSettings": {
+        "ctaButton": {
+          "highlighted": true,
+          "href": "/zakazivanje",
+          "style": "primary",
+          "text": "Započni sada"
+        },
+        "footer": {
+          "columns": [
+            {
+              "_key": "col1",
+              "colorAccent": "primary",
+              "links": [
+                {
+                  "_key": "l1",
+                  "label": "Metodologija",
+                  "link": "/metodologija"
+                },
+                {
+                  "_key": "l2",
+                  "label": "Priče uspeha",
+                  "link": "/uspeh"
+                },
+                {
+                  "_key": "l3",
+                  "label": "O autorki",
+                  "link": "/o-autorki"
+                },
+                {
+                  "_key": "l4",
+                  "label": "Blog",
+                  "link": "/blog"
+                }
+              ],
+              "title": "O nama"
+            },
+            {
+              "_key": "col2",
+              "colorAccent": "secondary",
+              "links": [
+                {
+                  "_key": "l5",
+                  "label": "Modeli franšize",
+                  "link": "/fransiza-modeli"
+                },
+                {
+                  "_key": "l6",
+                  "label": "Kako se pridružiti",
+                  "link": "/kako-se-pridruziti"
+                },
+                {
+                  "_key": "l7",
+                  "label": "Lokacije",
+                  "link": "/lokacije"
+                },
+                {
+                  "_key": "l8",
+                  "label": "FAQ",
+                  "link": "/faq"
+                }
+              ],
+              "title": "Franšiza"
+            },
+            {
+              "_key": "col3",
+              "colorAccent": "accent",
+              "links": [
+                {
+                  "_key": "l9",
+                  "label": "Preuzmi materijale",
+                  "link": "/resursi"
+                },
+                {
+                  "_key": "l10",
+                  "label": "Preporučene knjige",
+                  "link": "/knjige"
+                },
+                {
+                  "_key": "l11",
+                  "label": "Obuka & Mentorstvo",
+                  "link": "/obuka-mentorstvo"
+                },
+                {
+                  "_key": "l12",
+                  "label": "Kontakt",
+                  "link": "/kontakt"
+                }
+              ],
+              "title": "Resursi"
+            }
+          ]
+        },
+        "footerMenu": [
+          {
+            "_key": "fm1",
+            "title": "Politika privatnosti",
+            "url": "/privacy-policy"
+          },
+          {
+            "_key": "fm2",
+            "title": "Uslovi korišćenja",
+            "url": "/terms"
+          },
+          {
+            "_key": "fm3",
+            "title": "FAQ",
+            "url": "/faq"
+          },
+          {
+            "_key": "fm4",
+            "title": "Kontakt",
+            "url": "/kontakt"
+          }
+        ],
+        "mainMenu": {
+          "hideHomeLink": false,
+          "items": [
+            {
+              "_key": "nav1",
+              "label": "O nama",
+              "link": "/o-nama"
+            },
+            {
+              "_key": "nav2",
+              "dropdown": [
+                {
+                  "_key": "drop1",
+                  "label": "Modeli franšize",
+                  "link": "/fransiza-modeli"
+                },
+                {
+                  "_key": "drop2",
+                  "label": "Kako se pridružiti",
+                  "link": "/kako-se-pridruziti"
+                },
+                {
+                  "_key": "drop3",
+                  "label": "Lokacije",
+                  "link": "/lokacije"
+                },
+                {
+                  "_key": "drop4",
+                  "label": "Kalkulator ROI",
+                  "link": "/kalkulator"
+                }
+              ],
+              "label": "Franšiza",
+              "link": "#"
+            },
+            {
+              "_key": "nav3",
+              "label": "Metodologija",
+              "link": "/metodologija"
+            },
+            {
+              "_key": "nav4",
+              "label": "Priče uspeha",
+              "link": "/uspeh"
+            },
+            {
+              "_key": "nav5",
+              "dropdown": [
+                {
+                  "_key": "drop5",
+                  "label": "Blog",
+                  "link": "/blog"
+                },
+                {
+                  "_key": "drop6",
+                  "label": "Knjige",
+                  "link": "/knjige"
+                },
+                {
+                  "_key": "drop7",
+                  "label": "FAQ",
+                  "link": "/faq"
+                },
+                {
+                  "_key": "drop8",
+                  "label": "Besplatni materijali",
+                  "link": "/resursi"
+                }
+              ],
+              "label": "Resursi",
+              "link": "#"
+            },
+            {
+              "_key": "nav6",
+              "label": "Kontakt",
+              "link": "/kontakt"
+            }
+          ],
+          "maxItems": 7
+        }
+      },
+      "phone": "+381 60 123 4567",
+      "references": [],
+      "siteDescription": "Najuspešnija obrazovna franšiza u Srbiji. Mentalna aritmetika i brzočitanje za decu 5-16 godina. Pridružite se mreži od 50+ uspešnih partnera.",
+      "siteName": "Srećno učenje - Obrazovna franšiza",
+      "socialLinks": [
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyFLr",
+          "platform": "Facebook",
+          "url": "https://facebook.com/srecnoucenje"
+        },
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyFQb",
+          "platform": "Instagram",
+          "url": "https://instagram.com/srecnoucenje"
+        },
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyFVL",
+          "platform": "LinkedIn",
+          "url": "https://linkedin.com/company/srecnoucenje"
+        }
+      ],
+      "workingHours": [
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyF2t",
+          "day": "Ponedeljak - Petak",
+          "hours": "09:00 - 20:00"
+        },
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyF7d",
+          "day": "Subota",
+          "hours": "10:00 - 18:00"
+        },
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyFCN",
+          "day": "Nedelja",
+          "hours": "10:00 - 16:00"
+        },
+        {
+          "_key": "hWo33GCGxd3rDeD5TiyFH7",
+          "day": "Praznici",
+          "hours": "Zatvoreno"
+        }
+      ]
+    },
+    {
+      "_createdAt": "2025-08-03T04:23:01Z",
+      "_id": "hZm6tMI3obk6ZBXKfAVrIt",
+      "_rev": "hZm6tMI3obk6ZBXKfAVrFt",
+      "_type": "siteSettings",
+      "_updatedAt": "2025-08-03T04:23:01Z",
+      "address": "Beograd, Srbija",
+      "backReferences": [],
+      "contactEmail": "info@srecno-ucenje.rs",
+      "description": "Franšiza obrazovne metodologije",
+      "phone": "+381 11 123 4567",
+      "references": [],
+      "siteName": "Srećno učenje"
+    },
+    {
+      "_createdAt": "2025-08-05T06:06:27Z",
+      "_id": "siteSettings",
+      "_rev": "tqJG5yH49IKSFNIKiO2EmV",
+      "_system": {
+        "base": {
+          "id": "siteSettings",
+          "rev": "YBiWwTMhT8IS37yZZlnl2S"
+        }
+      },
+      "_type": "siteSettings",
+      "_updatedAt": "2025-08-07T20:06:52Z",
+      "address": "Bulevar oslobođenja 123, 21000 Novi Sad",
+      "backReferences": [],
+      "colorPalette": {
+        "accentColor": "#f39c12",
+        "primaryColor": "#22c55e",
+        "secondaryColor": "#3498db",
+        "warmColor": "#e74c3c"
+      },
+      "email": "info@srecno-ucenje.rs",
+      "facebookPixelId": "123456789012345",
+      "googleAnalyticsId": "G-XXXXXXXXXX",
+      "googleMapsApiKey": "YOUR_GOOGLE_MAPS_API_KEY",
+      "logo": {
+        "_type": "image",
+        "asset": {
+          "_ref": "image-0f374acedfa651b7bb959884b24a2ae5d62e55f1-1772x1772-png",
+          "_type": "reference"
+        }
+      },
+      "navigationSettings": {
+        "_type": "navigationSettings",
+        "footer": {
+          "columns": [
+            {
+              "_key": "a15646deb9ca",
+              "colorAccent": "primary",
+              "links": [
+                {
+                  "_key": "47334f2a2cde",
+                  "label": "Neka futer stavka",
+                  "link": "https://iskrarakija.rs/rakija-po-izboru-casa-iskra-pljoska"
+                }
+              ],
+              "title": "Prva futer stavka"
+            }
+          ]
+        },
+        "footerMenu": [
+          {
+            "_key": "6cdd64979684",
+            "title": "Futer meni",
+            "url": "https://iskrarakija.rs/rakija-po-izboru-casa-iskra-pljoska"
+          }
+        ],
+        "mainMenu": {
+          "hideHomeLink": false,
+          "items": [
+            {
+              "_key": "adde60c9700c",
+              "dropdown": [
+                {
+                  "_key": "0c4724fda68e",
+                  "label": "Prvi podmeni",
+                  "link": "https://iskrarakija.rs/rakija-po-izboru-casa-iskra-pljoska"
+                }
+              ],
+              "label": "Prvi meni",
+              "link": "#"
+            }
+          ]
+        }
+      },
+      "phone": "+381 60 123 4567",
+      "recaptchaSiteKey": "YOUR_RECAPTCHA_SITE_KEY",
+      "references": [],
+      "siteDescription": "Centar za brzočitanje i mentalnu aritmetiku koji razvija pune potencijale vašeg deteta kroz revolucionarnu metodologiju srećnog učenja",
+      "siteName": "Srećno učenje",
+      "siteSubtitle": "Metodologija",
+      "socialLinks": [
+        {
+          "_key": "oWtMwMRBoarauLfrKfywLa",
+          "platform": "Facebook",
+          "url": "https://facebook.com/srecnoucenje"
+        },
+        {
+          "_key": "oWtMwMRBoarauLfrKfywOH",
+          "platform": "Instagram",
+          "url": "https://instagram.com/srecno_ucenje"
+        },
+        {
+          "_key": "oWtMwMRBoarauLfrKfywQy",
+          "platform": "YouTube",
+          "url": "https://youtube.com/c/srecnoucenje"
+        },
+        {
+          "_key": "oWtMwMRBoarauLfrKfywTf",
+          "platform": "LinkedIn",
+          "url": "https://linkedin.com/company/srecno-ucenje"
+        }
+      ],
+      "workingHours": [
+        {
+          "_key": "oWtMwMRBoarauLfrKfywDV",
+          "day": "Ponedeljak - Petak",
+          "hours": "09:00 - 20:00"
+        },
+        {
+          "_key": "oWtMwMRBoarauLfrKfywGC",
+          "day": "Subota",
+          "hours": "10:00 - 18:00"
+        },
+        {
+          "_key": "oWtMwMRBoarauLfrKfywIt",
+          "day": "Nedelja",
+          "hours": "10:00 - 16:00"
+        }
+      ]
+    }
+  ]
+}

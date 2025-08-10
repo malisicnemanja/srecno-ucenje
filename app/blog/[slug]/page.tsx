@@ -4,6 +4,7 @@ import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { PortableText } from '@portabletext/react'
+import { portableTextComponents } from '@/components/features/cms/PortableTextComponents'
 import { FloatingLetters, PulseButton } from '@/components/animations'
 import { BrushUnderline, BrushStrokeText } from '@/components/animations/BrushUnderline'
 import { Button } from '@/components/ui/Button'
@@ -362,65 +363,7 @@ export default async function BlogPostPage({ params }: Props) {
               {post.content && (
                 <PortableText 
                   value={post.content}
-                  components={{
-                    block: {
-                      h1: ({children}) => {
-                        const text = typeof children === 'string' ? children : Array.isArray(children) ? children.join('') : String(children || '')
-                        const words = text.split(' ').filter(Boolean)
-                        const lastWord = words.length > 0 ? words[words.length - 1] : ''
-                        return (
-                          <h1 className="text-3xl font-bold text-[#1E293B] mb-6 mt-12 relative">
-                            <BrushStrokeText 
-                              wordsToHighlight={lastWord ? [lastWord] : []}
-                              brushColor="#91C733"
-                              brushVariant="underline"
-                            >
-                              {text}
-                            </BrushStrokeText>
-                          </h1>
-                        )
-                      },
-                      h2: ({children}) => {
-                        const text = typeof children === 'string' ? children : Array.isArray(children) ? children.join('') : String(children || '')
-                        const words = text.split(' ').filter(Boolean)
-                        const lastWord = words.length > 0 ? words[words.length - 1] : ''
-                        return (
-                          <h2 className="text-2xl font-bold text-[#1E293B] mb-4 mt-10 relative">
-                            <BrushStrokeText 
-                              wordsToHighlight={lastWord ? [lastWord] : []}
-                              brushColor="#F4C950"
-                              brushVariant="underline"
-                            >
-                              {text}
-                            </BrushStrokeText>
-                          </h2>
-                        )
-                      },
-                      h3: ({children}) => {
-                        const text = typeof children === 'string' ? children : Array.isArray(children) ? children.join('') : String(children || '')
-                        const words = text.split(' ').filter(Boolean)
-                        const lastWord = words.length > 0 ? words[words.length - 1] : ''
-                        return (
-                          <h3 className="text-xl font-bold text-[#1E293B] mb-4 mt-8 relative">
-                            <BrushStrokeText 
-                              wordsToHighlight={lastWord ? [lastWord] : []}
-                              brushColor="#5DBFDB"
-                              brushVariant="underline"
-                            >
-                              {text}
-                            </BrushStrokeText>
-                          </h3>
-                        )
-                      },
-                      normal: ({children}) => (
-                        <p className="text-gray-700 leading-relaxed mb-6 text-lg">{children}</p>
-                      ),
-                    },
-                    marks: {
-                      strong: ({children}) => <strong className="font-semibold text-[#1E293B]">{children}</strong>,
-                      em: ({children}) => <em className="italic text-[#5DBFDB]">{children}</em>,
-                    }
-                  }}
+                  components={portableTextComponents}
                 />
               )}
             </div>
@@ -494,9 +437,16 @@ export default async function BlogPostPage({ params }: Props) {
                       </div>
                     </div>
                     
-                    <p className="text-gray-700 leading-relaxed text-lg mb-6">
-                      {post.author.bio}
-                    </p>
+                    <div className="text-gray-700 leading-relaxed text-lg mb-6">
+                      {typeof post.author.bio === 'string' ? (
+                        <p>{post.author.bio}</p>
+                      ) : Array.isArray(post.author.bio) ? (
+                        <PortableText 
+                          value={post.author.bio}
+                          components={portableTextComponents}
+                        />
+                      ) : null}
+                    </div>
                     
                     <div className="flex flex-wrap gap-3">
                       <a

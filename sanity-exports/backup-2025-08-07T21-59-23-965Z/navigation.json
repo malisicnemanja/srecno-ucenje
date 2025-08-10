@@ -1,0 +1,134 @@
+{
+  "_type": "navigation",
+  "_exportedAt": "2025-08-07T21:59:24.405Z",
+  "_count": 3,
+  "documents": [
+    {
+      "_createdAt": "2025-08-07T19:25:56Z",
+      "_id": "drafts.navigation",
+      "_rev": "4b77c25f-cb7c-4ec8-84a2-7aea38c081af",
+      "_system": {
+        "base": {
+          "id": "navigation",
+          "rev": "YBiWwTMhT8IS37yZZlnEws"
+        }
+      },
+      "_type": "navigation",
+      "_updatedAt": "2025-08-07T19:28:33Z",
+      "backReferences": [],
+      "ctaButton": {
+        "href": "https://iskrarakija.rs/rakija-po-izboru-casa-iskra-pljoska",
+        "style": "primary",
+        "text": "Neko CTA dugme"
+      },
+      "mainMenu": [
+        {
+          "_key": "9cdfdde9d729",
+          "label": "Franšiza",
+          "subItems": [
+            {
+              "_key": "afb8f1fb1c2f",
+              "description": "Testiram opis podkategorije",
+              "href": "https://iskrarakija.rs/rakija-po-izboru-casa-iskra-pljoska",
+              "label": "Osnovni paket"
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "title": "Glavna navigacija"
+    },
+    {
+      "_createdAt": "2025-08-05T22:44:22Z",
+      "_id": "main-navigation",
+      "_rev": "SVDvN8W2oCA8eZWngS4Iiw",
+      "_type": "navigation",
+      "_updatedAt": "2025-08-05T22:44:22Z",
+      "backReferences": [],
+      "ctaButton": {
+        "link": "/kontakt",
+        "text": "Zakaži poziv",
+        "variant": "primary"
+      },
+      "logo": {
+        "showSubtitle": true,
+        "subtitle": "Metodologija",
+        "text": "Srećno učenje"
+      },
+      "menuItems": [
+        {
+          "link": "/metodologija",
+          "order": 1,
+          "title": "O metodologiji"
+        },
+        {
+          "link": "/fransiza",
+          "order": 2,
+          "title": "Franšiza"
+        },
+        {
+          "link": "/knjige",
+          "order": 3,
+          "title": "Knjige"
+        },
+        {
+          "link": "/o-autorki",
+          "order": 4,
+          "title": "O autorki"
+        },
+        {
+          "link": "/kalkulatori",
+          "order": 5,
+          "title": "Kalkulatori"
+        },
+        {
+          "link": "/lokacije",
+          "order": 6,
+          "title": "Lokacije"
+        },
+        {
+          "link": "/kontakt",
+          "order": 7,
+          "title": "Kontakt"
+        }
+      ],
+      "references": [],
+      "title": "Glavna navigacija"
+    },
+    {
+      "_createdAt": "2025-08-07T19:25:56Z",
+      "_id": "navigation",
+      "_rev": "YBiWwTMhT8IS37yZZlnEws",
+      "_system": {
+        "base": {
+          "id": "navigation",
+          "rev": "YBiWwTMhT8IS37yZZlnAii"
+        }
+      },
+      "_type": "navigation",
+      "_updatedAt": "2025-08-07T19:28:33Z",
+      "backReferences": [],
+      "ctaButton": {
+        "href": "https://iskrarakija.rs/rakija-po-izboru-casa-iskra-pljoska",
+        "style": "secondary",
+        "text": "Neko CTA dugme"
+      },
+      "mainMenu": [
+        {
+          "_key": "9cdfdde9d729",
+          "label": "Franšiza",
+          "subItems": [
+            {
+              "_key": "afb8f1fb1c2f",
+              "description": "Testiram opis podkategorije",
+              "href": "https://iskrarakija.rs/rakija-po-izboru-casa-iskra-pljoska",
+              "label": "Osnovni paket"
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "title": "Glavna navigacija"
+    }
+  ]
+}

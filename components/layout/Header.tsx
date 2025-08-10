@@ -100,15 +100,15 @@ export default function Header() {
                 src={settings.logo} 
                 alt={`${settings.siteName} logo`} 
                 className={`transition-all duration-300 ${
-                  scrolled ? 'h-8' : 'h-10'
+                  scrolled ? 'h-10' : 'h-12'
                 }`}
-                width={scrolled ? 32 : 40}
-                height={scrolled ? 32 : 40}
+                width={scrolled ? 40 : 48}
+                height={scrolled ? 40 : 48}
               />
             ) : (
               <>
                 <div className={`bg-brand-grass rounded-full flex items-center justify-center transition-all duration-300 ${
-                  scrolled ? 'w-8 h-8' : 'w-10 h-10'
+                  scrolled ? 'w-10 h-10' : 'w-12 h-12'
                 }`}>
                   <span className={`text-white font-bold transition-all duration-300 ${
                     scrolled ? 'text-sm' : 'text-base'

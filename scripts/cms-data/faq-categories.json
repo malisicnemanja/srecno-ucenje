@@ -1,0 +1,47 @@
+[
+  {
+    "_type": "faqCategory",
+    "name": "Opšte informacije",
+    "slug": {
+      "_type": "slug",
+      "current": "opste-informacije"
+    },
+    "description": "Osnovna pitanja o Srećno učenje franšizi"
+  },
+  {
+    "_type": "faqCategory",
+    "name": "Finansije i investicija",
+    "slug": {
+      "_type": "slug",
+      "current": "finansije-investicija"
+    },
+    "description": "Pitanja o investiciji, profitabilnosti i finansiranju"
+  },
+  {
+    "_type": "faqCategory",
+    "name": "Obuka i podrška",
+    "slug": {
+      "_type": "slug",
+      "current": "obuka-podrska"
+    },
+    "description": "Informacije o obuci, podršci i mentorstvu"
+  },
+  {
+    "_type": "faqCategory",
+    "name": "Teritorija i lokacija",
+    "slug": {
+      "_type": "slug",
+      "current": "teritorija-lokacija"
+    },
+    "description": "Pitanja o teritoriji, lokaciji i ekskluzivnosti"
+  },
+  {
+    "_type": "faqCategory",
+    "name": "Marketing i promocija",
+    "slug": {
+      "_type": "slug",
+      "current": "marketing-promocija"
+    },
+    "description": "Podrška u marketingu i promociji centra"
+  }
+]

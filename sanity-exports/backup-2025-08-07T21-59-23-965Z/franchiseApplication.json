@@ -1,0 +1,121 @@
+{
+  "_type": "franchiseApplication",
+  "_exportedAt": "2025-08-07T21:59:26.419Z",
+  "_count": 2,
+  "documents": [
+    {
+      "_createdAt": "2025-08-06T13:21:23Z",
+      "_id": "SBvfECCtZ11PRIA8QdOXRv",
+      "_rev": "SBvfECCtZ11PRIA8QdOXPq",
+      "_type": "franchiseApplication",
+      "_updatedAt": "2025-08-06T13:21:23Z",
+      "backReferences": [],
+      "description": "Pridružite se mreži od preko 450 edukatora širom Srbije i pokrenite uspešan edukacioni biznis uz našu podršku.",
+      "formSettings": {
+        "privacyNote": "Vaši podaci su bezbedni i neće biti prosleđivani trećim licima. Koristićemo ih isključivo za proces prijave za franšizu.",
+        "requiredFieldsNote": "* Sva polja označena zvezdicom su obavezna",
+        "submitButtonText": "Pošaljite prijavu"
+      },
+      "motivationalContent": {
+        "_ref": "tqJG5yH49IKSFNIKiLWC4j",
+        "_type": "reference"
+      },
+      "references": [],
+      "sections": [
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "reference"
+        },
+        {
+          "_ref": "SBvfECCtZ11PRIA8QdOXJb",
+          "_type": "reference"
+        }
+      ],
+      "seo": {
+        "description": "Pridružite se mreži od preko 450 edukatora i pokrenite profitabilan edukacioni biznis. Sveobuhvatna podrška, dokazana metodologija.",
+        "keywords": [
+          "franšiza",
+          "edukacija",
+          "Srećno učenje",
+          "biznis",
+          "deca",
+          "kursevi"
+        ],
+        "title": "Prijava za franšizu Srećno učenje - Pokrenite svoj edukacioni biznis"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "prijava-za-franshizu"
+      },
+      "subtitle": "Počnite vašu edukacionu priču",
+      "successMessage": {
+        "message": "Vaša prijava je uspešno poslata. Naš tim će je proveriti i kontaktirati vas u roku od 48 sati sa sledećim koracima.",
+        "nextSteps": [
+          "Proverićemo vašu prijavu i dokumentaciju",
+          "Zakazaćemo uvodni razgovor preko video poziva",
+          "Poslati ćemo vam detaljne informacije o franšizi",
+          "Organizovati ćemo upoznavanje sa lokalnm franšizama"
+        ],
+        "title": "Uspešno ste poslali prijavu!"
+      },
+      "title": "Prijava za franšizu Srećno učenje"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:31Z",
+      "_id": "tqJG5yH49IKSFNIKiLMqJZ",
+      "_rev": "tqJG5yH49IKSFNIKiLMqHn",
+      "_type": "franchiseApplication",
+      "_updatedAt": "2025-08-06T13:06:31Z",
+      "backReferences": [],
+      "description": "Pridružite se mreži od preko 450 edukatora širom Srbije i pokrenite uspešan edukacioni biznis uz našu podršku.",
+      "formSettings": {
+        "privacyNote": "Vaši podaci su bezbedni i neće biti prosleđivani trećim licima. Koristićemo ih isključivo za proces prijave za franšizu.",
+        "requiredFieldsNote": "* Sva polja označena zvezdicom su obavezna",
+        "submitButtonText": "Pošaljite prijavu"
+      },
+      "motivationalContent": {
+        "_ref": "SBvfECCtZ11PRIA8QdEr11",
+        "_type": "reference"
+      },
+      "references": [],
+      "sections": [
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "reference"
+        },
+        {
+          "_ref": "oWtMwMRBoarauLfrKfPb3h",
+          "_type": "reference"
+        }
+      ],
+      "seo": {
+        "description": "Pridružite se mreži od preko 450 edukatora i pokrenite profitabilan edukacioni biznis. Sveobuhvatna podrška, dokazana metodologija.",
+        "keywords": [
+          "franšiza",
+          "edukacija",
+          "Srećno učenje",
+          "biznis",
+          "deca",
+          "kursevi"
+        ],
+        "title": "Prijava za franšizu Srećno učenje - Pokrenite svoj edukacioni biznis"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "prijava-za-franshizu"
+      },
+      "subtitle": "Počnite vašu edukacionu priču",
+      "successMessage": {
+        "message": "Vaša prijava je uspešno poslata. Naš tim će je proveriti i kontaktirati vas u roku od 48 sati sa sledećim koracima.",
+        "nextSteps": [
+          "Proverićemo vašu prijavu i dokumentaciju",
+          "Zakazaćemo uvodni razgovor preko video poziva",
+          "Poslati ćemo vam detaljne informacije o franšizi",
+          "Organizovati ćemo upoznavanje sa lokalnm franšizama"
+        ],
+        "title": "Uspešno ste poslali prijavu!"
+      },
+      "title": "Prijava za franšizu Srećno učenje"
+    }
+  ]
+}

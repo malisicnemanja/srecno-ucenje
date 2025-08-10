@@ -1,0 +1,32 @@
+{
+  "backupPath": "/Users/nemanjamalisic/Desktop/srecno-ucenje 2/backups/sanity-backup-2025-08-07",
+  "timestamp": "2025-08-07",
+  "files": [
+    {
+      "name": "ROLLBACK-INSTRUCTIONS.md",
+      "size": 1950,
+      "type": "file"
+    },
+    {
+      "name": "git-backup-info.json",
+      "size": 200,
+      "type": "file"
+    },
+    {
+      "name": "schema-analysis.json",
+      "size": 30357,
+      "type": "file"
+    },
+    {
+      "name": "schema-inventory.json",
+      "size": 2638,
+      "type": "file"
+    },
+    {
+      "name": "schemas",
+      "size": 544,
+      "type": "directory"
+    }
+  ],
+  "totalSize": 35689
+}

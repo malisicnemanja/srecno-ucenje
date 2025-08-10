@@ -1,0 +1,21 @@
+{
+  "_type": "newsletterSubscriber",
+  "_exportedAt": "2025-08-07T21:59:27.174Z",
+  "_count": 1,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T03:16:55Z",
+      "_id": "EIn1TO6kzkBkpMuRkFfKZL",
+      "_rev": "EIn1TO6kzkBkpMuRkFfKVo",
+      "_type": "newsletterSubscriber",
+      "_updatedAt": "2025-08-03T03:16:55Z",
+      "backReferences": [],
+      "email": "malisicnemanja@gmail.com",
+      "name": "zxzx",
+      "phone": "czxcz",
+      "references": [],
+      "source": "resource_template-biznis-plana",
+      "subscribedAt": "2025-08-03T03:16:55.542Z"
+    }
+  ]
+}

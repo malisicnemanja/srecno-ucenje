@@ -1,0 +1,409 @@
+{
+  "_type": "blogCategory",
+  "_exportedAt": "2025-08-07T21:59:24.670Z",
+  "_count": 15,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T01:47:54Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFcmQ",
+      "_rev": "EIn1TO6kzkBkpMuRkFFcit",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:54Z",
+      "backReferences": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFe5f",
+          "_type": "blogPost"
+        }
+      ],
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFe5f",
+          "_type": "blogPost",
+          "name": null,
+          "title": "5 tehnika brzočitanja koje svako dete može da nauči"
+        }
+      ],
+      "slug": {
+        "current": "brzocitanje"
+      },
+      "title": "Brzočitanje"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:55Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFcx1",
+      "_rev": "EIn1TO6kzkBkpMuRkFFctU",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:55Z",
+      "backReferences": [
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sZt",
+          "_type": "blogPost"
+        }
+      ],
+      "references": [
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sZt",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Kako mentalna aritmetika pomaže u razvoju mozga"
+        }
+      ],
+      "slug": {
+        "current": "mentalna-aritmetika"
+      },
+      "title": "Mentalna aritmetika"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:58Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFdID",
+      "_rev": "EIn1TO6kzkBkpMuRkFFdEg",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:58Z",
+      "backReferences": [
+        {
+          "_id": "hWo33GCGxd3rDeD5TiyAq5",
+          "_type": "blogPost"
+        }
+      ],
+      "references": [
+        {
+          "_id": "hWo33GCGxd3rDeD5TiyAq5",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Značaj čitanja u digitalnom dobu"
+        }
+      ],
+      "slug": {
+        "current": "edukacija"
+      },
+      "title": "Edukacija"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:59Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFdSo",
+      "_rev": "EIn1TO6kzkBkpMuRkFFdPH",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:59Z",
+      "backReferences": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFeJn",
+          "_type": "blogPost"
+        }
+      ],
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFFeJn",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Novo istraživanje o efikasnosti mentalne aritmetike"
+        }
+      ],
+      "slug": {
+        "current": "vesti"
+      },
+      "title": "Vesti"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:17Z",
+      "_id": "blogCategory-09fbb52b-c01b-4d79-b640-7e73f70a52ba",
+      "_rev": "jsO7i4LmwGEnLQvVmnBbdL",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-04T21:16:17Z",
+      "backReferences": [
+        {
+          "_id": "blogPost-e31bfedf-f623-4c8e-8ca5-9a5839d405c9",
+          "_type": "blogPost"
+        }
+      ],
+      "description": "Saveti za vođenje uspešne obrazovne franšize",
+      "references": [
+        {
+          "_id": "blogPost-e31bfedf-f623-4c8e-8ca5-9a5839d405c9",
+          "_type": "blogPost",
+          "name": null,
+          "title": "5 razloga zašto je sada pravo vreme za obrazovnu franšizu"
+        }
+      ],
+      "slug": {
+        "current": "fransiza-biznis"
+      },
+      "title": "Franšiza i biznis"
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:07Z",
+      "_id": "blogCategory-2b7484a2-22ac-48d0-b365-e304e73ccf03",
+      "_rev": "atDdCAAfWCLcotj1z9Jc3j",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-05T03:20:07Z",
+      "backReferences": [
+        {
+          "_id": "blogPost-6122bf02-386f-40d5-ad89-a865f616f89f",
+          "_type": "blogPost"
+        }
+      ],
+      "description": "Uvidi u našu metodologiju i pristup učenju",
+      "references": [
+        {
+          "_id": "blogPost-6122bf02-386f-40d5-ad89-a865f616f89f",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Kako naša metodologija pomaže deci da zavole učenje"
+        }
+      ],
+      "slug": {
+        "current": "obrazovanje-metodologija"
+      },
+      "title": "Obrazovanje i metodologija"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:20Z",
+      "_id": "blogCategory-3a83d8b4-2027-4a04-919a-83ed1bf86a56",
+      "_rev": "LRuNsVxy2neCREmRL1oNVN",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-04T21:16:20Z",
+      "backReferences": [],
+      "description": "Najnovije vesti iz sveta Srećnog učenja",
+      "references": [],
+      "slug": {
+        "current": "vesti-dogadjaji"
+      },
+      "title": "Vesti i događaji"
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:06Z",
+      "_id": "blogCategory-71e239cc-8b8e-429c-bb07-8c22f3df9760",
+      "_rev": "jsO7i4LmwGEnLQvVmoNUy3",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-05T03:20:06Z",
+      "backReferences": [
+        {
+          "_id": "blogPost-788a2b68-59d9-44e5-a925-316f9c45a4a7",
+          "_type": "blogPost"
+        }
+      ],
+      "description": "Saveti za vođenje uspešne obrazovne franšize",
+      "references": [
+        {
+          "_id": "blogPost-788a2b68-59d9-44e5-a925-316f9c45a4a7",
+          "_type": "blogPost",
+          "name": null,
+          "title": "5 razloga zašto je sada pravo vreme za obrazovnu franšizu"
+        }
+      ],
+      "slug": {
+        "current": "fransiza-biznis"
+      },
+      "title": "Franšiza i biznis"
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:09Z",
+      "_id": "blogCategory-901504f4-7daa-4aef-bdc8-7e594c02024f",
+      "_rev": "atDdCAAfWCLcotj1z9Jcit",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-05T03:20:09Z",
+      "backReferences": [
+        {
+          "_id": "blogPost-fb235c77-7f02-4c84-b19f-1bff02f036dd",
+          "_type": "blogPost"
+        }
+      ],
+      "description": "Inspirativne priče naših partnera i učenika",
+      "references": [
+        {
+          "_id": "blogPost-fb235c77-7f02-4c84-b19f-1bff02f036dd",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Od nastavnice do uspešne preduzetnice: Priča Marije Petrović"
+        }
+      ],
+      "slug": {
+        "current": "price-uspeha"
+      },
+      "title": "Priče uspeha"
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:10Z",
+      "_id": "blogCategory-a4fe3845-376a-4ec5-9f94-1aadac43924a",
+      "_rev": "atDdCAAfWCLcotj1z9JcqN",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-05T03:20:10Z",
+      "backReferences": [],
+      "description": "Najnovije vesti iz sveta Srećnog učenja",
+      "references": [],
+      "slug": {
+        "current": "vesti-dogadjaji"
+      },
+      "title": "Vesti i događaji"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:19Z",
+      "_id": "blogCategory-a6cc8788-b093-43e7-8b84-a9d06655d891",
+      "_rev": "LRuNsVxy2neCREmRL1oNOd",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-04T21:16:19Z",
+      "backReferences": [
+        {
+          "_id": "blogPost-8dd225af-137e-48e0-8a5b-c6e211ba8df1",
+          "_type": "blogPost"
+        }
+      ],
+      "description": "Inspirativne priče naših partnera i učenika",
+      "references": [
+        {
+          "_id": "blogPost-8dd225af-137e-48e0-8a5b-c6e211ba8df1",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Od nastavnice do uspešne preduzetnice: Priča Marije Petrović"
+        }
+      ],
+      "slug": {
+        "current": "price-uspeha"
+      },
+      "title": "Priče uspeha"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:18Z",
+      "_id": "blogCategory-bcf2b741-6636-491d-b70e-1357204922c2",
+      "_rev": "atDdCAAfWCLcotj1z8G5t1",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-04T21:16:18Z",
+      "backReferences": [
+        {
+          "_id": "blogPost-b89e8814-05d6-4437-ae1c-14ec0373e124",
+          "_type": "blogPost"
+        }
+      ],
+      "description": "Uvidi u našu metodologiju i pristup učenju",
+      "references": [
+        {
+          "_id": "blogPost-b89e8814-05d6-4437-ae1c-14ec0373e124",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Kako naša metodologija pomaže deci da zavole učenje"
+        }
+      ],
+      "slug": {
+        "current": "obrazovanje-metodologija"
+      },
+      "title": "Obrazovanje i metodologija"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:56Z",
+      "_id": "hWo33GCGxd3rDeD5Tiy9gx",
+      "_rev": "hWo33GCGxd3rDeD5Tiy9cD",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:56Z",
+      "backReferences": [
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sit",
+          "_type": "blogPost"
+        }
+      ],
+      "references": [
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9sit",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Kako da motivišete dete za učenje"
+        }
+      ],
+      "slug": {
+        "current": "saveti-za-roditelje"
+      },
+      "title": "Saveti za roditelje"
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:57Z",
+      "_id": "hWo33GCGxd3rDeD5Tiy9vB",
+      "_rev": "hWo33GCGxd3rDeD5Tiy9qR",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-03T01:47:57Z",
+      "backReferences": [
+        {
+          "_id": "hWo33GCGxd3rDeD5TiyAX7",
+          "_type": "blogPost"
+        }
+      ],
+      "references": [
+        {
+          "_id": "hWo33GCGxd3rDeD5TiyAX7",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Priča o Marku - od mrzitelja knjiga do bibliotekara"
+        }
+      ],
+      "slug": {
+        "current": "uspesne-price"
+      },
+      "title": "Uspešne priče"
+    },
+    {
+      "_createdAt": "2025-08-05T03:11:27Z",
+      "_id": "jsO7i4LmwGEnLQvVmoMdqp",
+      "_rev": "jsO7i4LmwGEnLQvVmoMdmr",
+      "_type": "blogCategory",
+      "_updatedAt": "2025-08-05T03:11:27Z",
+      "backReferences": [
+        {
+          "_id": "adpXclQvR9WWEgUkbtGXgS",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IyeF",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IypT",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IzFf",
+          "_type": "blogPost"
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoMeAf",
+          "_type": "blogPost"
+        }
+      ],
+      "color": "#4f46e5",
+      "description": "Sve o franšiznom poslovanju i preduzetnisšvu u obrazovanju",
+      "name": "Franšiza",
+      "references": [
+        {
+          "_id": "adpXclQvR9WWEgUkbtGXgS",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Prvi meseci rada: Šta očekivati kao novi franšizer"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IyeF",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Kako da odaberete pravu lokaciju za obrazovni centar"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IypT",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Marketing strategije koje rade za obrazovne centre"
+        },
+        {
+          "_id": "atDdCAAfWCLcotj1z9IzFf",
+          "_type": "blogPost",
+          "name": null,
+          "title": "Finansijsko planiranje za franšizere: Vodič kroz prve godine"
+        },
+        {
+          "_id": "jsO7i4LmwGEnLQvVmoMeAf",
+          "_type": "blogPost",
+          "name": null,
+          "title": "5 razloga zašto je obrazovna franšiza najbolja investicija u 2024."
+        }
+      ],
+      "slug": {
+        "_type": "slug",
+        "current": "fransiza"
+      }
+    }
+  ]
+}

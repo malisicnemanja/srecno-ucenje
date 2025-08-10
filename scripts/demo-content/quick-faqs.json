@@ -1,0 +1,20 @@
+[
+  {
+    "_type": "faq",
+    "question": "Kolika je početna investicija?",
+    "answer": "Početna investicija se kreće od 8.000€ do 25.000€ zavisno od modela franšize koji birate.",
+    "order": 1
+  },
+  {
+    "_type": "faq",
+    "question": "Kada mogu očekivati povraćaj investicije?",
+    "answer": "Većina naših partnera ostvaruje povraćaj investicije između 18-30 meseci.",
+    "order": 2
+  },
+  {
+    "_type": "faq",
+    "question": "Kakva podrška se pruža?",
+    "answer": "Pružamo kompletnu obuku, kontinuiranu podršku, marketing materijale i 24/7 tehničku podršku.",
+    "order": 3
+  }
+]

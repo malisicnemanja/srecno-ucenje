@@ -1,38 +1,5 @@
 const { withSentryConfig } = require('@sentry/nextjs')
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  register: true,
-  skipWaiting: true,
-  disable: process.env.NEXT_PUBLIC_APP_ENV !== 'production',
-  buildExcludes: [/middleware-manifest\.json$/],
-  publicExcludes: ['!robots.txt', '!sitemap.xml'],
-  runtimeCaching: [
-    {
-      urlPattern: /^https?.*/,
-      handler: 'NetworkFirst',
-      options: {
-        cacheName: 'offlineCache',
-        expiration: {
-          maxEntries: 200,
-          maxAgeSeconds: 24 * 60 * 60, // 24 hours
-        },
-        networkTimeoutSeconds: 3, // Faster timeout for better UX
-      },
-    },
-    // Optimized image caching
-    {
-      urlPattern: /\.(?:png|jpg|jpeg|webp|avif|gif|svg)$/,
-      handler: 'StaleWhileRevalidate',
-      options: {
-        cacheName: 'images',
-        expiration: {
-          maxEntries: 100,
-          maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
-        },
-      },
-    },
-  ],
-})
+// PWA removed as per requirements
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -152,7 +119,7 @@ const sentryWebpackPluginOptions = {
 }
 
 // Combine all the webpack configurations
-let finalConfig = withPWA(nextConfig)
+let finalConfig = nextConfig
 
 // Add bundle analyzer if requested
 if (process.env.ANALYZE === 'true') {

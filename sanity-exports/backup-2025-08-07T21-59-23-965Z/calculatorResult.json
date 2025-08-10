@@ -1,0 +1,339 @@
+{
+  "_type": "calculatorResult",
+  "_exportedAt": "2025-08-07T21:59:26.907Z",
+  "_count": 13,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T03:15:23Z",
+      "_id": "EIn1TO6kzkBkpMuRkFfJpQ",
+      "_rev": "EIn1TO6kzkBkpMuRkFfJlt",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-03T03:15:23Z",
+      "backReferences": [],
+      "email": "malisicnemanja@gmail.com",
+      "inputs": {
+        "model": "Professional",
+        "squareMeters": 100
+      },
+      "leadScore": 70,
+      "phone": "3333",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 0,
+        "breakdown": "{\"zones\":[{\"name\":\"Učionica za mentalne veštine\",\"area\":40,\"color\":\"#3b82f6\",\"description\":\"Prostor za učenje brzog čitanja i mentalne aritmetike\",\"minArea\":25,\"maxArea\":40},{\"name\":\"Zona za kreativne aktivnosti\",\"area\":28,\"color\":\"#10b981\",\"description\":\"Prostor za radionice, umetnost i praktične aktivnosti\",\"minArea\":20,\"maxArea\":35},{\"name\":\"Biblioteka i tihi kutak\",\"area\":28,\"color\":\"#f59e0b\",\"description\":\"Prostor za čitanje i individualni rad\",\"minArea\":15,\"maxArea\":30},{\"name\":\"Recepcija i čekaonica\",\"area\":20,\"color\":\"#ef4444\",\"description\":\"Prostor za prijem i komunikaciju sa roditeljima\",\"minArea\":10,\"maxArea\":20},{\"name\":\"Toalet i higijena\",\"area\":14,\"color\":\"#8b5cf6\",\"description\":\"Sanitarni čvor prilagođen deci\",\"minArea\":8,\"maxArea\":15}],\"efficiency\":85,\"capacity\":22,\"recommendations\":[\"Kapacitet je ograničen. Fokusirajte se na kvalitet pre kvantiteta.\"]}",
+        "monthlyRevenue": 0,
+        "threeYearProjection": 0,
+        "totalInvestment": 0
+      },
+      "type": "space"
+    },
+    {
+      "_createdAt": "2025-08-03T05:22:47Z",
+      "_id": "EIn1TO6kzkBkpMuRkFgcGy",
+      "_rev": "EIn1TO6kzkBkpMuRkFgcDR",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-03T05:22:47Z",
+      "backReferences": [],
+      "email": "malisicnemanja@gmail.com",
+      "inputs": {
+        "city": "Beograd",
+        "model": "Professional",
+        "renovation": "premium",
+        "squareMeters": 100
+      },
+      "leadScore": 90,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 2,
+        "breakdown": "{\"franchiseFee\":30000,\"renovationCost\":25000,\"equipmentCost\":15000,\"monthlyOperational\":2800}",
+        "monthlyRevenue": 52800,
+        "threeYearProjection": 1730000,
+        "totalInvestment": 70000
+      },
+      "type": "investment"
+    },
+    {
+      "_createdAt": "2025-08-03T21:11:01Z",
+      "_id": "EIn1TO6kzkBkpMuRkGY5vK",
+      "_rev": "EIn1TO6kzkBkpMuRkGY5rn",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-03T21:11:01Z",
+      "backReferences": [],
+      "createdAt": "2025-08-03T21:11:01.647Z",
+      "email": "nemanja.malisic@intelisale.com",
+      "inputs": {
+        "city": "Beograd",
+        "model": "Starter",
+        "renovation": "standard",
+        "squareMeters": 102
+      },
+      "leadScore": 80,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 1,
+        "breakdown": "{\"franchiseFee\":18000,\"renovationCost\":15300,\"equipmentCost\":15300,\"monthlyOperational\":2800}",
+        "monthlyRevenue": 52800,
+        "threeYearProjection": 1751400,
+        "totalInvestment": 48600
+      },
+      "type": "investment"
+    },
+    {
+      "_createdAt": "2025-08-03T21:34:53Z",
+      "_id": "EIn1TO6kzkBkpMuRkGYjyV",
+      "_rev": "EIn1TO6kzkBkpMuRkGYjuy",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-03T21:34:53Z",
+      "backReferences": [],
+      "createdAt": "2025-08-03T21:34:52.829Z",
+      "email": "nemanja.malisic@intelisale.com",
+      "inputs": {
+        "city": "Beograd",
+        "model": "Starter",
+        "renovation": "standard",
+        "squareMeters": 100
+      },
+      "leadScore": 80,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 1,
+        "breakdown": "{\"franchiseFee\":18000,\"renovationCost\":15000,\"equipmentCost\":15000,\"monthlyOperational\":2800}",
+        "monthlyRevenue": 52800,
+        "threeYearProjection": 1752000,
+        "totalInvestment": 48000
+      },
+      "type": "investment"
+    },
+    {
+      "_createdAt": "2025-08-06T08:35:23Z",
+      "_id": "RSzTvGgTwtY6EErbXmHqYB",
+      "_rev": "RSzTvGgTwtY6EErbXmHqUm",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-06T08:35:23Z",
+      "backReferences": [],
+      "createdAt": "2025-08-06T08:35:23.244Z",
+      "email": "nemanja.malisic@intelisale.com",
+      "inputs": {
+        "childrenCount": 100,
+        "city": "",
+        "pricePerChild": 50,
+        "workingHours": 8
+      },
+      "leadScore": 55,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 0,
+        "monthlyRevenue": 75900,
+        "threeYearProjection": 2732400
+      },
+      "type": "roi"
+    },
+    {
+      "_createdAt": "2025-08-06T08:35:25Z",
+      "_id": "RSzTvGgTwtY6EErbXmHqln",
+      "_rev": "RSzTvGgTwtY6EErbXmHqiO",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-06T08:35:25Z",
+      "backReferences": [],
+      "createdAt": "2025-08-06T08:35:25.731Z",
+      "email": "nemanja.malisic@intelisale.com",
+      "inputs": {
+        "childrenCount": 100,
+        "city": "",
+        "pricePerChild": 50,
+        "workingHours": 8
+      },
+      "leadScore": 55,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 0,
+        "monthlyRevenue": 75900,
+        "threeYearProjection": 2732400
+      },
+      "type": "roi"
+    },
+    {
+      "_createdAt": "2025-08-06T08:35:25Z",
+      "_id": "RSzTvGgTwtY6EErbXmHqw0",
+      "_rev": "RSzTvGgTwtY6EErbXmHqsb",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-06T08:35:25Z",
+      "backReferences": [],
+      "createdAt": "2025-08-06T08:35:25.733Z",
+      "email": "nemanja.malisic@intelisale.com",
+      "inputs": {
+        "childrenCount": 100,
+        "city": "",
+        "pricePerChild": 50,
+        "workingHours": 8
+      },
+      "leadScore": 55,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 0,
+        "monthlyRevenue": 75900,
+        "threeYearProjection": 2732400
+      },
+      "type": "roi"
+    },
+    {
+      "_createdAt": "2025-08-06T08:35:26Z",
+      "_id": "RSzTvGgTwtY6EErbXmHr6D",
+      "_rev": "RSzTvGgTwtY6EErbXmHr2o",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-06T08:35:26Z",
+      "backReferences": [],
+      "createdAt": "2025-08-06T08:35:26.014Z",
+      "email": "nemanja.malisic@intelisale.com",
+      "inputs": {
+        "childrenCount": 100,
+        "city": "",
+        "pricePerChild": 50,
+        "workingHours": 8
+      },
+      "leadScore": 55,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 0,
+        "monthlyRevenue": 75900,
+        "threeYearProjection": 2732400
+      },
+      "type": "roi"
+    },
+    {
+      "_createdAt": "2025-08-06T12:43:18Z",
+      "_id": "SBvfECCtZ11PRIA8QdD56u",
+      "_rev": "SBvfECCtZ11PRIA8QdD54p",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-06T12:43:18Z",
+      "backReferences": [],
+      "createdAt": "2025-08-06T12:43:18.586Z",
+      "email": "nemanja.malisic@intelisale.com",
+      "inputs": {
+        "city": "Novi Sad",
+        "model": "Starter",
+        "renovation": "standard",
+        "squareMeters": 100
+      },
+      "leadScore": 80,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 1,
+        "breakdown": "{\"franchiseFee\":15000,\"renovationCost\":15000,\"equipmentCost\":15000,\"monthlyOperational\":2800}",
+        "monthlyRevenue": 52800,
+        "threeYearProjection": 1755000,
+        "totalInvestment": 45000
+      },
+      "type": "investment"
+    },
+    {
+      "_createdAt": "2025-08-06T08:35:25Z",
+      "_id": "SVDvN8W2oCA8eZWngUb3qw",
+      "_rev": "SVDvN8W2oCA8eZWngUb3mR",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-06T08:35:25Z",
+      "backReferences": [],
+      "createdAt": "2025-08-06T08:35:25.732Z",
+      "email": "nemanja.malisic@intelisale.com",
+      "inputs": {
+        "childrenCount": 100,
+        "city": "",
+        "pricePerChild": 50,
+        "workingHours": 8
+      },
+      "leadScore": 55,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 0,
+        "monthlyRevenue": 75900,
+        "threeYearProjection": 2732400
+      },
+      "type": "roi"
+    },
+    {
+      "_createdAt": "2025-08-06T08:35:25Z",
+      "_id": "SVDvN8W2oCA8eZWngUb44R",
+      "_rev": "SVDvN8W2oCA8eZWngUb3zw",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-06T08:35:25Z",
+      "backReferences": [],
+      "createdAt": "2025-08-06T08:35:25.820Z",
+      "email": "nemanja.malisic@intelisale.com",
+      "inputs": {
+        "childrenCount": 100,
+        "city": "",
+        "pricePerChild": 50,
+        "workingHours": 8
+      },
+      "leadScore": 55,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 0,
+        "monthlyRevenue": 75900,
+        "threeYearProjection": 2732400
+      },
+      "type": "roi"
+    },
+    {
+      "_createdAt": "2025-08-03T05:22:48Z",
+      "_id": "hZm6tMI3obk6ZBXKfAWHZt",
+      "_rev": "hZm6tMI3obk6ZBXKfAWHWt",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-03T05:22:48Z",
+      "backReferences": [],
+      "email": "malisicnemanja@gmail.com",
+      "inputs": {
+        "city": "Beograd",
+        "model": "Professional",
+        "renovation": "premium",
+        "squareMeters": 100
+      },
+      "leadScore": 90,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 2,
+        "breakdown": "{\"franchiseFee\":30000,\"renovationCost\":25000,\"equipmentCost\":15000,\"monthlyOperational\":2800}",
+        "monthlyRevenue": 52800,
+        "threeYearProjection": 1730000,
+        "totalInvestment": 70000
+      },
+      "type": "investment"
+    },
+    {
+      "_createdAt": "2025-08-06T08:35:25Z",
+      "_id": "rWY7A01dUL9wO4NRCjB8Qe",
+      "_rev": "rWY7A01dUL9wO4NRCjB8Ng",
+      "_type": "calculatorResult",
+      "_updatedAt": "2025-08-06T08:35:25Z",
+      "backReferences": [],
+      "createdAt": "2025-08-06T08:35:25.733Z",
+      "email": "nemanja.malisic@intelisale.com",
+      "inputs": {
+        "childrenCount": 100,
+        "city": "",
+        "pricePerChild": 50,
+        "workingHours": 8
+      },
+      "leadScore": 55,
+      "phone": "",
+      "references": [],
+      "results": {
+        "breakEvenMonths": 0,
+        "monthlyRevenue": 75900,
+        "threeYearProjection": 2732400
+      },
+      "type": "roi"
+    }
+  ]
+}

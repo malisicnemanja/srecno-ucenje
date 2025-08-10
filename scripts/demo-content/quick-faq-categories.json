@@ -1,0 +1,20 @@
+[
+  {
+    "_type": "faqCategory",
+    "name": "Opšte",
+    "slug": {
+      "_type": "slug",
+      "current": "opste"
+    },
+    "description": "Osnovna pitanja o franšizi"
+  },
+  {
+    "_type": "faqCategory",
+    "name": "Finansije",
+    "slug": {
+      "_type": "slug",
+      "current": "finansije"
+    },
+    "description": "Pitanja o investiciji i profitabilnosti"
+  }
+]

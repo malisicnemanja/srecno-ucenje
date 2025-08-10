@@ -1,0 +1,297 @@
+{
+  "_type": "locationData",
+  "_exportedAt": "2025-08-07T21:59:26.265Z",
+  "_count": 10,
+  "documents": [
+    {
+      "_createdAt": "2025-08-05T22:09:14Z",
+      "_id": "RSzTvGgTwtY6EErbXkDn2n",
+      "_rev": "RSzTvGgTwtY6EErbXkDmzO",
+      "_type": "locationData",
+      "_updatedAt": "2025-08-05T22:09:14Z",
+      "backReferences": [],
+      "centerCount": 2,
+      "city": "Novi Sad",
+      "contactInfo": {
+        "address": "Dunavska 20, Novi Sad",
+        "email": "novisad@srecno-ucenje.rs",
+        "phone": "+381 21 123 4567"
+      },
+      "coordinates": {
+        "lat": 45.2671,
+        "lng": 19.8335
+      },
+      "demandLevel": "high",
+      "description": "Univerzitetski grad sa rastućom mrežom centara. Idealno okruženje za obrazovne programe.",
+      "featured": false,
+      "isActive": true,
+      "marketSize": "large",
+      "order": 2,
+      "priceMultiplier": 1.1,
+      "references": [],
+      "region": "vojvodina",
+      "status": "active"
+    },
+    {
+      "_createdAt": "2025-08-05T22:09:18Z",
+      "_id": "RSzTvGgTwtY6EErbXkDnD0",
+      "_rev": "RSzTvGgTwtY6EErbXkDn9b",
+      "_type": "locationData",
+      "_updatedAt": "2025-08-05T22:09:18Z",
+      "backReferences": [],
+      "centerCount": 1,
+      "city": "Pančevo",
+      "contactInfo": {
+        "address": "Vojvode Radomira Putnika 10, Pančevo",
+        "email": "pancevo@srecno-ucenje.rs",
+        "phone": "+381 13 123 4567"
+      },
+      "coordinates": {
+        "lat": 44.8708,
+        "lng": 20.6403
+      },
+      "demandLevel": "medium",
+      "description": "Grad u blizini Beograda sa jakom lokalnom podrškom. Centar otvoren 2022. godine.",
+      "featured": false,
+      "isActive": true,
+      "marketSize": "small",
+      "order": 6,
+      "priceMultiplier": 0.95,
+      "references": [],
+      "region": "belgrade",
+      "status": "active"
+    },
+    {
+      "_createdAt": "2025-08-05T22:09:13Z",
+      "_id": "SVDvN8W2oCA8eZWngS38iw",
+      "_rev": "SVDvN8W2oCA8eZWngS38eR",
+      "_type": "locationData",
+      "_updatedAt": "2025-08-05T22:09:13Z",
+      "backReferences": [],
+      "centerCount": 3,
+      "city": "Beograd",
+      "contactInfo": {
+        "address": "Knez Mihailova 50, Beograd",
+        "email": "beograd@srecno-ucenje.rs",
+        "phone": "+381 11 123 4567"
+      },
+      "coordinates": {
+        "lat": 44.7866,
+        "lng": 20.4489
+      },
+      "demandLevel": "high",
+      "description": "Glavni grad sa najvećom mrežom Srećno učenje centara. Tri moderna centra pokrivaju sve delove grada.",
+      "featured": true,
+      "isActive": true,
+      "marketSize": "large",
+      "order": 1,
+      "priceMultiplier": 1.3,
+      "references": [],
+      "region": "belgrade",
+      "status": "active"
+    },
+    {
+      "_createdAt": "2025-08-05T22:09:15Z",
+      "_id": "SVDvN8W2oCA8eZWngS38wR",
+      "_rev": "SVDvN8W2oCA8eZWngS38rw",
+      "_type": "locationData",
+      "_updatedAt": "2025-08-05T22:09:15Z",
+      "backReferences": [],
+      "centerCount": 1,
+      "city": "Niš",
+      "contactInfo": {
+        "address": "Obrenovićeva 15, Niš",
+        "email": "nis@srecno-ucenje.rs",
+        "phone": "+381 18 123 4567"
+      },
+      "coordinates": {
+        "lat": 43.3209,
+        "lng": 21.8958
+      },
+      "demandLevel": "medium",
+      "description": "Centar južne Srbije sa velikim potencijalom rasta. Novi centar otvoren 2023. godine.",
+      "featured": false,
+      "isActive": true,
+      "marketSize": "medium",
+      "order": 3,
+      "priceMultiplier": 0.9,
+      "references": [],
+      "region": "juzna-srbija",
+      "status": "active"
+    },
+    {
+      "_createdAt": "2025-08-05T22:09:17Z",
+      "_id": "SVDvN8W2oCA8eZWngS399w",
+      "_rev": "SVDvN8W2oCA8eZWngS395R",
+      "_type": "locationData",
+      "_updatedAt": "2025-08-05T22:09:17Z",
+      "backReferences": [],
+      "centerCount": 1,
+      "city": "Subotica",
+      "contactInfo": {
+        "address": "Korzo 1, Subotica",
+        "email": "subotica@srecno-ucenje.rs",
+        "phone": "+381 24 123 4567"
+      },
+      "coordinates": {
+        "lat": 46.1001,
+        "lng": 19.6651
+      },
+      "demandLevel": "high",
+      "description": "Multikultiralni grad na severu Srbije. Otvaranje planira za proleće 2024.",
+      "featured": false,
+      "isActive": true,
+      "marketSize": "medium",
+      "order": 5,
+      "priceMultiplier": 1,
+      "references": [],
+      "region": "vojvodina",
+      "status": "coming-soon"
+    },
+    {
+      "_createdAt": "2025-08-05T22:09:22Z",
+      "_id": "SVDvN8W2oCA8eZWngS39fR",
+      "_rev": "SVDvN8W2oCA8eZWngS39aw",
+      "_type": "locationData",
+      "_updatedAt": "2025-08-05T22:09:22Z",
+      "backReferences": [],
+      "centerCount": 0,
+      "city": "Smederevo",
+      "contactInfo": {
+        "address": "",
+        "email": "info@srecno-ucenje.rs",
+        "phone": ""
+      },
+      "coordinates": {
+        "lat": 44.6653,
+        "lng": 20.928
+      },
+      "demandLevel": "low",
+      "description": "Grad na Dunavu sa rastućom populacijom mladih porodica.",
+      "featured": false,
+      "isActive": true,
+      "marketSize": "small",
+      "order": 10,
+      "priceMultiplier": 0.8,
+      "references": [],
+      "region": "belgrade",
+      "status": "planned"
+    },
+    {
+      "_createdAt": "2025-08-05T22:09:16Z",
+      "_id": "rWY7A01dUL9wO4NRChSndc",
+      "_rev": "rWY7A01dUL9wO4NRChSnae",
+      "_type": "locationData",
+      "_updatedAt": "2025-08-05T22:09:16Z",
+      "backReferences": [],
+      "centerCount": 1,
+      "city": "Kragujevac",
+      "contactInfo": {
+        "address": "Kralja Petra I 30, Kragujevac",
+        "email": "kragujevac@srecno-ucenje.rs",
+        "phone": "+381 34 123 4567"
+      },
+      "coordinates": {
+        "lat": 44.0142,
+        "lng": 20.9395
+      },
+      "demandLevel": "medium",
+      "description": "Industrijski i obrazovni centar Šumadije. Odličan odziv lokalne zajednice.",
+      "featured": false,
+      "isActive": true,
+      "marketSize": "medium",
+      "order": 4,
+      "priceMultiplier": 0.85,
+      "references": [],
+      "region": "sumadija",
+      "status": "active"
+    },
+    {
+      "_createdAt": "2025-08-05T22:09:19Z",
+      "_id": "rWY7A01dUL9wO4NRChSnpU",
+      "_rev": "rWY7A01dUL9wO4NRChSnmW",
+      "_type": "locationData",
+      "_updatedAt": "2025-08-05T22:09:19Z",
+      "backReferences": [],
+      "centerCount": 1,
+      "city": "Zrenjanin",
+      "contactInfo": {
+        "address": "",
+        "email": "info@srecno-ucenje.rs",
+        "phone": ""
+      },
+      "coordinates": {
+        "lat": 45.3834,
+        "lng": 20.3899
+      },
+      "demandLevel": "medium",
+      "description": "Centar Banata sa velikim potencijalom. Planirano otvaranje u Q2 2024.",
+      "featured": false,
+      "isActive": true,
+      "marketSize": "small",
+      "order": 7,
+      "priceMultiplier": 0.85,
+      "references": [],
+      "region": "vojvodina",
+      "status": "coming-soon"
+    },
+    {
+      "_createdAt": "2025-08-05T22:09:20Z",
+      "_id": "rWY7A01dUL9wO4NRChSo1M",
+      "_rev": "rWY7A01dUL9wO4NRChSnyO",
+      "_type": "locationData",
+      "_updatedAt": "2025-08-05T22:09:20Z",
+      "backReferences": [],
+      "centerCount": 0,
+      "city": "Valjevo",
+      "contactInfo": {
+        "address": "",
+        "email": "info@srecno-ucenje.rs",
+        "phone": ""
+      },
+      "coordinates": {
+        "lat": 44.2721,
+        "lng": 19.8872
+      },
+      "demandLevel": "medium",
+      "description": "U fazi pregovora sa lokalnim partnerima. Planiran početak rada krajem 2024.",
+      "featured": false,
+      "isActive": true,
+      "marketSize": "small",
+      "order": 8,
+      "priceMultiplier": 0.8,
+      "references": [],
+      "region": "sumadija",
+      "status": "planned"
+    },
+    {
+      "_createdAt": "2025-08-05T22:09:21Z",
+      "_id": "rWY7A01dUL9wO4NRChSoP6",
+      "_rev": "rWY7A01dUL9wO4NRChSoM8",
+      "_type": "locationData",
+      "_updatedAt": "2025-08-05T22:09:21Z",
+      "backReferences": [],
+      "centerCount": 0,
+      "city": "Čačak",
+      "contactInfo": {
+        "address": "",
+        "email": "info@srecno-ucenje.rs",
+        "phone": ""
+      },
+      "coordinates": {
+        "lat": 43.8914,
+        "lng": 20.3497
+      },
+      "demandLevel": "high",
+      "description": "Obrazovni centar zapadne Srbije. Velika zainteresovanost lokalne zajednice.",
+      "featured": false,
+      "isActive": true,
+      "marketSize": "small",
+      "order": 9,
+      "priceMultiplier": 0.85,
+      "references": [],
+      "region": "sumadija",
+      "status": "planned"
+    }
+  ]
+}

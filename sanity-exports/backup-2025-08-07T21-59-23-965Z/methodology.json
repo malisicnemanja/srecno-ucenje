@@ -1,0 +1,340 @@
+{
+  "_type": "methodology",
+  "_exportedAt": "2025-08-07T21:59:24.865Z",
+  "_count": 2,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T04:31:42Z",
+      "_id": "hWo33GCGxd3rDeD5TjTsuH",
+      "_rev": "hWo33GCGxd3rDeD5TjTspX",
+      "_type": "methodology",
+      "_updatedAt": "2025-08-03T04:31:42Z",
+      "backReferences": [],
+      "comparison": {
+        "description": "Vidite zašto je naša metodologija superiorna",
+        "items": [
+          {
+            "aspect": "Brzina učenja",
+            "ourMethod": "5x brže uz bolje razumevanje",
+            "traditional": "Sporo, linealno učenje"
+          },
+          {
+            "aspect": "Motivacija dece",
+            "ourMethod": "Pozitivne emocije i ljubav prema učenju",
+            "traditional": "Prinuda i strah od greške"
+          },
+          {
+            "aspect": "Rezultati",
+            "ourMethod": "Dugoročno zadržavanje znanja",
+            "traditional": "Kratkoročno pamćenje"
+          }
+        ],
+        "title": "Poređenje sa tradicionalnim pristupima"
+      },
+      "hero": {
+        "description": "Naša jedinstvena metodologija kombinuje najbolje iz svetskih pristupa sa lokalnim potrebama dece.",
+        "subtitle": "Otkrijte kako Srećno učenje transformiše način na koji deca pristupaju znanju",
+        "title": "Revolucionarni pristup učenju"
+      },
+      "introduction": {
+        "description": "Srećno učenje nije samo još jedna obrazovna metodologija. To je revolucionarni pristup koji postavlja dete u centar procesa učenja.",
+        "features": [
+          {
+            "description": "Učimo decu da vole proces učenja kroz pozitivne emocije",
+            "iconType": "heart",
+            "title": "Emocionalno učenje"
+          },
+          {
+            "description": "Povećavamo brzinu čitanja uz održavanje potpunog razumevanja",
+            "iconType": "brain",
+            "title": "Brzo čitanje"
+          },
+          {
+            "description": "Razvijamo kreativno mišljenje kroz inovativne tehnike",
+            "iconType": "rocket",
+            "title": "Kreativnost"
+          }
+        ],
+        "title": "Zašto je naša metodologija drugačija?"
+      },
+      "methods": [
+        {
+          "benefits": [
+            "Povećana brzina čitanja do 5 puta",
+            "Bolje razumevanje pročitanog sadržaja",
+            "Povećana koncentracija i fokus",
+            "Razvoj vizuelne memorije"
+          ],
+          "description": "Tehnike koje omogućavaju deci da čitaju brže uz bolje razumevanje teksta.",
+          "name": "Brzo čitanje",
+          "techniques": [
+            "Vizuelno čitanje",
+            "Eliminacija unutrašnjeg glasa",
+            "Proširivanje vidnog polja",
+            "Tehnike koncentracije"
+          ]
+        },
+        {
+          "benefits": [
+            "Brže računanje od kalkulatora",
+            "Razvoj logičkog mišljenja",
+            "Povećanje koncentracije",
+            "Jačanje radne memorije"
+          ],
+          "description": "Računanje bez kalkulatora koristeći mentalne tehnike i vizualizaciju.",
+          "name": "Mentalna aritmetika",
+          "techniques": [
+            "Abakus tehnika",
+            "Vizualizacija brojeva",
+            "Mentalne skraćenice",
+            "Brzinske formule"
+          ]
+        },
+        {
+          "benefits": [
+            "Dugotrajno pamćenje gradiva",
+            "Pozitivan odnos prema učenju",
+            "Smanjenje stresa od učenja",
+            "Povećanje motivacije"
+          ],
+          "description": "Povezivanje emocija sa procesom učenja za bolje pamćenje.",
+          "name": "Emocionalno učenje",
+          "techniques": [
+            "Emotivne asocijacije",
+            "Pozitivno potkrepljenje",
+            "Igrovne tehnike",
+            "Personalizacija sadržaja"
+          ]
+        }
+      ],
+      "references": [],
+      "scientificBackground": {
+        "description": "Naša metodologija se zasniva na najnovijim istraživanjima u oblasti neuroplastičnosti i kognitivne psihologije.",
+        "researches": [
+          {
+            "description": "Mozak se može reorganizovati tokom celog života, posebno u detinjstvu.",
+            "title": "Neuroplastičnost mozga"
+          },
+          {
+            "description": "Kombinovanje različitih čula poboljšava efikasnost učenja.",
+            "title": "Multimodalno učenje"
+          },
+          {
+            "description": "Pozitivne emocije omogućavaju bolju retenciju informacija.",
+            "title": "Pozitivna psihologija"
+          }
+        ],
+        "title": "Naučna osnova naše metodologije"
+      },
+      "timeline": {
+        "description": "Pratite naš put kroz godine istraživanja i razvoja",
+        "steps": [
+          {
+            "achievements": [
+              "Analiza 50+ svetskih metodologija",
+              "Prva pilot grupa od 20 dece"
+            ],
+            "description": "Započeli smo duboko istraživanje svetskih metodologija učenja i njihove primene u našem kulturnom kontekstu.",
+            "title": "Početak istraživanja",
+            "year": "2010"
+          },
+          {
+            "achievements": [
+              "Prva grupa završila program",
+              "Razvoj osnovnog kurikuluma"
+            ],
+            "description": "Naša prva deca pokazala su neverovatne rezultate - povećanje brzine čitanja za 300%.",
+            "title": "Prvi rezultati",
+            "year": "2012"
+          },
+          {
+            "achievements": [
+              "Obuka 100+ dece",
+              "Sertifikacija instruktora"
+            ],
+            "description": "Otvorili smo prvi centar Srećno učenje u Beogradu sa 5 instruktora.",
+            "title": "Prva škola",
+            "year": "2015"
+          },
+          {
+            "achievements": [
+              "Lansiranje online platforme",
+              "10 novih lokacija"
+            ],
+            "description": "Razvili smo digitalnu platformu koja podržava naše metode učenja.",
+            "title": "Digitalizacija",
+            "year": "2018"
+          },
+          {
+            "achievements": [
+              "50+ franšiza partnera",
+              "5000+ zadovoljne dece"
+            ],
+            "description": "Tokom pandemije, proširili smo se na 50+ lokacija kroz franšizu model.",
+            "title": "Širenje mreže",
+            "year": "2020"
+          },
+          {
+            "achievements": [
+              "150+ lokacija",
+              "20.000+ zadovoljne dece",
+              "Međunarodno priznanje"
+            ],
+            "description": "Danas imamo 150+ lokacija i više od 20.000 dece je prošlo kroz naš program.",
+            "title": "Današnji dan",
+            "year": "2024"
+          }
+        ],
+        "title": "Evolucija naše metodologije"
+      },
+      "title": "Naša Metodologija"
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:19Z",
+      "_id": "methodology",
+      "_rev": "rWY7A01dUL9wO4NRChTXae",
+      "_type": "methodology",
+      "_updatedAt": "2025-08-05T22:42:19Z",
+      "backReferences": [],
+      "comparison": {
+        "items": [
+          {
+            "aspect": "Pristup učenju",
+            "ourMethod": "Fokus na razumevanju i praktičnoj primeni",
+            "traditional": "Fokus na memorisanju činjenica"
+          },
+          {
+            "aspect": "Tempo rada",
+            "ourMethod": "Individualan tempo prilagođen svakom detetu",
+            "traditional": "Isti tempo za svu decu"
+          },
+          {
+            "aspect": "Motivacija",
+            "ourMethod": "Unutrašnja motivacija kroz radost učenja",
+            "traditional": "Spoljašnja motivacija (ocene, pohvale)"
+          },
+          {
+            "aspect": "Rezultati",
+            "ourMethod": "Dugotrajne veštine za ceo život",
+            "traditional": "Fokus na kratkoročne rezultate"
+          }
+        ],
+        "title": "Zašto je naša metodologija drugačija"
+      },
+      "hero": {
+        "description": "Otkrijte naučno zasnovanu metodologiju koja spaja Montessori pristup, STEAM obrazovanje i pozitivnu psihologiju za optimalan razvoj vašeg deteta.",
+        "subtitle": "Metodologija",
+        "title": "Naša revolucionarna metodologija"
+      },
+      "introduction": {
+        "content": "Naša metodologija se zasniva na tri osnovne komponente: individualnom pristupu svakom detetu, kreiranju podsticajne sredine za učenje i razvoju kritičkog mišljenja kroz praktičnu primenu znanja.",
+        "features": [
+          {
+            "description": "Svako dete je jedinstveno i ima svoj tempo učenja",
+            "iconType": "brain",
+            "title": "Individualan pristup"
+          },
+          {
+            "description": "Stvaramo prostor gde deca vole da uče i istražuju",
+            "iconType": "heart",
+            "title": "Podsticajna sredina"
+          },
+          {
+            "description": "Znanje se stiče kroz igru i realnu primenu",
+            "iconType": "rocket",
+            "title": "Praktična primena"
+          }
+        ],
+        "title": "Tri stuba našeg pristupa"
+      },
+      "methods": [
+        {
+          "benefits": [
+            "Čitanje 300-500% brže od proseka",
+            "Poboljšano razumevanje pročitanog za 40%",
+            "Bolja koncentracija i fokus",
+            "Veće samopouzdanje u učenju",
+            "Bolje ocene u školi"
+          ],
+          "color": "primary",
+          "description": "Tehnike brzog čitanja uz potpuno razumevanje pročitanog sadržaja. Deca uče da čitaju 3-5 puta brže uz bolju koncentraciju.",
+          "name": "Brzočitanje"
+        },
+        {
+          "benefits": [
+            "Računanje brže od kalkulatora",
+            "Razvoj kreativnosti za 60%",
+            "Poboljšana memorija i koncentracija",
+            "Logičko i analitičko mišljenje",
+            "Samopouzdanje u matematici"
+          ],
+          "color": "secondary",
+          "description": "Mentalno računanje pomoću vizualizacije abakusa. Razvija oba hemisfera mozga i povećava brzinu računanja.",
+          "name": "Mentalna aritmetika"
+        },
+        {
+          "benefits": [
+            "Pozitivan odnos prema učenju",
+            "Razvoj emotivne inteligencije",
+            "Bolje socijalne veštine",
+            "Smanjenje stresa oko učenja",
+            "Povećanje motivacije za 80%"
+          ],
+          "color": "accent",
+          "description": "Holistički pristup koji spaja kognitivni, emotivni i socijalni razvoj deteta kroz pozitivnu psihologiju.",
+          "name": "Metodologija srećnog učenja"
+        }
+      ],
+      "references": [],
+      "scientificBackground": {
+        "content": "Naša metodologija se zasniva na najnovijim neurološkim istraživanjima o plastičnosti mozga i načinima učenja kod dece.",
+        "research": [
+          {
+            "finding": "Deca uzrasta 6-14 godina imaju najveću sposobnost formiranja novih neuronskih veza",
+            "source": "Stanford University Research",
+            "title": "Neuroplastičnost mozga kod dece",
+            "year": 2019
+          },
+          {
+            "finding": "Vizuelne tehnike učenja poboljšavaju memoriju za 65% kod dece",
+            "source": "Harvard Educational Review",
+            "title": "Efikasnost vizuelnog učenja",
+            "year": 2020
+          },
+          {
+            "finding": "Pozitivan pristup učenju povećava motivaciju i rezultate za 40%",
+            "source": "Journal of Educational Psychology",
+            "title": "Pozitivna psihologija u obrazovanju",
+            "year": 2021
+          }
+        ],
+        "title": "Naučna osnova metodologije"
+      },
+      "timeline": {
+        "steps": [
+          {
+            "description": "Prvi kontakt sa metodologijom, procena nivoa i stvaranje individualnog plana",
+            "month": 1,
+            "title": "Početak putovanja"
+          },
+          {
+            "description": "Savladavanje osnovnih tehnika i prvih rezultata u brzočitanju",
+            "month": 2,
+            "title": "Osvajanje osnova"
+          },
+          {
+            "description": "Značajno poboljšanje brzine čitanja i prva mentalna računanja",
+            "month": 3,
+            "title": "Napredak se vidi"
+          },
+          {
+            "description": "Kompletno ovladavanje tehnikama i transformacija pristupa učenju",
+            "month": 6,
+            "title": "Puna transformacija"
+          }
+        ]
+      },
+      "title": "Naša revolucionarna metodologija"
+    }
+  ]
+}

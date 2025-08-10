@@ -1,0 +1,902 @@
+{
+  "_type": "book",
+  "_exportedAt": "2025-08-07T21:59:25.337Z",
+  "_count": 9,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T11:23:04Z",
+      "_id": "EIn1TO6kzkBkpMuRkFybRO",
+      "_rev": "RSzTvGgTwtY6EErbXk1PYt",
+      "_type": "book",
+      "_updatedAt": "2025-08-05T20:18:21Z",
+      "ageGroup": "6-10 godina",
+      "backReferences": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        },
+        {
+          "_id": "drafts.EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        }
+      ],
+      "colorTheme": "yellow",
+      "coverImage": {
+        "_type": "image",
+        "alt": "Cover slika knjige Zimski mir",
+        "asset": {
+          "_ref": "image-1b4efadb340eee2e9b711b589b7c56993ca26572-4724x3248-webp",
+          "_type": "reference"
+        }
+      },
+      "description": "Zimski mir nastavlja priču o Luki koji sada upoznaje vilu Božicu i tajne zime. Kroz snežne avanture, deca uče o strpljenju, unutrašnjem miru i važnosti tišine za učenje.",
+      "educationalTopics": [
+        "Razvoj strpljenja",
+        "Koncentracija i fokus",
+        "Razumevanje tišine",
+        "Zimska priroda"
+      ],
+      "excerpt": "Druga knjiga serijala vodi nas kroz zimske avanture Luke i vile Božice, učeći o strpljenju, miru i lepoti zimskih dana.",
+      "features": [
+        "Zimske ilustracije pune čarolije",
+        "Zadaci za razvoj koncentracije",
+        "Priče za čitanje pred spavanje",
+        "Bonus: Zimske pesme"
+      ],
+      "illustrationGallery": [
+        {
+          "_type": "image",
+          "alt": "Zimski mir - ilustracija",
+          "asset": {
+            "_ref": "image-db5ac4f0773013ae720ec59d35028bc2862b6d8f-1189x1479-webp",
+            "_type": "reference"
+          }
+        },
+        {
+          "_type": "image",
+          "alt": "Zimski mir - ilustracija",
+          "asset": {
+            "_ref": "image-a10f1e0c4a343a6fef1b425e6e65d41a6f7a94e5-400x624-webp",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isbn": "978-86-123456-1-8",
+      "order": 1,
+      "pageCount": 52,
+      "price": 890,
+      "publicationYear": 2022,
+      "purchaseLinks": [
+        {
+          "type": "vulkan",
+          "url": "https://www.knjizare-vulkan.rs/zimski-mir"
+        },
+        {
+          "type": "delfi",
+          "url": "https://www.delfi.rs/zimski-mir"
+        }
+      ],
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "drafts.EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor",
+          "name": null,
+          "title": null
+        }
+      ],
+      "seasonalTheme": "winter",
+      "seo": {
+        "keywords": [
+          "zimski mir",
+          "luka godišnjih doba",
+          "zimske priče",
+          "strpljenje",
+          "koncentracija"
+        ],
+        "metaDescription": "Druga knjiga serijala o zimskim avanturama koje uče strpljenju i koncentraciji kroz čarobne priče.",
+        "metaTitle": "Zimski mir - Luka godišnjih doba | Srećno učenje"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "zimski-mir"
+      },
+      "subtitle": "Luka godišnjih doba - Zima",
+      "title": "Zimski mir",
+      "year": 2023
+    },
+    {
+      "_createdAt": "2025-08-03T11:23:05Z",
+      "_id": "EIn1TO6kzkBkpMuRkFybbz",
+      "_rev": "rWY7A01dUL9wO4NRChIdTI",
+      "_type": "book",
+      "_updatedAt": "2025-08-05T20:18:23Z",
+      "ageGroup": "6-10 godina",
+      "awards": [
+        "Specijalno priznanje EKO-fest 2022"
+      ],
+      "backReferences": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        },
+        {
+          "_id": "drafts.EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        }
+      ],
+      "colorTheme": "blue",
+      "coverImage": {
+        "_type": "image",
+        "alt": "Cover slika knjige Prolećna žurba",
+        "asset": {
+          "_ref": "image-49bb61de3e05b7da7687ff67f334c87b59b33112-2362x1624-webp",
+          "_type": "reference"
+        }
+      },
+      "description": "Prolećna žurba je priča o buđenju i rastu. Luka i vila Đurđica otkrivaju tajne prolećnog cvetanja, uče o životnim ciklusima i važnosti marljivog rada.",
+      "educationalTopics": [
+        "Životni ciklusi biljaka",
+        "Važnost rada i truda",
+        "Prolećno buđenje prirode",
+        "Ekologija"
+      ],
+      "excerpt": "Treća knjiga donosi prolećno buđenje prirode sa vilom Đurđicom, učeći o rastu, razvoju i radosti stvaranja.",
+      "features": [
+        "Prolećne boje i ilustracije",
+        "Praktični zadaci o biljkama",
+        "Eko-aktivnosti za decu",
+        "Prolećni kalendar"
+      ],
+      "illustrationGallery": [
+        {
+          "_type": "image",
+          "alt": "Prolećna žurba - ilustracija",
+          "asset": {
+            "_ref": "image-4692728fd6991dfd1a9c66c983b4e868dec1f6f0-251x356-webp",
+            "_type": "reference"
+          }
+        },
+        {
+          "_type": "image",
+          "alt": "Prolećna žurba - ilustracija",
+          "asset": {
+            "_ref": "image-5f4deeb531ff51f0f7434502000102891b575b40-198x234-webp",
+            "_type": "reference"
+          }
+        },
+        {
+          "_type": "image",
+          "alt": "Prolećna žurba - ilustracija",
+          "asset": {
+            "_ref": "image-1c77e017405a6d358c06dc5a5614c87b27bd7e58-203x249-webp",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isbn": "978-86-123456-2-5",
+      "order": 2,
+      "pageCount": 48,
+      "price": 890,
+      "publicationYear": 2022,
+      "purchaseLinks": [
+        {
+          "type": "laguna",
+          "url": "https://www.laguna.rs/prolecna-zurba"
+        },
+        {
+          "type": "knjizara_com",
+          "url": "https://knjizara.com/prolecna-zurba"
+        }
+      ],
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "drafts.EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor",
+          "name": null,
+          "title": null
+        }
+      ],
+      "seasonalTheme": "spring",
+      "seo": {
+        "keywords": [
+          "prolećna žurba",
+          "luka godišnjih doba",
+          "proleće",
+          "ekologija",
+          "biljke"
+        ],
+        "metaDescription": "Treća knjiga o prolećnom buđenju prirode koja uči o rastu, razvoju i ekologiji kroz zabavne priče.",
+        "metaTitle": "Prolećna žurba - Luka godišnjih doba | Srećno učenje"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "prolecna-zurba"
+      },
+      "subtitle": "Luka godišnjih doba - Proleće",
+      "title": "Prolećna žurba",
+      "year": 2023
+    },
+    {
+      "_createdAt": "2025-08-03T11:23:06Z",
+      "_id": "drafts.hWo33GCGxd3rDeD5Tjrurv",
+      "_rev": "5b07ee40-ca41-4d34-8977-dc35e37f23b6",
+      "_system": {
+        "base": {
+          "id": "hWo33GCGxd3rDeD5Tjrurv",
+          "rev": "YBiWwTMhT8IS37yZZlrAz2"
+        }
+      },
+      "_type": "book",
+      "_updatedAt": "2025-08-07T20:21:32Z",
+      "aboutBook": [
+        {
+          "_key": "88b762a462e3",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d5b3b282ebb9",
+              "_type": "span",
+              "marks": [],
+              "text": "Letnja vreva je finalna knjiga serijala koja slavi radost leta. Kroz avanture sa vilom Ivanom, deca uče o prijateljstvu, igri na otvorenom i važnosti aktivnog leta."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "ageGroup": "6-10 godina",
+      "backReferences": [],
+      "colorTheme": "green",
+      "coverImage": {
+        "_type": "image",
+        "alt": "Cover slika knjige Letnja vreva",
+        "asset": {
+          "_ref": "image-7ab8fbd97542e7644dc1e3b089728f54eadbf445-4724x3248-webp",
+          "_type": "reference"
+        }
+      },
+      "description": "Letnja vreva je finalna knjiga serijala koja slavi radost leta. Kroz avanture sa vilom Ivanom, deca uče o prijateljstvu, igri na otvorenom i važnosti aktivnog leta.",
+      "educationalTopics": [
+        "Važnost igre",
+        "Prijateljstvo i saradnja",
+        "Letnje aktivnosti",
+        "Bezbednost na suncu"
+      ],
+      "excerpt": "Četvrta knjiga zaokružuje godišnji ciklus sa vilom Ivanom, slaveći radost, igru i druženje tokom leta.",
+      "features": [
+        "Letnje ilustracije pune sunca",
+        "Aktivnosti za leto",
+        "Igre za dvorište",
+        "Letnji dnevnik"
+      ],
+      "heroText": "Luka istražuje leto",
+      "illustrationGallery": [
+        {
+          "_key": "tqJG5yH49IKSFNIKiO2GEz",
+          "_type": "image",
+          "alt": "Letnja vreva - ilustracija",
+          "asset": {
+            "_ref": "image-96395158b0415a0a28b393bce0260e2222dca2d3-1200x628-webp",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "tqJG5yH49IKSFNIKiO2GGl",
+          "_type": "image",
+          "alt": "Letnja vreva - ilustracija",
+          "asset": {
+            "_ref": "image-8060222c5f6e1f94ae6b21090fd0dd154750c3ca-350x495-webp",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isbn": "978-86-123456-3-2",
+      "order": 4,
+      "pageCount": 56,
+      "price": 890,
+      "publicationYear": 2023,
+      "purchaseLinks": [
+        {
+          "_key": "tqJG5yH49IKSFNIKiO2GIX",
+          "storeName": "Vulkan",
+          "type": "online",
+          "url": "https://www.knjizare-vulkan.rs/letnja-vreva"
+        },
+        {
+          "_key": "tqJG5yH49IKSFNIKiO2GKJ",
+          "storeName": "Laguna",
+          "type": "physical",
+          "url": "https://www.laguna.rs/letnja-vreva"
+        }
+      ],
+      "references": [],
+      "seasonalTheme": "summer",
+      "seo": {
+        "keywords": [
+          "letnja vreva",
+          "luka godišnjih doba",
+          "leto",
+          "igra",
+          "prijateljstvo"
+        ],
+        "metaDescription": "Četvrta knjiga koja zaokružuje godišnji ciklus učeći o radosti, igri i druženju kroz letnje avanture.",
+        "metaTitle": "Letnja vreva - Luka godišnjih doba | Srećno učenje"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "letnjavreva"
+      },
+      "subtitle": "Luka godišnjih doba - Leto",
+      "title": "Letnja vreva",
+      "year": 2024
+    },
+    {
+      "_createdAt": "2025-08-03T11:23:03Z",
+      "_id": "hWo33GCGxd3rDeD5Tjrudh",
+      "_rev": "rWY7A01dUL9wO4NRChIdZE",
+      "_type": "book",
+      "_updatedAt": "2025-08-05T20:18:24Z",
+      "ageGroup": "6-10 godina",
+      "awards": [
+        "Nagrada \"Neven\" za najbolju dečju knjigu 2021"
+      ],
+      "backReferences": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        },
+        {
+          "_id": "drafts.EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        }
+      ],
+      "colorTheme": "green",
+      "coverImage": {
+        "_type": "image",
+        "alt": "Cover slika knjige Jesenja gozba",
+        "asset": {
+          "_ref": "image-a2253f99dd6849b1204b4cb5d57ef851e208acf2-4724x3248-webp",
+          "_type": "reference"
+        }
+      },
+      "description": "Jesenja gozba je prva knjiga iz serijala koja uvodi decu u svet Čarobnog sela. Kroz avanturu dečaka Luke i vile Bosiljčice, deca uče o prirodi, godišnjim dobima i važnosti zahvalnosti.",
+      "educationalTopics": [
+        "Prepoznavanje godišnjih doba",
+        "Razumevanje prirodnih ciklusa",
+        "Razvoj zahvalnosti",
+        "Timski rad"
+      ],
+      "excerpt": "Prva knjiga iz serijala Luka godišnjih doba, gde upoznajemo dečaka Luku i vilu Bosiljčicu u čarobnoj jesenjoj priči punoj učenja i avantura.",
+      "features": [
+        "Ilustracije srpskih umetnika",
+        "Integrativni zadaci za učenje",
+        "QR kodovi za dodatne sadržaje",
+        "Eko-prijateljski papir"
+      ],
+      "illustrationGallery": [
+        {
+          "_type": "image",
+          "alt": "Jesenja gozba - ilustracija",
+          "asset": {
+            "_ref": "image-99b3b2ebabf65cb46ef3451d80a9b9dcf5977687-280x378-webp",
+            "_type": "reference"
+          }
+        },
+        {
+          "_type": "image",
+          "alt": "Jesenja gozba - ilustracija",
+          "asset": {
+            "_ref": "image-2fbebdad6920666e956de89625f61019da1e8262-300x300-webp",
+            "_type": "reference"
+          }
+        },
+        {
+          "_type": "image",
+          "alt": "Jesenja gozba - ilustracija",
+          "asset": {
+            "_ref": "image-7c625a651a4fd6fd462b416fb71e5e9b70bd9cce-444x562-webp",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isbn": "978-86-123456-0-1",
+      "order": 3,
+      "pageCount": 48,
+      "price": 890,
+      "publicationYear": 2021,
+      "purchaseLinks": [
+        {
+          "type": "laguna",
+          "url": "https://www.laguna.rs/jesenja-gozba"
+        },
+        {
+          "type": "delfi",
+          "url": "https://www.delfi.rs/jesenja-gozba"
+        }
+      ],
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "drafts.EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor",
+          "name": null,
+          "title": null
+        }
+      ],
+      "seasonalTheme": "autumn",
+      "seo": {
+        "keywords": [
+          "jesenja gozba",
+          "luka godišnjih doba",
+          "dečje knjige",
+          "edukativne priče",
+          "jesen"
+        ],
+        "metaDescription": "Prva knjiga iz serijala Luka godišnjih doba. Edukativna priča o jeseni koja uči decu o prirodi i zahvalnosti.",
+        "metaTitle": "Jesenja gozba - Luka godišnjih doba | Srećno učenje"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "jesenja-gozba"
+      },
+      "subtitle": "Luka godišnjih doba - Jesen",
+      "title": "Jesenja gozba",
+      "year": 2024
+    },
+    {
+      "_createdAt": "2025-08-03T11:23:06Z",
+      "_id": "hWo33GCGxd3rDeD5Tjrurv",
+      "_rev": "YBiWwTMhT8IS37yZZlrAz2",
+      "_system": {
+        "base": {
+          "id": "hWo33GCGxd3rDeD5Tjrurv",
+          "rev": "oWtMwMRBoarauLfrKjUZlT"
+        }
+      },
+      "_type": "book",
+      "_updatedAt": "2025-08-07T20:21:32Z",
+      "aboutBook": [
+        {
+          "_key": "88b762a462e3",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "d5b3b282ebb9",
+              "_type": "span",
+              "marks": [],
+              "text": "Letnja vreva je finalna knjiga serijala koja slavi radost leta. Kroz avanture sa vilom Ivanom, deca uče o prijateljstvu, igri na otvorenom i važnosti aktivnog leta."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "ageGroup": "6-10 godina",
+      "backReferences": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        },
+        {
+          "_id": "drafts.EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        }
+      ],
+      "colorTheme": "red",
+      "coverImage": {
+        "_type": "image",
+        "alt": "Cover slika knjige Letnja vreva",
+        "asset": {
+          "_ref": "image-7ab8fbd97542e7644dc1e3b089728f54eadbf445-4724x3248-webp",
+          "_type": "reference"
+        }
+      },
+      "description": "Letnja vreva je finalna knjiga serijala koja slavi radost leta. Kroz avanture sa vilom Ivanom, deca uče o prijateljstvu, igri na otvorenom i važnosti aktivnog leta.",
+      "educationalTopics": [
+        "Važnost igre",
+        "Prijateljstvo i saradnja",
+        "Letnje aktivnosti",
+        "Bezbednost na suncu"
+      ],
+      "excerpt": "Četvrta knjiga zaokružuje godišnji ciklus sa vilom Ivanom, slaveći radost, igru i druženje tokom leta.",
+      "features": [
+        "Letnje ilustracije pune sunca",
+        "Aktivnosti za leto",
+        "Igre za dvorište",
+        "Letnji dnevnik"
+      ],
+      "heroText": "Luka istražuje leto",
+      "illustrationGallery": [
+        {
+          "_key": "tqJG5yH49IKSFNIKiO2GEz",
+          "_type": "image",
+          "alt": "Letnja vreva - ilustracija",
+          "asset": {
+            "_ref": "image-96395158b0415a0a28b393bce0260e2222dca2d3-1200x628-webp",
+            "_type": "reference"
+          }
+        },
+        {
+          "_key": "tqJG5yH49IKSFNIKiO2GGl",
+          "_type": "image",
+          "alt": "Letnja vreva - ilustracija",
+          "asset": {
+            "_ref": "image-8060222c5f6e1f94ae6b21090fd0dd154750c3ca-350x495-webp",
+            "_type": "reference"
+          }
+        }
+      ],
+      "isbn": "978-86-123456-3-2",
+      "order": 4,
+      "pageCount": 56,
+      "price": 890,
+      "publicationYear": 2023,
+      "purchaseLinks": [
+        {
+          "_key": "tqJG5yH49IKSFNIKiO2GIX",
+          "storeName": "Vulkan",
+          "type": "online",
+          "url": "https://www.knjizare-vulkan.rs/letnja-vreva"
+        },
+        {
+          "_key": "tqJG5yH49IKSFNIKiO2GKJ",
+          "storeName": "Laguna",
+          "type": "physical",
+          "url": "https://www.laguna.rs/letnja-vreva"
+        }
+      ],
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor",
+          "name": null,
+          "title": null
+        },
+        {
+          "_id": "drafts.EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor",
+          "name": null,
+          "title": null
+        }
+      ],
+      "seasonalTheme": "summer",
+      "seo": {
+        "keywords": [
+          "letnja vreva",
+          "luka godišnjih doba",
+          "leto",
+          "igra",
+          "prijateljstvo"
+        ],
+        "metaDescription": "Četvrta knjiga koja zaokružuje godišnji ciklus učeći o radosti, igri i druženju kroz letnje avanture.",
+        "metaTitle": "Letnja vreva - Luka godišnjih doba | Srećno učenje"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "letnjavreva"
+      },
+      "subtitle": "Luka godišnjih doba - Leto",
+      "title": "Letnja vreva",
+      "year": 2024
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:21Z",
+      "_id": "jesenja-gozba",
+      "_rev": "RSzTvGgTwtY6EErbXkEapW",
+      "_type": "book",
+      "_updatedAt": "2025-08-05T22:42:21Z",
+      "aboutBook": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "text": "Prva knjiga u seriji \"Čarobno selo - Luka godišnjih doba\" uvodi decu u čarobni svet jeseni. Vila Bosiljčica ih vodi kroz jesenji krajobraz, učeći ih o ciklusima prirode, važnosti porodičnih vrednosti i lepoti promena. Kroz interaktivne priče i edukativne sadržaje, deca razvijaju ljubav prema čitanju i prirodi."
+            }
+          ]
+        }
+      ],
+      "backReferences": [],
+      "childCharacters": [
+        {
+          "characteristics": [
+            "Radoznao",
+            "Energičan",
+            "Voljan da uči"
+          ],
+          "description": "Radoznao dečak koji voli da istražuje prirodu i postavlja puno pitanja.",
+          "name": "Luka"
+        },
+        {
+          "characteristics": [
+            "Empatična",
+            "Brižna",
+            "Kreativna"
+          ],
+          "description": "Nežna devojčica koja voli životinje i cveće, uvek pomaže drugima.",
+          "name": "Mila"
+        }
+      ],
+      "colorTheme": "yellow",
+      "fairy": {
+        "birthDate": "17. septembar",
+        "description": "Mudra i nežna vila jeseni koja čuva tajne jesenjeg božasnjega. Nosi haljinu od zlatnog lišća i uvek miriše na cimet i jabuke. Ima dar da vidi lepotu u svakoj promeni.",
+        "name": "Vila Bosiljčica",
+        "secretPlace": "Vajat ukusa",
+        "virtues": [
+          "Mudrost",
+          "Zahvalnost",
+          "Prihvatanje promena",
+          "Porodične vrednosti"
+        ]
+      },
+      "heroText": "Otkrijte čarobni svet jeseni kroz priču o vili Bosiljčici koja deci prenose znanje o prirodi, tradiciji i životnim vrednostima.",
+      "order": 1,
+      "purchaseLinks": [
+        {
+          "price": 1200,
+          "storeName": "Laguna",
+          "type": "online",
+          "url": "https://www.laguna.rs/n5234"
+        },
+        {
+          "price": 1250,
+          "storeName": "Delfi knjižare",
+          "type": "physical",
+          "url": "https://www.delfi.rs/knihzara/n5234"
+        }
+      ],
+      "references": [],
+      "reviews": [
+        {
+          "author": "Marija Petrović",
+          "rating": 5,
+          "text": "Prekrasna knjiga koja deci na jednostavan način objašnjava prirodne cikluse. Moja ćerka je postala ljubitelj čitanja!",
+          "title": "mama troje dece"
+        },
+        {
+          "author": "Dr. Stefan Nikolić",
+          "rating": 5,
+          "text": "Metodološki izvrsno koncipovana, spaja edukaciju sa fantazijom na nerivljiv način.",
+          "title": "profesor pedagogije"
+        }
+      ],
+      "slug": {
+        "_type": "slug",
+        "current": "jesenja-gozba"
+      },
+      "subtitle": "sa vilom Bosiljčicom",
+      "title": "Jesenja gozba",
+      "year": 2021
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:24Z",
+      "_id": "letnja-vreva",
+      "_rev": "SVDvN8W2oCA8eZWngS4BOR",
+      "_type": "book",
+      "_updatedAt": "2025-08-05T22:42:24Z",
+      "aboutBook": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "text": "Poslednja knjiga u seriji donosi vrelinu i radost leta. Vila Sunčica vodi decu kroz letnje avanture, učeći ih o prijateljstvu, igri, kreativnosti i tome kako da uživaju u svakom trenutku."
+            }
+          ]
+        }
+      ],
+      "backReferences": [],
+      "childCharacters": [
+        {
+          "characteristics": [
+            "Veseo",
+            "Društven",
+            "Kreativan"
+          ],
+          "description": "Veseo dečak koji voli leto, igru i družeje sa svojom braćom i sestrema.",
+          "name": "Nikola"
+        }
+      ],
+      "colorTheme": "red",
+      "fairy": {
+        "birthDate": "21. jun",
+        "description": "Vesela vila leta koja sija poput sunca. Nosi žutu haljinu i uvek je okružena leptirovima. Uči decu da uživaju u životu i neguju prijateljstva.",
+        "name": "Vila Sunčica",
+        "secretPlace": "Sunčana livada",
+        "virtues": [
+          "Radość",
+          "Prijateljstvo",
+          "Kreativnost",
+          "Uživanje u životu"
+        ]
+      },
+      "heroText": "Zakoračite u letnju avanturu sa vilom Sunčicom i istražite letnje radosti kroz nezaboravne letnje priče.",
+      "order": 4,
+      "purchaseLinks": [
+        {
+          "price": 1300,
+          "storeName": "Laguna",
+          "type": "online",
+          "url": "https://www.laguna.rs/n5237"
+        }
+      ],
+      "references": [],
+      "reviews": [
+        {
+          "author": "Aleksandar Mitrović",
+          "rating": 5,
+          "text": "Kompletirala je kolekciju i postala omiljena letnja knjiga naše porodice!",
+          "title": "tata četvoro dece"
+        }
+      ],
+      "slug": {
+        "_type": "slug",
+        "current": "letnja-vreva"
+      },
+      "subtitle": "sa vilom Sunčicom",
+      "title": "Letnja vreva",
+      "year": 2023
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:23Z",
+      "_id": "prolecna-zurba",
+      "_rev": "rWY7A01dUL9wO4NRChTXsS",
+      "_type": "book",
+      "_updatedAt": "2025-08-05T22:42:23Z",
+      "aboutBook": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "text": "Treća knjiga donosi energiju prolećnog buđenja i nove početke. Vila Đurđica vodi decu kroz avanture rasta, učeći ih o novim mogućnostima, hrabrosti za promene i energiji koja dolazi sa novim početcima."
+            }
+          ]
+        }
+      ],
+      "backReferences": [],
+      "childCharacters": [
+        {
+          "characteristics": [
+            "Hrabra",
+            "Energična",
+            "Voljana za avanture"
+          ],
+          "description": "Hrabra devojčica koja voli nove izazove i nije joj strašno da proba nešto novo.",
+          "name": "Teodora"
+        }
+      ],
+      "colorTheme": "green",
+      "fairy": {
+        "birthDate": "21. mart",
+        "description": "Energična vila proleća koja nosi venac od prvih prolećnih cvetića. Puna je života i podstiče decu da budu hrabra i istražuju nove mogućnosti.",
+        "name": "Vila Đurđica",
+        "secretPlace": "Cvetni vrt",
+        "virtues": [
+          "Energija",
+          "Hrabrost",
+          "Novi početci",
+          "Rast"
+        ]
+      },
+      "heroText": "Probudite se uz prolećnu magiju vile Đurđice i otkrijte lepote proleća kroz energične prolećne avanture.",
+      "order": 3,
+      "purchaseLinks": [
+        {
+          "price": 1200,
+          "storeName": "Laguna",
+          "type": "online",
+          "url": "https://www.laguna.rs/n5236"
+        }
+      ],
+      "references": [],
+      "reviews": [
+        {
+          "author": "Milica Jovanović",
+          "rating": 5,
+          "text": "Savršena knjiga za prolećno čitanje! Motiviše decu da budu aktivna i istražuju.",
+          "title": "učiteljica"
+        }
+      ],
+      "slug": {
+        "_type": "slug",
+        "current": "prolecna-zurba"
+      },
+      "subtitle": "sa vilom Đurđicom",
+      "title": "Prolećna žurba",
+      "year": 2022
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:22Z",
+      "_id": "zimski-mir",
+      "_rev": "rWY7A01dUL9wO4NRChTXmW",
+      "_type": "book",
+      "_updatedAt": "2025-08-05T22:42:22Z",
+      "aboutBook": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "text": "Druga knjiga u seriji vodi decu kroz zimski pejzaž pun čuda i mirnih trenutaka. Vila Božica ih uči o važnosti odmora, razmišljanja i unutrašnjeg mira. Kroz zimske priče deca otkrivaju lepotu tišine i važnost porodičnog okupljanja."
+            }
+          ]
+        }
+      ],
+      "backReferences": [],
+      "childCharacters": [
+        {
+          "characteristics": [
+            "Kontemplativna",
+            "Mudra",
+            "Osećajna"
+          ],
+          "description": "Tiha devojčica koja voli da posmatra sneg i razmišlja o dubokim stvarima.",
+          "name": "Ana"
+        },
+        {
+          "characteristics": [
+            "Miran",
+            "Strpljiv",
+            "Avanturam"
+          ],
+          "description": "Dečak koji je naučio da pronađe mir u prirodi i voli zimske aktivnosti.",
+          "name": "Marko"
+        }
+      ],
+      "colorTheme": "blue",
+      "fairy": {
+        "birthDate": "21. decembar",
+        "description": "Mirna i mudra vila zime koja nosi mantil od snežnih pahuljica. Ima moć da stvori najlepše zimske prizore i uči decu o važnosti unutrašnjeg mira.",
+        "name": "Vila Božica",
+        "secretPlace": "Snežna kućica",
+        "virtues": [
+          "Mir",
+          "Strpljenje",
+          "Razmišljanje",
+          "Unutrašnja snaga"
+        ]
+      },
+      "heroText": "Uronite u zimsku čaroliju sa vilom Božicom i naučite o zimskim čudima prirode kroz magične zimske priče.",
+      "order": 2,
+      "purchaseLinks": [
+        {
+          "price": 1200,
+          "storeName": "Laguna",
+          "type": "online",
+          "url": "https://www.laguna.rs/n5235"
+        }
+      ],
+      "references": [],
+      "reviews": [
+        {
+          "author": "Jovana Stojanović",
+          "rating": 5,
+          "text": "Vila Božica je postala omiljena kod moje dece. Knjiga ih uči važnim životnim lekcijama.",
+          "title": "mama dvojice dece"
+        }
+      ],
+      "slug": {
+        "_type": "slug",
+        "current": "zimski-mir"
+      },
+      "subtitle": "sa vilom Božicom",
+      "title": "Zimski mir",
+      "year": 2022
+    }
+  ]
+}

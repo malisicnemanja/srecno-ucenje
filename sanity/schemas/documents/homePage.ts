@@ -176,26 +176,6 @@ const homePage = defineType({
               to: [{ type: 'faq' }],
             },
           ],
-          validation: (Rule) => Rule.max(5),
-        },
-      ],
-    }),
-    defineField({
-      name: 'homeFAQ',
-      title: 'Home FAQ (References)',
-      type: 'object',
-      fields: [
-        {
-          name: 'sectionTitle',
-          title: 'Section Title',
-          type: 'string',
-          initialValue: 'Često postavljana pitanja',
-        },
-        {
-          name: 'faqs',
-          title: 'FAQs',
-          type: 'array',
-          of: [{ type: 'reference', to: [{ type: 'faq' }] }],
           validation: (Rule) => Rule.max(10),
         },
       ],

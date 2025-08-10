@@ -1,0 +1,5 @@
+[2025-08-08T06:15:33.607Z] [INFO] Starting SAFE cleanup session - 2025-08-08T06-15-33-607Z
+[2025-08-08T06:15:33.608Z] [PROGRESS] Testing Sanity client connection...
+[2025-08-08T06:15:33.863Z] [SUCCESS] Connected to Sanity successfully
+[2025-08-08T06:15:33.863Z] [ERROR] Critical error during cleanup: readline was closed
+[2025-08-08T06:15:33.864Z] [INFO] ℹ️ No items were processed (all skipped)

@@ -1,0 +1,291 @@
+{
+  "_type": "homePage",
+  "enhancedHero": {
+    "layout": "centered",
+    "title": "Transformišite obrazovanje u vašoj zajednici",
+    "highlightText": "transformišite",
+    "titleVariants": [
+      "revolucioniraćete",
+      "poboljšaćete",
+      "unapredićete",
+      "modernizujete"
+    ],
+    "brushStrokeWords": [
+      "transformišite",
+      "obrazovanje"
+    ],
+    "animationSettings": {
+      "enableBrushStrokes": true,
+      "enableTextRotation": true,
+      "brushStrokeColor": "#FDD835",
+      "rotationSpeed": 3000,
+      "brushStrokeDelay": 1000
+    },
+    "subtitle": "Postanite deo najveće mreže obrazovnih centara u Srbiji. Više od 20.000 dece je već doživelo radost učenja kroz našu jedinstvenu metodologiju.",
+    "animatedNumber": {
+      "target": 20000,
+      "suffix": "+ dece",
+      "duration": 2500
+    },
+    "badge": "Franšiza #1 u obrazovanju",
+    "primaryCta": {
+      "text": "Počnite svoju priču",
+      "href": "/franchise-application"
+    },
+    "secondaryCta": {
+      "text": "Pogledajte naše centre",
+      "href": "/centri"
+    },
+    "features": [
+      {
+        "icon": "star",
+        "text": "Dokazana metodologija"
+      },
+      {
+        "icon": "users",
+        "text": "50+ partnera u Srbiji"
+      },
+      {
+        "icon": "chart",
+        "text": "95% zadovoljstvo roditelja"
+      },
+      {
+        "icon": "award",
+        "text": "Brend godine 2023"
+      }
+    ],
+    "backgroundType": "pattern",
+    "backgroundPattern": "dots",
+    "trustBadges": [
+      {
+        "icon": "shield",
+        "text": "Licencirani program"
+      },
+      {
+        "icon": "certificate",
+        "text": "ISO sertifikat"
+      }
+    ]
+  },
+  "statistics": [
+    {
+      "number": "20000",
+      "suffix": "+",
+      "label": "Zadovoljne dece",
+      "description": "kroz našu metodologiju"
+    },
+    {
+      "number": "50",
+      "suffix": "+",
+      "label": "Aktivnih centara",
+      "description": "širom Srbije"
+    },
+    {
+      "number": "15",
+      "suffix": "",
+      "label": "Godina iskustva",
+      "description": "u obrazovanju"
+    },
+    {
+      "number": "95",
+      "suffix": "%",
+      "label": "Zadovoljstvo",
+      "description": "partnera i roditelja"
+    }
+  ],
+  "differentiators": {
+    "sectionTitle": "Zašto baš Srećno učenje?",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Jedinstvena metodologija",
+        "description": "Naš autorski pristup učenju koji kombinuje igru, kreativnost i tehnologiju za maksimalne rezultate.",
+        "benefits": [
+          "Individualizovan pristup svakom detetu",
+          "Razvoj kritičkog mišljenja",
+          "Podsticanje kreativnosti"
+        ]
+      },
+      {
+        "icon": "support",
+        "title": "Kompletna podrška",
+        "description": "Od početnog treninga do kontinuirane podrške - nikada niste sami u vašem poslovnom putovanju.",
+        "benefits": [
+          "24/7 tehnička podrška",
+          "Redovne edukacije",
+          "Marketing materijali"
+        ]
+      },
+      {
+        "icon": "growth",
+        "title": "Dokazana profitabilnost",
+        "description": "Naši partneri ostvaruju prosečan ROI od 35% već u drugoj godini poslovanja.",
+        "benefits": [
+          "Brz povraćaj investicije",
+          "Stabilna klijentela",
+          "Skalabilno poslovanje"
+        ]
+      }
+    ]
+  },
+  "franchiseSteps": {
+    "sectionTitle": "4 koraka do vaše franšize",
+    "steps": [
+      {
+        "stepNumber": 1,
+        "title": "Početni razgovor",
+        "description": "Upoznajemo se i razgovaramo o vašim ciljevima i viziji za centar u vašoj zajednici.",
+        "duration": "30 min",
+        "icon": "chat"
+      },
+      {
+        "stepNumber": 2,
+        "title": "Prezentacija modela",
+        "description": "Detaljno vam predstavljamo poslovni model, metodologiju i finansijske projekcije.",
+        "duration": "60 min",
+        "icon": "presentation"
+      },
+      {
+        "stepNumber": 3,
+        "title": "Potpisivanje ugovora",
+        "description": "Finalizujemo partnerstvo i počinjemo pripremu za otvaranje vašeg centra.",
+        "duration": "1 dan",
+        "icon": "contract"
+      },
+      {
+        "stepNumber": 4,
+        "title": "Obuka i otvaranje",
+        "description": "Intenzivna obuka i potpuna podrška za uspešno pokretanje vašeg centra.",
+        "duration": "2 nedelje",
+        "icon": "rocket"
+      }
+    ]
+  },
+  "franchiseModels": {
+    "sectionTitle": "Naši modeli franšize",
+    "models": [
+      {
+        "name": "Starter",
+        "price": "Od €8,000",
+        "description": "Idealan za početak u manjem gradu ili kao dodatna delatnost.",
+        "features": [
+          "Osnovno opremanje",
+          "Početni marketing paket",
+          "Online obuka",
+          "6 meseci podrške",
+          "Teritorija do 20.000 stanovnika"
+        ],
+        "highlighted": false,
+        "ctaText": "Saznajte više"
+      },
+      {
+        "name": "Professional",
+        "price": "Od €15,000",
+        "description": "Kompletno rešenje za ozbiljne preduzetnike koji žele brz rast.",
+        "features": [
+          "Kompletno opremanje",
+          "Prošireni marketing paket",
+          "Lična obuka + online",
+          "12 meseci podrške",
+          "Teritorija do 50.000 stanovnika",
+          "Ekskluzivne radionice"
+        ],
+        "highlighted": true,
+        "ctaText": "Najpopularniji izbor",
+        "badge": "Preporučujemo"
+      },
+      {
+        "name": "Master",
+        "price": "Od €25,000",
+        "description": "Premium model za velike gradove sa maksimalnom podrškom.",
+        "features": [
+          "Premium opremanje",
+          "VIP marketing paket",
+          "Individualna obuka",
+          "24 meseca podrške",
+          "Ekskluzivna teritorija",
+          "Personalizovani programi",
+          "Prioritetna podrška"
+        ],
+        "highlighted": false,
+        "ctaText": "Kontaktirajte nas"
+      }
+    ]
+  },
+  "successStories": {
+    "sectionTitle": "Priče uspešnih partnera",
+    "featuredVideo": "https://www.youtube.com/watch?v=example",
+    "stories": [
+      {
+        "name": "Marija Nikolić",
+        "role": "Vlasnica centra",
+        "location": "Novi Sad",
+        "story": "Već u prvoj godini rada moj centar je premašio sve očekivanja. Deca dolaze sa radošću, roditelji su oduševljeni rezultatima, a ja sam konačno našla posao koji me ispunjava.",
+        "yearStarted": "2021",
+        "metric": {
+          "value": "120",
+          "label": "dece mesečno"
+        }
+      },
+      {
+        "name": "Aleksandar Petrov",
+        "role": "Franšiza partner",
+        "location": "Kragujevac",
+        "story": "Nikad nisam bio u obrazovanju, ali uz Srećno učenje podršku uspeo sam da izgradim profitabilan biznis koji pomaže deci u mojoj zajednici.",
+        "yearStarted": "2020",
+        "metric": {
+          "value": "200%",
+          "label": "rast u 2 godine"
+        }
+      },
+      {
+        "name": "Ana Đorđević",
+        "role": "Obrazovna stručnjakinja",
+        "location": "Niš",
+        "story": "Kombinacija mojih pedagogskih znanja sa Srećno učenje metodologijom stvorila je neverojan rezultat. Imam listu čekanja od 3 meseca!",
+        "yearStarted": "2022",
+        "metric": {
+          "value": "98%",
+          "label": "zadovoljstvo roditelja"
+        }
+      }
+    ]
+  },
+  "leadMagnets": {
+    "sectionTitle": "Besplatni resursi za buduće partnere",
+    "resources": [
+      {
+        "title": "Vodič za pokretanje obrazovne franšize",
+        "description": "Kompletni vodič sa svim koracima, proverama i savetima za uspešan start.",
+        "icon": "book",
+        "downloadUrl": "/downloads/vodic-pokretanje-fransiz.pdf",
+        "type": "PDF vodič"
+      },
+      {
+        "title": "Finansijski kalkulator profitabilnosti",
+        "description": "Izračunajte potencijalne prihode i period povraćaja investicije za vaš grad.",
+        "icon": "calculator",
+        "downloadUrl": "/calculator",
+        "type": "Online alat"
+      },
+      {
+        "title": "Webinar: Sekreti uspešnih franšiza",
+        "description": "Ekskluzivni uvidi od naših najuspešnijih partnera o tome što stvarno funkcioniše.",
+        "icon": "video",
+        "downloadUrl": "/webinar-registration",
+        "type": "Live webinar"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Budite u toku sa prilikama",
+    "description": "Prijavite se na naš newsletter i budite prvi koji će saznati o novim mogućnostima, uspesima naših partnera i ekskluzivnim ponudama.",
+    "incentive": "Dobijte besplatan \"Vodič za pokretanje obrazovne franšize\" (vrednost 2.000 RSD)",
+    "ctaText": "Prijavite se besplatno"
+  },
+  "seo": {
+    "title": "Srećno učenje franšiza - Pokrenite profitabilnu obrazovnu franšizu",
+    "description": "Postanite deo najveće mreže obrazovnih centara u Srbiji. Dokazana metodologija, kompletna podrška, više od 20.000 zadovoljne dece.",
+    "keywords": "obrazovna franšiza, franšiza Srbija, obrazovni centar, Srećno učenje, poslovna prilika"
+  }
+}

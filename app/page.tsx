@@ -3,6 +3,32 @@ import { homePageQuery } from '@/lib/sanity.queries'
 import { sanityFetch } from '@/lib/sanity.client'
 import HeroSection from '@/components/features/cms/HeroSection'
 import type { HeroSectionProps } from '@/components/features/cms/HeroSection'
+import Link from 'next/link'
+import { Metadata } from 'next'
+
+// Generate metadata from CMS data
+export async function generateMetadata(): Promise<Metadata> {
+  try {
+    const pageData = await sanityFetch({ query: homePageQuery })
+    
+    return {
+      title: pageData?.seo?.metaTitle || pageData?.enhancedHero?.title || 'Srećno učenje - Franšiza',
+      description: pageData?.seo?.metaDescription || pageData?.enhancedHero?.subtitle || 'Pokrenite obrazovnu franšizu Srećno učenje',
+      keywords: pageData?.seo?.keywords || 'franšiza, obrazovanje, deca, učenje',
+      openGraph: {
+        title: pageData?.seo?.metaTitle || pageData?.enhancedHero?.title || 'Srećno učenje',
+        description: pageData?.seo?.metaDescription || pageData?.enhancedHero?.subtitle || 'Pokrenite obrazovnu franšizu',
+        images: pageData?.seo?.ogImage ? [{ url: pageData.seo.ogImage }] : [],
+      },
+    }
+  } catch (error) {
+    console.error('Error generating metadata:', error)
+    return {
+      title: 'Srećno učenje - Franšiza',
+      description: 'Pokrenite obrazovnu franšizu Srećno učenje'
+    }
+  }
+}
 
 export default async function HomePage() {
   // Fetch all content from CMS on server side
@@ -32,12 +58,13 @@ export default async function HomePage() {
       {pageData.enhancedHero && (
         <HeroSection 
           title={pageData.enhancedHero.title}
-          subtitle={pageData.enhancedHero.subtitle}
+          subtitle={pageData.enhancedHero.subtitle || pageData.enhancedHero.description}
           ctaText={pageData.enhancedHero.buttons?.[0]?.text}
           ctaLink={pageData.enhancedHero.buttons?.[0]?.link}
           secondaryCtaText={pageData.enhancedHero.buttons?.[1]?.text}
           secondaryCtaLink={pageData.enhancedHero.buttons?.[1]?.link}
-          gradient="bg-brand-sky bg-opacity-90"
+          backgroundImage={pageData.enhancedHero.image}
+          gradient="bg-gradient-to-br from-sky-600 to-sky-700"
         />
       )}
 
@@ -46,10 +73,10 @@ export default async function HomePage() {
         <section className="py-16 bg-gradient-to-br from-sky-500 via-sky-600 to-sky-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {pageData.statistics.map((stat: any, i: number) => (
-                <div key={i} className="text-center">
+              {pageData.statistics.map((stat: any) => (
+                <div key={stat._key || stat.number} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                    {stat.value}
+                    {stat.number || stat.value}
                   </div>
                   <div className="text-white/80 text-sm md:text-base">
                     {stat.label}
@@ -92,7 +119,7 @@ export default async function HomePage() {
               
               return (
                 <div 
-                  key={i} 
+                  key={feature._key || i} 
                   className={`group relative p-6 ${colors.bg} ${colors.border} border-2 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer`}
                 >
                   {/* Hover accent */}
@@ -141,6 +168,189 @@ export default async function HomePage() {
           )}
         </div>
       </section>
+
+      {/* Franchise Steps Timeline */}
+      {pageData.franchiseSteps && pageData.franchiseSteps.steps && (
+        <section className="py-20 lg:py-32 bg-gray-50 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-h2-mobile md:text-h2-tablet lg:text-h2-desktop font-bold text-night-700 mb-4">
+                {pageData.franchiseSteps.sectionTitle}
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+              {pageData.franchiseSteps.steps.map((step: any, index: number) => {
+                const colors = [
+                  { bg: 'bg-sky-500', light: 'bg-sky-50', border: 'border-sky-200' },
+                  { bg: 'bg-grass-500', light: 'bg-grass-50', border: 'border-grass-200' },
+                  { bg: 'bg-sun-500', light: 'bg-sun-50', border: 'border-sun-200' },
+                  { bg: 'bg-heart-500', light: 'bg-heart-50', border: 'border-heart-200' }
+                ][index % 4]
+                
+                return (
+                  <div key={step._key || index} className="text-center relative">
+                    {/* Step Number */}
+                    <div className={`w-16 h-16 ${colors.bg} rounded-full flex items-center justify-center mx-auto mb-6 relative z-10`}>
+                      <span className="text-2xl font-bold text-white">{step.number || index + 1}</span>
+                    </div>
+                    
+                    {/* Connecting line (for desktop) */}
+                    {index < pageData.franchiseSteps.steps.length - 1 && (
+                      <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gray-300 -z-10" 
+                           style={{ transform: 'translateX(50%)' }} />
+                    )}
+                    
+                    {/* Content */}
+                    <div className={`${colors.light} ${colors.border} border-2 rounded-xl p-6`}>
+                      {step.icon && (
+                        <div className="text-3xl mb-4">{step.icon}</div>
+                      )}
+                      <h3 className="text-h3-mobile font-bold text-night-700 mb-3">
+                        {step.title}
+                      </h3>
+                      <p className="text-small-mobile md:text-body-tablet text-gray-600">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Success Stories */}
+      {pageData.successStories && pageData.successStories.stories && pageData.successStories.stories.length > 0 && (
+        <section className="py-20 lg:py-32 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-h2-mobile md:text-h2-tablet lg:text-h2-desktop font-bold text-night-700 mb-4">
+                {pageData.successStories.sectionTitle}
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {pageData.successStories.stories.slice(0, 3).map((story: any, index: number) => (
+                <div key={story._key || index} className="bg-white border-2 border-gray-100 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  {story.image && (
+                    <div className="w-16 h-16 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden">
+                      <img 
+                        src={story.image} 
+                        alt={story.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-4">
+                    <h3 className="text-h3-mobile font-bold text-night-700 mb-1">{story.name}</h3>
+                    <p className="text-sm text-gray-600">
+                      {story.role} • {story.location}
+                    </p>
+                    {story.yearStarted && (
+                      <p className="text-xs text-gray-500 mt-1">Od {story.yearStarted}</p>
+                    )}
+                  </div>
+                  
+                  <p className="text-small-mobile text-gray-700 mb-4 italic">
+                    "{story.story}"
+                  </p>
+                  
+                  {story.metric && (
+                    <div className="text-center pt-4 border-t border-gray-100">
+                      <div className="text-2xl font-bold text-sky-600">{story.metric.value}</div>
+                      <div className="text-xs text-gray-600">{story.metric.label}</div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ Section */}
+      {pageData.homeFaqs && pageData.homeFaqs.faqs && pageData.homeFaqs.faqs.length > 0 && (
+        <section className="py-20 lg:py-32 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-h2-mobile md:text-h2-tablet lg:text-h2-desktop font-bold text-night-700 mb-4">
+                {pageData.homeFaqs.sectionTitle}
+              </h2>
+            </div>
+            
+            <div className="space-y-4">
+              {pageData.homeFaqs.faqs.slice(0, 6).map((faq: any, index: number) => (
+                <details key={faq._id || index} className="bg-white rounded-xl border border-gray-200 group">
+                  <summary className="p-6 cursor-pointer hover:bg-gray-50 rounded-xl transition-colors duration-200">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-h3-mobile font-semibold text-night-700 pr-4">
+                        {faq.question}
+                      </h3>
+                      <div className="flex-shrink-0 w-6 h-6 text-sky-600">
+                        <svg className="w-full h-full transform group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
+                  </summary>
+                  <div className="px-6 pb-6">
+                    <p className="text-body-mobile text-gray-600 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </details>
+              ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <Link 
+                href="/cesta-pitanja" 
+                className="inline-flex items-center px-6 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition-colors duration-200"
+              >
+                Pogledajte sva pitanja
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Newsletter CTA */}
+      {pageData.newsletterCTA && (
+        <section className="py-20 bg-gradient-to-br from-sky-600 to-sky-700">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-h2-mobile md:text-h2-tablet text-white font-bold mb-4">
+              {pageData.newsletterCTA.title}
+            </h2>
+            {pageData.newsletterCTA.description && (
+              <p className="text-body-mobile md:text-body-tablet text-white/90 mb-6">
+                {pageData.newsletterCTA.description}
+              </p>
+            )}
+            {pageData.newsletterCTA.incentive && (
+              <p className="text-small-mobile md:text-body-tablet text-white/80 mb-8">
+                {pageData.newsletterCTA.incentive}
+              </p>
+            )}
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+              <input 
+                type="email" 
+                placeholder="Vaša email adresa" 
+                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+              />
+              <button className="px-8 py-3 bg-white text-sky-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                {pageData.newsletterCTA.ctaText || 'Prijavite se'}
+              </button>
+            </div>
+          </div>
+        </section>
+      )}
     </>
   )
 }

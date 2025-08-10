@@ -9,6 +9,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // Ultra-wide screen support
+      screens: {
+        'ultrawide': '1600px',
+        '2k': '1920px',
+        '4k': '2560px',
+      },
       // Brand color system for Srećno učenje
       colors: {
         // Direct brand colors (converted from CMYK)

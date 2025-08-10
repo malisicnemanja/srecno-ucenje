@@ -1,0 +1,952 @@
+{
+  "_type": "faq",
+  "_exportedAt": "2025-08-07T21:59:26.085Z",
+  "_count": 55,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T01:47:52Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFcYI",
+      "_rev": "xmE432SUuemXLQhUEYiBtF",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:38Z",
+      "answer": "Propušteni časovi se mogu nadoknaditi u dogovoru sa instruktorom, u okviru tekućeg meseca.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.general",
+        "_type": "reference"
+      },
+      "order": 5,
+      "question": "Šta ako dete propusti čas?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-03T04:23:03Z",
+      "_id": "EIn1TO6kzkBkpMuRkFgCdS",
+      "_rev": "oWtMwMRBoarauLfrKjT3fF",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:39Z",
+      "answer": "Imamo nekoliko modela franšize sa različitim investicionim nivoima. Kontaktirajte nas za detaljne informacije.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.franchise",
+        "_type": "reference"
+      },
+      "question": "Koliko košta franšiza?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:06Z",
+      "_id": "adpXclQvR9WWEgUkbtDr9f",
+      "_rev": "adpXclQvR9WWEgUkbtDr5q",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:06Z",
+      "answer": "Početna investicija se kreće od 8,000€ do 15,000€ u zavisnosti od paketa. Ovo uključuje franšiznu naknadu, obuku, početni marketing materijal i podršku tokom prvih 6 meseci.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJtEp",
+        "_type": "reference"
+      },
+      "featured": true,
+      "order": 1,
+      "question": "Koliko košta franšiza Srećno učenje?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:08Z",
+      "_id": "adpXclQvR9WWEgUkbtDrL8",
+      "_rev": "adpXclQvR9WWEgUkbtDrHJ",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:08Z",
+      "answer": "Ne, nije potrebno! Naša detaljana obuka i kontinuirana podrška omogućavaju uspeh i osobama bez prethodnog iskustva u obrazovanju. Važnija je motivisanost i želja za radom sa decom.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJtEp",
+        "_type": "reference"
+      },
+      "featured": true,
+      "order": 2,
+      "question": "Da li je potrebno prethodno iskustvo u obrazovanju?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:09Z",
+      "_id": "adpXclQvR9WWEgUkbtDreF",
+      "_rev": "adpXclQvR9WWEgUkbtDraQ",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:09Z",
+      "answer": "Prosečno vreme od potpisivanja ugovora do otvaranja centra je 4-6 nedelja. Ovo uključuje obuku, pronalaženje prostora, setup i početni marketing.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJtEp",
+        "_type": "reference"
+      },
+      "featured": false,
+      "order": 3,
+      "question": "Koliko vremena treba da se pokrene centar?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:11Z",
+      "_id": "adpXclQvR9WWEgUkbtDsKI",
+      "_rev": "adpXclQvR9WWEgUkbtDsGT",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:11Z",
+      "answer": "Naši partneri ostvaruju prosečan ROI od 300% u prve 2 godine. Najuspešniji centri vraćaju investiciju za 12-15 meseci, dok se prosečno investicija vraća za 18-24 meseca.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJtYf",
+        "_type": "reference"
+      },
+      "featured": true,
+      "order": 5,
+      "question": "Kakav je povraćaj investicije (ROI)?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:13Z",
+      "_id": "adpXclQvR9WWEgUkbtDsl3",
+      "_rev": "adpXclQvR9WWEgUkbtDshE",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:13Z",
+      "answer": "Mesečna franšizna naknada je 8% od prometa. Dodatno, preporučujemo budget za lokalni marketing (300-500€ mesečno) i eventualna ulaganja u proširenje prostora.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJtYf",
+        "_type": "reference"
+      },
+      "featured": false,
+      "order": 7,
+      "question": "Koje su dodatne investicije tokom rada?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:17Z",
+      "_id": "adpXclQvR9WWEgUkbtDtcZ",
+      "_rev": "adpXclQvR9WWEgUkbtDtYk",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:17Z",
+      "answer": "Da! Organizujemo kvartalne refresher obuke, godišnje konferencije, i specijalizovane radionice. Takođe imate pristup online biblioteci edukativnih materijala.",
+      "backReferences": [],
+      "category": {
+        "_ref": "adpXclQvR9WWEgUkbtDqyC",
+        "_type": "reference"
+      },
+      "featured": false,
+      "order": 11,
+      "question": "Da li mogu da dobijem dodatnu obuku tokom rada?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:20Z",
+      "_id": "adpXclQvR9WWEgUkbtDu3K",
+      "_rev": "adpXclQvR9WWEgUkbtDtzV",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:20Z",
+      "answer": "Kompletnu! Dobijate: profesionalne brošure, online kampanje, lokalne reklame, social media sadržaj, PR materijale, i podršku u organizaciji promocijskih događaja.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJu0R",
+        "_type": "reference"
+      },
+      "featured": true,
+      "order": 14,
+      "question": "Kakvu marketing podršku dobijam?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:22Z",
+      "_id": "adpXclQvR9WWEgUkbtDuEn",
+      "_rev": "adpXclQvR9WWEgUkbtDuAy",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:22Z",
+      "answer": "Da! Naš hibridni model kombinuje lični rad sa decom i online podršku. Posebno je efikasan tokom zimskih meseci ili za decu iz udaljenijih mesta.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJu0R",
+        "_type": "reference"
+      },
+      "featured": false,
+      "order": 15,
+      "question": "Da li mogu raditi online ili hibridno?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:18Z",
+      "_id": "atDdCAAfWCLcotj1z9HOkp",
+      "_rev": "atDdCAAfWCLcotj1z9HOh5",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:18Z",
+      "answer": "Da, svaki franšizer dobija ekskluzivnu teritoriju definisanu po gradskim opštinama ili regionima. Ovo garantuje da nećete imati direktnu konkurenciju od strane drugih franšizera.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJu0R",
+        "_type": "reference"
+      },
+      "featured": true,
+      "order": 12,
+      "question": "Da li dobijam ekskluzivnu teritoriju?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:19Z",
+      "_id": "atDdCAAfWCLcotj1z9HOw3",
+      "_rev": "atDdCAAfWCLcotj1z9HOsJ",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:19Z",
+      "answer": "Minimalno 80m² je potrebno za standardni centar sa 2 učionice. Idealno je 120-150m² što omogućava rad sa više grupa simultano i prostor za čekanje roditelja.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJu0R",
+        "_type": "reference"
+      },
+      "featured": false,
+      "order": 13,
+      "question": "Koliki prostor je potreban za centar?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:51Z",
+      "_id": "drafts.hWo33GCGxd3rDeD5Tiy99l",
+      "_rev": "YBiWwTMhT8IS37yZZlorBW",
+      "_system": {
+        "base": {
+          "id": "hWo33GCGxd3rDeD5Tiy99l",
+          "rev": "hWo33GCGxd3rDeD5TiyRR5"
+        }
+      },
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:40Z",
+      "answer": "Plaćanje se vrši mesečno, unapred, putem uplatnice ili bankovnog transfera. Nudimo porodične popuste za upis više dece.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.general",
+        "_type": "reference"
+      },
+      "order": 4,
+      "question": "Kako se vrši plaćanje",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:11Z",
+      "_id": "faq-004b5dd6-4e27-44b9-b81e-272926286923",
+      "_rev": "jsO7i4LmwGEnLQvVmnBb7b",
+      "_type": "faq",
+      "_updatedAt": "2025-08-04T21:16:11Z",
+      "answer": "Mesečna naknada je 5% od bruto prihoda, što pokriva kontinuiranu podršku, nove materijale, marketing na nacionalnom nivou i pristup svim ažuriranjima metodologije.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-b6f9aba7-75b8-4c20-9309-6e8faaee28fd"
+      },
+      "order": 2,
+      "question": "Koje su mesečne obaveze prema franšizeru?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:19:58Z",
+      "_id": "faq-00ec4751-685c-4392-8f5e-981f71c0c5a8",
+      "_rev": "atDdCAAfWCLcotj1z9Jb9b",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:19:58Z",
+      "answer": "Mesečna naknada je 5% od bruto prihoda, što pokriva kontinuiranu podršku, nove materijale, marketing na nacionalnom nivou i pristup svim ažuriranjima metodologije.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-0ea134cb-88f6-4616-89de-81bf3a3054bd"
+      },
+      "order": 2,
+      "question": "Koje su mesečne obaveze prema franšizeru?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:19:56Z",
+      "_id": "faq-0ab40f0a-627b-46c8-bca1-9e44cb392b01",
+      "_rev": "atDdCAAfWCLcotj1z9Jaud",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:19:56Z",
+      "answer": "Početna investicija kreće se od 15.000€ za Starter paket do 40.000€ za Premium paket. Ovo uključuje licencu, obuku, materijale i početnu podršku. Dodatni troškovi zavise od lokacije i veličine centra.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-0ea134cb-88f6-4616-89de-81bf3a3054bd"
+      },
+      "order": 1,
+      "question": "Kolika je početna investicija?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:25Z",
+      "_id": "faq-1",
+      "_rev": "oWtMwMRBoarauLfrKjT5Gu",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:41Z",
+      "answer": "Program brzočitanja traje 6 meseci sa redovnim časovima 2 puta nedeljno. Nakon završetka osnovnog programa, učenici mogu nastaviti sa naprednim tehnikama. Već nakon prvog meseca vidljivi su početni rezultati.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.programs",
+        "_type": "reference"
+      },
+      "order": 1,
+      "question": "Koliko dugo traje program brzočitanja?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:19:51Z",
+      "_id": "faq-1b3d363e-e8dd-45f9-a0c4-12b2f4f58cfe",
+      "_rev": "atDdCAAfWCLcotj1z9Jaff",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:19:51Z",
+      "answer": "Srećno učenje je vodeća obrazovna franšiza u Srbiji sa preko 50 centara. Nudimo jedinstvenu metodologiju učenja zasnovanu na najnovijim pedagoškim istraživanjima, koja pomaže deci da razviju ljubav prema učenju i postignu odlične rezultate.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-1ef2c184-522e-44e6-b85f-a2bba903439f"
+      },
+      "order": 1,
+      "question": "Šta je Srećno učenje?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:26Z",
+      "_id": "faq-2",
+      "_rev": "YBiWwTMhT8IS37yZZlovJa",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:42Z",
+      "answer": "Preporučujemo da deca krenu sa mentalnom aritmetikom od 5. godine, kada već poznaju brojeve i osnovne matematičke operacije. Program je prilagođen uzrastu i mogućnostima deteta.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.programs",
+        "_type": "reference"
+      },
+      "order": 2,
+      "question": "Od koje godine dete može da krene sa mentalnom aritmetikom?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:27Z",
+      "_id": "faq-3",
+      "_rev": "xmE432SUuemXLQhUEYiIab",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:43Z",
+      "answer": "Da, nudimo besplatan probni čas kako bi vaše dete moglo da se upozna sa našim metodama i instruktorima pre upisa. Tokom probnog časa dobićete i detaljnu procenu trenutnih sposobnosti vašeg deteta.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.general",
+        "_type": "reference"
+      },
+      "order": 3,
+      "question": "Da li postoji probni čas?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:13Z",
+      "_id": "faq-3cc31acd-a09d-4791-9885-b5c38548cf61",
+      "_rev": "atDdCAAfWCLcotj1z8G5Hb",
+      "_type": "faq",
+      "_updatedAt": "2025-08-04T21:16:13Z",
+      "answer": "Osnovna obuka traje 40-80 sati u zavisnosti od paketa. Pokriva metodologiju, poslovanje, marketing, rad sa decom i roditeljima. Nakon toga sledi praktična obuka u vašem centru.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-62a0038f-9f0f-4575-a19b-8b8d00932ce5"
+      },
+      "order": 1,
+      "question": "Koliko traje obuka?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:00Z",
+      "_id": "faq-3f56014f-9ed6-4cc4-9021-0532a3d55219",
+      "_rev": "jsO7i4LmwGEnLQvVmoNTUn",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:20:00Z",
+      "answer": "Osnovna obuka traje 40-80 sati u zavisnosti od paketa. Pokriva metodologiju, poslovanje, marketing, rad sa decom i roditeljima. Nakon toga sledi praktična obuka u vašem centru.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-0ce949d5-34d7-408a-a877-998a4bf7eb1b"
+      },
+      "order": 1,
+      "question": "Koliko traje obuka?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:28Z",
+      "_id": "faq-4",
+      "_rev": "tqJG5yH49IKSFNIKiO1XAd",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:44Z",
+      "answer": "Investicija varira od €3.500 do €12.000 u zavisnosti na odabranog paketa. Ova investicija uključuje kompletnu obuku, didaktičke materijale, marketing podršku i kontinuiranu pomoć našeg tima.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.franchise",
+        "_type": "reference"
+      },
+      "order": 4,
+      "question": "Kolika je investicija za otvaranje franchise centra?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:29Z",
+      "_id": "faq-5",
+      "_rev": "oWtMwMRBoarauLfrKjTC5n",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:45Z",
+      "answer": "Pružamo kompletnu podršku koja uključuje početnu obuku, kontinuirane edukacije, marketing materijale, online platformu za rad, tehničku podršku i redovne konsultacije sa našim stručnim timom.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.technical",
+        "_type": "reference"
+      },
+      "order": 5,
+      "question": "Kakvu podršku pružate franchise partnerima?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:05Z",
+      "_id": "faq-5d8bd671-2a78-4154-80b9-d25598279bd3",
+      "_rev": "jsO7i4LmwGEnLQvVmoNUOL",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:20:05Z",
+      "answer": "Nudimo programe za decu od 5 do 18 godina: rano učenje, školska podrška, pripreme za prijemne, razvoj veština 21. veka, letnje i zimske kampove.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-b10f85d1-bc5f-420f-9469-70cab0f407dc"
+      },
+      "order": 2,
+      "question": "Koje programe nudimo?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:30Z",
+      "_id": "faq-6",
+      "_rev": "xmE432SUuemXLQhUEYiJtl",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:46Z",
+      "answer": "Apsolutno! Jedno od najvažnijih benefita našeg programa je što deca drastično skraćuju vreme potrebno za učenje i domaće zadatke. Prosečno skraćenje je 50-70%, a neki učenici postižu i bolje rezultate.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.programs",
+        "_type": "reference"
+      },
+      "order": 6,
+      "question": "Da li deca domaće zadatke rade brže nakon kursa?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:14Z",
+      "_id": "faq-6fccd843-098b-4c2e-9801-d28222e56e0c",
+      "_rev": "atDdCAAfWCLcotj1z8G5Sp",
+      "_type": "faq",
+      "_updatedAt": "2025-08-04T21:16:14Z",
+      "answer": "Podrška je kontinuirana i uključuje: mesečne konsultacije, kvartalnu obuku, 24/7 pristup online resursima, pomoć pri zapošljavanju, marketing kampanje i tehničku podršku.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-62a0038f-9f0f-4575-a19b-8b8d00932ce5"
+      },
+      "order": 2,
+      "question": "Kakva je podrška nakon otvaranja?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:19:59Z",
+      "_id": "faq-81f05fde-16ae-4a3a-8baa-c9b0c9fc0c92",
+      "_rev": "adpXclQvR9WWEgUkbtHEX9",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:19:59Z",
+      "answer": "Da, sarađujemo sa nekoliko banaka koje nude povoljne kredite za franšize. Takođe, nudimo mogućnost plaćanja u ratama za određene pakete. Možemo vam pomoći u pripremi biznis plana za banku.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-0ea134cb-88f6-4616-89de-81bf3a3054bd"
+      },
+      "order": 3,
+      "question": "Da li postoje opcije finansiranja?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:16Z",
+      "_id": "faq-972fa3d6-32fd-43ca-b04f-af17005a94e0",
+      "_rev": "jsO7i4LmwGEnLQvVmnBbVP",
+      "_type": "faq",
+      "_updatedAt": "2025-08-04T21:16:16Z",
+      "answer": "Nudimo programe za decu od 5 do 18 godina: rano učenje, školska podrška, pripreme za prijemne, razvoj veština 21. veka, letnje i zimske kampove.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-692f095f-80cb-4551-b768-6b0b008edb91"
+      },
+      "order": 2,
+      "question": "Koje programe nudimo?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:01Z",
+      "_id": "faq-a7897e9d-aa6b-4efe-9d57-df4eb5927b31",
+      "_rev": "jsO7i4LmwGEnLQvVmoNTcj",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:20:01Z",
+      "answer": "Podrška je kontinuirana i uključuje: mesečne konsultacije, kvartalnu obuku, 24/7 pristup online resursima, pomoć pri zapošljavanju, marketing kampanje i tehničku podršku.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-0ce949d5-34d7-408a-a877-998a4bf7eb1b"
+      },
+      "order": 2,
+      "question": "Kakva je podrška nakon otvaranja?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:07Z",
+      "_id": "faq-ab5790e3-1967-417c-ae85-6bef73049303",
+      "_rev": "jsO7i4LmwGEnLQvVmnBajn",
+      "_type": "faq",
+      "_updatedAt": "2025-08-04T21:16:07Z",
+      "answer": "Srećno učenje je vodeća obrazovna franšiza u Srbiji sa preko 50 centara. Nudimo jedinstvenu metodologiju učenja zasnovanu na najnovijim pedagoškim istraživanjima, koja pomaže deci da razviju ljubav prema učenju i postignu odlične rezultate.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-13cb2bc0-c9ac-4c6f-924f-71d551be5ec1"
+      },
+      "order": 1,
+      "question": "Šta je Srećno učenje?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:03Z",
+      "_id": "faq-cbde5b94-6c21-46fe-9579-8822613781aa",
+      "_rev": "jsO7i4LmwGEnLQvVmoNU0X",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:20:03Z",
+      "answer": "Za početak su dovoljna 2-3 zaposlena (uključujući vas). Kako biznis raste, prosečan centar ima 4-6 zaposlenih. Pomažemo vam pri selekciji i obuci osoblja.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-b10f85d1-bc5f-420f-9469-70cab0f407dc"
+      },
+      "order": 1,
+      "question": "Koliko zaposlenih je potrebno?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:10Z",
+      "_id": "faq-d8458672-bb94-43d6-add6-d58e303db918",
+      "_rev": "atDdCAAfWCLcotj1z8G5A7",
+      "_type": "faq",
+      "_updatedAt": "2025-08-04T21:16:10Z",
+      "answer": "Početna investicija kreće se od 15.000€ za Starter paket do 40.000€ za Premium paket. Ovo uključuje licencu, obuku, materijale i početnu podršku. Dodatni troškovi zavise od lokacije i veličine centra.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-b6f9aba7-75b8-4c20-9309-6e8faaee28fd"
+      },
+      "order": 1,
+      "question": "Kolika je početna investicija?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:15Z",
+      "_id": "faq-e0121326-a7b0-4624-84ce-ca38beb1ed7a",
+      "_rev": "LRuNsVxy2neCREmRL1oNB9",
+      "_type": "faq",
+      "_updatedAt": "2025-08-04T21:16:15Z",
+      "answer": "Za početak su dovoljna 2-3 zaposlena (uključujući vas). Kako biznis raste, prosečan centar ima 4-6 zaposlenih. Pomažemo vam pri selekciji i obuci osoblja.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-692f095f-80cb-4551-b768-6b0b008edb91"
+      },
+      "order": 1,
+      "question": "Koliko zaposlenih je potrebno?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:12Z",
+      "_id": "faq-e467af0f-3cf4-4644-8a64-77a14612877e",
+      "_rev": "jsO7i4LmwGEnLQvVmnBbFX",
+      "_type": "faq",
+      "_updatedAt": "2025-08-04T21:16:12Z",
+      "answer": "Da, sarađujemo sa nekoliko banaka koje nude povoljne kredite za franšize. Takođe, nudimo mogućnost plaćanja u ratama za određene pakete. Možemo vam pomoći u pripremi biznis plana za banku.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-b6f9aba7-75b8-4c20-9309-6e8faaee28fd"
+      },
+      "order": 3,
+      "question": "Da li postoje opcije finansiranja?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:19:54Z",
+      "_id": "faq-e56957fa-0f99-4c84-9706-f2ea098c6b38",
+      "_rev": "adpXclQvR9WWEgUkbtHEE2",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:19:54Z",
+      "answer": "Dobijate proverenu metodologiju, prepoznatljiv brend, kompletnu obuku, kontinuiranu podršku, marketing materijale i pristup mreži uspešnih franšizera. Rizik je značajno manji, a uspeh brži.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-1ef2c184-522e-44e6-b85f-a2bba903439f"
+      },
+      "order": 3,
+      "question": "Koje su prednosti franšize u odnosu na samostalni biznis?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:19:52Z",
+      "_id": "faq-f881f0af-29f4-4de5-abcd-65a88360332e",
+      "_rev": "adpXclQvR9WWEgUkbtHDyk",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:19:52Z",
+      "answer": "Svako ko ima preduzetničke ambicije, voli rad sa decom i želi da gradi uspešan biznis u obrazovanju. Nije potrebno prethodno iskustvo u obrazovanju - mi ćemo vas obučiti za sve.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-1ef2c184-522e-44e6-b85f-a2bba903439f"
+      },
+      "order": 2,
+      "question": "Ko može postati franšizer?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:08Z",
+      "_id": "faq-fd10a8ca-25d8-4ee8-ae39-8b250364c921",
+      "_rev": "atDdCAAfWCLcotj1z8G4v9",
+      "_type": "faq",
+      "_updatedAt": "2025-08-04T21:16:08Z",
+      "answer": "Svako ko ima preduzetničke ambicije, voli rad sa decom i želi da gradi uspešan biznis u obrazovanju. Nije potrebno prethodno iskustvo u obrazovanju - mi ćemo vas obučiti za sve.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-13cb2bc0-c9ac-4c6f-924f-71d551be5ec1"
+      },
+      "order": 2,
+      "question": "Ko može postati franšizer?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:09Z",
+      "_id": "faq-fdd378f5-77ac-4b3d-b98c-beeaf2f26da5",
+      "_rev": "atDdCAAfWCLcotj1z8G52d",
+      "_type": "faq",
+      "_updatedAt": "2025-08-04T21:16:09Z",
+      "answer": "Dobijate proverenu metodologiju, prepoznatljiv brend, kompletnu obuku, kontinuiranu podršku, marketing materijale i pristup mreži uspešnih franšizera. Rizik je značajno manji, a uspeh brži.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory-13cb2bc0-c9ac-4c6f-924f-71d551be5ec1"
+      },
+      "order": 3,
+      "question": "Koje su prednosti franšize u odnosu na samostalni biznis?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-07T19:42:53Z",
+      "_id": "faq.da-li-mogu-zadrzati-svoj-posao-dok-pokrecem-fransizu",
+      "_rev": "oWtMwMRBoarauLfrKjSB3S",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:42:53Z",
+      "answer": "Da, mnogi naši partneri počinju franšizu kao dodatni posao. Kada biznis poraste, prelaze na puno radno vreme ili zapošljavaju menadžera.",
+      "backReferences": [
+        {
+          "_id": "homePage",
+          "_type": "homePage"
+        }
+      ],
+      "category": {
+        "_ref": "faqCategory.opsta-pitanja",
+        "_type": "reference"
+      },
+      "order": 3,
+      "question": "Da li mogu zadržati svoj posao dok pokrećem franšizu?",
+      "references": [
+        {
+          "_id": "homePage",
+          "_type": "homePage",
+          "name": null,
+          "title": null
+        }
+      ]
+    },
+    {
+      "_createdAt": "2025-08-07T19:42:54Z",
+      "_id": "faq.kakva-je-konkurencija-na-trzistu",
+      "_rev": "YBiWwTMhT8IS37yZZlo3iq",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:42:54Z",
+      "answer": "Srećno učenje ima jedinstvenu metodologiju i jak brend. Garantujemo ekskluzivnost na teritoriji, tako da nećete imati direktnu konkurenciju.",
+      "backReferences": [
+        {
+          "_id": "homePage",
+          "_type": "homePage"
+        }
+      ],
+      "category": {
+        "_ref": "faqCategory.opsta-pitanja",
+        "_type": "reference"
+      },
+      "order": 4,
+      "question": "Kakva je konkurencija na tržištu?",
+      "references": [
+        {
+          "_id": "homePage",
+          "_type": "homePage",
+          "name": null,
+          "title": null
+        }
+      ]
+    },
+    {
+      "_createdAt": "2025-08-07T19:42:52Z",
+      "_id": "faq.koliko-brzo-mogu-ocekivati-povrat-investicije",
+      "_rev": "oWtMwMRBoarauLfrKjSAvN",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:42:52Z",
+      "answer": "Prosečan povrat investicije je 12-18 meseci, ali zavisi od lokacije, zalaganja i lokalnog tržišta. Neki partneri ostvare profitabilnost i za 6 meseci.",
+      "backReferences": [
+        {
+          "_id": "homePage",
+          "_type": "homePage"
+        }
+      ],
+      "category": {
+        "_ref": "faqCategory.opsta-pitanja",
+        "_type": "reference"
+      },
+      "order": 2,
+      "question": "Koliko brzo mogu očekivati povrat investicije?",
+      "references": [
+        {
+          "_id": "homePage",
+          "_type": "homePage",
+          "name": null,
+          "title": null
+        }
+      ]
+    },
+    {
+      "_createdAt": "2025-08-07T19:42:51Z",
+      "_id": "faq.koliko-je-potrebno-iskustva-u-obrazovanju",
+      "_rev": "YBiWwTMhT8IS37yZZlo3Yg",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:42:51Z",
+      "answer": "Nije neophodno imati iskustvo u obrazovanju. Naša obuka pokriva sve aspekte rada. Važnije je da volite rad sa decom i imate preduzetničke ambicije.",
+      "backReferences": [
+        {
+          "_id": "homePage",
+          "_type": "homePage"
+        }
+      ],
+      "category": {
+        "_ref": "faqCategory.opsta-pitanja",
+        "_type": "reference"
+      },
+      "order": 1,
+      "question": "Koliko je potrebno iskustva u obrazovanju?",
+      "references": [
+        {
+          "_id": "homePage",
+          "_type": "homePage",
+          "name": null,
+          "title": null
+        }
+      ]
+    },
+    {
+      "_createdAt": "2025-08-07T19:42:55Z",
+      "_id": "faq.sta-ako-trebam-pomoc-nakon-otvaranja",
+      "_rev": "YBiWwTMhT8IS37yZZlo3x4",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:42:55Z",
+      "answer": "Podrška nikad ne prestaje. Imate pristup našem timu, redovne obuke, online resurse i mrežu drugih franšizera za razmenu iskustava.",
+      "backReferences": [
+        {
+          "_id": "homePage",
+          "_type": "homePage"
+        }
+      ],
+      "category": {
+        "_ref": "faqCategory.opsta-pitanja",
+        "_type": "reference"
+      },
+      "order": 5,
+      "question": "Šta ako trebam pomoć nakon otvaranja?",
+      "references": [
+        {
+          "_id": "homePage",
+          "_type": "homePage",
+          "name": null,
+          "title": null
+        }
+      ]
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:50Z",
+      "_id": "hWo33GCGxd3rDeD5Tiy8qn",
+      "_rev": "YBiWwTMhT8IS37yZZlowWm",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:47Z",
+      "answer": "Da, nudimo besplatan probni čas kako bi vaše dete moglo da se upozna sa našim metodama i instruktorima pre upisa.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.general",
+        "_type": "reference"
+      },
+      "order": 3,
+      "question": "Da li postoji probni čas?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:51Z",
+      "_id": "hWo33GCGxd3rDeD5Tiy99l",
+      "_rev": "tqJG5yH49IKSFNIKiO1XEB",
+      "_system": {
+        "base": {
+          "id": "hWo33GCGxd3rDeD5Tiy99l",
+          "rev": "hWo33GCGxd3rDeD5Tiy951"
+        }
+      },
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:48Z",
+      "answer": "Plaćanje se vrši mesečno, unapred, putem uplatnice ili bankovnog transfera. Nudimo porodične popuste za upis više dece. gde si gde si",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.general",
+        "_type": "reference"
+      },
+      "order": 4,
+      "question": "Kako se vrši plaćanj ćao ćao",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:53Z",
+      "_id": "hWo33GCGxd3rDeD5Tiy9Sj",
+      "_rev": "xmE432SUuemXLQhUEYiK0v",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:49Z",
+      "answer": "Da, nudimo porodične popuste od 10% za drugo dete i 15% za treće dete iz iste porodice.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.general",
+        "_type": "reference"
+      },
+      "order": 6,
+      "question": "Da li postoje popusti?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:48Z",
+      "_id": "hZm6tMI3obk6ZBXKfA9sBt",
+      "_rev": "tqJG5yH49IKSFNIKiO1XJV",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:50Z",
+      "answer": "Program brzočitanja traje 6 meseci sa redovnim časovima 2 puta nedeljno. Nakon završetka osnovnog programa, učenici mogu nastaviti sa naprednim tehnikama.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.programs",
+        "_type": "reference"
+      },
+      "order": 1,
+      "question": "Koliko dugo traje program brzočitanja?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-03T01:47:49Z",
+      "_id": "hZm6tMI3obk6ZBXKfA9sKt",
+      "_rev": "oWtMwMRBoarauLfrKjTCJG",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:51Z",
+      "answer": "Preporučujemo da deca krenu sa mentalnom aritmetikom od 5. godine, kada već poznaju brojeve i osnovne matematičke operacije.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.general",
+        "_type": "reference"
+      },
+      "order": 2,
+      "question": "Od koje godine dete može da krene sa mentalnom aritmetikom?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-03T04:23:02Z",
+      "_id": "hZm6tMI3obk6ZBXKfAVrRt",
+      "_rev": "tqJG5yH49IKSFNIKiO1XN3",
+      "_type": "faq",
+      "_updatedAt": "2025-08-07T19:50:52Z",
+      "answer": "Srećno učenje je inovativna metodologija koja kombinuje brzo čitanje, mentalnu aritmetiku i emocionalno učenje kako bi deca naučila da uče srcem.",
+      "backReferences": [],
+      "category": {
+        "_ref": "faqCategory.programs",
+        "_type": "reference"
+      },
+      "question": "Šta je Srećno učenje metodologija?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:10Z",
+      "_id": "jsO7i4LmwGEnLQvVmoJuSD",
+      "_rev": "jsO7i4LmwGEnLQvVmoJuOF",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:10Z",
+      "answer": "Centri mogu uspešno da rade u gradovima sa 15,000+ stanovnika. Manje gradove možemo pokrivati kroz mobilne programe ili regionalne centre.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJtEp",
+        "_type": "reference"
+      },
+      "featured": false,
+      "order": 4,
+      "question": "Koja je minimalna veličina grada za franšizu?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:12Z",
+      "_id": "jsO7i4LmwGEnLQvVmoJvTh",
+      "_rev": "jsO7i4LmwGEnLQvVmoJvPj",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:12Z",
+      "answer": "Zarada zavisi od veličine grada i broja đaka. Prosečna mesečna zarada kreće se od 1,500€ (mali gradovi) do 5,000€+ (veliki gradovi). Naši najuspešniji partneri zarađuju i preko 8,000€ mesečno.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJtYf",
+        "_type": "reference"
+      },
+      "featured": true,
+      "order": 6,
+      "question": "Kolika je mesečna zarada franšizera?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:14Z",
+      "_id": "jsO7i4LmwGEnLQvVmoJvnX",
+      "_rev": "jsO7i4LmwGEnLQvVmoJvjZ",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:14Z",
+      "answer": "Iako ne možemo garantovati profit (zavisi od lokalnih faktora), naši podaci pokazuju da 95% franšizera ostvaruje profit već u prvoj godini rada uz našu podršku.",
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoJtYf",
+        "_type": "reference"
+      },
+      "featured": false,
+      "order": 8,
+      "question": "Da li postoji garancija profitabilnosti?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:15Z",
+      "_id": "jsO7i4LmwGEnLQvVmoJwFJ",
+      "_rev": "jsO7i4LmwGEnLQvVmoJwBL",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:15Z",
+      "answer": "Intenzivna 2-nedeljina obuka pokriva metodologiju, rad sa decom, biznis aspekte, marketing i upravljanje centrom. Obuka se odvija u Beogradu sa praktičnim radom u postojećem centru.",
+      "backReferences": [],
+      "category": {
+        "_ref": "adpXclQvR9WWEgUkbtDqyC",
+        "_type": "reference"
+      },
+      "featured": true,
+      "order": 9,
+      "question": "Kako izgleda početna obuka?",
+      "references": []
+    },
+    {
+      "_createdAt": "2025-08-05T03:10:16Z",
+      "_id": "jsO7i4LmwGEnLQvVmoJwRD",
+      "_rev": "jsO7i4LmwGEnLQvVmoJwNF",
+      "_type": "faq",
+      "_updatedAt": "2025-08-05T03:10:16Z",
+      "answer": "Kontinuirano dobijate: nove marketing materijale, ažuriranja metodologije, mesečne webinare, direktnu podršku konzultanta, i pristup zajednici franšizera za razmenu iskustava.",
+      "backReferences": [],
+      "category": {
+        "_ref": "adpXclQvR9WWEgUkbtDqyC",
+        "_type": "reference"
+      },
+      "featured": true,
+      "order": 10,
+      "question": "Kakva je kontinuirana podrška?",
+      "references": []
+    }
+  ]
+}

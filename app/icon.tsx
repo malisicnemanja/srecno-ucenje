@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og'
 
-export const runtime = 'edge'
+// Removed edge runtime to fix build issues
+// export const runtime = 'edge'
 
 export const size = {
   width: 32,

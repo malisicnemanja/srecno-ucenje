@@ -35,6 +35,11 @@ import schoolsPage from './documents/schoolsPage'
 import enhancedFranchiseField from './documents/enhancedFranchiseField'
 import migrationStrategy from './documents/migrationStrategy'
 
+// Centers-Locations-Educators System
+import location from './documents/location'
+import center from './documents/center'
+import educator from './documents/educator'
+
 // Modern CMS Architecture (core admin functionality)
 import modernPage from './documents/modernPage'
 import modernFranchisePackage from './documents/modernFranchisePackage'
@@ -93,6 +98,12 @@ export const schemaTypes = [
   homePage,
   navigation,
   notificationBar,
+  
+  // === LOCATIONS AND CENTERS SYSTEM ===
+  // New comprehensive system
+  location,
+  center,
+  educator,
   
   // === FRANCHISE MANAGEMENT (Primary business focus) ===
   // Modern franchise architecture
@@ -210,6 +221,7 @@ export const schemaConfig = {
   // Core categories for admin organization
   categories: {
     core: ['siteSettings', 'homePage', 'navigation', 'notificationBar'],
+    locations: ['location', 'center', 'educator'],
     franchise: ['franchisePackage', 'school', 'franchiseApplication', 'calculatorSettings'],
     content: ['blogPost', 'program', 'resource', 'book'],
     people: ['author', 'teamMember', 'testimonial'],
@@ -222,8 +234,11 @@ export const schemaConfig = {
     'franchiseApplicationSubmission', // Most important - incoming applications
     'homePage', // Main website entry
     'siteSettings', // Core configuration
+    'location', // Cities/Locations
+    'center', // Educational centers
+    'educator', // Educators
     'franchisePackage', // Business offerings
-    'school', // Locations
+    'school', // Legacy locations
     'blogPost', // Content marketing
     'testimonial', // Social proof
   ],

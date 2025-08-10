@@ -1,0 +1,27 @@
+{
+  "totalProcessed": 38,
+  "totalErrors": 0,
+  "results": {
+    "calculatorResults": {
+      "successful": 13,
+      "failed": 0,
+      "errors": []
+    },
+    "authors": {
+      "successful": 2,
+      "failed": 0,
+      "errors": []
+    },
+    "faqs": {
+      "successful": 13,
+      "failed": 0,
+      "errors": []
+    },
+    "locations": {
+      "successful": 10,
+      "failed": 0,
+      "total": 10
+    }
+  },
+  "completedAt": "2025-08-08T06:17:07.995Z"
+}

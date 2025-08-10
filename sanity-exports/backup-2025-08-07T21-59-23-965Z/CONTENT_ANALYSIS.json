@@ -1,0 +1,4135 @@
+{
+  "exportInfo": {
+    "timestamp": "2025-08-07T21:59:27.682Z",
+    "totalDocuments": 245,
+    "totalTypes": 28
+  },
+  "contentTypes": [
+    {
+      "documentType": "aboutAuthor",
+      "count": 4,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T11:00:58Z",
+        "_id": "EIn1TO6kzkBkpMuRkFy78E",
+        "_rev": "EIn1TO6kzkBkpMuRkFyync",
+        "_type": "aboutAuthor",
+        "_updatedAt": "2025-08-03T11:37:58Z",
+        "achievements": [
+          {
+            "color": "#3498DB",
+            "description": "Međunarodno priznanje za inovativnost u obrazovanju i doprinos metodologiji učenja",
+            "icon": "globe",
+            "title": "Global Teacher Prize",
+            "year": "2024"
+          },
+          {
+            "color": "#E74C3C",
+            "description": "Najviše priznanje u srpskom obrazovanju za doprinos pedagoškoj nauci",
+            "icon": "medal",
+            "title": "Svetosavska nagrada",
+            "year": "2023"
+          },
+          {
+            "color": "#F39C12",
+            "description": "Službena podrška za razvoj Čarobnog sela i metodologije srećnog učenja",
+            "icon": "partnership",
+            "title": "UNICEF partner",
+            "year": "2012"
+          },
+          "... truncated"
+        ],
+        "featuredBooks": [
+          {
+            "_ref": "EIn1TO6kzkBkpMuRkFybRO",
+            "_type": "reference"
+          },
+          {
+            "_ref": "EIn1TO6kzkBkpMuRkFybbz",
+            "_type": "reference"
+          },
+          {
+            "_ref": "hWo33GCGxd3rDeD5Tjrudh",
+            "_type": "reference"
+          },
+          "... truncated"
+        ],
+        "featuredQuote": {
+          "context": "O filozofiji Čarobnog sela",
+          "text": "Moji likovi nose vrline koje želim da deca prepoznaju. Cilj je razvoj srećnih i odgovornih pojedinaca koji će svoje znanje primenjivati za dobrobit društva."
+        },
+        "heroBackground": {
+          "_type": "image",
+          "alt": "Ilustracija autorke sa knjigama",
+          "asset": {
+            "_ref": "image-92ea11e4eda3157bde0a509939e599ec17448405-1024x1536-webp",
+            "_type": "reference"
+          }
+        },
+        "heroImage": {
+          "_type": "image",
+          "alt": "Profesionalna fotografija autorke",
+          "asset": {
+            "_ref": "image-e721d50573fbc9dc241755e261733e5a8b129d76-2826x1508-webp",
+            "_type": "reference"
+          }
+        },
+        "heroSubtitle": "Učiteljica, spisateljica i kreatorka metodologije Srećnog učenja",
+        "heroTitle": "Željana Radojičić Lukić",
+        "sections": [
+          {
+            "backgroundColor": "#FFF9E6",
+            "content": [
+              {
+                "_type": "block",
+                "children": [
+                  {
+                    "_type": "span",
+                    "text": "Rođena 1969. godine u Banovićima, Željana je odrasla okružena prirodom Bosne i Hercegovine. Kao devojčica koja je rano krenula u školu, nije znala ni slova ni brojeve, ali je znala prepoznati vrste ptica po glasu, razlikovati drveće i poznavati lekovite biljke."
+                  }
+                ],
+                "style": "normal"
+              },
+              {
+                "_type": "block",
+                "children": [
+                  {
+                    "_type": "span",
+                    "text": "Biblioteka je postala njeno utočište - kroz knjige je putovala svetom, upoznavala druge kulture i učila da prepoznaje vrline kod sebe i drugih. Odrastanje u višekulturnoj sredini naučilo ju je da poštuje različitosti, što je kasnije postalo temelj njenog obrazovnog pristupa."
+                  }
+                ],
+                "style": "normal"
+              },
+              {
+                "_type": "block",
+                "children": [
+                  {
+                    "_type": "span",
+                    "text": "Prve nastavničke korake napravila je krajem devedesetih u malim selima na padinama planine Ozren. Rat ju je primorao da napusti Bosnu i preseli se u Banju Vrujci, gde i danas živi, radi i stvara."
+                  }
+                ],
+                "style": "normal"
+              }
+            ],
+            "decorativeElement": "floating-books",
+            "imagePosition": "right",
+            "title": "Početak puta"
+          },
+          {
+            "backgroundColor": "#E3F2FD",
+            "content": [
+              {
+                "_type": "block",
+                "children": [
+                  {
+                    "_type": "span",
+                    "text": "Nakon preseljenja u Srbiju, Željana nastavlja rad kao seoska učiteljica, gde razvija inovativne metode rada sa decom. Njen talenat i posvećenost dovode je do pozicije pomoćnice ministra prosvete (2015-2016)."
+                  }
+                ],
+                "style": "normal"
+              },
+              {
+                "_type": "block",
+                "children": [
+                  {
+                    "_type": "span",
+                    "text": "Ipak, na vrhuncu karijere u državnoj službi, donosi hrabru odluku - odriče se sigurne pozicije kako bi se u potpunosti posvetila razvoju pedagogije srećnog učenja i pisanju knjiga za decu. \"Shvatila sam da mogu više doprineti direktnim radom sa decom nego kroz administrativne pozicije\", kaže Željana."
+                  }
+                ],
+                "style": "normal"
+              }
+            ],
+            "decorativeElement": "growth-plant",
+            "imagePosition": "left",
+            "title": "Od seoske učiteljice do vizionara obrazovanja"
+          },
+          {
+            "backgroundColor": "#F3E5F5",
+            "content": [
+              {
+                "_type": "block",
+                "children": [
+                  {
+                    "_type": "span",
+                    "text": "Godine 2012, uz podršku UNICEF-a, Željana pokreće projekat \"Čarobno selo\" - obrazovni univerzum u kojem svako godišnje doba ima svoju kuću, vilu i priče koje spajaju bajku sa naukom."
+                  }
+                ],
+                "style": "normal"
+              },
+              {
+                "_type": "block",
+                "children": [
+                  {
+                    "_type": "span",
+                    "text": "Koncept srećnog učenja zasniva se na tri stuba: ljubavi prema bajci, značaju iskustvenog učenja i primeni znanja u svakodnevnom životu. Kroz priče o vilama i deci, Željana integriše nauku, ekologiju, jezik, tradiciju i kulturu, razvijajući kod dece vrline poput zahvalnosti, hrabrosti i empatije."
+                  }
+                ],
+                "style": "normal"
+              },
+              {
+                "_type": "block",
+                "children": [
+                  {
+                    "_type": "span",
+                    "text": "\"Moji likovi nose vrline koje želim da deca prepoznaju. Cilj je razvoj srećnih i odgovornih pojedinaca koji će svoje znanje primenjivati za dobrobit društva\", objašnjava svoju filozofiju."
+                  }
+                ],
+                "style": "normal"
+              }
+            ],
+            "decorativeElement": "magic-sparkles",
+            "imagePosition": "right",
+            "title": "Rođenje Čarobnog sela"
+          },
+          "... truncated"
+        ],
+        "seo": {
+          "keywords": [
+            "Željana Radojičić Lukić",
+            "autorka",
+            "učiteljica",
+            "Čarobno selo",
+            "srećno učenje",
+            "pedagogija",
+            "Global Teacher Prize",
+            "Svetosavska nagrada"
+          ],
+          "metaDescription": "Upoznajte Željanu Radojičić Lukić, učiteljicu i spisateljicu koja je stvorila Čarobno selo i metodologiju srećnog učenja. Dobitnica Global Teacher Prize i Svetosavske nagrade.",
+          "metaTitle": "O autorki - Željana Radojičić Lukić | Srećno učenje"
+        },
+        "timeline": [
+          {
+            "description": "Početak puta u Bosni i Hercegovini, odrastanje okruženo prirodom",
+            "featured": false,
+            "icon": "birth",
+            "title": "Rođenje u Banovićima",
+            "year": "1969"
+          },
+          {
+            "description": "Rad u selima na planini Ozren, razvoj prve ideje o srećnom učenju",
+            "featured": false,
+            "icon": "teaching",
+            "title": "Prvi nastavnički koraci",
+            "year": "1990-te"
+          },
+          {
+            "description": "Početak projekta uz podršku UNICEF-a, rođenje metodologije",
+            "featured": true,
+            "icon": "village",
+            "title": "Osnivanje Čarobnog sela",
+            "year": "2012"
+          },
+          "... truncated"
+        ]
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "achievements",
+        "achievements.color",
+        "achievements.description",
+        "achievements.icon",
+        "achievements.title",
+        "achievements.year",
+        "backReferences",
+        "featuredBooks",
+        "featuredBooks._ref",
+        "featuredBooks._type",
+        "featuredQuote",
+        "featuredQuote.context",
+        "featuredQuote.text",
+        "heroBackground",
+        "heroBackground._type",
+        "heroBackground.alt",
+        "heroBackground.asset",
+        "heroBackground.asset._ref",
+        "heroBackground.asset._type",
+        "heroImage",
+        "heroImage._type",
+        "heroImage.alt",
+        "heroImage.asset",
+        "heroImage.asset._ref",
+        "heroImage.asset._type",
+        "heroSubtitle",
+        "heroTitle",
+        "references",
+        "sections",
+        "sections.backgroundColor",
+        "sections.content",
+        "sections.content._type",
+        "sections.content.children",
+        "sections.content.children._type",
+        "sections.content.children.text",
+        "sections.content.style",
+        "sections.decorativeElement",
+        "sections.imagePosition",
+        "sections.title",
+        "seo",
+        "seo.keywords",
+        "seo.metaDescription",
+        "seo.metaTitle",
+        "timeline",
+        "timeline.description",
+        "timeline.featured",
+        "timeline.icon",
+        "timeline.title",
+        "timeline.year"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "aboutAuthor",
+          "count": 4
+        },
+        {
+          "field": "featuredBooks",
+          "targetType": "reference",
+          "count": 8
+        },
+        {
+          "field": "heroBackground",
+          "targetType": "image",
+          "count": 2
+        },
+        {
+          "field": "heroBackground.asset",
+          "targetType": "reference",
+          "count": 2
+        },
+        {
+          "field": "heroImage",
+          "targetType": "image",
+          "count": 2
+        },
+        {
+          "field": "heroImage.asset",
+          "targetType": "reference",
+          "count": 2
+        },
+        {
+          "field": "sections.content",
+          "targetType": "block",
+          "count": 34
+        },
+        {
+          "field": "sections.content.children",
+          "targetType": "span",
+          "count": 31
+        },
+        {
+          "field": "heroImage.crop",
+          "targetType": "sanity.imageCrop",
+          "count": 1
+        },
+        {
+          "field": "heroImage.hotspot",
+          "targetType": "sanity.imageHotspot",
+          "count": 1
+        }
+      ],
+      "backReferences": [],
+      "assets": [
+        {
+          "field": "heroBackground",
+          "count": 2
+        },
+        {
+          "field": "heroImage",
+          "count": 2
+        }
+      ],
+      "complexity": "CRITICAL",
+      "migrationRisk": "HIGH",
+      "recommendations": [
+        "⚠️ Complex structure - migrate in small batches",
+        "⚠️ Validate all nested objects after migration",
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "author",
+      "count": 4,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T01:48:00Z",
+        "_id": "EIn1TO6kzkBkpMuRkFFdgw",
+        "_rev": "EIn1TO6kzkBkpMuRkFFddP",
+        "_type": "author",
+        "_updatedAt": "2025-08-03T01:48:00Z",
+        "bio": "Doktor pedagoških nauka sa 15 godina iskustva u radu sa decom. Autor nekoliko knjiga o modernim metodama učenja.",
+        "name": "Dr. Milica Jovanović",
+        "slug": {
+          "current": "dr-milica-jovanovic"
+        },
+        "title": "Stručnjak za brzočitanje"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "backReferences._id",
+        "backReferences._type",
+        "bio",
+        "name",
+        "references",
+        "references._id",
+        "references._type",
+        "references.name",
+        "references.title",
+        "slug",
+        "slug.current",
+        "title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "author",
+          "count": 4
+        },
+        {
+          "field": "backReferences",
+          "targetType": "blogPost",
+          "count": 17
+        },
+        {
+          "field": "references",
+          "targetType": "blogPost",
+          "count": 17
+        }
+      ],
+      "backReferences": [
+        {
+          "sourceType": "blogPost",
+          "count": 8
+        }
+      ],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "blogCategory",
+      "count": 15,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T01:47:54Z",
+        "_id": "EIn1TO6kzkBkpMuRkFFcmQ",
+        "_rev": "EIn1TO6kzkBkpMuRkFFcit",
+        "_type": "blogCategory",
+        "_updatedAt": "2025-08-03T01:47:54Z",
+        "slug": {
+          "current": "brzocitanje"
+        },
+        "title": "Brzočitanje"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "backReferences._id",
+        "backReferences._type",
+        "references",
+        "references._id",
+        "references._type",
+        "references.name",
+        "references.title",
+        "slug",
+        "slug.current",
+        "title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "blogCategory",
+          "count": 15
+        },
+        {
+          "field": "backReferences",
+          "targetType": "blogPost",
+          "count": 17
+        },
+        {
+          "field": "references",
+          "targetType": "blogPost",
+          "count": 17
+        },
+        {
+          "field": "slug",
+          "targetType": "slug",
+          "count": 1
+        }
+      ],
+      "backReferences": [
+        {
+          "sourceType": "blogPost",
+          "count": 1
+        }
+      ],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": [
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "blogPost",
+      "count": 17,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T01:48:03Z",
+        "_id": "EIn1TO6kzkBkpMuRkFFe5f",
+        "_rev": "RSzTvGgTwtY6EErbXk1MXi",
+        "_type": "blogPost",
+        "_updatedAt": "2025-08-05T20:18:01Z",
+        "author": {
+          "_ref": "EIn1TO6kzkBkpMuRkFFdgw"
+        },
+        "category": {
+          "_ref": "EIn1TO6kzkBkpMuRkFFcmQ"
+        },
+        "content": [
+          {
+            "_type": "block",
+            "children": [
+              {
+                "_type": "span",
+                "text": "Brzočitanje nije samo o brzini - to je veština koja pomaže deci da bolje razumeju ono što čitaju."
+              }
+            ],
+            "style": "normal"
+          },
+          {
+            "_type": "block",
+            "children": [
+              {
+                "_type": "span",
+                "text": "1. Tehnike skeniranja"
+              }
+            ],
+            "style": "h2"
+          },
+          {
+            "_type": "block",
+            "children": [
+              {
+                "_type": "span",
+                "text": "Naučite dete da brzo skenira tekst kako bi identifikovalo ključne informacije."
+              }
+            ],
+            "style": "normal"
+          }
+        ],
+        "excerpt": "Otkrijte jednostavne tehnike koje će pomoći vašem detetu da čita brže i efikasnije.",
+        "featured": true,
+        "publishedAt": "2024-02-01T00:00:00.000Z",
+        "publishedDate": "2025-08-03T01:48:03Z",
+        "slug": {
+          "current": "5-tehnika-brzocitanja"
+        },
+        "title": "5 tehnika brzočitanja koje svako dete može da nauči"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "author",
+        "author._ref",
+        "backReferences",
+        "category",
+        "category._ref",
+        "content",
+        "content._type",
+        "content.children",
+        "content.children._type",
+        "content.children.text",
+        "content.style",
+        "excerpt",
+        "featured",
+        "publishedAt",
+        "publishedDate",
+        "references",
+        "slug",
+        "slug.current",
+        "title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "blogPost",
+          "count": 17
+        },
+        {
+          "field": "author",
+          "targetType": "unknown",
+          "count": 12
+        },
+        {
+          "field": "author",
+          "targetType": "reference",
+          "count": 5
+        },
+        {
+          "field": "category",
+          "targetType": "unknown",
+          "count": 12
+        },
+        {
+          "field": "category",
+          "targetType": "reference",
+          "count": 5
+        },
+        {
+          "field": "content",
+          "targetType": "block",
+          "count": 27
+        },
+        {
+          "field": "content.children",
+          "targetType": "span",
+          "count": 27
+        },
+        {
+          "field": "slug",
+          "targetType": "slug",
+          "count": 5
+        },
+        {
+          "field": "body",
+          "targetType": "block",
+          "count": 6
+        },
+        {
+          "field": "body.children",
+          "targetType": "span",
+          "count": 6
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "CRITICAL",
+      "migrationRisk": "HIGH",
+      "recommendations": [
+        "⚠️ Complex structure - migrate in small batches",
+        "⚠️ Validate all nested objects after migration",
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "book",
+      "count": 9,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T11:23:04Z",
+        "_id": "EIn1TO6kzkBkpMuRkFybRO",
+        "_rev": "RSzTvGgTwtY6EErbXk1PYt",
+        "_type": "book",
+        "_updatedAt": "2025-08-05T20:18:21Z",
+        "ageGroup": "6-10 godina",
+        "colorTheme": "yellow",
+        "coverImage": {
+          "_type": "image",
+          "alt": "Cover slika knjige Zimski mir",
+          "asset": {
+            "_ref": "image-1b4efadb340eee2e9b711b589b7c56993ca26572-4724x3248-webp",
+            "_type": "reference"
+          }
+        },
+        "description": "Zimski mir nastavlja priču o Luki koji sada upoznaje vilu Božicu i tajne zime. Kroz snežne avanture, deca uče o strpljenju, unutrašnjem miru i važnosti tišine za učenje.",
+        "educationalTopics": [
+          "Razvoj strpljenja",
+          "Koncentracija i fokus",
+          "Razumevanje tišine",
+          "... truncated"
+        ],
+        "excerpt": "Druga knjiga serijala vodi nas kroz zimske avanture Luke i vile Božice, učeći o strpljenju, miru i lepoti zimskih dana.",
+        "features": [
+          "Zimske ilustracije pune čarolije",
+          "Zadaci za razvoj koncentracije",
+          "Priče za čitanje pred spavanje",
+          "... truncated"
+        ],
+        "illustrationGallery": [
+          {
+            "_type": "image",
+            "alt": "Zimski mir - ilustracija",
+            "asset": {
+              "_ref": "image-db5ac4f0773013ae720ec59d35028bc2862b6d8f-1189x1479-webp",
+              "_type": "reference"
+            }
+          },
+          {
+            "_type": "image",
+            "alt": "Zimski mir - ilustracija",
+            "asset": {
+              "_ref": "image-a10f1e0c4a343a6fef1b425e6e65d41a6f7a94e5-400x624-webp",
+              "_type": "reference"
+            }
+          }
+        ],
+        "isbn": "978-86-123456-1-8",
+        "order": 1,
+        "pageCount": 52,
+        "price": 890,
+        "publicationYear": 2022,
+        "purchaseLinks": [
+          {
+            "type": "vulkan",
+            "url": "https://www.knjizare-vulkan.rs/zimski-mir"
+          },
+          {
+            "type": "delfi",
+            "url": "https://www.delfi.rs/zimski-mir"
+          }
+        ],
+        "seasonalTheme": "winter",
+        "seo": {
+          "keywords": [
+            "zimski mir",
+            "luka godišnjih doba",
+            "zimske priče",
+            "strpljenje",
+            "koncentracija"
+          ],
+          "metaDescription": "Druga knjiga serijala o zimskim avanturama koje uče strpljenju i koncentraciji kroz čarobne priče.",
+          "metaTitle": "Zimski mir - Luka godišnjih doba | Srećno učenje"
+        },
+        "slug": {
+          "_type": "slug",
+          "current": "zimski-mir"
+        },
+        "subtitle": "Luka godišnjih doba - Zima",
+        "title": "Zimski mir",
+        "year": 2023
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "ageGroup",
+        "backReferences",
+        "backReferences._id",
+        "backReferences._type",
+        "colorTheme",
+        "coverImage",
+        "coverImage._type",
+        "coverImage.alt",
+        "coverImage.asset",
+        "coverImage.asset._ref",
+        "coverImage.asset._type",
+        "description",
+        "educationalTopics",
+        "excerpt",
+        "features",
+        "illustrationGallery",
+        "illustrationGallery._type",
+        "illustrationGallery.alt",
+        "illustrationGallery.asset",
+        "illustrationGallery.asset._ref",
+        "illustrationGallery.asset._type",
+        "isbn",
+        "order",
+        "pageCount",
+        "price",
+        "publicationYear",
+        "purchaseLinks",
+        "purchaseLinks.type",
+        "purchaseLinks.url",
+        "references",
+        "references._id",
+        "references._type",
+        "references.name",
+        "references.title",
+        "seasonalTheme",
+        "seo",
+        "seo.keywords",
+        "seo.metaDescription",
+        "seo.metaTitle",
+        "slug",
+        "slug._type",
+        "slug.current",
+        "subtitle",
+        "title",
+        "year"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "book",
+          "count": 9
+        },
+        {
+          "field": "backReferences",
+          "targetType": "aboutAuthor",
+          "count": 8
+        },
+        {
+          "field": "coverImage",
+          "targetType": "image",
+          "count": 5
+        },
+        {
+          "field": "coverImage.asset",
+          "targetType": "reference",
+          "count": 5
+        },
+        {
+          "field": "illustrationGallery",
+          "targetType": "image",
+          "count": 12
+        },
+        {
+          "field": "illustrationGallery.asset",
+          "targetType": "reference",
+          "count": 12
+        },
+        {
+          "field": "references",
+          "targetType": "aboutAuthor",
+          "count": 8
+        },
+        {
+          "field": "slug",
+          "targetType": "slug",
+          "count": 9
+        },
+        {
+          "field": "aboutBook",
+          "targetType": "block",
+          "count": 6
+        },
+        {
+          "field": "aboutBook.children",
+          "targetType": "span",
+          "count": 2
+        }
+      ],
+      "backReferences": [
+        {
+          "sourceType": "aboutAuthor",
+          "count": 2
+        }
+      ],
+      "assets": [
+        {
+          "field": "coverImage",
+          "count": 5
+        },
+        {
+          "field": "illustrationGallery",
+          "count": 12
+        }
+      ],
+      "complexity": "CRITICAL",
+      "migrationRisk": "HIGH",
+      "recommendations": [
+        "⚠️ Complex structure - migrate in small batches",
+        "⚠️ Validate all nested objects after migration",
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "booking",
+      "count": 5,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T03:18:19Z",
+        "_id": "EIn1TO6kzkBkpMuRkFfLQK",
+        "_rev": "EIn1TO6kzkBkpMuRkFfLMn",
+        "_type": "booking",
+        "_updatedAt": "2025-08-03T03:18:19Z",
+        "budget": "",
+        "city": "Beograd",
+        "consultationType": "location",
+        "email": "nemanja.malisic@intelisale.com",
+        "experience": "",
+        "leadScore": 50,
+        "message": "",
+        "name": "Nemanja Malisic",
+        "phone": "063683047",
+        "preferredDate": "2025-08-07",
+        "preferredTime": "12:00"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "budget",
+        "city",
+        "consultationType",
+        "email",
+        "experience",
+        "leadScore",
+        "message",
+        "name",
+        "phone",
+        "preferredDate",
+        "preferredTime",
+        "references"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "booking",
+          "count": 5
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "LOW",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "bookingPage",
+      "count": 1,
+      "sampleDocument": {
+        "_createdAt": "2025-08-05T21:34:37Z",
+        "_id": "booking-page",
+        "_rev": "rWY7A01dUL9wO4NRChMkqC",
+        "_type": "bookingPage",
+        "_updatedAt": "2025-08-05T21:34:37Z",
+        "calendly": {
+          "hideGdprBanner": false,
+          "prefillEmail": true,
+          "prefillName": true,
+          "url": "https://calendly.com/srecno-ucenje/konsultacija"
+        },
+        "faqSection": {
+          "ctaLink": "/faq",
+          "ctaText": "Pogledajte sva pitanja",
+          "subtitle": "Pronađite odgovore na najčešća pitanja",
+          "title": "Imate pitanja?"
+        },
+        "hero": {
+          "badge": "100% besplatno i bez obaveza",
+          "benefits": [
+            {
+              "description": "Individualni razgovor",
+              "icon": "✨",
+              "title": "30 minuta"
+            },
+            {
+              "description": "Procena trenutnog stanja",
+              "icon": "📊",
+              "title": "Analiza potreba"
+            },
+            {
+              "description": "Personalizovane preporuke",
+              "icon": "🎯",
+              "title": "Plan akcije"
+            }
+          ],
+          "subtitle": "Razgovarajmo o potrebama vašeg deteta i kako možemo pomoći",
+          "title": "Zakažite besplatnu konsultaciju"
+        },
+        "howItWorks": {
+          "steps": [
+            {
+              "description": "Pronađite termin koji vam odgovara u kalendaru",
+              "icon": "📅",
+              "number": "1",
+              "title": "Izaberite termin"
+            },
+            {
+              "description": "Ostavite osnovne informacije o detetu",
+              "icon": "✍️",
+              "number": "2",
+              "title": "Popunite podatke"
+            },
+            {
+              "description": "Pridružite se video pozivu u zakazano vreme",
+              "icon": "💬",
+              "number": "3",
+              "title": "Razgovarajmo"
+            }
+          ],
+          "subtitle": "Jednostavan proces u 3 koraka",
+          "title": "Kako funkcioniše?"
+        },
+        "phoneCTA": {
+          "phoneNumber": "+381 60 1234567",
+          "subtitle": "Pozovite nas i zakažemo konsultaciju zajedno",
+          "title": "Više volite razgovor telefonom?",
+          "workingHours": "Ponedeljak - Petak, 09:00 - 17:00"
+        },
+        "seo": {
+          "_type": "seo",
+          "keywords": [
+            "konsultacija",
+            "zakazivanje",
+            "besplatno",
+            "savetovanje"
+          ],
+          "metaDescription": "Zakažite besplatnu konsultaciju sa našim stručnim timom. Analizirajte potrebe vašeg deteta i dobijte personalizovan plan učenja.",
+          "metaTitle": "Zakazivanje konsultacija | Srećno učenje"
+        },
+        "title": "Zakazivanje konsultacija",
+        "whySection": {
+          "reasons": [
+            {
+              "color": "blue",
+              "description": "Tim pedagoga i psihologa sa dugogodišnjim iskustvom",
+              "icon": "🎓",
+              "title": "Stručna podrška"
+            },
+            {
+              "color": "green",
+              "description": "Program prilagođen potrebama vašeg deteta",
+              "icon": "🌱",
+              "title": "Individualni pristup"
+            },
+            {
+              "color": "purple",
+              "description": "Topla atmosfera koja podstiče učenje",
+              "icon": "💜",
+              "title": "Sigurno okruženje"
+            },
+            {
+              "color": "orange",
+              "description": "Redovno praćenje napretka i izveštavanje",
+              "icon": "🎯",
+              "title": "Merljivi rezultati"
+            }
+          ],
+          "subtitle": "Otkrijte kako možemo pomoći vašem detetu",
+          "title": "Zašto zakazati konsultaciju?"
+        }
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "calendly",
+        "calendly.hideGdprBanner",
+        "calendly.prefillEmail",
+        "calendly.prefillName",
+        "calendly.url",
+        "faqSection",
+        "faqSection.ctaLink",
+        "faqSection.ctaText",
+        "faqSection.subtitle",
+        "faqSection.title",
+        "hero",
+        "hero.badge",
+        "hero.benefits",
+        "hero.benefits.description",
+        "hero.benefits.icon",
+        "hero.benefits.title",
+        "hero.subtitle",
+        "hero.title",
+        "howItWorks",
+        "howItWorks.steps",
+        "howItWorks.steps.description",
+        "howItWorks.steps.icon",
+        "howItWorks.steps.number",
+        "howItWorks.steps.title",
+        "howItWorks.subtitle",
+        "howItWorks.title",
+        "phoneCTA",
+        "phoneCTA.phoneNumber",
+        "phoneCTA.subtitle",
+        "phoneCTA.title",
+        "phoneCTA.workingHours",
+        "references",
+        "seo",
+        "seo._type",
+        "seo.keywords",
+        "seo.metaDescription",
+        "seo.metaTitle",
+        "title",
+        "whySection",
+        "whySection.reasons",
+        "whySection.reasons.color",
+        "whySection.reasons.description",
+        "whySection.reasons.icon",
+        "whySection.reasons.title",
+        "whySection.subtitle",
+        "whySection.title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "bookingPage",
+          "count": 1
+        },
+        {
+          "field": "seo",
+          "targetType": "seo",
+          "count": 1
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "booksLanding",
+      "count": 2,
+      "sampleDocument": {
+        "_createdAt": "2025-08-07T20:12:53Z",
+        "_id": "booksLanding",
+        "_rev": "oWtMwMRBoarauLfrKjVkEJ",
+        "_type": "booksLanding",
+        "_updatedAt": "2025-08-07T20:16:16Z",
+        "authorSection": {
+          "ctaText": "Saznajte više o autorki",
+          "description": [
+            {
+              "_key": "acddf350c4af",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "64abdf066bd0",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Učiteljica, spisateljica i kreatorka metodologije Srećnog učenja"
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ],
+          "image": {
+            "_type": "image",
+            "asset": {
+              "_ref": "image-6f5037222a0f6bc9c9557560f040de380556a33d-1024x1536-png",
+              "_type": "reference"
+            }
+          },
+          "linkToAbout": "/o-autorki",
+          "title": "O autorki"
+        },
+        "booksCarouselTitle": "Istražite sve knjige",
+        "ctaSection": {
+          "primaryButton": {
+            "text": "Poručite sada"
+          },
+          "secondaryButton": {
+            "text": "Kontaktirajte nas",
+            "url": "/kontakt"
+          },
+          "title": "Nabavite komplet knjiga"
+        },
+        "heroSubtitle": "Obrazovni serijal knjiga Željane Radojičić Lukić",
+        "heroTitle": "Čarobno selo - Luka godišnjih doba",
+        "seo": {
+          "keywords": [
+            "dečje knjige",
+            "obrazovne knjige",
+            "godišnja doba",
+            "čarobno selo",
+            "Željana Radojičić Lukić",
+            "vile",
+            "bajka i nauka"
+          ],
+          "metaDescription": "Obrazovni serijal od četiri knjige koje prate godišnja doba. Spoj bajke i nauke za decu uzrasta 5-12 godina.",
+          "metaTitle": "Čarobno selo - Knjige Željane Radojičić Lukić"
+        },
+        "seriesDescription": [
+          {
+            "_key": "3f23758c4437",
+            "_type": "block",
+            "children": [
+              {
+                "_key": "821cffaecbe9",
+                "_type": "span",
+                "marks": [],
+                "text": "Najbolje knjige za decu"
+              }
+            ],
+            "markDefs": [],
+            "style": "normal"
+          }
+        ],
+        "seriesTitle": "O serijalu knjiga",
+        "seriesValues": [
+          {
+            "_key": "7104e54753dd",
+            "description": "Vrlina koja menja svet",
+            "icon": "creativity",
+            "title": "Kreativnost"
+          },
+          {
+            "_key": "2c2a8efdfe85",
+            "description": "Vrlina života",
+            "icon": "creativity",
+            "title": "Dobrota"
+          },
+          {
+            "_key": "9ac5a8bb4e54",
+            "description": "Vrlina koja pomera granice",
+            "icon": "knowledge",
+            "title": "Znanje"
+          },
+          "... truncated"
+        ],
+        "showBooksCarousel": true
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "authorSection",
+        "authorSection.ctaText",
+        "authorSection.description",
+        "authorSection.description._key",
+        "authorSection.description._type",
+        "authorSection.description.children",
+        "authorSection.description.children._key",
+        "authorSection.description.children._type",
+        "authorSection.description.children.marks",
+        "authorSection.description.children.text",
+        "authorSection.description.markDefs",
+        "authorSection.description.style",
+        "authorSection.image",
+        "authorSection.image._type",
+        "authorSection.image.asset",
+        "authorSection.image.asset._ref",
+        "authorSection.image.asset._type",
+        "authorSection.linkToAbout",
+        "authorSection.title",
+        "backReferences",
+        "booksCarouselTitle",
+        "ctaSection",
+        "ctaSection.primaryButton",
+        "ctaSection.primaryButton.text",
+        "ctaSection.secondaryButton",
+        "ctaSection.secondaryButton.text",
+        "ctaSection.secondaryButton.url",
+        "ctaSection.title",
+        "heroSubtitle",
+        "heroTitle",
+        "references",
+        "seo",
+        "seo.keywords",
+        "seo.metaDescription",
+        "seo.metaTitle",
+        "seriesDescription",
+        "seriesDescription._key",
+        "seriesDescription._type",
+        "seriesDescription.children",
+        "seriesDescription.children._key",
+        "seriesDescription.children._type",
+        "seriesDescription.children.marks",
+        "seriesDescription.children.text",
+        "seriesDescription.markDefs",
+        "seriesDescription.style",
+        "seriesTitle",
+        "seriesValues",
+        "seriesValues._key",
+        "seriesValues.description",
+        "seriesValues.icon",
+        "seriesValues.title",
+        "showBooksCarousel"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "booksLanding",
+          "count": 2
+        },
+        {
+          "field": "authorSection.description",
+          "targetType": "block",
+          "count": 1
+        },
+        {
+          "field": "authorSection.description.children",
+          "targetType": "span",
+          "count": 1
+        },
+        {
+          "field": "authorSection.image",
+          "targetType": "image",
+          "count": 1
+        },
+        {
+          "field": "authorSection.image.asset",
+          "targetType": "reference",
+          "count": 1
+        },
+        {
+          "field": "seriesDescription",
+          "targetType": "block",
+          "count": 1
+        },
+        {
+          "field": "seriesDescription.children",
+          "targetType": "span",
+          "count": 1
+        }
+      ],
+      "backReferences": [],
+      "assets": [
+        {
+          "field": "authorSection.image",
+          "count": 1
+        }
+      ],
+      "complexity": "HIGH",
+      "migrationRisk": "HIGH",
+      "recommendations": [
+        "⚠️ Complex structure - migrate in small batches",
+        "⚠️ Validate all nested objects after migration",
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "calculatorResult",
+      "count": 13,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T03:15:23Z",
+        "_id": "EIn1TO6kzkBkpMuRkFfJpQ",
+        "_rev": "EIn1TO6kzkBkpMuRkFfJlt",
+        "_type": "calculatorResult",
+        "_updatedAt": "2025-08-03T03:15:23Z",
+        "email": "malisicnemanja@gmail.com",
+        "inputs": {
+          "model": "Professional",
+          "squareMeters": 100
+        },
+        "leadScore": 70,
+        "phone": "3333",
+        "results": {
+          "breakEvenMonths": 0,
+          "breakdown": "{\"zones\":[{\"name\":\"Učionica za mentalne veštine\",\"area\":40,\"color\":\"#3b82f6\",\"description\":\"Prostor za učenje brzog čitanja i mentalne aritmetike\",\"minArea\":25,\"maxArea\":40},{\"name\":\"Zona za kreativne aktivnosti\",\"area\":28,\"color\":\"#10b981\",\"description\":\"Prostor za radionice, umetnost i praktične aktivnosti\",\"minArea\":20,\"maxArea\":35},{\"name\":\"Biblioteka i tihi kutak\",\"area\":28,\"color\":\"#f59e0b\",\"description\":\"Prostor za čitanje i individualni rad\",\"minArea\":15,\"maxArea\":30},{\"name\":\"Recepcija i čekaonica\",\"area\":20,\"color\":\"#ef4444\",\"description\":\"Prostor za prijem i komunikaciju sa roditeljima\",\"minArea\":10,\"maxArea\":20},{\"name\":\"Toalet i higijena\",\"area\":14,\"color\":\"#8b5cf6\",\"description\":\"Sanitarni čvor prilagođen deci\",\"minArea\":8,\"maxArea\":15}],\"efficiency\":85,\"capacity\":22,\"recommendations\":[\"Kapacitet je ograničen. Fokusirajte se na kvalitet pre kvantiteta.\"]}",
+          "monthlyRevenue": 0,
+          "threeYearProjection": 0,
+          "totalInvestment": 0
+        },
+        "type": "space"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "email",
+        "inputs",
+        "inputs.model",
+        "inputs.squareMeters",
+        "leadScore",
+        "phone",
+        "references",
+        "results",
+        "results.breakEvenMonths",
+        "results.breakdown",
+        "results.monthlyRevenue",
+        "results.threeYearProjection",
+        "results.totalInvestment",
+        "type"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "calculatorResult",
+          "count": 13
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "calculatorSettings",
+      "count": 2,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T02:23:16Z",
+        "_id": "EIn1TO6kzkBkpMuRkFHzTz",
+        "_rev": "EIn1TO6kzkBkpMuRkFHzQS",
+        "_type": "calculatorSettings",
+        "_updatedAt": "2025-08-03T02:23:16Z",
+        "cities": [
+          {
+            "demandLevel": "high",
+            "name": "Beograd",
+            "priceMultiplier": 1.2
+          },
+          {
+            "demandLevel": "high",
+            "name": "Novi Sad",
+            "priceMultiplier": 1
+          },
+          {
+            "demandLevel": "medium",
+            "name": "Niš",
+            "priceMultiplier": 0.9
+          },
+          "... truncated"
+        ],
+        "franchiseModels": [
+          {
+            "basePrice": 15000,
+            "description": "Osnovni paket za početnike",
+            "includedItems": [
+              "Licenca za korišćenje brenda",
+              "Osnovna obuka (3 dana)",
+              "Početni set materijala",
+              "Online podrška 6 meseci"
+            ],
+            "name": "Starter"
+          },
+          {
+            "basePrice": 25000,
+            "description": "Profesionalni paket sa dodatnim resursima",
+            "includedItems": [
+              "Licenca za korišćenje brenda",
+              "Napredna obuka (5 dana)",
+              "Kompletan set materijala",
+              "Online podrška 12 meseci",
+              "Marketing paket",
+              "Softver za upravljanje"
+            ],
+            "name": "Professional"
+          },
+          {
+            "basePrice": 40000,
+            "description": "Premium paket sa potpunom podrškom",
+            "includedItems": [
+              "Ekskluzivna licenca za teritoriju",
+              "VIP obuka (7 dana + mentoring)",
+              "Premium materijali i oprema",
+              "Neograničena podrška",
+              "Kompletan marketing sistem",
+              "Softver i hardver",
+              "Pomoć pri zapošljavanju"
+            ],
+            "name": "Premium"
+          }
+        ],
+        "operationalCosts": {
+          "monthlyMarketing": 500,
+          "monthlyOther": 300,
+          "monthlyUtilities": 400,
+          "staffSalaryPerPerson": 800
+        },
+        "renovationCosts": {
+          "basic": 100,
+          "premium": 250,
+          "standard": 150
+        },
+        "revenueSettings": {
+          "averageChildrenPerGroup": 12,
+          "groupsPerDay": 4,
+          "pricePerChild": 50,
+          "workingDaysPerMonth": 22
+        },
+        "spaceRequirements": {
+          "minSquareMeters": 80,
+          "optimalSquareMeters": 150,
+          "pricePerSquareMeter": 10
+        }
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "cities",
+        "cities.demandLevel",
+        "cities.name",
+        "cities.priceMultiplier",
+        "franchiseModels",
+        "franchiseModels.basePrice",
+        "franchiseModels.description",
+        "franchiseModels.includedItems",
+        "franchiseModels.name",
+        "operationalCosts",
+        "operationalCosts.monthlyMarketing",
+        "operationalCosts.monthlyOther",
+        "operationalCosts.monthlyUtilities",
+        "operationalCosts.staffSalaryPerPerson",
+        "references",
+        "renovationCosts",
+        "renovationCosts.basic",
+        "renovationCosts.premium",
+        "renovationCosts.standard",
+        "revenueSettings",
+        "revenueSettings.averageChildrenPerGroup",
+        "revenueSettings.groupsPerDay",
+        "revenueSettings.pricePerChild",
+        "revenueSettings.workingDaysPerMonth",
+        "spaceRequirements",
+        "spaceRequirements.minSquareMeters",
+        "spaceRequirements.optimalSquareMeters",
+        "spaceRequirements.pricePerSquareMeter"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "calculatorSettings",
+          "count": 2
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "faq",
+      "count": 55,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T01:47:52Z",
+        "_id": "EIn1TO6kzkBkpMuRkFFcYI",
+        "_rev": "xmE432SUuemXLQhUEYiBtF",
+        "_type": "faq",
+        "_updatedAt": "2025-08-07T19:50:38Z",
+        "answer": "Propušteni časovi se mogu nadoknaditi u dogovoru sa instruktorom, u okviru tekućeg meseca.",
+        "category": {
+          "_ref": "faqCategory.general",
+          "_type": "reference"
+        },
+        "order": 5,
+        "question": "Šta ako dete propusti čas?"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "answer",
+        "backReferences",
+        "category",
+        "category._ref",
+        "category._type",
+        "order",
+        "question",
+        "references"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "faq",
+          "count": 55
+        },
+        {
+          "field": "category",
+          "targetType": "reference",
+          "count": 35
+        },
+        {
+          "field": "category",
+          "targetType": "unknown",
+          "count": 20
+        },
+        {
+          "field": "backReferences",
+          "targetType": "homePage",
+          "count": 5
+        },
+        {
+          "field": "references",
+          "targetType": "homePage",
+          "count": 5
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "HIGH",
+      "recommendations": [
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "faqCategory",
+      "count": 17,
+      "sampleDocument": {
+        "_createdAt": "2025-08-05T03:10:04Z",
+        "_id": "adpXclQvR9WWEgUkbtDqyC",
+        "_rev": "adpXclQvR9WWEgUkbtDquN",
+        "_type": "faqCategory",
+        "_updatedAt": "2025-08-05T03:10:04Z",
+        "description": "Edukacija i kontinuirana podrška",
+        "name": "Obuka i podrška",
+        "order": 3,
+        "slug": {
+          "_type": "slug",
+          "current": "obuka-podrska"
+        }
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "backReferences._id",
+        "backReferences._type",
+        "description",
+        "name",
+        "order",
+        "references",
+        "references._id",
+        "references._type",
+        "references.name",
+        "references.title",
+        "slug",
+        "slug._type",
+        "slug.current"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "faqCategory",
+          "count": 17
+        },
+        {
+          "field": "backReferences",
+          "targetType": "faq",
+          "count": 55
+        },
+        {
+          "field": "references",
+          "targetType": "faq",
+          "count": 55
+        },
+        {
+          "field": "slug",
+          "targetType": "slug",
+          "count": 4
+        }
+      ],
+      "backReferences": [
+        {
+          "sourceType": "faq",
+          "count": 3
+        }
+      ],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": [
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "franchiseApplication",
+      "count": 2,
+      "sampleDocument": {
+        "_createdAt": "2025-08-06T13:21:23Z",
+        "_id": "SBvfECCtZ11PRIA8QdOXRv",
+        "_rev": "SBvfECCtZ11PRIA8QdOXPq",
+        "_type": "franchiseApplication",
+        "_updatedAt": "2025-08-06T13:21:23Z",
+        "description": "Pridružite se mreži od preko 450 edukatora širom Srbije i pokrenite uspešan edukacioni biznis uz našu podršku.",
+        "formSettings": {
+          "privacyNote": "Vaši podaci su bezbedni i neće biti prosleđivani trećim licima. Koristićemo ih isključivo za proces prijave za franšizu.",
+          "requiredFieldsNote": "* Sva polja označena zvezdicom su obavezna",
+          "submitButtonText": "Pošaljite prijavu"
+        },
+        "motivationalContent": {
+          "_ref": "tqJG5yH49IKSFNIKiLWC4j",
+          "_type": "reference"
+        },
+        "sections": [
+          {
+            "_ref": "tqJG5yH49IKSFNIKiLWBvr",
+            "_type": "reference"
+          },
+          {
+            "_ref": "SBvfECCtZ11PRIA8QdOXJb",
+            "_type": "reference"
+          }
+        ],
+        "seo": {
+          "description": "Pridružite se mreži od preko 450 edukatora i pokrenite profitabilan edukacioni biznis. Sveobuhvatna podrška, dokazana metodologija.",
+          "keywords": [
+            "franšiza",
+            "edukacija",
+            "Srećno učenje",
+            "biznis",
+            "deca",
+            "kursevi"
+          ],
+          "title": "Prijava za franšizu Srećno učenje - Pokrenite svoj edukacioni biznis"
+        },
+        "slug": {
+          "_type": "slug",
+          "current": "prijava-za-franshizu"
+        },
+        "subtitle": "Počnite vašu edukacionu priču",
+        "successMessage": {
+          "message": "Vaša prijava je uspešno poslata. Naš tim će je proveriti i kontaktirati vas u roku od 48 sati sa sledećim koracima.",
+          "nextSteps": [
+            "Proverićemo vašu prijavu i dokumentaciju",
+            "Zakazaćemo uvodni razgovor preko video poziva",
+            "Poslati ćemo vam detaljne informacije o franšizi",
+            "Organizovati ćemo upoznavanje sa lokalnm franšizama"
+          ],
+          "title": "Uspešno ste poslali prijavu!"
+        },
+        "title": "Prijava za franšizu Srećno učenje"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "description",
+        "formSettings",
+        "formSettings.privacyNote",
+        "formSettings.requiredFieldsNote",
+        "formSettings.submitButtonText",
+        "motivationalContent",
+        "motivationalContent._ref",
+        "motivationalContent._type",
+        "references",
+        "sections",
+        "sections._ref",
+        "sections._type",
+        "seo",
+        "seo.description",
+        "seo.keywords",
+        "seo.title",
+        "slug",
+        "slug._type",
+        "slug.current",
+        "subtitle",
+        "successMessage",
+        "successMessage.message",
+        "successMessage.nextSteps",
+        "successMessage.title",
+        "title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "franchiseApplication",
+          "count": 2
+        },
+        {
+          "field": "motivationalContent",
+          "targetType": "reference",
+          "count": 2
+        },
+        {
+          "field": "sections",
+          "targetType": "reference",
+          "count": 4
+        },
+        {
+          "field": "slug",
+          "targetType": "slug",
+          "count": 2
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": [
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "franchiseField",
+      "count": 24,
+      "sampleDocument": {
+        "_createdAt": "2025-08-06T13:06:17Z",
+        "_id": "SBvfECCtZ11PRIA8QdEqTj",
+        "_rev": "SBvfECCtZ11PRIA8QdEqRe",
+        "_type": "franchiseField",
+        "_updatedAt": "2025-08-06T13:06:17Z",
+        "fieldId": "telefon",
+        "helpText": "Unesite broj mobilnog telefona",
+        "isRequired": true,
+        "label": "Broj telefona",
+        "order": 3,
+        "placeholder": "+381 XX XXX XXXX",
+        "type": "tel",
+        "width": "half"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "backReferences._id",
+        "backReferences._type",
+        "fieldId",
+        "helpText",
+        "isRequired",
+        "label",
+        "order",
+        "placeholder",
+        "references",
+        "references._id",
+        "references._type",
+        "references.name",
+        "references.title",
+        "type",
+        "width"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "franchiseField",
+          "count": 24
+        },
+        {
+          "field": "backReferences",
+          "targetType": "franchiseSection",
+          "count": 24
+        },
+        {
+          "field": "references",
+          "targetType": "franchiseSection",
+          "count": 24
+        }
+      ],
+      "backReferences": [
+        {
+          "sourceType": "franchiseSection",
+          "count": 1
+        }
+      ],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "franchiseMotivational",
+      "count": 2,
+      "sampleDocument": {
+        "_createdAt": "2025-08-06T13:06:30Z",
+        "_id": "SBvfECCtZ11PRIA8QdEr11",
+        "_rev": "SBvfECCtZ11PRIA8QdEqyw",
+        "_type": "franchiseMotivational",
+        "_updatedAt": "2025-08-06T13:06:30Z",
+        "benefits": [
+          {
+            "description": "Kompletna obuka za metodologiju, upravljanje biznisom i rad sa roditeljima",
+            "icon": "education",
+            "title": "Sveobuhvatna obuka"
+          },
+          {
+            "description": "Готови marketinški materijali, web prezentacija i društvene mreže",
+            "icon": "marketing",
+            "title": "Marketing podrška"
+          },
+          {
+            "description": "Stalan kontakt sa timom, mesečni sastanci i dodatne obuke",
+            "icon": "support",
+            "title": "Kontinuirana podrška"
+          },
+          "... truncated"
+        ],
+        "ctaSection": {
+          "description": "Pridružite se mreži uspešnih edukatora i započnite svoju franšizu priču već danas. Proces prijave traje samo 10 minuta.",
+          "primaryButton": {
+            "action": "scroll_to_form",
+            "text": "Prijavite se sada"
+          },
+          "secondaryButton": {
+            "link": "/fransize",
+            "text": "Saznajte više o franšizi"
+          },
+          "title": "Spremni ste za sledeći korak?"
+        },
+        "description": "Franšiza Srećno učenje vam omogućava da pokrenete svoj edukacijski biznis uz podršku dokazane metodologije, kontinuiranu obuku i marketing podršku iskusnog tima.",
+        "faqSection": {
+          "items": [
+            {
+              "answer": "Početna investicija se kreće od 2.000 do 5.000 evra, što pokriva licencnu naknadu, početni materijal i marketing podrušku za prvih 6 meseci.",
+              "question": "Koliko novca je potrebno za početak?"
+            },
+            {
+              "answer": "Ne morate imati formalno iskustvo. Naša obuka pokriva sve što vam je potrebno - od metodologije rada sa decom do upravljanja biznisom.",
+              "question": "Da li moram da imam iskustvo u edukaciji?"
+            },
+            {
+              "answer": "Od potpisivanja ugovora do prve grupe polaznika prođe obično 4-6 nedelja, u zavisnosti od vašeg tempa i lokalne tražnje.",
+              "question": "Koliko vremena treba da se franšiza pokrene?"
+            },
+            {
+              "answer": "Kontinuiranu podršku kroz mesečne sastanke, pristup bazi materijala, marketing podršku i direktnu komunikaciju sa timom.",
+              "question": "Kakvu podršku dobijam tokom rada?"
+            }
+          ],
+          "title": "Najčešće postavljana pitanja"
+        },
+        "statistics": [
+          {
+            "icon": "franchise",
+            "label": "aktivnih franšiza",
+            "number": "127",
+            "suffix": "+"
+          },
+          {
+            "icon": "users",
+            "label": "zadovoljnih polaznika",
+            "number": "15,000",
+            "suffix": "+"
+          },
+          {
+            "icon": "educators",
+            "label": "sertifikovanih edukatora",
+            "number": "450",
+            "suffix": "+"
+          },
+          "... truncated"
+        ],
+        "subtitle": "Postanite deo uspešne priče Srećno učenje",
+        "testimonials": [
+          {
+            "location": "Novi Sad",
+            "name": "Milica Stanković",
+            "quote": "Prelazak iz korporativnog sveta u obrazovanje kroz Srećno učenje bila je najbolja odluka moje karijere. Za godinu dana sam izgradila stabilnu bazu od preko 80 polaznika.",
+            "rating": 5,
+            "role": "Vlasnik franšize Novi Sad Centar"
+          },
+          {
+            "location": "Kragujevac",
+            "name": "Ana Marić",
+            "quote": "Metodologija Srećnog učenja dala mi je strukturu koju sam tražila. Deca napreduju brže nego što sam očekivala, a roditelji su prezadovoljni rezultatima.",
+            "rating": 5,
+            "role": "Franšiza Kragujevac"
+          },
+          {
+            "location": "Niš",
+            "name": "Marko Jovanović",
+            "quote": "Kontinuirana podrška tima i kvalitetni materijali omogućili su mi da se fokusiram na ono što volim - rad sa decom. Biznis se vodi gotovo sam.",
+            "rating": 5,
+            "role": "Franšiza Niš Medijana"
+          }
+        ],
+        "title": "Pridružite se najvećoj edukacionoj mreži u Srbiji"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "backReferences._id",
+        "backReferences._type",
+        "benefits",
+        "benefits.description",
+        "benefits.icon",
+        "benefits.title",
+        "ctaSection",
+        "ctaSection.description",
+        "ctaSection.primaryButton",
+        "ctaSection.primaryButton.action",
+        "ctaSection.primaryButton.text",
+        "ctaSection.secondaryButton",
+        "ctaSection.secondaryButton.link",
+        "ctaSection.secondaryButton.text",
+        "ctaSection.title",
+        "description",
+        "faqSection",
+        "faqSection.items",
+        "faqSection.items.answer",
+        "faqSection.items.question",
+        "faqSection.title",
+        "references",
+        "references._id",
+        "references._type",
+        "references.name",
+        "references.title",
+        "statistics",
+        "statistics.icon",
+        "statistics.label",
+        "statistics.number",
+        "statistics.suffix",
+        "subtitle",
+        "testimonials",
+        "testimonials.location",
+        "testimonials.name",
+        "testimonials.quote",
+        "testimonials.rating",
+        "testimonials.role",
+        "title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "franchiseMotivational",
+          "count": 2
+        },
+        {
+          "field": "backReferences",
+          "targetType": "franchiseApplication",
+          "count": 2
+        },
+        {
+          "field": "references",
+          "targetType": "franchiseApplication",
+          "count": 2
+        }
+      ],
+      "backReferences": [
+        {
+          "sourceType": "franchiseApplication",
+          "count": 1
+        }
+      ],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "franchiseSection",
+      "count": 4,
+      "sampleDocument": {
+        "_createdAt": "2025-08-06T13:21:21Z",
+        "_id": "SBvfECCtZ11PRIA8QdOXJb",
+        "_rev": "SBvfECCtZ11PRIA8QdOXHW",
+        "_type": "franchiseSection",
+        "_updatedAt": "2025-08-06T13:21:21Z",
+        "description": "Ovde želimo da čujemo Vašu priču - šta Vas motiviše, kakvi su Vaši planovi i kako vidite sebe u ulozi franšiize Srećno učenje.",
+        "fields": [
+          {
+            "_ref": "tqJG5yH49IKSFNIKiLWB8B",
+            "_type": "reference"
+          },
+          {
+            "_ref": "tqJG5yH49IKSFNIKiLWBDV",
+            "_type": "reference"
+          },
+          {
+            "_ref": "tqJG5yH49IKSFNIKiLWBIp",
+            "_type": "reference"
+          },
+          "... truncated"
+        ],
+        "helpText": "Budite iskreni i detaljni - ovo nam pomaže da procenimo da li ste pravi kandidat.",
+        "icon": "target",
+        "isRequired": true,
+        "order": 2,
+        "progressWeight": 60,
+        "sectionId": "motivation",
+        "subtitle": "Zašto baš Vi i zašto baš sada?",
+        "title": "Motivacija i ideja",
+        "validationRules": {
+          "customValidationMessage": "Molimo popunite sve motivacione odgovore da biste nastavili.",
+          "minRequiredFields": 4
+        }
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "backReferences._id",
+        "backReferences._type",
+        "description",
+        "fields",
+        "fields._ref",
+        "fields._type",
+        "helpText",
+        "icon",
+        "isRequired",
+        "order",
+        "progressWeight",
+        "references",
+        "references._id",
+        "references._type",
+        "references.name",
+        "references.title",
+        "sectionId",
+        "subtitle",
+        "title",
+        "validationRules",
+        "validationRules.customValidationMessage",
+        "validationRules.minRequiredFields"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "franchiseSection",
+          "count": 4
+        },
+        {
+          "field": "backReferences",
+          "targetType": "franchiseApplication",
+          "count": 4
+        },
+        {
+          "field": "fields",
+          "targetType": "reference",
+          "count": 24
+        },
+        {
+          "field": "references",
+          "targetType": "franchiseApplication",
+          "count": 4
+        }
+      ],
+      "backReferences": [
+        {
+          "sourceType": "franchiseApplication",
+          "count": 1
+        }
+      ],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": [
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "franchiseSteps",
+      "count": 1,
+      "sampleDocument": {
+        "_createdAt": "2025-08-07T20:36:19Z",
+        "_id": "drafts.8cfac59a-3083-47fa-afb1-23df17c5dbc0",
+        "_rev": "a053e711-99fe-4565-b6ee-88aacf89d83c",
+        "_type": "franchiseSteps",
+        "_updatedAt": "2025-08-07T20:36:19Z",
+        "actionButton": {
+          "style": "primary"
+        },
+        "color": "green",
+        "isActive": true,
+        "title": "a"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "actionButton",
+        "actionButton.style",
+        "backReferences",
+        "color",
+        "isActive",
+        "references",
+        "title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "franchiseSteps",
+          "count": 1
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "LOW",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "homePage",
+      "count": 1,
+      "sampleDocument": {
+        "_createdAt": "2025-08-04T21:15:48Z",
+        "_id": "homePage",
+        "_rev": "YBiWwTMhT8IS37yZZlpaYA",
+        "_system": {
+          "base": {
+            "id": "homePage",
+            "rev": "atDdCAAfWCLcotj1z8G3eZ"
+          }
+        },
+        "_type": "homePage",
+        "_updatedAt": "2025-08-07T20:05:34Z",
+        "differentiators": {
+          "items": [
+            {
+              "_key": "fbf3fa34-31f2-47ba-8310-4059bb2c94f0",
+              "description": "Naša jedinstvena metodologija razvijena je kroz 15 godina rada sa decom i zasnovana je na najnovijim pedagoškim istraživanjima.",
+              "highlight": "metodologija",
+              "icon": "method",
+              "title": "Dokazana metodologija"
+            },
+            {
+              "_key": "20a8ce0a-96f4-4e95-8b54-a2a23d5b8e4b",
+              "description": "Prosečan povrat investicije za 12-18 meseci uz kontinuiran rast profita.",
+              "highlight": "12-18 meseci ",
+              "icon": "results",
+              "title": "Brza isplativost"
+            },
+            {
+              "_key": "22576459-9d21-408d-8ab4-04c1e8dde3e1",
+              "description": "Garantovana ekskluzivnost na određenoj teritoriji bez konkurencije.",
+              "highlight": "ekskluzivnost",
+              "icon": "community",
+              "title": "Ekskluzivna teritorija"
+            }
+          ],
+          "sectionTitle": "Zašto baš Srećno učenje?"
+        },
+        "enhancedHero": {
+          "animatedNumber": {
+            "duration": 5000,
+            "suffix": "+dece",
+            "target": 20000
+          },
+          "animationSettings": {
+            "brushStrokeColor": "#F59E0B",
+            "brushStrokeDelay": 2000,
+            "enableBrushStrokes": true,
+            "enableTextRotation": true,
+            "rotationSpeed": 2000
+          },
+          "backgroundPattern": "circles",
+          "backgroundType": "pattern",
+          "badge": "Naučno zasnovana metodologija",
+          "brushStrokeWords": [
+            "franšize u Srbiji",
+            "obrazovnih mogućnosti."
+          ],
+          "features": [
+            {
+              "_key": "1361e94b991fb933d61f270ec2cc08b8",
+              "icon": "star",
+              "text": "15+ godina iskustva"
+            },
+            {
+              "_key": "f39efe0324a4b8e3adc3bd2e6340fcfd",
+              "icon": "users",
+              "text": "10.000+ zadovoljnih učenika"
+            },
+            {
+              "_key": "6cef647c934c554322ebe16985c136ee",
+              "icon": "chart",
+              "text": "ROI do 300% u prve 2 godine"
+            }
+          ],
+          "highlightText": "franšize u Srbiji",
+          "layout": "textRight",
+          "primaryCta": {
+            "href": "/zakazivanje",
+            "text": "Započnite svoju priču"
+          },
+          "secondaryCta": {
+            "href": "/fransiza",
+            "text": "Istražite mogućnosti"
+          },
+          "subtitle": "Srećno učenje - gde se znanje sreće sa radošću. Pridružite se mreži od 50+ uspešnih centara.",
+          "svgBadge": {
+            "color": "blue",
+            "position": "above",
+            "show": true,
+            "text": "Ovde je neki bedz"
+          },
+          "title": "Postanite deo najuspešnije obrazovne franšize u Srbiji",
+          "titleVariants": [
+            "Otvorite svet potpuno novih obrazovnih mogućnosti.",
+            "Koncept franšiza koji nije viđen do sada!"
+          ],
+          "trustBadges": [
+            {
+              "_key": "8613bedb41b9",
+              "_type": "trustBadge",
+              "icon": "trophy",
+              "label": "Poverenje",
+              "value": "4 države"
+            }
+          ]
+        },
+        "franchiseModels": {
+          "models": [
+            {
+              "_key": "1e5eaf9c-a0cc-47ce-a2e0-c4c0968bf72d",
+              "ctaText": "Saznajte više",
+              "features": [
+                "Licenca za 1 lokaciju",
+                "Kompletna obuka (40 sati)",
+                "Početni set materijala",
+                "Marketing podrška",
+                "6 meseci mentorstva",
+                "Pristup online platformi"
+              ],
+              "highlighted": false,
+              "name": "Starter",
+              "price": "15.000€",
+              "subtitle": "Idealno za početnike"
+            },
+            {
+              "_key": "ae1d90cb-a3dd-4a70-887e-bebd4930b405",
+              "ctaText": "Preporučujemo",
+              "features": [
+                "Sve iz Starter paketa",
+                "Proširena teritorija",
+                "Napredna obuka (80 sati)",
+                "Kompletan brending centra",
+                "12 meseci mentorstva",
+                "Marketing kampanje",
+                "Pomoć pri zapošljavanju"
+              ],
+              "highlighted": true,
+              "name": "Professional",
+              "price": "25.000€",
+              "subtitle": "Najpopularniji izbor"
+            },
+            {
+              "_key": "45e17750-29ca-41a3-9ece-b2e64c547943",
+              "ctaText": "Kontaktirajte nas",
+              "features": [
+                "Master franšiza za region",
+                "Pravo otvaranja pod-franšiza",
+                "VIP obuka i sertifikacija",
+                "Kompletno opremljen centar",
+                "Doživotno mentorstvo",
+                "Ekskluzivni marketing",
+                "Garantovan ROI program"
+              ],
+              "highlighted": false,
+              "name": "Premium",
+              "price": "40.000€",
+              "subtitle": "Za ambiciozne poduzetnike"
+            }
+          ],
+          "sectionTitle": "Modeli saradnje prilagođeni vama"
+        },
+        "franchiseSteps": {
+          "sectionTitle": "Vaš put do uspešne franšize",
+          "steps": [
+            {
+              "_key": "05e8270b-ef90-4885-8f05-400e24432af4",
+              "description": "Upoznajte našu metodologiju i koncept. Razgovarajte sa našim timom o vašim ciljevima i mogućnostima.",
+              "duration": "1-2 dana",
+              "icon": "phone",
+              "number": "1",
+              "stepNumber": 1,
+              "title": "Inicijalni razgovor"
+            },
+            {
+              "_key": "75fd475b-f9ed-4a8d-9d61-3add9c38e538",
+              "description": "Prolazite kroz kompletnu obuku - metodologija, poslovanje, marketing, rad sa decom i roditeljima.",
+              "duration": "2-4 nedelje",
+              "icon": "education",
+              "number": "4",
+              "stepNumber": 4,
+              "title": "Obuka i priprema"
+            },
+            {
+              "_key": "5a7ebcc5-1d92-49e3-9506-7ad3e8216cb3",
+              "description": "Uz našu potpunu podršku otvarate svoj centar. Mi smo tu za sve - od opremanja do prve grupe učenika.",
+              "duration": "2-3 nedelje",
+              "icon": "launch",
+              "number": "5",
+              "stepNumber": 5,
+              "title": "Otvaranje centra"
+            },
+            {
+              "_key": "56f333d9-6314-4a4f-bc4c-64f2c14b76d0",
+              "description": "Kontinuirana podrška, redovne obuke, novi programi. Rastemo zajedno i gradimo dugoročan uspeh.",
+              "duration": "Kontinuirano",
+              "icon": "launch",
+              "number": "6",
+              "stepNumber": 6,
+              "title": "Rast i razvoj"
+            }
+          ]
+        },
+        "freeResources": {
+          "resources": [
+            {
+              "_key": "resource1",
+              "_type": "object",
+              "description": "Kompletan vodič kroz našu pedagošku metodologiju",
+              "fileUrl": "/downloads/metodologija-prirucnik.pdf",
+              "icon": "book",
+              "title": "Priručnik metodologije"
+            },
+            {
+              "_key": "resource2",
+              "_type": "object",
+              "description": "Excel template za planiranje vašeg centra",
+              "fileUrl": "/downloads/biznis-plan-template.xlsx",
+              "icon": "chart",
+              "title": "Biznis plan template"
+            },
+            {
+              "_key": "resource3",
+              "_type": "object",
+              "description": "30-minutna prezentacija franšize",
+              "fileUrl": "https://youtube.com/watch?v=example",
+              "icon": "video",
+              "title": "Video prezentacija"
+            }
+          ]
+        },
+        "heroSekcija": {
+          "titleVariants": [
+            "najuspešnije obrazovne franšize",
+            "najboljeg obrazovnog sistema",
+            "Srećnog učenja porodice"
+          ],
+          "trustBadges": [
+            {
+              "_key": "badge1",
+              "_type": "trustBadge",
+              "icon": "certificate",
+              "link": "/metodologija",
+              "text": "Sertifikovana metodologija"
+            },
+            {
+              "_key": "badge2",
+              "_type": "trustBadge",
+              "icon": "shield",
+              "link": "/o-nama",
+              "text": "10 godina iskustva"
+            },
+            {
+              "_key": "badge3",
+              "_type": "trustBadge",
+              "icon": "award",
+              "link": "/lokacije",
+              "text": "50+ uspešnih centara"
+            }
+          ]
+        },
+        "homeFaq": {
+          "faqs": [
+            {
+              "_key": "faq1",
+              "_type": "object",
+              "answer": "Početna investicija zavisi od modela franšize koji izaberete. Naš Basic model počinje od 5.000€, dok Premium model sa potpunom podrškom iznosi 15.000€.",
+              "question": "Kolika je početna investicija?"
+            },
+            {
+              "_key": "faq2",
+              "_type": "object",
+              "answer": "Naši partneri u proseku ostvaruju povrat investicije za 12-18 meseci, zavisno od lokacije i angažovanja.",
+              "question": "Kada mogu očekivati povrat investicije?"
+            },
+            {
+              "_key": "faq3",
+              "_type": "object",
+              "answer": "Pedagoško iskustvo je prednost ali nije obavezno. Pružamo kompletnu obuku i kontinuiranu podršku svim partnerima.",
+              "question": "Da li je potrebno pedagoško iskustvo?"
+            }
+          ]
+        },
+        "homeFaqs": {
+          "faqs": [
+            {
+              "_key": "de93e5fb5a17a429289303088925c397",
+              "_ref": "faq.koliko-je-potrebno-iskustva-u-obrazovanju",
+              "_type": "reference"
+            },
+            {
+              "_key": "ce3b20d4569d032ca812f41c73c6b06b",
+              "_ref": "faq.koliko-brzo-mogu-ocekivati-povrat-investicije",
+              "_type": "reference"
+            },
+            {
+              "_key": "727199d6eefe3589497e2ada215a282a",
+              "_ref": "faq.da-li-mogu-zadrzati-svoj-posao-dok-pokrecem-fransizu",
+              "_type": "reference"
+            },
+            {
+              "_key": "4f1d77073c91e688e4ad50971f82c2f0",
+              "_ref": "faq.kakva-je-konkurencija-na-trzistu",
+              "_type": "reference"
+            },
+            {
+              "_key": "058b9be27bc6112d1db8547c6b7dadf8",
+              "_ref": "faq.sta-ako-trebam-pomoc-nakon-otvaranja",
+              "_type": "reference"
+            }
+          ],
+          "sectionTitle": "Često postavljana pitanja"
+        },
+        "interactiveClassroom": {
+          "ctaText": "Istražite 3D učionicu",
+          "description": "Virtuelna šetnja kroz prostor dizajniran za inspiraciju i učenje",
+          "sectionTitle": "Pogledajte kako izgleda naša učionica"
+        },
+        "leadMagnets": {
+          "resources": [
+            {
+              "_key": "430ce55e-1d7b-48d3-8c5a-22c8c5463b98",
+              "ctaText": "Otvori kalkulator",
+              "description": "Izračunajte tačan povrat investicije za vašu lokaciju",
+              "downloadUrl": "/kalkulatori",
+              "icon": "calculator",
+              "title": "ROI Kalkulator franšize",
+              "type": "calculator"
+            },
+            {
+              "_key": "e81cf8f0-541e-472c-9380-aebecebc89d3",
+              "ctaText": "Preuzmi PDF",
+              "description": "Sve o modelima, cenama, procesu i metodologiji (PDF 25 str)",
+              "downloadUrl": "#download-info-paket",
+              "icon": "document",
+              "title": "Kompletan info paket",
+              "type": "document"
+            },
+            {
+              "_key": "6e0f8bec-e089-4b44-a4fd-64eb04c08b38",
+              "ctaText": "Čitaj online",
+              "description": "Detaljan uvid u našu naučno zasnovanu metodologiju učenja",
+              "downloadUrl": "#download-metodologija",
+              "icon": "book",
+              "title": "Priručnik metodologije",
+              "type": "book"
+            },
+            {
+              "_key": "f02bb594-ddfd-48b8-8ede-3f2946be7bfd",
+              "ctaText": "Gledaj video",
+              "description": "15-minutni pregled cele franšizne prilike sa primerima",
+              "downloadUrl": "#watch-prezentacija",
+              "icon": "video",
+              "title": "Video prezentacija",
+              "type": "video"
+            }
+          ],
+          "sectionTitle": "Besplatni resursi za početak"
+        },
+        "newsletter": {
+          "ctaText": "Prijavite se",
+          "description": "Primajte ekskluzivne informacije o franšizi, uspešne priče i savete direktno u inbox.",
+          "incentive": "Besplatan vodič: \"10 koraka do uspešne obrazovne franšize\"",
+          "title": "Budite u toku sa prilikama"
+        },
+        "statistics": [
+          {
+            "_key": "1bd50d1f-deb6-4648-843f-a531854ec726",
+            "color": "primary",
+            "description": "Širom Srbije i regiona",
+            "icon": "location",
+            "label": "Aktivnih franšiza",
+            "number": "50+",
+            "suffix": "centara",
+            "value": "15 lokacija"
+          },
+          {
+            "_key": "9cad7a7b-2f5c-4e19-8ac3-dc9e1f78da72",
+            "color": "secondary",
+            "description": "Koji su prošli naš program",
+            "icon": "users",
+            "label": "Zadovoljnih učenika",
+            "number": "10.000+",
+            "suffix": "učenika",
+            "value": "20 000"
+          },
+          {
+            "_key": "b6f55dce-db85-48ab-9e2c-642cc6d1fae8",
+            "color": "accent",
+            "description": "Učenika nastavljaju program",
+            "icon": "chart",
+            "label": "Stopa zadržavanja",
+            "number": "95%",
+            "suffix": "%",
+            "value": "100% "
+          },
+          "... truncated"
+        ],
+        "successStories": {
+          "sectionTitle": "Priče naših partnera",
+          "stories": [
+            {
+              "_key": "89d63f9a-be6a-44ba-8784-99bc9edd4f93",
+              "image": null,
+              "location": "Novi Sad",
+              "metric": {
+                "label": "učenika mesečno",
+                "value": "150+"
+              },
+              "name": "Marija Petrović",
+              "role": "Vlasnica franšize u Novom Sadu",
+              "story": "Posle 10 godina u korporaciji, želela sam promenu. Srećno učenje mi je pružilo priliku da radim ono što volim - rad sa decom, i istovremeno vodim uspešan biznis. Za godinu dana sam povratila investiciju.",
+              "yearStarted": "2021"
+            },
+            {
+              "_key": "52865923-e3bb-41b9-bbfe-36063105190c",
+              "image": null,
+              "location": "Beograd",
+              "metric": {
+                "label": "uspešna centra",
+                "value": "3"
+              },
+              "name": "Milan Jovanović",
+              "role": "Vlasnik 3 franšize",
+              "story": "Počeo sam sa jednim centrom pre 3 godine. Danas imam tri centra i tim od 15 ljudi. Metodologija Srećnog učenja je ključ uspeha - rezultati govore sami za sebe.",
+              "yearStarted": "2020"
+            },
+            {
+              "_key": "76acdf1c-a735-4098-9a84-67fde45202c8",
+              "image": null,
+              "location": "Kragujevac",
+              "metric": {
+                "label": "zadovoljnih roditelja",
+                "value": "98%"
+              },
+              "name": "Ana Stojanović",
+              "role": "Profesorka i franšizer",
+              "story": "Kao nastavnica sa 20 godina iskustva, prepoznala sam vrednost ove metodologije. Nije samo biznis - menjamo živote dece na bolje svaki dan.",
+              "yearStarted": "2022"
+            }
+          ]
+        }
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_system",
+        "_system.base",
+        "_system.base.id",
+        "_system.base.rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "differentiators",
+        "differentiators.items",
+        "differentiators.items._key",
+        "differentiators.items.description",
+        "differentiators.items.highlight",
+        "differentiators.items.icon",
+        "differentiators.items.title",
+        "differentiators.sectionTitle",
+        "enhancedHero",
+        "enhancedHero.animatedNumber",
+        "enhancedHero.animatedNumber.duration",
+        "enhancedHero.animatedNumber.suffix",
+        "enhancedHero.animatedNumber.target",
+        "enhancedHero.animationSettings",
+        "enhancedHero.animationSettings.brushStrokeColor",
+        "enhancedHero.animationSettings.brushStrokeDelay",
+        "enhancedHero.animationSettings.enableBrushStrokes",
+        "enhancedHero.animationSettings.enableTextRotation",
+        "enhancedHero.animationSettings.rotationSpeed",
+        "enhancedHero.backgroundPattern",
+        "enhancedHero.backgroundType",
+        "enhancedHero.badge",
+        "enhancedHero.brushStrokeWords",
+        "enhancedHero.features",
+        "enhancedHero.features._key",
+        "enhancedHero.features.icon",
+        "enhancedHero.features.text",
+        "enhancedHero.highlightText",
+        "enhancedHero.layout",
+        "enhancedHero.primaryCta",
+        "enhancedHero.primaryCta.href",
+        "enhancedHero.primaryCta.text",
+        "enhancedHero.secondaryCta",
+        "enhancedHero.secondaryCta.href",
+        "enhancedHero.secondaryCta.text",
+        "enhancedHero.subtitle",
+        "enhancedHero.svgBadge",
+        "enhancedHero.svgBadge.color",
+        "enhancedHero.svgBadge.position",
+        "enhancedHero.svgBadge.show",
+        "enhancedHero.svgBadge.text",
+        "enhancedHero.title",
+        "enhancedHero.titleVariants",
+        "enhancedHero.trustBadges",
+        "enhancedHero.trustBadges._key",
+        "enhancedHero.trustBadges._type",
+        "enhancedHero.trustBadges.icon",
+        "enhancedHero.trustBadges.label",
+        "enhancedHero.trustBadges.value",
+        "franchiseModels",
+        "franchiseModels.models",
+        "franchiseModels.models._key",
+        "franchiseModels.models.ctaText",
+        "franchiseModels.models.features",
+        "franchiseModels.models.highlighted",
+        "franchiseModels.models.name",
+        "franchiseModels.models.price",
+        "franchiseModels.models.subtitle",
+        "franchiseModels.sectionTitle",
+        "franchiseSteps",
+        "franchiseSteps.sectionTitle",
+        "franchiseSteps.steps",
+        "franchiseSteps.steps._key",
+        "franchiseSteps.steps.description",
+        "franchiseSteps.steps.duration",
+        "franchiseSteps.steps.icon",
+        "franchiseSteps.steps.number",
+        "franchiseSteps.steps.stepNumber",
+        "franchiseSteps.steps.title",
+        "freeResources",
+        "freeResources.resources",
+        "freeResources.resources._key",
+        "freeResources.resources._type",
+        "freeResources.resources.description",
+        "freeResources.resources.fileUrl",
+        "freeResources.resources.icon",
+        "freeResources.resources.title",
+        "heroSekcija",
+        "heroSekcija.titleVariants",
+        "heroSekcija.trustBadges",
+        "heroSekcija.trustBadges._key",
+        "heroSekcija.trustBadges._type",
+        "heroSekcija.trustBadges.icon",
+        "heroSekcija.trustBadges.link",
+        "heroSekcija.trustBadges.text",
+        "homeFaq",
+        "homeFaq.faqs",
+        "homeFaq.faqs._key",
+        "homeFaq.faqs._type",
+        "homeFaq.faqs.answer",
+        "homeFaq.faqs.question",
+        "homeFaqs",
+        "homeFaqs.faqs",
+        "homeFaqs.faqs._key",
+        "homeFaqs.faqs._ref",
+        "homeFaqs.faqs._type",
+        "homeFaqs.sectionTitle",
+        "interactiveClassroom",
+        "interactiveClassroom.ctaText",
+        "interactiveClassroom.description",
+        "interactiveClassroom.sectionTitle",
+        "leadMagnets",
+        "leadMagnets.resources",
+        "leadMagnets.resources._key",
+        "leadMagnets.resources.ctaText",
+        "leadMagnets.resources.description",
+        "leadMagnets.resources.downloadUrl",
+        "leadMagnets.resources.icon",
+        "leadMagnets.resources.title",
+        "leadMagnets.resources.type",
+        "leadMagnets.sectionTitle",
+        "newsletter",
+        "newsletter.ctaText",
+        "newsletter.description",
+        "newsletter.incentive",
+        "newsletter.title",
+        "references",
+        "statistics",
+        "statistics._key",
+        "statistics.color",
+        "statistics.description",
+        "statistics.icon",
+        "statistics.label",
+        "statistics.number",
+        "statistics.suffix",
+        "statistics.value",
+        "successStories",
+        "successStories.sectionTitle",
+        "successStories.stories",
+        "successStories.stories._key",
+        "successStories.stories.image",
+        "successStories.stories.location",
+        "successStories.stories.metric",
+        "successStories.stories.metric.label",
+        "successStories.stories.metric.value",
+        "successStories.stories.name",
+        "successStories.stories.role",
+        "successStories.stories.story",
+        "successStories.stories.yearStarted"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "homePage",
+          "count": 1
+        },
+        {
+          "field": "enhancedHero.trustBadges",
+          "targetType": "trustBadge",
+          "count": 1
+        },
+        {
+          "field": "freeResources.resources",
+          "targetType": "object",
+          "count": 3
+        },
+        {
+          "field": "heroSekcija.trustBadges",
+          "targetType": "trustBadge",
+          "count": 3
+        },
+        {
+          "field": "homeFaq.faqs",
+          "targetType": "object",
+          "count": 3
+        },
+        {
+          "field": "homeFaqs.faqs",
+          "targetType": "reference",
+          "count": 5
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "HIGH",
+      "migrationRisk": "CRITICAL",
+      "recommendations": [
+        "🚨 CRITICAL: Test migration extensively before production",
+        "🚨 CRITICAL: Create additional backups before migration",
+        "🚨 CRITICAL: Have rollback plan ready",
+        "⚠️ Complex structure - migrate in small batches",
+        "⚠️ Validate all nested objects after migration",
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "locationData",
+      "count": 10,
+      "sampleDocument": {
+        "_createdAt": "2025-08-05T22:09:14Z",
+        "_id": "RSzTvGgTwtY6EErbXkDn2n",
+        "_rev": "RSzTvGgTwtY6EErbXkDmzO",
+        "_type": "locationData",
+        "_updatedAt": "2025-08-05T22:09:14Z",
+        "centerCount": 2,
+        "city": "Novi Sad",
+        "contactInfo": {
+          "address": "Dunavska 20, Novi Sad",
+          "email": "novisad@srecno-ucenje.rs",
+          "phone": "+381 21 123 4567"
+        },
+        "coordinates": {
+          "lat": 45.2671,
+          "lng": 19.8335
+        },
+        "demandLevel": "high",
+        "description": "Univerzitetski grad sa rastućom mrežom centara. Idealno okruženje za obrazovne programe.",
+        "featured": false,
+        "isActive": true,
+        "marketSize": "large",
+        "order": 2,
+        "priceMultiplier": 1.1,
+        "region": "vojvodina",
+        "status": "active"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "centerCount",
+        "city",
+        "contactInfo",
+        "contactInfo.address",
+        "contactInfo.email",
+        "contactInfo.phone",
+        "coordinates",
+        "coordinates.lat",
+        "coordinates.lng",
+        "demandLevel",
+        "description",
+        "featured",
+        "isActive",
+        "marketSize",
+        "order",
+        "priceMultiplier",
+        "references",
+        "region",
+        "status"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "locationData",
+          "count": 10
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "methodology",
+      "count": 2,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T04:31:42Z",
+        "_id": "hWo33GCGxd3rDeD5TjTsuH",
+        "_rev": "hWo33GCGxd3rDeD5TjTspX",
+        "_type": "methodology",
+        "_updatedAt": "2025-08-03T04:31:42Z",
+        "comparison": {
+          "description": "Vidite zašto je naša metodologija superiorna",
+          "items": [
+            {
+              "aspect": "Brzina učenja",
+              "ourMethod": "5x brže uz bolje razumevanje",
+              "traditional": "Sporo, linealno učenje"
+            },
+            {
+              "aspect": "Motivacija dece",
+              "ourMethod": "Pozitivne emocije i ljubav prema učenju",
+              "traditional": "Prinuda i strah od greške"
+            },
+            {
+              "aspect": "Rezultati",
+              "ourMethod": "Dugoročno zadržavanje znanja",
+              "traditional": "Kratkoročno pamćenje"
+            }
+          ],
+          "title": "Poređenje sa tradicionalnim pristupima"
+        },
+        "hero": {
+          "description": "Naša jedinstvena metodologija kombinuje najbolje iz svetskih pristupa sa lokalnim potrebama dece.",
+          "subtitle": "Otkrijte kako Srećno učenje transformiše način na koji deca pristupaju znanju",
+          "title": "Revolucionarni pristup učenju"
+        },
+        "introduction": {
+          "description": "Srećno učenje nije samo još jedna obrazovna metodologija. To je revolucionarni pristup koji postavlja dete u centar procesa učenja.",
+          "features": [
+            {
+              "description": "Učimo decu da vole proces učenja kroz pozitivne emocije",
+              "iconType": "heart",
+              "title": "Emocionalno učenje"
+            },
+            {
+              "description": "Povećavamo brzinu čitanja uz održavanje potpunog razumevanja",
+              "iconType": "brain",
+              "title": "Brzo čitanje"
+            },
+            {
+              "description": "Razvijamo kreativno mišljenje kroz inovativne tehnike",
+              "iconType": "rocket",
+              "title": "Kreativnost"
+            }
+          ],
+          "title": "Zašto je naša metodologija drugačija?"
+        },
+        "methods": [
+          {
+            "benefits": [
+              "Povećana brzina čitanja do 5 puta",
+              "Bolje razumevanje pročitanog sadržaja",
+              "Povećana koncentracija i fokus",
+              "Razvoj vizuelne memorije"
+            ],
+            "description": "Tehnike koje omogućavaju deci da čitaju brže uz bolje razumevanje teksta.",
+            "name": "Brzo čitanje",
+            "techniques": [
+              "Vizuelno čitanje",
+              "Eliminacija unutrašnjeg glasa",
+              "Proširivanje vidnog polja",
+              "Tehnike koncentracije"
+            ]
+          },
+          {
+            "benefits": [
+              "Brže računanje od kalkulatora",
+              "Razvoj logičkog mišljenja",
+              "Povećanje koncentracije",
+              "Jačanje radne memorije"
+            ],
+            "description": "Računanje bez kalkulatora koristeći mentalne tehnike i vizualizaciju.",
+            "name": "Mentalna aritmetika",
+            "techniques": [
+              "Abakus tehnika",
+              "Vizualizacija brojeva",
+              "Mentalne skraćenice",
+              "Brzinske formule"
+            ]
+          },
+          {
+            "benefits": [
+              "Dugotrajno pamćenje gradiva",
+              "Pozitivan odnos prema učenju",
+              "Smanjenje stresa od učenja",
+              "Povećanje motivacije"
+            ],
+            "description": "Povezivanje emocija sa procesom učenja za bolje pamćenje.",
+            "name": "Emocionalno učenje",
+            "techniques": [
+              "Emotivne asocijacije",
+              "Pozitivno potkrepljenje",
+              "Igrovne tehnike",
+              "Personalizacija sadržaja"
+            ]
+          }
+        ],
+        "scientificBackground": {
+          "description": "Naša metodologija se zasniva na najnovijim istraživanjima u oblasti neuroplastičnosti i kognitivne psihologije.",
+          "researches": [
+            {
+              "description": "Mozak se može reorganizovati tokom celog života, posebno u detinjstvu.",
+              "title": "Neuroplastičnost mozga"
+            },
+            {
+              "description": "Kombinovanje različitih čula poboljšava efikasnost učenja.",
+              "title": "Multimodalno učenje"
+            },
+            {
+              "description": "Pozitivne emocije omogućavaju bolju retenciju informacija.",
+              "title": "Pozitivna psihologija"
+            }
+          ],
+          "title": "Naučna osnova naše metodologije"
+        },
+        "timeline": {
+          "description": "Pratite naš put kroz godine istraživanja i razvoja",
+          "steps": [
+            {
+              "achievements": [
+                "Analiza 50+ svetskih metodologija",
+                "Prva pilot grupa od 20 dece"
+              ],
+              "description": "Započeli smo duboko istraživanje svetskih metodologija učenja i njihove primene u našem kulturnom kontekstu.",
+              "title": "Početak istraživanja",
+              "year": "2010"
+            },
+            {
+              "achievements": [
+                "Prva grupa završila program",
+                "Razvoj osnovnog kurikuluma"
+              ],
+              "description": "Naša prva deca pokazala su neverovatne rezultate - povećanje brzine čitanja za 300%.",
+              "title": "Prvi rezultati",
+              "year": "2012"
+            },
+            {
+              "achievements": [
+                "Obuka 100+ dece",
+                "Sertifikacija instruktora"
+              ],
+              "description": "Otvorili smo prvi centar Srećno učenje u Beogradu sa 5 instruktora.",
+              "title": "Prva škola",
+              "year": "2015"
+            },
+            {
+              "achievements": [
+                "Lansiranje online platforme",
+                "10 novih lokacija"
+              ],
+              "description": "Razvili smo digitalnu platformu koja podržava naše metode učenja.",
+              "title": "Digitalizacija",
+              "year": "2018"
+            },
+            {
+              "achievements": [
+                "50+ franšiza partnera",
+                "5000+ zadovoljne dece"
+              ],
+              "description": "Tokom pandemije, proširili smo se na 50+ lokacija kroz franšizu model.",
+              "title": "Širenje mreže",
+              "year": "2020"
+            },
+            {
+              "achievements": [
+                "150+ lokacija",
+                "20.000+ zadovoljne dece",
+                "Međunarodno priznanje"
+              ],
+              "description": "Danas imamo 150+ lokacija i više od 20.000 dece je prošlo kroz naš program.",
+              "title": "Današnji dan",
+              "year": "2024"
+            }
+          ],
+          "title": "Evolucija naše metodologije"
+        },
+        "title": "Naša Metodologija"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "comparison",
+        "comparison.description",
+        "comparison.items",
+        "comparison.items.aspect",
+        "comparison.items.ourMethod",
+        "comparison.items.traditional",
+        "comparison.title",
+        "hero",
+        "hero.description",
+        "hero.subtitle",
+        "hero.title",
+        "introduction",
+        "introduction.description",
+        "introduction.features",
+        "introduction.features.description",
+        "introduction.features.iconType",
+        "introduction.features.title",
+        "introduction.title",
+        "methods",
+        "methods.benefits",
+        "methods.description",
+        "methods.name",
+        "methods.techniques",
+        "references",
+        "scientificBackground",
+        "scientificBackground.description",
+        "scientificBackground.researches",
+        "scientificBackground.researches.description",
+        "scientificBackground.researches.title",
+        "scientificBackground.title",
+        "timeline",
+        "timeline.description",
+        "timeline.steps",
+        "timeline.steps.achievements",
+        "timeline.steps.description",
+        "timeline.steps.title",
+        "timeline.steps.year",
+        "timeline.title",
+        "title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "methodology",
+          "count": 2
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "navigation",
+      "count": 3,
+      "sampleDocument": {
+        "_createdAt": "2025-08-07T19:25:56Z",
+        "_id": "drafts.navigation",
+        "_rev": "4b77c25f-cb7c-4ec8-84a2-7aea38c081af",
+        "_system": {
+          "base": {
+            "id": "navigation",
+            "rev": "YBiWwTMhT8IS37yZZlnEws"
+          }
+        },
+        "_type": "navigation",
+        "_updatedAt": "2025-08-07T19:28:33Z",
+        "ctaButton": {
+          "href": "https://iskrarakija.rs/rakija-po-izboru-casa-iskra-pljoska",
+          "style": "primary",
+          "text": "Neko CTA dugme"
+        },
+        "mainMenu": [
+          {
+            "_key": "9cdfdde9d729",
+            "label": "Franšiza",
+            "subItems": [
+              {
+                "_key": "afb8f1fb1c2f",
+                "description": "Testiram opis podkategorije",
+                "href": "https://iskrarakija.rs/rakija-po-izboru-casa-iskra-pljoska",
+                "label": "Osnovni paket"
+              }
+            ]
+          }
+        ],
+        "title": "Glavna navigacija"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_system",
+        "_system.base",
+        "_system.base.id",
+        "_system.base.rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "ctaButton",
+        "ctaButton.href",
+        "ctaButton.style",
+        "ctaButton.text",
+        "mainMenu",
+        "mainMenu._key",
+        "mainMenu.label",
+        "mainMenu.subItems",
+        "mainMenu.subItems._key",
+        "mainMenu.subItems.description",
+        "mainMenu.subItems.href",
+        "mainMenu.subItems.label",
+        "references",
+        "title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "navigation",
+          "count": 3
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "LOW",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "newsletterSubscriber",
+      "count": 1,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T03:16:55Z",
+        "_id": "EIn1TO6kzkBkpMuRkFfKZL",
+        "_rev": "EIn1TO6kzkBkpMuRkFfKVo",
+        "_type": "newsletterSubscriber",
+        "_updatedAt": "2025-08-03T03:16:55Z",
+        "email": "malisicnemanja@gmail.com",
+        "name": "zxzx",
+        "phone": "czxcz",
+        "source": "resource_template-biznis-plana",
+        "subscribedAt": "2025-08-03T03:16:55.542Z"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "email",
+        "name",
+        "phone",
+        "references",
+        "source",
+        "subscribedAt"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "newsletterSubscriber",
+          "count": 1
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "LOW",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "page",
+      "count": 5,
+      "sampleDocument": {
+        "_createdAt": "2025-08-05T22:44:24Z",
+        "_id": "books-page",
+        "_rev": "RSzTvGgTwtY6EErbXkEefk",
+        "_type": "page",
+        "_updatedAt": "2025-08-05T22:44:24Z",
+        "features": [
+          {
+            "color": "text-yellow-600",
+            "description": "Vila Bosiljčica vodi decu kroz čarobni svet jeseni",
+            "icon": "🍂",
+            "title": "Jesenja gozba"
+          },
+          {
+            "color": "text-blue-600",
+            "description": "Vila Božica otkriva lepote zime i unutrašnji mir",
+            "icon": "❄️",
+            "title": "Zimski mir"
+          },
+          {
+            "color": "text-green-600",
+            "description": "Vila Đurđica donosi energiju proleća i novih početaka",
+            "icon": "🌸",
+            "title": "Prolećna žurba"
+          },
+          "... truncated"
+        ],
+        "hero": {
+          "ctaLink": "#books",
+          "ctaText": "Pogledaj knjige",
+          "secondaryCtaLink": "/kontakt",
+          "secondaryCtaText": "Naruči komplet",
+          "subtitle": "Serija knjiga koja spaja bajku sa naukom",
+          "title": "Čarobno selo - Luka godišnjih doba"
+        },
+        "seo": {
+          "keywords": [
+            "knjige za decu",
+            "Čarobno selo",
+            "vile godišnjih doba",
+            "edukativne priče",
+            "dečja literatura"
+          ],
+          "metaDescription": "Otkrijte čarobnu seriju knjiga koje spajaju bajku sa naukom. 4 knjige o vilama godišnjih doba koje uče decu o prirodi i životnim vrednostima.",
+          "metaTitle": "Knjige - Čarobno selo Luka godišnjih doba | Srećno učenje"
+        },
+        "slug": {
+          "_type": "slug",
+          "current": "knjige"
+        },
+        "statistics": [
+          {
+            "icon": "📚",
+            "label": "Knjige u seriji",
+            "value": "4"
+          },
+          {
+            "icon": "👶",
+            "label": "Uzrast",
+            "value": "5+"
+          },
+          {
+            "icon": "⭐",
+            "label": "Pozitivnih recenzija",
+            "value": "100%"
+          },
+          "... truncated"
+        ],
+        "title": "Knjige - Čarobno selo Luka godišnjih doba"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "features",
+        "features.color",
+        "features.description",
+        "features.icon",
+        "features.title",
+        "hero",
+        "hero.ctaLink",
+        "hero.ctaText",
+        "hero.secondaryCtaLink",
+        "hero.secondaryCtaText",
+        "hero.subtitle",
+        "hero.title",
+        "references",
+        "seo",
+        "seo.keywords",
+        "seo.metaDescription",
+        "seo.metaTitle",
+        "slug",
+        "slug._type",
+        "slug.current",
+        "statistics",
+        "statistics.icon",
+        "statistics.label",
+        "statistics.value",
+        "title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "page",
+          "count": 5
+        },
+        {
+          "field": "slug",
+          "targetType": "slug",
+          "count": 5
+        },
+        {
+          "field": "featuredSuccessStories",
+          "targetType": "reference",
+          "count": 3
+        },
+        {
+          "field": "featuredTestimonials",
+          "targetType": "reference",
+          "count": 3
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": [
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "program",
+      "count": 3,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T01:47:46Z",
+        "_id": "EIn1TO6kzkBkpMuRkFFcD6",
+        "_rev": "RSzTvGgTwtY6EErbXk12tM",
+        "_type": "program",
+        "_updatedAt": "2025-08-05T20:16:11Z",
+        "ageGroup": "5-14 godina",
+        "benefits": [
+          "Brže mentalno računanje",
+          "Razvoj oba hemisfera mozga",
+          "Poboljšana memorija",
+          "... truncated"
+        ],
+        "description": "Naučite da računate brže od kalkulatora koristeći moć vizualizacije",
+        "duration": "12 meseci",
+        "groupSize": "6-8 učenika",
+        "icon": "calculator",
+        "order": 2,
+        "slug": {
+          "current": "mentalna-aritmetika"
+        },
+        "title": "Mentalna aritmetika"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "ageGroup",
+        "backReferences",
+        "backReferences._id",
+        "backReferences._type",
+        "benefits",
+        "description",
+        "duration",
+        "groupSize",
+        "icon",
+        "order",
+        "references",
+        "references._id",
+        "references._type",
+        "references.name",
+        "references.title",
+        "slug",
+        "slug.current",
+        "title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "program",
+          "count": 3
+        },
+        {
+          "field": "backReferences",
+          "targetType": "successStory",
+          "count": 3
+        },
+        {
+          "field": "references",
+          "targetType": "successStory",
+          "count": 3
+        }
+      ],
+      "backReferences": [
+        {
+          "sourceType": "successStory",
+          "count": 2
+        }
+      ],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "resource",
+      "count": 10,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T02:50:37Z",
+        "_id": "EIn1TO6kzkBkpMuRkFf93p",
+        "_rev": "EIn1TO6kzkBkpMuRkFf90I",
+        "_type": "resource",
+        "_updatedAt": "2025-08-03T02:50:37Z",
+        "category": "methodology",
+        "description": "Detaljan pregled naše obrazovne metodologije sa primerima iz prakse.",
+        "featured": true,
+        "fileSize": 2.8,
+        "pages": 32,
+        "requiresLead": false,
+        "resourceType": "pdf",
+        "slug": {
+          "current": "metodologija-srecno-ucenje-pregled"
+        },
+        "tags": [
+          "metodologija",
+          "obrazovanje",
+          "deca",
+          "... truncated"
+        ],
+        "title": "Metodologija Srećno učenje - Pregled"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "backReferences",
+        "category",
+        "description",
+        "featured",
+        "fileSize",
+        "pages",
+        "references",
+        "requiresLead",
+        "resourceType",
+        "slug",
+        "slug.current",
+        "tags",
+        "title"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "resource",
+          "count": 10
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "LOW",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    },
+    {
+      "documentType": "siteSettings",
+      "count": 3,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T01:47:44Z",
+        "_id": "hZm6tMI3obk6ZBXKfA9s2t",
+        "_rev": "SVDvN8W2oCA8eZWngS3UQR",
+        "_system": {
+          "base": {
+            "id": "hZm6tMI3obk6ZBXKfA9s2t",
+            "rev": "hZm6tMI3obk6ZBXKfA9rzt"
+          }
+        },
+        "_type": "siteSettings",
+        "_updatedAt": "2025-08-05T22:24:52Z",
+        "address": "Bulevar oslobođenja 123, 21000 Novi Sad",
+        "email": "info@srecno-ucenje.rs",
+        "logo": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-3fa0a24118b1ece64de4f8be3a8b38686a188276-1772x1772-png",
+            "_type": "reference"
+          }
+        },
+        "navigationSettings": {
+          "ctaButton": {
+            "highlighted": true,
+            "href": "/zakazivanje",
+            "style": "primary",
+            "text": "Započni sada"
+          },
+          "footer": {
+            "columns": [
+              {
+                "_key": "col1",
+                "colorAccent": "primary",
+                "links": [
+                  {
+                    "_key": "l1",
+                    "label": "Metodologija",
+                    "link": "/metodologija"
+                  },
+                  {
+                    "_key": "l2",
+                    "label": "Priče uspeha",
+                    "link": "/uspeh"
+                  },
+                  {
+                    "_key": "l3",
+                    "label": "O autorki",
+                    "link": "/o-autorki"
+                  },
+                  {
+                    "_key": "l4",
+                    "label": "Blog",
+                    "link": "/blog"
+                  }
+                ],
+                "title": "O nama"
+              },
+              {
+                "_key": "col2",
+                "colorAccent": "secondary",
+                "links": [
+                  {
+                    "_key": "l5",
+                    "label": "Modeli franšize",
+                    "link": "/fransiza-modeli"
+                  },
+                  {
+                    "_key": "l6",
+                    "label": "Kako se pridružiti",
+                    "link": "/kako-se-pridruziti"
+                  },
+                  {
+                    "_key": "l7",
+                    "label": "Lokacije",
+                    "link": "/lokacije"
+                  },
+                  {
+                    "_key": "l8",
+                    "label": "FAQ",
+                    "link": "/faq"
+                  }
+                ],
+                "title": "Franšiza"
+              },
+              {
+                "_key": "col3",
+                "colorAccent": "accent",
+                "links": [
+                  {
+                    "_key": "l9",
+                    "label": "Preuzmi materijale",
+                    "link": "/resursi"
+                  },
+                  {
+                    "_key": "l10",
+                    "label": "Preporučene knjige",
+                    "link": "/knjige"
+                  },
+                  {
+                    "_key": "l11",
+                    "label": "Obuka & Mentorstvo",
+                    "link": "/obuka-mentorstvo"
+                  },
+                  {
+                    "_key": "l12",
+                    "label": "Kontakt",
+                    "link": "/kontakt"
+                  }
+                ],
+                "title": "Resursi"
+              }
+            ]
+          },
+          "footerMenu": [
+            {
+              "_key": "fm1",
+              "title": "Politika privatnosti",
+              "url": "/privacy-policy"
+            },
+            {
+              "_key": "fm2",
+              "title": "Uslovi korišćenja",
+              "url": "/terms"
+            },
+            {
+              "_key": "fm3",
+              "title": "FAQ",
+              "url": "/faq"
+            },
+            {
+              "_key": "fm4",
+              "title": "Kontakt",
+              "url": "/kontakt"
+            }
+          ],
+          "mainMenu": {
+            "hideHomeLink": false,
+            "items": [
+              {
+                "_key": "nav1",
+                "label": "O nama",
+                "link": "/o-nama"
+              },
+              {
+                "_key": "nav2",
+                "dropdown": [
+                  {
+                    "_key": "drop1",
+                    "label": "Modeli franšize",
+                    "link": "/fransiza-modeli"
+                  },
+                  {
+                    "_key": "drop2",
+                    "label": "Kako se pridružiti",
+                    "link": "/kako-se-pridruziti"
+                  },
+                  {
+                    "_key": "drop3",
+                    "label": "Lokacije",
+                    "link": "/lokacije"
+                  },
+                  {
+                    "_key": "drop4",
+                    "label": "Kalkulator ROI",
+                    "link": "/kalkulator"
+                  }
+                ],
+                "label": "Franšiza",
+                "link": "#"
+              },
+              {
+                "_key": "nav3",
+                "label": "Metodologija",
+                "link": "/metodologija"
+              },
+              {
+                "_key": "nav4",
+                "label": "Priče uspeha",
+                "link": "/uspeh"
+              },
+              {
+                "_key": "nav5",
+                "dropdown": [
+                  {
+                    "_key": "drop5",
+                    "label": "Blog",
+                    "link": "/blog"
+                  },
+                  {
+                    "_key": "drop6",
+                    "label": "Knjige",
+                    "link": "/knjige"
+                  },
+                  {
+                    "_key": "drop7",
+                    "label": "FAQ",
+                    "link": "/faq"
+                  },
+                  {
+                    "_key": "drop8",
+                    "label": "Besplatni materijali",
+                    "link": "/resursi"
+                  }
+                ],
+                "label": "Resursi",
+                "link": "#"
+              },
+              {
+                "_key": "nav6",
+                "label": "Kontakt",
+                "link": "/kontakt"
+              }
+            ],
+            "maxItems": 7
+          }
+        },
+        "phone": "+381 60 123 4567",
+        "siteDescription": "Najuspešnija obrazovna franšiza u Srbiji. Mentalna aritmetika i brzočitanje za decu 5-16 godina. Pridružite se mreži od 50+ uspešnih partnera.",
+        "siteName": "Srećno učenje - Obrazovna franšiza",
+        "socialLinks": [
+          {
+            "_key": "hWo33GCGxd3rDeD5TiyFLr",
+            "platform": "Facebook",
+            "url": "https://facebook.com/srecnoucenje"
+          },
+          {
+            "_key": "hWo33GCGxd3rDeD5TiyFQb",
+            "platform": "Instagram",
+            "url": "https://instagram.com/srecnoucenje"
+          },
+          {
+            "_key": "hWo33GCGxd3rDeD5TiyFVL",
+            "platform": "LinkedIn",
+            "url": "https://linkedin.com/company/srecnoucenje"
+          }
+        ],
+        "workingHours": [
+          {
+            "_key": "hWo33GCGxd3rDeD5TiyF2t",
+            "day": "Ponedeljak - Petak",
+            "hours": "09:00 - 20:00"
+          },
+          {
+            "_key": "hWo33GCGxd3rDeD5TiyF7d",
+            "day": "Subota",
+            "hours": "10:00 - 18:00"
+          },
+          {
+            "_key": "hWo33GCGxd3rDeD5TiyFCN",
+            "day": "Nedelja",
+            "hours": "10:00 - 16:00"
+          },
+          "... truncated"
+        ]
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_system",
+        "_system.base",
+        "_system.base.id",
+        "_system.base.rev",
+        "_type",
+        "_updatedAt",
+        "address",
+        "backReferences",
+        "email",
+        "logo",
+        "logo._type",
+        "logo.asset",
+        "logo.asset._ref",
+        "logo.asset._type",
+        "navigationSettings",
+        "navigationSettings.ctaButton",
+        "navigationSettings.ctaButton.highlighted",
+        "navigationSettings.ctaButton.href",
+        "navigationSettings.ctaButton.style",
+        "navigationSettings.ctaButton.text",
+        "navigationSettings.footer",
+        "navigationSettings.footer.columns",
+        "navigationSettings.footer.columns._key",
+        "navigationSettings.footer.columns.colorAccent",
+        "navigationSettings.footer.columns.links",
+        "navigationSettings.footer.columns.links._key",
+        "navigationSettings.footer.columns.links.label",
+        "navigationSettings.footer.columns.links.link",
+        "navigationSettings.footer.columns.title",
+        "navigationSettings.footerMenu",
+        "navigationSettings.footerMenu._key",
+        "navigationSettings.footerMenu.title",
+        "navigationSettings.footerMenu.url",
+        "navigationSettings.mainMenu",
+        "navigationSettings.mainMenu.hideHomeLink",
+        "navigationSettings.mainMenu.items",
+        "navigationSettings.mainMenu.items._key",
+        "navigationSettings.mainMenu.items.label",
+        "navigationSettings.mainMenu.items.link",
+        "navigationSettings.mainMenu.maxItems",
+        "phone",
+        "references",
+        "siteDescription",
+        "siteName",
+        "socialLinks",
+        "socialLinks._key",
+        "socialLinks.platform",
+        "socialLinks.url",
+        "workingHours",
+        "workingHours._key",
+        "workingHours.day",
+        "workingHours.hours"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "siteSettings",
+          "count": 3
+        },
+        {
+          "field": "logo",
+          "targetType": "image",
+          "count": 2
+        },
+        {
+          "field": "logo.asset",
+          "targetType": "reference",
+          "count": 2
+        },
+        {
+          "field": "navigationSettings",
+          "targetType": "navigationSettings",
+          "count": 1
+        }
+      ],
+      "backReferences": [],
+      "assets": [
+        {
+          "field": "logo",
+          "count": 2
+        }
+      ],
+      "complexity": "MEDIUM",
+      "migrationRisk": "CRITICAL",
+      "recommendations": [
+        "🚨 CRITICAL: Test migration extensively before production",
+        "🚨 CRITICAL: Create additional backups before migration",
+        "🚨 CRITICAL: Have rollback plan ready",
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "successStory",
+      "count": 10,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T01:48:11Z",
+        "_id": "EIn1TO6kzkBkpMuRkFFf0B",
+        "_rev": "rWY7A01dUL9wO4NRChI8my",
+        "_type": "successStory",
+        "_updatedAt": "2025-08-05T20:16:14Z",
+        "afterSkills": [
+          "Brzo čitanje - 500+ reči/minut",
+          "Odlična koncentracija i fokus",
+          "Efikasno učenje za kraće vreme",
+          "... truncated"
+        ],
+        "age": "12 godina",
+        "beforeSkills": [
+          "Sporo čitanje - 150 reči/minut",
+          "Poteškoće sa koncentracijom",
+          "Dugotrajno učenje lekcija",
+          "... truncated"
+        ],
+        "content": "Pre kursa sam izbegavao da čitam knjige. Sada pročitam 2-3 knjige nedeljno! Moje ocene iz srpskog jezika su se drastično poboljšale, a učenje mi ide mnogo lakše.",
+        "featured": true,
+        "program": {
+          "_ref": "hWo33GCGxd3rDeD5Tiy8cZ"
+        },
+        "publishedAt": "2024-01-15T00:00:00.000Z",
+        "results": [
+          {
+            "label": "Brže čitanje",
+            "metric": "300%"
+          },
+          {
+            "label": "Ocena iz srpskog",
+            "metric": "Sa 3 na 5"
+          },
+          {
+            "label": "Vreme učenja",
+            "metric": "2h → 45min"
+          }
+        ],
+        "studentName": "Marko Petrović"
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "afterSkills",
+        "age",
+        "backReferences",
+        "beforeSkills",
+        "content",
+        "featured",
+        "program",
+        "program._ref",
+        "publishedAt",
+        "references",
+        "results",
+        "results.label",
+        "results.metric",
+        "studentName"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "successStory",
+          "count": 10
+        },
+        {
+          "field": "program",
+          "targetType": "unknown",
+          "count": 3
+        },
+        {
+          "field": "content",
+          "targetType": "block",
+          "count": 2
+        },
+        {
+          "field": "content.children",
+          "targetType": "span",
+          "count": 2
+        },
+        {
+          "field": "backReferences",
+          "targetType": "page",
+          "count": 3
+        },
+        {
+          "field": "references",
+          "targetType": "page",
+          "count": 3
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "MEDIUM",
+      "recommendations": [
+        "🔗 Many references - ensure all referenced documents exist first",
+        "🔗 Consider migrating referenced types before this one"
+      ]
+    },
+    {
+      "documentType": "testimonial",
+      "count": 20,
+      "sampleDocument": {
+        "_createdAt": "2025-08-03T01:48:10Z",
+        "_id": "EIn1TO6kzkBkpMuRkFFeUO",
+        "_rev": "rWY7A01dUL9wO4NRChI81U",
+        "_type": "testimonial",
+        "_updatedAt": "2025-08-05T20:15:58Z",
+        "authorName": "Milica Stojanović",
+        "authorRole": "Majka dvoje dece",
+        "content": "Neverovatna promena kod moje dece! Marko sada obožava da čita, a Ana je postala prava matematička zvezda. Preporučujem svima!",
+        "featured": true,
+        "rating": 5
+      },
+      "fields": [
+        "_createdAt",
+        "_id",
+        "_rev",
+        "_type",
+        "_updatedAt",
+        "authorName",
+        "authorRole",
+        "backReferences",
+        "content",
+        "featured",
+        "rating",
+        "references"
+      ],
+      "references": [
+        {
+          "field": "reference",
+          "targetType": "testimonial",
+          "count": 20
+        },
+        {
+          "field": "backReferences",
+          "targetType": "page",
+          "count": 3
+        },
+        {
+          "field": "references",
+          "targetType": "page",
+          "count": 3
+        }
+      ],
+      "backReferences": [],
+      "assets": [],
+      "complexity": "MEDIUM",
+      "migrationRisk": "LOW",
+      "recommendations": []
+    }
+  ],
+  "relationships": {
+    "stronglyConnected": [],
+    "orphaned": [],
+    "circularReferences": []
+  },
+  "assets": {
+    "totalAssets": 34,
+    "unreferencedAssets": 0,
+    "assetTypes": {}
+  },
+  "migrationPlan": {
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Core Infrastructure",
+        "types": [],
+        "risk": "CRITICAL",
+        "dependencies": []
+      },
+      {
+        "phase": 2,
+        "name": "Foundation Content",
+        "types": [],
+        "risk": "MEDIUM",
+        "dependencies": []
+      },
+      {
+        "phase": 3,
+        "name": "Main Content",
+        "types": [
+          "testimonial"
+        ],
+        "risk": "MEDIUM",
+        "dependencies": []
+      },
+      {
+        "phase": 4,
+        "name": "Complex Content",
+        "types": [
+          "aboutAuthor",
+          "author",
+          "blogCategory",
+          "blogPost",
+          "book",
+          "booking",
+          "bookingPage",
+          "booksLanding",
+          "calculatorResult",
+          "calculatorSettings",
+          "faq",
+          "faqCategory",
+          "franchiseApplication",
+          "franchiseField",
+          "franchiseMotivational",
+          "franchiseSection",
+          "franchiseSteps",
+          "homePage",
+          "locationData",
+          "methodology",
+          "navigation",
+          "newsletterSubscriber",
+          "page",
+          "program",
+          "resource",
+          "siteSettings",
+          "successStory"
+        ],
+        "risk": "HIGH",
+        "dependencies": [
+          "testimonial"
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "immediate": [
+      "🚨 Ensure all stakeholders are aware of the migration",
+      "📋 Schedule a maintenance window for the migration",
+      "🔐 Verify all API tokens and permissions are working",
+      "🧪 Set up a development/staging environment for testing",
+      "⚠️ 7 high-risk content types identified - review carefully"
+    ],
+    "beforeMigration": [
+      "✅ Run the export script one more time right before migration",
+      "🔒 Put the website in maintenance mode",
+      "📧 Notify users about the maintenance",
+      "🧪 Test the migration scripts on development environment",
+      "📊 Document current content counts for verification"
+    ],
+    "duringMigration": [
+      "📊 Monitor progress and log all operations",
+      "🚫 Do not modify content during migration",
+      "🔍 Validate each phase before proceeding to the next",
+      "⏸️ Be prepared to pause if issues arise",
+      "📱 Keep communication channels open with stakeholders"
+    ],
+    "afterMigration": [
+      "🔍 Verify all document counts match the export",
+      "🧪 Test all website functionality",
+      "🔗 Verify all internal links are working",
+      "🖼️ Check that all images and assets are loading",
+      "📧 Notify stakeholders of successful completion",
+      "🗂️ Archive the export files safely",
+      "📊 Document any issues encountered for future reference"
+    ]
+  }
+}

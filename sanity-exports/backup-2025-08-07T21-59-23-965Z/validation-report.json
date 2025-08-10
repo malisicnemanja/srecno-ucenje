@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-08-08T06:13:52.207Z",
+  "summary": {
+    "totalToDelete": 46,
+    "potentialIssues": 18,
+    "safeDeletions": 28
+  },
+  "categories": {
+    "calculatorResults": {
+      "found": 13,
+      "notFound": 0,
+      "hasReferences": 0,
+      "safeToDelete": 13
+    },
+    "franchiseFields": {
+      "found": 12,
+      "notFound": 0,
+      "hasReferences": 12,
+      "safeToDelete": 0
+    },
+    "aboutAuthors": {
+      "found": 2,
+      "notFound": 0,
+      "hasReferences": 0,
+      "safeToDelete": 2
+    },
+    "faqCategories": {
+      "found": 6,
+      "notFound": 0,
+      "hasReferences": 6,
+      "safeToDelete": 0
+    },
+    "faqs": {
+      "found": 13,
+      "notFound": 0,
+      "hasReferences": 0,
+      "safeToDelete": 13
+    }
+  },
+  "recommendations": [
+    "⚠️ Some items have incoming references. Review these carefully before deletion.",
+    "📝 11 testimonials need manual review.",
+    "🔄 7 locations need field updates."
+  ]
+}

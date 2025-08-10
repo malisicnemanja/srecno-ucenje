@@ -1,0 +1,239 @@
+{
+  "_type": "franchiseSection",
+  "_exportedAt": "2025-08-07T21:59:26.499Z",
+  "_count": 4,
+  "documents": [
+    {
+      "_createdAt": "2025-08-06T13:21:21Z",
+      "_id": "SBvfECCtZ11PRIA8QdOXJb",
+      "_rev": "SBvfECCtZ11PRIA8QdOXHW",
+      "_type": "franchiseSection",
+      "_updatedAt": "2025-08-06T13:21:21Z",
+      "backReferences": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXRv",
+          "_type": "franchiseApplication"
+        }
+      ],
+      "description": "Ovde želimo da čujemo Vašu priču - šta Vas motiviše, kakvi su Vaši planovi i kako vidite sebe u ulozi franšiize Srećno učenje.",
+      "fields": [
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLWB8B",
+          "_type": "reference"
+        },
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLWBDV",
+          "_type": "reference"
+        },
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLWBIp",
+          "_type": "reference"
+        },
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLWBTT",
+          "_type": "reference"
+        },
+        {
+          "_ref": "SBvfECCtZ11PRIA8QdOXDM",
+          "_type": "reference"
+        }
+      ],
+      "helpText": "Budite iskreni i detaljni - ovo nam pomaže da procenimo da li ste pravi kandidat.",
+      "icon": "target",
+      "isRequired": true,
+      "order": 2,
+      "progressWeight": 60,
+      "references": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXRv",
+          "_type": "franchiseApplication",
+          "name": null,
+          "title": "Prijava za franšizu Srećno učenje"
+        }
+      ],
+      "sectionId": "motivation",
+      "subtitle": "Zašto baš Vi i zašto baš sada?",
+      "title": "Motivacija i ideja",
+      "validationRules": {
+        "customValidationMessage": "Molimo popunite sve motivacione odgovore da biste nastavili.",
+        "minRequiredFields": 4
+      }
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:29Z",
+      "_id": "oWtMwMRBoarauLfrKfPb3h",
+      "_rev": "oWtMwMRBoarauLfrKfPb10",
+      "_type": "franchiseSection",
+      "_updatedAt": "2025-08-06T13:06:29Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMqJZ",
+          "_type": "franchiseApplication"
+        }
+      ],
+      "description": "Ovde želimo da čujemo Vašu priču - šta Vas motiviše, kakvi su Vaši planovi i kako vidite sebe u ulozi franšiize Srećno učenje.",
+      "fields": [
+        {
+          "_ref": "SBvfECCtZ11PRIA8QdEqoX",
+          "_type": "reference"
+        },
+        {
+          "_ref": "SBvfECCtZ11PRIA8QdEqum",
+          "_type": "reference"
+        },
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLMpsx",
+          "_type": "reference"
+        },
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLMpyH",
+          "_type": "reference"
+        },
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLMq3b",
+          "_type": "reference"
+        }
+      ],
+      "helpText": "Budite iskreni i detaljni - ovo nam pomaže da procenimo da li ste pravi kandidat.",
+      "icon": "target",
+      "isRequired": true,
+      "order": 2,
+      "progressWeight": 60,
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMqJZ",
+          "_type": "franchiseApplication",
+          "name": null,
+          "title": "Prijava za franšizu Srećno učenje"
+        }
+      ],
+      "sectionId": "motivation",
+      "subtitle": "Zašto baš Vi i zašto baš sada?",
+      "title": "Motivacija i ideja",
+      "validationRules": {
+        "customValidationMessage": "Molimo popunite sve motivacione odgovore da biste nastavili.",
+        "minRequiredFields": 4
+      }
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:28Z",
+      "_id": "tqJG5yH49IKSFNIKiLMq8v",
+      "_rev": "tqJG5yH49IKSFNIKiLMq79",
+      "_type": "franchiseSection",
+      "_updatedAt": "2025-08-06T13:06:28Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMqJZ",
+          "_type": "franchiseApplication"
+        }
+      ],
+      "description": "U ovom delu želimo da Vas upoznamo kao osobu, gde radite, šta Vas pokreće i kakvo je Vaše iskustvo. Ovi podaci nam pomažu da bolje razumemo Vaš profil.",
+      "fields": [
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLMpXf",
+          "_type": "reference"
+        },
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLMpcz",
+          "_type": "reference"
+        },
+        {
+          "_ref": "SBvfECCtZ11PRIA8QdEqTj",
+          "_type": "reference"
+        },
+        {
+          "_ref": "SBvfECCtZ11PRIA8QdEqgD",
+          "_type": "reference"
+        },
+        {
+          "_ref": "oWtMwMRBoarauLfrKfPaa4",
+          "_type": "reference"
+        },
+        {
+          "_ref": "oWtMwMRBoarauLfrKfPanX",
+          "_type": "reference"
+        },
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLMpiJ",
+          "_type": "reference"
+        }
+      ],
+      "helpText": "Molimo vas da budete precizni jer će ovi podaci biti korišćeni tokom celog procesa.",
+      "icon": "user",
+      "isRequired": true,
+      "order": 1,
+      "progressWeight": 40,
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMqJZ",
+          "_type": "franchiseApplication",
+          "name": null,
+          "title": "Prijava za franšizu Srećno učenje"
+        }
+      ],
+      "sectionId": "general-info",
+      "subtitle": "Hajde da se upoznamo",
+      "title": "Opšti podaci"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:20Z",
+      "_id": "tqJG5yH49IKSFNIKiLWBvr",
+      "_rev": "tqJG5yH49IKSFNIKiLWBu5",
+      "_type": "franchiseSection",
+      "_updatedAt": "2025-08-06T13:21:20Z",
+      "backReferences": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXRv",
+          "_type": "franchiseApplication"
+        }
+      ],
+      "description": "U ovom delu želimo da Vas upoznamo kao osobu, gde radite, šta Vas pokreće i kakvo je Vaše iskustvo. Ovi podaci nam pomažu da bolje razumemo Vaš profil.",
+      "fields": [
+        {
+          "_ref": "oWtMwMRBoarauLfrKfgDm8",
+          "_type": "reference"
+        },
+        {
+          "_ref": "SBvfECCtZ11PRIA8QdOW8m",
+          "_type": "reference"
+        },
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLWAqR",
+          "_type": "reference"
+        },
+        {
+          "_ref": "oWtMwMRBoarauLfrKfgED4",
+          "_type": "reference"
+        },
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLWAxX",
+          "_type": "reference"
+        },
+        {
+          "_ref": "SBvfECCtZ11PRIA8QdOWF1",
+          "_type": "reference"
+        },
+        {
+          "_ref": "tqJG5yH49IKSFNIKiLWB2r",
+          "_type": "reference"
+        }
+      ],
+      "helpText": "Molimo vas da budete precizni jer će ovi podaci biti korišćeni tokom celog procesa.",
+      "icon": "user",
+      "isRequired": true,
+      "order": 1,
+      "progressWeight": 40,
+      "references": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXRv",
+          "_type": "franchiseApplication",
+          "name": null,
+          "title": "Prijava za franšizu Srećno učenje"
+        }
+      ],
+      "sectionId": "general-info",
+      "subtitle": "Hajde da se upoznamo",
+      "title": "Opšti podaci"
+    }
+  ]
+}

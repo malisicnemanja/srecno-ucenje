@@ -1,0 +1,905 @@
+{
+  "_type": "franchiseField",
+  "_exportedAt": "2025-08-07T21:59:26.585Z",
+  "_count": 24,
+  "documents": [
+    {
+      "_createdAt": "2025-08-06T13:06:17Z",
+      "_id": "SBvfECCtZ11PRIA8QdEqTj",
+      "_rev": "SBvfECCtZ11PRIA8QdEqRe",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:17Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "telefon",
+      "helpText": "Unesite broj mobilnog telefona",
+      "isRequired": true,
+      "label": "Broj telefona",
+      "order": 3,
+      "placeholder": "+381 XX XXX XXXX",
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "tel",
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:18Z",
+      "_id": "SBvfECCtZ11PRIA8QdEqgD",
+      "_rev": "SBvfECCtZ11PRIA8QdEqe8",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:18Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "zanimanje",
+      "helpText": "Opišite vašu trenutnu profesiju ili oblast rada",
+      "isRequired": true,
+      "label": "Trenutno zanimanje",
+      "order": 4,
+      "placeholder": "npr. Nastavnik, Menadžer, Preduzetnik...",
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "text",
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:23Z",
+      "_id": "SBvfECCtZ11PRIA8QdEqoX",
+      "_rev": "SBvfECCtZ11PRIA8QdEqmS",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:23Z",
+      "backReferences": [
+        {
+          "_id": "oWtMwMRBoarauLfrKfPb3h",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "motivacija_razlog",
+      "helpText": "Želimo da čujemo vašu iskrenu priču o tome što vas pokreće",
+      "isRequired": true,
+      "label": "Zašto želite da otvorite franšizu Srećno učenje?",
+      "order": 1,
+      "placeholder": "Opišite vašu motivaciju u nekoliko rečenica...",
+      "references": [
+        {
+          "_id": "oWtMwMRBoarauLfrKfPb3h",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Motivacija i ideja"
+        }
+      ],
+      "type": "textarea",
+      "validation": {
+        "customErrorMessage": "Odgovor treba da ima između 100 i 1000 karaktera",
+        "maxLength": 1000,
+        "minLength": 100
+      },
+      "width": "full"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:24Z",
+      "_id": "SBvfECCtZ11PRIA8QdEqum",
+      "_rev": "SBvfECCtZ11PRIA8QdEqsh",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:24Z",
+      "backReferences": [
+        {
+          "_id": "oWtMwMRBoarauLfrKfPb3h",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "iskustvo_edukacija",
+      "helpText": "Ukljutite formalno i neformalno iskustvo",
+      "isRequired": true,
+      "label": "Kakvo iskustvo imate sa decom/edukacijom?",
+      "order": 2,
+      "placeholder": "Opišite vaše iskustvo u radu sa decom ili u edukaciji...",
+      "references": [
+        {
+          "_id": "oWtMwMRBoarauLfrKfPb3h",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Motivacija i ideja"
+        }
+      ],
+      "type": "textarea",
+      "validation": {
+        "maxLength": 800,
+        "minLength": 50
+      },
+      "width": "full"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:09Z",
+      "_id": "SBvfECCtZ11PRIA8QdOW8m",
+      "_rev": "SBvfECCtZ11PRIA8QdOW6h",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:09Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "email",
+      "helpText": "Unesite valjan email koji redovno proveravate",
+      "isRequired": true,
+      "label": "Email adresa",
+      "order": 2,
+      "placeholder": "vasa.email@domen.com",
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "email",
+      "validation": {
+        "customErrorMessage": "Molimo unesite valjan email format"
+      },
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:13Z",
+      "_id": "SBvfECCtZ11PRIA8QdOWF1",
+      "_rev": "SBvfECCtZ11PRIA8QdOWCw",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:13Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "iskustvo",
+      "helpText": "Koliko godina imate ukupnog radnog iskustva",
+      "isRequired": true,
+      "label": "Godine radnog iskustva",
+      "options": [
+        {
+          "label": "Manje od 1 godine",
+          "value": "0-1"
+        },
+        {
+          "label": "1-3 godine",
+          "value": "1-3"
+        },
+        {
+          "label": "3-5 godina",
+          "value": "3-5"
+        },
+        {
+          "label": "5-10 godina",
+          "value": "5-10"
+        },
+        {
+          "label": "Više od 10 godina",
+          "value": "10+"
+        }
+      ],
+      "order": 6,
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "select",
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:19Z",
+      "_id": "SBvfECCtZ11PRIA8QdOXDM",
+      "_rev": "SBvfECCtZ11PRIA8QdOXBH",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:19Z",
+      "backReferences": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXJb",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "budjet",
+      "helpText": "Koliko novca možete da izdvojite za početak",
+      "isRequired": true,
+      "label": "Planirani početni budžet",
+      "options": [
+        {
+          "label": "Do 2.000€",
+          "value": "0-2000"
+        },
+        {
+          "label": "2.000€ - 5.000€",
+          "value": "2000-5000"
+        },
+        {
+          "label": "5.000€ - 10.000€",
+          "value": "5000-10000"
+        },
+        {
+          "label": "Više od 10.000€",
+          "value": "10000+"
+        },
+        {
+          "label": "Još uvek ne znam",
+          "value": "unknown"
+        }
+      ],
+      "order": 5,
+      "references": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXJb",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Motivacija i ideja"
+        }
+      ],
+      "type": "select",
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:19Z",
+      "_id": "oWtMwMRBoarauLfrKfPaa4",
+      "_rev": "oWtMwMRBoarauLfrKfPaXN",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:19Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "obrazovanje",
+      "helpText": "Izaberite vaš najviši stepen završenog obrazovanja",
+      "isRequired": true,
+      "label": "Nivo obrazovanja",
+      "options": [
+        {
+          "label": "Srednja škola",
+          "value": "srednja_skola"
+        },
+        {
+          "label": "Viša škola",
+          "value": "visa_skola"
+        },
+        {
+          "label": "Fakultet (diplomirani)",
+          "value": "fakultet"
+        },
+        {
+          "label": "Master studije",
+          "value": "master"
+        },
+        {
+          "label": "Doktorske studije",
+          "value": "doktorat"
+        }
+      ],
+      "order": 5,
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "select",
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:21Z",
+      "_id": "oWtMwMRBoarauLfrKfPanX",
+      "_rev": "oWtMwMRBoarauLfrKfPakq",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:21Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "iskustvo",
+      "helpText": "Koliko godina imate ukupnog radnog iskustva",
+      "isRequired": true,
+      "label": "Godine radnog iskustva",
+      "options": [
+        {
+          "label": "Manje od 1 godine",
+          "value": "0-1"
+        },
+        {
+          "label": "1-3 godine",
+          "value": "1-3"
+        },
+        {
+          "label": "3-5 godina",
+          "value": "3-5"
+        },
+        {
+          "label": "5-10 godina",
+          "value": "5-10"
+        },
+        {
+          "label": "Više od 10 godina",
+          "value": "10+"
+        }
+      ],
+      "order": 6,
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "select",
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:08Z",
+      "_id": "oWtMwMRBoarauLfrKfgDm8",
+      "_rev": "oWtMwMRBoarauLfrKfgDjR",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:08Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "ime_prezime",
+      "helpText": "Unesite vaše ime i prezime kako stoji u ličnim dokumentima",
+      "isRequired": true,
+      "label": "Ime i prezime",
+      "order": 1,
+      "placeholder": "Unesite vaše puno ime",
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "text",
+      "validation": {
+        "customErrorMessage": "Ime i prezime mora imati između 2 i 50 karaktera",
+        "maxLength": 50,
+        "minLength": 2
+      },
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:11Z",
+      "_id": "oWtMwMRBoarauLfrKfgED4",
+      "_rev": "oWtMwMRBoarauLfrKfgEAN",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:11Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "zanimanje",
+      "helpText": "Opišite vašu trenutnu profesiju ili oblast rada",
+      "isRequired": true,
+      "label": "Trenutno zanimanje",
+      "order": 4,
+      "placeholder": "npr. Nastavnik, Menadžer, Preduzetnik...",
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "text",
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:15Z",
+      "_id": "tqJG5yH49IKSFNIKiLMpXf",
+      "_rev": "tqJG5yH49IKSFNIKiLMpVt",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:15Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "ime_prezime",
+      "helpText": "Unesite vaše ime i prezime kako stoji u ličnim dokumentima",
+      "isRequired": true,
+      "label": "Ime i prezime",
+      "order": 1,
+      "placeholder": "Unesite vaše puno ime",
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "text",
+      "validation": {
+        "customErrorMessage": "Ime i prezime mora imati između 2 i 50 karaktera",
+        "maxLength": 50,
+        "minLength": 2
+      },
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:16Z",
+      "_id": "tqJG5yH49IKSFNIKiLMpcz",
+      "_rev": "tqJG5yH49IKSFNIKiLMpbD",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:16Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "email",
+      "helpText": "Unesite valjan email koji redovno proveravate",
+      "isRequired": true,
+      "label": "Email adresa",
+      "order": 2,
+      "placeholder": "vasa.email@domen.com",
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "email",
+      "validation": {
+        "customErrorMessage": "Molimo unesite valjan email format"
+      },
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:22Z",
+      "_id": "tqJG5yH49IKSFNIKiLMpiJ",
+      "_rev": "tqJG5yH49IKSFNIKiLMpgX",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:22Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "lokacija",
+      "helpText": "U kom gradu/opštini planirate da otvorite franšizu",
+      "isRequired": true,
+      "label": "Željena lokacija franšize",
+      "order": 7,
+      "placeholder": "Grad ili opština...",
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLMq8v",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "text",
+      "width": "full"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:25Z",
+      "_id": "tqJG5yH49IKSFNIKiLMpsx",
+      "_rev": "tqJG5yH49IKSFNIKiLMprB",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:25Z",
+      "backReferences": [
+        {
+          "_id": "oWtMwMRBoarauLfrKfPb3h",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "ciljevi_godina",
+      "helpText": "Konkretni, merljivi ciljevi koje planirate da ostvarite",
+      "isRequired": true,
+      "label": "Vaši ciljevi za prvih 12 meseci",
+      "order": 3,
+      "placeholder": "Šta želite da postignete u prvoj godini rada...",
+      "references": [
+        {
+          "_id": "oWtMwMRBoarauLfrKfPb3h",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Motivacija i ideja"
+        }
+      ],
+      "type": "textarea",
+      "width": "full"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:26Z",
+      "_id": "tqJG5yH49IKSFNIKiLMpyH",
+      "_rev": "tqJG5yH49IKSFNIKiLMpwV",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:26Z",
+      "backReferences": [
+        {
+          "_id": "oWtMwMRBoarauLfrKfPb3h",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "dostupno_vreme",
+      "helpText": "Koliko sati nedeljno možete da posvetite franšizi",
+      "isRequired": true,
+      "label": "Dostupno vreme nedeljno",
+      "options": [
+        {
+          "label": "Do 10 sati (part-time)",
+          "value": "0-10"
+        },
+        {
+          "label": "10-20 sati",
+          "value": "10-20"
+        },
+        {
+          "label": "20-30 sati",
+          "value": "20-30"
+        },
+        {
+          "label": "30-40 sati (full-time)",
+          "value": "30-40"
+        },
+        {
+          "label": "Više od 40 sati",
+          "value": "40+"
+        }
+      ],
+      "order": 4,
+      "references": [
+        {
+          "_id": "oWtMwMRBoarauLfrKfPb3h",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Motivacija i ideja"
+        }
+      ],
+      "type": "select",
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:06:27Z",
+      "_id": "tqJG5yH49IKSFNIKiLMq3b",
+      "_rev": "tqJG5yH49IKSFNIKiLMq1p",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:06:27Z",
+      "backReferences": [
+        {
+          "_id": "oWtMwMRBoarauLfrKfPb3h",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "budjet",
+      "helpText": "Koliko novca možete da izdvojite za početak",
+      "isRequired": true,
+      "label": "Planirani početni budžet",
+      "options": [
+        {
+          "label": "Do 2.000€",
+          "value": "0-2000"
+        },
+        {
+          "label": "2.000€ - 5.000€",
+          "value": "2000-5000"
+        },
+        {
+          "label": "5.000€ - 10.000€",
+          "value": "5000-10000"
+        },
+        {
+          "label": "Više od 10.000€",
+          "value": "10000+"
+        },
+        {
+          "label": "Još uvek ne znam",
+          "value": "unknown"
+        }
+      ],
+      "order": 5,
+      "references": [
+        {
+          "_id": "oWtMwMRBoarauLfrKfPb3h",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Motivacija i ideja"
+        }
+      ],
+      "type": "select",
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:10Z",
+      "_id": "tqJG5yH49IKSFNIKiLWAqR",
+      "_rev": "tqJG5yH49IKSFNIKiLWAof",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:10Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "telefon",
+      "helpText": "Unesite broj mobilnog telefona",
+      "isRequired": true,
+      "label": "Broj telefona",
+      "order": 3,
+      "placeholder": "+381 XX XXX XXXX",
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "tel",
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:12Z",
+      "_id": "tqJG5yH49IKSFNIKiLWAxX",
+      "_rev": "tqJG5yH49IKSFNIKiLWAvl",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:12Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "obrazovanje",
+      "helpText": "Izaberite vaš najviši stepen završenog obrazovanja",
+      "isRequired": true,
+      "label": "Nivo obrazovanja",
+      "options": [
+        {
+          "label": "Srednja škola",
+          "value": "srednja_skola"
+        },
+        {
+          "label": "Viša škola",
+          "value": "visa_skola"
+        },
+        {
+          "label": "Fakultet (diplomirani)",
+          "value": "fakultet"
+        },
+        {
+          "label": "Master studije",
+          "value": "master"
+        },
+        {
+          "label": "Doktorske studije",
+          "value": "doktorat"
+        }
+      ],
+      "order": 5,
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "select",
+      "width": "half"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:14Z",
+      "_id": "tqJG5yH49IKSFNIKiLWB2r",
+      "_rev": "tqJG5yH49IKSFNIKiLWB15",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:14Z",
+      "backReferences": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "lokacija",
+      "helpText": "U kom gradu/opštini planirate da otvorite franšizu",
+      "isRequired": true,
+      "label": "Željena lokacija franšize",
+      "order": 7,
+      "placeholder": "Grad ili opština...",
+      "references": [
+        {
+          "_id": "tqJG5yH49IKSFNIKiLWBvr",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Opšti podaci"
+        }
+      ],
+      "type": "text",
+      "width": "full"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:15Z",
+      "_id": "tqJG5yH49IKSFNIKiLWB8B",
+      "_rev": "tqJG5yH49IKSFNIKiLWB6P",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:15Z",
+      "backReferences": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXJb",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "motivacija_razlog",
+      "helpText": "Želimo da čujemo vašu iskrenu priču o tome što vas pokreće",
+      "isRequired": true,
+      "label": "Zašto želite da otvorite franšizu Srećno učenje?",
+      "order": 1,
+      "placeholder": "Opišite vašu motivaciju u nekoliko rečenica...",
+      "references": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXJb",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Motivacija i ideja"
+        }
+      ],
+      "type": "textarea",
+      "validation": {
+        "customErrorMessage": "Odgovor treba da ima između 100 i 1000 karaktera",
+        "maxLength": 1000,
+        "minLength": 100
+      },
+      "width": "full"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:16Z",
+      "_id": "tqJG5yH49IKSFNIKiLWBDV",
+      "_rev": "tqJG5yH49IKSFNIKiLWBBj",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:16Z",
+      "backReferences": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXJb",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "iskustvo_edukacija",
+      "helpText": "Ukljutite formalno i neformalno iskustvo",
+      "isRequired": true,
+      "label": "Kakvo iskustvo imate sa decom/edukacijom?",
+      "order": 2,
+      "placeholder": "Opišite vaše iskustvo u radu sa decom ili u edukaciji...",
+      "references": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXJb",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Motivacija i ideja"
+        }
+      ],
+      "type": "textarea",
+      "validation": {
+        "maxLength": 800,
+        "minLength": 50
+      },
+      "width": "full"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:17Z",
+      "_id": "tqJG5yH49IKSFNIKiLWBIp",
+      "_rev": "tqJG5yH49IKSFNIKiLWBH3",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:17Z",
+      "backReferences": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXJb",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "ciljevi_godina",
+      "helpText": "Konkretni, merljivi ciljevi koje planirate da ostvarite",
+      "isRequired": true,
+      "label": "Vaši ciljevi za prvih 12 meseci",
+      "order": 3,
+      "placeholder": "Šta želite da postignete u prvoj godini rada...",
+      "references": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXJb",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Motivacija i ideja"
+        }
+      ],
+      "type": "textarea",
+      "width": "full"
+    },
+    {
+      "_createdAt": "2025-08-06T13:21:18Z",
+      "_id": "tqJG5yH49IKSFNIKiLWBTT",
+      "_rev": "tqJG5yH49IKSFNIKiLWBRh",
+      "_type": "franchiseField",
+      "_updatedAt": "2025-08-06T13:21:18Z",
+      "backReferences": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXJb",
+          "_type": "franchiseSection"
+        }
+      ],
+      "fieldId": "dostupno_vreme",
+      "helpText": "Koliko sati nedeljno možete da posvetite franšizi",
+      "isRequired": true,
+      "label": "Dostupno vreme nedeljno",
+      "options": [
+        {
+          "label": "Do 10 sati (part-time)",
+          "value": "0-10"
+        },
+        {
+          "label": "10-20 sati",
+          "value": "10-20"
+        },
+        {
+          "label": "20-30 sati",
+          "value": "20-30"
+        },
+        {
+          "label": "30-40 sati (full-time)",
+          "value": "30-40"
+        },
+        {
+          "label": "Više od 40 sati",
+          "value": "40+"
+        }
+      ],
+      "order": 4,
+      "references": [
+        {
+          "_id": "SBvfECCtZ11PRIA8QdOXJb",
+          "_type": "franchiseSection",
+          "name": null,
+          "title": "Motivacija i ideja"
+        }
+      ],
+      "type": "select",
+      "width": "half"
+    }
+  ]
+}

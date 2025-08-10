@@ -1,0 +1,22 @@
+{
+  "_type": "franchiseSteps",
+  "_exportedAt": "2025-08-07T21:59:26.340Z",
+  "_count": 1,
+  "documents": [
+    {
+      "_createdAt": "2025-08-07T20:36:19Z",
+      "_id": "drafts.8cfac59a-3083-47fa-afb1-23df17c5dbc0",
+      "_rev": "a053e711-99fe-4565-b6ee-88aacf89d83c",
+      "_type": "franchiseSteps",
+      "_updatedAt": "2025-08-07T20:36:19Z",
+      "actionButton": {
+        "style": "primary"
+      },
+      "backReferences": [],
+      "color": "green",
+      "isActive": true,
+      "references": [],
+      "title": "a"
+    }
+  ]
+}

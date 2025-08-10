@@ -1,0 +1,449 @@
+{
+  "_type": "page",
+  "_exportedAt": "2025-08-07T21:59:27.265Z",
+  "_count": 5,
+  "documents": [
+    {
+      "_createdAt": "2025-08-05T22:44:24Z",
+      "_id": "books-page",
+      "_rev": "RSzTvGgTwtY6EErbXkEefk",
+      "_type": "page",
+      "_updatedAt": "2025-08-05T22:44:24Z",
+      "backReferences": [],
+      "features": [
+        {
+          "color": "text-yellow-600",
+          "description": "Vila Bosiljčica vodi decu kroz čarobni svet jeseni",
+          "icon": "🍂",
+          "title": "Jesenja gozba"
+        },
+        {
+          "color": "text-blue-600",
+          "description": "Vila Božica otkriva lepote zime i unutrašnji mir",
+          "icon": "❄️",
+          "title": "Zimski mir"
+        },
+        {
+          "color": "text-green-600",
+          "description": "Vila Đurđica donosi energiju proleća i novih početaka",
+          "icon": "🌸",
+          "title": "Prolećna žurba"
+        },
+        {
+          "color": "text-red-600",
+          "description": "Vila Sunčica čuva tajne leta i prijateljstva",
+          "icon": "☀️",
+          "title": "Letnja vreva"
+        }
+      ],
+      "hero": {
+        "ctaLink": "#books",
+        "ctaText": "Pogledaj knjige",
+        "secondaryCtaLink": "/kontakt",
+        "secondaryCtaText": "Naruči komplet",
+        "subtitle": "Serija knjiga koja spaja bajku sa naukom",
+        "title": "Čarobno selo - Luka godišnjih doba"
+      },
+      "references": [],
+      "seo": {
+        "keywords": [
+          "knjige za decu",
+          "Čarobno selo",
+          "vile godišnjih doba",
+          "edukativne priče",
+          "dečja literatura"
+        ],
+        "metaDescription": "Otkrijte čarobnu seriju knjiga koje spajaju bajku sa naukom. 4 knjige o vilama godišnjih doba koje uče decu o prirodi i životnim vrednostima.",
+        "metaTitle": "Knjige - Čarobno selo Luka godišnjih doba | Srećno učenje"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "knjige"
+      },
+      "statistics": [
+        {
+          "icon": "📚",
+          "label": "Knjige u seriji",
+          "value": "4"
+        },
+        {
+          "icon": "👶",
+          "label": "Uzrast",
+          "value": "5+"
+        },
+        {
+          "icon": "⭐",
+          "label": "Pozitivnih recenzija",
+          "value": "100%"
+        },
+        {
+          "icon": "😊",
+          "label": "Zadovoljnih čitalaca",
+          "value": "1000+"
+        }
+      ],
+      "title": "Knjige - Čarobno selo Luka godišnjih doba"
+    },
+    {
+      "_createdAt": "2025-08-05T22:44:25Z",
+      "_id": "calculators-page",
+      "_rev": "rWY7A01dUL9wO4NRChTbhs",
+      "_type": "page",
+      "_updatedAt": "2025-08-05T22:44:25Z",
+      "backReferences": [],
+      "features": [
+        {
+          "color": "text-primary-500",
+          "description": "Izračunajte potencijalni povrat na investiciju",
+          "icon": "💰",
+          "title": "ROI Kalkulator"
+        },
+        {
+          "color": "text-secondary-500",
+          "description": "Saznajte ukupnu potrebnu investiciju za vaš centar",
+          "icon": "📊",
+          "title": "Kalkulator investicije"
+        },
+        {
+          "color": "text-accent-500",
+          "description": "Procenite mesečne i godišnje prihode",
+          "icon": "📈",
+          "title": "Kalkulator prihoda"
+        },
+        {
+          "color": "text-warm-500",
+          "description": "Uporedite različite franchise modele",
+          "icon": "⚖️",
+          "title": "Kalkulator poređenja"
+        }
+      ],
+      "hero": {
+        "ctaLink": "#roi-calculator",
+        "ctaText": "Koristi ROI kalkulator",
+        "secondaryCtaLink": "/kontakt",
+        "secondaryCtaText": "Kontaktiraj nas",
+        "subtitle": "Alati koji vam pomažu da donesete informisanu odluku",
+        "title": "Kalkulatori za planiranje"
+      },
+      "references": [],
+      "seo": {
+        "keywords": [
+          "ROI kalkulator",
+          "franšiza kalkulator",
+          "investicija",
+          "prihodi",
+          "planiranje"
+        ],
+        "metaDescription": "Koristite naše kalkulatore da procenite ROI, potrebnu investiciju i potencijalne prihode od franšize Srećno učenje.",
+        "metaTitle": "Kalkulatori za franšizu | Srećno učenje"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "kalkulatori"
+      },
+      "title": "Kalkulatori - Procenite svoju investiciju"
+    },
+    {
+      "_createdAt": "2025-08-05T22:44:23Z",
+      "_id": "franchise-page",
+      "_rev": "rWY7A01dUL9wO4NRChTbbw",
+      "_type": "page",
+      "_updatedAt": "2025-08-05T22:44:23Z",
+      "backReferences": [],
+      "features": [
+        {
+          "color": "text-primary-500",
+          "description": "ROI od 150-300% u prvoj godini rada",
+          "icon": "💰",
+          "title": "Brz povrat investicije"
+        },
+        {
+          "color": "text-secondary-500",
+          "description": "20.000+ zadovoljne dece i roditelja",
+          "icon": "🎯",
+          "title": "Dokazana metodologija"
+        },
+        {
+          "color": "text-accent-500",
+          "description": "Kompletan sistem podrške od prvog dana",
+          "icon": "🤝",
+          "title": "Kontinuirana podrška"
+        },
+        {
+          "color": "text-warm-500",
+          "description": "Rastući segment dodatnog obrazovanja",
+          "icon": "📈",
+          "title": "Tržište u ekspanziji"
+        }
+      ],
+      "hero": {
+        "ctaLink": "/franchise-models",
+        "ctaText": "Saznaj više o investiciji",
+        "secondaryCtaLink": "/kontakt",
+        "secondaryCtaText": "Zakaži konsultacije",
+        "subtitle": "Poslovni model koji je već dokazao uspeh u 10 zemalja",
+        "title": "Pokretanje franšize je jednostavno"
+      },
+      "references": [],
+      "seo": {
+        "keywords": [
+          "franšiza",
+          "investicija",
+          "brzočitanje",
+          "mentalna aritmetika",
+          "obrazovanje",
+          "poslovni model"
+        ],
+        "metaDescription": "Pridružite se uspešnoj mreži centara za brzočitanje i mentalnu aritmetiku. ROI 150-300%, kompletna podrška, dokazana metodologija.",
+        "metaTitle": "Franšiza Srećno učenje - Investicija u budućnost"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "fransiza"
+      },
+      "statistics": [
+        {
+          "icon": "💰",
+          "label": "ROI u prvoj godini",
+          "value": "150-300%"
+        },
+        {
+          "icon": "💵",
+          "label": "Minimalna investicija",
+          "value": "€3.500"
+        },
+        {
+          "icon": "⚡",
+          "label": "Do pokretanja",
+          "value": "30 dana"
+        },
+        {
+          "icon": "🤝",
+          "label": "Podrška",
+          "value": "24/7"
+        }
+      ],
+      "title": "Franšiza - Pridružite se uspešnoj mreži"
+    },
+    {
+      "_createdAt": "2025-08-05T22:42:18Z",
+      "_id": "homepage",
+      "_rev": "RSzTvGgTwtY6EErbXkEkR5",
+      "_type": "page",
+      "_updatedAt": "2025-08-05T22:46:04Z",
+      "backReferences": [],
+      "featuredSuccessStories": [
+        {
+          "_ref": "success-story-1",
+          "_type": "reference"
+        },
+        {
+          "_ref": "success-story-2",
+          "_type": "reference"
+        },
+        {
+          "_ref": "success-story-3",
+          "_type": "reference"
+        }
+      ],
+      "featuredTestimonials": [
+        {
+          "_ref": "testimonial-1",
+          "_type": "reference"
+        },
+        {
+          "_ref": "testimonial-2",
+          "_type": "reference"
+        },
+        {
+          "_ref": "testimonial-3",
+          "_type": "reference"
+        }
+      ],
+      "features": [
+        {
+          "color": "text-primary-500",
+          "description": "20.000+ dece u 10 zemalja već koristi našu metodologiju sa dokazanim rezultatima",
+          "icon": "✨",
+          "title": "Testiran model"
+        },
+        {
+          "color": "text-secondary-500",
+          "description": "Obuke, mentorstvo, materijali i kontinuirana podrška tokom celog puta",
+          "icon": "🤝",
+          "title": "Kompletna podrška"
+        },
+        {
+          "color": "text-accent-500",
+          "description": "Prostor koji razvija vrline i podstiče prirodnu radoznalost dece",
+          "icon": "🌱",
+          "title": "Podsticajna sredina"
+        },
+        {
+          "color": "text-warm-500",
+          "description": "Merljivi rezultati sa 95% zadovoljnih roditelja i vidljivim napretkom",
+          "icon": "📈",
+          "title": "Dokazana uspešnost"
+        }
+      ],
+      "hero": {
+        "ctaLink": "/kontakt",
+        "ctaText": "Zakaži 30-min poziv",
+        "secondaryCtaLink": "/kako-se-pridruziti",
+        "secondaryCtaText": "Preuzmi info-paket",
+        "subtitle": "Metodologija",
+        "title": "Otvori vrata svojoj učionici iz snova"
+      },
+      "heroVariations": [
+        {
+          "subtitle": "Postanite deo mreže koja je već inspirisala 20.000+ dece da uče srcem kroz metodologiju Srećnog učenja",
+          "title": "Otvori vrata svojoj učionici iz snova",
+          "variant": "franchise-focused"
+        },
+        {
+          "subtitle": "Otkrijte metodologiju koja je pomogla hiljadama dece da postanu brži i precizniji u čitanju i učenju",
+          "title": "Vaše dete čita 3x brže već za 3 meseca",
+          "variant": "parent-focused"
+        },
+        {
+          "subtitle": "Preko 20.000 dece je već otkrilo čarobnu moć brzočitanja i mentalne aritmetike",
+          "title": "Revolucionarna metodologija koja spaja nauku i bajku",
+          "variant": "methodology-focused"
+        },
+        {
+          "subtitle": "Pridružite se edukativnoj revoluciji koja preobražava način na koji deca uče i rastu",
+          "title": "Od obične škole do centra izvrsnosti",
+          "variant": "transformation-focused"
+        },
+        {
+          "subtitle": "Otkrijte kako mentalna aritmetika i brzočitanje mogu transformisati obrazovni put vašeg deteta",
+          "title": "Deca računaju brže od kalkulatora",
+          "variant": "results-focused"
+        }
+      ],
+      "references": [],
+      "seo": {
+        "keywords": [
+          "brzočitanje",
+          "mentalna aritmetika",
+          "deca",
+          "učenje",
+          "metodologija",
+          "centar",
+          "Novi Sad"
+        ],
+        "metaDescription": "Otkrijte revolucionarnu metodologiju koja je već pomogla 20.000+ dece da nauče brzočitanje i mentalnu aritmetiku kroz srećno učenje.",
+        "metaTitle": "Srećno učenje - Centar za brzočitanje i mentalnu aritmetiku"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "home"
+      },
+      "statistics": [
+        {
+          "icon": "👶",
+          "label": "Dece obučeno",
+          "value": "20.000+"
+        },
+        {
+          "icon": "🌍",
+          "label": "Zemalja",
+          "value": "10"
+        },
+        {
+          "icon": "😊",
+          "label": "Zadovoljnih roditelja",
+          "value": "95%"
+        },
+        {
+          "icon": "📚",
+          "label": "Brže čitanje",
+          "value": "300%"
+        }
+      ],
+      "title": "Početna strana - Srećno učenje"
+    },
+    {
+      "_createdAt": "2025-08-05T22:44:26Z",
+      "_id": "locations-page",
+      "_rev": "RSzTvGgTwtY6EErbXkEemY",
+      "_type": "page",
+      "_updatedAt": "2025-08-05T22:44:26Z",
+      "backReferences": [],
+      "features": [
+        {
+          "color": "text-primary-500",
+          "description": "Posebno dizajnirani prostori za optimalno učenje",
+          "icon": "🏢",
+          "title": "Moderni prostori"
+        },
+        {
+          "color": "text-secondary-500",
+          "description": "Sertifikovani instruktori sa dugogodišnjim iskustvom",
+          "icon": "👨‍🏫",
+          "title": "Stručni instruktori"
+        },
+        {
+          "color": "text-accent-500",
+          "description": "Centri na pristupačnim lokacijama u gradu",
+          "icon": "📍",
+          "title": "Pristupačne lokacije"
+        },
+        {
+          "color": "text-warm-500",
+          "description": "Obezbeđen parking za sve posetioce",
+          "icon": "🅿️",
+          "title": "Besplatan parking"
+        }
+      ],
+      "hero": {
+        "ctaLink": "/kontakt",
+        "ctaText": "Zakaži probni čas",
+        "secondaryCtaLink": "tel:+381601234567",
+        "secondaryCtaText": "Pozovi centar",
+        "subtitle": "Pronađite najbliži centar Srećnog učenja",
+        "title": "Posetite naše centre"
+      },
+      "references": [],
+      "seo": {
+        "keywords": [
+          "lokacije",
+          "centri",
+          "Novi Sad",
+          "Beograd",
+          "adrese",
+          "kontakt"
+        ],
+        "metaDescription": "Pronađite najbliži centar Srećno učenje u Novom Sadu ili Beogradu. Kontakt informacije, radni termini i kako da se prijavite.",
+        "metaTitle": "Lokacije centara Srećno učenje"
+      },
+      "slug": {
+        "_type": "slug",
+        "current": "lokacije"
+      },
+      "statistics": [
+        {
+          "icon": "🏙️",
+          "label": "Grada",
+          "value": "2"
+        },
+        {
+          "icon": "👥",
+          "label": "Učenika nedeljno",
+          "value": "50+"
+        },
+        {
+          "icon": "📅",
+          "label": "Godina iskustva",
+          "value": "5"
+        },
+        {
+          "icon": "😊",
+          "label": "Zadovoljnih roditelja",
+          "value": "100%"
+        }
+      ],
+      "title": "Lokacije - Naši centri"
+    }
+  ]
+}

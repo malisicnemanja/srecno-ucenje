@@ -1,0 +1,122 @@
+{
+  "_type": "bookingPage",
+  "_exportedAt": "2025-08-07T21:59:27.090Z",
+  "_count": 1,
+  "documents": [
+    {
+      "_createdAt": "2025-08-05T21:34:37Z",
+      "_id": "booking-page",
+      "_rev": "rWY7A01dUL9wO4NRChMkqC",
+      "_type": "bookingPage",
+      "_updatedAt": "2025-08-05T21:34:37Z",
+      "backReferences": [],
+      "calendly": {
+        "hideGdprBanner": false,
+        "prefillEmail": true,
+        "prefillName": true,
+        "url": "https://calendly.com/srecno-ucenje/konsultacija"
+      },
+      "faqSection": {
+        "ctaLink": "/faq",
+        "ctaText": "Pogledajte sva pitanja",
+        "subtitle": "Pronađite odgovore na najčešća pitanja",
+        "title": "Imate pitanja?"
+      },
+      "hero": {
+        "badge": "100% besplatno i bez obaveza",
+        "benefits": [
+          {
+            "description": "Individualni razgovor",
+            "icon": "✨",
+            "title": "30 minuta"
+          },
+          {
+            "description": "Procena trenutnog stanja",
+            "icon": "📊",
+            "title": "Analiza potreba"
+          },
+          {
+            "description": "Personalizovane preporuke",
+            "icon": "🎯",
+            "title": "Plan akcije"
+          }
+        ],
+        "subtitle": "Razgovarajmo o potrebama vašeg deteta i kako možemo pomoći",
+        "title": "Zakažite besplatnu konsultaciju"
+      },
+      "howItWorks": {
+        "steps": [
+          {
+            "description": "Pronađite termin koji vam odgovara u kalendaru",
+            "icon": "📅",
+            "number": "1",
+            "title": "Izaberite termin"
+          },
+          {
+            "description": "Ostavite osnovne informacije o detetu",
+            "icon": "✍️",
+            "number": "2",
+            "title": "Popunite podatke"
+          },
+          {
+            "description": "Pridružite se video pozivu u zakazano vreme",
+            "icon": "💬",
+            "number": "3",
+            "title": "Razgovarajmo"
+          }
+        ],
+        "subtitle": "Jednostavan proces u 3 koraka",
+        "title": "Kako funkcioniše?"
+      },
+      "phoneCTA": {
+        "phoneNumber": "+381 60 1234567",
+        "subtitle": "Pozovite nas i zakažemo konsultaciju zajedno",
+        "title": "Više volite razgovor telefonom?",
+        "workingHours": "Ponedeljak - Petak, 09:00 - 17:00"
+      },
+      "references": [],
+      "seo": {
+        "_type": "seo",
+        "keywords": [
+          "konsultacija",
+          "zakazivanje",
+          "besplatno",
+          "savetovanje"
+        ],
+        "metaDescription": "Zakažite besplatnu konsultaciju sa našim stručnim timom. Analizirajte potrebe vašeg deteta i dobijte personalizovan plan učenja.",
+        "metaTitle": "Zakazivanje konsultacija | Srećno učenje"
+      },
+      "title": "Zakazivanje konsultacija",
+      "whySection": {
+        "reasons": [
+          {
+            "color": "blue",
+            "description": "Tim pedagoga i psihologa sa dugogodišnjim iskustvom",
+            "icon": "🎓",
+            "title": "Stručna podrška"
+          },
+          {
+            "color": "green",
+            "description": "Program prilagođen potrebama vašeg deteta",
+            "icon": "🌱",
+            "title": "Individualni pristup"
+          },
+          {
+            "color": "purple",
+            "description": "Topla atmosfera koja podstiče učenje",
+            "icon": "💜",
+            "title": "Sigurno okruženje"
+          },
+          {
+            "color": "orange",
+            "description": "Redovno praćenje napretka i izveštavanje",
+            "icon": "🎯",
+            "title": "Merljivi rezultati"
+          }
+        ],
+        "subtitle": "Otkrijte kako možemo pomoći vašem detetu",
+        "title": "Zašto zakazati konsultaciju?"
+      }
+    }
+  ]
+}

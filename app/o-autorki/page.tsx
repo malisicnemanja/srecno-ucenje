@@ -4,6 +4,7 @@ import Link from 'next/link'
 import SafeLink from '@/components/common/SafeLink'
 import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
+import { portableTextComponents } from '@/components/features/cms/PortableTextComponents'
 import { FloatingLetters, AnimatedTitle } from '@/components/animations'
 import { HeroButtons, BooksButton, CTAButtons } from '@/components/features/author/AuthorInteractive'
 import { getAboutAuthorData, type AboutAuthorData } from '@/sanity/queries/aboutAuthor'
@@ -469,15 +470,7 @@ export default async function AboutAuthorPage() {
                       <div className="prose prose-lg max-w-none">
                         <PortableText 
                           value={section.content}
-                          components={{
-                            block: {
-                              normal: ({children}) => <p className="text-gray-700 leading-relaxed mb-6">{children}</p>,
-                            },
-                            marks: {
-                              strong: ({children}) => <strong className="font-semibold text-gray-900">{children}</strong>,
-                              em: ({children}) => <em className="italic">{children}</em>,
-                            }
-                          }}
+                          components={portableTextComponents}
                         />
                       </div>
                     </div>

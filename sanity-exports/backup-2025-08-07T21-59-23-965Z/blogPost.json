@@ -1,0 +1,842 @@
+{
+  "_type": "blogPost",
+  "_exportedAt": "2025-08-07T21:59:24.588Z",
+  "_count": 17,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T01:48:03Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFe5f",
+      "_rev": "RSzTvGgTwtY6EErbXk1MXi",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:01Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdgw"
+      },
+      "backReferences": [],
+      "category": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFcmQ"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Brzočitanje nije samo o brzini - to je veština koja pomaže deci da bolje razumeju ono što čitaju."
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "1. Tehnike skeniranja"
+            }
+          ],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Naučite dete da brzo skenira tekst kako bi identifikovalo ključne informacije."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Otkrijte jednostavne tehnike koje će pomoći vašem detetu da čita brže i efikasnije.",
+      "featured": true,
+      "publishedAt": "2024-02-01T00:00:00.000Z",
+      "publishedDate": "2025-08-03T01:48:03Z",
+      "references": [],
+      "slug": {
+        "current": "5-tehnika-brzocitanja"
+      },
+      "title": "5 tehnika brzočitanja koje svako dete može da nauči"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:08Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFeJn",
+      "_rev": "rWY7A01dUL9wO4NRChIbqO",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:02Z",
+      "author": {
+        "_ref": "hWo33GCGxd3rDeD5TiyAE9"
+      },
+      "backReferences": [],
+      "category": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdSo"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Nedavno istraživanje potvrđuje da mentalna aritmetika poboljšava akademske performanse."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Najnoviji rezultati pokazuju neverovatne benefite mentalne aritmetike za decu.",
+      "featured": false,
+      "publishedAt": "2024-01-15T00:00:00.000Z",
+      "publishedDate": "2025-08-03T01:48:08Z",
+      "references": [],
+      "slug": {
+        "current": "istrazivanje-mentalna-aritmetika"
+      },
+      "title": "Novo istraživanje o efikasnosti mentalne aritmetike"
+    },
+    {
+      "_createdAt": "2025-08-05T03:11:30Z",
+      "_id": "adpXclQvR9WWEgUkbtGXgS",
+      "_rev": "SVDvN8W2oCA8eZWngRnNUw",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:03Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdgw",
+        "_type": "reference"
+      },
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoMdqp",
+        "_type": "reference"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Prvi meseci rada sa franšizom mogu biti uzbudljivi ali i izazovni. Evo šta možete realno očekivati i kako da se pripremite."
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Mesec 1-2: Postavljanje temelja"
+            }
+          ],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Fokus na pronalaženje prostora, opremu i početni marketing. Očekujte intenzivan rad na uspostavljanju osnova."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Realna slika prvih meseci rada, izazovi koje ćete suočiti i kako da ih uspešno savladate.",
+      "featured": true,
+      "publishedAt": "2024-02-15T11:00:00.000Z",
+      "publishedDate": "2025-08-05T03:11:30Z",
+      "readTime": 6,
+      "references": [],
+      "slug": {
+        "_type": "slug",
+        "current": "prvi-meseci-novi-fransizer"
+      },
+      "tags": [
+        "početak",
+        "saveti",
+        "franšiza",
+        "iskustvo"
+      ],
+      "title": "Prvi meseci rada: Šta očekivati kao novi franšizer"
+    },
+    {
+      "_createdAt": "2025-08-05T03:11:28Z",
+      "_id": "atDdCAAfWCLcotj1z9IyeF",
+      "_rev": "rWY7A01dUL9wO4NRChIc5E",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:04Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdgw",
+        "_type": "reference"
+      },
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoMdqp",
+        "_type": "reference"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Lokacija je ključni faktor uspešnosti svakog obrazovnog centra. Evo kako da donesete pravu odluku koja će garantovati dugoročan uspeh."
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Demografski faktori"
+            }
+          ],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Idealno je birati područja sa visokim procentom porodica sa decom uzrasta 5-16 godina i srednjim do višim primanjima."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Praktičan vodič kroz faktore koji određuju uspeh vašeg obrazovnog centra - od lokacije do konkurencije.",
+      "featured": false,
+      "publishedAt": "2024-02-01T09:00:00.000Z",
+      "publishedDate": "2025-08-05T03:11:28Z",
+      "readTime": 7,
+      "references": [],
+      "slug": {
+        "_type": "slug",
+        "current": "kako-odabrati-lokaciju-centar"
+      },
+      "tags": [
+        "lokacija",
+        "centar",
+        "planiranje",
+        "demografija"
+      ],
+      "title": "Kako da odaberete pravu lokaciju za obrazovni centar"
+    },
+    {
+      "_createdAt": "2025-08-05T03:11:31Z",
+      "_id": "atDdCAAfWCLcotj1z9IypT",
+      "_rev": "RSzTvGgTwtY6EErbXk1Mhv",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:05Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdgw",
+        "_type": "reference"
+      },
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoMdqp",
+        "_type": "reference"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Efikasan marketing je ključ uspešnog obrazovnog centra. Evo strategija koje su se pokazale najuspešnije u praksi."
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Lokalni marketing"
+            }
+          ],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Partnerstvo sa školama, vrtićima i lokalnim zajednicama je najefnasniji način da dođete do ciljne grupe."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Dokazane marketing strategije koje naši najuspešniji franšizeri koriste za privlačenje novih đaka.",
+      "featured": false,
+      "publishedAt": "2024-03-01T08:00:00.000Z",
+      "publishedDate": "2025-08-05T03:11:31Z",
+      "readTime": 8,
+      "references": [],
+      "slug": {
+        "_type": "slug",
+        "current": "marketing-strategije-obrazovni-centri"
+      },
+      "tags": [
+        "marketing",
+        "promocija",
+        "strategije",
+        "rast"
+      ],
+      "title": "Marketing strategije koje rade za obrazovne centre"
+    },
+    {
+      "_createdAt": "2025-08-05T03:11:32Z",
+      "_id": "atDdCAAfWCLcotj1z9IzFf",
+      "_rev": "SVDvN8W2oCA8eZWngRnPxw",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:06Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdgw",
+        "_type": "reference"
+      },
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoMdqp",
+        "_type": "reference"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Uspešno finansijsko planiranje je osnova profitabilne franšize. Evo kako da planirate i pratite svoje finansije."
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Početni troškovi"
+            }
+          ],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Franšizna naknada, oprema, prostor, početni marketing - detaljno planiranje svih troškova je ključno."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Detaljno finansijsko planiranje koje će vam pomoći da maksimalno iskoristite investiciju u franšizu.",
+      "featured": true,
+      "publishedAt": "2024-03-15T10:30:00.000Z",
+      "publishedDate": "2025-08-05T03:11:32Z",
+      "readTime": 10,
+      "references": [],
+      "slug": {
+        "_type": "slug",
+        "current": "finansijsko-planiranje-fransizeri"
+      },
+      "tags": [
+        "finansije",
+        "planiranje",
+        "troškovi",
+        "profit"
+      ],
+      "title": "Finansijsko planiranje za franšizere: Vodič kroz prve godine"
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:12Z",
+      "_id": "blogPost-6122bf02-386f-40d5-ad89-a865f616f89f",
+      "_rev": "rWY7A01dUL9wO4NRChIcK4",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:07Z",
+      "author": {
+        "_ref": "author-default"
+      },
+      "backReferences": [],
+      "body": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Naša metodologija nije samo o učenju gradiva - ona gradi samopouzdanje, kritičko mišljenje i ljubav prema znanju koja traje ceo život..."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "category": {
+        "_ref": "blogCategory-2b7484a2-22ac-48d0-b365-e304e73ccf03"
+      },
+      "excerpt": "Otkrijte tajne naše naučno zasnovane metodologije koja transformiše način na koji deca pristupaju učenju.",
+      "mainImage": null,
+      "publishedAt": "2025-08-05T03:19:46.202Z",
+      "publishedDate": "2025-08-05T03:20:12Z",
+      "references": [],
+      "slug": {
+        "current": "metodologija-ljubav-prema-ucenju"
+      },
+      "tags": [
+        "metodologija",
+        "učenje",
+        "deca"
+      ],
+      "title": "Kako naša metodologija pomaže deci da zavole učenje"
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:11Z",
+      "_id": "blogPost-788a2b68-59d9-44e5-a925-316f9c45a4a7",
+      "_rev": "RSzTvGgTwtY6EErbXk1Ms8",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:08Z",
+      "author": {
+        "_ref": "author-default"
+      },
+      "backReferences": [],
+      "body": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "U vremenu ekonomske nesigurnosti, obrazovanje ostaje prioritet za roditelje. Evo zašto je sada idealno vreme za ulazak u ovaj sektor kroz franšizu..."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "category": {
+        "_ref": "blogCategory-71e239cc-8b8e-429c-bb07-8c22f3df9760"
+      },
+      "excerpt": "Obrazovanje je industrija otporna na krize. Saznajte zašto je investicija u obrazovnu franšizu pametna odluka.",
+      "mainImage": null,
+      "publishedAt": "2025-08-05T03:19:46.202Z",
+      "publishedDate": "2025-08-05T03:20:11Z",
+      "references": [],
+      "slug": {
+        "current": "5-razloga-obrazovna-fransiza"
+      },
+      "tags": [
+        "franšiza",
+        "biznis",
+        "obrazovanje"
+      ],
+      "title": "5 razloga zašto je sada pravo vreme za obrazovnu franšizu"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:23Z",
+      "_id": "blogPost-8dd225af-137e-48e0-8a5b-c6e211ba8df1",
+      "_rev": "SVDvN8W2oCA8eZWngRnQOw",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:09Z",
+      "author": {
+        "_ref": "author-default"
+      },
+      "backReferences": [],
+      "body": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Posle 15 godina rada u školi, Marija je želela promenu. Njena priča je dokaz da nikad nije kasno za novi početak..."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "category": {
+        "_ref": "blogCategory-a6cc8788-b093-43e7-8b84-a9d06655d891"
+      },
+      "excerpt": "Kako je Marija transformisala svoju karijeru i otvorila tri uspešna centra Srećnog učenja.",
+      "mainImage": null,
+      "publishedAt": "2025-08-04T21:16:02.004Z",
+      "publishedDate": "2025-08-04T21:16:23Z",
+      "references": [],
+      "slug": {
+        "current": "prica-marija-petrovic"
+      },
+      "tags": [
+        "priča uspeha",
+        "franšizer",
+        "inspiracija"
+      ],
+      "title": "Od nastavnice do uspešne preduzetnice: Priča Marije Petrović"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:22Z",
+      "_id": "blogPost-b89e8814-05d6-4437-ae1c-14ec0373e124",
+      "_rev": "SVDvN8W2oCA8eZWngRnQcR",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:10Z",
+      "author": {
+        "_ref": "author-default"
+      },
+      "backReferences": [],
+      "body": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Naša metodologija nije samo o učenju gradiva - ona gradi samopouzdanje, kritičko mišljenje i ljubav prema znanju koja traje ceo život..."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "category": {
+        "_ref": "blogCategory-bcf2b741-6636-491d-b70e-1357204922c2"
+      },
+      "excerpt": "Otkrijte tajne naše naučno zasnovane metodologije koja transformiše način na koji deca pristupaju učenju.",
+      "mainImage": null,
+      "publishedAt": "2025-08-04T21:16:02.004Z",
+      "publishedDate": "2025-08-04T21:16:22Z",
+      "references": [],
+      "slug": {
+        "current": "metodologija-ljubav-prema-ucenju"
+      },
+      "tags": [
+        "metodologija",
+        "učenje",
+        "deca"
+      ],
+      "title": "Kako naša metodologija pomaže deci da zavole učenje"
+    },
+    {
+      "_createdAt": "2025-08-04T21:16:21Z",
+      "_id": "blogPost-e31bfedf-f623-4c8e-8ca5-9a5839d405c9",
+      "_rev": "RSzTvGgTwtY6EErbXk1N5k",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:11Z",
+      "author": {
+        "_ref": "author-default"
+      },
+      "backReferences": [],
+      "body": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "U vremenu ekonomske nesigurnosti, obrazovanje ostaje prioritet za roditelje. Evo zašto je sada idealno vreme za ulazak u ovaj sektor kroz franšizu..."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "category": {
+        "_ref": "blogCategory-09fbb52b-c01b-4d79-b640-7e73f70a52ba"
+      },
+      "excerpt": "Obrazovanje je industrija otporna na krize. Saznajte zašto je investicija u obrazovnu franšizu pametna odluka.",
+      "mainImage": null,
+      "publishedAt": "2025-08-04T21:16:02.004Z",
+      "publishedDate": "2025-08-04T21:16:21Z",
+      "references": [],
+      "slug": {
+        "current": "5-razloga-obrazovna-fransiza"
+      },
+      "tags": [
+        "franšiza",
+        "biznis",
+        "obrazovanje"
+      ],
+      "title": "5 razloga zašto je sada pravo vreme za obrazovnu franšizu"
+    },
+    {
+      "_createdAt": "2025-08-05T03:20:13Z",
+      "_id": "blogPost-fb235c77-7f02-4c84-b19f-1bff02f036dd",
+      "_rev": "RSzTvGgTwtY6EErbXk1NCY",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:12Z",
+      "author": {
+        "_ref": "author-default"
+      },
+      "backReferences": [],
+      "body": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Posle 15 godina rada u školi, Marija je želela promenu. Njena priča je dokaz da nikad nije kasno za novi početak..."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "category": {
+        "_ref": "blogCategory-901504f4-7daa-4aef-bdc8-7e594c02024f"
+      },
+      "excerpt": "Kako je Marija transformisala svoju karijeru i otvorila tri uspešna centra Srećnog učenja.",
+      "mainImage": null,
+      "publishedAt": "2025-08-05T03:19:46.202Z",
+      "publishedDate": "2025-08-05T03:20:13Z",
+      "references": [],
+      "slug": {
+        "current": "prica-marija-petrovic"
+      },
+      "tags": [
+        "priča uspeha",
+        "franšizer",
+        "inspiracija"
+      ],
+      "title": "Od nastavnice do uspešne preduzetnice: Priča Marije Petrović"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:06Z",
+      "_id": "hWo33GCGxd3rDeD5TiyAX7",
+      "_rev": "SVDvN8W2oCA8eZWngRnR7w",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:14Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdgw"
+      },
+      "backReferences": [],
+      "category": {
+        "_ref": "hWo33GCGxd3rDeD5Tiy9vB"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Marko je sa 10 godina mrzeo čitanje. Evo kako se sve promenilo..."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Inspirativna priča transformacije jednog učenika kroz program brzočitanja.",
+      "featured": true,
+      "publishedAt": "2024-01-20T00:00:00.000Z",
+      "publishedDate": "2025-08-03T01:48:06Z",
+      "references": [],
+      "slug": {
+        "current": "prica-o-marku"
+      },
+      "title": "Priča o Marku - od mrzitelja knjiga do bibliotekara"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:07Z",
+      "_id": "hWo33GCGxd3rDeD5TiyAq5",
+      "_rev": "SVDvN8W2oCA8eZWngRnRGw",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:14Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdgw"
+      },
+      "backReferences": [],
+      "category": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdID"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "U doba pametnih telefona i tableta, čitanje ostaje temelj obrazovanja."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Zašto je čitanje važnije nego ikad u eri digitalnih tehnologija.",
+      "featured": false,
+      "publishedAt": "2024-01-18T00:00:00.000Z",
+      "publishedDate": "2025-08-03T01:48:07Z",
+      "references": [],
+      "slug": {
+        "current": "znacaj-citanja-digitalno-doba"
+      },
+      "title": "Značaj čitanja u digitalnom dobu"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:04Z",
+      "_id": "hZm6tMI3obk6ZBXKfA9sZt",
+      "_rev": "rWY7A01dUL9wO4NRChIcqi",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:16Z",
+      "author": {
+        "_ref": "hWo33GCGxd3rDeD5TiyAE9"
+      },
+      "backReferences": [],
+      "category": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFcx1"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Mentalna aritmetika je moćan alat za cjelokupni kognitivni razvoj deteta."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Naučno objašnjenje kako mentalna aritmetika stimuliše oba hemisfera mozga.",
+      "featured": true,
+      "publishedAt": "2024-01-28T00:00:00.000Z",
+      "publishedDate": "2025-08-03T01:48:04Z",
+      "references": [],
+      "slug": {
+        "current": "mentalna-aritmetika-razvoj-mozga"
+      },
+      "title": "Kako mentalna aritmetika pomaže u razvoju mozga"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:05Z",
+      "_id": "hZm6tMI3obk6ZBXKfA9sit",
+      "_rev": "RSzTvGgTwtY6EErbXk1NhB",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:17Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdv4"
+      },
+      "backReferences": [],
+      "category": {
+        "_ref": "hWo33GCGxd3rDeD5Tiy9gx"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Motivacija je ključ uspešnog učenja. Evo kako možete pomoći svom detetu."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Praktični saveti za roditelje o tome kako da podržite svoju decu u procesu učenja.",
+      "featured": false,
+      "publishedAt": "2024-01-25T00:00:00.000Z",
+      "publishedDate": "2025-08-03T01:48:05Z",
+      "references": [],
+      "slug": {
+        "current": "kako-motivisati-dete"
+      },
+      "title": "Kako da motivišete dete za učenje"
+    },
+    {
+      "_createdAt": "2025-08-05T03:11:28Z",
+      "_id": "jsO7i4LmwGEnLQvVmoMeAf",
+      "_rev": "rWY7A01dUL9wO4NRChId2a",
+      "_type": "blogPost",
+      "_updatedAt": "2025-08-05T20:18:18Z",
+      "author": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFdgw",
+        "_type": "reference"
+      },
+      "backReferences": [],
+      "category": {
+        "_ref": "jsO7i4LmwGEnLQvVmoMdqp",
+        "_type": "reference"
+      },
+      "content": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Obrazovne franšize predstavljaju jednu od najstabilnijih i najprofitabilnijih investicija u današnjem tržištu. Sa konstantnim rastom potražnje za kvalitetnim obrazovanjem i dokazanim poslovnim modelima, ovo je prilika koju ne smete propustiti."
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "1. Stabilna potražnja"
+            }
+          ],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Roditelji uvek žele najbolje za svoju decu. Potražnja za kvalitetnim dodatnim obrazovanjem raste 15% godišnje u Srbiji."
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "2. Visok ROI"
+            }
+          ],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Naši franšizeri ostvaruju prosečan povraćaj investicije od 300% u prve 2 godine, što je daleko iznad proseka drugih industrija."
+            }
+          ],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "3. Kompletna podrška"
+            }
+          ],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Od obuke do kontinuiranih marketing materijala - nikad niste sami. Naš tim vas podržava na svakom koraku."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Otkrijte zašto sve više preduzetnika bira obrazovne franšize kao siguran put do finansijske nezavisnosti.",
+      "featured": true,
+      "publishedAt": "2024-01-15T10:00:00.000Z",
+      "publishedDate": "2025-08-05T03:11:28Z",
+      "readTime": 5,
+      "references": [],
+      "slug": {
+        "_type": "slug",
+        "current": "5-razloga-obrazovna-fransiza"
+      },
+      "tags": [
+        "franšiza",
+        "investicija",
+        "obrazovanje",
+        "ROI"
+      ],
+      "title": "5 razloga zašto je obrazovna franšiza najbolja investicija u 2024."
+    }
+  ]
+}

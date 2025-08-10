@@ -1,0 +1,428 @@
+{
+  "_type": "assets",
+  "_exportedAt": "2025-08-07T21:59:27.595Z",
+  "_count": 34,
+  "assets": [
+    {
+      "_id": "image-06857488c7278eea562a5a3751730826653300da-1189x1479-jpg",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/jpeg",
+      "originalFilename": "vila-zime.jpg",
+      "references": [],
+      "size": 279125,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/06857488c7278eea562a5a3751730826653300da-1189x1479.jpg"
+    },
+    {
+      "_id": "image-0f374acedfa651b7bb959884b24a2ae5d62e55f1-1772x1772-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "IMG-7e1c1e617f0c5a9be6d8072f8d724462-V.jpg",
+      "references": [
+        {
+          "_id": "siteSettings",
+          "_type": "siteSettings"
+        }
+      ],
+      "size": 164720,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/0f374acedfa651b7bb959884b24a2ae5d62e55f1-1772x1772.png"
+    },
+    {
+      "_id": "image-1b4efadb340eee2e9b711b589b7c56993ca26572-4724x3248-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "zimski-mir-cover.webp",
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFybRO",
+          "_type": "book"
+        }
+      ],
+      "size": 1670938,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/1b4efadb340eee2e9b711b589b7c56993ca26572-4724x3248.webp"
+    },
+    {
+      "_id": "image-1c77e017405a6d358c06dc5a5614c87b27bd7e58-203x249-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "dragoljupce.webp",
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFybbz",
+          "_type": "book"
+        }
+      ],
+      "size": 14304,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/1c77e017405a6d358c06dc5a5614c87b27bd7e58-203x249.webp"
+    },
+    {
+      "_id": "image-1febaf20b408dbe440ce72b54e522831a1a35864-1200x628-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "vila-leta.png",
+      "references": [],
+      "size": 1043282,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/1febaf20b408dbe440ce72b54e522831a1a35864-1200x628.png"
+    },
+    {
+      "_id": "image-2fbebdad6920666e956de89625f61019da1e8262-300x300-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "decak-luka.webp",
+      "references": [
+        {
+          "_id": "hWo33GCGxd3rDeD5Tjrudh",
+          "_type": "book"
+        }
+      ],
+      "size": 9022,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/2fbebdad6920666e956de89625f61019da1e8262-300x300.webp"
+    },
+    {
+      "_id": "image-3fa0a24118b1ece64de4f8be3a8b38686a188276-1772x1772-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "20250802_222800.png",
+      "references": [
+        {
+          "_id": "hZm6tMI3obk6ZBXKfA9s2t",
+          "_type": "siteSettings"
+        }
+      ],
+      "size": 162462,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/3fa0a24118b1ece64de4f8be3a8b38686a188276-1772x1772.png"
+    },
+    {
+      "_id": "image-41608cc31fc532bedd13574896affde8da95464e-251x356-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "vila-proleca.png",
+      "references": [],
+      "size": 94522,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/41608cc31fc532bedd13574896affde8da95464e-251x356.png"
+    },
+    {
+      "_id": "image-4692728fd6991dfd1a9c66c983b4e868dec1f6f0-251x356-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "vila-proleca.webp",
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFybbz",
+          "_type": "book"
+        }
+      ],
+      "size": 14690,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/4692728fd6991dfd1a9c66c983b4e868dec1f6f0-251x356.webp"
+    },
+    {
+      "_id": "image-49bb61de3e05b7da7687ff67f334c87b59b33112-2362x1624-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "prolecna-zurba-cover.webp",
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFybbz",
+          "_type": "book"
+        }
+      ],
+      "size": 791374,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/49bb61de3e05b7da7687ff67f334c87b59b33112-2362x1624.webp"
+    },
+    {
+      "_id": "image-5363af93932d9298cddf0f647c6d91aa759d0e30-300x300-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "decak-luka.png",
+      "references": [],
+      "size": 79105,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/5363af93932d9298cddf0f647c6d91aa759d0e30-300x300.png"
+    },
+    {
+      "_id": "image-5f4deeb531ff51f0f7434502000102891b575b40-198x234-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "nada.webp",
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFybbz",
+          "_type": "book"
+        }
+      ],
+      "size": 19266,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/5f4deeb531ff51f0f7434502000102891b575b40-198x234.webp"
+    },
+    {
+      "_id": "image-5faba492578fb756f313fcf23d41395ffeaba56c-444x562-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "mitra.png",
+      "references": [],
+      "size": 227707,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/5faba492578fb756f313fcf23d41395ffeaba56c-444x562.png"
+    },
+    {
+      "_id": "image-66fc4522b49789a376e8b7544aa6838b0d5dc798-198x234-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "nada.png",
+      "references": [],
+      "size": 83807,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/66fc4522b49789a376e8b7544aa6838b0d5dc798-198x234.png"
+    },
+    {
+      "_id": "image-6aa6f5011d80236d20f187fc070a4453c0cdb58f-2826x1508-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "zeljana-fotografija.png",
+      "references": [],
+      "size": 2332095,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/6aa6f5011d80236d20f187fc070a4453c0cdb58f-2826x1508.png"
+    },
+    {
+      "_id": "image-6b02194ede325f1de8fcda5718782f875b8cf343-2362x1624-jpg",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/jpeg",
+      "originalFilename": "prolecna-zurba-cover.jpg",
+      "references": [],
+      "size": 1851997,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/6b02194ede325f1de8fcda5718782f875b8cf343-2362x1624.jpg"
+    },
+    {
+      "_id": "image-6ddc8dcb14f526d0954f7e299a838959e9e22fb0-4724x3248-jpg",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/jpeg",
+      "originalFilename": "letnja-vreva-cover.jpg",
+      "references": [],
+      "size": 4862950,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/6ddc8dcb14f526d0954f7e299a838959e9e22fb0-4724x3248.jpg"
+    },
+    {
+      "_id": "image-6f5037222a0f6bc9c9557560f040de380556a33d-1024x1536-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "zeljana-ilustracija.png",
+      "references": [
+        {
+          "_id": "booksLanding",
+          "_type": "booksLanding"
+        }
+      ],
+      "size": 3555021,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/6f5037222a0f6bc9c9557560f040de380556a33d-1024x1536.png"
+    },
+    {
+      "_id": "image-7ab8fbd97542e7644dc1e3b089728f54eadbf445-4724x3248-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "letnja-vreva-cover.webp",
+      "references": [
+        {
+          "_id": "drafts.hWo33GCGxd3rDeD5Tjrurv",
+          "_type": "book"
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5Tjrurv",
+          "_type": "book"
+        }
+      ],
+      "size": 2004666,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/7ab8fbd97542e7644dc1e3b089728f54eadbf445-4724x3248.webp"
+    },
+    {
+      "_id": "image-7c625a651a4fd6fd462b416fb71e5e9b70bd9cce-444x562-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "mitra.webp",
+      "references": [
+        {
+          "_id": "hWo33GCGxd3rDeD5Tjrudh",
+          "_type": "book"
+        }
+      ],
+      "size": 32370,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/7c625a651a4fd6fd462b416fb71e5e9b70bd9cce-444x562.webp"
+    },
+    {
+      "_id": "image-8060222c5f6e1f94ae6b21090fd0dd154750c3ca-350x495-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "petar.webp",
+      "references": [
+        {
+          "_id": "drafts.hWo33GCGxd3rDeD5Tjrurv",
+          "_type": "book"
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5Tjrurv",
+          "_type": "book"
+        }
+      ],
+      "size": 22032,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/8060222c5f6e1f94ae6b21090fd0dd154750c3ca-350x495.webp"
+    },
+    {
+      "_id": "image-873a29c35f3fa6cf82aa37c38848bff349d91904-350x495-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "petar.png",
+      "references": [],
+      "size": 212565,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/873a29c35f3fa6cf82aa37c38848bff349d91904-350x495.png"
+    },
+    {
+      "_id": "image-92ea11e4eda3157bde0a509939e599ec17448405-1024x1536-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "zeljana-ilustracija.webp",
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        },
+        {
+          "_id": "drafts.EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        }
+      ],
+      "size": 534908,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/92ea11e4eda3157bde0a509939e599ec17448405-1024x1536.webp"
+    },
+    {
+      "_id": "image-96395158b0415a0a28b393bce0260e2222dca2d3-1200x628-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "vila-leta.webp",
+      "references": [
+        {
+          "_id": "drafts.hWo33GCGxd3rDeD5Tjrurv",
+          "_type": "book"
+        },
+        {
+          "_id": "hWo33GCGxd3rDeD5Tjrurv",
+          "_type": "book"
+        }
+      ],
+      "size": 73156,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/96395158b0415a0a28b393bce0260e2222dca2d3-1200x628.webp"
+    },
+    {
+      "_id": "image-99b3b2ebabf65cb46ef3451d80a9b9dcf5977687-280x378-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "vila-jeseni.webp",
+      "references": [
+        {
+          "_id": "hWo33GCGxd3rDeD5Tjrudh",
+          "_type": "book"
+        }
+      ],
+      "size": 15854,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/99b3b2ebabf65cb46ef3451d80a9b9dcf5977687-280x378.webp"
+    },
+    {
+      "_id": "image-a10f1e0c4a343a6fef1b425e6e65d41a6f7a94e5-400x624-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "vera.webp",
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFybRO",
+          "_type": "book"
+        }
+      ],
+      "size": 29332,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/a10f1e0c4a343a6fef1b425e6e65d41a6f7a94e5-400x624.webp"
+    },
+    {
+      "_id": "image-a2253f99dd6849b1204b4cb5d57ef851e208acf2-4724x3248-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "jesenja-gozba-cover.webp",
+      "references": [
+        {
+          "_id": "hWo33GCGxd3rDeD5Tjrudh",
+          "_type": "book"
+        }
+      ],
+      "size": 1600630,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/a2253f99dd6849b1204b4cb5d57ef851e208acf2-4724x3248.webp"
+    },
+    {
+      "_id": "image-aee6fab75695dc620a32dfb4a8ec17cb20f79363-203x249-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "dragoljupce.png",
+      "references": [],
+      "size": 76763,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/aee6fab75695dc620a32dfb4a8ec17cb20f79363-203x249.png"
+    },
+    {
+      "_id": "image-bbfc5f54b495484e8e2a0e52c0e67b01fa26a3c0-4724x3248-jpg",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/jpeg",
+      "originalFilename": "zimski-mir-cover.jpg",
+      "references": [],
+      "size": 4048667,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/bbfc5f54b495484e8e2a0e52c0e67b01fa26a3c0-4724x3248.jpg"
+    },
+    {
+      "_id": "image-c584d98847d872caaa8b6ebc7c34ac9b62b4df69-4724x3248-jpg",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/jpeg",
+      "originalFilename": "jesenja-gozba-cover.jpg",
+      "references": [],
+      "size": 3975859,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/c584d98847d872caaa8b6ebc7c34ac9b62b4df69-4724x3248.jpg"
+    },
+    {
+      "_id": "image-db5ac4f0773013ae720ec59d35028bc2862b6d8f-1189x1479-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "vila-zime.webp",
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFybRO",
+          "_type": "book"
+        }
+      ],
+      "size": 82690,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/db5ac4f0773013ae720ec59d35028bc2862b6d8f-1189x1479.webp"
+    },
+    {
+      "_id": "image-dd1b850e85b86f9508734861f60f5305a8b8e5ea-280x378-jpg",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/jpeg",
+      "originalFilename": "vila-jeseni.jpg",
+      "references": [],
+      "size": 133093,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/dd1b850e85b86f9508734861f60f5305a8b8e5ea-280x378.jpg"
+    },
+    {
+      "_id": "image-dee63e747aa7bd1b1c83f61a41cf2e93d2b9ffc0-400x624-png",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/png",
+      "originalFilename": "vera.png",
+      "references": [],
+      "size": 183956,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/dee63e747aa7bd1b1c83f61a41cf2e93d2b9ffc0-400x624.png"
+    },
+    {
+      "_id": "image-e721d50573fbc9dc241755e261733e5a8b129d76-2826x1508-webp",
+      "_type": "sanity.imageAsset",
+      "mimeType": "image/webp",
+      "originalFilename": "zeljana-fotografija.webp",
+      "references": [
+        {
+          "_id": "EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        },
+        {
+          "_id": "drafts.EIn1TO6kzkBkpMuRkFy78E",
+          "_type": "aboutAuthor"
+        }
+      ],
+      "size": 213482,
+      "url": "https://cdn.sanity.io/images/08ctxj6y/production/e721d50573fbc9dc241755e261733e5a8b129d76-2826x1508.webp"
+    }
+  ]
+}

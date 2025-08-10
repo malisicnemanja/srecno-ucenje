@@ -1,0 +1,382 @@
+{
+  "_type": "successStory",
+  "_exportedAt": "2025-08-07T21:59:25.893Z",
+  "_count": 10,
+  "documents": [
+    {
+      "_createdAt": "2025-08-03T01:48:11Z",
+      "_id": "EIn1TO6kzkBkpMuRkFFf0B",
+      "_rev": "rWY7A01dUL9wO4NRChI8my",
+      "_type": "successStory",
+      "_updatedAt": "2025-08-05T20:16:14Z",
+      "afterSkills": [
+        "Brzo čitanje - 500+ reči/minut",
+        "Odlična koncentracija i fokus",
+        "Efikasno učenje za kraće vreme",
+        "Ljubav prema knjigama",
+        "Visoko samopouzdanje"
+      ],
+      "age": "12 godina",
+      "backReferences": [],
+      "beforeSkills": [
+        "Sporo čitanje - 150 reči/minut",
+        "Poteškoće sa koncentracijom",
+        "Dugotrajno učenje lekcija",
+        "Strah od čitanja",
+        "Nisko samopouzdanje"
+      ],
+      "content": "Pre kursa sam izbegavao da čitam knjige. Sada pročitam 2-3 knjige nedeljno! Moje ocene iz srpskog jezika su se drastično poboljšale, a učenje mi ide mnogo lakše.",
+      "featured": true,
+      "program": {
+        "_ref": "hWo33GCGxd3rDeD5Tiy8cZ"
+      },
+      "publishedAt": "2024-01-15T00:00:00.000Z",
+      "references": [],
+      "results": [
+        {
+          "label": "Brže čitanje",
+          "metric": "300%"
+        },
+        {
+          "label": "Ocena iz srpskog",
+          "metric": "Sa 3 na 5"
+        },
+        {
+          "label": "Vreme učenja",
+          "metric": "2h → 45min"
+        }
+      ],
+      "studentName": "Marko Petrović"
+    },
+    {
+      "_createdAt": "2025-08-05T03:09:02Z",
+      "_id": "adpXclQvR9WWEgUkbtDmec",
+      "_rev": "SVDvN8W2oCA8eZWngRnSnR",
+      "_type": "successStory",
+      "_updatedAt": "2025-08-05T20:18:19Z",
+      "author": "Stefan Jovanović",
+      "backReferences": [],
+      "content": [
+        {
+          "_key": "intro",
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Ovo je najbolja poslovna odluka koju sam doneo. Investicija se vratila za 14 meseci, a sada imam stabilno rastući biznis koji pomaže deci."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Stefan Jovanović iz Niš deli svoju priču o uspešnom pokretanju franšize koja danas generiše 3800€ mesečno.",
+      "featured": true,
+      "location": "Niš",
+      "metrics": {
+        "monthlyRevenue": 3800,
+        "monthsInBusiness": 30,
+        "roi": "280%",
+        "studentCount": 145
+      },
+      "publishedAt": "2025-08-05T03:09:02.116Z",
+      "references": [],
+      "studentName": "Učenik",
+      "title": "Kako je Stefan Jovanović ostvarila ROI od 280%"
+    },
+    {
+      "_createdAt": "2025-08-05T03:09:01Z",
+      "_id": "atDdCAAfWCLcotj1z9HJzD",
+      "_rev": "RSzTvGgTwtY6EErbXk1PS5",
+      "_type": "successStory",
+      "_updatedAt": "2025-08-05T20:18:20Z",
+      "author": "Marija Petrović",
+      "backReferences": [],
+      "content": [
+        {
+          "_key": "intro",
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Za 2 godine sam vratila celu investiciju i sada imam stabilan mesečni prihod od 4,500€. Podrška tima je fantastična - nikad nisam bila sama u ovom poslu."
+            }
+          ],
+          "style": "normal"
+        }
+      ],
+      "excerpt": "Marija Petrović iz Novi Sad deli svoju priču o uspešnom pokretanju franšize koja danas generiše 4500€ mesečno.",
+      "featured": true,
+      "location": "Novi Sad",
+      "metrics": {
+        "monthlyRevenue": 4500,
+        "monthsInBusiness": 24,
+        "roi": "320%",
+        "studentCount": 180
+      },
+      "publishedAt": "2025-08-05T03:09:01.115Z",
+      "references": [],
+      "studentName": "Učenik",
+      "title": "Kako je Marija Petrović ostvarila ROI od 320%"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:13Z",
+      "_id": "drafts.hWo33GCGxd3rDeD5TiyB4J",
+      "_rev": "c466effe-5ab5-42de-9fd3-ad34e2e25595",
+      "_system": {
+        "base": {
+          "id": "hWo33GCGxd3rDeD5TiyB4J",
+          "rev": "SVDvN8W2oCA8eZWngRmeiR"
+        }
+      },
+      "_type": "successStory",
+      "_updatedAt": "2025-08-05T22:14:51Z",
+      "age": "10 godina",
+      "backReferences": [],
+      "content": "Matematika mi je sada omiljeni predmet! Mogu da računam brže od svih u razredu, čak i od nastavnice ponekad. Osvojila sam prvo mesto na školskom takmičenju!",
+      "featured": true,
+      "program": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFcD6"
+      },
+      "publishedAt": "2024-01-10T00:00:00.000Z",
+      "references": [],
+      "results": [
+        {
+          "_key": "33862c4ada72bfdcabd3b087f2f33a62",
+          "label": "Školsko takmičenje",
+          "metric": "1. mesto"
+        },
+        {
+          "_key": "8ce8a25811b40bd33870fa6e7eb2853e",
+          "label": "Tačnost računanja",
+          "metric": "100%"
+        },
+        {
+          "_key": "289715b16faf4a953d69ad321ae63a39",
+          "label": "Ocena iz matematike",
+          "metric": "5"
+        },
+        {
+          "_key": "4bc2dbcf19ef"
+        }
+      ],
+      "studentName": "Ana Nikolić"
+    },
+    {
+      "_createdAt": "2025-08-03T01:48:13Z",
+      "_id": "hWo33GCGxd3rDeD5TiyB4J",
+      "_rev": "SVDvN8W2oCA8eZWngRmeiR",
+      "_type": "successStory",
+      "_updatedAt": "2025-08-05T20:16:15Z",
+      "age": "10 godina",
+      "backReferences": [],
+      "content": "Matematika mi je sada omiljeni predmet! Mogu da računam brže od svih u razredu, čak i od nastavnice ponekad. Osvojila sam prvo mesto na školskom takmičenju!",
+      "featured": true,
+      "program": {
+        "_ref": "EIn1TO6kzkBkpMuRkFFcD6"
+      },
+      "publishedAt": "2024-01-10T00:00:00.000Z",
+      "references": [],
+      "results": [
+        {
+          "label": "Školsko takmičenje",
+          "metric": "1. mesto"
+        },
+        {
+          "label": "Tačnost računanja",
+          "metric": "100%"
+        },
+        {
+          "label": "Ocena iz matematike",
+          "metric": "5"
+        }
+      ],
+      "studentName": "Ana Nikolić"
+    },
+    {
+      "_createdAt": "2025-08-05T22:45:50Z",
+      "_id": "success-story-1",
+      "_rev": "rWY7A01dUL9wO4NRChTd5w",
+      "_type": "successStory",
+      "_updatedAt": "2025-08-05T22:45:50Z",
+      "age": "12 godina",
+      "backReferences": [
+        {
+          "_id": "homepage",
+          "_type": "page"
+        }
+      ],
+      "featured": true,
+      "parentName": "Milica Petrović, mama",
+      "parentTestimonial": "Neverovatan napredak! Marko sada voli da čita i njegova koncentracija je značajno bolja.",
+      "program": "Brzočitanje",
+      "references": [
+        {
+          "_id": "homepage",
+          "_type": "page",
+          "name": null,
+          "title": "Početna strana - Srećno učenje"
+        }
+      ],
+      "results": [
+        {
+          "label": "Brže čitanje",
+          "metric": "300%"
+        },
+        {
+          "label": "Ocena iz srpskog",
+          "metric": "Sa 3 na 5"
+        },
+        {
+          "label": "Vreme učenja",
+          "metric": "2h → 45min"
+        }
+      ],
+      "studentName": "Marko Petrović",
+      "testimonial": "Pre kursa sam izbegavao da čitam knjige. Sada pročitam 2-3 knjige nedeljno! Moje ocene iz srpskog jezika su se drastično poboljšale."
+    },
+    {
+      "_createdAt": "2025-08-05T22:45:51Z",
+      "_id": "success-story-2",
+      "_rev": "RSzTvGgTwtY6EErbXkEiVy",
+      "_type": "successStory",
+      "_updatedAt": "2025-08-05T22:45:51Z",
+      "age": "10 godina",
+      "backReferences": [
+        {
+          "_id": "homepage",
+          "_type": "page"
+        }
+      ],
+      "featured": true,
+      "parentName": "Stefan Nikolić, tata",
+      "parentTestimonial": "Ana je postala vrlo samouverena u matematici. Hvala vam što ste je naučili da voli brojeve!",
+      "program": "Mentalna aritmetika",
+      "references": [
+        {
+          "_id": "homepage",
+          "_type": "page",
+          "name": null,
+          "title": "Početna strana - Srećno učenje"
+        }
+      ],
+      "results": [
+        {
+          "label": "Školsko takmičenje",
+          "metric": "1. mesto"
+        },
+        {
+          "label": "Tačnost računanja",
+          "metric": "100%"
+        },
+        {
+          "label": "Ocena iz matematike",
+          "metric": "5"
+        }
+      ],
+      "studentName": "Ana Nikolić",
+      "testimonial": "Matematika mi je sada omiljeni predmet! Mogu da računam brže od svih u razredu. Osvojila sam prvo mesto na školskom takmičenju!"
+    },
+    {
+      "_createdAt": "2025-08-05T22:45:52Z",
+      "_id": "success-story-3",
+      "_rev": "RSzTvGgTwtY6EErbXkEicm",
+      "_type": "successStory",
+      "_updatedAt": "2025-08-05T22:45:52Z",
+      "age": "8 godina",
+      "backReferences": [
+        {
+          "_id": "homepage",
+          "_type": "page"
+        }
+      ],
+      "featured": false,
+      "parentName": "Jovana Jovanović, mama",
+      "parentTestimonial": "Luka je postao pravi mali genije! Školski rad mu je sada igra.",
+      "program": "Kombinovani program",
+      "references": [
+        {
+          "_id": "homepage",
+          "_type": "page",
+          "name": null,
+          "title": "Početna strana - Srećno učenje"
+        }
+      ],
+      "results": [
+        {
+          "label": "Brže čitanje",
+          "metric": "250%"
+        },
+        {
+          "label": "Brže računanje",
+          "metric": "90%"
+        },
+        {
+          "label": "Prosek u školi",
+          "metric": "5"
+        }
+      ],
+      "studentName": "Luka Jovanović",
+      "testimonial": "Volim što mogu da čitam brže od mama i tate, a mogu i da računam u glavi velike brojeve!"
+    },
+    {
+      "_createdAt": "2025-08-05T22:45:53Z",
+      "_id": "success-story-4",
+      "_rev": "rWY7A01dUL9wO4NRChTdBs",
+      "_type": "successStory",
+      "_updatedAt": "2025-08-05T22:45:53Z",
+      "age": "11 godina",
+      "backReferences": [],
+      "featured": false,
+      "parentName": "Aleksandar Stojanović, tata",
+      "parentTestimonial": "Mila je promenila odnos prema učenju. Sada uživa u čitanju i učenju.",
+      "program": "Brzočitanje",
+      "references": [],
+      "results": [
+        {
+          "label": "Brže čitanje",
+          "metric": "400%"
+        },
+        {
+          "label": "Bolje razumevanje",
+          "metric": "90%"
+        },
+        {
+          "label": "Domaći zadaci",
+          "metric": "30min"
+        }
+      ],
+      "studentName": "Mila Stojanović",
+      "testimonial": "Nikad mi učenje nije bilo ovako zanimljivo! Sada čitam po 50 strana dnevno umesto 5."
+    },
+    {
+      "_createdAt": "2025-08-05T22:45:54Z",
+      "_id": "success-story-5",
+      "_rev": "rWY7A01dUL9wO4NRChTdHo",
+      "_type": "successStory",
+      "_updatedAt": "2025-08-05T22:45:54Z",
+      "age": "9 godina",
+      "backReferences": [],
+      "featured": false,
+      "parentName": "Marija Mitrović, mama",
+      "parentTestimonial": "Nikola je postao vrhunski u matematici. Njegov učitelj je oduševljen napretkom.",
+      "program": "Mentalna aritmetika",
+      "references": [],
+      "results": [
+        {
+          "label": "Brže računanje",
+          "metric": "500%"
+        },
+        {
+          "label": "Gradsko takmičenje",
+          "metric": "2. mesto"
+        },
+        {
+          "label": "Tačnost",
+          "metric": "100%"
+        }
+      ],
+      "studentName": "Nikola Mitrović",
+      "testimonial": "Mogu da saberem velike brojeve u sekundi! Drugari u školi me zovu \"živi kalkulator\"."
+    }
+  ]
+}
