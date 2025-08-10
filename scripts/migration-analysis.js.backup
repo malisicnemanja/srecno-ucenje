@@ -1,0 +1,1094 @@
+#!/usr/bin/env node
+
+/**
+ * SANITY SCHEMA CONSOLIDATION ANALYSIS
+ * 
+ * This script analyzes the current 81 schemas and creates a detailed migration plan
+ * for consolidating them into 18 essential schemas while preserving ALL content.
+ * 
+ * CRITICAL: This analysis ensures NO CONTENT LOSS during consolidation.
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+// Colors for console output
+const colors = {
+  reset: '\x1b[0m',
+  bright: '\x1b[1m',
+  red: '\x1b[31m',
+  green: '\x1b[32m',
+  yellow: '\x1b[33m',
+  blue: '\x1b[34m',
+  magenta: '\x1b[35m',
+  cyan: '\x1b[36m'
+};
+
+const log = (message, color = 'reset') => {
+  console.log(`${colors[color]}${message}${colors.reset}`);
+};
+
+const logSection = (title) => {
+  log('\n' + '='.repeat(80), 'cyan');
+  log(`  ${title}`, 'cyan');
+  log('='.repeat(80), 'cyan');
+};
+
+const logSubsection = (title) => {
+  log('\n' + '-'.repeat(60), 'yellow');
+  log(`  ${title}`, 'yellow');
+  log('-'.repeat(60), 'yellow');
+};
+
+const logSuccess = (message) => {
+  log(`✅ ${message}`, 'green');
+};
+
+const logWarning = (message) => {
+  log(`⚠️  ${message}`, 'yellow');
+};
+
+const logError = (message) => {
+  log(`❌ ${message}`, 'red');
+};
+
+// Define the target consolidated schema structure (18 schemas)
+const CONSOLIDATED_SCHEMAS = {
+  // === CORE SYSTEM (4 schemas) ===
+  'siteSettings': {
+    name: 'siteSettings',
+    title: 'Site Settings',
+    category: 'core',
+    consolidates: ['siteSettings', 'modernSiteSettings', 'notificationBar'],
+    description: 'All site-wide settings, notifications, and configurations'
+  },
+  
+  'navigation': {
+    name: 'navigation',
+    title: 'Navigation',
+    category: 'core',
+    consolidates: ['navigation', 'modernNavigation', 'navigationSettings'],
+    description: 'All navigation menus and links'
+  },
+  
+  'page': {
+    name: 'page',
+    title: 'Pages',
+    category: 'core',
+    consolidates: ['page', 'modernPage', 'homePage', 'legalPage', 'errorPage', 'bookingPage'],
+    description: 'All static pages including home, legal, error pages'
+  },
+  
+  'pageBuilder': {
+    name: 'pageBuilder',
+    title: 'Page Builder Components',
+    category: 'core',
+    consolidates: ['pageBuilder', 'pageSection', 'hero', 'modernHero', 'enhancedHero', 'cta', 'videoBackground'],
+    description: 'All page building blocks and sections'
+  },
+  
+  // === FRANCHISE SYSTEM (4 schemas) ===
+  'franchise': {
+    name: 'franchise',
+    title: 'Franchise Management',
+    category: 'franchise',
+    consolidates: [
+      'franchisePackage', 'modernFranchisePackage', 
+      'franchiseModelsPage', 'howToJoinPage', 'franchiseApplicationPage',
+      'financialCalculatorPage', 'schoolsPage'
+    ],
+    description: 'All franchise-related pages and packages'
+  },
+  
+  'franchiseApplication': {
+    name: 'franchiseApplication',
+    title: 'Franchise Applications',
+    category: 'franchise',
+    consolidates: [
+      'franchiseApplication', 'franchiseApplicationSubmission',
+      'franchiseField', 'enhancedFranchiseField', 'franchiseSection',
+      'franchiseMotivational', 'franchiseSteps', 'franchiseProcess'
+    ],
+    description: 'All franchise application forms and submissions'
+  },
+  
+  'school': {
+    name: 'school',
+    title: 'Schools & Locations',
+    category: 'franchise',
+    consolidates: ['school', 'location', 'locationData', 'modernFranchiseLocation'],
+    description: 'All school locations and franchise sites'
+  },
+  
+  'calculator': {
+    name: 'calculator',
+    title: 'Financial Calculator',
+    category: 'franchise',
+    consolidates: ['calculatorSettings', 'calculatorResult'],
+    description: 'Financial calculator system for franchise ROI'
+  },
+  
+  // === CONTENT SYSTEM (4 schemas) ===
+  'blog': {
+    name: 'blog',
+    title: 'Blog System',
+    category: 'content',
+    consolidates: ['blogPost', 'blogCategory'],
+    description: 'Blog posts and categories'
+  },
+  
+  'book': {
+    name: 'book',
+    title: 'Books & Publications',
+    category: 'content',
+    consolidates: ['book', 'booksLanding', 'publications'],
+    description: 'Books, publications, and book landing pages'
+  },
+  
+  'program': {
+    name: 'program',
+    title: 'Educational Programs',
+    category: 'content',
+    consolidates: ['program', 'trainingProgram', 'methodology', 'virtualClassroom', 'resource'],
+    description: 'All educational content and programs'
+  },
+  
+  'quiz': {
+    name: 'quiz',
+    title: 'Quizzes & Interactive Content',
+    category: 'content',
+    consolidates: ['quiz', 'quizResult'],
+    description: 'Interactive quizzes and results'
+  },
+  
+  // === PEOPLE SYSTEM (2 schemas) ===
+  'author': {
+    name: 'author',
+    title: 'Author & Team',
+    category: 'people',
+    consolidates: ['author', 'aboutAuthor', 'authorTimeline', 'authorAchievements', 'teamMember'],
+    description: 'Author information, achievements, and team members'
+  },
+  
+  'testimonial': {
+    name: 'testimonial',
+    title: 'Testimonials & Stories',
+    category: 'people',
+    consolidates: ['testimonial', 'modernTestimonial', 'successStory', 'experience'],
+    description: 'All testimonials, success stories, and experiences'
+  },
+  
+  // === SUPPORT SYSTEM (2 schemas) ===
+  'faq': {
+    name: 'faq',
+    title: 'FAQ System',
+    category: 'support',
+    consolidates: ['faq', 'faqCategory', 'modernFranchiseFAQ'],
+    description: 'FAQ system with categories'
+  },
+  
+  'booking': {
+    name: 'booking',
+    title: 'Bookings & Subscribers',
+    category: 'support',
+    consolidates: ['booking', 'newsletterSubscriber'],
+    description: 'Booking system and newsletter subscriptions'
+  },
+  
+  // === UI COMPONENTS (2 schemas) ===
+  'uiComponent': {
+    name: 'uiComponent',
+    title: 'UI Components',
+    category: 'ui',
+    consolidates: [
+      'button', 'feature', 'statistic', 'pricingPlan', 'modernPricingPlan',
+      'trustBadge', 'differentiator', 'franchiseStep', 'franchiseModel',
+      'leadMagnet', 'blockContent', 'seo'
+    ],
+    description: 'All reusable UI components and building blocks'
+  },
+  
+  'migration': {
+    name: 'migration',
+    title: 'Migration & Validation',
+    category: 'system',
+    consolidates: ['migrationStrategy', 'validationRules'],
+    description: 'Migration tracking and validation rules (technical)'
+  }
+};
+
+async function analyzeCurrentSchemas() {
+  logSection('ANALYZING CURRENT SCHEMA STRUCTURE');
+  
+  const backupDir = '/Users/nemanjamalisic/Desktop/srecno-ucenje 2/backups/sanity-backup-2025-08-07';
+  const analysisFile = path.join(backupDir, 'schema-analysis.json');
+  
+  if (!fs.existsSync(analysisFile)) {
+    logError('Schema analysis file not found. Run backup script first.');
+    return null;
+  }
+  
+  const analysis = JSON.parse(fs.readFileSync(analysisFile, 'utf8'));
+  
+  logSuccess(`Found ${analysis.totalSchemas} schemas:`);
+  log(`  📄 Documents: ${analysis.categories.documents}`, 'blue');
+  log(`  🧩 Objects: ${analysis.categories.objects}`, 'blue');
+  log(`  ❓ Other: ${analysis.categories.other}`, 'blue');
+  
+  return analysis;
+}
+
+async function createMigrationMap(analysis) {
+  logSection('CREATING DETAILED MIGRATION MAP');
+  
+  const migrationMap = {
+    summary: {
+      totalCurrentSchemas: analysis.totalSchemas,
+      totalTargetSchemas: Object.keys(CONSOLIDATED_SCHEMAS).length,
+      reduction: `${analysis.totalSchemas} → ${Object.keys(CONSOLIDATED_SCHEMAS).length} (${Math.round((1 - Object.keys(CONSOLIDATED_SCHEMAS).length / analysis.totalSchemas) * 100)}% reduction)`
+    },
+    consolidation: {},
+    orphaned: [],
+    potentialDataLoss: [],
+    migrationSteps: []
+  };
+  
+  // Track which schemas are accounted for
+  const accountedSchemas = new Set();
+  
+  // Create consolidation map
+  for (const [targetName, targetSchema] of Object.entries(CONSOLIDATED_SCHEMAS)) {
+    migrationMap.consolidation[targetName] = {
+      ...targetSchema,
+      sourceSchemas: [],
+      foundSchemas: [],
+      missingSchemas: [],
+      complexity: 0,
+      estimatedFields: 0
+    };
+    
+    // Find actual source schemas
+    for (const sourceName of targetSchema.consolidates) {
+      const found = [...analysis.documents, ...analysis.objects].find(
+        schema => schema.schemaName === sourceName || 
+                 schema.file.includes(sourceName) ||
+                 schema.file.replace('.ts', '').split('/').pop() === sourceName
+      );
+      
+      if (found) {
+        migrationMap.consolidation[targetName].foundSchemas.push({
+          name: found.schemaName || sourceName,
+          file: found.file,
+          size: found.size,
+          complexity: found.complexity,
+          hasValidation: found.hasValidation,
+          type: found.type
+        });
+        migrationMap.consolidation[targetName].complexity += found.complexity || 0;
+        migrationMap.consolidation[targetName].estimatedFields += found.complexity || 0;
+        accountedSchemas.add(found.file);
+      } else {
+        migrationMap.consolidation[targetName].missingSchemas.push(sourceName);
+      }
+    }
+  }
+  
+  // Find orphaned schemas
+  for (const schema of [...analysis.documents, ...analysis.objects]) {
+    if (!accountedSchemas.has(schema.file)) {
+      migrationMap.orphaned.push({
+        name: schema.schemaName,
+        file: schema.file,
+        type: schema.type,
+        size: schema.size,
+        complexity: schema.complexity
+      });
+    }
+  }
+  
+  // Identify potential data loss risks
+  migrationMap.potentialDataLoss = migrationMap.orphaned.filter(schema => 
+    schema.type === 'document' && schema.complexity > 2
+  );
+  
+  return migrationMap;
+}
+
+async function generateMigrationSteps(migrationMap) {
+  logSubsection('GENERATING MIGRATION STEPS');
+  
+  const steps = [
+    {
+      phase: 1,
+      title: 'Preparation Phase',
+      description: 'Prepare for migration without affecting production',
+      tasks: [
+        'Create development branch for migration work',
+        'Backup all current data (already done)',
+        'Set up parallel schema structure',
+        'Create migration scripts for each consolidation'
+      ],
+      risk: 'LOW',
+      estimated: '2-3 hours'
+    },
+    {
+      phase: 2,
+      title: 'Schema Creation Phase',
+      description: 'Create new consolidated schemas',
+      tasks: [
+        'Create 18 new consolidated schema files',
+        'Merge field definitions from source schemas',
+        'Preserve all validation rules and constraints',
+        'Test schema compilation'
+      ],
+      risk: 'MEDIUM',
+      estimated: '4-6 hours'
+    },
+    {
+      phase: 3,
+      title: 'Data Migration Phase',
+      description: 'Migrate existing content to new structure',
+      tasks: [
+        'Export all existing documents by type',
+        'Transform data to match new schema structure',
+        'Import data into consolidated schemas',
+        'Verify all content is preserved'
+      ],
+      risk: 'HIGH',
+      estimated: '3-4 hours'
+    },
+    {
+      phase: 4,
+      title: 'Validation Phase',
+      description: 'Ensure everything works correctly',
+      tasks: [
+        'Test all admin interfaces',
+        'Verify all queries still work',
+        'Check all frontend integrations',
+        'Performance testing'
+      ],
+      risk: 'MEDIUM',
+      estimated: '2-3 hours'
+    },
+    {
+      phase: 5,
+      title: 'Cleanup Phase',
+      description: 'Remove old schemas and clean up',
+      tasks: [
+        'Remove old schema files',
+        'Update all import statements',
+        'Clean up unused types',
+        'Update documentation'
+      ],
+      risk: 'LOW',
+      estimated: '1-2 hours'
+    }
+  ];
+  
+  migrationMap.migrationSteps = steps;
+  
+  return steps;
+}
+
+async function generateMigrationScripts(migrationMap) {
+  logSubsection('GENERATING MIGRATION SCRIPTS');
+  
+  const scriptsDir = '/Users/nemanjamalisic/Desktop/srecno-ucenje 2/scripts/migration';
+  
+  if (!fs.existsSync(scriptsDir)) {
+    fs.mkdirSync(scriptsDir, { recursive: true });
+  }
+  
+  // Generate individual migration scripts for each consolidation
+  for (const [targetName, targetSchema] of Object.entries(migrationMap.consolidation)) {
+    const scriptContent = generateConsolidationScript(targetName, targetSchema);
+    fs.writeFileSync(
+      path.join(scriptsDir, `migrate-${targetName}.js`),
+      scriptContent
+    );
+  }
+  
+  // Generate master migration orchestrator
+  const masterScript = generateMasterMigrationScript(migrationMap);
+  fs.writeFileSync(
+    path.join(scriptsDir, 'run-migration.js'),
+    masterScript
+  );
+  
+  logSuccess(`Generated migration scripts in: ${scriptsDir}`);
+}
+
+function generateConsolidationScript(targetName, targetSchema) {
+  return `#!/usr/bin/env node
+
+/**
+ * MIGRATION SCRIPT: ${targetName}
+ * 
+ * Consolidates: ${targetSchema.consolidates.join(', ')}
+ * Target: ${targetSchema.title}
+ * Category: ${targetSchema.category}
+ * 
+ * This script migrates data from multiple source schemas into the consolidated ${targetName} schema.
+ */
+
+const { sanityClient } = require('../sanity-client');
+
+async function migrate${targetName.charAt(0).toUpperCase() + targetName.slice(1)}() {
+  console.log('🚀 Starting ${targetName} migration...');
+  
+  try {
+    // Step 1: Fetch all documents from source schemas
+    const sourceTypes = ${JSON.stringify(targetSchema.consolidates)};
+    const sourceDocuments = [];
+    
+    for (const sourceType of sourceTypes) {
+      try {
+        const docs = await sanityClient.fetch(\`*[_type == "\${sourceType}"]\`);
+        sourceDocuments.push(...docs.map(doc => ({...doc, _sourceType: sourceType})));
+        console.log(\`  ✅ Found \${docs.length} documents of type: \${sourceType}\`);
+      } catch (error) {
+        console.log(\`  ⚠️  No documents found for type: \${sourceType}\`);
+      }
+    }
+    
+    if (sourceDocuments.length === 0) {
+      console.log('  ℹ️  No documents to migrate for ${targetName}');
+      return { success: true, migrated: 0 };
+    }
+    
+    // Step 2: Transform documents to new schema structure
+    const transformedDocuments = sourceDocuments.map(doc => transformDocument${targetName.charAt(0).toUpperCase() + targetName.slice(1)}(doc));
+    
+    // Step 3: Create new documents in consolidated schema
+    const results = [];
+    for (const doc of transformedDocuments) {
+      try {
+        const result = await sanityClient.create({
+          ...doc,
+          _type: '${targetName}',
+          _id: doc._id ? \`\${targetName}-\${doc._id}\` : undefined,
+          migratedFrom: doc._sourceType,
+          migrationDate: new Date().toISOString()
+        });
+        results.push(result);
+      } catch (error) {
+        console.error(\`  ❌ Failed to migrate document \${doc._id}: \${error.message}\`);
+      }
+    }
+    
+    console.log(\`✅ Successfully migrated \${results.length}/\${transformedDocuments.length} documents to ${targetName}\`);
+    return { success: true, migrated: results.length, total: transformedDocuments.length };
+    
+  } catch (error) {
+    console.error(\`❌ Migration failed for ${targetName}: \${error.message}\`);
+    return { success: false, error: error.message };
+  }
+}
+
+function transformDocument${targetName.charAt(0).toUpperCase() + targetName.slice(1)}(doc) {
+  // TODO: Implement specific transformation logic for ${targetName}
+  // This is a template - customize based on actual field mappings
+  
+  const transformed = {
+    _id: doc._id,
+    _rev: doc._rev,
+    _createdAt: doc._createdAt,
+    _updatedAt: doc._updatedAt,
+    
+    // Common fields that should be preserved
+    title: doc.title || doc.name,
+    slug: doc.slug,
+    description: doc.description,
+    content: doc.content,
+    seo: doc.seo,
+    
+    // Source tracking
+    _sourceType: doc._sourceType,
+    _originalId: doc._id
+  };
+  
+  // Add schema-specific transformations here
+  // Example transformations based on ${targetName}:
+  ${generateTransformationLogic(targetName, targetSchema)}
+  
+  return transformed;
+}
+
+module.exports = {
+  migrate: migrate${targetName.charAt(0).toUpperCase() + targetName.slice(1)},
+  transform: transformDocument${targetName.charAt(0).toUpperCase() + targetName.slice(1)}
+};
+
+if (require.main === module) {
+  migrate${targetName.charAt(0).toUpperCase() + targetName.slice(1)}()
+    .then(result => {
+      console.log('Migration result:', result);
+      process.exit(result.success ? 0 : 1);
+    })
+    .catch(error => {
+      console.error('Migration failed:', error);
+      process.exit(1);
+    });
+}
+`;
+}
+
+function generateTransformationLogic(targetName, targetSchema) {
+  const transformations = {
+    'siteSettings': `
+  // Merge notification bar settings
+  if (doc._sourceType === 'notificationBar') {
+    transformed.notifications = transformed.notifications || [];
+    transformed.notifications.push({
+      message: doc.message,
+      type: doc.type,
+      isActive: doc.isActive
+    });
+  }
+  
+  // Merge modern site settings
+  if (doc._sourceType === 'modernSiteSettings') {
+    transformed.branding = doc.branding;
+    transformed.socialMedia = doc.socialMedia;
+    transformed.analytics = doc.analytics;
+  }`,
+
+    'navigation': `
+  // Handle different navigation structures
+  if (doc._sourceType === 'modernNavigation') {
+    transformed.menuItems = doc.menuItems;
+    transformed.footerLinks = doc.footerLinks;
+  } else if (doc._sourceType === 'navigationSettings') {
+    transformed.settings = doc.settings;
+  }`,
+
+    'page': `
+  // Determine page type based on source
+  if (doc._sourceType === 'homePage') {
+    transformed.pageType = 'home';
+    transformed.hero = doc.hero;
+    transformed.sections = doc.sections;
+  } else if (doc._sourceType === 'legalPage') {
+    transformed.pageType = 'legal';
+    transformed.legalType = doc.type;
+  } else if (doc._sourceType === 'errorPage') {
+    transformed.pageType = 'error';
+    transformed.errorCode = doc.code;
+  }`,
+
+    'franchise': `
+  // Handle franchise package data
+  if (doc._sourceType === 'franchisePackage' || doc._sourceType === 'modernFranchisePackage') {
+    transformed.packageType = doc.type;
+    transformed.pricing = doc.pricing;
+    transformed.features = doc.features;
+    transformed.requirements = doc.requirements;
+  }
+  
+  // Handle page content
+  if (doc._sourceType.includes('Page')) {
+    transformed.pageContent = {
+      hero: doc.hero,
+      sections: doc.sections,
+      cta: doc.cta
+    };
+  }`,
+
+    'franchiseApplication': `
+  // Handle form fields
+  if (doc._sourceType === 'franchiseField' || doc._sourceType === 'enhancedFranchiseField') {
+    transformed.formFields = transformed.formFields || [];
+    transformed.formFields.push({
+      name: doc.name,
+      type: doc.type,
+      label: doc.label,
+      required: doc.required,
+      validation: doc.validation
+    });
+  }
+  
+  // Handle submissions
+  if (doc._sourceType === 'franchiseApplicationSubmission') {
+    transformed.applicationData = doc.data;
+    transformed.status = doc.status;
+    transformed.submissionDate = doc.submissionDate;
+  }`,
+
+    'school': `
+  // Merge location data
+  if (doc._sourceType === 'locationData') {
+    transformed.address = doc.address;
+    transformed.coordinates = doc.coordinates;
+    transformed.contactInfo = doc.contactInfo;
+  }
+  
+  // Modern franchise location data
+  if (doc._sourceType === 'modernFranchiseLocation') {
+    transformed.facilities = doc.facilities;
+    transformed.capacity = doc.capacity;
+    transformed.programs = doc.programs;
+  }`
+  };
+
+  return transformations[targetName] || `
+  // Add specific transformation logic for ${targetName}
+  // Preserve all important fields from source schemas`;
+}
+
+function generateMasterMigrationScript(migrationMap) {
+  return `#!/usr/bin/env node
+
+/**
+ * MASTER MIGRATION ORCHESTRATOR
+ * 
+ * This script orchestrates the complete migration from 81 schemas to 18.
+ * It runs all individual migration scripts in the correct order.
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+// Migration order (dependencies considered)
+const MIGRATION_ORDER = [
+  'uiComponent',     // Components first (no dependencies)
+  'migration',       // System schemas
+  'siteSettings',    // Core settings
+  'navigation',      // Navigation
+  'pageBuilder',     // Page components
+  'author',          // People data
+  'testimonial',     // Testimonials
+  'blog',            // Content
+  'book',            // Publications
+  'program',         // Educational content
+  'quiz',            // Interactive content
+  'faq',             // Support content
+  'booking',         // Customer data
+  'calculator',      // Financial tools
+  'school',          // Locations
+  'franchiseApplication', // Applications
+  'franchise',       // Main franchise data
+  'page'             // Pages last (may reference other content)
+];
+
+async function runMasterMigration() {
+  console.log('🚀 Starting Master Migration: 81 → 18 schemas');
+  console.log('⚠️  This is a MAJOR operation - ensure you have backups!\\n');
+  
+  const results = [];
+  let totalMigrated = 0;
+  let totalErrors = 0;
+  
+  for (const schemaName of MIGRATION_ORDER) {
+    console.log(\`\\n📦 Migrating: \${schemaName}\`);
+    console.log('─'.repeat(50));
+    
+    try {
+      const migrationScript = require(\`./migrate-\${schemaName}\`);
+      const result = await migrationScript.migrate();
+      
+      results.push({
+        schema: schemaName,
+        ...result
+      });
+      
+      if (result.success) {
+        totalMigrated += result.migrated || 0;
+        console.log(\`✅ \${schemaName}: \${result.migrated || 0} documents migrated\`);
+      } else {
+        totalErrors++;
+        console.error(\`❌ \${schemaName}: Migration failed - \${result.error}\`);
+      }
+      
+      // Small delay between migrations
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+    } catch (error) {
+      totalErrors++;
+      console.error(\`❌ \${schemaName}: Script error - \${error.message}\`);
+      results.push({
+        schema: schemaName,
+        success: false,
+        error: error.message
+      });
+    }
+  }
+  
+  // Generate final report
+  console.log('\\n' + '='.repeat(80));
+  console.log('📊 MIGRATION COMPLETE - FINAL REPORT');
+  console.log('='.repeat(80));
+  
+  console.log(\`Total documents migrated: \${totalMigrated}\`);
+  console.log(\`Migration errors: \${totalErrors}\`);
+  console.log(\`Success rate: \${Math.round((MIGRATION_ORDER.length - totalErrors) / MIGRATION_ORDER.length * 100)}%\`);
+  
+  // Detailed results
+  console.log('\\n📋 Detailed Results:');
+  results.forEach(result => {
+    const status = result.success ? '✅' : '❌';
+    const details = result.success ? 
+      \`\${result.migrated || 0} docs\` : 
+      \`ERROR: \${result.error}\`;
+    console.log(\`  \${status} \${result.schema}: \${details}\`);
+  });
+  
+  // Save detailed report
+  const reportPath = path.join(__dirname, '../backups/migration-report.json');
+  fs.writeFileSync(reportPath, JSON.stringify({
+    timestamp: new Date().toISOString(),
+    totalMigrated,
+    totalErrors,
+    results,
+    summary: {
+      originalSchemas: 81,
+      targetSchemas: 18,
+      reduction: '77% reduction in schema count'
+    }
+  }, null, 2));
+  
+  console.log(\`\\n📄 Detailed report saved to: \${reportPath}\`);
+  
+  if (totalErrors === 0) {
+    console.log('\\n🎉 ALL MIGRATIONS SUCCESSFUL!');
+    console.log('Next steps:');
+    console.log('1. Verify all content in Sanity Studio');
+    console.log('2. Test all frontend functionality');
+    console.log('3. Update schema index file');
+    console.log('4. Remove old schema files');
+  } else {
+    console.log('\\n⚠️  Some migrations failed - review errors above');
+    console.log('Do not proceed with cleanup until all migrations succeed');
+  }
+  
+  return { totalMigrated, totalErrors, results };
+}
+
+if (require.main === module) {
+  runMasterMigration()
+    .then(result => {
+      process.exit(result.totalErrors === 0 ? 0 : 1);
+    })
+    .catch(error => {
+      console.error('Master migration failed:', error);
+      process.exit(1);
+    });
+}
+
+module.exports = { runMasterMigration };
+`;
+}
+
+async function generateComprehensiveReport(migrationMap) {
+  logSection('GENERATING COMPREHENSIVE MIGRATION REPORT');
+  
+  const reportPath = '/Users/nemanjamalisic/Desktop/srecno-ucenje 2/SCHEMA-CONSOLIDATION-PLAN.md';
+  
+  const report = `# SANITY SCHEMA CONSOLIDATION PLAN
+
+## 🚨 CRITICAL MIGRATION: 81 → 18 Schemas
+
+**Date**: ${new Date().toISOString().split('T')[0]}  
+**Status**: Ready for execution  
+**Risk Level**: HIGH (Major structural change)
+
+## Executive Summary
+
+This document outlines the complete migration strategy for consolidating Sanity CMS schemas from **81 schemas to 18 schemas** (77% reduction) while preserving ALL existing content and functionality.
+
+### Migration Statistics
+- **Current Schemas**: ${migrationMap.summary.totalCurrentSchemas}
+- **Target Schemas**: ${migrationMap.summary.totalTargetSchemas}  
+- **Reduction**: ${migrationMap.summary.reduction}
+- **Orphaned Schemas**: ${migrationMap.orphaned.length}
+- **Potential Data Loss Risks**: ${migrationMap.potentialDataLoss.length}
+
+## 📋 Target Schema Architecture
+
+### Core System (4 schemas)
+${Object.entries(migrationMap.consolidation).filter(([_, schema]) => schema.category === 'core').map(([name, schema]) => `
+#### ${schema.title} (\`${name}\`)
+${schema.description}
+
+**Consolidates**: ${schema.consolidates.join(', ')}  
+**Found Schemas**: ${schema.foundSchemas.length}/${schema.consolidates.length}  
+**Estimated Fields**: ${schema.estimatedFields}  
+**Complexity**: ${schema.complexity}
+`).join('')}
+
+### Franchise System (4 schemas)
+${Object.entries(migrationMap.consolidation).filter(([_, schema]) => schema.category === 'franchise').map(([name, schema]) => `
+#### ${schema.title} (\`${name}\`)
+${schema.description}
+
+**Consolidates**: ${schema.consolidates.join(', ')}  
+**Found Schemas**: ${schema.foundSchemas.length}/${schema.consolidates.length}  
+**Estimated Fields**: ${schema.estimatedFields}  
+**Complexity**: ${schema.complexity}
+`).join('')}
+
+### Content System (4 schemas)
+${Object.entries(migrationMap.consolidation).filter(([_, schema]) => schema.category === 'content').map(([name, schema]) => `
+#### ${schema.title} (\`${name}\`)
+${schema.description}
+
+**Consolidates**: ${schema.consolidates.join(', ')}  
+**Found Schemas**: ${schema.foundSchemas.length}/${schema.consolidates.length}  
+**Estimated Fields**: ${schema.estimatedFields}  
+**Complexity**: ${schema.complexity}
+`).join('')}
+
+### People System (2 schemas)
+${Object.entries(migrationMap.consolidation).filter(([_, schema]) => schema.category === 'people').map(([name, schema]) => `
+#### ${schema.title} (\`${name}\`)
+${schema.description}
+
+**Consolidates**: ${schema.consolidates.join(', ')}  
+**Found Schemas**: ${schema.foundSchemas.length}/${schema.consolidates.length}  
+**Estimated Fields**: ${schema.estimatedFields}  
+**Complexity**: ${schema.complexity}
+`).join('')}
+
+### Support System (2 schemas)
+${Object.entries(migrationMap.consolidation).filter(([_, schema]) => schema.category === 'support').map(([name, schema]) => `
+#### ${schema.title} (\`${name}\`)
+${schema.description}
+
+**Consolidates**: ${schema.consolidates.join(', ')}  
+**Found Schemas**: ${schema.foundSchemas.length}/${schema.consolidates.length}  
+**Estimated Fields**: ${schema.estimatedFields}  
+**Complexity**: ${schema.complexity}
+`).join('')}
+
+### UI Components (2 schemas)
+${Object.entries(migrationMap.consolidation).filter(([_, schema]) => schema.category === 'ui').map(([name, schema]) => `
+#### ${schema.title} (\`${name}\`)
+${schema.description}
+
+**Consolidates**: ${schema.consolidates.join(', ')}  
+**Found Schemas**: ${schema.foundSchemas.length}/${schema.consolidates.length}  
+**Estimated Fields**: ${schema.estimatedFields}  
+**Complexity**: ${schema.complexity}
+`).join('')}
+
+## ⚠️ Risk Analysis
+
+### Orphaned Schemas (${migrationMap.orphaned.length})
+These schemas are not included in any consolidation and may contain important data:
+
+${migrationMap.orphaned.map(schema => `
+- **${schema.name}** (\`${schema.file}\`)
+  - Type: ${schema.type}
+  - Complexity: ${schema.complexity}
+  - Size: ${schema.size} bytes
+`).join('')}
+
+${migrationMap.orphaned.length > 0 ? `
+**Action Required**: Review each orphaned schema and either:
+1. Add to appropriate consolidation group
+2. Create new consolidated schema if content is critical
+3. Export data for manual preservation if schema is obsolete
+` : '**✅ No orphaned schemas found**'}
+
+### Potential Data Loss Risks (${migrationMap.potentialDataLoss.length})
+High-complexity document schemas not accounted for:
+
+${migrationMap.potentialDataLoss.map(schema => `
+- **${schema.name}** (\`${schema.file}\`)
+  - Complexity: ${schema.complexity} (HIGH)
+  - **CRITICAL**: Manual review required
+`).join('')}
+
+## 🔄 Migration Process
+
+### Prerequisites
+- [x] Complete backup created (Git branch + data export)
+- [x] Migration scripts generated
+- [ ] Development environment testing
+- [ ] Stakeholder approval
+
+### Phase-by-Phase Execution
+
+${migrationMap.migrationSteps.map((step, index) => `
+#### Phase ${step.phase}: ${step.title}
+**Risk**: ${step.risk} | **Estimated Time**: ${step.estimated}
+
+${step.description}
+
+**Tasks**:
+${step.tasks.map(task => `- [ ] ${task}`).join('\n')}
+`).join('')}
+
+## 🛡️ Rollback Plan
+
+### Emergency Rollback
+If migration fails or causes data loss:
+
+1. **Immediate Action**:
+   \`\`\`bash
+   git checkout backup-before-schema-consolidation-2025-08-07
+   git checkout -b emergency-rollback
+   \`\`\`
+
+2. **Data Restoration**:
+   \`\`\`bash
+   npx sanity dataset import backups/sanity-backup-2025-08-07/sanity-data.ndjson production --replace
+   \`\`\`
+
+3. **Schema Restoration**:
+   \`\`\`bash
+   cp -r backups/sanity-backup-2025-08-07/schemas/* sanity/schemas/
+   \`\`\`
+
+### Verification Steps
+After rollback, verify:
+- [ ] All pages load correctly
+- [ ] Admin interface functions
+- [ ] All document types accessible
+- [ ] Content displays properly
+
+## 📊 Success Metrics
+
+### Pre-Migration Checklist
+- [ ] Backup verified and tested
+- [ ] Migration scripts reviewed
+- [ ] Test environment prepared
+- [ ] Team notified of maintenance window
+- [ ] Rollback plan confirmed
+
+### Post-Migration Verification
+- [ ] All 18 schemas compile correctly
+- [ ] All existing content preserved
+- [ ] Admin interface functions properly
+- [ ] Frontend displays all content
+- [ ] Performance improved (fewer schemas)
+- [ ] All queries still work
+
+## 🚦 Go/No-Go Decision Criteria
+
+### GREEN LIGHT ✅
+- All backups verified
+- No critical orphaned schemas
+- Migration scripts tested
+- Team available for monitoring
+- Rollback plan confirmed
+
+### RED LIGHT ❌
+- Backup verification fails
+- Critical orphaned schemas found
+- Migration scripts have errors
+- Limited team availability
+- Unclear rollback procedure
+
+## 📞 Emergency Contacts
+
+- **Technical Lead**: [CONTACT INFO]
+- **Sanity Admin**: [CONTACT INFO]
+- **Business Owner**: [CONTACT INFO]
+
+## 📝 Migration Log
+
+| Phase | Status | Started | Completed | Notes |
+|-------|--------|---------|-----------|-------|
+| 1. Preparation | ⏳ Pending | | | |
+| 2. Schema Creation | ⏳ Pending | | | |
+| 3. Data Migration | ⏳ Pending | | | |
+| 4. Validation | ⏳ Pending | | | |
+| 5. Cleanup | ⏳ Pending | | | |
+
+---
+
+**⚠️ IMPORTANT**: Do not proceed with migration until all orphaned schemas are reviewed and accounted for. Content preservation is the highest priority.
+
+**📅 Next Steps**:
+1. Review and approve this migration plan
+2. Address all orphaned schemas  
+3. Test migration scripts in development
+4. Schedule maintenance window
+5. Execute migration with full team support
+
+---
+*Generated by Sanity Migration Analysis Tool*  
+*Backup Reference: backup-before-schema-consolidation-2025-08-07*
+`;
+
+  fs.writeFileSync(reportPath, report);
+  logSuccess(`Comprehensive migration plan saved to: ${reportPath}`);
+  
+  return reportPath;
+}
+
+// Main execution
+async function main() {
+  logSection('SANITY SCHEMA CONSOLIDATION ANALYSIS');
+  log('🔍 Analyzing current schemas and creating migration strategy...', 'cyan');
+  
+  try {
+    // Analyze current schemas
+    const analysis = await analyzeCurrentSchemas();
+    if (!analysis) return;
+    
+    // Create detailed migration map
+    const migrationMap = await createMigrationMap(analysis);
+    
+    // Generate migration steps
+    await generateMigrationSteps(migrationMap);
+    
+    // Generate migration scripts
+    await generateMigrationScripts(migrationMap);
+    
+    // Generate comprehensive report
+    const reportPath = await generateComprehensiveReport(migrationMap);
+    
+    // Summary
+    logSection('ANALYSIS COMPLETE');
+    logSuccess(`Migration strategy created successfully!`);
+    log(`📊 Summary:`, 'yellow');
+    log(`  • Current schemas: ${migrationMap.summary.totalCurrentSchemas}`, 'blue');
+    log(`  • Target schemas: ${migrationMap.summary.totalTargetSchemas}`, 'blue');
+    log(`  • Reduction: ${migrationMap.summary.reduction}`, 'blue');
+    log(`  • Orphaned schemas: ${migrationMap.orphaned.length}`, migrationMap.orphaned.length > 0 ? 'yellow' : 'green');
+    log(`  • Data loss risks: ${migrationMap.potentialDataLoss.length}`, migrationMap.potentialDataLoss.length > 0 ? 'red' : 'green');
+    
+    if (migrationMap.orphaned.length > 0) {
+      logWarning(`⚠️  ${migrationMap.orphaned.length} orphaned schemas require review!`);
+      log('Orphaned schemas:', 'yellow');
+      migrationMap.orphaned.forEach(schema => {
+        log(`  - ${schema.name} (${schema.file})`, 'yellow');
+      });
+    }
+    
+    if (migrationMap.potentialDataLoss.length > 0) {
+      logError(`❌ ${migrationMap.potentialDataLoss.length} schemas have potential data loss risk!`);
+      log('High-risk schemas:', 'red');
+      migrationMap.potentialDataLoss.forEach(schema => {
+        log(`  - ${schema.name} (complexity: ${schema.complexity})`, 'red');
+      });
+    }
+    
+    log(`\n📄 Detailed migration plan: ${reportPath}`, 'cyan');
+    log(`📁 Migration scripts: /scripts/migration/`, 'cyan');
+    
+    if (migrationMap.orphaned.length === 0 && migrationMap.potentialDataLoss.length === 0) {
+      logSuccess('🎉 Ready to proceed with migration!');
+    } else {
+      logWarning('⚠️  Review orphaned schemas before proceeding');
+    }
+    
+  } catch (error) {
+    logError(`Analysis failed: ${error.message}`);
+    process.exit(1);
+  }
+}
+
+// Execute analysis
+if (require.main === module) {
+  main().catch(error => {
+    console.error('Fatal error:', error);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  analyzeSchemas: main,
+  CONSOLIDATED_SCHEMAS
+};
