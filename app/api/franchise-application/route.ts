@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { client } from '@/lib/sanity.client'
-import nodemailer from 'nodemailer'
+import * as nodemailer from 'nodemailer'
 
 export async function POST(request: NextRequest) {
   try {
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
     console.log('Application saved to Sanity:', savedApplication._id)
 
     // Setup email transporter
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: false,

@@ -23,17 +23,20 @@ const MotionWrapper = dynamic(
 
 // Create motion components conditionally
 const createMotionComponent = (Component: string) => {
+  if (typeof window === 'undefined') {
+    return Component as any;
+  }
   return dynamic(
-    () => import('framer-motion').then(mod => mod.motion[Component as keyof typeof mod.motion]),
-    { ssr: false, loading: () => Component === 'svg' ? 'svg' : 'g' }
+    () => import('framer-motion').then(mod => (mod.motion as any)[Component]),
+    { ssr: false, loading: () => Component as any }
   );
 };
 
 // Safe motion components that fallback to regular HTML elements
-const MotionSVG = typeof window !== 'undefined' ? createMotionComponent('svg') : 'svg';
-const MotionG = typeof window !== 'undefined' ? createMotionComponent('g') : 'g';
-const MotionPath = typeof window !== 'undefined' ? createMotionComponent('path') : 'path';
-const MotionCircle = typeof window !== 'undefined' ? createMotionComponent('circle') : 'circle';
+const MotionSVG = typeof window !== 'undefined' ? createMotionComponent('svg') : 'svg' as any;
+const MotionG = typeof window !== 'undefined' ? createMotionComponent('g') : 'g' as any;
+const MotionPath = typeof window !== 'undefined' ? createMotionComponent('path') : 'path' as any;
+const MotionCircle = typeof window !== 'undefined' ? createMotionComponent('circle') : 'circle' as any;
 
 const IconWrapper = ({ 
   children, 
