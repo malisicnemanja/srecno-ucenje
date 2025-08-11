@@ -440,7 +440,7 @@ export const testimonialsQuery = groq`
 
 // Home Page Query - Updated to match actual schema - Get the complete document
 export const homePageQuery = groq`
-  *[_type == "homePage" && _id == "homePage"][0] {
+  *[_type == "homePage"][0] {
     _id,
     enhancedHero {
       title,

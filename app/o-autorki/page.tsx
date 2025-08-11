@@ -590,7 +590,7 @@ export default async function AboutAuthorPage() {
                       <div className="text-center">
                         <div 
                           className="w-16 h-16 rounded-full flex items-center justify-center text-2xl text-white mx-auto mb-4"
-                          style={{ backgroundColor: achievement.color }}
+                          style={{ backgroundColor: achievement.color || '#6B7280' }}
                         >
                           {achievement.icon && achievementIcons[achievement.icon] ? 
                             React.createElement(achievementIcons[achievement.icon], { 

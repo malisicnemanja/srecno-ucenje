@@ -8,7 +8,7 @@ import { Metadata } from 'next'
 import { 
   Users, MapPin, TrendingUp, Calendar, 
   Phone, Check, Book, Rocket,
-  Brain, Handshake, Award, Heart,
+  Brain, HeartHandshake, Award, Heart,
   ChevronDown, ArrowRight
 } from 'lucide-react'
 
@@ -152,7 +152,7 @@ export default async function HomePage() {
                   {/* Icon */}
                   <div className={`w-14 h-14 ${colors.accent} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     {feature.icon === 'partnership' ? (
-                      <Handshake size={24} className="text-white" />
+                      <HeartHandshake size={24} className="text-white" />
                     ) : feature.icon === 'trending' ? (
                       <TrendingUp size={24} className="text-white" />
                     ) : feature.icon === 'brain' ? (

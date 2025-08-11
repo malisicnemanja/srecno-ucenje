@@ -312,6 +312,15 @@ export const portableTextComponents: PortableTextComponents = {
       </div>
     )
   },
+  
+  // Default block handler for any unhandled block types
+  hardBreak: () => <br />,
+  
+  // Missing span handler
+  unknownMark: ({ children, markDef }) => {
+    console.warn('Unknown mark:', markDef._type, markDef)
+    return <span>{children}</span>
+  },
 }
 
 /**

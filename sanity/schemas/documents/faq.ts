@@ -29,6 +29,24 @@ export default defineType({
       title: 'Redosled',
       type: 'number',
     }),
+    defineField({
+      name: 'isActive',
+      title: 'Aktivan',
+      type: 'boolean',
+      initialValue: true,
+    }),
+    defineField({
+      name: 'tags',
+      title: 'Tagovi',
+      type: 'array',
+      of: [{ type: 'string' }],
+    }),
+    defineField({
+      name: 'title',
+      title: 'Naslov (opciono)',
+      type: 'string',
+      description: 'Opcioni kratki naslov za FAQ',
+    }),
   ],
   preview: {
     select: {

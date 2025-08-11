@@ -7,14 +7,14 @@ export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 export const apiVersion = '2024-01-01'
 
 // Use mock mode for development
-const USE_MOCK = true // Set to false when using real Sanity
+const USE_MOCK = false // Set to false when using real Sanity
 
 export const client = createClient({
   projectId: projectId, // Use the correct project ID from env
   dataset: dataset,
   apiVersion,
   useCdn: false, // Disable CDN for now
-  token: process.env.NEXT_PUBLIC_SANITY_WRITE_TOKEN, // Add token for read access
+  token: process.env.SANITY_API_TOKEN, // Use read token from environment
 })
 
 // Temporary urlFor function that returns direct URLs
