@@ -421,10 +421,12 @@ export const Constellation = ({
   )
 }
 
-export default {
+const BackgroundEffects = {
   FloatingShapes,
   ParticleSystem,
   WavePattern,
   AnimatedGradient,
   Constellation
 }
+
+export default BackgroundEffects

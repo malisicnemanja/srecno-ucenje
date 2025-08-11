@@ -113,7 +113,7 @@ export default function OptimizedAnimatedCounter({
         cancelAnimationFrame(animationRef.current)
       }
     }
-  }, [startOnView, delay, isVisible])
+  }, [startOnView, delay, isVisible, animateCounter])
 
   // Cleanup animation on unmount
   useEffect(() => {
@@ -214,7 +214,7 @@ export function useOptimizedAnimatedCounter(
         cancelAnimationFrame(animationRef.current)
       }
     }
-  }, [autoStart, end])
+  }, [autoStart, end, startAnimation])
 
   return {
     count: count.toFixed(decimals),

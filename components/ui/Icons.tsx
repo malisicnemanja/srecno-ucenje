@@ -10,8 +10,10 @@ interface IconProps extends SVGProps<SVGSVGElement> {
 const MotionWrapper = dynamic(
   () => import('framer-motion').then(mod => {
     const motion = mod.motion;
-    return ({ children, animate: shouldAnimate = true, ...props }: any) => 
+    const Component = ({ children, animate: shouldAnimate = true, ...props }: any) => 
       shouldAnimate ? motion.div(props, children) : <div>{children}</div>
+    Component.displayName = 'MotionWrapper';
+    return Component;
   }),
   { 
     ssr: false,

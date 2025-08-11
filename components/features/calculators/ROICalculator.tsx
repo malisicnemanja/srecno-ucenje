@@ -76,7 +76,7 @@ export default function ROICalculator() {
     if (inputs.childrenCount && inputs.pricePerChild) {
       calculateROI()
     }
-  }, [inputs, settings])
+  }, [inputs, settings, calculateROI])
 
   const calculateROI = () => {
     const workingDaysPerMonth = settings?.revenueSettings?.workingDaysPerMonth || 22

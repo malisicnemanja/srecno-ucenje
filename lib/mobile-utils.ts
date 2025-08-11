@@ -508,7 +508,7 @@ export const initializeMobileExperience = () => {
 }
 
 // Export everything
-export default {
+const mobileUtils = {
   DeviceDetection,
   ViewportUtils,
   TouchUtils,
@@ -520,3 +520,5 @@ export default {
   NetworkUtils,
   initializeMobileExperience
 }
+
+export default mobileUtils

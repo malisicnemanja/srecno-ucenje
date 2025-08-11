@@ -14,6 +14,9 @@ import { BrushUnderline } from '@/components/ui/BrushUnderline'
 import { AlternatingText } from '@/components/ui/AlternatingText'
 import { HeroSection } from '@/components/features/cms/HeroSection'
 
+// Import missing icons
+import { Rocket as RocketIcon, Star as StarIcon, Heart as HeartIcon, Check as CheckIcon } from 'lucide-react'
+
 // Success Stories Floating Bubbles Component
 const SuccessStoryBubble = ({ story, index }: { story: any; index: number }) => {
   const positions = [
@@ -105,7 +108,7 @@ export default function FransizaModeliPage() {
       setCurrentTitleIndex((prev) => (prev + 1) % alternatingTitles.length)
     }, 3000)
     return () => clearInterval(interval)
-  }, [])
+  }, [alternatingTitles.length])
 
   // Success stories for floating bubbles
   const successStories = [

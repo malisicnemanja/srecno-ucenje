@@ -214,7 +214,7 @@ export const colorRotationStyles = `
   section:nth-child(5n+5) { --section-color: var(--color-night); }
 `
 
-export default {
+const colorRotation = {
   brandColors,
   getColorByIndex,
   getSectionColor,
@@ -225,3 +225,5 @@ export default {
   getContrastColor,
   getComplementaryColor
 }
+
+export default colorRotation

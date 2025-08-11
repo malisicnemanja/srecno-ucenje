@@ -83,7 +83,7 @@ const QuizCard: React.FC<QuizCardProps> = ({
 
       return () => clearInterval(timer)
     }
-  }, [timeLimit, showResults, quizCompleted])
+  }, [timeLimit, showResults, quizCompleted, handleQuizComplete])
 
   // Reset question timer when question changes
   useEffect(() => {

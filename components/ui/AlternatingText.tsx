@@ -112,7 +112,7 @@ export default function AlternatingText({
         clearInterval(intervalRef.current)
       }
     }
-  }, [words.length, interval, isPaused])
+  }, [words.length, interval, isPaused, nextWord])
 
   // Handle pause/resume on hover
   const handleMouseEnter = () => {

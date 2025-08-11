@@ -97,7 +97,7 @@ export const BasePDFTemplate: React.FC<BasePDFTemplateProps> = ({
         {/* Header */}
         <View style={styles.header}>
           <View style={styles.headerContent}>
-            {logo && <Image style={styles.logo} src={logo} />}
+            {logo && <Image style={styles.logo} src={logo} alt="Company Logo" />}
             <View style={styles.titleContainer}>
               <Text style={styles.title}>{title}</Text>
               {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}

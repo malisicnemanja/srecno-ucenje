@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode, useEffect, useRef } from 'react'
+import { ReactNode, useEffect, useRef, useCallback } from 'react'
 import { addTouchFeedback, prefersReducedMotion, isMobile } from '@/lib/animation-utils'
 
 interface OptimizedPulseButtonProps {
@@ -42,6 +42,23 @@ export default function OptimizedPulseButton({
   const currentVariant = variants[variant]
   const currentSize = sizes[size]
 
+  const getAnimationClasses = useCallback(() => {
+    if (disabled || prefersReducedMotion() || animation === 'none') return ''
+
+    switch (animation) {
+      case 'pulse':
+        return intensity === 'subtle' ? 'animate-pulse-subtle' :
+               intensity === 'medium' ? 'animate-pulse' :
+               'animate-pulse-strong'
+      case 'glow':
+        return 'animate-glow'
+      case 'bounce':
+        return 'hover:animate-bounce-gentle'
+      default:
+        return ''
+    }
+  }, [disabled, animation, intensity])
+
   useEffect(() => {
     const button = buttonRef.current
     if (!button || disabled || prefersReducedMotion()) return
@@ -61,24 +78,7 @@ export default function OptimizedPulseButton({
         button.classList.remove(...animationClasses.split(' '))
       }
     }
-  }, [disabled, intensity, animation])
-
-  const getAnimationClasses = () => {
-    if (disabled || prefersReducedMotion() || animation === 'none') return ''
-
-    switch (animation) {
-      case 'pulse':
-        return intensity === 'subtle' ? 'animate-pulse-subtle' :
-               intensity === 'medium' ? 'animate-pulse' :
-               'animate-pulse-strong'
-      case 'glow':
-        return 'animate-glow'
-      case 'bounce':
-        return 'hover:animate-bounce-gentle'
-      default:
-        return ''
-    }
-  }
+  }, [disabled, intensity, animation, getAnimationClasses])
 
   const getShadowIntensity = () => {
     if (disabled || isMobile()) return ''

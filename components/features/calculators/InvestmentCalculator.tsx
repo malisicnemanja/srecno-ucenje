@@ -83,7 +83,7 @@ export default function InvestmentCalculator() {
     if (settings && inputs.model && inputs.city) {
       calculateResults()
     }
-  }, [inputs, settings])
+  }, [inputs, settings, calculateResults])
 
   const calculateResults = () => {
     if (!settings) return

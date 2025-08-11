@@ -261,7 +261,7 @@ export const getDebugInfo = (section: SanitySection, index: number) => {
 /**
  * Export utilities
  */
-export default {
+const sectionMapper = {
   getSectionComponent,
   validateSection,
   processSection,
@@ -272,3 +272,5 @@ export default {
   handleSectionError,
   getDebugInfo,
 }
+
+export default sectionMapper

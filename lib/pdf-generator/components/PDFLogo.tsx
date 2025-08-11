@@ -11,6 +11,7 @@ export const PDFLogo: React.FC = () => {
     return (
       <Image 
         src={logoPath}
+        alt="Srećno učenje logo"
         style={{
           width: 120,
           height: 40,

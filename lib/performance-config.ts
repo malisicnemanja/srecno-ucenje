@@ -260,7 +260,7 @@ export const serviceWorkerConfig = {
   ],
 }
 
-export default {
+const performanceConfig = {
   performanceBudget,
   criticalResources,
   getOptimizedWebpackConfig,
@@ -271,3 +271,5 @@ export default {
   lazyLoadConfig,
   serviceWorkerConfig,
 }
+
+export default performanceConfig
